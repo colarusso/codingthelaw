@@ -4,7 +4,7 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h1 style="text-align:center;">Coding the Law</h1>
-<p><font size="+1">"What I cannot create, I do not understand."</font> Richard Feynman</p><p>Learn how to think about thinking machines and the law by building your own. In this project-based course, open to non-programmers and coders alike, we'll explore the technical, legal, and ethical dimensions that arise given the use of computer algorithms within the justice system. Projects range from simple document automation to the construction of expert systems and narrow AIs. More info coming soon. </p><hr><br>
+<p><font size="+1">"What I cannot create, I do not understand."</font> Richard Feynman</p><p>Learn how to think about thinking machines in the law by building your own. In this project-based course, open to non-programmers and coders alike, we'll explore the technical, legal, and ethical dimensions that arise through the use of computer algorithms in the justice system. Projects range from the creation of simple document automation to the construction of expert systems and narrow AIs. More info coming soon.</p><hr><br>
 
 Q(1): Shall we play a game?
 A: Sure.
