@@ -43,6 +43,7 @@ color: #888;
 <p class="quote">“What I cannot create, I do not understand.” <font size=-1>Richard Feynman</font></p><p>Learn how to think about thinking machines in the law by building your own. In this project-based course, open to non-programmers and coders alike, we will explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.</p>
 <p>When possible, projects will address real-world access to justice needs, expanding and improving free online tools providing legal information.</p>
 <p>No prior programming experience or skills are required. If you have questions, please consult the Is-this-for-me bot bellow.</p>
+<p>Instructor: <a href="http://www.davidcolarusso.com/cv/" target="_new">David Colarusso</a></p>
 
 <h3>Is-this-for-me Bot</h3>
 <p>Instead of a stuffy FAQ, <!--I've created this--> I'm playing with the idea of creating an interactive flowchart (bot) to help you decide whether or not you should register for this class. Until it's ready, please enjoy this distraction.</p>
