@@ -7,14 +7,13 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 border-top: solid 1px #888;
 border-bottom: solid 1px #888;
 margin:0 0 30px 0;
-
 }
 a.menu {
 font-family: sans-serif;
 text-decoration: none;
     font-size: 12px;
 color: #529ecc;
-font-weight: 700;
+font-weight: bold;
  text-transform: uppercase;
 padding:0 4px;
 }
@@ -31,7 +30,7 @@ color: #888;
 }
 </style>
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<h1 style="text-align:center;">Coding the Law<center style="margin-top:10px;"><span class="subtitle">Suffolk University Law School: Fall 2017</span></center></h1>
+<h1 style="text-align:center;">Coding the Law<center style="margin-top:10px;"><span class="subtitle">Suffolk Law School: Fall 2017</span></center></h1>
 <div class="menu_bar">
 <p style="text-align:center;">
 <a href="/" class="menu"> About </a>  
@@ -46,7 +45,7 @@ color: #888;
 <p>No prior programming experience or skills are required. If you have questions, please consult the Is-this-for-me bot bellow.</p>
 
 <h3>Is-this-for-me Bot</h3>
-<p>Instead of a stuffy FAQ, <!--I've created this--> I plan on creating an interactive flowchart (bot) to help you decide whether or not you should register for this class. Until it's ready, please enjoy this distraction.</p>
+<p>Instead of a stuffy FAQ, <!--I've created this--> I playing with the idea of creating an interactive flowchart (bot) to help you decide whether or not you should register for this class. Until it's ready, please enjoy this distraction.</p>
 Q(1): Shall we play a game?
 A: Sure.
 	Q(1.1): <img src="http://jasoneppink.com/wp-content/gallery/the-reaction-gif-moving-image-as-gesture/kermit.gif"><br><br>How about a game of chess?
