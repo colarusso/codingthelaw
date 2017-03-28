@@ -9,12 +9,12 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 <a href="/" class="menu"> About </a>  
 <a href="../texts/" class="menu"> Texts </a>  
 <a href="../sessions/" class="menu"> Sessions </a>  
-<!--<a href="/Fall_2017/work/" class="menu"> Student Work</a>-->
+<a href="/Fall_2017/work/" class="menu"> Student Work</a>
 <a href="../bot/" class="menu"> Bot </a>  
 <a href="https://codingthelawfall2017.slack.com/" class="menu" target="_new"> Slack </a>  
 </div>
 <h3>Is-this-for-me Bot</h3>
-<p>Instead of a stuffy FAQ, <!--I've created this--> I'm playing with the idea of creating an interactive flowchart (bot) to help you decide whether or not you should register for this class. Until it's ready, please enjoy this distraction.</p>
+<p>This interactive flowchart (bot) has very little to do with the class. However, if you think it might be fun to build bots like this to help people, this class is for you. Alternatively, if the <a href="../texts/">course texts</a> strike you as interesting, this class is for you. Heck, if you plan on practicing law in the world today, this class is for you.</p>
 Q(1): Shall we play a game?
 A: Sure.
 	Q(1.1): <img src="http://jasoneppink.com/wp-content/gallery/the-reaction-gif-moving-image-as-gesture/kermit.gif"><br><br>How about a game of chess?
