@@ -1,6 +1,6 @@
 Title: Coding the Law: An Introduction to Algorithms in the Law
 Description: Learn how to think about thinking machines in the law by building your own. In this project-based course, open to non-programmers and coders alike, we will explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.<p>The header image was adapted from Alexander Baxevanis' photo <a href="https://www.flickr.com/photos/futureshape/21762253319" target=_new>Law Books at Middle Temple Library</a>. And of course, the talking head is <a href="https://en.wikipedia.org/wiki/Max_Headroom_(character)" target=_new>Max Headroom</a>.</p>
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017css/style.css">
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h1 style="text-align:center;">Coding the Law<center style="margin-top:10px;"><span class="subtitle">Suffolk Law School: Fall 2017</span></center></h1>
