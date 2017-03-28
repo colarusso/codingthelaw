@@ -9,287 +9,39 @@
 	<meta name="apple-mobile-web-app-capable" content="no" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Coding the Law: An Introduction to Algorithms in the Law"/>
-	<meta property="og:description" content="The header image was adapted from Alexander Baxevanis' photo Law Books at Middle Temple Library. And of course, the talking head is Max Headroom."/>
+	<meta property="og:title" content="Coding the Law: Texts"/>
+	<meta property="og:description" content="Learn how to think about thinking machines in the law by building your own. In this project-based course, open to non-programmers and coders alike, we will explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
 	<meta property="og:image" content=""/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 </HEAD>
-<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><style>	
-	body {
-		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-	}
-
-	#rawmarkup{
-		display:none;
-	}
-	
-	#QandA img{
-		width:100%;
-	}
-
-	div.main{
-		min-width:300px;
-		max-width:650px;
-		margin: 0 auto;
-	padding:0 5px 0 5px;
-		}
-	div.frame{
-		float:left;
-		width:100%;
-		margin:5px 0 5px 0;
-	}
-	div.full{
-		float:left;
-		width:100%;
-	}
-	.button{
-		padding:8px;
-		margin:8px 0 0px 0;
-		width:100%;
-	}
-	div.question_text{
-		float:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		color:#ffffff;
-		min-width:30px;
-		background:#5489eb;
-		border-radius: 15px;
-		padding:10px 15px 14px 15px;
-		margin-right:45px;
-	}
-
-	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
-
-	div.question_arrow{
-		float:left; 
-		width: 0; 
-		height: 0; 
-		border-left: 5px solid transparent; 
-		border-right: 10px solid transparent; 
-		border-top: 15px solid #5489eb;
-		margin:0 20px;
-	}
-	div.ans_text{
-		float:right;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		color:#000000;
-		min-width:30px;
-		background:#eeeeee;
-		border-radius: 15px;
-		padding:10px 15px 14px 15px;
-		margin-left:45px;
-	}
-	div.ans_arrow{
-		float:right; 
-		width: 0; 
-		height: 0; 
-		border-left: 10px solid transparent; 
-		border-right: 5px solid transparent; 
-		border-top: 15px solid #eeeeee;
-		margin:0 20px;
-	}
-	div.choices{
-		float:left;
-		width:100%;
-		margin:15px 0 0 0;
-	}
-	div.standard_buttons{
-		float:left;
-		width:100%;
-		margin-top:5px;
-		border-top: 1px solid #ddd; 
-		padding-top:12px;		
-	}
-	div.credits{
-		float:left;
-		dispaly:none;
-		width:100%;
-		background:#eee;
-		margin:0px 0 15px 0;
-	}
-	div.credit_text{
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		padding:4px 15px 10px 15px;
-	}
-	li.error{
-		list-style-type: none;
-		background:#ffdddd;
-		margin: 10px 0 0 0;
-		padding: 5px;
-	}
-
-	.qpad {
-		float:left;
-		padding:0 15px;
-	}
-	
-	a.sbutton {
-		float:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		width:48%;
-		background: #eee;
-		border-radius: 8px;
-		padding:10px 0px 12px 0;
-		margin: 0 0 3px 0;
-		border: solid 1px #888;
-		text-align:center;
-		color: #000000;
-		text-decoration: none;
-	}
-
-	a.sbutton:hover, a.sbutton:active {
-		float:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		width:48%;
-		background: #ddd;
-		border-radius: 8px;
-		padding:10px 0px 12px 0;
-		margin: 0 0 3px 0;
-		border: solid 1px #888;
-		text-align:center;
-		color: #000000;
-		text-decoration: none;
-	}
-
-	a.qabutton {
-		float:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		width:100%;
-		background: #eee;
-		border-radius: 8px;
-		padding:10px 0px 12px 0;
-		margin: 0 0 8px 0;
-		border: solid 1px #888;
-		text-align:left;
-		color: #000000;
-		text-decoration: none;
-	}
-
-	a.qabutton:hover, a.qabutton:active {
-		float:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		width:100%;
-		background: #ddd;
-		border-radius: 8px;
-		padding:10px 0px 12px 0;
-		margin: 0 0 8px 0;
-		border: solid 1px #888;
-		text-align:left;
-		color: #000000;
-		text-decoration: none;
-	}
-	
-
-	div.xdiv {
-		float:left;
-		width:100%;
-		margin: 0 0 8px 0;
-		background: #eee;
-		border: solid 1px #888;
-		border-radius: 8px;
-	}	
-
-	input.xinput {
-		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
-		box-sizing: border-box;         /* Opera/IE 8+ */
-		float:left;
-		width:100%;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		background: #fff;
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-		padding:10px 10px 12px 10px;
-		border: solid 0px #888;
-		border-bottom: solid 1px #888;
-		text-align:left;
-		color: #000000;
-		text-decoration: none;
-	}
-	
-	a.xbutton {
-		float:left;
-		width:100%;
-		text-align:left;
-		font-family: Verdana, Geneva, sans-serif;
-		font-size: 14px;
-		line-height: 20px;
-		background: #eee;
-		border-radius: 8px;
-		padding:10px 0px 12px 0px;
-		color: #000000;
-		text-decoration: none;
-	}
-	
-	a.xbutton:hover, a.xbutton:active {
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
-		background: #ddd;
-	}
-</style>
-<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/css/style.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<style>
-.menu_bar{
-border-top: solid 1px #888;
-border-bottom: solid 1px #888;
-margin:0 0 30px 0;
-
-}
-a.menu {
-font-family: sans-serif;
-text-decoration: none;
-    font-size: 12px;
-color: #529ecc;
-font-weight: 700;
- text-transform: uppercase;
-padding:0 4px;
-}
-.subtitle{
-text-transform: uppercase;
-text-decoration: none;
-font-size: 13px;
-font-weight: 100;
-}
-.quote {
-font-size: 23px;
-line-height: 28px;
-color: #888;
-}
-</style>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:600px">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h1 style="text-align:center;">Coding the Law<center style="margin-top:10px;"><span class="subtitle">Suffolk Law School: Fall 2017</span></center></h1>
 <div class="menu_bar">
 <p style="text-align:center;">
-<a href="/" class="menu"> About </a>  
-<a href="/Fall_2017/docs/" class="menu"> Docs </a>  
-<a href="/Fall_2017/texts/" class="menu"> Texts </a>  
-<a href="/Fall_2017/classes/" class="menu"> Classes </a>  
-<!--<a href="" class="menu"> Student Work</a>-->
+<a href="../" class="menu"> About </a>  
+<a href="../texts/" class="menu"> Texts </a>  
+<a href="../sessions/" class="menu"> Sessions </a>  
+<!--<a href="../work/" class="menu"> Student Work</a>-->
 <a href="https://codingthelawfall2017.slack.com/" class="menu" target="_new"> Slack </a>  
 </div>
+<h2>Course Documents</h2>
+As with the rest of this site, this page is a work in progress. Once they're ready, you'll be able to find the course syllabus and other documents created specifically for this course. 
+<ul>
+	<li><a href="javascript:alert('Coming Soon.');">Course Syllabus</a></li>
+<!--	<li><a href="javascript:alert('Coming Soon.');">Weapons of Math Destruction Reading Questions</a></li>
+	<li><a href="javascript:alert('Coming Soon.');">How Not to be Wrong Reading Questions</a></li>-->
+	<li><a href="javascript:alert('Coming Soon.');">Final Project Grading Rubric</a></li>
+</ul>
 <h2>Texts</h2>
-As with the rest of this site, the following is a work in progress. The only two texts that are certain are the two books, <a href="https://books.google.com/books/about/Weapons_of_Math_Destruction.html?id=5XqRDAEACAAJ" target=_new">Weapons of Math Destruction</a> and <a href="https://books.google.com/books/about/How_Not_to_be_Wrong.html?id=HtjZCwAAQBAJ&source=kp_cover" target=_new">How Not to Be Wrong</a>. 
+The only two texts that are certain at this point are the two books, <a href="https://books.google.com/books/about/Weapons_of_Math_Destruction.html?id=5XqRDAEACAAJ" target=_new">Weapons of Math Destruction</a> and <a href="https://books.google.com/books/about/How_Not_to_be_Wrong.html?id=HtjZCwAAQBAJ&source=kp_cover" target=_new">How Not to Be Wrong</a>. Everything else is up in the air.
 <h3>Books</h3>
 <a href="https://books.google.com/books/about/Weapons_of_Math_Destruction.html?id=5XqRDAEACAAJ" target=_new"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcSnHYIya7SJnZHycY4lU7aAdMaagxhBEvAikqxIFnCCMBl2Dt_U" height="300px" border="0px" style="float:left;margin:0 15px 10px 0;"/></a> <b>Weapons of Math Destruction</b><br><br> A former Wall Street quant sounds an alarm on the mathematical models that pervade modern life - and threaten to rip apart our social fabric. We live in the age of the algorithm. Increasingly, the decisions that affect our lives - where we go to school, whether we get a loan, how much we pay for insurance - are being made not by humans, but by mathematical models. In theory, this should lead to greater fairness: everyone is judged according to the same rules, and bias is eliminated. And yet, as Cathy O'Neil reveals in this urgent and necessary book, the opposite is true. The models being used today are opaque, unregulated, and incontestable, even when they're wrong. Most troubling, they reinforce discrimination. 
 <br><br>

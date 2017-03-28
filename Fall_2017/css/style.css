@@ -1,27 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<HTML xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="http://www.facebook.com/2008/fbml"> 
-<HEAD>
-	<title>Coding the Law: Class Documents</title>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-	<meta name="apple-mobile-web-app-capable" content="no" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
-	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Coding the Law: An Introduction to Algorithms in the Law"/>
-	<meta property="og:description" content="The header image was adapted from Alexander Baxevanis' photo Law Books at Middle Temple Library. And of course, the talking head is Max Headroom."/>
-	<meta property="og:image" content=""/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-</HEAD>
-<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><style>	
-	body {
-		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-	}
+body {
+	background-image: url("http://www.codingthelaw.org/images/books.jpg");
+	background-color: #fff;
+	background-repeat: repeat-x;		
+	background-position: top -5px center;
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size: 16px;
+	line-height: 22px;
+}
+	
+div.prize { 
+	float: right; 
+	margin: -5px 2px 10px 2px; 
+	padding:5px 8px;
+	border-radius: 10px; 
+	text-align: center; 
+	text-decoration:heavy;
+	border: 1px solid #bbb;
+	background: #ccffcc;
+}
+
+div.food { 
+	float: right; 
+	margin: -5px 2px 10px 2px; 
+	padding:5px 8px;
+	border-radius: 10px; 
+	text-align: center; 
+	text-decoration:heavy;
+	border: 1px solid #bbb;
+	background: #ffffcc;
+}
+
+.details {
+	font-size: 14px;
+	line-height: 18px;
+	color:#555;
+}
+
+.footer {
+	float:left;
+	width:100%;
+	border-top: solid 1px #555;
+	padding:15px 0px 40px 0px;
+	font-size: 14px;
+	line-height: 18px;
+	color:#555;
+}
+
+a.foota {
+	color:#555;
+}
+
+
+#icon { 
+	z-index:2;
+	margin:75px auto 14px auto;
+	border-radius: 20px;
+	width:110px; 
+	height:100px; 
+	text-align: center; 
+	border: 3px solid #fff;
+	background-color: #000;
+	font-family: 'Courier New', Courier, monospace;
+	font-size:18px;
+	line-height:98px;
+	color:#00ff00;
+}
+
+.add { 
+	float:left;
+	text-align:center;
+	width:100%; 
+	padding:10px 0;
+	background:#eee;
+}
+
+#past { 
+	float:left;
+	border-top: solid 1px #555;
+	width:100%; 
+	margin:20px 0 0 0;
+}
+
+a.event {
+	color:black;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+a.visit {
+	font-variant: small-caps;
+	color:red;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.title { 
+	font-size: 36px;
+	text-align:center;
+	width:100%; 
+	font-variant: small-caps;
+}
+
+.menu_bar{
+border-top: solid 1px #888;
+border-bottom: solid 1px #888;
+margin:0 0 30px 0;
+
+}
+a.menu {
+font-family: sans-serif;
+text-decoration: none;
+    font-size: 12px;
+color: #529ecc;
+font-weight: 700;
+ text-transform: uppercase;
+padding:0 4px;
+}
+.subtitle{
+text-transform: uppercase;
+text-decoration: none;
+font-size: 13px;
+font-weight: 100;
+}
+.quote {
+font-size: 23px;
+line-height: 28px;
+color: #888;
+}
 
 	#rawmarkup{
 		display:none;
@@ -246,52 +351,3 @@
 		border-top-right-radius: 0px;
 		background: #ddd;
 	}
-</style>
-<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/css/style.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<style>
-.menu_bar{
-border-top: solid 1px #888;
-border-bottom: solid 1px #888;
-margin:0 0 30px 0;
-
-}
-a.menu {
-font-family: sans-serif;
-text-decoration: none;
-    font-size: 12px;
-color: #529ecc;
-font-weight: 700;
- text-transform: uppercase;
-padding:0 4px;
-}
-.subtitle{
-text-transform: uppercase;
-text-decoration: none;
-font-size: 13px;
-font-weight: 100;
-}
-.quote {
-font-size: 23px;
-line-height: 28px;
-color: #888;
-}
-</style>
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<h1 style="text-align:center;">Coding the Law<center style="margin-top:10px;"><span class="subtitle">Suffolk Law School: Fall 2017</span></center></h1>
-<div class="menu_bar">
-<p style="text-align:center;">
-<a href="/" class="menu"> About </a>  
-<a href="/Fall_2017/docs/" class="menu"> Docs </a>  
-<a href="/Fall_2017/texts/" class="menu"> Texts </a>  
-<a href="/Fall_2017/classes/" class="menu"> Classes </a>  
-<!--<a href="" class="menu"> Student Work</a>-->
-<a href="https://codingthelawfall2017.slack.com/" class="menu" target="_new"> Slack </a>  
-</div>
-<h2>Course Documents</h2>
-As with the rest of this site, this page is a work in progress. Once they're ready, you'll be able to find the course syllabus and other documents here. 
-<div style="margin:25px 0;padding:5px;border-top:solid 1px #888;text-align:right;text-color:#555;">
-last updated 2017-03-26
-</div>
-</BODY>
-</HTML>
