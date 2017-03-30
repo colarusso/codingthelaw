@@ -14,7 +14,7 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 <a href="https://codingthelawfall2017.slack.com/" class="menu" target="_new"> Slack </a>  
 </div>
 <h3>Is-this-for-me Bot</h3>
-<p>This interactive flowchart (bot) has very little to do with the class. However, if you think it might be fun to build bots like this to help people, this class is for you. Alternatively, if the <a href="../texts/">course texts</a> strike you as interesting, this class is for you. Heck, if you plan on practicing law in the world today, this class is for you.</p>
+<p>This interactive flowchart (bot) has very little to do with the class. However, if you think it might be fun to build bots like it to help people, this class is for you. Alternatively, if the <a href="../texts/">course texts</a> strike you as interesting, this class is for you. Heck, if you plan on practicing law in the world today, this class is for you.</p>
 Q(1): Shall we play a game?
 A: Sure.
 	Q(1.1): <img src="http://jasoneppink.com/wp-content/gallery/the-reaction-gif-moving-image-as-gesture/kermit.gif"><br><br>How about a game of chess?
