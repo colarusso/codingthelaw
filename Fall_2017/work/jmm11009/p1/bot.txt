@@ -7,6 +7,11 @@ A: Civil
 	Q(1.1): Would you like to qualify for a court waiver or fee waiver?
 	A: Yes
 	A: No
+		Q(1.1.2): Do you receive public benefits as a major part of your subsistence?
+		A: Yes
+		A: No
+			Q(1.1.2.2): GOTO:2
+
 A: Criminal
 	Q(1.2): Would you like to qualify for a court appointed lawyer?
 	A: Yes.
@@ -14,9 +19,13 @@ A: Criminal
 		A: Yes.
 			Q(1.2.1.1): How many people are in your household unit?
 			X:
-				Q(1.2.1.1.1): Is your income at or below 150% of the poverty line ($11,800, family of four earning $24,300)?
-				A: Yes.
-					Q(1.2.1.1.1.1): Then head over to [https://www.vermontjudiciary.org/sites/default/files/documents/Form%20228_0.pd]
+				Q(1.2.1.1.1): How many dependents do you have?
+				X:
+					Q(1.2.1.1.1.1): How old are your dependents?
+					X:
+						Q(1.2.1.1.1.1.1): Is your income at or below 150% of the poverty line ($11,800, family of four earning $24,300)?
+						A: Yes.
+							Q(1.2.1.1.1.1.1.1): Then head over to Vermont Judiciary [https://www.vermontjudiciary.org/sites/default/files/documents/Form%20228_0.pd]
 				
 		A: No.
 			Q(1.2.1.2):GOTO:2
