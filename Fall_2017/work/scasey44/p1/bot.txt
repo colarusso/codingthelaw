@@ -1,44 +1,40 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+<!-- Note: you can turn on/off word wrap in this text area by clicking the checkbox below. Also, any text you see between less than and greater than marks, that's HTML. You don't have to use/know HTML to write a QnA, but it can be useful. For example, this text doesn't show up in the word bubbles because it's an HTML comment. -->
 
-Q(1): Do your receive public assistance? 
-A: Yes
-	Q(1.1):GOTO:qualaid
-A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+Q(1): Would you like to determine if you are indigent, and qualify for discounted legal counsel?
+A: Yes.
+	Q(1.1): Are you  receiving one of the following types of public assistance: Transitional Aid to Families with Dependent Children (TAFDC), Emergency Aid to Elderly, Disabled and Children (EAEDC), need-based veterans' benefits, Supplemental Nutrition Assistance Program (SNAP) benefits, Refugee Cash Assistance, or SSI State Supplemental Program?
+	A: Yes.
+		Q(1.1.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+	A: No.
+		Q(1.1.2): Are you receiving an annual income, after taxes, of one hundred twenty-five percent or less of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
+		A: Yes.
+			Q(1.1.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+		A: No.
+			Q(1.1.2.2): •	Are you (1) residing in a tuberculosis treatment center, a mental health facility or a facility for individuals with intellectual or developmental disabilities, including the Bridgewater State Hospital and Massachusetts Treatment Center; or (2) the subject of a proceeding regarding admission or commitment to such a center or facility, a proceeding to make a substituted judgment determination concerning treatment, a proceeding under G. L. c. 190B, § 5-309(g) to admit to a nursing facility defined in G. L. c. 190B, § 5-101(15), or a civil commitment proceeding under G. L. c. 123, § 35; provided, however, that when the judge has reason to believe that the party is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule?
+			A: Yes.
+				Q(1.1.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+			A: No.
+				Q(1.1.2.2.2): Are you a juvenile, a child who is in the care or custody of the Department of Children and Families, or a young adult provided, however, that when a judge has reason to believe that the juvenile or young adult is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule? 
+				A: Yes.
+					Q(1.1.2.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+				A: No.
+					Q(1.1.2.2.2.2): You are not indigent and do not qualify for discounted legal counsel. 
+						
+					
+A: No.
+	Q(1.2): Have a nice day!
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
+Q(2): Are you a party who has an annual income, after taxes, of more than one hundred twenty five percent and less than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
+A: Yes.
+	Q(2.1): You will be required to make a contribution to your legal expenses.
+A: No.
+	Q(2.2): Are you a party who (1) is charged with a felony solely within the jurisdiction of the Superior Court or is the parent, guardian, or custodian of a juvenile or young adult who is the subject of a child welfare proceeding, subject to the exception in Section 6A for a parent or guardian who has had custody of the juvenile removed by a court of competent jurisdiction, or who has an interest adverse to the juvenile or young adult, and (2) has an annual income, after taxes, of more than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b); and (3) whose available funds are insufficient to pay the anticipated cost of counsel for this representation, but are sufficient to pay part of that cost. The anticipated cost of counsel shall be the cost of retaining private counsel for, as applicable, the defense of a felony charge within the jurisdiction of the Superior Court, or a child welfare proceeding, as estimated and published from time to time by the Committee for Public Counsel Services?
+	A: Yes.
+		Q(2.2.1): You will be required to make a contribution to your legal expenses.
+	A: No.
+		Q(2.2.2): Are you a party who is over the age of eighteen and is claimed as a dependent for tax purposes by a parent or guardian who is not indigent?
+		A: Yes.
+			Q(2.2.2.1): You will be required to make a contribution to your legal expenses.
+		A: No.
+			Q(2.2.2.2): You will not be required to make a contribution to your legal expenses.
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
-
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
-
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
