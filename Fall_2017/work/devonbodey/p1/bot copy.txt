@@ -1,0 +1,108 @@
+Q(1): Is this a civil or criminal matter?
+A: Civil
+	Q(1.1): Do you receive assistance under Welfare (TSA or SAGA), Food Stamps (SNAP), SSI (Supplemental Security Income), State Supplement (AABD/Aid to the Aged, Blind and Disabled)?
+	A: Yes
+		Q(1.1.1):You are likely to quality as indigent and receive a waiver for your some or all of your court fees. Would you like to apply for a fee waiver?
+		A: Yes
+			Q(1.1.1.1):GOTO:1.1.2.2.1.1
+		A: No
+			Q(1.1.1.2):GOTO:1.1.2.2.1.2
+	A: No
+		Q(1.1.2): Is your income fall below the poverty line, especially after taxes and deductions?
+		A: Yes
+			Q(1.1.2.1):GOTO:1.1.1
+		A: No
+			Q(1.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
+			A: Yes
+				Q(1.1.2.2.1): You are unlikely to quality as indigent and receive a fee waiver. However, fee waivers are granted on a discretionary basis. Would you like to fill out a State of Connecticut application for waiver of fees?
+				A: Yes
+					Q(1.1.2.2.1.1): Is this a family law matter?
+					A: Yes 
+						Q(1.1.2.2.1.1.1): <https://www.jud.ct.gov/webforms/forms/fm075.pdf>]
+					A: No
+						Q(1.1.2.2.1.1.2): Is this a general civil, housing, or small claims matter?
+						A: Yes
+							Q(1.1.2.2.1.1.2.1):<https://www.jud.ct.gov/webforms/forms/CV120.pdf>
+						A:No
+				A: No
+					Q(1.1.2.2.1.2): For more information, please contact your attorney, or a State of Connecticut representative.
+			A: No
+				Q(1.1.2.2.2):GOTO:1.1.1
+A: Criminal
+	Q(1.2): Have you been charged with a misdemeanor?
+	A: Yes
+		Q(1.2.1):How many dependents are in your household?
+		A: None
+			Q(1.2.1.1): Do you have an income of $17,505 gross annually?
+			A:Yes
+				Q(1.2.1.1.1): You are likely able to qualify as indigent and receive free legal services.
+			A:No
+				Q(1.2.1.1.2):You are likely unable to qualify as an indigent and receive free legal services.
+		A: One
+			Q(1.2.1.2): Do you have an income of $23,595 gross annually?
+			A: Yes
+				Q(1.2.1.2.1):GOTO:1.2.1.1.1
+			A: No
+				Q(1.2.1.2.2):GOTO:1.2.1.1.2
+		A: Two
+			Q(1.2.1.3): Do you have an income of $29,685 gross annually?
+			A: Yes
+				Q(1.2.1.3.1):GOTO:1.2.1.1.1
+			A: No
+				Q(1.2.1.3.2):GOTO:1.2.1.1.2
+		A: Three or more
+			Q(1.2.1.4): Do you have an income of $35,775 gross annually?
+			A: Yes
+				Q(1.2.1.4.1):GOTO:1.2.1.1.1
+			A: No
+				Q(1.2.1.4.2):GOTO:1.2.1.1.2
+	A: No
+		Q(1.2.2): Have you been charged with a felony?
+		A: Yes
+			Q(1.2.2.1): Are you a youthful offender (under the age of 18)?
+			A: Yes
+				Q(1.2.2.1.1): What kind of household do you reside in?
+				A: Single parent household
+					Q(1.2.2.1.1.1): Is your parents gross annual income $31,460 or less?
+					A: Yes
+						Q(1.2.2.1.1.1.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.1.1.2):GOTO:1.2.1.1.2
+				A: Dual parent household
+					Q(1.2.2.1.1.2): Is your parents gross annual income $39,580 or less?
+					A: Yes
+						Q(1.2.2.1.1.2.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.1.2.2):GOTO:1.2.1.1.2
+			A: No
+				Q(1.2.2.1.2): How many dependents do you have?
+				A: Zero
+					Q(1.2.2.1.2.1): Do you have an income of $23,340 gross annually?
+					A: Yes
+						Q(1.2.2.1.2.1.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.2.1.2):GOTO:1.2.1.1.2
+				A: One
+					Q(1.2.2.1.2.2): Do you have an income of $23,595 gross annually?
+					A: Yes
+						Q(1.2.2.1.2.2.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.2.2.2):GOTO:1.2.1.1.2
+				A: Two
+					Q(1.2.2.1.2.3): Do you have an income of $23,595 gross annually?
+					A: Yes
+						Q(1.2.2.1.2.3.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.2.3.2):GOTO:1.2.1.1.2
+				A: Three or more
+					Q(1.2.2.1.2.4):Do you have an income of $23,595 gross annually?
+					A: Yes
+						Q(1.2.2.1.2.4.1):GOTO:1.2.1.1.1
+					A: No
+						Q(1.2.2.1.2.4.2):GOTO:1.2.1.1.2
+		A: No
+			Q(1.2.2.2): Assignment of counsel in Connecticut is granted on a discretionary basis. Would you like to fill out a State of Connecticut application for waiver of fees, costs and expenses and appointment of counsel on appeal?
+			A: Yes
+				Q(1.2.2.2.1): <https://www.jud.ct.gov/webforms/forms/CR073.pdf>
+			A: No
+				Q(1.2.2.2.2): For more information, please contact an attorney, the Connecticut Division of Public Defender Services, or a State of Connecticut representative.
