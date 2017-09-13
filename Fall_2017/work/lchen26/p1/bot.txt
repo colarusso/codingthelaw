@@ -21,7 +21,7 @@ A: Civil
 					Q(income): How much do you make a week?
 					X:number
 						Q(1.1.1.1.2.1.1): Are you sure?
-						A:[javascript:if (fedpov(getvar('household1'),getvar('income'),125){goto ('waiver')} else {goto('nowaiver')} ] Yes
+						A:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ] Yes
 						A: No
 							Q(1.1.1.1.2.1.1.2):GOTO:income
 					A: I don't know
@@ -62,7 +62,7 @@ A: Criminal
 							Q(i): How much do you make a week?
 							X:number
 								Q(1.2.1.2.1.2.2.1.1): Are you sure?
-								A:[javascript:if (fedpov(getvar('household2'),getvar('i'),125){goto ('counsel')} else {goto('nocounsel')} ] Yes
+								A:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ] Yes
 								A: No
 									Q(1.2.1.2.1.2.2.1.1.2):GOTO:i
 							A: I don't know
@@ -72,12 +72,12 @@ A: Criminal
 	A: No
 		Q(1.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver See here: http://www.courts.state.va.us/forms/circuit/cc1414.pdf (Court will make final decision)		
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision)		
 
-Q(nowaiver): You probably are not eligible for a fee waiver. http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf GOTO:bye
+Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
 
-Q(counsel): You probably are eligible for counsel See here: http://www.courts.state.va.us/forms/district/dc333.pdf (Court will make final decision)
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision)
 
-Q(nocounsel): You probably are not eligible for counsel. http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf GOTO:bye
+Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
 
 Q(bye): Have a good day.
