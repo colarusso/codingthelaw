@@ -1,44 +1,77 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
-
-Q(1): Do your receive public assistance? 
+Title: Am I eligible for fee waivers?
+Q(CRIM): What are you charged with?
+A: Criminal 
+	Q(CRIM.1): Are you mentally ill?
+	A:Yes
+		Q(CRIM.1.1): You are most likely indigent.
+		A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+	A:No
+		Q(CRIM.1.2): Are you developmentally disabled?
+		A: Yes
+			Q(CRIM.1.2.1):GOTO:CRIM.1.1
+		A: No
+			Q(CRIM.1.2.2): Are you a child?
+			A: Yes
+				Q(CRIM.1.2.2.1):GOTO:CRIM.1.1
+			A: No
+				Q(CRIM.1.2.2.2): Are you able to pay the registration fee of $50?
+				A: Yes
+					Q(CRIM.1.2.2.2.1): You may still qualify for a court-appointed attorney.
+					A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+				A: No
+					Q(CRIM.1.2.2.2.2):GOTO:CRIM.1.1
+A: Civil
+	Q(1.2):GOTO:2
+Q(2): Do you receive Food Stamps?
 A: Yes
-	Q(1.1):GOTO:qualaid
+	Q(2.1): Do you receive Supplemental Security Income (SSI)?
+	A:Yes
+		Q(2.1.1): Do you receive SSP?
+		A:Yes
+			Q(2.1.1.1):Do you receive Medi-Cal?
+			A:Yes
+				Q(2.1.1.1.1):Do you receive County Relief/Federal Assistance?
+				A: Yes
+					Q(2.1.1.1.1.1):Do you receive IHSS?
+					A: Yes
+						Q(2.1.1.1.1.1.1):Do you receive CalWORKS or Tribal TANF?
+						A: Yes
+							Q(2.1.1.1.1.1.1.1): Do you receive CAPI?
+							A: Yes
+								Q(2.1.1.1.1.1.1.1.1):GOTO:2.1.1.1.1.1.1.1.2
+							A: No
+								Q(2.1.1.1.1.1.1.1.2): Did you answer "yes" for any of the above questions?
+								A: Yes
+									Q(2.1.1.1.1.1.1.1.2.1): Congratulations, you are eligible for a fee waiver.
+									A:[http://www.courts.ca.gov/documents/fw001.pdf] Please fill out this form.
+								A: No
+									Q(household): How many people are in your household?
+									X:
+										Q(income):What is you gross monthly household income (before deduction for taxes)?
+										X:
+											Q(Q): Let's see if you qualify
+											A:[javascript:if (getvar('household')==1 && getvar('income')<1256.26) {goto('qual')}else if (getvar('household')==1 && getvar('income')>1256.26){goto('not')}else if (getvar('household')==2 && getvar('income')<1691.67) {goto('qual')}else if (getvar('household')==2 && getvar('income')>1691.67){goto('not')}else if (getvar('household')==3 && getvar('income')<2127.09) {goto('qual')}else if (getvar('household')==3 && getvar('income')>2127.09){goto('not')}else if (getvar('household')==4 && getvar('income')<2562.51) {goto('qual')}else if (getvar('household')==4 && getvar('income')>2562.51){goto('not')}else if (getvar('household')==5 && getvar('income')<2997.92) {goto('qual')}else if (getvar('household')==5 && getvar('income')>2997.92){goto('not')}else if (getvar('household')==6 && getvar('income')<3433.34) {goto('qual')}else if (getvar('household')==6 && getvar('income')>3433.34){goto('not')}] ok			
+						A: No
+							Q(2.1.1.1.1.1.1.2):GOTO:2.1.1.1.1.1.1.1
+					A: No
+						Q(2.1.1.1.1.1.2):GOTO:2.1.1.1.1.1.1
+				A: No
+					Q(2.1.1.1.1.2):GOTO:2.1.1.1.1.1
+			A: No
+				Q(2.1.1.1.2):GOTO:2.1.1.1.1
+		A:No
+			Q(2.1.1.2):GOTO:2.1.1.1
+	A:No
+		Q(2.1.2):GOTO:2.1.1
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(2.2):GOTO:2.1
+							
+Q(qual):GOTO:2.1.1.1.1.1.1.1.2.1
+Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
+A:Yes
+	Q(4.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an attorney for more information.																			
+A:No
+	Q(4.2):GOTO:2.1.1.1.1.1.1.1.2.1	
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
-
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
-
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+										
