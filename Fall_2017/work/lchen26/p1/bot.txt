@@ -58,7 +58,7 @@ A: Criminal
 						Q(1.2.1.2.1.2.1):GOTO:counsel
 					A: No
 						Q(household2): You may still be eligible. What is your household size? 
-						A:1
+						A:num
 							Q(i): How much do you make a week?
 							X:number
 								Q(1.2.1.2.1.2.2.1.1): Are you sure?
