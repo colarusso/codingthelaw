@@ -1,44 +1,75 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-Q(1): Do your receive public assistance? 
-A: Yes
-	Q(1.1):GOTO:qualaid
-A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
-
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
-
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
-
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
-
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+\f0\fs24 \cf0 Q(1): Hello! My name is CLAIRA, and I will be helping you understand whether you are eligible for a court-appointed lawyer (also known as your indigent status). Before we start, please note that several pieces of financial information may be required during this process, including your gross annual income, total living expenses, and total liquid assets. These terms will be defined for you as they are required, but you will want to have all your financial data handy in order to answer questions as they arise. Now let\'92s begin. GOTO:first\
+\
+Q(first): First, do any of the following apply to you?\
+A: I am currently receiving poverty-based public assistance such as federal supplemental security income, Ohio works first, temporary assistance to needy families, Medicaid, aid to families with dependent children, supplemental nutrition assistance program, refugee cash assistance, refugee medical assistance, poverty-related veterans' benefits, or other poverty-based governmental assistance.\
+	Q(2.1):GOTO:que\
+A: I am currently committed to a public mental health facility.\
+	Q(2.2):GOTO:que\
+A: I am currently incarcerated in a state penitentiary.\
+	Q(2.3):GOTO:que\
+A: None of the above apply to me.\
+	Q(2.4):GOTO:charge\
+\
+Q(charge): Great! Next, I will need to know what is the most serious charge against you for this legal proceeding?\
+A(1): The most serious charge against me is a misdemeanor.\
+	Q(3.1):GOTO:num\
+A(2): The most serious charge against me is a felony of the fourth or fifth degree.\
+	Q(3.2):GOTO:num\
+A(3): The most serious charge against me is a felony of the third degree.\
+	Q(3.3):GOTO:num\
+A(4): The most serious charge against me is a felony of the first or second degree.\
+	Q(3.4):GOTO:num\
+\
+Q(num): Thank you. Now I will need to know your gross annual income. For our purposes here today, your gross income is defined as your wages and earnings from employment, unemployment compensation, workers compensation, child support, pension and social security compensation, disability compensation, and all other forms of compensation and governmental assistance. Note that I need only your income, not that of anyone else in your household (unless they have a legal duty to support you; then please include their income as well). Please type your gross annual income to the nearest dollar without any commas, periods, or dollar signs.\
+X:\
+	Q(4.1):GOTO:ppl\
+\
+Q(ppl): Great! Including yourself, how many people are in your household?\
+A(1)[javascript:if (getvar('num')<=22613) \{goto('liq')\} else if (getvar('num')>22613) \{goto('notque')\} else \{goto('err')\}]: Just myself\
+A(2)[javascript:if (getvar('num')<=30450) \{goto('liq')\} else if (getvar('num')>30450) \{goto('notque')\} else \{goto('err')\}]: Myself plus one other individual.\
+A(3)[javascript:if (getvar('num')<=38288) \{goto('liq')\} else if (getvar('num')>38288) \{goto('notque')\} else \{goto('err')\}]: Myself plus two other individuals.\
+A(4)[javascript:if (getvar('num')<=46125) \{goto('liq')\} else if (getvar('num')>46125) \{goto('notque')\} else \{goto('err')\}]: Myself plus three other individuals.\
+A(5)[javascript:if (getvar('num')<=53963) \{goto('liq')\} else if (getvar('num')>53963) \{goto('notque')\} else \{goto('err')\}]: Myself plus four other individuals.\
+A(6)[javascript:if (getvar('num')<=61800) \{goto('liq')\} else if (getvar('num')>61800) \{goto('notque')\} else \{goto('err')\}]: Myself plus five other individuals.\
+A(7)[javascript:if (getvar('num')<=69638) \{goto('liq')\} else if (getvar('num')>69638) \{goto('notque')\} else \{goto('err')\}]: Myself plus six other individuals.\
+A(8)[javascript:if (getvar('num')<=77475) \{goto('liq')\} else if (getvar('num')>77475) \{goto('notque')\} else \{goto('err')\}]: Myself plus seven or more other individuals.\
+\
+Q(liq): Thank you! Next I'll need to know the amount of your liquid assets. These are assets you can quickly access (otherwise known as "payable on demand"), including available cash in savings and checking accounts, commonly traded stocks and bonds, certificates of deposit, and any other readily available financial resources that could be used to hire a lawyer. However, please exclude any property necessary for you to maintain your current employment. Please select from the following options:\
+A: My liquid assets are $2,000 or less\
+	Q(6.1):GOTO:next\
+A[javascript:if (getvar('charge')==1 \{goto('notque')\} else \{goto('next')\}]: My liquid assets are greater than $2,000 but less than or equal to $5,000\
+A[javascript:if (getvar('charge')<=2 \{goto('notque')\} else \{goto('next')\}]: My liquid assets are greater than $5,000 but less than or equal to $6,000\
+A[javascript:if (getvar('charge')<=3 \{goto('notque')\} else \{goto('next')\}]: My liquid assets are greater than $6,000 but less than or equal to $8,000\
+A: My liquid assets are greater than $8,000\
+	Q(6.5):GOTO:notque\
+\
+Q(next): Great. Just a few more questions. Now I need to know how much you spend on basic living expenses each year. This includes housing rent and/or mortgage payments, child support actually paid, child care, health insurance premiums, medical and dental expenses, costs of caring for an infirm family member or other dependents you have a duty to support, employment transportation costs, costs of fuel, food, telephone, utilities, taxes withheld, credit card and other loan payments, and other similar basic costs of living. Please also include any court-imposed obligations, such as expected court costs, fines, restitution, and recoupment; application, jail, supervision, electronic monitoring, and other fees; and other similar costs associated with this legal proceeding. Please type your basic annual living expenses to the nearest dollar without any commas, periods, or dollar signs.\
+X:\
+	Q(7.1):GOTO:basic\
+\
+Q(basic): If you are appointed a lawyer and your net income (gross income minus basic living expenses) exceed 125% of the federal poverty level, you may be required to repay some of the costs for services provided.\
+A[javascript:if (getvar('ppl')==1 && getvar('num')-getvar('next')<=15075) \{goto('que')\} else if (getvar('ppl')==2 && getvar('num')-getvar('next')<=20300) \{goto('que')\} else if (getvar('ppl')==3 && getvar('num')-getvar('next')<=25525) \{goto('que')\} else if (getvar('ppl')==4 && getvar('num')-getvar('next')<=30750) \{goto('que')\} else if (getvar('ppl')==5 && getvar('num')-getvar('next')<=35975) \{goto('que')\} else if (getvar('ppl')==6 && getvar('num')-getvar('next')<=41200) \{goto('que')\} else if (getvar('ppl')==7 && getvar('num')-getvar('next')<=46425) \{goto('que')\} else if (getvar('ppl')==8 && getvar('num')-getvar('next')<=51650) \{goto('que')\} else if (getvar('next')>=0) \{goto('notque')\} else \{goto('err2')\}]: I understand if my net income is above 125% of the federal poverty level and I am appointed a lawyer I may be responsible for some of the costs of the legal services provided.\
+\
+\
+Q(que): It looks like you qualify for a court-appointed lawyer! I will now import any information you provided into the required Financial Disclosure & Affidavit of Indigency Form. Please follow this link to complete and submit your affidavit:\
+A: 'insert form link'\
+	Q(9.1):GOTO:signoff\
+\
+Q(notque): Unfortunately, I have determined that you do not qualify for a court-appointed lawyer at this time. However, a judge may still choose to appoint you counsel if the number, complexity, and seriousness of your charges warrant it or you have tried but are unable to employ qualified counsel, but only the judge can make that determination. Further, if new information becomes known or if your financial circumstances change such that you might qualify later as indigent, you could be eligible for counsel at that later date. Even if you do not qualify as indigent, you may still be eligible to receive assistance in order to pay for experts, transcripts, and other related legal expenses if you do not have sufficient funds to pay for them. Again, the judge will have to make this determination. GOTO:signoff\
+\
+Q(err): I'm sorry, I just realized your income was not recognized! Please enter a numerical value without commas, periods, or dollar signs. Scroll up to the definition of gross annual income if you need to revisit what sources of income should be included.\
+X:\
+	Q(11.1):GOTO:ppl\
+\
+Q(err2): I'm sorry, the amount of your basic living expenses was not recognized! Please enter a numerical value without commas, periods, or dollar signs. Scroll up to the definition of basic living expenses if you need to revisit which expenses qualify.\
+X:\
+	Q(12.1):GOTO:basic\
+\
+Q(signoff): Thank you for speaking with CLAIRA, the Computerized Legal Assistance Indigent Relief Assessment chatbot. If you still have questions about your indigent status, please feel free to contact the Ohio Public Defender Commission at xxx-xxx-xxxx.\
+}
