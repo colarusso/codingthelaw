@@ -5,7 +5,7 @@ Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" ta
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
-Q(1): Are you filing a civil case or criminal case?
+Q(1): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
 A: Civil
 	Q(1.1): Would you like to apply for a fee waiver?
 	A: Yes
@@ -29,7 +29,7 @@ A: Civil
 		A: Juvenile
 			Q(1.1.1.2): Are you under the care of your parents?
 			A: Yes
-				Q(1.1.1.2.1):Enter the income of the parents GOTO:assistance
+				Q(1.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
 			A: No
 				Q(1.1.1.2.2):Enter your own income and enter 1 for household GOTO:household1
 	A: No
@@ -48,9 +48,9 @@ A: Criminal
 				A: Juvenile
 					Q(1.2.1.2.1.1): Are you under custody of your parents?
 					A: Yes
-						Q(1.2.1.2.1.1.1):GOTO:a1
+						Q(1.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
 					A: No
-						Q(1.2.1.2.1.1.2): insert 1 GOTO:household2
+						Q(1.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:household2
 				A: adult
 					Q(a1): Are you a current recipient of a state or federally administered public assistance program such as 
 					AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
@@ -58,7 +58,7 @@ A: Criminal
 						Q(1.2.1.2.1.2.1):GOTO:counsel
 					A: No
 						Q(household2): You may still be eligible. What is your household size? 
-						A:num
+						X:number
 							Q(i): How much do you make a week?
 							X:number
 								Q(1.2.1.2.1.2.2.1.1): Are you sure?
