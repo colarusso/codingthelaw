@@ -16,18 +16,15 @@ A: Civil
 			A:Yes
 				Q(assistance1):GOTO:waiver
 			A:No
-				Q(household1): You may still be eligible. What is your household size? 
+				Q(household1): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+				the defendant unless those people are victims of the defendant)  
 				X:number
-					Q(income): How much do you make a week?
-					X:number
-						Q(1.1.1.1.2.1.1): Are you sure?
-						A:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ] Yes
-						A: No
-							Q(1.1.1.1.2.1.1.2):GOTO:income
+					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ] number
 					A: I don't know
-						Q(1.1.1.1.2.1.2): Please consult your latest tax forms
-		A: Juvenile
-			Q(1.1.1.2): Are you under the care of your parents?
+						Q(1.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
+		A: Juvenile (Juveniles are usually not charged civilly)
+			Q(1.1.1.2): Are you under the care of your parents? (usually you will be under their care unless they are determined to have to be emancipated (independent of parents by court order or on active duty)
 			A: Yes
 				Q(1.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
 			A: No
@@ -38,37 +35,38 @@ A: Civil
 A: Criminal
 	Q(1.2): Are you seeking court counsel?
 	A: Yes	
-		Q(1.2.1): Did you waive your right to counsel?
+		Q(rights): Did you waive your right to counsel? (Will represent oneself)
 		A: Yes
 			Q(1.2.1.1):GOTO:nocounsel
 		A: No
-			Q(1.2.1.2): Are you charged with a felony or misdemeanor for which a jail sentence may be imposed and be without counsel?
+			Q(charges): Are you charged with a felony or misdemeanor for which a jail sentence may be imposed?
 			A: Yes
 				Q(1.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
 				A: Juvenile
-					Q(1.2.1.2.1.1): Are you under custody of your parents?
+					Q(1.2.1.2.1.1): Are your parents financially able to provide counsel (Most of the time the juvenile is counted apart from the parent) Also see <a href="https://law.lis.virginia.gov/vacode/16.1-266" target=_new>here</a>
 					A: Yes
 						Q(1.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
 					A: No
 						Q(1.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:household2
-				A: adult
+				A: Adult
 					Q(a1): Are you a current recipient of a state or federally administered public assistance program such as 
 					AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
 					A: Yes
 						Q(1.2.1.2.1.2.1):GOTO:counsel
 					A: No
-						Q(household2): You may still be eligible. What is your household size? 
+						Q(household2): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+						the defendant unless those people are in the case against you as prosecution)
 						X:number
-							Q(i): How much do you make a week?
-							X:number
-								Q(1.2.1.2.1.2.2.1.1): Are you sure?
-								A:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.1.1.2):GOTO:i
+							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ] number
 							A: I don't know
-								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms
+								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms GOTO:i
 			A: No
 				Q(1.2.1.2.2):GOTO:nocounsel
+			A: I don't know
+				Q: <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
+		A: I don't know
+			Q: When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO: rights
 	A: No
 		Q(1.2.2):GOTO:bye
 
