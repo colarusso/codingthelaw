@@ -20,7 +20,7 @@ A: Civil
 				the defendant unless those people are victims of the defendant)  
 				X:number
 					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
-					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ] number
+					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
 						Q(1.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
 		A: Juvenile (Juveniles are usually not charged civilly)
@@ -58,15 +58,15 @@ A: Criminal
 						the defendant unless those people are in the case against you as prosecution)
 						X:number
 							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously)
-							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ] number
+							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
 							A: I don't know
 								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms GOTO:i
 			A: No
 				Q(1.2.1.2.2):GOTO:nocounsel
 			A: I don't know
-				Q: <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
+				Q(1.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
 		A: I don't know
-			Q: When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO: rights
+			Q(1.2.1.3): When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO:rights
 	A: No
 		Q(1.2.2):GOTO:bye
 
