@@ -1,8 +1,11 @@
-Title: Virginia Courts Fee Waiver or Counsel Eligibility Bot
+Title: Virginia Indigency Calculator
 Author: Loren Chen
-Description:
+Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Virginia Indigency Calculator</h3>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
-Q(1): Are you filing a civil case or criminal case?
+Q(1): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
 A: Civil
 	Q(1.1): Would you like to apply for a fee waiver?
 	A: Yes
@@ -13,166 +16,66 @@ A: Civil
 			A:Yes
 				Q(assistance1):GOTO:waiver
 			A:No
-				Q(household1): You may still be eligible. What is your household size? 
-				A:1
-					Q(income1): How much do you make a week?
-					X:
-						Q(1.1.1.1.2.1.1): Are you sure?
-						A:[javascript:if (getvar('income1')<290) {goto('waiver')} else if (getvar('income1')>=290) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.1.1.2):GOTO:income1
+				Q(household1): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+				the defendant unless those people are victims of the defendant)  
+				X:number
+					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
-						Q(1.1.1.1.2.1.2): Please consult your latest tax forms
-				A:2
-					Q(income2): How much do you (or parents of juvenile) make a week? (combined)
-					X:
-						Q(1.1.1.1.2.2.1): Are you sure?
-						A:[javascript:if (getvar('income2')<390) {goto('waiver')} else if (getvar('income2')>=390) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.2.1.2):GOTO:income2
-					A: I don't know
-						Q(1.1.1.1.2.2.2): Please consult your latest tax forms
-				A:3
-					Q(income3): How much do you (or parents of juvenile) make a week? (combined)
-					X:
-						Q(1.1.1.1.2.3.1): Are you sure?
-						A:[javascript:if (getvar('income3')<491) {goto('waiver')} else if (getvar('income3')>=491) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.3.1.2):GOTO:income3
-					A: I don't know
-						Q(1.1.1.1.2.3.2): Please consult your latest tax forms
-				A:4
-					Q(income4): How much do you (or parents of juvenile) make a week? (combined)
-					X:
-						Q(1.1.1.1.2.4.1): Are you sure?
-						A:[javascript:if (getvar('income4')<591) {goto('waiver')} else if (getvar('income4')>=591) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.4.1.2):GOTO:income4
-					A: I don't know
-						Q(1.1.1.1.2.4.2): Please consult your latest tax forms
-				A:5
-					Q(income5): How much do you (or parents of juvenile) make a week? (combined)
-					X:
-						Q(1.1.1.1.2.5.1): Are you sure?
-						A:[javascript:if (getvar('income5')<692) {goto('waiver')} else if (getvar('income5')>=692) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.5.1.2):GOTO:income5
-					A: I don't know
-						Q(1.1.1.1.2.5.2): Please consult your latest tax forms
-				A:6
-					Q(income6): How much do you (or parents of juvenile) make a week? (combined)
-					X:
-						Q(1.1.1.1.2.6.1): Are you sure?
-						A:[javascript:if (getvar('income6')<792) {goto('waiver')} else if (getvar('income6')>=792) {goto('nowaiver')} else {goto('what')}] Yes
-						A: No
-							Q(1.1.1.1.2.6.1.2):GOTO:income6
-					A: I don't know
-						Q(1.1.1.1.2.6.2): Please consult your latest tax forms
-				A:Other
-					Q(1.1.1.1.2.7): Please consult here: http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf
-		A: Juvenile
-			Q(1.1.1.2): Are you under the care of your parents?
+						Q(1.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
+		A: Juvenile (Juveniles are usually not charged civilly)
+			Q(1.1.1.2): Are you under the care of your parents? (usually you will be under their care unless they are determined to have to be emancipated (independent of parents by court order or on active duty)
 			A: Yes
-				Q(1.1.1.2.1):GOTO:assistance
+				Q(1.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
 			A: No
-				Q(1.1.1.2.2):insert 1 GOTO:household1
+				Q(1.1.1.2.2):Enter your own income and enter 1 for household GOTO:household1
 	A: No
 		Q(1.1.2):GOTO:bye
 		
 A: Criminal
 	Q(1.2): Are you seeking court counsel?
 	A: Yes	
-		Q(1.2.1): Did you waive your right to counsel?
+		Q(rights): Did you waive your right to counsel? (Will represent oneself)
 		A: Yes
 			Q(1.2.1.1):GOTO:nocounsel
 		A: No
-			Q(1.2.1.2): Are you charged with a felony or misdemeanor for which a jail sentence may be imposed and be without counsel?
+			Q(charges): Are you charged with a felony or misdemeanor for which a jail sentence may be imposed?
 			A: Yes
 				Q(1.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
 				A: Juvenile
-					Q(1.2.1.2.1.1): Are you under custody of your parents?
+					Q(1.2.1.2.1.1): Are your parents financially able to provide counsel (Most of the time the juvenile is counted apart from the parent) Also see <a href="https://law.lis.virginia.gov/vacode/16.1-266" target=_new>here</a>
 					A: Yes
-						Q(1.2.1.2.1.1.1):GOTO:a1
+						Q(1.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
 					A: No
-						Q(1.2.1.2.1.1.2): insert 1 GOTO:household2
-				A: adult
+						Q(1.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:household2
+				A: Adult
 					Q(a1): Are you a current recipient of a state or federally administered public assistance program such as 
 					AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
 					A: Yes
 						Q(1.2.1.2.1.2.1):GOTO:counsel
 					A: No
-						Q(household2): You may still be eligible. What is your household size? 
-						A:1
-							Q(i1): How much do you make a week?
-							X:
-								Q(1.2.1.2.1.2.2.1.1): Are you sure?
-								A:[javascript:if (getvar('i1')<290) {goto('counsel')} else if (getvar('i1')>=290) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.1.1.2):GOTO:i1
+						Q(household2): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+						the defendant unless those people are in the case against you as prosecution)
+						X:number
+							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
 							A: I don't know
-								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms
-						A:2
-							Q(i2): How much do you (or parents of juvenile) make a week? (combined)
-							X:
-								Q(1.2.1.2.1.2.2.2.1): Are you sure?
-								A:[javascript:if (getvar('i2')<390) {goto('counsel')} else if (getvar('i2')>=390) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.2.1.2):GOTO:i2
-							A: I don't know
-								Q(1.2.1.2.1.2.2.2.2): Please consult your latest tax forms
-						A:3
-							Q(i3): How much do you (or parents of juvenile) make a week? (combined)
-							X:
-								Q(1.2.1.2.1.2.2.3.1): Are you sure?
-								A:[javascript:if (getvar('i3')<491) {goto('counsel')} else if (getvar('i3')>=491) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.3.1.2):GOTO:i3
-							A: I don't know
-								Q(1.2.1.2.1.2.2.3.2): Please consult your latest tax forms
-						A:4
-							Q(i4): How much do you (or parents of juvenile) make a week? (combined)
-							X:
-								Q(1.2.1.2.1.2.2.4.1): Are you sure?
-								A:[javascript:if (getvar('i4')<591) {goto('counsel')} else if (getvar('i4')>=591) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.4.1.2):GOTO:i4
-							A: I don't know
-								Q(1.2.1.2.1.2.2.4.2): Please consult your latest tax forms
-						A:5
-							Q(i5): How much do you (or parents of juvenile) make a week? (combined)
-							X:
-								Q(1.2.1.2.1.2.2.5.1): Are you sure?
-								A:[javascript:if (getvar('i5')<692) {goto('counsel')} else if (getvar('i5')>=692) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.5.1.2):GOTO:i5
-							A: I don't know
-								Q(1.2.1.2.1.2.2.5.2): Please consult your latest tax forms
-						A:6
-							Q(i6): How much do you (or parents of juvenile) make a week? (combined)
-							X:
-								Q(1.2.1.2.1.2.2.6.1): Are you sure?
-								A:[javascript:if (getvar('income6')<792) {goto('counsel')} else if (getvar('i6')>=792) {goto('nocounsel')} else {goto('huh')}] Yes
-								A: No
-									Q(1.2.1.2.1.2.2.6.1.2):GOTO:i6
-							A: I don't know
-								Q(1.2.1.2.1.2.2.6.2): Please consult your latest tax forms
-						A:Other
-							Q(1.2.1.2.1.2.2.7): Please consult here: http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf
+								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms GOTO:i
 			A: No
 				Q(1.2.1.2.2):GOTO:nocounsel
+			A: I don't know
+				Q(1.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
+		A: I don't know
+			Q(1.2.1.3): When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO:rights
 	A: No
 		Q(1.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver See here: http://www.courts.state.va.us/forms/circuit/cc1414.pdf (Court will make final decision)		
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision)		
 
-Q(nowaiver): You probably are not eligible for a fee waiver. GOTO:bye
+Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
 
-Q(counsel): You probably are eligible for counsel See here: http://www.courts.state.va.us/forms/district/dc333.pdf (Court will make final decision)
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision)
 
-Q(nocounsel): You probably are not eligible for counsel. GOTO:bye
-
-Q(what): Must be a number. GOTO:household1
-
-Q(huh): Must be a number. GOTO:household2
+Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
 
 Q(bye): Have a good day.
