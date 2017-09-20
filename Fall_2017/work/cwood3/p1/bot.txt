@@ -1,44 +1,160 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+Q(action): Is this a criminal or civil action?
+A: Criminal
+	Q(years):How old are you?
+	X:
+		Q(PD): Are you dependent on a guardian?
+		A[javascript:if (getvar('years')>=18){goto('PD')}else if (getvar('years')<18){goto('parent')}else {goto('nope')}]:Yes
+		A: No
+			Q(DP): Was there investigation to determine your indigency status?
+			A: Yes
+				Q(question): Where you determined to be indigent?
+				A: Yes
+					Q(convixted): If convicted, will there be a fine of at least $500 and imprisonment?
+					A: Yes
+						Q(IDS): You are entitled IDS to appoint counsel without charge unless you are found guilty.
+					A: No
+						
+						Q(noassistance): You are not entitled to be assisted by IDS to appoint counsel without charge.
+				A: No
+					Q(paperwork): Did you complete and submit the affidavit of indigency?
+					A: Yes
+						Q(benefits): Do you receive food and nutrition benefits?
+						A: Yes
+							Q(nut):GOTO:IDS
+							
+						A: No
+							Q(work):Do you receive Work First Family Assistance?
+							A: Yes
+								Q(1.1.1.2.1.2.1.2.1):GOTO:nut
+							A: No
+								Q(xxy): Do you receive SSI?
+								A: Yes
+									Q(1.1.1.2.1.2.1.2.2.1):GOTO:1.1.1.2.1.2.1.2.1
+								A: No
+									
+									Q(lawfirm): Are you represented by legal organization thats primary purpose is to furnish legal services to indigent individuals?
+									A: Yes
+										Q(Social):GOTO:1.1.1.2.1.2.1.2.2.1	
+											
+									A: No
+										Q(nogo):You are not entitled to IDS appointing counsel at no cost.
+					A[www.nccourts.org/forms/Documents/687.pdf]: Please fill it out.
+			A: No
+				Q(file): Did you complete the affidavit of indigency?
+				A: Yes
+					Q(1.1.1.2.2.1): Reach out to the IDS.
+				A[www.nccourts.org/forms/Documents/687.pdf]: Please fill it out.
 
-Q(1): Do your receive public assistance? 
+
+
+			
+								
+							
+				
+				
+				
+			
+
+A: Civil
+	Q(age): How old are you?
+	X:
+		Q(dependency): Are you dependent on a guardian?
+		A[javascript:if (getvar('age')>=18){goto('self')}else if (getvar('age')<18){goto('guardian')}else {goto('nan')}]:Yes
+		A: No
+			Q(1.2.1.2):GOTO:self
+Q(self): Was there an investigation to determine your indigent status?
+A: Yes 
+	Q(indigent): Are you indigent?
+	A: Yes
+		Q(casetype): Will this case result in imprisonment or a fine of at least $500?
+		A: Yes
+			Q(entitled): You are entitled to appointed counsel through IDS without charge unless found guilty.
+		A: No
+			Q(casetype2): Is this a hearing for a writ of hebeau corpus?
+			A: Yes
+				Q(yes):GOTO:entitled
+			A: No
+				Q(casetype3): Is this a hearing for revocation of probation?
+				A: Yes
+					Q(correct):GOTO:yes
+				A: No
+					Q(casetype4): Is this a hearing for extradition to another state?
+					A: Yes
+						Q(awesome): GOTO:correct
+					A: No
+						Q(casetype5): Is this a bail proceeding?
+						A:Yes
+							Q(excellent): GOTO:awesome
+						A: No
+							Q(casetype6):Is this a hearing for revocation of parole?
+							A: Yes
+								Q(termination): GOTO:excellent
+							A: No
+								Q(casetype7):Is this a hearing to terminate your parental rights?
+								A: Yes
+									Q(nomore): GOTO:termination
+								A: No
+									Q(2.1.1.2.2.2.2.2.2.2):GOTO:notentilted
+							
+	A: No
+		Q(notentilted): Not entitled to appointed counsel through IDS.
+A: No
+	Q(2.2): Did you complete the affidavit of indigency?
+	A: Yes
+		Q(2.2.1): Has it been reviewed, approved and filed with the court?
+		A: Yes
+			Q(2.2.1.1): Do you receive food and nutrition benefits?
+			A: Yes
+				Q(food):GOTO:entitled
+			A: No
+				Q(2.2.1.1.2): Do you receive Work First Family Assistance?
+				A: Yes
+					Q(WFFA):GOTO:food
+				A: No
+					Q(2.2.1.1.2.2): Do you receive SSI?
+					A: Yes
+						Q(SSI):GOTO:WFFA
+					A: No
+						Q(2.2.1.1.2.2.2): Are you represented by legal organization thats primary purpose is to furnish legal services to indigent individuals?
+						A: Yes
+							Q(legal): GOTO:SSI
+						A: No
+							Q(2.2.1.1.2.2.2.2):Not entitled to appointed counsel through IDS.
+					
+		A: No
+			Q(2.2.1.2): Contact the IDS to obtain the status of the review and additional information.
+			A[http://www.ncids.org/Contact%20IDS/contactus.html]
+	A[www.nccourts.org/forms/Documents/687.pdf]: Please fill it out.
+
+Q(guardian):Was there an investigation to determine your guardian's indigent status?
 A: Yes
-	Q(1.1):GOTO:qualaid
+	Q(3.1): Was you guardian determined to be indigent?
+	A: Yes
+		Q(3.1.1): You are entitled to appointed counsel through IDS
+	A: No
+		Q(3.1.2): Was an affidavit of indigency filed with the court?
+		A: Yes
+			Q(3.1.2.1): Do you receive food and nutrition benefits?	
+			A: Yes
+				Q(3.1.2.1.1): You are entitled to appointed counsel through IDS without charge unless found guilty.
+			A: No
+				Q(3.1.2.1.2): Do you receive Work First Family Assistance?
+				A: Yes
+					Q(cook): GOTO:3.1.2.1.1
+				A: No
+					Q(3.1.2.1.2.2): Do you receive SSI?
+					A: Yes
+						Q(security): GOTO:cook
+					A: No
+						Q(3.1.2.1.2.2.2): Are you represented by legal organization that's primary purpose is to furnish legal services to indigent individuals?
+						A: Yes
+							Q(organization):GOTO:security
+						A: No
+							Q(3.1.2.1.2.2.2.2): You are not entitled to free representation through Ids.
+
+		A[www.nccourts.org/forms/Documents/687.pdf]: Please fill it out.
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(3.2): Contact the IDS to begin or check the status of the investigation.
+	A[http://www.ncids.org/Contact%20IDS/contactus.html]
+Q(nan): That is not an age.GOTO:age
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
-
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
-
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
-
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
