@@ -1,4 +1,4 @@
-Title: Virginia Indigency Calculator
+Title: Virginia Indigency Calculator for both Civil and Criminal Cases
 Author: Loren Chen
 Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
