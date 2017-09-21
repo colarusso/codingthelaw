@@ -1,44 +1,82 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+Title: Determinations of Indigent Status
+Description: A QnA Markup to assist pro se litigants determine their eligibility for court fee waivers.  
+Before: <center><h2>Determinations of Indigent Status</h2></center>
 
-Q(1): Do your receive public assistance? 
-A: Yes
-	Q(1.1):GOTO:qualaid
+DOC(1):Eligibility Information Summary
+Q(1): Is your case a civil or criminal matter?
+A: Civil
+	DOC(1.1): [INSERT CIVIL INFO]
+	Q(1.1):GOTO:Swear
+A: Criminal
+	DOC(1.2): [INSERT CRIMINAL INFO]
+	Q(1.2):GOTO:Crim
+
+Q(Swear): Are you able to pay the costs, fees, or expenses necessary to prosecute, defend, or appeal this action?
+A: No, I am unable.
+	Q(2.1):GOTO:Civ1
+A: Yes, I am able.  
+	Q(2.2):GOTO:Great
+
+Q(Civ1): Please enter your largest source of income:
+X:
+	Q(Civ1a): How much is your income from that source?
+	X:
+		Q(3.1.1):GOTO:Civ2
+A: I have no sources of income.
+	Q(3.2):GOTO:Prop1
+Q(Civ2): Please enter your second source of income.
+X:
+	Q(Civ2a): How much is your income from that source?
+	X:
+		Q(4.1.1):GOTO:Prop1
+A: I don't have a second source of income
+	Q(4.2):GOTO:Prop1
+Q(Prop1): Do you own any property? 
+A: Yes 
+	Q(5.1): What type of property is it?
+	X:
+		Q(5.1.1): What is the value of that property?
+		X:
+			Q(5.1.1.1):GOTO:Nature
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(5.2):GOTO:Nature
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
+Q(Nature): What is the nature of your action (what is the lawsuit about)?  Please provide enough details for the Judge to determine the merit.  
+X:
+	Q(6.1):Is there another person that would benefit from the recovery you're seeking?
+	A: Yes
+		Q(6.1.1): Is that person able to pay for the costs of continuing this action?
+		A: Yes 
+			Q(6.1.1.1):GOTO:Great
+		A: No 
+			Q(6.1.1.2):GOTO:Done
+	A: No 
+		Q(6.1.2):GOTO:Done
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
 
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
 
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
 
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
 
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
+Q(Crim): What is the name of the facility in which you are currently confined?
+X:
+	Q(7.1): What is the mailing address of that facility?
+	X:
+		Q(7.1.1): Were you confined in another facility within the last 6 months?
+		A: Yes
+			Q(Crim2): What is the name of that previous facility?
+			X:
+				Q(Crim2a):What is the mailing address of that previous facility?
+				X:
+					Q(7.1.1.1.1.1):GOTO:Civ1
+		A: No
+			Q(7.1.1.2):GOTO:Civ1
 
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+
+
+
+
+
+
+Q(Done): You're done!
+A[javascript:save2('Eligibility Summary.txt',doc());]: Click here to get a summary of the information you've provided! 
+Q(Great): You are not eligible for a fee waiver.  
