@@ -19,7 +19,7 @@ A:No
 	
 Q(welcome): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
 A: Civil
-	Q(2.1): Would you like to apply for a fee waiver?
+	Q(2.1): Would you like to apply for a fee waiver? 
 	A: Yes
 		Q(2.1.1): Are you an adult or a juvenile (under 18 years of age)?
 		A: Adult
@@ -82,7 +82,7 @@ A: Criminal
 	A: No
 		Q(2.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision)	Would you like to see some info that was already gathered?
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href"https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered?
 A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')]: Yes
 	Q(3.1):Here you go. GOTO:inquiries
 A: No
@@ -90,7 +90,7 @@ A: No
 
 Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
-Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision) GOTO:inquiries
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-159/" target=_new> More info</a> GOTO:inquiries
 
 Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
