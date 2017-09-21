@@ -58,10 +58,10 @@ A:Maybe
 	Q(7.3):GOTO:CRIMMAY
 
 Q(CRIMMAY): You may still qualify for a court-appointed attorney.
-A[javascript:save2('mailmerge.csv',csv())]: Please download this financial statement and the court would decide.
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please download this financial statement and the court would decide.
 
 Q(CRIMQUAL): You are most likely indigent.
-A[javascript:save2('mailmerge.csv',csv())]: Please download this financial statement and the court would decide.
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please download this financial statement and the court would decide.
 
 
 Q(pb):Do you receive any public benefits?
@@ -127,7 +127,7 @@ A:Please fill out some information.
 		Q(mail): What is your mailing address (include City, States, and Zip code)
 		X:
 			Q(form): Great <x>NAME</x>! Please download this form and show it to an attorney or the court.
-			A[javascript:save2('mailmerge.csv',csv())]: Please download this form.
+			A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')]: Please download this form.
 
 Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
 A:Yes
