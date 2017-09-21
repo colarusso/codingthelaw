@@ -83,7 +83,7 @@ A: Criminal
 		Q(2.2.2):GOTO:bye
 
 Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered?
-A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')]: Yes
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')] Yes
 	Q(3.1):Here you go. GOTO:inquiries
 A: No
 	Q(3.2):GOTO:inquiries
