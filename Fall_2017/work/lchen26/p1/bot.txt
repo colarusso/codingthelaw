@@ -28,11 +28,11 @@ A: Civil
 			A:Yes
 				Q(assistance1):GOTO:waiver
 			A:No
-				Q(household): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
+				Q(home): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
 				the defendant) unless those people are victims of the defendant)  
 				X:number
 					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
-					X:[javascript:if (fedpov(getvar('household'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
+					X:[javascript:if (fedpov(getvar('home'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
 						Q(2.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
 		A: Juvenile (Juveniles are usually not charged civilly)
@@ -40,7 +40,7 @@ A: Civil
 			A: Yes
 				Q(2.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
 			A: No
-				Q(2.1.1.2.2):Enter your own income and enter 1 for household GOTO:household
+				Q(2.1.1.2.2):Enter your own income and enter 1 for household GOTO:home
 	A: No
 		Q(2.1.2):GOTO:bye
 		
@@ -82,7 +82,7 @@ A: Criminal
 	A: No
 		Q(2.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href"https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered?
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered?
 A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')]: Yes
 	Q(3.1):Here you go. GOTO:inquiries
 A: No
