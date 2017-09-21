@@ -2,13 +2,19 @@ Title: Virginia Indigency Calculator for both Civil and Criminal Cases
 Author: Loren Chen
 Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<<<<<<< HEAD
+=======
 <input type="hidden" name="name" value="Civil Indigency Info"/>
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p1/Civil%20Fee%20Waiver%20Info.docx"/>
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Virginia Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
+<<<<<<< HEAD
+Q(1): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
+=======
 Q(hello): Welcome! Are you inquiring about a case in Virginia?
 A:Yes
 	Q(name): You are in the right place then. What is your name? (type your name and press enter)
@@ -18,6 +24,7 @@ A:No
 	Q(1.2):Unfortunately I only provide advice for cases in Virginia. GOTO:inquiries
 	
 Q(welcome): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
 A: Civil
 	Q(2.1): Would you like to apply for a fee waiver? 
 	A: Yes
@@ -28,6 +35,21 @@ A: Civil
 			A:Yes
 				Q(assistance1):GOTO:waiver
 			A:No
+<<<<<<< HEAD
+				Q(household1): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+				the defendant unless those people are victims of the defendant)  
+				X:number
+					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
+					A: I don't know
+						Q(1.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
+		A: Juvenile (Juveniles are usually not charged civilly)
+			Q(1.1.1.2): Are you under the care of your parents? (usually you will be under their care unless they are determined to have to be emancipated (independent of parents by court order or on active duty)
+			A: Yes
+				Q(1.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
+			A: No
+				Q(1.1.1.2.2):Enter your own income and enter 1 for household GOTO:household1
+=======
 				Q(home): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
 				the defendant) unless those people are victims of the defendant)  (type the value and press enter)
 				X:number
@@ -44,9 +66,14 @@ A: Civil
 				A:continue
 					Q:GOTO:assistance
 			A: No
+<<<<<<< HEAD
 				Q(2.1.1.2.2):Enter your own income and enter 1 for household 
 				A:continue
 					Q:GOTO:home
+=======
+				Q(2.1.1.2.2):Enter your own income and enter 1 for household GOTO:home
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
+>>>>>>> b889bcc8493fc7447deaa242e3aff0164cca47d7
 	A: No
 		Q(2.1.2):GOTO:bye
 		
@@ -61,21 +88,63 @@ A: Criminal
 			A: Yes
 				Q(2.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
 				A: Juvenile
+<<<<<<< HEAD
+					Q(1.2.1.2.1.1): Are your parents financially able to provide counsel (Most of the time the juvenile is counted apart from the parent) Also see <a href="https://law.lis.virginia.gov/vacode/16.1-266" target=_new>here</a>
+					A: Yes
+						Q(1.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
+					A: No
+						Q(1.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:household2
+=======
 					Q(2.2.1.2.1.1): Are your parents financially able to provide counsel (Most of the time the juvenile is counted apart from the parent) Also see <a href="https://law.lis.virginia.gov/vacode/16.1-266" target=_new>here</a>
 					A: Yes
 						Q(2.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
 					A: No
+<<<<<<< HEAD
 						Q(2.2.1.2.1.1.2):Enter your own income and enter 1 for household 
 						A: Continue
 							Q:GOTO:h
+=======
+						Q(2.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:h
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
+>>>>>>> b889bcc8493fc7447deaa242e3aff0164cca47d7
 				A: Adult
 					Q(a1): Are you a current recipient of a state or federally administered public assistance program such as 
 					AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
 					A: Yes
 						Q(2.2.1.2.1.2.1):GOTO:counsel
 					A: No
+<<<<<<< HEAD
 						Q(h): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
 						the defendant unless those people are in the case against you as prosecution) (type value and press enter)
+=======
+<<<<<<< HEAD
+						Q(household2): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+						the defendant unless those people are in the case against you as prosecution)
+						X:number
+							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously)
+							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
+							A: I don't know
+								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms GOTO:i
+			A: No
+				Q(1.2.1.2.2):GOTO:nocounsel
+			A: I don't know
+				Q(1.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
+		A: I don't know
+			Q(1.2.1.3): When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO:rights
+	A: No
+		Q(1.2.2):GOTO:bye
+
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision)		
+
+Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
+
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision)
+
+Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
+=======
+						Q(h): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+						the defendant unless those people are in the case against you as prosecution)
+>>>>>>> b889bcc8493fc7447deaa242e3aff0164cca47d7
 						X:number
 							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type value and press enter)
 							X:[javascript:if (fedpov(getvar('h'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
@@ -113,5 +182,6 @@ A:Yes
 	Q(yes):GOTO:hello
 A:No
 	Q(no):GOTO:bye
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
 
 Q(bye): Have a good day.
