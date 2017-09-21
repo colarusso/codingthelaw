@@ -2,7 +2,7 @@ Title: Virginia Indigency Calculator for both Civil and Criminal Cases
 Author: Loren Chen
 Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<input type="hidden" name="name" value="Letter to Santa"/>
+<input type="hidden" name="name" value="Civil Indigency Info"/>
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p1/Civil%20Fee%20Waiver%20Info.docx"/>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Virginia Indigency Calculator</h3>
