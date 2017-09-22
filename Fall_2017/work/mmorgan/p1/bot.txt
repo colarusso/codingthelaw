@@ -1,9 +1,18 @@
 Title: Texas Indigency Calculator
 Author: Matthew Morgan
+<<<<<<< HEAD
 Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Texas Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+=======
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/250px-Flag_of_Texas.svg.png');"></div>
+<h2 style="text-align:center;">Texas Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52
 
 Q(Case):Is your case Criminal or Civil?
 A(criminal):Criminal
@@ -35,9 +44,10 @@ Q(Qual): Let's see if you qualify.
 A:[javascript:if (getvar('hh')==1 && getvar('Income')<1005) {goto('yes')}else if (getvar('hh')==1 && getvar('Income')>1005){goto('not')}else if (getvar('hh')==2 && getvar('Income')<1353.33) {goto('yes')}else if (getvar('hh')==2 && getvar('Income')>1353.33){goto('not')}else if (getvar('hh')==3 && getvar('Income')<1701.67) {goto('yes')}else if (getvar('hh')==3 && getvar('Income')>1701.67){goto('not')}else if (getvar('hh')==4 && getvar('Income')<2050) {goto('yes')}else if (getvar('hh')==4 && getvar('Income')>2050){goto('not')}else if (getvar('hh')==5 && getvar('Income')<2398.33) {goto('yes')}else if (getvar('hh')==5 && getvar('Income')>2398.33){goto('not')}else if (getvar('hh')==6 && getvar('Income')<2746.67) {goto('yes')}else if (getvar('hh')==6 && getvar('Income')>2746.67){goto('not')}else if (getvar('hh')==7 && getvar('Income')<3095) {goto('yes')}else if (getvar('hh')==7 && getvar('Income')>3095){goto('not')}] ok
 
 Q(yes):You are likely eligible to have you court costs reduced or waived. Would you also like to know if you also qualify for a court appointed lawyer?
-A[javascript:if (getvar('Case')=='criminal') {goto('crime')} else {goto('Ylaw')}]: Yes
+A[javascript:if (getvar('Case')=='criminal') {goto('crime')} else {goto('Civlaw')}]: Yes
 A:No
-	Q(7.2): [https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf]Please fill out and submit this form to the court. 
+	Q(7.2):Please fill out and submit this form to the court. 
+	A:[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf] Form
 
 
 
@@ -57,8 +67,16 @@ A: Misdemeanor
 	A:D
 		Q(D):You are not eligible for a court appointed lawyer.
 	A: I am unsure
-		Q(9.2.5):You likely qualify, but should find out more information about your case
+		Q(9.2.5):You likely qualify, but should find out more information about your case.
 
+Q(Ylaw):You are likely eligible to have a court appointed lawyer, on your next court date, ask the judge for help in acquiring one. Here is the form to reduce or waive court costs
+A: Please fill it out and submit this form to the court for reduced or waived court costs. <a href="[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf]" target="_blank">Statement of Inability to pay</a>
+A:Eligibility for court appointed lawyers vary by county, to find out more about the county where your case is, follow this link and find your county. <a href="[https://tidc.tamu.edu/public.net/Reports/IDPlanNarrative.aspx]" target="_blank">County Indigent Plan</a>
+
+Q(Nlaw): You are likely ineligible to have a court appointed lawyer.
+A:[https://texaslawhelp.org/article/legal-aid-bar-association-and-non-profit-organizations-useful-websites] However, you may click here to see a list of non-profit organizations that may be able to help you. 
+
+<<<<<<< HEAD
 Q(Ylaw):[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf] You are likely eligible to have a court appointed lawyer.  Here is the form to reduce or waive court costs
 Q(Nlaw): You are likely ineligible to have a court appointed lawyer.
 
@@ -67,3 +85,6 @@ Q(Nlaw): You are likely ineligible to have a court appointed lawyer.
 
 <a href="https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf" target=_new>Please fill out and submit this form to the court. 
 </a>
+=======
+Q(Civlaw): Unfortunately you are not able to have a court appointed lawyer for civil matter. 
+>>>>>>> 96535c9ce1d70f9b80577b4382ba9cade51fdc52

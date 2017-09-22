@@ -1,81 +1,114 @@
-Title: Virginia Indigency Calculator
+Title: Virginia Indigency Calculator for both Civil and Criminal Cases
 Author: Loren Chen
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<input type="hidden" name="name" value="Civil Indigency Info"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p1/Civil%20Fee%20Waiver%20Info.docx"/>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Virginia Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
-Q(1): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
+Q(hello): Welcome! Are you inquiring about a case in Virginia?
+A:Yes
+	Q(name): You are in the right place then. What is your name? (type your name and press enter)
+	X:
+		Q(1.1.1):Hello <x>name</x> GOTO:welcome
+A:No
+	Q(1.2):Unfortunately I only provide advice for cases in Virginia. Maybe <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>this </a> will help?
+	A: Thanks
+		Q(1.2.1):You're very welcome. GOTO:inquiries
+	
+Q(welcome): Are you filing a civil case or criminal case? <a href="http://judiciallearningcenter.org/types-of-court-cases/" target=_new> See here for more information. </a>
 A: Civil
-	Q(1.1): Would you like to apply for a fee waiver?
+	Q(2.1): Would you like to apply for a fee waiver? 
 	A: Yes
-		Q(1.1.1): Are you an adult or a juvenile (under 18 years of age)?
+		Q(2.1.1): Are you an adult or a juvenile (under 18 years of age)?
 		A: Adult
 			Q(assistance): Are you (or the adult of the juvenile) a current recipient of a state or federally administered public assistance program such as 
 			AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
 			A:Yes
 				Q(assistance1):GOTO:waiver
 			A:No
-				Q(household1): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
-				the defendant unless those people are victims of the defendant)  
+				Q(home): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
+				the defendant) unless those people are victims of the defendant)  (type the value and press enter)
 				X:number
-					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously)
-					X:[javascript:if (fedpov(getvar('household1'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
+					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
+					X:[javascript:if (fedpov(getvar('home'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
-						Q(1.1.1.1.2.1.2): Please consult your latest tax forms GOTO:income
+						Q(2.1.1.1.2.1.2): Please consult your latest tax forms and return when you have the relevant information.
+						A:continue
+							Q(2.1.1.1.2.1.2.1):GOTO:inquiries
 		A: Juvenile (Juveniles are usually not charged civilly)
-			Q(1.1.1.2): Are you under the care of your parents? (usually you will be under their care unless they are determined to have to be emancipated (independent of parents by court order or on active duty)
+			Q(2.1.1.2): Are you under the care of your parents? (usually you will be under their care unless they are determined to have to be emancipated (independent of parents by court order or on active duty)
 			A: Yes
-				Q(1.1.1.2.1):Enter the income of the parents and include them for household GOTO:assistance
+				Q(2.1.1.2.1):Enter the income of the parents and include them for household 
+				A:continue
+					Q(2.1.1.2.1.1):GOTO:assistance
 			A: No
-				Q(1.1.1.2.2):Enter your own income and enter 1 for household GOTO:household1
+				Q(2.1.1.2.2):Enter your own income and enter 1 for household 
+				A:continue
+					Q(2.1.1.2.2.1):GOTO:home
 	A: No
-		Q(1.1.2):GOTO:bye
+		Q(2.1.2):GOTO:bye
 		
 A: Criminal
-	Q(1.2): Are you seeking court counsel?
+	Q(2.2): Are you seeking court counsel?
 	A: Yes	
 		Q(rights): Did you waive your right to counsel? (Will represent oneself)
 		A: Yes
-			Q(1.2.1.1):GOTO:nocounsel
+			Q(2.2.1.1):GOTO:nocounsel
 		A: No
 			Q(charges): Are you charged with a felony or misdemeanor for which a jail sentence may be imposed?
 			A: Yes
-				Q(1.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
+				Q(2.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
 				A: Juvenile
-					Q(1.2.1.2.1.1): Are your parents financially able to provide counsel (Most of the time the juvenile is counted apart from the parent) Also see <a href="https://law.lis.virginia.gov/vacode/16.1-266" target=_new>here</a>
-					A: Yes
-						Q(1.2.1.2.1.1.1):Enter the income of the parents and include them for household GOTO:a1
-					A: No
-						Q(1.2.1.2.1.1.2):Enter your own income and enter 1 for household GOTO:household2
+					Q(2.2.1.2.1.1):Enter your own income and enter 1 for household 
+					A: Continue
+						Q(2.2.1.2.1.1.1):GOTO:h
 				A: Adult
 					Q(a1): Are you a current recipient of a state or federally administered public assistance program such as 
 					AFDC, Food Stamps, Medicaid, and Supplemental Security Income?
 					A: Yes
-						Q(1.2.1.2.1.2.1):GOTO:counsel
+						Q(2.2.1.2.1.2.1):GOTO:counsel
 					A: No
-						Q(household2): You may still be eligible. What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
-						the defendant unless those people are in the case against you as prosecution)
+						Q(h): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
+						the defendant unless those people are in the case against you as prosecution) (type value and press enter)
 						X:number
-							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously)
-							X:[javascript:if (fedpov(getvar('household2'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
+							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type value and press enter)
+							X:[javascript:if (fedpov(getvar('h'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
 							A: I don't know
-								Q(1.2.1.2.1.2.2.1.2): Please consult your latest tax forms GOTO:i
+								Q(2.2.1.2.1.2.2.1.2): Please consult your latest tax forms and return when you have the relevant information. 
+								A:continue
+									Q(2.2.1.2.1.2.2.1.2.1):GOTO:inquiries
 			A: No
-				Q(1.2.1.2.2):GOTO:nocounsel
+				Q(2.2.1.2.2):GOTO:nocounsel
 			A: I don't know
-				Q(1.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> GOTO:charges
+				Q(2.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors.</a> 
+				A:continue
+					Q(2.2.1.2.3.1):GOTO:charges
 		A: I don't know
-			Q(1.2.1.3): When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did explicitly invoke your right to counsel you probably waived your right to counsel. GOTO:rights
+			Q(2.2.1.3): When you were charged, you were told your Miranda rights, which includes the right to seek counsel. If you did not explicitly invoke your right to counsel you probably waived your right to counsel. 
+			A:continue
+				Q(2.2.1.3.1):GOTO:rights
 	A: No
-		Q(1.2.2):GOTO:bye
+		Q(2.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision)		
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered (will be in a downloaded word doc)?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+	Q(3.1):Here you go. (the information may be incomplete) GOTO:inquiries
+A: No
+	Q(3.2):GOTO:inquiries
 
-Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
+Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
-Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision)
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-159/" target=_new> More info</a> GOTO:inquiries
 
-Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:bye
+Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
+Q(inquiries): Do you have any other inquiries?
+A:Yes
+	Q(yes):GOTO:hello
+A:No
+	Q(no):GOTO:bye
 Q(bye): Have a good day.
