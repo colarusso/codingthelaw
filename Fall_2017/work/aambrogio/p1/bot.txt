@@ -1,3 +1,9 @@
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Georgia Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+
 Q(1): Are you, a resident of the State of Georgia, without resources to pay court costs and other costs associated with litigation?
 A: No
 	Q(1.1): You do not qualify for appointment of counsel or fee waivers in Georgia. Good luck in court!
@@ -6,7 +12,7 @@ A: Yes.
 	A: Civil
 		Q(1.2.1): Are you over the age of 18?
 		A: Yes
-			Q(1.2.1.1): Do you suffer from any legal disabilities?
+			Q(1.2.1.1): Do you suffer from any legal disabilities? See <a href="http://codes.findlaw.com/us/title-42-the-public-health-and-welfare/42-usc-sect-12102.html"</a>.
 			A: No
 				Q(1.2.1.1.1): You may qualify for fee waivers and possibly appointment of counsel, depending on the civil case. How many persons are in your household, including yourself?
 				A: 1
