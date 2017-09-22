@@ -15,11 +15,11 @@ A: Civil
 	Q(1.2):GOTO:pb
 Q(CRIM): Is it a felony or misdemeanor?
 A:Felony
-	Q(2.1):GOTO:INCOME
+	Q(2.1):GOTO:incomecrim
 A: Misdemeanor
-	Q(2.2):GOTO:INCOME
+	Q(2.2):GOTO:incomecrim
 
-Q(INCOME): Do you have income?
+Q(incomecrim): Do you have income?
 A:Yes
 	Q(3.1):GOTO:spouse
 A:No
@@ -119,7 +119,7 @@ A:Please fill out some information.
 		Q(mail): What is your mailing address (include City, States, and Zip code)
 		X:
 			Q(form): Great <x>NAME</x>! Please download this form and show it to an attorney or the court.
-			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc')] Please download this form.
+			A:[javascript:save2('mailmerge.csv',csv())] Please download this form.
 
 Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
 A:Yes
