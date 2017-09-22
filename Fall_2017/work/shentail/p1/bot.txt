@@ -17,13 +17,7 @@ Q(CRIM): Is it a felony or misdemeanor?
 A:Felony
 	Q(2.1):GOTO:INCOME
 A: Misdemeanor
-	Q(CRIM.1.2): Which class of misdemeanor
-	A: Class A
-		Q(2.2.1):GOTO:INCOME
-	A: Class B
-		Q(2.2.2): You might not be eligible for counsel, please see a lawyer to inquire. (Penal Code)
-	A: Class C
-		Q(2.2.3):GOTO:2.2.2
+	Q(2.2):GOTO:INCOME
 
 Q(INCOME): Do you have income?
 A:Yes
@@ -49,7 +43,7 @@ A:Yes
 A:No
 	Q(6.2):GOTO:SUFF
 
-Q(SUFF): Do you have sufficient income to provide for yourself and hire a private attorney(household income+assets- all expenses)?
+Q(SUFF): Do you have sufficient income to provide for yourself (household income+assets- all expenses)AND hire a private attorney?
 A:Yes
 	Q(7.1):GOTO:CRIMMAY
 A: No
@@ -57,12 +51,11 @@ A: No
 A:Maybe
 	Q(7.3):GOTO:CRIMMAY
 
-Q(CRIMMAY): You may still qualify for a court-appointed attorney.
-A:[http://www.courts.ca.gov/documents/mc210.pdf] Please download this financial statement and the court would decide.
+Q(CRIMMAY): You may still qualify for a court-appointed attorney. See <a href="http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN§ionNum=987." target=_new>CA Penal Code §987</a>
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
 
-Q(CRIMQUAL): You are most likely indigent.
-A:[http://www.courts.ca.gov/documents/mc210.pdf] Please download this financial statement and the court would decide.
-
+Q(CRIMQUAL): You are most likely indigent. See <a href="http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN§ionNum=987." target=_new>CA Penal Code §987</a>
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
 
 Q(pb):Do you receive any public benefits?
 A:Yes
@@ -117,10 +110,9 @@ X:number
 	Q(income):What is you gross monthly household income (before deduction for taxes)?
 	X:number
 		Q(Q): Let's see if you qualify
-		A:[javascript:if (getvar('household')==1 && getvar('income')<1256.26) {goto('qual')}else if (getvar('household')==1 && getvar('income')>1256.26){goto('not')}else if (getvar('household')==2 && getvar('income')<1691.67) {goto('qual')}else if (getvar('household')==2 && getvar('income')>1691.67){goto('not')}else if (getvar('household')==3 && getvar('income')<2127.09) {goto('qual')}else if (getvar('household')==3 && getvar('income')>2127.09){goto('not')}else if (getvar('household')==4 && getvar('income')<2562.51) {goto('qual')}else if (getvar('household')==4 && getvar('income')>2562.51){goto('not')}else if (getvar('household')==5 && getvar('income')<2997.92) {goto('qual')}else if (getvar('household')==5 && getvar('income')>2997.92){goto('not')}else if (getvar('household')==6 && getvar('income')<3433.34) {goto('qual')}else if (getvar('household')==6 && getvar('income')>3433.34){goto('not')}] ok			
-
-							
-Q(qual): Congratulations, you are eligible for a fee waiver. 
+		A:[javascript:if (getvar('household')==1 && getvar('income')<=1256.26) {goto('qual')}else if (getvar('household')==1 && getvar('income')>1256.26){goto('not')}else if (getvar('household')==2 && getvar('income')<=1691.67) {goto('qual')}else if (getvar('household')==2 && getvar('income')>1691.67){goto('not')}else if (getvar('household')==3 && getvar('income')<=2127.09) {goto('qual')}else if (getvar('household')==3 && getvar('income')>2127.09){goto('not')}else if (getvar('household')==4 && getvar('income')<=2562.51) {goto('qual')}else if (getvar('household')==4 && getvar('income')>2562.51){goto('not')}else if (getvar('household')==5 && getvar('income')<=2997.92) {goto('qual')}else if (getvar('household')==5 && getvar('income')>2997.92){goto('not')}else if (getvar('household')==6 && getvar('income')<=3433.34) {goto('qual')}else if (getvar('household')==6 && getvar('income')>3433.34){goto('not')}else if (getvar('household')>6 && getvar('income')<=(getvar('household')-6)*435.42+3433.34) {goto('qual')}else if (getvar('household')>6 && getvar('income')>(getvar('household')-6)*435.42+3433.34) {goto('not')}]ok			
+						
+Q(qual): Congratulations, you are probably eligible for a fee waiver. See <a href="http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV§ionNum=68632.." target=_new>CA Government Code §68632</a>
 A:Please fill out some information.
 	Q(NAME): What is you name?
 	X:
@@ -131,7 +123,7 @@ A:Please fill out some information.
 
 Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
 A:Yes
-	Q(21.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an attorney for more information.																			
+	Q(21.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an<a href="http://www.courts.ca.gov/1001.htm." target=_new>attorney</a> or click <a href="http://www.courts.ca.gov/selfhelp-feewaiver.htm." target=_new> here</a>for more information.																			
 A:No
 	Q(21.2):GOTO:qual
 
