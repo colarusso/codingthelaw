@@ -33,7 +33,7 @@ A: Civil
 				Q(home): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
 				the defendant) unless those people are victims of the defendant)  (type the value and press enter)
 				X:number
-					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
+					Q(income): How much do you make a year? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
 					X:[javascript:if (fedpov(getvar('home'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
 						Q(2.1.1.1.2.1.2): Please consult your latest tax forms and return when you have the relevant information.
@@ -75,7 +75,7 @@ A: Criminal
 						Q(h): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
 						the defendant unless those people are in the case against you as prosecution) (type value and press enter)
 						X:number
-							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type value and press enter)
+							Q(i): How much do you make a year? (This will include everyone who is in your household as indicated previously) (type value and press enter)
 							X:[javascript:if (fedpov(getvar('h'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
 							A: I don't know
 								Q(2.2.1.2.1.2.2.1.2): Please consult your latest tax forms and return when you have the relevant information. 
