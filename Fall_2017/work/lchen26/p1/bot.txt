@@ -1,7 +1,7 @@
 Title: Virginia Indigency Calculator for both Civil and Criminal Cases
 Author: Loren Chen
 Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/p1/legal.png');"></div>
 <input type="hidden" name="name" value="Civil Indigency Info"/>
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p1/Civil%20Fee%20Waiver%20Info.docx"/>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
@@ -33,7 +33,7 @@ A: Civil
 				Q(home): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for (including
 				the defendant) unless those people are victims of the defendant)  (type the value and press enter)
 				X:number
-					Q(income): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
+					Q(income): How much do you make a year? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
 					X:[javascript:if (fedpov(getvar('home'),getvar('income'),125)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
 						Q(2.1.1.1.2.1.2): Please consult your latest tax forms and return when you have the relevant information.
@@ -75,7 +75,7 @@ A: Criminal
 						Q(h): What is your household size? (includes total number of persons residing in the home that the defendant has financial responsibility for, including
 						the defendant unless those people are in the case against you as prosecution) (type value and press enter)
 						X:number
-							Q(i): How much do you make a week? (This will include everyone who is in your household as indicated previously) (type value and press enter)
+							Q(i): How much do you make a year? (This will include everyone who is in your household as indicated previously) (type value and press enter)
 							X:[javascript:if (fedpov(getvar('h'),getvar('i'),125)){goto ('counsel')} else {goto('nocounsel')} ]number
 							A: I don't know
 								Q(2.2.1.2.1.2.2.1.2): Please consult your latest tax forms and return when you have the relevant information. 
