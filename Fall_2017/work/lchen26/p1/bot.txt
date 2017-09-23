@@ -9,7 +9,7 @@ Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
-Q(hello): Welcome! Are you inquiring about a case in Virginia?
+Q(hello): Welcome. Are you inquiring about a case in Virginia?
 A:Yes
 	Q(name): You are in the right place then. What is your name? (type your name and press enter)
 	X:
