@@ -1,8 +1,8 @@
-Title: Vermont Indigency Calculator
+Title: Vermont needy person Calculator
 Author: Justin Martino
 Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<h3>[Vermont] Indigency Calculator</h3>
+<h3>Vermont needy person Calculator</h3>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify as a "needy person" for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
@@ -21,7 +21,7 @@ A: No
 
 Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://legislature.vermont.gov/statutes/section/13/163/05236" target=_new>V.S.A. Section 5236</a> and <a href="https://www.vermontjudiciary.org/sites/default/files/documents/Supreme_Court_Administrative_Order_No._9_and_Rules_AmendmentsthroughJanuary_11_2016.pdf" target=_new>Vermont SJC</a>.
 
-Q(qualciv): You probably qualify as needy since you earn less than 125% of the poverty line. See <a href="https://www.vermontjudiciary.org/self-help/application-waive-filing-fees-and-service-costs" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
+Q(qualciv): You probably qualify as needy since you earn less than 125% of the poverty line. See <a href="https://www.vermontjudiciary.org/self-help/application-waive-filing-fees-and-service-costs" target=_new>Vermont Rules of Civil Procedure 3.1</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
 <input type="hidden" name="name" value="Form Vermont App"/>
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/jmm11009/p1/Form%20Vermont%20App.docx"/> 
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
