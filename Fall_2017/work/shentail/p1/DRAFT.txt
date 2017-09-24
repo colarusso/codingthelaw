@@ -1,0 +1,128 @@
+Title: California Indigency Calculator
+Author: Chantal Choi
+Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>California Indigency Calculator</h3>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+
+Q(1): What are you charged with?
+A: Criminal 
+	Q(1.1):GOTO:CRIM
+A: Civil
+	Q(1.2):GOTO:pb
+Q(CRIM): Is it a felony or misdemeanor?
+A:Felony
+	Q(2.1):GOTO:INCOME
+A: Misdemeanor
+	Q(CRIM.1.2): Which class of misdemeanor
+	A: Class A
+		Q(2.2.1):GOTO:INCOME
+	A: Class B
+		Q(2.2.2): You might not be eligible for counsel, please see a lawyer to inquire. (Penal Code)
+	A: Class C
+		Q(2.2.3):GOTO:2.2.2
+
+Q(INCOME): Do you have income?
+A:Yes
+	Q(3.1):GOTO:spouse
+A:No
+	Q(3.2):GOTO:spouse
+
+Q(spouse):Do you have a spouse earning income in the family?
+A:Yes
+	Q(4.1): GOTO:child
+A:No
+	Q(4.2):GOTO:child
+
+Q(child): Do you have children or need to pay child support?
+A:Yes
+	Q(5.1):GOTO:asset
+A:No
+	Q(5.2):GOTO:asset
+
+Q(asset): Do you own any assets (house, car, stock, etc.)
+A:Yes
+	Q(6.1):GOTO:SUFF
+A:No
+	Q(6.2):GOTO:SUFF
+
+Q(SUFF): Do you have sufficient income to provide for yourself (household income+assets- all expenses)?
+A:Yes
+	Q(7.1):GOTO:CRIMMAY
+A: No
+	Q(7.2):GOTO:CRIMQUAL
+A:Maybe
+	Q(7.3):GOTO:CRIMMAY
+
+Q(CRIMMAY): You may still qualify for a court-appointed attorney.
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+
+Q(CRIMQUAL): You are most likely indigent.
+A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+
+
+Q(pb):Do you receive any public benefits?
+A:Yes
+	Q(10.1):GOTO:foodstamp
+A:No
+	Q(10.2):GOTO:household
+
+Q(foodstamp): Do you receive Food Stamps?
+A: Yes
+	Q(11.1):GOTO:SSI
+A: No
+	Q(11.2):GOTO:SSI
+
+Q(SSI): Do you receive Supplemental Security Income (SSI)?
+A:Yes
+	Q(12.1):GOTO:SSP
+A: No
+	Q(12.2):GOTO:SSP
+Q(SSP): Do you receive SSP?
+A:Yes
+	Q(13.1):GOTO:MEDI
+A: No
+	Q(13.2):GOTO:MEDI
+Q(MEDI):Do you receive Medi-Cal?
+A:Yes
+	Q(14.1):GOTO:FED
+A: No
+	Q(14.2):GOTO:FED
+Q(FED):Do you receive County Relief/Federal Assistance?
+A: Yes
+	Q(15.1):GOTO:IHSS
+A: No
+	Q(15.2):GOTO:IHSS
+Q(IHSS):Do you receive IHSS?
+A: Yes
+	Q(16.1):GOTO:TANF
+A: No
+	Q(16.2):GOTO:TANF
+Q(TANF):Do you receive CalWORKS or Tribal TANF?
+A: Yes
+	Q(17.1):GOTO:CAPI
+A: No
+	Q(17.2):GOTO:CAPI
+Q(CAPI): Do you receive CAPI?
+A: Yes
+	Q(18.1):GOTO:qual
+A: No
+	Q(18.2):GOTO:qual
+													
+Q(household): How many people are in your household?
+X:number
+	Q(income):What is you gross monthly household income (before deduction for taxes)?
+	X:number
+		Q(Q): Let's see if you qualify
+		A:[javascript:if (getvar('household')==1 && getvar('income')<1256.26) {goto('qual')}else if (getvar('household')==1 && getvar('income')>1256.26){goto('not')}else if (getvar('household')==2 && getvar('income')<1691.67) {goto('qual')}else if (getvar('household')==2 && getvar('income')>1691.67){goto('not')}else if (getvar('household')==3 && getvar('income')<2127.09) {goto('qual')}else if (getvar('household')==3 && getvar('income')>2127.09){goto('not')}else if (getvar('household')==4 && getvar('income')<2562.51) {goto('qual')}else if (getvar('household')==4 && getvar('income')>2562.51){goto('not')}else if (getvar('household')==5 && getvar('income')<2997.92) {goto('qual')}else if (getvar('household')==5 && getvar('income')>2997.92){goto('not')}else if (getvar('household')==6 && getvar('income')<3433.34) {goto('qual')}else if (getvar('household')==6 && getvar('income')>3433.34){goto('not')}] ok			
+
+							
+Q(qual): Congratulations, you are eligible for a fee waiver.
+A:[http://www.courts.ca.gov/documents/fw001.pdf] Please fill out this form.
+Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
+A:Yes
+	Q(21.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an attorney for more information.																			
+A:No
+	Q(21.2):GOTO:qual
+
+
+										
