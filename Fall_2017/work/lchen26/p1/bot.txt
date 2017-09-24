@@ -63,7 +63,7 @@ A: Criminal
 			A: Yes
 				Q(2.2.1.2.1): Are you an adult or juvenile (under 18 years of age)?
 				A: Juvenile
-					Q(2.2.1.2.1.1):Enter your own income and enter 1 for household 
+					Q(2.2.1.2.1.1):Unless it is proven that your parents have provided counsel or have the ability to do so, you are determined to be eligible to seek counsel. Enter your own income and enter 1 for household 
 					A: Continue
 						Q(2.2.1.2.1.1.1):GOTO:h
 				A: Adult
