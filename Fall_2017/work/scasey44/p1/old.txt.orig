@@ -1,12 +1,10 @@
 Title: Massachusetts Indigency Calculator
 Author: Sean Casey
-Before:<input type="hidden" name="name" value="Indigency Form"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey/p1/affidavitofindigency.docx"/>
-<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Massachusetts Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+<input type="hidden" name="name" value="Letter to Santa"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey/p1/affidavitofindigency.docx"/>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
 Q(1): Do you want to determine if you qualify for free or assisted legal aid in Massachusetts?
