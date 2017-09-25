@@ -58,4 +58,4 @@ X:text
 Q(zip): What is your zip code?
 X:text
 	Q(form): Great <x>name</x>! Please download this form and show it to an attorney or the court.
-	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','','json_doc','_blank')] Please download this form.
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Please download this form.
