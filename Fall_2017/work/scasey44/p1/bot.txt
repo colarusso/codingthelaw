@@ -37,9 +37,9 @@ Q(checkIncome): How many people in your family including yourself?
 X:
 	Q(dependents): How many dependents are in your family?
 	X:
-		Q(addIncome): Do you have any other additional income?
+		Q(income): What is the your annual household income per year after taxes?
 		X:
-			Q(income): What is the your annual household income per year after taxes?
+			Q(addIncome): Do you have any other additional income?
 			X:
 				Q(5.1.1.1.1): Is this  a criminal or civil matter?
 				A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCiv') } else { goto('noQualCiv') } ]: Civil
@@ -84,11 +84,11 @@ A:No
 
 Q(formInfo):Let's get some of your information.:GOTO:court
 
-Q(court):Which court will hear your case?
+Q(court):Which court will hear your case (enter unknown if not known)?
 X:
 	Q(16.1):GOTO:case
 
-Q(case):What is the case name or number for this matter?
+Q(case):What is the case name or number for this matter (enter unknown if not known)?
 X:
 	Q(17.1):GOTO:name
 
