@@ -3,7 +3,8 @@
 <h2 style="text-align:center;">Florida Indigence Calculator</h2>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-
+<input type="hidden" name="name" value="AffidavitofIndigentStatus_class.docx"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/agallino/p1/AffidavitofIndigentStatus_class.docx"/>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
 
@@ -44,7 +45,8 @@ A: No.
 	Q(6.2):GOTO:qualcrim
 
 Q(qualcrim): You probably qualify as indigent since you earn less than 200% of the poverty line, and you don't have assets valued greater than $2,500. So you'll likely be assigned a lawyer by the clerk. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. Would you like to fill out an application?
-A:[https://www.pinellasclerk.org/aspInclude2/AffidavitofIndigentStatus.pdf] Yes.
+A: Yes.
+	Q(7.1):GOTO:crim_name
 A: No.
 	Q(7.2):GOTO:nomore
 
@@ -55,3 +57,20 @@ A: No
 	Q(8.2):GOTO:nomore
 
 Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+
+Q(crim_name): What is your name?
+X:
+	Q(ssb): Thanks <x>crim_name</x>. How much do you receive from Social Security Benefits? If zero, please enter "0".
+	X:number
+		Q(unemp): How much do you receive from unemployment compensation? If zero, please enter "0".
+		X:number
+			Q(cash): How much do you have in cash? If you don't have any cash, please enter "0".
+			X:number
+				Q(savings): How much do you have in savings? If you don't have any savings, enter "0".
+				X:number
+					Q(debt): How much money do you owe in debt? If you have no debt, please enter "0".
+					X:number
+						Q(download): Thanks <x>crim_name</x>. We've collected some preliminary information from you. Are you ready to download your file? Once your file has downloaded, check to make sure the information is correct, print the form, and take it to the County Court house.
+						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes.
+						A: No. 
+							Q(10.1.1.1.1.1.1.2):GOTO:nomore
