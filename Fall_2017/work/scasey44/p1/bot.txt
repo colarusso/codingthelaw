@@ -31,37 +31,37 @@ A: No
 	Q(3.2):GOTO:checkCatB
 
 
-Q(checkCatB): You either do not qualify under category A or you wish to see if you qualify under another category.  Let's see if you qualify under category B:GOTO:checkIncome
+Q(checkCatB):You either do not qualify under category A or you wish to see if you qualify under another category.  Let's see if you qualify under category B.  GOTO:checkIncome
 
-Q(checkIncome): How many people in your family including yourself?
+Q(checkIncome):How many people in your family including yourself?
 X:
-	Q(dependents): How many dependents are in your family?
+	Q(dependents):How many dependents are in your family?
 	X:
-		Q(income): What is the your annual household income per year after taxes?
+		Q(income):What is the your annual household income per year after taxes?
 		X:
-			Q(addIncome): Do you have any other additional income?
+			Q(addIncome):Do you have any other additional income?
 			X:
-				Q(5.1.1.1.1): Is this  a criminal or civil matter?
-				A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCiv') } else { goto('noQualCiv') } ]: Civil
-				A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCrim') } else if (fedpov(getvar('checkIncome'),getvar('income'),250)) { goto('noQualCrimBut') } else { goto('noQualCrim') } ]: Criminal
+				Q(5.1.1.1.1):Is this  a criminal or civil matter?
+				A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCiv') } else { goto('noQualCiv') } ]:Civil
+				A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCrim') } else if (fedpov(getvar('checkIncome'),getvar('income'),250)) { goto('noQualCrimBut') } else { goto('noQualCrim') } ]:Criminal
 
 
-Q(qualCiv): You probably qualify for this civil matter as indigent under category B because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  Let's get some of your information:GOTO:catB
+Q(qualCiv):You probably qualify for this civil matter as indigent under category B because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  GOTO:catB
 
-Q(noQualCiv): You probably do not qualify for this civil matter as indigent under category B because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, you may qualify under section C:GOTO:checkCatC
+Q(noQualCiv):You probably do not qualify for this civil matter as indigent under category B because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, you may qualify under section C.  GOTO:checkCatC
 
-Q(qualCrim): You probably qualify for this criminal matter as indigent under category B because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  Let's get some of your information:GOTO:catB
+Q(qualCrim):You probably qualify for this criminal matter as indigent under category B because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  GOTO:catB
 
-Q(noQualCrim): You probably do not qualify for this criminal matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, it is probably a long shot, but you could argue that you may qualify under category C:GOTO:checkCatC
+Q(noQualCrim):You probably do not qualify for this criminal matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, it is probably a long shot, but you could argue that you may qualify under category C.  GOTO:checkCatC
 
-Q(noQualCrimBut): You probably qualify as indigent for this criminal matter, but because your household income is between 125% and 250% of the poverty line, you, or your family, will likely be required to contribute to the costs for your legal counsel. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, you may qualify under section C:GOTO:checkCatC
+Q(noQualCrimBut):You probably qualify as indigent for this criminal matter, but because your household income is between 125% and 250% of the poverty line, you, or your family, will likely be required to contribute to the costs for your legal counsel. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  However, you may qualify under category C.  GOTO:checkCatC
 
-Q(probQual): You probably qualify as indigent since you are receiving public assistance.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:catB
+Q(probQual):You probably qualify as indigent since you are receiving public assistance.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  GOTO:catB
 
 
 Q(catB):You appear to qualify under category B.  Would you like to proceed under category B?
 A:Yes
-	Q(12.1):Great! Let's get some information from you:GOTO:formInfo
+	Q(12.1):GOTO:formInfo
 A:No
 	Q(12.2):GOTO:checkCatC
 
@@ -69,20 +69,20 @@ A:No
 Q(checkCatC): You either do not qualify under section B, or you wish to proceed under category C.  Let's see if you qualify under category C.  Are you unable to pay the fees and costs of this proceeding, or are you unable to do so without depriving yourself or your dependents of the necessities of life, including food, shelter and clothing?
 A:Yes
 	Q(13.1): You appear to qualify under section C.  You will need to fill out the SUPPLEMENT TO THE AFFIDAVIT OF
-INDIGENCY as well.  Let's get some of your information:GOTO:formInfo  
+INDIGENCY as well.  GOTO:formInfo  
 A:No
-	Q(13.2):I'm sorry.  It seems you do not qualify for waiver of counsel or legal aid:GOTO:checkJuvenile
+	Q(13.2):I'm sorry.  It seems you do not qualify for waiver of counsel or legal aid.  GOTO:checkJuvenile
 
 
 
 Q(checkJuvenile):Are you a juvenile or claimed as a dependent by someone else?
 A:Yes
-	Q(14.1):As a juvenile, you are entitled to counsel, but your parents or guardians may need to contribute. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:adios
+	Q(14.1):As a juvenile, you are entitled to counsel, but your parents or guardians may need to contribute. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a> GOTO:adios
 A:No
 	Q(14.2):I'm sorry you do not appear to qualify:GOTO:adios
 
 
-Q(formInfo):Let's get some of your information.:GOTO:court
+Q(formInfo):Let's get some of your information. GOTO:court
 
 Q(court):Which court will hear your case (enter unknown if not known)?
 X:
