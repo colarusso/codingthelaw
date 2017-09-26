@@ -1,40 +1,61 @@
-<!-- Note: you can turn on/off word wrap in this text area by clicking the checkbox below. Also, any text you see between less than and greater than marks, that's HTML. You don't have to use/know HTML to write a QnA, but it can be useful. For example, this text doesn't show up in the word bubbles because it's an HTML comment. -->
+Title: Massachusetts Indigency Calculator
+Author: Sean Casey
+Before: <input type="hidden" name="name" value="Fee Waiver for Civil Cases"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey44/p1/feewaiver.docx"/>
+<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
-Q(1): Would you like to determine if you are indigent, and qualify for discounted legal counsel?
-A: Yes.
-	Q(1.1): Are you  receiving one of the following types of public assistance: Transitional Aid to Families with Dependent Children (TAFDC), Emergency Aid to Elderly, Disabled and Children (EAEDC), need-based veterans' benefits, Supplemental Nutrition Assistance Program (SNAP) benefits, Refugee Cash Assistance, or SSI State Supplemental Program?
-	A: Yes.
-		Q(1.1.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
-	A: No.
-		Q(1.1.2): Are you receiving an annual income, after taxes, of one hundred twenty-five percent or less of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
-		A: Yes.
-			Q(1.1.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
-		A: No.
-			Q(1.1.2.2): •	Are you (1) residing in a tuberculosis treatment center, a mental health facility or a facility for individuals with intellectual or developmental disabilities, including the Bridgewater State Hospital and Massachusetts Treatment Center; or (2) the subject of a proceeding regarding admission or commitment to such a center or facility, a proceeding to make a substituted judgment determination concerning treatment, a proceeding under G. L. c. 190B, § 5-309(g) to admit to a nursing facility defined in G. L. c. 190B, § 5-101(15), or a civil commitment proceeding under G. L. c. 123, § 35; provided, however, that when the judge has reason to believe that the party is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule?
-			A: Yes.
-				Q(1.1.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
-			A: No.
-				Q(1.1.2.2.2): Are you a juvenile, a child who is in the care or custody of the Department of Children and Families, or a young adult provided, however, that when a judge has reason to believe that the juvenile or young adult is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule? 
-				A: Yes.
-					Q(1.1.2.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
-				A: No.
-					Q(1.1.2.2.2.2): You are not indigent and do not qualify for discounted legal counsel. 
-						
-					
-A: No.
-	Q(1.2): Have a nice day!
+Q(1): Do you want to determine if you qualify for free or assisted legal aid in Massachusetts?
+A: Yes
+	Q(1.1):GOTO:checkQualAid
+A: No
+	Q(1.2):GOTO:adios
 
-Q(2): Are you a party who has an annual income, after taxes, of more than one hundred twenty five percent and less than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
-A: Yes.
-	Q(2.1): You will be required to make a contribution to your legal expenses.
-A: No.
-	Q(2.2): Are you a party who (1) is charged with a felony solely within the jurisdiction of the Superior Court or is the parent, guardian, or custodian of a juvenile or young adult who is the subject of a child welfare proceeding, subject to the exception in Section 6A for a parent or guardian who has had custody of the juvenile removed by a court of competent jurisdiction, or who has an interest adverse to the juvenile or young adult, and (2) has an annual income, after taxes, of more than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b); and (3) whose available funds are insufficient to pay the anticipated cost of counsel for this representation, but are sufficient to pay part of that cost. The anticipated cost of counsel shall be the cost of retaining private counsel for, as applicable, the defense of a felony charge within the jurisdiction of the Superior Court, or a child welfare proceeding, as estimated and published from time to time by the Committee for Public Counsel Services?
-	A: Yes.
-		Q(2.2.1): You will be required to make a contribution to your legal expenses.
-	A: No.
-		Q(2.2.2): Are you a party who is over the age of eighteen and is claimed as a dependent for tax purposes by a parent or guardian who is not indigent?
-		A: Yes.
-			Q(2.2.2.1): You will be required to make a contribution to your legal expenses.
-		A: No.
-			Q(2.2.2.2): You will not be required to make a contribution to your legal expenses.
+Q(checkQualAid): Do you receive public assistance?
+A:Yes
+	Q(2.1):GOTO:probQual
+A: No
+	Q(2.2):GOTO:checkJuvenile
 
+Q(checkJuvenile): Are you a juvenile or claimed as a dependent by someone else?
+A:Yes
+	Q(3.1): As a juvenile, you are entitled to counsel, but your parents or guardians may need to contribute.  Let's check.GOTO:checkIncome
+A:No	
+	Q(3.2):GOTO:checkIncome
+
+Q(checkIncome): How many people in your family?
+X:
+	Q(income): What is the your annual household income per year after taxes?
+	X:
+		Q(4.1.1): Is this  a criminal or civil matter?
+		A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCiv') } else { goto('noQualCiv') } ]: Civil
+		A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCrim') } else if (fedpov(getvar('checkIncome'),getvar('income'),250)) { goto('noQualCrimBut') } else { goto('noQualCrim') } ]: Criminal
+
+
+Q(qualCiv): You probably qualify for this civil matter as indigent because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(noQualCiv): You probably do not qualify for this civil matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(qualCrim): You probably qualify for this criminal matter as indigent because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(noQualCrim): You probably do not qualify for this criminal matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(noQualCrimBut): You probably qualify as indigent for this criminal matter, but because your household income is between 125% and 250% of the poverty line, you, or your family, will likely be required to contribute to the costs for your legal counsel. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(probQual): You probably qualify as indigent since you are receiving public assistance.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(adios): Please come back again.
+Q(name): What is your full name?
+X:
+	Q(12.1):GOTO:streetAddr
+	
+Q(streetAddr): What is your street address?
+X:
+	Q(13.1):GOTO:city
+		
+Q(city): What is your city?
+X:
+	Q(14.1):GOTO:zip
+
+Q(zip): What is your zip code?
+X:
+	Q(form): Great <x>name</x>! Please download this form and show it to an attorney or the court.
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Please download this form.

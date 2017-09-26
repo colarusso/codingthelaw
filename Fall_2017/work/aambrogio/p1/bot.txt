@@ -1,76 +1,30 @@
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Georgia Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+<input type="hidden" name="name" value="Pauper's Affidavit"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/aambrogio/p1/pauper.docx"/>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
+
 Q(1): Are you, a resident of the State of Georgia, without resources to pay court costs and other costs associated with litigation?
 A: No
 	Q(1.1): You do not qualify for appointment of counsel or fee waivers in Georgia. Good luck in court!
-A: Yes.
-	Q(1.2): You may qualify for fee waivers and, in certain cases, appointment of counsel. Is the pending action a civil or criminal matter?
+A: Yes
+	Q(CIVCRIM): You may qualify for fee waivers and, in certain cases, appointment of counsel. Is the pending action a civil or criminal matter?
 	A: Civil
 		Q(1.2.1): Are you over the age of 18?
 		A: Yes
-			Q(1.2.1.1): Do you suffer from any legal disabilities?
+			Q(1.2.1.1): Do you suffer from any legal disabilities? See <a href="http://codes.findlaw.com/us/title-42-the-public-health-and-welfare/42-usc-sect-12102.html">Legal Disabilities</a>.
 			A: No
-				Q(1.2.1.1.1): You may qualify for fee waivers and possibly appointment of counsel, depending on the civil case. How many persons are in your household, including yourself?
-				A: 1
-					Q(1.2.1.1.1.1): Does your yearly income exceed $12,060?
-					A: Yes
-						Q(NO): You do not qualify for fee waivers in the State of Georgia. Good luck in court!
-					A: No
-						Q(YES): Objectively, you qualify for fee waivers in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents?
-						A: Yes
-							Q(1.2.1.1.1.1.2.1): Just a heads up, you may not qualify due to those additional resources. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-						A: No
-							Q(1.2.1.1.1.1.2.2): You are still likely to qualify for fee waivers in the State of Georgia. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-				A: 2
-					Q(1.2.1.1.1.2): Does your yearly income exceed $16,240?
-					A: Yes
-						Q(1.2.1.1.1.2.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.2.2):GOTO:YES
-				A: 3
-					Q(1.2.1.1.1.3): Does your yearly income exceed $20,420?
-					A: Yes
-						Q(1.2.1.1.1.3.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.3.2):GOTO:YES
-				A: 4
-					Q(1.2.1.1.1.4): Does your yearly income exceed $24,600?
-					A: Yes
-						Q(1.2.1.1.1.4.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.4.2):GOTO:YES
-				A: 5
-					Q(1.2.1.1.1.5): Does your yearly income exceed $28,780?
-					A: Yes
-						Q(1.2.1.1.1.5.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.5.2):GOTO:YES
-				A: 6
-					Q(1.2.1.1.1.6): Does your yearly income exceed $32,960?
-					A: Yes
-						Q(1.2.1.1.1.6.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.6.2):GOTO:YES
-				A: 7
-					Q(1.2.1.1.1.7): Does your yearly income exceed $37,140?
-					A: Yes
-						Q(1.2.1.1.1.7.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.7.2):GOTO:YES
-				A: 8
-					Q(1.2.1.1.1.8): Does your yearly income exceed $41,320?
-					A: Yes
-						Q(1.2.1.1.1.8.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.8.2):GOTO:YES
-				A: More than 8
-					Q(1.2.1.1.1.9): Does your yearly income exceed $12,060 for yourself and $4,180 for each additional member of your household?
-					A: Yes
-						Q(1.2.1.1.1.9.1):GOTO:NO
-					A: No
-						Q(1.2.1.1.1.9.2):GOTO:YES
+				Q(HOUSECIV): You may qualify for fee waivers and possibly appointment of counsel, depending on the civil case. How many persons are in your household, including yourself?
+				X:number
+					Q(INCOMECIV): What is your monthly income?
+					X[javascript:if(fedpov(getvar('HOUSECIV'),getvar('INCOMECIV'),100)){goto('CIVYES')}else{goto('CIVNO')}]:number
 			A: Yes
-				Q(1.2.1.1.2): There are other resources out there for you due to your legal disability. [Link here]
+				Q(1.2.1.1.2): There are other resources out there for you due to your legal disability. <a href=http://www.dlpcga.org/>Legal Disabilities Resources</a>.
 		A: No
-			Q(1.2.1.2): There are other resources out there for you due to your minor status. [Link here]
+			Q(1.2.1.2): There are other resources out there for you due to your minor status. Your parent or guardian should fill out this form. 
 	A: Criminal
 		Q(1.2.2): Are you the defendant in the criminal action?
 		A: Yes
@@ -80,183 +34,22 @@ A: Yes.
 			A: No
 				Q(1.2.2.1.2): You should qualify for the appointment of counsel by the court. The court will need more information to determine your eligibility, as it is up to the Court's discretion. Are you charged with a felony?
 				A: Yes
-					Q(FELONY): How many members are in your household, including yourself? 
-					A: 1
-						Q(1.2.2.1.2.1.1): Does your yearly income exceed $18,090?
-						A: Yes
-							Q(NOFEL): You do not qualify for appointment of counsel or fee waivers. Good luck in court!
-						A: No
-							Q(YESFEL): You still seem to qualify for appointment of counsel and fee waivers. The decision is still up to the Judges discretion. Fill out these forms and bring them to court! [Link for Form Here]
-					A: 2
-						Q(1.2.2.1.2.1.2): Does your yearly income (or your parent/guardian's yearly income if you are under the age of 18) exceed $24,360?
-						A: Yes
-							Q(1.2.2.1.2.1.2.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.2.2):GOTO:YESFEL
-					A: 3
-						Q(1.2.2.1.2.1.3): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $30,360?
-						A: Yes
-							Q(1.2.2.1.2.1.3.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.3.2):GOTO:YESFEL
-					A: 4
-						Q(1.2.2.1.2.1.4): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $36,900?
-						A: Yes
-							Q(1.2.2.1.2.1.4.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.4.2):GOTO:YESFEL
-					A: 5
-						Q(1.2.2.1.2.1.5): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $43,170?
-						A: Yes
-							Q(1.2.2.1.2.1.5.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.5.2):GOTO:YESFEL
-					A: 6
-						Q(1.2.2.1.2.1.6): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $49,440?
-						A: Yes
-							Q(1.2.2.1.2.1.6.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.6.2):GOTO:YESFEL
-					A: 7
-						Q(1.2.2.1.2.1.7): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $55,710?
-						A: Yes
-							Q(1.2.2.1.2.1.7.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.7.2):GOTO:YESFEL
-					A: 8
-						Q(1.2.2.1.2.1.8): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $61,980?
-						A: Yes
-							Q(1.2.2.1.2.1.8.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.8.2):GOTO:YESFEL
-					A: More than 8
-						Q(1.2.2.1.2.1.9): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $24,360 for yourself and $6,270 for each additional person in your household?
-						A: Yes
-							Q(1.2.2.1.2.1.9.1):GOTO:NOFEL
-						A: No
-							Q(1.2.2.1.2.1.9.2):GOTO:YESFEL
+					Q(HOUSEFEL): How many members are in your household, including yourself? 
+					X:number
+						Q(INCOMEFEL): What is your monthly income?
+						X[javascript:if(fedpov(getvar('HOUSEFEL'),getvar('INCOMEFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 				A: No
 					Q(1.2.2.1.2.2): Are you under the age of 18?
 					A: Yes
-						Q(JUVNOTFEL): How many members are in your household, including yourself?
-						A: 1
-							Q(1.2.2.1.2.2.1.1): Does your yearly income exceed $15,075?
-							A: Yes
-								Q(NOJUV): You do not seem to qualify for appointment of counsel. Good luck in court!
-							A: No
-								Q(YESJUV): Objectively, you qualify for fee waivers in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents?
-								A: Yes
-									Q(1.2.2.1.2.2.1.1.2.1): Just a heads up, you may not qualify due to those additional resources. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-								A: No
-									Q(1.2.2.1.2.2.1.1.2.2): You are still likely to qualify for appointment of counsel and fee waivers in the State of Georgia. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-						A: 2
-							Q(1.2.2.1.2.2.1.2): Does your yearly income (or your parent/guardian's yearly income if you are under the age of 18) exceed $20,300?
-							A: Yes
-								Q(1.2.2.1.2.2.1.2.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.2.2):GOTO:YESJUV
-						A: 3
-							Q(1.2.2.1.2.2.1.3): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $25,525?
-							A: Yes
-								Q(1.2.2.1.2.2.1.3.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.3.2):GOTO:YESJUV
-						A: 4
-							Q(1.2.2.1.2.2.1.4): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $30,750?
-							A: Yes
-								Q(1.2.2.1.2.2.1.4.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.4.2):GOTO:YESJUV
-						A: 5
-							Q(1.2.2.1.2.2.1.5): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $35,975?
-							A: Yes
-								Q(1.2.2.1.2.2.1.5.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.5.2):GOTO:YESJUV
-						A: 6
-							Q(1.2.2.1.2.2.1.6): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $41,200?
-							A: Yes
-								Q(1.2.2.1.2.2.1.6.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.6.2):GOTO:YESJUV
-						A: 7
-							Q(1.2.2.1.2.2.1.7): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $46,425?
-							A: Yes
-								Q(1.2.2.1.2.2.1.7.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.7.2):GOTO:YESJUV
-						A: 8
-							Q(1.2.2.1.2.2.1.8): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $51,650?
-							A: Yes
-								Q(1.2.2.1.2.2.1.8.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.8.2):GOTO:YESJUV
-						A: More than 8
-							Q(1.2.2.1.2.2.1.9): Does your yearly income (or your parent/guardians' yearly income if you are under the age of 18) exceed $15,075 for yourself and $5,225 for each additional member of your household?
-							A: Yes
-								Q(1.2.2.1.2.2.1.9.1):GOTO:NOJUV
-							A: No
-								Q(1.2.2.1.2.2.1.9.2):GOTO:YESJUV
+						Q(HOUSEJUVNOTFEL): How many members are in your household, including yourself?
+						X:number
+							Q(INCOMEJUVNOTFEL): What is your monthly income?
+							X[javascript:if(fedpov(getvar('HOUSEJUVNOTFEL'),getvar('INCOMEJUVNOTFEL'),125)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 					A: No
-						Q(1.2.2.1.2.2.2): How many members are in your household, including yourself?
-						A: 1
-							Q(1.2.2.1.2.2.2.1): Does your yearly income exceed $12,060?
-							A: Yes
-								Q(NOCRIM): You do not seem to qualify for appointment of counsel. Good luck in court!
-							A: No
-								Q(YESCRIM): Objectively, you qualify for fee waivers in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents?
-								A: Yes
-									Q(1.2.2.1.2.2.2.1.2.1): Just a heads up, you may not qualify due to those additional resources. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-								A: No
-									Q(1.2.2.1.2.2.2.1.2.2): You are still likely to qualify for appointment of counsel and fee waivers in the State of Georgia. Fill out the form here. The last decision is up to the Judge. [Link here to form]
-						A: 2
-							Q(1.2.2.1.2.2.2.2): Does your yearly income exceed $16,240?
-							A: Yes
-								Q(1.2.2.1.2.2.2.2.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.2.2):GOTO:YESCRIM
-						A: 3
-							Q(1.2.2.1.2.2.2.3): Does your yearly income exceed $20,420?
-							A: Yes
-								Q(1.2.2.1.2.2.2.3.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.3.2):GOTO:YESCRIM
-						A: 4
-							Q(1.2.2.1.2.2.2.4): Does your yearly income exceed $24,600?
-							A: Yes
-								Q(1.2.2.1.2.2.2.4.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.4.2):GOTO:YESCRIM
-						A: 5
-							Q(1.2.2.1.2.2.2.5): Does your yearly income exceed $28,780?
-							A: Yes
-								Q(1.2.2.1.2.2.2.5.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.5.2):GOTO:YESCRIM
-						A: 6
-							Q(1.2.2.1.2.2.2.6): Does your yearly income exceed $32,960?
-							A: Yes
-								Q(1.2.2.1.2.2.2.6.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.6.2):GOTO:YESCRIM
-						A: 7
-							Q(1.2.2.1.2.2.2.7): Does your yearly income exceed $37,140?
-							A: Yes
-								Q(1.2.2.1.2.2.2.7.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.7.2):GOTO:YESCRIM
-						A: 8
-							Q(1.2.2.1.2.2.2.8): Does your yearly income exceed $41,320?
-							A: Yes
-								Q(1.2.2.1.2.2.2.8.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.8.2):GOTO:YESCRIM
-						A: More than 8
-							Q(1.2.2.1.2.2.2.9): Does your yearly income exceed $12,060 for yourself and $4,180 for each additional member of your household?
-							A: Yes
-								Q(1.2.2.1.2.2.2.9.1):GOTO:NOCRIM
-							A: No
-								Q(1.2.2.1.2.2.2.9.2):GOTO:YESCRIM	
+						Q(HOUSEJUVFEL): How many members are in your household, including yourself?
+						X:number
+							Q(INCOMEJUVFEL): What is your monthly income?
+							X[javascript:if(fedpov(getvar('HOUSEJUVFEL'),getvar('INCOMEJUVFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 		A: No
 			Q(1.2.2.2): Only the defendant can receive a fee waiver and appointment of counsel due to his/her/their indigent status. Is your child the defendant in a juvenile proceeding?
 			A: Yes, I am a Juvenile who is charged with commiting a felony.
@@ -265,3 +58,26 @@ A: Yes.
 				Q(1.2.2.2.2):GOTO:JUVNOTFEL
 			A: No
 				Q(1.2.2.2.3): Only the defendant can receive a fee waiver and appointment of counsel due to his/her/their indigent status. You do not qualify. Good luck in court!
+
+Q(CIVNO): You do not qualify for fee waivers in the State of Georgia. Good luck in court!
+Q(CIVYES): Objectively, you qualify for fee waivers in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents, such as assets you could sell?
+A: Yes
+	Q(3.1): Just a heads up, you may not qualify due to those additional resources. The last decision is up to the Judge. Would you like the information you provided to be added to the Pauper's Affidavit Form?
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+	A: No
+		Q(3.1.2): Here is a link to the Pauper's Affidavit for your use in court. Good luck! <a href="https://www.georgialegalaid.org/files/6FCBD72D-B465-109D-9EC1-5A4F52A74EE9/attachments/A3FBEDA9-FB50-4670-B4D9-F6543139B328/303031pauper-aff-and-order.pdf">Form</a>.
+A: No
+	Q(3.2): You are still likely to qualify for fee waivers in the State of Georgia. The last decision is up to the Judge.
+
+Q(CRIMNO): You do not qualify for fee waivers in the State of Georgia. Good luck in court!
+Q(CRIMYES): Objectively, you qualify for fee waivers and appointment of counsel in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents, such as assets you could sell?
+A: Yes
+	Q(5.1): Just a heads up, you may not qualify due to those additional resources. You should speak with a court clerk. The last decision is up to the Judge. Would you like a copy of the information you provided?
+	A: Yes
+		Q(PRINTYES)[javascript:save2('mailmerge.csv',csv())]: Something should have downloaded from your browser. Just click and all of the information you provided should be there on an excel document.
+	A: No
+		Q(5.1.2): You are all set. Good luck in Court.
+A: No
+	Q(5.2): You are still likely to qualify for fee waivers and appointment of counsel in the State of Georgia. You should speak with a court clerk. The last decision is up to the Judge. Would you like a copy of the information you provided?
+	A: Yes
+		Q(5.2.1):GOTO:PRINTYES
