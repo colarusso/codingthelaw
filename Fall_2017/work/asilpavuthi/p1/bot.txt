@@ -54,12 +54,12 @@ A:Yes
 A:No
 	Q(3.2):GOTO:startover
 
-Q(qualliquidassign): Congratulation! You will likely qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court?
+Q(qualliquidassign): Congratulation! You will likely qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
 A:Yes
 	Q(4.1):GOTO:name 
 A: No
 	Q(4.2):GOTO:startover
-Q(noqualliquidassign): Unfortunately, you are unlikely to qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway?
+Q(noqualliquidassign): Unfortunately, you are unlikely to qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
 A:Yes
 	Q(5.1):GOTO:name 
 A: No
@@ -84,13 +84,13 @@ A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2'
 A: No
 	Q(8.2):GOTO:startover
 
-Q(qual2): Congratulation! You are likely to qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court?
+Q(qual2): Congratulation! You are likely to qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
 A:Yes
 	Q(9.1):GOTO:name 
 A: No
 	Q(9.2):GOTO:startover
 
-Q(noqual2): Unfortunately, it is unlikely that you would qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway?
+Q(noqual2): Unfortunately, it is unlikely that you would qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
 A:Yes
 	Q(10.1):GOTO:name 
 A: No
