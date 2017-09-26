@@ -1,7 +1,7 @@
 Title: Massachusetts Indigency Calculator
 Author: Sean Casey
-Before:<input type="hidden" name="name" value="Indigency Form"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey/p1/affidavitofindigency.docx"/>
+Before: <input type="hidden" name="name" value="Fee Waiver for Civil Cases"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey44/p1/affidavitofindigency.docx"/>
 <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
