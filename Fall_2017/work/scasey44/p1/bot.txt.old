@@ -1,44 +1,61 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
+Title: Massachusetts Indigency Calculator
+Author: Sean Casey
+Before: <input type="hidden" name="name" value="Fee Waiver for Civil Cases"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/scasey44/p1/feewaiver.docx"/>
+<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
-Q(1): Do your receive public assistance? 
+Q(1): Do you want to determine if you qualify for free or assisted legal aid in Massachusetts?
 A: Yes
-	Q(1.1):GOTO:qualaid
+	Q(1.1):GOTO:checkQualAid
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(1.2):GOTO:adios
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
-
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
+Q(checkQualAid): Do you receive public assistance?
+A:Yes
+	Q(2.1):GOTO:probQual
 A: No
-	Q(3.2):GOTO:nomore
+	Q(2.2):GOTO:checkJuvenile
 
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
+Q(checkJuvenile): Are you a juvenile or claimed as a dependent by someone else?
+A:Yes
+	Q(3.1): As a juvenile, you are entitled to counsel, but your parents or guardians may need to contribute.  Let's check.GOTO:checkIncome
+A:No	
+	Q(3.2):GOTO:checkIncome
 
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
+Q(checkIncome): How many people in your family?
+X:
+	Q(income): What is the your annual household income per year after taxes?
+	X:
+		Q(4.1.1): Is this  a criminal or civil matter?
+		A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCiv') } else { goto('noQualCiv') } ]: Civil
+		A[javascript:if (fedpov(getvar('checkIncome'),getvar('income'),125)){ goto('qualCrim') } else if (fedpov(getvar('checkIncome'),getvar('income'),250)) { goto('noQualCrimBut') } else { goto('noQualCrim') } ]: Criminal
 
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
 
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
+Q(qualCiv): You probably qualify for this civil matter as indigent because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(noQualCiv): You probably do not qualify for this civil matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(qualCrim): You probably qualify for this criminal matter as indigent because your household income is less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(noQualCrim): You probably do not qualify for this criminal matter as indigent because your household income is not less than 125% of the poverty line.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(noQualCrimBut): You probably qualify as indigent for this criminal matter, but because your household income is between 125% and 250% of the poverty line, you, or your family, will likely be required to contribute to the costs for your legal counsel. <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>
+Q(probQual): You probably qualify as indigent since you are receiving public assistance.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>:GOTO:name
+Q(adios): Please come back again.
+Q(name): What is your full name?
+X:
+	Q(12.1):GOTO:streetAddr
+	
+Q(streetAddr): What is your street address?
+X:
+	Q(13.1):GOTO:city
+		
+Q(city): What is your city?
+X:
+	Q(14.1):GOTO:zip
 
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+Q(zip): What is your zip code?
+X:
+	Q(form): Great <x>name</x>! Please download this form and show it to an attorney or the court.
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Please download this form.

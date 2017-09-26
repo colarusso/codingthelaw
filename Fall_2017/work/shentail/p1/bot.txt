@@ -123,7 +123,7 @@ A:Please fill out some information.
 
 Q(not): Sorry you don't. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
 A:Yes
-	Q(21.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an<a href="http://www.courts.ca.gov/1001.htm." target=_new>attorney</a> or click <a href="http://www.courts.ca.gov/selfhelp-feewaiver.htm." target=_new> here</a>for more information.																			
+	Q(21.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an<a href="http://www.courts.ca.gov/1001.htm" target=_new> attorney</a> or click <a href="http://www.courts.ca.gov/selfhelp-feewaiver.htm" target=_new> here</a>for more information.																			
 A:No
 	Q(21.2):GOTO:qual
 

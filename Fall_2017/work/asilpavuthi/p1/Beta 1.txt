@@ -1,0 +1,28 @@
+Q(type): Is this a criminal or civil matter?
+A: Criminal
+	Q(1.1):GOTO:house
+A: Civil
+	Q(1.2):GOTO:house
+
+Q(house): How many people are in your household? (please enter a number between 1-8)
+X:
+	Q(2.1):GOTO:money
+
+Q(money): How much money do you make per month?
+X:
+	Q(3.1):GOTO:check
+
+Q(check):Do you want me to check that for you?
+A[javascript:
+if (getvar('house')=='1' && getvar('money')<='1507.50') {goto('qual')} else if (getvar('house')=='2' && getvar('money')<='2030.00') {goto('qual')} else if (getvar('house')=='3' && getvar('money')<='2552.50') {goto('qual')} else if (getvar('house')=='4' && getvar('money')<='3075.00') {goto('qual')} else if (getvar('house')=='5' && getvar('money')<='3597.50') {goto('qual')} else if (getvar('house')=='6' && getvar('money')<='4120.00') {goto('qual')} else if (getvar('house')=='7' && getvar('money')<='4642.50') {goto('qual')} else if (getvar('house')=='8' && getvar('money')<='5165.00') {goto('qual')} else {goto('noqual')}]: yes
+A: no
+	Q(4.2):GOTO:type
+
+
+
+Q(qual): You probably qualify.
+
+Q(noqual): You probably not qualify.
+
+Q(nonnumber): Your answer was not a number, please put down a number ranging from 1-10
+
