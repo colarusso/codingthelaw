@@ -1,5 +1,5 @@
 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/Feewaiverlogo.jpg');"></div>
 <h2 style="text-align:center;">New Jersey: Fee Waivers and Assigned Counsel Calculator</h2>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
@@ -41,7 +41,7 @@ A: I'm not sure what is considered liquid assets.
 	A:No
 		Q(2.3.2):GOTO:liquid
 
-Q(qualliquid): Congratulation! It is likely that you would qualify for fee waiver. Do you want me to check whether you would also likely to qualify for free counsel?
+Q(qualliquid): Congratulation! It is likely that you would qualify for fee waiver. Do you want me to check whether you would also likely to qualify for free appointment of counsel?
 A:Yes
 	Q(houseliquid): How many people are in your household? 
 	X:number
@@ -54,12 +54,12 @@ A:Yes
 A:No
 	Q(3.2):GOTO:startover
 
-Q(qualliquidassign): Congratulation! You will likely qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
+Q(qualliquidassign): Congratulation! You will likely qualify for free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
 A:Yes
 	Q(4.1):GOTO:name 
 A: No
 	Q(4.2):GOTO:startover
-Q(noqualliquidassign): Unfortunately, you are unlikely to qualify for free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
+Q(noqualliquidassign): Unfortunately, you are unlikely to qualify for free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
 A:Yes
 	Q(5.1):GOTO:name 
 A: No
@@ -84,20 +84,20 @@ A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2'
 A: No
 	Q(8.2):GOTO:startover
 
-Q(qual2): Congratulation! You are likely to qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
+Q(qual2): Congratulation! You are likely to qualify for a free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
 A:Yes
 	Q(9.1):GOTO:name 
 A: No
 	Q(9.2):GOTO:startover
 
-Q(noqual2): Unfortunately, it is unlikely that you would qualify for a free assigned counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
+Q(noqual2): Unfortunately, it is unlikely that you would qualify for a free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
 A:Yes
 	Q(10.1):GOTO:name 
 A: No
 	Q(10.2):GOTO:startover
 
 
-Q(name): Please answer the following questions, if it is not applicable please answer with "N/A." First, what is your name?
+Q(name): Please answer the following questions, if it is not applicable please answer the question with "N/A." First, what is your name?
 X:
 	Q(address): What is your address?
 	X:
@@ -105,9 +105,9 @@ X:
 		X:
 			Q(email): What is your email address?
 			X:
-				Q(court): What is the court of jurisdiction? (if applicable)
+				Q(court): What is the court of jurisdiction? 
 				X:
-					Q(county): What county? (if applicable)
+					Q(county): What county? 
 					X:
 						Q(docketno): What is the docket no.?
 						X:
@@ -119,13 +119,13 @@ X:
 									X:
 										Q(inmate): Are you or are you not an inmate in state prison or county jail? (please answer with "am" or "am not")
 										X:
-											Q(benefit): What government benefit are you eligible for?
+											Q(benefit): Please tell me all the government benefits that you are currently eligibled for?
 											X:
 												Q(tax): Are you or are you not claimed as a dependent on someone else's tax return? (please answer with "am" or "am not")
 												X:
-													Q(employer): Please write down your Employer’s Name, Address and Telephone Number.
+													Q(employer): What is your Employer’s Name, Address and Telephone Number?
 													X:
-														Q(netmonthlyincome): Please answer the following questions about income. First, what is your net monthly income?
+														Q(netmonthlyincome): I will now ask you the following questions about income. First, what is your net monthly income?
 														X:number
 															Q(spousalcontribution): What is your income from Spousal/Cohabitant Contribution?
 															X:number
@@ -147,9 +147,9 @@ X:
 																							X:number
 																								Q(rentalproperties): What is your income from rental properties?
 																								X:number
-																									Q(totalmonthlyincome): What is your total monthly income?
+																									Q(totalmonthlyincome): What is your total monthly income? (total income, start counting at the first income question)
 																									X:number
-																										Q(house): Next, I am going to ask you a few questions about assets. First, how much assets do you have in house/land market value?
+																										Q(house): Now, I am going to ask you a few questions about assets. First, how much assets do you have in house/land market value?
 																										X:number
 																											Q(motorvehicles): How much assets do you have in motor vehicles?
 																											X:number
@@ -167,17 +167,17 @@ X:
 																																	X:number
 																																		Q(moneymarket): How much assets do you have in Money Market Accounts?
 																																		X:number
-																																			Q(retrievablebail): How much assets do you have in Retrievable Bail Amt. & Location?
+																																			Q(retrievablebail): How much assets do you have in Retrievable Bail Amount & Location?
 																																			X:number
-																																				Q(otherassets): How much do you have in other assets?
+																																				Q(otherassets): If you have any other assets, how much do you have?
 																																				X:number
-																																					Q(totalassets): What is your total assets in dollar?
+																																					Q(totalassets): What is your total assets in dollar? (total assets, start counting at the first assets question)
 																																					X:number
-																																						Q(date): Finally, what is the date of completion of this set of questions? (today's date)
+																																						Q(date): Finally, what is the date of completion of this application? (today's date)
 																																						X:
-																																							Q(11.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1): Congratulation! Your application is ready.
+																																							Q(download): Congratulation! Your application is ready.
 																																							A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download the application now
 																																							A:Startover with the application
-																																								Q(11.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2):GOTO:name
+																																								Q(gobacktoname):GOTO:name
 																																							A:Startover from the beginning
-																																								Q(11.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3):GOTO:startover
+																																								Q(startoverfinal):GOTO:startover
