@@ -2,13 +2,10 @@ Title: Determinations of Indigent Status
 Description: A QnA Markup to assist pro se litigants determine their eligibility for court fee waivers.  
 Before: <center><h2>Determinations of Indigent Status</h2></center>
 
-DOC(1):Eligibility Information Summary
 Q(1): Is your case a civil or criminal matter?
 A: Civil
-	DOC(1.1): [INSERT CIVIL INFO]
 	Q(1.1):GOTO:Swear
 A: Criminal
-	DOC(1.2): [INSERT CRIMINAL INFO]
 	Q(1.2):GOTO:Crim
 
 Q(Swear): Are you able to pay the costs, fees, or expenses necessary to prosecute, defend, or appeal this action?
