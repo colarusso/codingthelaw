@@ -1,0 +1,24 @@
+Q(1): What are you charged with?
+A: Criminal 
+	Q(1.1): Are you mentally ill?
+	A:Yes
+		Q(1.1.1): You are most likely indigent.
+		A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+	A:No
+		Q(1.1.2): Are you developmentally disabled?
+		A: Yes
+			Q(1.1.2.1):GOTO:1.1.1
+		A: No
+			Q(1.1.2.2): Are you a child?
+			A: Yes
+				Q(1.1.2.2.1):GOTO:1.1.1
+			A: No
+				Q(1.1.2.2.2): Are you able to pay the registration fee of $50?
+				A: Yes
+					Q(1.1.2.2.2.1): You may still qualify for a court-appointed attorney.
+					A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
+				A: No
+					Q(1.1.2.2.2.2):GOTO:1.1.1
+A: Civil
+	Q(1.2): You do not qualify for court-appointed attorneys. Please open this QnA for inquiries on fee waiver for court fees.
+	A:[http://www.qnamarkup.org/i/?markup=Title%3A+Am+I+eligible+for+fee+waivers%3F%0D%0AQ%281%29%3A+Do+you+receive+Food+Stamps%3F%0D%0AA%3A+Yes%0D%0A%09Q%281.1%29%3A+Do+you+receive+Supplemental+Security+Income+%28SSI%29%3F%0D%0A%09A%3AYes%0D%0A%09%09Q%281.1.1%29%3A+Do+you+receive+SSP%3F%0D%0A%09%09A%3AYes%0D%0A%09%09%09Q%281.1.1.1%29%3ADo+you+receive+Medi-Cal%3F%0D%0A%09%09%09A%3AYes%0D%0A%09%09%09%09Q%281.1.1.1.1%29%3ADo+you+receive+County+Relief%2FFederal+Assistance%3F%0D%0A%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09Q%281.1.1.1.1.1%29%3ADo+you+receive+IHSS%3F%0D%0A%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09Q%281.1.1.1.1.1.1%29%3ADo+you+receive+CalWORKS+or+Tribal+TANF%3F%0D%0A%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1%29%3A+Do+you+receive+CAPI%3F%0D%0A%09%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.1%29%3AGOTO%3A1.1.1.1.1.1.1.1.2%0D%0A%09%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2%29%3A+Did+you+answer+%22yes%22+for+any+of+the+above+questions%3F%0D%0A%09%09%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.1%29%3A+Congratulations%2C+you+are+eligible+for+a+fee+waiver.Please+fill+out+this+form%3A+http%3A%2F%2Fwww.courts.ca.gov%2Fdocuments%2Ffw001.pdf%0D%0A%09%09%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.2%29%3A+Is+your+gross+monthly+household+income+%28before+deductions+for+taxes%29+less+than+%240%3F%0D%0A%09%09%09%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.2.1%29%3AGOTO%3A1.1.1.1.1.1.1.1.2.1%0D%0A%09%09%09%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.2.2%29%3A+Do+you+have+enough+income+to+pay+for+your+household%E2%80%99s+basic+needs+%28food%2C+shelter%2C+clothes%29+AND+the+court+fees%3F%0D%0A%09%09%09%09%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.2.2.1%29%3A+Hmmm%2C+it+seems+like+you+are+not+eligible+for+a+fee+waiver%2C+please+see+an+attorney+for+more+information.%0D%0A%09%09%09%09%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.1.2.2.2.2%29%3AGOTO%3A1.1.1.1.1.1.1.1.2.1%0D%0A%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09Q%281.1.1.1.1.1.1.2%29%3AGOTO%3A1.1.1.1.1.1.1.1%0D%0A%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09Q%281.1.1.1.1.1.2%29%3AGOTO%3A1.1.1.1.1.1.1%0D%0A%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09Q%281.1.1.1.1.2%29%3AGOTO%3A1.1.1.1.1.1%0D%0A%09%09%09A%3A+No%0D%0A%09%09%09%09Q%281.1.1.1.2%29%3AGOTO%3A1.1.1.1.1%0D%0A%09%09A%3ANo%0D%0A%09%09%09Q%281.1.1.2%29%3AGOTO%3A1.1.1.1%0D%0A%09A%3ANo%0D%0A%09%09Q%281.1.2%29%3AGOTO%3A1.1.1%0D%0AA%3A+No%0D%0A%09Q%281.2%29%3AGOTO%3A1.1%0D%0A%09%09%09%09%09%09%09%0D%0A%09%0D%0A&font_family=Verdana%2C+Geneva%2C+sans-serif&font_size=14&line_height=20&col_width=500&frame_pad=15&radius=15&comp_bg=5489eb&comp_txt=ffffff&comp_link=e3fbfc&usr_bg=eeeeee&usr_txt=000000&usr_link=0000ff&sharing=1] QnA

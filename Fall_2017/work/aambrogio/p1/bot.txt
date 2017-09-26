@@ -20,7 +20,7 @@ A: Yes
 				Q(HOUSECIV): You may qualify for fee waivers and possibly appointment of counsel, depending on the civil case. How many persons are in your household, including yourself?
 				X:number
 					Q(INCOMECIV): What is your monthly income?
-					X[javascript:if(fedpov(getvar('HOUSECIV'),getvar('INCOMECIV'),100)){goto('CIVYES')}else{goto('CIVNO')}]:number
+					X[javascript:if(fedpov(getvar('HOUSECIV')/12,getvar('INCOMECIV'),100)){goto('CIVYES')}else{goto('CIVNO')}]:number
 			A: Yes
 				Q(1.2.1.1.2): There are other resources out there for you due to your legal disability. <a href=http://www.dlpcga.org/>Legal Disabilities Resources</a>.
 		A: No
@@ -37,19 +37,19 @@ A: Yes
 					Q(HOUSEFEL): How many members are in your household, including yourself? 
 					X:number
 						Q(INCOMEFEL): What is your monthly income?
-						X[javascript:if(fedpov(getvar('HOUSEFEL'),getvar('INCOMEFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+						X[javascript:if(fedpov(getvar('HOUSEFEL')/12,getvar('INCOMEFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 				A: No
 					Q(1.2.2.1.2.2): Are you under the age of 18?
 					A: Yes
 						Q(HOUSEJUVNOTFEL): How many members are in your household, including yourself?
 						X:number
 							Q(INCOMEJUVNOTFEL): What is your monthly income?
-							X[javascript:if(fedpov(getvar('HOUSEJUVNOTFEL'),getvar('INCOMEJUVNOTFEL'),125)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+							X[javascript:if(fedpov(getvar('HOUSEJUVNOTFEL')/12,getvar('INCOMEJUVNOTFEL'),125)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 					A: No
 						Q(HOUSEJUVFEL): How many members are in your household, including yourself?
 						X:number
 							Q(INCOMEJUVFEL): What is your monthly income?
-							X[javascript:if(fedpov(getvar('HOUSEJUVFEL'),getvar('INCOMEJUVFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+							X[javascript:if(fedpov(getvar('HOUSEJUVFEL')/12,getvar('INCOMEJUVFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
 		A: No
 			Q(1.2.2.2): Only the defendant can receive a fee waiver and appointment of counsel due to his/her/their indigent status. Is your child the defendant in a juvenile proceeding?
 			A: Yes, I am a Juvenile who is charged with commiting a felony.
