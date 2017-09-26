@@ -22,7 +22,7 @@ Q(checkIndigency):Great! Let's check to see if you qualify as indigent.  We'll s
 
 Q(checkCatA): Do you receive assistance from a qualifying program: Transitional Aid to Families with Dependent Children (TAFDC); Emergency Aid to Elderly, Disabled, or Children (EAEDC); Massachusetts Veterans Benefits Programs; Medicaid (MassHealth); or Supplementary Security Income?
 A: Yes
-	Q(3.1):You probably qualify under category A since you receive assistance from a qualifying program.  Would you like to get started with the necessary forms you will need to fill out?
+	Q(3.1):You probably qualify under category A since you receive assistance from a qualifying program.  Would you like to get started with the necessary forms you will need to fill out, or do you want to see if you qualify under another category?
 	A:Yes
 		Q(3.1.1):GOTO:formInfo
 	A:No
@@ -59,7 +59,7 @@ Q(noQualCrimBut):You probably qualify as indigent for this criminal matter, but 
 Q(probQual):You probably qualify as indigent since you are receiving public assistance.  <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html">See SJC Rule 310 for more information</a>  GOTO:catB
 
 
-Q(catB):You appear to qualify under category B.  Would you like to proceed under category B?
+Q(catB):You appear to qualify under category B.  Would you like to get started with the necessary forms you will need to fill out, or do you want to see if you qualify under category C?
 A:Yes
 	Q(12.1):GOTO:formInfo
 A:No
@@ -69,7 +69,7 @@ A:No
 Q(checkCatC): You either do not qualify under section B, or you wish to proceed under category C.  Let's see if you qualify under category C.  Are you unable to pay the fees and costs of this proceeding, or are you unable to do so without depriving yourself or your dependents of the necessities of life, including food, shelter and clothing?
 A:Yes
 	Q(13.1): You appear to qualify under section C.  You will need to fill out the SUPPLEMENT TO THE AFFIDAVIT OF
-INDIGENCY as well.  GOTO:formInfo  
+INDIGENCY as well as the other forms.  GOTO:formInfo  
 A:No
 	Q(13.2):I'm sorry.  It seems you do not qualify for waiver of counsel or legal aid.  GOTO:checkJuvenile
 
