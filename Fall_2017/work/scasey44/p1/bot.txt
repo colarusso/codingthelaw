@@ -11,7 +11,7 @@ After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
 
 <!-- main body go through each possible category of indigency -->
-Q(1): Do you want to determine if you qualify for free or assisted legal aid in Massachusetts?
+Q(1): Do you want to determine if you qualify for appointment of counsel of a fee waiver in Massachusetts?
 A:Yes
 	Q(1.1):GOTO:checkIndigency
 A:No
