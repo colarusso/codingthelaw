@@ -1,2 +1,2 @@
-name,streetAddr,city,zip,income,assistance,court,caseNum,addIncome,checkSectionA,checkSectionB,checkSectionC,checkIncome,dependents
-John Doe,1 Elm Street,Boston,2113,500,Y,Suffolk,12345,45,N,N,N,5,4
+checkCatA,catB,checkCatC,checkIncome,dependents,addIncome,name,streetAddr,city,zip,court,case,income
+Yes,Yes,Yes,2113,500,Y,Suffolk,12345,45,N,N,N,0
