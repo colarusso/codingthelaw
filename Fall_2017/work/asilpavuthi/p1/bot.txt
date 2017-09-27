@@ -74,12 +74,12 @@ X:number
 		A: no
 			Q(6.1.1.2):GOTO:startover
 
-Q(qual): Congratulation! It is likely that you will qualify for fee waivers. Do you want me to check whether you would also likely to qualify for a free assigned counsel?
+Q(qual): Congratulation! It is likely that you will qualify for fee waivers. Do you want me to check whether you would also likely to qualify for a free appointment of counsel?
 A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2') } else { goto('noqual2') } ]: Yes
 A: No
 	Q(7.2):GOTO:startover
 
-Q(noqual): Unfortunately, it is unlikely that you will qualify for fee waiver. Do you want me to check if you would likely to qualify for free assigned counsel?
+Q(noqual): Unfortunately, it is unlikely that you will qualify for fee waiver. Do you want me to check if you would likely to qualify for free appointment counsel?
 A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2') } else { goto('noqual2') } ]: Yes
 A: No
 	Q(8.2):GOTO:startover
