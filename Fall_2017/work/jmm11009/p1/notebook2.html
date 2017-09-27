@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>bot</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11778,37 +11778,93 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="New-Jersey's-Assigned-Counsel-and-Fee-Waiver-Calculation-Bot">New Jersey's Assigned Counsel and Fee Waiver Calculation Bot<a class="anchor-link" href="#New-Jersey's-Assigned-Counsel-and-Fee-Waiver-Calculation-Bot">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/anon-silpavuthi-83001bb1">Anon Silpavuthi</a></p>
-<p>I wrote a bot that calculates whether a user would likely to qualify for a free appointment of counsel and fee waiver, you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/bot.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive dicision tree by nesting questions and answers. Here's <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/bot.txt">my code</a>.</p>
-<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>I've sent 5 emails to different legal services in New Jersey but I did not any responses. I also called one of the legal services but was told that they are very busy and wouldn't be able to help. 
-<a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/emailtoattorney.png">Here</a> is the screenshot of one of the emails.</p>
-<p>I also received feedback from Sean Casey. I find his feedback helpful. He said that he had to do some of the multiplication himself so I made it clear in the final version and I also fixed the javascript.
-<a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/peerfeedback.png">Here</a> is the screenshot of the feedback and <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/Beta 1.txt">here</a> is the beta version of the code that Sean was testing.</p>
-<p>Apart from these two feedbacks, I also asked a few colleagues in the clinical programs to take test it out but unfortunately, since they tested it out in person, I don't have it on the records, but I incorporated their feedback into the codes right away.</p>
-<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>After researching the requirements for fee waiver and appointment of counsel for New Jersey. I realized that New Jersey doesn't have a very clear requirement for fee waiver and appointment of counsel, courts will be the final authority to decide it. However, there are a few things that are clear and they are the fundamental requirements for fee waiver and assigned counsel:</p>
-
-<pre><code>1) Making below 150% of federal powerty level and having less than $2,500 in liquid assets for fee waiver.
-2) Making below 125% of federal poverty level for free appointment of counsel. 
-
-</code></pre>
-<p>I then started drawing decision tree on a piece of paper, listing down I need to know from the user in order to determine their eligibility and incorporated those lists that I have in the decision three into the a form of questions in the qnamarkup.</p>
-<p>After that, I wrote this <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/firstjava.txt">javascript</a> which calculated the number of people in the household. However, after I learned about the fedpov() in class, I decided to use that instead because it is more practical because my previous javascript could only calculate upto 8 members in the household.</p>
-<p>After we learned how to mailmerge and Pre-filling a document in class, I started incorporating into my code. I decided to use <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/form.pdf">this</a> full application form to do the mail merge. I first converted from pdf to docx and then fixed the format myself.</p>
-<p>Finally, I spent the rest of the time tweaking and reorganizing the codes to make it looks prettier. <a href="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/bot.html">Here</a> is the final version of my bot.</p>
-<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>My goal is to make it as viable as possible. I am using the actual application in support. If the user answer the questions properly,  he/she can actually submit to court. All he/she has to do is print it out and sign it. However, I acknowledge that there are still rooms for improvement, the 5-10 minutes process of filling the application seems quite long even though I added an option for the user to end it right there and skip the application, there should be a way to make it simplier.</p>
-<p>The fee waiver and the free appointment of counsel calculation itself is not perfect, there might be other factors that might lead courts to qualify or disqualify the user in the real world. That was one of the reason why I decided to include the option to fill the application in support of a fee waiver even when the bot tells the user that they are likely to not qualify.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By <a href="https://twitter.com/martino">Justin Martino</a></p>
+<p>I wrote a bot, and you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/jmm11009/p1/bot.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive dicision tree by nesting questions and answers. Here's <a href="bot.txt">my code</a>.</p>
+<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2>
+<pre><code>I think my peer-user testing could have been better if my peer-tester and I had done our perr-review testing on time. Because it was late, the feedback was both limited and hard to incorporate because the due date was approaching so rapidly. However, I was able to receive some structural feedback as some of my GOTO tags were not functioning correctly because of the spacing, this was important to fix before finalizing my bot. You can find the interaction between my Peer-tester and I here ![Screen%20Shot%202017-09-21%20at%202.57.40%20PM.png](attachment:Screen%20Shot%202017-09-21%20at%202.57.40%20PM.png)
+Some of my most beneficial feedback was received when visiting Professor Colarusso in office hours. At the beginning of the process, I struggled with some minor problems that were causing my outputs not to function properly. However, once I overcame this obstacle in office hours my bot really started to take off. After this I was able to incorporate two documents that could be automated using the users feedback from the bot.
+I reached out to a couple of different attorneys in Vermont but I did not receive any response from any of the lawyers I reached out to. I found three different lawyers [here](https://www.lawyers.com/?&amp;site=466&amp;cid=ppc:100&amp;source=GoogleLDC&amp;mkwid=s8ZJRGBzg/pcrid/182225507161/pkw/lawyer%20directory/pmt/p/pdv/c/slid//&amp;gclid=Cj0KCQjw9afOBRDWARIsAJW4nvw1H9HRr7jRSjPFZ5l9KI5lUjCRAI5NwUpWSMsBrAG-qHJvo9xNcKIaAuQsEALw_wcB).
+
+</code></pre>
+<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>I think my greatest refinement period came last week when I met with Professor Collarusso. My original QNA text was very basic. I was having a hard time incorporating my document automation into my code but after meeting with Professor Collarusso I was able to succesfully incorporate two documents that could be automated.</p>
+<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>I think my product could use some improvement before it is real world ready.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
