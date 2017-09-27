@@ -1,0 +1,77 @@
+Title: Texas Indigency Calculator
+Author: Matthew Morgan
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/250px-Flag_of_Texas.svg.png');"></div>
+<h2 style="text-align:center;">Texas Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+
+
+
+Q(benefits):Do you receive public benefits (e.g. SNAP, TANF, SSI, Medicaid)?
+A:Yes
+	Q(1.1):GOTO:Case
+A:No
+	Q(1.2):GOTO:hardship
+
+Q(hardship): Will you be unable to pay for basic needs, such as food, rent, or other necessities, due to paying court costs or for an attorney?
+A:Yes
+	Q(2.1):GOTO:Case
+A:No
+	Q(2.2):GOTO:hh
+
+
+Q(hh):How many people <b>including yourself</b> live in your household?
+X:number
+	Q(3.1):GOTO:Income
+
+Q(Income):What is the total monthly income for your household <b>before</b> taxes)
+X:number
+	Q(4.1):GOTO:Case
+
+Q(Case):Is your case Criminal or Civil?
+A(criminal):Criminal
+	Q(crime): Are you being charged with a felony or misdemeanor?
+	A: Felony
+		Q(5.1.1):GOTO:LQual
+	A: Misdemeanor
+		Q(5.1.2):What class of misdemeanor?
+		A:A
+			Q(A):GOTO:LQual
+		A:B
+			Q(B):GOTO:LQual
+		A:C
+			Q(C):GOTO:LQual
+		A:D
+			Q(D):You are not eligible for a court appointed lawyer. 
+		A:I am unsure
+			Q(5.1.2.5):You likely qualify, but should find out more information about your case by contacting the county you were charged in. 
+A(civil):Civil	
+	Q(Qual): Let's see if you qualify.
+	A:[javascript:if (getvar('hh')==1 && getvar('Income')<1005) {goto('yes')}else if (getvar('hh')==1 && getvar('Income')>1005){goto('not')}else if (getvar('hh')==2 && getvar('Income')<1353.33) {goto('yes')}else if (getvar('hh')==2 && getvar('Income')>1353.33){goto('not')}else if (getvar('hh')==3 && getvar('Income')<1701.67) {goto('yes')}else if (getvar('hh')==3 && getvar('Income')>1701.67){goto('not')}else if (getvar('hh')==4 && getvar('Income')<2050) {goto('yes')}else if (getvar('hh')==4 && getvar('Income')>2050){goto('not')}else if (getvar('hh')==5 && getvar('Income')<2398.33) {goto('yes')}else if (getvar('hh')==5 && getvar('Income')>2398.33){goto('not')}else if (getvar('hh')==6 && getvar('Income')<2746.67) {goto('yes')}else if (getvar('hh')==6 && getvar('Income')>2746.67){goto('not')}else if (getvar('hh')==7 && getvar('Income')<3095) {goto('yes')}else if (getvar('hh')==7 && getvar('Income')>3095){goto('not')}] ok
+	
+Q(LQual):Let's see if you qualify.
+A:[javascript:if (getvar('hh')==1 && getvar('Income')<1005) {goto('Lyes')}else if (getvar('hh')==1 && getvar('Income')>1005){goto('not')}else if (getvar('hh')==2 && getvar('Income')<1353.33) {goto('Lyes')}else if (getvar('hh')==2 && getvar('Income')>1353.33){goto('not')}else if (getvar('hh')==3 && getvar('Income')<1701.67) {goto('Lyes')}else if (getvar('hh')==3 && getvar('Income')>1701.67){goto('not')}else if (getvar('hh')==4 && getvar('Income')<2050) {goto('Lyes')}else if (getvar('hh')==4 && getvar('Income')>2050){goto('not')}else if (getvar('hh')==5 && getvar('Income')<2398.33) {goto('Lyes')}else if (getvar('hh')==5 && getvar('Income')>2398.33){goto('not')}else if (getvar('hh')==6 && getvar('Income')<2746.67) {goto('Lyes')}else if (getvar('hh')==6 && getvar('Income')>2746.67){goto('not')}else if (getvar('hh')==7 && getvar('Income')<3095) {goto('Lyes')}else if (getvar('hh')==7 && getvar('Income')>3095){goto('not')}] ok
+
+
+
+Q(Lyes):You are likely eligible to have a court appointed lawyer. However, eligibility for court appointed lawyers vary by county, so on your next court date ask the judge for help in obtaining a court appointed lawyer. To find out more about the guidelines for county where your case is, follow this link and select your county. <a href="[https://tidc.tamu.edu/public.net/Reports/IDPlanNarrative.aspx]" target="_blank">County Indigent Plan</a>,
+
+Q(yes):You are likely eligible to have you court costs reduced or waived. 
+A[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf]:Please fill out and submit this form to the court. 
+
+
+
+Q(not):Sorry, you are not not likely eligible. However, if you still believe you need help with costs, next time you are in court ask to speak with the judge on this matter.
+
+
+
+Q(Nlaw): You are likely ineligible to have a court appointed lawyer.
+A:[https://texaslawhelp.org/article/legal-aid-bar-association-and-non-profit-organizations-useful-websites] However, you may click here to see a list of non-profit organizations that may be able to help you. 
+
+
+
+
+
+
+

@@ -48,7 +48,7 @@ A: Criminal
 		A:C
 			Q(c):GOTO:LQual
 		A:D
-			Q(d):You are not eligible for a court appointed lawyer. 
+			Q(d):You are not eligible for a court appointed lawyer. Under Texas Government Code Title 2, you may only have a court appointed lawyer if you are being charged with class C or above.
 		A:I am unsure
 			Q(5.2.2.5):You likely qualify, but should find out more information about your case by contacting the county you were charged in.
 	
@@ -71,7 +71,7 @@ A:Criminal
 		A:C
 			Q(y):GOTO:Lyes
 		A:D
-			Q(z):You are not eligible for a court appointed lawyer. 
+			Q(z):You are not eligible for a court appointed lawyer. Under Texas Government Code Title 2, you may only have a court appointed lawyer if you are being charged with class C or above.
 		A:I am unsure
 			Q(7.2.2.5):You likely qualify, but should find out more information about your case by contacting the county you were charged 
 
