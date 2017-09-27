@@ -6,10 +6,10 @@
 
 \f0\fs24 \cf0 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">\
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>\
-<h2 style="text-align:center;">[State Name] Indigency Calculator</h2>\
+<h2 style="text-align:center;">Ohio Indigency Calculator</h2>\
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>\
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>\
-<input type="hidden" name="name" value="Letter to Santa"/>\
+<input type="hidden" name="name" value=\'93Poverty Affidavit\'93/>\
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplateMM.docx"/>\
 \
 \
