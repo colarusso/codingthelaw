@@ -1,0 +1,22 @@
+Q(1): Do you currently receive public assistance? 
+A: Yes
+    Q(1.1):GOTO:legalaid
+A: No
+    Q(family): How many people are in your household?
+    X:number
+        Q(income): What is your household income before taxes?
+        X:number
+            Q(1.2.1.1): Is your case criminal or civil?
+            A[javascript:if (fedpov(getvar('family'),getvar('income'),110)){ goto('legalciv') } else { goto('nolegalciv') } ]: Civil
+            A[javascript:if (fedpov(getvar('family'),getvar('income'),125)){ goto('legalcrim') } else if (fedpov(getvar('family'),getvar('income'),250)) { goto('nolegalbut') } else { goto('nolegalcrim') } ]: Criminal
+Q(legalaid): You may qualify as indigent since you receive public assistance. 
+Q(legalcivil): You may be eligible  since you earn less than 110% of the poverty line. 
+A: No
+Q(legalcrim): You probably qualify as needy since you earn less than 110% of the poverty line. So you'll likely be assigned legal counsel. 
+Q(legalbut): You probably qualify as needy but able to contribute since you earn between 110% and 250% of the poverty line. A lawyer may be assigned to you and you may be asked to pay a small fee.
+Q(nolegalcivil): You probably will not be eligible since you earn more than 110% of the poverty line. Would you like further assistance?
+A:[http://ptla.org/do-you-need-help-legal-problem] Yes.
+A: No
+Q(nolegalcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% over the poverty line. 
+
+

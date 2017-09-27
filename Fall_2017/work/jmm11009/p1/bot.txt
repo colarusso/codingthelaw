@@ -30,9 +30,9 @@ A: No
 	Q(3.2):GOTO:nomore
 
 Q(qualcrim): You probably qualify as needy since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://legislature.vermont.gov/statutes/section/13/163/05238" target=_new>V.S.A § 5238</a>. Would you like me top open up an Application for a Public Defender?
-<input type="hidden" name="name" value="Form Vermont App"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p1/document.docx"/> 
-A:[https://www.vermontjudiciary.org/sites/default/files/documents/Form%20358cr.pdf] Yes
+<input type="hidden" name="name" value="VTCrimForm"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/jmm11009/p1/VTCrimForm.docx"/> 
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
 	Q(4.1): If the Application for a Public Defender didn't open in a new window/tab, you can find it <a href="https://www.vermontjudiciary.org/sites/default/files/documents/Form%20358cr.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
 A: No
 	Q(4.2):GOTO:nomore

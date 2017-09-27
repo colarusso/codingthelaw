@@ -84,17 +84,17 @@ A: Criminal
 			A: No
 				Q(2.2.1.2.2):GOTO:nocounsel
 			A: I don't know
-				Q(2.2.1.2.3): <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new> official Virginia code </a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors. </a> (Felonies usually allow for counsel.) 
+				Q(2.2.1.2.3): See <a href="https://law.lis.virginia.gov/vacode/18.2-11/" target=_new>Code of Virginia § 18.2-11</a> Also <a href="http://humbrechtlaw.com/misdemeanors-in-virginia/" target=_new> See here for more info on different misdemeanors. </a> (Felonies usually allow for counsel.) 
 				A:continue
 					Q(2.2.1.2.3.1):GOTO:charges
 		A: I don't know
-			Q(2.2.1.3): When you were charged, you were told that you had the right to seek counsel and given a statement to sign. If you did not explicitly invoke your right to counsel you probably waived your right to counsel. See <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-160/" target=_new>Official Virginia Code</a>
+			Q(2.2.1.3): When you were charged, you were told that you had the right to seek counsel and given a statement to sign. If you did not explicitly invoke your right to counsel you probably waived your right to counsel. See <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-160/" target=_new>Code of Virgina § 19.2-160</a>
 			A:continue
 				Q(2.2.1.3.1):GOTO:rights
 	A: No
 		Q(2.2.2):GOTO:bye
 
-Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> More info.</a>	Would you like to see some info that was already gathered (will be in a downloaded word doc)?
+Q(waiver): You probably are eligible for a fee waiver <a href="http://www.courts.state.va.us/forms/circuit/cc1414.pdf" target=_new> See this form</a>  (Court will make final decision) See <a href="https://law.lis.virginia.gov/vacode/title17.1/chapter6/section17.1-606/" target=_new> Code of Virginia § 17.1-606</a>	Would you like to see some info that was already gathered (will be in a downloaded word doc)?
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
 	Q(3.1):Here you go. (the information may be incomplete) GOTO:inquiries
 A: No
@@ -102,7 +102,7 @@ A: No
 
 Q(nowaiver): You probably are not eligible for a fee waiver. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
-Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision) <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-159/" target=_new> More info</a> GOTO:inquiries
+Q(counsel): You probably are eligible for counsel. <a href="http://www.courts.state.va.us/forms/district/dc333.pdf" target=_new> See this form</a>(Court will make final decision) See <a href="https://law.lis.virginia.gov/vacode/title19.2/chapter10/section19.2-159/" target=_new> Code of Virgina § 19.2-159</a> GOTO:inquiries
 
 Q(nocounsel): You probably are not eligible for counsel. <a href="http://www.courts.state.va.us/courtadmin/aoc/djs/resources/indigency_guidelines.pdf" target=_new> See here for more information </a> GOTO:inquiries
 
