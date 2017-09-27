@@ -1,0 +1,49 @@
+Title: Am I eligible for fee waivers?
+Q(1): Do you receive Food Stamps?
+A: Yes
+	Q(1.1): Do you receive Supplemental Security Income (SSI)?
+	A:Yes
+		Q(1.1.1): Do you receive SSP?
+		A:Yes
+			Q(1.1.1.1):Do you receive Medi-Cal?
+			A:Yes
+				Q(1.1.1.1.1):Do you receive County Relief/Federal Assistance?
+				A: Yes
+					Q(1.1.1.1.1.1):Do you receive IHSS?
+					A: Yes
+						Q(1.1.1.1.1.1.1):Do you receive CalWORKS or Tribal TANF?
+						A: Yes
+							Q(1.1.1.1.1.1.1.1): Do you receive CAPI?
+							A: Yes
+								Q(1.1.1.1.1.1.1.1.1):GOTO:1.1.1.1.1.1.1.1.2
+							A: No
+								Q(1.1.1.1.1.1.1.1.2): Did you answer "yes" for any of the above questions?
+								A: Yes
+									Q(1.1.1.1.1.1.1.1.2.1): Congratulations, you are eligible for a fee waiver.
+									A:[http://www.courts.ca.gov/documents/fw001.pdf] Please fill out this form.
+								A: No
+									Q(1.1.1.1.1.1.1.1.2.2): Is your gross monthly household income (before deductions for taxes) less than $0?
+									A: Yes
+										Q(1.1.1.1.1.1.1.1.2.2.1):GOTO:1.1.1.1.1.1.1.1.2.1
+									A: No
+										Q(1.1.1.1.1.1.1.1.2.2.2): Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
+										A: Yes
+											Q(1.1.1.1.1.1.1.1.2.2.2.1): Hmmm, it seems like you are not eligible for a fee waiver, please see an attorney for more information.
+										A: No
+											Q(1.1.1.1.1.1.1.1.2.2.2.2):GOTO:1.1.1.1.1.1.1.1.2.1
+						A: No
+							Q(1.1.1.1.1.1.1.2):GOTO:1.1.1.1.1.1.1.1
+					A: No
+						Q(1.1.1.1.1.1.2):GOTO:1.1.1.1.1.1.1
+				A: No
+					Q(1.1.1.1.1.2):GOTO:1.1.1.1.1.1
+			A: No
+				Q(1.1.1.1.2):GOTO:1.1.1.1.1
+		A:No
+			Q(1.1.1.2):GOTO:1.1.1.1
+	A:No
+		Q(1.1.2):GOTO:1.1.1
+A: No
+	Q(1.2):GOTO:1.1
+							
+	

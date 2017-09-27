@@ -1,44 +1,113 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
+Title: Texas Indigency Calculator
+Author: Matthew Morgan
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/250px-Flag_of_Texas.svg.png');"></div>
+<h2 style="text-align:center;">Texas Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+<input type="hidden" name="name" value="Indigent Form"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/mmorgan/p1/Feewaiver.docx"/>
+After: <URL><script src="http://www.qnamarkup.org/js/poverty_line.js"></script></URL>
 
-Q(1): Do your receive public assistance? 
-A: Yes
-	Q(1.1):GOTO:qualaid
+
+Q(benefits):Do you receive public benefits (e.g. SNAP, TANF, SSI, Medicaid)?
+A(byes):Yes
+	Q(1.1):GOTO:QCase
+A:No
+	Q(1.2):GOTO:hardship
+
+Q(hardship): Will you be unable to pay for basic needs, such as food, rent, or other necessities, due to paying court costs or for an attorney?
+A(hyes):Yes
+	Q(2.1):GOTO:QCase
+A:No
+	Q(2.2):GOTO:house
+
+
+Q(house):How many people <b>including yourself</b> live in your household?
+X:number
+	Q(3.1):GOTO:income
+
+Q(income):How much money does your household bring in per <b>year, after</b> taxes)
+X:number
+	Q(4.1):GOTO:Case
+
+Q(Case):Is your case Criminal or Civil?
+A:Civil
+	Q(Qual): Let's see if you qualify.
+	A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('yes') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('not') }  else { goto('not') } ]: Ok.
+A: Criminal
+	Q(crime): Are you being charged with a felony or misdemeanor?
+	A: Felony
+		Q(5.2.1):GOTO:LQual
+	A: Misdemeanor
+		Q(5.2.2):What class of misdemeanor?
+		A:A
+			Q(a):GOTO:LQual
+		A:B
+			Q(b):GOTO:LQual
+		A:C
+			Q(c):GOTO:LQual
+		A:D
+			Q(d):You are not eligible for a court appointed lawyer. Under Texas Government Code Title 2, you may only have a court appointed lawyer if you are being charged with class C or above.
+		A:I am unsure
+			Q(5.2.2.5):You likely qualify, but should find out more information about your case by contacting the county you were charged in.
+	
+Q(LQual): Let's find out if you qualify.
+A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('Lyes') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('not') }  else { goto('not') } ]: Ok.
+
+Q(QCase):Is your case civil or criminal?
+A:Civil
+	Q(7.1):GOTO:yes
+A:Criminal
+	Q(7.2):Are you being charged with a felony or misdemeanor?
+	A: Felony
+		Q(7.2.1):GOTO:Lyes
+	A: Misdemeanor
+		Q(7.2.2):What class of misdemeanor?
+		A:A
+			Q(w):GOTO:Lyes
+		A:B
+			Q(x):GOTO:Lyes
+		A:C
+			Q(y):GOTO:Lyes
+		A:D
+			Q(z):You are not eligible for a court appointed lawyer. Under Texas Government Code Title 2, you may only have a court appointed lawyer if you are being charged with class C or above.
+		A:I am unsure
+			Q(7.2.2.5):You likely qualify, but should find out more information about your case by contacting the county you were charged 
+
+Q(Lyes):You are likely eligible to have a court appointed lawyer. However, eligibility for court appointed lawyers vary by county, so on your next court date ask the judge for help in obtaining a court appointed lawyer. To find out more about the guidelines for county where your case is, follow this link and select your county. <a href="[https://tidc.tamu.edu/public.net/Reports/IDPlanNarrative.aspx]" target="_blank">County Indigent Plan</a>,
+
+Q(yes):You are likely eligible to have you court costs reduced or waived. Would you like help filling out the form?
+A:Yes
+	Q(name): What's your name?
+	X:
+		Q(address):What is your address?
+		X:
+			Q(phone):What is your primary telephone number?
+			X:
+				Q(email):What is your primary email address?
+				X:
+					Q(dob):What is your date of birth?
+					X:date
+						Q(save):Thanks <x>name</x>! Ready to save your document?
+						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Yes
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(9.2):Please fill out and submit the form provided below to the court. 
+	A:[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf] Ok
+	
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
-A: No
-	Q(3.2):GOTO:nomore
 
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
+Q(not):Sorry, you are not not likely eligible. However, if you still believe you need help with costs, next time you are in court ask to speak with the judge on this matter.
 
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
 
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
 
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
+Q(Nlaw): You are likely ineligible to have a court appointed lawyer.
+A:[https://texaslawhelp.org/article/legal-aid-bar-association-and-non-profit-organizations-useful-websites] However, you may click here to see a list of non-profit organizations that may be able to help you. 
 
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+
+
+
+
+
+

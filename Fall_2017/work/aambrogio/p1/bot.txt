@@ -1,44 +1,83 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Georgia Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+<input type="hidden" name="name" value="Pauper's Affidavit"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/aambrogio/p1/pauper.docx"/>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
-Q(1): Do your receive public assistance? 
+Q(1): Are you, a resident of the State of Georgia, without resources to pay court costs and other costs associated with litigation?
+A: No
+	Q(1.1): You do not qualify for appointment of counsel or fee waivers in Georgia. Good luck in court!
 A: Yes
-	Q(1.1):GOTO:qualaid
+	Q(CIVCRIM): You may qualify for fee waivers and, in certain cases, appointment of counsel. Is the pending action a civil or criminal matter?
+	A: Civil
+		Q(1.2.1): Are you over the age of 18?
+		A: Yes
+			Q(1.2.1.1): Do you suffer from any legal disabilities? See <a href="http://codes.findlaw.com/us/title-42-the-public-health-and-welfare/42-usc-sect-12102.html">Legal Disabilities</a>.
+			A: No
+				Q(HOUSECIV): You may qualify for fee waivers and possibly appointment of counsel, depending on the civil case. How many persons are in your household, including yourself?
+				X:number
+					Q(INCOMECIV): What is your monthly income?
+					X[javascript:if(fedpov(getvar('HOUSECIV')/12,getvar('INCOMECIV'),100)){goto('CIVYES')}else{goto('CIVNO')}]:number
+			A: Yes
+				Q(1.2.1.1.2): There are other resources out there for you due to your legal disability. <a href=http://www.dlpcga.org/>Legal Disabilities Resources</a>.
+		A: No
+			Q(1.2.1.2): There are other resources out there for you due to your minor status. Your parent or guardian should fill out this form. 
+	A: Criminal
+		Q(1.2.2): Are you the defendant in the criminal action?
+		A: Yes
+			Q(1.2.2.1): Can you afford a lawyer to assist you in your defense?
+			A: Yes
+				Q(1.2.2.1.1): If you are able to afford a lawyer to assist you in your defense, you do not qualify as indigent for the purposes of waiving fees or having counsel appointed for you by the court.
+			A: No
+				Q(1.2.2.1.2): You should qualify for the appointment of counsel by the court. The court will need more information to determine your eligibility, as it is up to the Court's discretion. Are you charged with a felony?
+				A: Yes
+					Q(HOUSEFEL): How many members are in your household, including yourself? 
+					X:number
+						Q(INCOMEFEL): What is your monthly income?
+						X[javascript:if(fedpov(getvar('HOUSEFEL')/12,getvar('INCOMEFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+				A: No
+					Q(1.2.2.1.2.2): Are you under the age of 18?
+					A: Yes
+						Q(HOUSEJUVNOTFEL): How many members are in your household, including yourself?
+						X:number
+							Q(INCOMEJUVNOTFEL): What is your monthly income?
+							X[javascript:if(fedpov(getvar('HOUSEJUVNOTFEL')/12,getvar('INCOMEJUVNOTFEL'),125)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+					A: No
+						Q(HOUSEJUVFEL): How many members are in your household, including yourself?
+						X:number
+							Q(INCOMEJUVFEL): What is your monthly income?
+							X[javascript:if(fedpov(getvar('HOUSEJUVFEL')/12,getvar('INCOMEJUVFEL'),150)){GOTO('CRIMYES')}else{GOTO('CRIMNO')}]:number
+		A: No
+			Q(1.2.2.2): Only the defendant can receive a fee waiver and appointment of counsel due to his/her/their indigent status. Is your child the defendant in a juvenile proceeding?
+			A: Yes, I am a Juvenile who is charged with commiting a felony.
+				Q(1.2.2.2.1):GOTO:FELONY
+			A: Yes, I am a Juvenile and I was not charged with a felony.
+				Q(1.2.2.2.2):GOTO:JUVNOTFEL
+			A: No
+				Q(1.2.2.2.3): Only the defendant can receive a fee waiver and appointment of counsel due to his/her/their indigent status. You do not qualify. Good luck in court!
+
+Q(CIVNO): You do not qualify for fee waivers in the State of Georgia. Good luck in court!
+Q(CIVYES): Objectively, you qualify for fee waivers in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents, such as assets you could sell?
+A: Yes
+	Q(3.1): Just a heads up, you may not qualify due to those additional resources. The last decision is up to the Judge. Would you like the information you provided to be added to the Pauper's Affidavit Form?
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+	A: No
+		Q(3.1.2): Here is a link to the Pauper's Affidavit for your use in court. Good luck! <a href="https://www.georgialegalaid.org/files/6FCBD72D-B465-109D-9EC1-5A4F52A74EE9/attachments/A3FBEDA9-FB50-4670-B4D9-F6543139B328/303031pauper-aff-and-order.pdf">Form</a>.
 A: No
-	Q(house): How many people are in your household?
-	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
-		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+	Q(3.2): You are still likely to qualify for fee waivers in the State of Georgia. The last decision is up to the Judge.
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
-
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
+Q(CRIMNO): You do not qualify for fee waivers in the State of Georgia. Good luck in court!
+Q(CRIMYES): Objectively, you qualify for fee waivers and appointment of counsel in the State of Georgia. Do you have other resources that might reasonably be used to employ a lawyer without undue hardship on you or your dependents, such as assets you could sell?
+A: Yes
+	Q(5.1): Just a heads up, you may not qualify due to those additional resources. You should speak with a court clerk. The last decision is up to the Judge. Would you like a copy of the information you provided?
+	A: Yes
+		Q(PRINTYES)[javascript:save2('mailmerge.csv',csv())]: Something should have downloaded from your browser. Just click and all of the information you provided should be there on an excel document.
+	A: No
+		Q(5.1.2): You are all set. Good luck in Court.
 A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
-A: No
-	Q(6.2):GOTO:nomore
-
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
-A: No
-	Q(7.2):GOTO:nomore
-
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+	Q(5.2): You are still likely to qualify for fee waivers and appointment of counsel in the State of Georgia. You should speak with a court clerk. The last decision is up to the Judge. Would you like a copy of the information you provided?
+	A: Yes
+		Q(5.2.1):GOTO:PRINTYES

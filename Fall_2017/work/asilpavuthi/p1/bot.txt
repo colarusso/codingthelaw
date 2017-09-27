@@ -1,44 +1,183 @@
-Title: [state name] Indigency Calculator
-Author: [author's name]
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<h3>[State Name] Indigency Calculator</h3>
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/Feewaiverlogo.jpg');"></div>
+<h2 style="text-align:center;">New Jersey: Fee Waivers and Assigned Counsel Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+<input type="hidden" name="name" value="Application in Support of a Fee Waiver"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asilpavuthi/p1/Application.docx"/>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
-Q(1): Do your receive public assistance? 
-A: Yes
-	Q(1.1):GOTO:qualaid
+Q(type): Welcome to New Jersey's Fee Waivers and Assigned Counsel Calculator! Are you inquiring about a civil or criminal matter?
+A: Criminal
+	Q(1.1): Is it a felony?
+	A: Yes
+		Q(1.1.1): Every defendant charged with an indictable (felony) offense in New Jersey is entitled to be represented by an attorney, whether or not he or she can afford one. Would you like to read more about how to apply for a public defender?
+		A:[http://www.nj.gov/defender/apply/index.shtml]Yes
+			Q(1.1.1.1): Do you still want to find out whether you would likely to qualify for a fee waiver?
+			A: Yes
+				Q(1.1.1.1.1):GOTO:liquid
+			A: No
+				Q(startover): Would you like to start over?
+				A: Yes
+					Q(1.1.1.1.2.1):GOTO:type
+				A: No
+					Q(1.1.1.1.2.2): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+		A: No
+			Q(1.1.1.2):GOTO:liquid
+	A:No
+		Q(1.1.2):GOTO:liquid
+A: Civil
+	Q(1.2):GOTO:liquid
+
+Q(liquid): Do you have more than $2,500 in liquid assets?
+A:Yes
+	Q(2.1):GOTO:qualliquid
 A: No
-	Q(house): How many people are in your household?
+	Q(2.2):GOTO:household
+A: I'm not sure what is considered liquid assets.
+	Q(2.3): Would you like to find out what is considered liquid assets?
+	A:[http://www.investopedia.com/ask/answers/032715/what-items-are-considered-liquid-assets.asp]Yes
+		Q(2.3.1):GOTO:liquid
+	A:No
+		Q(2.3.2):GOTO:liquid
+
+Q(qualliquid): Congratulation! It is likely that you would qualify for fee waiver. Do you want me to check whether you would also likely to qualify for free appointment of counsel?
+A:Yes
+	Q(houseliquid): How many people are in your household? 
 	X:number
-		Q(income): How much income does your household bring in per year in after tax dollars?
+		Q(incomeliquid): How much income does your household bring in per year in after tax dollars?
 		X:number
-			Q(1.2.1.1): Are you facing a civil or criminal matter?
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualciv') } ]: Civil
-			A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualcrim') } else if (fedpov(getvar('house'),getvar('income'),250)) { goto('noqualbut') } else { goto('noqualcrim') } ]: Criminal
+			Q(checkliquid):Would you like to find out now?
+			A[javascript:if (fedpov(getvar('houseliquid'),getvar('incomeliquid'),125)){ goto('qualliquidassign') } else { goto('noqualliquidassign') } ]: Yes
+			A: no
+				Q(3.1.1.1.2):GOTO:startover
+A:No
+	Q(3.2):GOTO:startover
 
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a> and <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>.
-
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. Consequently, you may be eligible to have your court fees waived. Would you like me to open up a fee waiver for you to file? 
-A:[http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf] Yes
-	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.mass.gov/courts/docs/forms/sjc/affidavitofindigency.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk.
+Q(qualliquidassign): Congratulation! You will likely qualify for free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
+A:Yes
+	Q(4.1):GOTO:name 
 A: No
-	Q(3.2):GOTO:nomore
-
-Q(qualcrim): You probably qualify as indigent since you earn less than 125% of the poverty line. So you'll likely be assigned a lawyer by the judge. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(qualbut): You probably qualify as indigent but able to contribute since you earn between 125% and 250% of the poverty line. So you'll likely be assigned a lawyer and asked to pay a small fee. See <a href="http://www.mass.gov/courts/case-legal-res/rules-of-court/sjc/sjc310.html" target=_new>SJC Rule 3:10</a>.
-
-Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleVI/Chapter261/Section27A" target=_new>M.G.L. Chapter 261 MA § 27A</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(6.1):GOTO:nomore
+	Q(4.2):GOTO:startover
+Q(noqualliquidassign): Unfortunately, you are unlikely to qualify for free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
+A:Yes
+	Q(5.1):GOTO:name 
 A: No
-	Q(6.2):GOTO:nomore
+	Q(5.2):GOTO:startover
 
-Q(noqualcrim): You probably won't qualify as indigent or indigent but able to contribute since you earn more than 250% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
-A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(7.1):GOTO:nomore
+Q(household): How many people are in your household? 
+X:number
+	Q(income): How much income does your household bring in per year in after tax dollars?
+	X:number
+		Q(check):Do you want me to check if you are likely to qualify for a fee waiver?
+		A[javascript:if (fedpov(getvar('household'),getvar('income'),150)){ goto('qual') } else { goto('noqual') } ]: Yes
+		A: no
+			Q(6.1.1.2):GOTO:startover
+
+Q(qual): Congratulation! It is likely that you will qualify for fee waivers. Do you want me to check whether you would also likely to qualify for a free appointment of counsel?
+A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2') } else { goto('noqual2') } ]: Yes
 A: No
-	Q(7.2):GOTO:nomore
+	Q(7.2):GOTO:startover
 
-Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
+Q(noqual): Unfortunately, it is unlikely that you will qualify for fee waiver. Do you want me to check if you would likely to qualify for free appointment counsel?
+A[javascript:if (fedpov(getvar('household'),getvar('income'),125)){ goto('qual2') } else { goto('noqual2') } ]: Yes
+A: No
+	Q(8.2):GOTO:startover
+
+Q(qual2): Congratulation! You are likely to qualify for a free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court? (this will take about 5-10 minutes)
+A:Yes
+	Q(9.1):GOTO:name 
+A: No
+	Q(9.2):GOTO:startover
+
+Q(noqual2): Unfortunately, it is unlikely that you would qualify for a free appointment of counsel. Would you like to fill out an application in support of a fee waiver so you can give it to a lawyer or the court anyway? (this will take about 5-10 minutes)
+A:Yes
+	Q(10.1):GOTO:name 
+A: No
+	Q(10.2):GOTO:startover
+
+
+Q(name): Please answer the following questions, if it is not applicable please answer the question with "N/A." First, what is your name?
+X:
+	Q(address): What is your address?
+	X:
+		Q(telephone): What is your telephone number?
+		X:
+			Q(email): What is your email address?
+			X:
+				Q(court): What is the court of jurisdiction? 
+				X:
+					Q(county): What county? 
+					X:
+						Q(docketno): What is the docket no.?
+						X:
+							Q(plaintiff): Who is the plaintiff in this matter?
+							X:
+								Q(defendant): Who is the defendant?
+								X:
+									Q(plaintiffordefendant): Just to confirm, are you the plaintiff or defendant in this matter? 
+									X:
+										Q(inmate): Are you or are you not an inmate in state prison or county jail? (please answer with "am" or "am not")
+										X:
+											Q(benefit): Please tell me all the government benefits that you are currently eligibled for?
+											X:
+												Q(tax): Are you or are you not claimed as a dependent on someone else's tax return? (please answer with "am" or "am not")
+												X:
+													Q(employer): What is your Employer’s Name, Address and Telephone Number?
+													X:
+														Q(netmonthlyincome): I will now ask you the following questions about income. First, what is your net monthly income?
+														X:number
+															Q(spousalcontribution): What is your income from Spousal/Cohabitant Contribution?
+															X:number
+																Q(unemployment): What is your income from Unemployment/Disability benefit?
+																X:number
+																	Q(socialsecurity):What is your income from Social Security benefit?
+																	X:number
+																		Q(veteran): What is your income from Veterans Administration?
+																		X:number
+																			Q(pension): What is your income from Pension?
+																			X:number
+																				Q(publicsubsidies): What is your income from Public Subsidies?
+																				X:number
+																					Q(childsupport): What is your income from Child Support/Alimony?
+																					X:number
+																						Q(housingsubsidies): What is your income from housing subsidies?
+																						X:number
+																							Q(trustfund): What is your income from trust fund?
+																							X:number
+																								Q(rentalproperties): What is your income from rental properties?
+																								X:number
+																									Q(totalmonthlyincome): What is your total monthly income? (total income, start counting at the first income question)
+																									X:number
+																										Q(house): Now, I am going to ask you a few questions about assets. First, how much assets do you have in house/land market value?
+																										X:number
+																											Q(motorvehicles): How much assets do you have in motor vehicles?
+																											X:number
+																												Q(cash): How much cash do you have?
+																												X:number
+																													Q(checkingaccount): What is the current balance of your checking account?
+																													X:number
+																														Q(savingaccount): What is the current balance of your saving account?
+																														X:number
+																															Q(civiljudgment): How much assets do you have in Civil Judgment Awards/Pending?
+																															X:number
+																																Q(stocks): How much assets do you have in stocks and bonds? (current value)
+																																X:number
+																																	Q(cds): How much assets do you have in Face Value of CDs/IRAs/401Ks? (face value)
+																																	X:number
+																																		Q(moneymarket): How much assets do you have in Money Market Accounts?
+																																		X:number
+																																			Q(retrievablebail): How much assets do you have in Retrievable Bail Amount & Location?
+																																			X:number
+																																				Q(otherassets): If you have any other assets, how much do you have?
+																																				X:number
+																																					Q(totalassets): What is your total assets in dollar? (total assets, start counting at the first assets question)
+																																					X:number
+																																						Q(date): Finally, what is the date of completion of this application? (today's date)
+																																						X:
+																																							Q(download): Congratulation! Your application is ready.
+																																							A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download the application now
+																																							A:Startover with the application
+																																								Q(gobacktoname):GOTO:name
+																																							A:Startover from the beginning
+																																								Q(startoverfinal):GOTO:startover
