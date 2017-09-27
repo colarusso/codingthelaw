@@ -30,7 +30,7 @@ A: Fee waiver
 			A:No
 				Q(home): How many people are in your household?
 				X:number
-					Q(income): How much do you make a year? (This will include everyone who is in your household as indicated previously) (type the value and press enter)
+					Q(income): How much do you make a year?
 					X:[javascript:if (fedpov(getvar('home'),getvar('income'),100)){goto ('waiver')} else {goto('nowaiver')} ]number
 					A: I don't know
 						Q(2.1.1.1.2.1.2): Please answer once you acquire this information.
