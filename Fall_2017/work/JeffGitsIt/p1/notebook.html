@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>bot</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>bot</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11778,46 +11751,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By Christopher Lacenere</p>
-<p>I wrote a bot, and you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive decision tree by nesting questions and answers. Here's <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.txt">my code</a>.</p>
-<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>Admittedly, I was unable to get a beta version to my peer tester in time because I still had not found the rules on criminal cases and for juveniles.</p>
-<p>However, once this information was found I sent my code to my peer tester and received some useful feedback.  Professor Colarusso was copied on these email exchanges.</p>
-<p>In particular my peer tester found my determination of qualifying as indigent in a criminal case to be unclear because my bot did not give any details about requisite financial status to obtain counsel. It merely stated I need not be completely without funds, and that I need to fill out an affidavit with information necessary for the court to make a determination.  Basically, I did not have sections on qualifying or not qualifying for criminal cases; I just spat out the law. Also, he said my bot did not specify what that information needs to be.</p>
-<p>I therefore changed my code to not just spit out the law, without giving the user a sense of whether they might qualify or not.  I instead made my first question very concise: "Do you lack financial resources on a practical basis to retain counsel?  In other words, although you need not be entirely without funds, would it be impractical for you to afford an attorney?"  Then, based on this answer, I took the user to newly created sections explaining to the user on qualifying or not qualifying for criminal cases.</p>
-<p>Although Illinois does not have a strict set of rules for criminal cases as in some jurisdictions, I also added some examples of basic information that one might add to the affidavit for criminal cases, such as income, property, savings, and expenses.</p>
-<p>Overall, I felt the feedback was good and that the changes I made based on it improved the user experience.</p>
-<p>The code for my peer tested bot can be found <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot-peer-tested.txt">here</a> and the code containing the revisions based on feedback can be found <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.txt">here</a>.</p>
-<p>--</p>
-<p>I also performed peer testing and found that when I ignored a special rule asking whether the person owned property valued over 2,500, I got what appeared to be correct answers for the categories.</p>
-<p>However, I did find a glitch for both civil and criminal cases wherein if the user had no income, but owned property valued at greater than 2,500, the bot would say you don't qualify because you make over 200% of the poverty line.  This did not seem right and I suggested that he add an additional explanation as to why the user wouldn't qualify if this is indeed how Florida works, or adjust what leads to disqualification/qualification if you are dirt poor but have an asset valued over 2,500.</p>
-<p>--</p>
-<p>I reached out to six Illinois legal aid organizations via their "contact us" form on their websites with the following message:</p>
-<p>"Dear Sir or Madam,</p>
-<p>I am currently a third year night student at Suffolk Law School in Boston.  I am currently taking a course on computer coding as it relates to the law.  For our first project, I am creating a "chatbot" to determine if someone is eligible for appointed counsel, fee waivers, or the like, in the state of Illinois.  The bot will provide users with a set of action items to obtain any such aid, including copies of any applicable court forms pre-filled with data obtained from interaction with the bot.</p>
-<p>I was wondering whether someone at your organization would consider looking at my final product and giving me some feedback in about three weeks regarding its usefulness?</p>
-<p>Thank you,
-Christopher Lacenere"</p>
-<p>On September 6, 2017, I contacted the following pro bono organizations via the listed URLS:</p>
-<p><a href="https://www.illinoislegalaid.org/email/node/94096/field_contact_email">https://www.illinoislegalaid.org/email/node/94096/field_contact_email</a> (Illinois Legal Aid)</p>
-<p><a href="http://www.clclaw.org/contact.aspx">http://www.clclaw.org/contact.aspx</a> (Chicago Legal Clinic)</p>
-<p><a href="http://www.cvls.org/contact">http://www.cvls.org/contact</a> (Chicago Volunteer Legal Services)</p>
-<p>On September 12, 2017, I contacted the following pro bono organizations via the listed URLS:</p>
-<p><a href="https://www.accessliving.org/contact">https://www.accessliving.org/contact</a> (Legal Clinic for the Disabled)</p>
-<p><a href="https://kanecountybar.org/contact-us">https://kanecountybar.org/contact-us</a> (Kane County Bar Association)</p>
-<p><a href="http://www.dupagelegalaid.org/contact-us.html">http://www.dupagelegalaid.org/contact-us.html</a> (DuPage Legal Aid)</p>
-<p>I have not yet heard back from any of the contacted organizations.</p>
-<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>Aside from the refinement discussed above based on peer-testing, I started with just the civil rules, which is all I was able to find for a while.</p>
-<p>I used the template provided by Professor Colarusso as my start.  However, the criminal aspect of the template did not apply to my state, so I rewrote the criminal qualification section to apply to Illinois for both adults and juveniles (the rules which are essentially the same except that a juvenile's affidavit must be signed by an adult with knowledge of the facts).  Although no distinction is made between misdemeanors and felony's in Illinois, one is not entitled to court appointed counsel if the penalty in the case is only a fine.</p>
-<p>I then rewrote my qualciv section to include minors, explaining that the affidavit must be signed by an adult with knowledge of the facts.</p>
-<p>I also wrote another section for qualifying based on financial hardship to you or your family.</p>
-<p>As I went through the process, I did have to do some debugging.  Mostly, because I would repeat variable names and get an error.</p>
-<p>After I had my rules for qualifying/not qualifying set up I went on to include forms and pre-filling a form.  Note: depending on where you choose to prefill a form, a different number of variables are used.  If you make it all the way through to the "hardship" qualification, all of the form's variables are filled in.</p>
-<p>When I originally set up the prefilling of forms, I had repeated the same code under each of the three qualification sections.  However, I then chose to be more efficient and simply use a GOTO statement under each of these sections that went to a single variable that began the form filing process.  This made the code more compact and easier to follow.</p>
-<p>I then made minor adjustments to my descriptions, did some grammar and spell checking, and made minor tweaks (e.g., requiring the ZIP code to be a number).</p>
-<p>Finally, I ran through every permutation of the program in the end to make sure everything worked properly.</p>
-<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>I think in general, the bot would be very useful in the real world to give people guidance on whether or not they may qualify for a fee waiver or court appointed counsel.  It is easy to use and (I believe) easy to understand by a broad audience.  It performs a very efficient screening of the requisite qualifications, concisely explains why the user may qualify or not, points them to the law, and directs the user to the proper forms.  It also allows them to search for an attorney in their area.</p>
-<p>Although I know we were not meant to pre-fill the actual forms (if this is possible), I think this would be the single best addition for real world viability, i.e., actually pre-filling a PDF document of the actual forms.</p>
-<p>Finally, since I did not hear back from any of the Illinois lawyers I contacted, I had three people at my firm (a local patent boutique) test the final version.  I am anonymizing their last names: Elizabeth S. (partner), Emmanuel F. (associate), and Dorothy C. (counsel).  Although they are not Illinois lawyers, they all were impressed and thought that the bot was well executed and that it would be useful to the general public in determining whether they qualify as indigent.  Emmanuel also suggested it would be useful to write a bot to calculate patent expiration dates (which is actually more complicated than it sounds).  This sounded like a great idea to me.</p>
+<h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/jpjeffprice">Jeff Price</a></p>
+<p>I wrote a chatbot, which you can find <a href="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/bot.html">here</a>, that helps the user assess their indigent status in the state of Ohio. To write my bot, I used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, this tool creates an interactive dicision tree by nesting questions and answers. The source code for my bot can be found <a href="bot.txt">here</a>.</p>
+<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>Aside from my own testing during development, a classmate provided great feedback on a series of five use cases. This feedback also highlighted some minor coding errors, noted some missing information, and made several usability suggestions. I also reached out to an Ohio lawyer for feedback.</p>
+<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>The original bot (source code <a href="botbeta.txt">here</a>) lacked decision points for juvenile and civil litigants, as well as links to the appropriate civil and criminal forms. The current version corrects these omissions, and also improves the user experience by incorporating the design suggestions from user testing. For example, instead of defining specific terms or providing clarifying information within a prompt, options for requesting these details were added to the list of available responses.</p>
+<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>To make this chatbot completely viable, I will need a lawyer to review it for completeness. Further, while filling in the civil form has been automated, the criminal affidavit should also be automated.</p>
 
 </div>
 </div>
@@ -11851,8 +11789,4 @@ Christopher Lacenere"</p>
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
