@@ -1,0 +1,56 @@
+Q(Case):Is your case Criminal or Civil?
+A(criminal):Criminal
+	Q(1.1):GOTO:benefits
+A(civil):Civil
+	Q(1.2):GOTO:benefits	
+
+Q(benefits):Do you receive public benefits (e.g. SNAP, TANF, SSI, Medicaid)?
+A:Yes
+	Q(2.1):GOTO:yes
+A:No
+	Q(2.2):GOTO:hardship
+
+Q(hardship): Will you be unable to pay for basic needs, such as food, rent, or other necessities, due to paying court costs or for an attorney?
+A:Yes
+	Q(3.1):GOTO:yes
+A:No
+	Q(3.2):GOTO:hh
+
+
+Q(hh):How many people <b>including yourself</b> live in your household?
+X:
+	Q(4.1):GOTO:Income
+
+Q(Income):What is your total monthly income <b>after</b> taxes?
+X:
+	Q(5.1):GOTO:Qual
+Q(Qual): Let's see if you qualify.
+A:[javascript:if (getvar('hh')==1 && getvar('Income')<1005) {goto('yes')}else if (getvar('hh')==1 && getvar('Income')>1005){goto('not')}else if (getvar('hh')==2 && getvar('Income')<1353.33) {goto('yes')}else if (getvar('hh')==2 && getvar('Income')>1353.33){goto('not')}else if (getvar('hh')==3 && getvar('Income')<1701.67) {goto('yes')}else if (getvar('hh')==3 && getvar('Income')>1701.67){goto('not')}else if (getvar('hh')==4 && getvar('Income')<2050) {goto('yes')}else if (getvar('hh')==4 && getvar('Income')>2050){goto('not')}else if (getvar('hh')==5 && getvar('Income')<2398.33) {goto('yes')}else if (getvar('hh')==5 && getvar('Income')>2398.33){goto('not')}else if (getvar('hh')==6 && getvar('Income')<2746.67) {goto('yes')}else if (getvar('hh')==6 && getvar('Income')>2746.67){goto('not')}else if (getvar('hh')==7 && getvar('Income')<3095) {goto('yes')}else if (getvar('hh')==7 && getvar('Income')>3095){goto('not')}] ok
+
+Q(yes):You are likely eligible to have you court costs reduced or waived.
+A:[https://texaslawhelp.org/sites/default/files/tx-pr-pay-112_scot_statement_of_inability_to_pay_court_costs.pdf]Please fill out and submit this form to the court. 
+A: Court appointed lawyer information.	
+	Q(7.2): Would you like to know if you also qualify for a court appointed lawyer?
+	A[javascript:if (getvar('Case')=='criminal') {goto('crime')} else {goto('Ylaw')}]: Yes
+	A:No
+		Q(7.2.2): Have a nice day
+
+
+Q(not):You are not eligible to have you court costs reduced or waived. 
+
+Q(crime): Are you being charged with a felony or misdemeanor?
+A: Felony
+	Q(9.1):GOTO:benefits
+A: Misdemeanor
+	Q(9.2):What class of misdemeanor?
+	A:A
+		Q(A):GOTO:Ylaw
+	A:B
+		Q(B):GOTO:Ylaw
+	A:C
+		Q(C):GOTO:Ylaw
+	A:D
+		Q(D):You are not eligible for a court appointed lawyer.
+
+Q(Ylaw): You are likely eligible to have a court appointed lawyer.
+Q(Nlaw): You are likely eligible to have a court appointed lawyer.
