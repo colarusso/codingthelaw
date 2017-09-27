@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>bot</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11778,49 +11778,67 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By Christopher Lacenere</p>
-<p>I wrote a bot, and you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive dicision tree by nesting questions and answers. Here's <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.txt">my code</a>.</p>
-<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>Admittedly, I was unable to get a beta version to my peer tester in time because I still had not found the rules on criminal cases and for juveniles.</p>
-<p>However, once this information was found I sent my code to my peer tester and received some useful feedback.  Professor Colarusso was copied on these email exchanges.</p>
-<p>In particular my peer tester found my determination of qualifying as indigent in a criminal case to be unclear because my bot did not give any details about requisite financial status to obtain counsel. It merely stated I need not be completely without funds, and that I need to fill out an affidavit with information necessary for the court to make a determination.  Basically, I did not have sections on qualifying or not qualifying for criminal cases; I just spat out the law. Also, he said my bot did not specify what that information needs to be.</p>
-<p>I therefore changed my code to not just spit out the law, without giving the user a sense of whether they might qualify or not.  I instead made my first question very concise: "Do you lack financial resources on a practical basis to retain counsel?  In other words, although you need not be entirely without funds, would it be impractical for you to afford an attorney?"  Then, based on this answer, I took the user to newly created sections explaining to the user on qualifying or not qualifying for criminal cases.</p>
-<p>Although Illinois does not have a strict set of rules for criminal cases as in some jurisdictions, I also added some examples of basic information that one might add to the affidavit for criminal cases, such as income, property, savings, and expenses.</p>
-<p>Overall, I felt the feedback was good and that the changes I made based on it improved the user experience.</p>
-<p>The code for my peer tested bot can be found <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot-peer-tested.txt">here</a> and the code containing the revisions based on feedback can be found <a href="http://www.codingthelaw.org/Fall_2017/work/c0ding7h314w/p1/bot.txt">here</a>.</p>
-<p>--</p>
-<p>I also performed peer testing and found that when I ignored a special rule asking whether the person owned property over 2,500, I got what appeared to be correct answers for the categories.</p>
-<p>However, I did find a glitch for both civil and criminal cases wherein if if the user had no income, but owned property greater than 2,500, the bot would say you don't qualify because you make over 200% of the poverty line.  This did not seem right and I suggested he add an additional explanation as to why the user wouldn't qualify if this is indeed how Florida works, or adjust what leads to disqualification/qualification if you are dirt poor but have an asset over 2,500.</p>
-<p>--</p>
-<p>I reached out to six Illinois legal aid organizations via their "contact us" form on their websites with the following message:</p>
-<p>"Dear Sir or Madam,</p>
-<p>I am currently a third year night student at Suffolk Law School in Boston.  I am currently taking a course on computer coding as it relates to the law.  For our first project, I am creating a "chatbot" to determine if someone is eligible for appointed counsel, fee waivers, or the like, in the state of Illinois.  The bot will provide users with a set of action items to obtain any such aid, including copies of any applicable court forms pre-filled with data obtained from interaction with the bot.</p>
-<p>I was wondering whether someone at your organization would consider looking at my final product and giving me some feedback in about three weeks regarding its usefulness?</p>
-<p>Thank you,
-Christopher Lacenere"</p>
-<p>On September 6, 2017, I contacted the following pro bono organizations via the listed URLS:</p>
-<p><a href="https://www.illinoislegalaid.org/email/node/94096/field_contact_email">https://www.illinoislegalaid.org/email/node/94096/field_contact_email</a> (Illinois Legal Aid)</p>
-<p><a href="http://www.clclaw.org/contact.aspx">http://www.clclaw.org/contact.aspx</a> (Chicago Legal Clinic)</p>
-<p><a href="http://www.cvls.org/contact">http://www.cvls.org/contact</a> (Chicago Volunteer Legal Services)</p>
-<p>On September 12, 2017, I contacted the following pro bono organizations via the listed URLS:</p>
-<p><a href="https://www.accessliving.org/contact">https://www.accessliving.org/contact</a> (Legal Clinic for the Disabled)</p>
-<p><a href="https://kanecountybar.org/contact-us">https://kanecountybar.org/contact-us</a> (Kane County Bar Association)</p>
-<p><a href="http://www.dupagelegalaid.org/contact-us.html">http://www.dupagelegalaid.org/contact-us.html</a> (DuPage Legal Aid)</p>
-<p>I have not yet heard back from any of the contacted organizations.</p>
-<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>Aside from the refinement discussed above based on peer-testing, I started with just the civil rules, which is all I was able to find for a while.</p>
-<p>I used the template provided by Professor Colarusso as my start.  However, the criminal aspect of the template did not apply to my state, so I rewrote the criminal qualification section to apply to Illinois for both adults and juveniles (the rules which are essentially the same except that a juvenile's affidavit must be signed by an adult with knowledge of the facts).  Although no distinction is made between misdemeanors and felony's in Illinois, one is not entitled to court appointed counsel if the penalty in the case is only a fine.</p>
-<p>I then rewrote my qualciv section to include minors, explaining that the affidavit must be signed by an adult with knowledge of the facts.</p>
-<p>I also wrote another section for qualifying based on financial hardship to you or your family.</p>
-<p>As I went through the process, I did have to do some debugging.  Mostly, because I would repeat variable names and get an error.</p>
-<p>After I had my rules for qualifying/not qualifying set up I went on to include forms and pre-filling a form.  Note: depending on where you choose to prefill a form, a different number of variables are used.  If you make it all the way through to the "hardship" qualification, all of the form's variables are filled in.</p>
-<p>When I originally set up the prefilling of forms, I had repeated the same code under each of the three qualification sections.  However, I then chose to be more efficient and simply use a GOTO statement under each of these sections that went to a single variable that began the form filing process.  This made the code more compact and easier to follow.</p>
-<p>I then made minor adjustments to my descriptions, did some grammar and spell checking, and made minor tweaks (e.g., requiring the ZIP code to be a number).</p>
-<p>Finally, I ran through every permutation of the program in the end to make sure everything worked properly.</p>
-<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>I think in general, the bot would be very useful in the real world to give people guidance on whether or not they may qualify for a fee waiver or court appointed counsel.  It is easy to use and (I believe) easy to understand by a broad audience.  It performs a very efficient screening of the requisite qualifications, concisely explains why the user may qualify or not, points them to the law, and directs the user to the proper forms.  It also allows them to search for an attorney in their area.</p>
-<p>Although I know we were not meant to pre-fill the actual forms (if this is possible), I think this would be the single best addition for real world viability, i.e., actually pre-filling a PDF document of the actual forms.</p>
-<p>Finally, since I did not not hear back from any of the Illinois lawyers I contacted, I had three people at my firm (a local patent boutique) test the final version.  I am anonymizing their last names: Elizabeth S. (partner), Emmanuel F. (associate), and Dorothy C. (counsel).  Although they are not Illinois lawyers, they all were impressed and thought that the bot was well executed and that it would be useful to the general public in determining whether they qualify as indigent.  Emmanuel also suggested it would be useful to write a bot to calculate patent expiration dates (which is actually more complicated than it sounds).  This sounded like a great idea to me.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By <a href="https://twitter.com/martino">Justin Martino</a></p>
+<p>I wrote a bot, and you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/jmm11009/p1/bot.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive dicision tree by nesting questions and answers. Here's <a href="bot.txt">my code</a>.</p>
+<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2>
+<pre><code>I think my peer-user testing could have been better if my peer-tester and I had done our perr-review testing on time. Because it was late, the feedback was both limited and hard to incorporate because the due date was approaching so rapidly. However, I was able to receive some structural feedback as some of my GOTO tags were not functioning correctly because of the spacing, this was important to fix before finalizing my bot. You can find the interaction between my Peer-tester and I here ![Screen%20Shot%202017-09-21%20at%202.57.40%20PM.png](attachment:Screen%20Shot%202017-09-21%20at%202.57.40%20PM.png)
+Some of my most beneficial feedback was received when visiting Professor Colarusso in office hours. At the beginning of the process, I struggled with some minor problems that were causing my outputs not to function properly. However, once I overcame this obstacle in office hours my bot really started to take off. After this I was able to incorporate two documents that could be automated using the users feedback from the bot.
+I reached out to a couple of different attorneys in Vermont but I did not receive any response from any of the lawyers I reached out to. I found three different lawyers [here](https://www.lawyers.com/?&amp;site=466&amp;cid=ppc:100&amp;source=GoogleLDC&amp;mkwid=s8ZJRGBzg/pcrid/182225507161/pkw/lawyer%20directory/pmt/p/pdv/c/slid//&amp;gclid=Cj0KCQjw9afOBRDWARIsAJW4nvw1H9HRr7jRSjPFZ5l9KI5lUjCRAI5NwUpWSMsBrAG-qHJvo9xNcKIaAuQsEALw_wcB).
+
+</code></pre>
+<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>I think my greatest refinement period came last week when I met with Professor Collarusso. My original QNA text was very basic. I was having a hard time incorporating my document automation into my code but after meeting with Professor Collarusso I was able to succesfully incorporate two documents that could be automated.</p>
+<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>I think my product could use some improvement before it is real world ready.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">

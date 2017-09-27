@@ -1,0 +1,40 @@
+<!-- Note: you can turn on/off word wrap in this text area by clicking the checkbox below. Also, any text you see between less than and greater than marks, that's HTML. You don't have to use/know HTML to write a QnA, but it can be useful. For example, this text doesn't show up in the word bubbles because it's an HTML comment. -->
+
+Q(1): Would you like to determine if you are indigent, and qualify for discounted legal counsel?
+A: Yes.
+	Q(1.1): Are you  receiving one of the following types of public assistance: Transitional Aid to Families with Dependent Children (TAFDC), Emergency Aid to Elderly, Disabled and Children (EAEDC), need-based veterans' benefits, Supplemental Nutrition Assistance Program (SNAP) benefits, Refugee Cash Assistance, or SSI State Supplemental Program?
+	A: Yes.
+		Q(1.1.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+	A: No.
+		Q(1.1.2): Are you receiving an annual income, after taxes, of one hundred twenty-five percent or less of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
+		A: Yes.
+			Q(1.1.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+		A: No.
+			Q(1.1.2.2): •	Are you (1) residing in a tuberculosis treatment center, a mental health facility or a facility for individuals with intellectual or developmental disabilities, including the Bridgewater State Hospital and Massachusetts Treatment Center; or (2) the subject of a proceeding regarding admission or commitment to such a center or facility, a proceeding to make a substituted judgment determination concerning treatment, a proceeding under G. L. c. 190B, § 5-309(g) to admit to a nursing facility defined in G. L. c. 190B, § 5-101(15), or a civil commitment proceeding under G. L. c. 123, § 35; provided, however, that when the judge has reason to believe that the party is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule?
+			A: Yes.
+				Q(1.1.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+			A: No.
+				Q(1.1.2.2.2): Are you a juvenile, a child who is in the care or custody of the Department of Children and Families, or a young adult provided, however, that when a judge has reason to believe that the juvenile or young adult is not indigent, a determination of indigency shall be made in accordance with Section 5 and other applicable provisions of this rule? 
+				A: Yes.
+					Q(1.1.2.2.2.1): You are indigent.  Let's see if you have to contribute to the fees for counsel. GOTO:2
+				A: No.
+					Q(1.1.2.2.2.2): You are not indigent and do not qualify for discounted legal counsel. 
+						
+					
+A: No.
+	Q(1.2): Have a nice day!
+
+Q(2): Are you a party who has an annual income, after taxes, of more than one hundred twenty five percent and less than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b) [FILL IN AMOUNT]?
+A: Yes.
+	Q(2.1): You will be required to make a contribution to your legal expenses.
+A: No.
+	Q(2.2): Are you a party who (1) is charged with a felony solely within the jurisdiction of the Superior Court or is the parent, guardian, or custodian of a juvenile or young adult who is the subject of a child welfare proceeding, subject to the exception in Section 6A for a parent or guardian who has had custody of the juvenile removed by a court of competent jurisdiction, or who has an interest adverse to the juvenile or young adult, and (2) has an annual income, after taxes, of more than two hundred fifty percent of the current poverty guidelines referred to in G. L. c. 261, § 27A(b); and (3) whose available funds are insufficient to pay the anticipated cost of counsel for this representation, but are sufficient to pay part of that cost. The anticipated cost of counsel shall be the cost of retaining private counsel for, as applicable, the defense of a felony charge within the jurisdiction of the Superior Court, or a child welfare proceeding, as estimated and published from time to time by the Committee for Public Counsel Services?
+	A: Yes.
+		Q(2.2.1): You will be required to make a contribution to your legal expenses.
+	A: No.
+		Q(2.2.2): Are you a party who is over the age of eighteen and is claimed as a dependent for tax purposes by a parent or guardian who is not indigent?
+		A: Yes.
+			Q(2.2.2.1): You will be required to make a contribution to your legal expenses.
+		A: No.
+			Q(2.2.2.2): You will not be required to make a contribution to your legal expenses.
+
