@@ -1,72 +1,104 @@
-Title: Determinations of Indigent Status
+Title: NYC Fee Waivers
 Description: A QnA Markup to assist pro se litigants determine their eligibility for court fee waivers.  
-Before: <center><h2>Determinations of Indigent Status</h2></center>
+Before: 
+<input type="hidden" name="name" value="Fee Waiver"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p1/Fee-Waiver.docx"/>
 
-Q(1): Is your case a civil or criminal matter?
+<center><h2>NYC Fee Waivers</h2></center>
+
+
+Q(name): Please enter your full name.
+X:
+	Q(address): Please enter your full address.
+	X:
+		Q(1.1.1):GOTO:2
+
+Q(2): Is your case a civil or criminal matter?
 A: Civil
-	Q(1.1):GOTO:Swear
+	Q(2.1):GOTO:Swear
 A: Criminal
-	Q(1.2):GOTO:Crim
+	Q(2.2):GOTO:Crim
+
+Q(name2): What is the full name of the other party in this case?
+X:
+	Q(3.1):GOTO:Nature
+
+Q(Nature): What is your lawsuit about?  Please provide enough details for the Judge to determine the merit.  
+X:
+	Q(4.1):GOTO:seek
+
+Q(seek): What type of fees are you looking to waive?
+A: waiving any and all statutory fees for the defense or prosecution of the action
+	Q(5.1):GOTO:Public
+A: waiving the fee for the filing of a Notice of Appeal
+	Q(5.2):GOTO:Public
+X:
+	Q(5.3):GOTO:Public
+Q(Public): Do you receive Public Assistance from the Dept. of Social Services?
+A: I am a recipient of Public Assistance from the Department of Social Services of the City of New York.
+	Q(6.1):GOTO:income
+A: I am not a recipient of Public Assistance from the Department of Social Services of the City of New York.
+	Q(6.2):GOTO:income
 
 Q(Swear): Are you able to pay the costs, fees, or expenses necessary to prosecute, defend, or appeal this action?
 A: No, I am unable.
-	Q(2.1):GOTO:Civ1
+	Q(7.1):GOTO:name2
 A: Yes, I am able.  
-	Q(2.2):GOTO:Great
+	Q(7.2):GOTO:Great
 
-Q(Civ1): Please enter your largest source of income:
+Q(income): Please enter your total annual income.
 X:
-	Q(Civ1a): How much is your income from that source?
+	Q(Civ1a): What is the source of that income?
 	X:
-		Q(3.1.1):GOTO:Civ2
+		Q(8.1.1):GOTO:Prop1
 A: I have no sources of income.
-	Q(3.2):GOTO:Prop1
-Q(Civ2): Please enter your second source of income.
-X:
-	Q(Civ2a): How much is your income from that source?
-	X:
-		Q(4.1.1):GOTO:Prop1
-A: I don't have a second source of income
-	Q(4.2):GOTO:Prop1
+	Q(8.2):GOTO:Prop1
+
 Q(Prop1): Do you own any property? 
 A: Yes 
-	Q(5.1): What type of property is it?
+	Q(9.1): What type of property is it?
 	X:
-		Q(5.1.1): What is the value of that property?
+		Q(9.1.1): What is the value of that property?
 		X:
-			Q(5.1.1.1):GOTO:Nature
+			Q(9.1.1.1):GOTO:10
 A: No
-	Q(5.2):GOTO:Nature
+	Q(9.2):GOTO:10
 
-Q(Nature): What is the nature of your action (what is the lawsuit about)?  Please provide enough details for the Judge to determine the merit.  
-X:
-	Q(6.1):Is there another person that would benefit from the recovery you're seeking?
-	A: Yes
-		Q(6.1.1): Is that person able to pay for the costs of continuing this action?
-		A: Yes 
-			Q(6.1.1.1):GOTO:Great
-		A: No 
-			Q(6.1.1.2):GOTO:Done
-	A: No 
-		Q(6.1.2):GOTO:Done
 
+Q(10):Is there another person that would benefit from the recovery you're seeking?
+A: There is another person who is beneficially interested in the recovery sought.  
+	Q(10.1): Is that person able to pay for the costs of continuing this action?
+	A: Someone is beneficially interested in the recover sought and they are able to assist in paying the costs for continuing this action. 
+		Q(10.1.1):GOTO:Great
+	A: Someone is beneficially interested in the recover sought and they are unable to assist in paying the costs for continuing this action. 
+		Q(10.1.2):GOTO:previous
+A: No other person is beneficially interested in the recovery sought.  
+	Q(10.2):GOTO:previous
+
+Q(previous):Have you filed a fee waiver for this or similar relief?
+A:I have not made a pervious application for this or similar relief.
+	Q(11.1):GOTO:Done 
+A:I have made previous applications for this or similar relief.
+	Q(11.2):Please explain why you are making this further application.
+	X:
+		Q(11.2.1):GOTO:Done 
 
 
 
 
 Q(Crim): What is the name of the facility in which you are currently confined?
 X:
-	Q(7.1): What is the mailing address of that facility?
+	Q(12.1): What is the mailing address of that facility?
 	X:
-		Q(7.1.1): Were you confined in another facility within the last 6 months?
+		Q(12.1.1): Were you confined in another facility within the last 6 months?
 		A: Yes
 			Q(Crim2): What is the name of that previous facility?
 			X:
 				Q(Crim2a):What is the mailing address of that previous facility?
 				X:
-					Q(7.1.1.1.1.1):GOTO:Civ1
+					Q(12.1.1.1.1.1):GOTO:income
 		A: No
-			Q(7.1.1.2):GOTO:Civ1
+			Q(12.1.1.2):GOTO:income
 
 
 
@@ -75,5 +107,5 @@ X:
 
 
 Q(Done): You're done!
-A[javascript:save2('Eligibility Summary.txt',doc());]: Click here to get a summary of the information you've provided! 
+A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Click here to get a summary of the information you've provided! 
 Q(Great): You are not eligible for a fee waiver.  

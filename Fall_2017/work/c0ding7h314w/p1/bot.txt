@@ -42,7 +42,7 @@ A: Criminal
 				Q(2.1.2.2.2):GOTO:noqualcrim
 
 A: Civil
-	Q(assistance): Do your receive public assistance under one or more of the following programs: Supplemental Security Income (SSI), Aid to the Aged, Blind and Disabled (AABD), Temporary Assistance for Needy Families (TANF), Food Stamps, General Assistance, Transitional Assistance, or State Children and Family Assistance? 
+	Q(assistance): Do you receive public assistance under one or more of the following programs: Supplemental Security Income (SSI), Aid to the Aged, Blind and Disabled (AABD), Temporary Assistance for Needy Families (TANF), Food Stamps, General Assistance, Transitional Assistance, or State Children and Family Assistance? 
 	A: Yes
 		Q(2.2.1):GOTO:qualaid
 	A: No
@@ -63,13 +63,15 @@ A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Appro
 A: No thanks
 	Q(3.3):GOTO:nomore
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>.  However, if your assets that are not exempt under <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2017&ChapterID=56&SeqStart=97500000&SeqEnd=103300000" target=_new>Part 9 Article XII(a)</a> or <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=073500050HArt%2E+XII+Pt%2E+10&ActID=2017&ChapterID=56&SeqStart=99000000&SeqEnd=99700000" target=_new>Part 10 Article XII(a)</a> are of a nature and value that the court determines that you are able to pay the fees, costs, and charges.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to help you fill out a fee waiver based on what you've told me or would you like me to open up a fee waiver for you to fill out yourself and file?
+Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line.  Consequently, you may be eligible to have your court fees waived.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>.  However, if your assets that are not exempt under <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2017&ChapterID=56&SeqStart=97500000&SeqEnd=103300000" target=_new>Part 9 Article XII(a)</a> or <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=073500050HArt%2E+XII+Pt%2E+10&ActID=2017&ChapterID=56&SeqStart=99000000&SeqEnd=99700000" target=_new>Part 10 Article XII(a)</a> are of a nature and value that the court determines you are able to pay, you may not qualify as indigent based on your income.  Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to help you fill out a fee waiver based on what you've told me or would you like me to open up a fee waiver for you to fill out yourself and file?
 A:Help me fill out the fee waiver
 	Q(4.1):GOTO:name
 A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Open up the fee waiver and I'll fill it out
 	Q(4.2): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
 A: No thanks
 	Q(4.3):GOTO:nomore
+A:I'd like to see if I qualify in another way
+	Q(4.4):GOTO:hard
 
 
 Q(noqualinc): You probably won't qualify as indigent based on your income since you earn more than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>. GOTO:hard
@@ -122,13 +124,13 @@ X:
 	Q(13.1):GOTO:zip
 
 Q(zip):What is your ZIP code?
-X:
+X:number
 	Q(14.1):GOTO:address
 
 Q(address):What is your address?
 X:
 	Q(fill):Thanks <x>name</x>, we're ready to go!
-	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click to download your form
-		Q(15.1.1):Please verify that the information on this form is accurate and take it to the court and give it to the clerk.
+	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click to download your fee waiver form
+		Q(15.1.1):Please verify that the information on this form is accurate and take it to the court and give it to the clerk.  Have a great day.
 
 Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
