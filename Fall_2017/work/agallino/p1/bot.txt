@@ -22,35 +22,35 @@ X:number
 		A[javascript:if (fedpov(getvar('house'),getvar('income'),200)){ goto('assetsciv') } else { goto('noqualciv') } ]: Civil
 		A[javascript:if (fedpov(getvar('house'),getvar('income'),200)){ goto('assetscrim') } else { goto('noqualcrim') } ]: Criminal	
 
-Q(assetsciv): Do you have any other assets, personal, or real property valued above $2,500?
+Q(assetsciv): Florida law presumes that an applicant is not indigent if the applicant owns any personal property or real property valued greater than $2,500. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. Do you have any other assets, personal, or real property valued above $2,500?
 A: Yes.
 	Q(3.1):GOTO:noqualciv
 A: No.
 	Q(3.2):GOTO:qualciv
 
-Q(noqualciv): You probably do not qualify as indigent since you earn more than 200% of the poverty line, or you have assets valued greater than $2,500. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
+Q(noqualciv): You probably do not qualify as indigent since you earn more than 200% of the Federal Poverty Line, or you have assets valued greater than $2,500. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. So you'll probably need to hire an attorney. You may also be able to appeal the clerks decision, if he or she denies you indigence status per Florida Law. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. Would you like to search for an attorney near you?
 A:[https://www.avvo.com/find-a-lawyer] Yes.
 A: no. 
 	Q(4.2):GOTO:nomore
 
-Q(qualciv): You probably qualify as indigent since you earn less than 200% of the poverty line, and you don't have any assets valued greater than $2,500. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. Would you like to fill out an application?
+Q(qualciv): You probably qualify as indigent since you earn less than 200% of the Federal Poverty Line, and you don't have any assets valued greater than $2,500. See <a href="http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0057/Sections/0057.082.html" target=_new>Fla. Stat. § 57.082</a>. Would you like to fill out an application?
 A:[https://www.flcourts.org/core/fileparse.php/293/urlt/indigent_application.pdf] Yes.
 A: No.
 	Q(5.2):GOTO:indigent
 
-Q(assetscrim):Do you have any other assets, personal, or real property valued above $2,500?
+Q(assetscrim): Florida law presumes that an applicant is not indigent if the applicant owns any personal property or real property valued greater than $2,500. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. Do you have any other assets, personal, or real property valued above $2,500?
 A: Yes.
 	Q(6.1):GOTO:noqualcrim
 A: No.
 	Q(6.2):GOTO:qualcrim
 
-Q(qualcrim): You probably qualify as indigent since you earn less than 200% of the poverty line, and you don't have assets valued greater than $2,500. So you'll likely be assigned a lawyer by the clerk. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. Would you like to fill out an application?
+Q(qualcrim): You probably qualify as indigent since you earn less than 200% of the Federal Poverty Line, and you don't have assets valued greater than $2,500. So you'll likely be assigned a lawyer by the clerk. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. Would you like to fill out an application?
 A: Yes.
 	Q(7.1):GOTO:crim_name
 A: No.
 	Q(7.2):GOTO:nomore
 
-Q(noqualcrim): You probably won't qualify as indigent since you earn more than 200% of the poverty line. So you'll probably need to hire an attorney. Would you like to search for one near you?
+Q(noqualcrim): You probably won't qualify as indigent since you earn more than 200% of the Federal Poverty Line, or you have assets valued greater than $2,500. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. So you'll probably need to hire an attorney. You may also be able to appeal the clerks decision, if he or she denies you indigence status per Florida Law. See <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0027/Sections/0027.52.html" target=_new>Fla. Stat. § 27.52</a>. Would you like to search for one near you?
 A:[https://www.avvo.com/find-a-lawyer] Yes.
 	Q(8.1):GOTO:nomore
 A: No
@@ -70,7 +70,8 @@ X:
 				X:number
 					Q(debt): How much money do you owe in debt? If you have no debt, please enter "0".
 					X:number
-						Q(download): Thanks <x>crim_name</x>. We've collected some preliminary information from you. Are you ready to download your file? Once your file has downloaded, check to make sure the information is correct, print the form, and take it to the County Court house.
+						Q(download): Thanks <x>crim_name</x>. Now that we've collected some preliminary information from you, we can use this information to partially fill out an indigence application. Would you like us to automatically use your information in an indigence application? If so, click "Yes." once your file has downloaded, be sure to check to make sure the information is correct, print the form, and take it to the County Court house.
 						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes.
 						A: No. 
 							Q(10.1.1.1.1.1.1.2):GOTO:nomore
+						A:[https://www.pinellasclerk.org/aspInclude2/AffidavitofIndigentStatus.pdf] I'd prefer to fill out the form myself, thanks.
