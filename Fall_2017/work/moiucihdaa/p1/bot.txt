@@ -46,7 +46,7 @@ A: No, I am unable.
 A: Yes, I am able.  
 	Q(7.2):GOTO:Great
 
-Q(income): Please enter your total annual income:
+Q(income): Please enter your total annual income.
 X:
 	Q(Civ1a): What is the source of that income?
 	X:
@@ -96,7 +96,7 @@ X:
 			X:
 				Q(Crim2a):What is the mailing address of that previous facility?
 				X:
-					Q(12.1.1.1.1.1):GOTOincome
+					Q(12.1.1.1.1.1):GOTO:income
 		A: No
 			Q(12.1.1.2):GOTO:income
 
