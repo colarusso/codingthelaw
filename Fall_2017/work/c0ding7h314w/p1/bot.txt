@@ -1,5 +1,3 @@
-Author: Christopher Lacenere
-Title: Illinois Indigency Calculator
 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h2 style="text-align:center;">Illinois Indigency Calculator</h2>
@@ -20,7 +18,7 @@ Q(begin): Are you a party to a criminal or civil case?
 A: Criminal
 	Q(2.1):Is the penalty in your case a fine only?
 	A:Yes
-		Q(2.1.1):I'm sorry, but under Illinois law you cannot qualify as indigent where the penalty in the case is only a fine.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a>.	 So, you'll probably need to hire an attorney. Would you like to search for one near you?
+		Q(2.1.1):I'm sorry, but under Illinois law you cannot qualify as indigent where the penalty in the case is only a fine.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a>.	 So you'll probably need to hire an attorney. Would you like to search for one near you?
 		A:[https://www.avvo.com/find-a-lawyer] Yes.
 			Q(2.1.1.1):GOTO:nomore
 		A: No
@@ -28,107 +26,79 @@ A: Criminal
 	A:No
 		Q(2.1.2): Are you a juvenile (under 18) or an adult?
 		A: Juvenile
-			Q(2.1.2.1):Do you or your family lack financial resources on a practical basis to retain counsel?  In other words, although you need not be entirely without funds, would it be impractical for you to afford an attorney?
+			Q(2.1.2.1):Do you or your family lack financial resources on a practical basis to retain counsel?
 			A:Yes
 				Q(2.1.2.1.1):GOTO:qualcrimjuv
 			A:No
 				Q(2.1.2.1.2):GOTO:noqualcrim
 		
 		A: Adult
-			Q(2.1.2.2):Do you lack financial resources on a practical basis to retain counsel?  In other words, although you need not be entirely without funds, would it be impractical for you to afford an attorney?
+			Q(2.1.2.2):Do you lack financial resources on a practical basis to retain counsel?
 			A:Yes
 				Q(2.1.2.2.1):GOTO:qualcrim
 			A:No
-				Q(2.1.2.2.2):GOTO:noqualcrim
+				Q(2.1.2.2.2):GOTO:noqualcrim	
 
 A: Civil
-	Q(assistance): Do your receive public assistance under one or more of the following programs: Supplemental Security Income (SSI), Aid to the Aged, Blind and Disabled (AABD), Temporary Assistance for Needy Families (TANF), Food Stamps, General Assistance, Transitional Assistance, or State Children and Family Assistance? 
+	Q(2.2): Do your receive public assistance under one or more of the following programs: Supplemental Security Income (SSI), Aid to the Aged, Blind and Disabled (AABD), Temporary Assistance for Needy Families (TANF), Food Stamps, General Assistance, Transitional Assistance, or State Children and Family Assistance? 
 	A: Yes
 		Q(2.2.1):GOTO:qualaid
 	A: No
-		Q(house): How many people are in your household, including yourself?
+		Q(house): How many people are in your household?
 		X:number
 			Q(income): How much income does your household bring in per year in after tax dollars?
 			X:number
 				Q(2.2.2.1.1): Would you like to check for eligibility based on your income?
-				A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('noqualinc') }]: Yes
+				A[javascript:if (fedpov(getvar('house'),getvar('income'),125)){ goto('qualciv') } else { goto('hardship') } ]: Yes
 				A: No
 
-					
-Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(i)</a>.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to help you fill out a fee waiver based on what you've told me or would you like me to open up a fee waiver for you to fill out yourself and file?
-A:Help me fill out the fee waiver
-	Q(3.1):GOTO:name
-A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Open up the fee waiver and I'll fill it out
-	Q(3.2): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
-A: No thanks
-	Q(3.3):GOTO:nomore
+					Q(hardship):Would payment of fees, costs, and charges related to this case result in substantial hardship to you or your family?
+					A:Yes
+						Q(2.2.2.1.1.2.1):GOTO:qualhard
+					A:No
+						Q(2.2.2.1.1.2.2):GOTO:noqualciv
 
-Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>.  However, if your assets that are not exempt under <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2017&ChapterID=56&SeqStart=97500000&SeqEnd=103300000" target=_new>Part 9 Article XII(a)</a> or <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=073500050HArt%2E+XII+Pt%2E+10&ActID=2017&ChapterID=56&SeqStart=99000000&SeqEnd=99700000" target=_new>Part 10 Article XII(a)</a> are of a nature and value that the court determines that you are able to pay the fees, costs, and charges.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to help you fill out a fee waiver based on what you've told me or would you like me to open up a fee waiver for you to fill out yourself and file?
-A:Help me fill out the fee waiver
-	Q(4.1):GOTO:name
-A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Open up the fee waiver and I'll fill it out
-	Q(4.2): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
-A: No thanks
-	Q(4.3):GOTO:nomore
+Q(qualaid): You probably qualify as indigent because you receive public assistance. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(i)</a>.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to open up a fee waiver for you to file? 
+A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Yes
+	Q(3.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
+A: No
+	Q(3.2):GOTO:nomore
+
+Q(qualciv): You probably qualify as indigent since you earn less than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>.  However, if your assets that are not exempt under <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?ActID=2017&ChapterID=56&SeqStart=97500000&SeqEnd=103300000" target=_new>Part 9 Article XII(a)</a> or <a href="http://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=073500050HArt%2E+XII+Pt%2E+10&ActID=2017&ChapterID=56&SeqStart=99000000&SeqEnd=99700000" target=_new>Part 10 Article XII(a)</a> are of a nature and value that the court determines that you are able to pay the fees, costs, and charges.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to open up a fee waiver for you to file? 
+A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Yes
+	Q(4.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
+A: No
+	Q(4.2):GOTO:nomore
+
+Q(qualhard):You may qualify as indigent if the court finds that payment of fees, costs, and charges related to this case would result in substantial hardship to you or your family.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(iii)</a>.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to open up a fee waiver for you to file? 
+A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Yes
+	Q(5.1): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
+A: No
+	Q(5.2):GOTO:nomore
 
 
-Q(noqualinc): You probably won't qualify as indigent based on your income since you earn more than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>. GOTO:hard
-
-
-Q(hard):Would the payment of fees, costs, and charges related to this case otherwise result in substantial hardship to you or your family?
-A:Yes
-	Q(6.1):GOTO:qualhard
-A:No
-	Q(6.2):GOTO:noqualciv
-
-Q(qualhard):At the discretion of the court, you may qualify as indigent if the court finds that payment of fees, costs, and charges related to this case would result in substantial hardship to you or your family.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(iii)</a>.  Consequently, you may be eligible to have your court fees waived. Please note that if you are a minor under 18, a fee waiver must be filled out by an adult having knowledge of the facts.  See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(c)</a>.  Would you like me to help you fill out a fee waiver based on what you've told me or would you like me to open up a fee waiver for you to fill out yourself and file?
-A:Help me fill out the fee waiver
-	Q(7.1):GOTO:name
-A:[http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf] Open up the fee waiver and I'll fill it out
-	Q(7.2): If the affidavit of indigency didn't open in a new window/tab, you can find it <a href="http://www.illinoiscourts.gov/Forms/approved/procedures/FeeWaiver_Suite_Approved.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
-A: No thanks
-	Q(7.3):GOTO:nomore
-
-Q(noqualciv): You probably won't qualify as indigent.  So, you'll probably need to hire an attorney. Would you like to search for one near you?
+Q(noqualciv): You probably won't qualify as indigent since you earn more than 125% of the poverty line. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073500050K5-105" target=_new>735 ILCS 5/5-105(a)(2)(ii)</a>. So you'll probably need to hire an attorney. Would you like to search for one near you?
 A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(8.1):GOTO:nomore
+	Q(6.1):GOTO:nomore
+A: No
+	Q(6.2):GOTO:nomore
+
+Q(qualcrim):You may qualify as indigent and be eligible for a court appointed attorney. In order for the court to determine whether you qualify, you will need to sign an affidavit that contains sufficient information for the court to ascertain your assets and liabilities.  Such information will typically include your income, property, and expenses, for example. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a>.  If the court appoints you counsel, you may be ordered to pay a reasonable sum to reimburse either the county or the state for your representation.  See <a href="http://www.ilga.gov/legislation/ilcs/documents/072500050K113-3.1.htm" target=_new>725 ILCS 5/113-3.1(a)</a>.  Would you like me to open up an affidavit?
+A:[https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf] Yes
+	Q(7.1): If the affidavit didn't open in a new window/tab, you can find it <a href="https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
+A: No
+	Q(7.2):GOTO:nomore	
+
+Q(qualcrimjuv):You may qualify as indigent and be eligible for a court appointed attorney. However, Illinois has no presumption of indigence in juvenile court proceedings.  In order for the court to determine whether you qualify, an adult with knowledge of the facts will need to sign an affidavit that contains sufficient information for the court to ascertain your assets and liabilities.  Such information will typically include family income, property, and expenses, for example. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a>.  Would you like me to open up an affidavit?
+A:[https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf] Yes
+	Q(8.1): If the affidavit didn't open in a new window/tab, you can find it <a href="https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
 A: No
 	Q(8.2):GOTO:nomore
-
-Q(qualcrim):You may qualify as indigent and be eligible for a court appointed attorney. In order for the court to determine whether you qualify, you will need to sign an affidavit that contains sufficient information for the court to ascertain your assets and liabilities.  Such information will typically include your income, property, savings, and expenses, for example. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a>.  If the court appoints you counsel, you may be ordered to pay a reasonable sum to reimburse either the county or the state for your representation.  See <a href="http://www.ilga.gov/legislation/ilcs/documents/072500050K113-3.1.htm" target=_new>725 ILCS 5/113-3.1(a)</a> and <a href="https://www.nacdl.org/WorkArea/DownloadAsset.aspx?id=32769" target=_new>Guidelines for Assigned Counsel(b)</a>.  Would you like me to open up an affidavit?
-A:[https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf] Yes
-	Q(9.1): If the affidavit didn't open in a new window/tab, you can find it <a href="https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
-A: No
-	Q(9.2):GOTO:nomore	
-
-Q(qualcrimjuv):You may qualify as indigent and be eligible for a court appointed attorney. However, Illinois has no presumption of indigence in juvenile court proceedings.  In order for the court to determine whether you qualify, an adult with knowledge of the facts will need to sign an affidavit that contains sufficient information for the court to ascertain your assets and liabilities.  Such information will typically include family income, property, savings, and expenses, for example. See <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K113-3" target=_new>725 ILCS 5/113-3(b)</a> and <a href="https://www.nacdl.org/WorkArea/DownloadAsset.aspx?id=32769" target=_new>Guidelines for Assigned Counsel(b)</a>.  Would you like me to open up an affidavit?
-A:[https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf] Yes
-	Q(10.1): If the affidavit didn't open in a new window/tab, you can find it <a href="https://www.illinoislegalaid.org/sites/default/files/legal_content/file_form_content/blank_affidavit_0.pdf">here</a>. Either way, after you fill it out take it to court and give it to the clerk. 
-A: No
-	Q(10.2):GOTO:nomore
 	
-Q(noqualcrim):You probably won't qualify as indigent since you do not lack financial resources on a practical basis to retain counsel.  So, you'll probably need to hire an attorney. Would you like to search for one near you?
+Q(noqualcrim):You  probably won't qualify as indigent since you do not lack financial resources on a practical basis to retain counsel.  So you'll probably need to hire an attorney. Would you like to search for one near you?
 A:[https://www.avvo.com/find-a-lawyer] Yes.
-	Q(11.1):GOTO:nomore
+	Q(9.1):GOTO:nomore
 A: No
-	Q(11.2):GOTO:nomore
-
-Q(name):OK, let's get just a little more information from you.  What is your full legal name?
-X:
-	Q(12.1):GOTO:city
-
-Q(city):Thanks <x>name</x>.  In what city do you reside?
-X:
-	Q(13.1):GOTO:zip
-
-Q(zip):What is your ZIP code?
-X:
-	Q(14.1):GOTO:address
-
-Q(address):What is your address?
-X:
-	Q(fill):Thanks <x>name</x>, we're ready to go!
-	A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click to download your form
-		Q(15.1.1):Please verify that the information on this form is accurate and take it to the court and give it to the clerk.
+	Q(9.2):GOTO:nomore
 
 Q(nomore): I'm afraid there's nothing else I can help you with. I hope you have a nice day.
