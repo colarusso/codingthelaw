@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>bot</title>
+<title>notebook</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11752,26 +11752,19 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Assigned-Counsel-and-Fee-Waiver-Bot">Assigned Counsel and Fee Waiver Bot<a class="anchor-link" href="#Assigned-Counsel-and-Fee-Waiver-Bot">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/jpjeffprice">Jeff Price</a></p>
-<p>I wrote a chatbot, which you can find <a href="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/bot.html">here</a>, that helps the user assess their indigent status in the state of Ohio. To write my bot, I used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, this tool creates an interactive dicision tree by nesting questions and answers. The source code for my bot can be found <a href="bot.txt">here</a>.</p>
-<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>Aside from my own testing during development, a classmate provided great feedback on a series of five use cases. This feedback also highlighted some minor coding errors, noted some missing information, and made several usability suggestions. I also reached out to an Ohio lawyer for feedback.</p>
-<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>The original bot (source code <a href="botbeta.txt">here</a>) lacked decision points for juvenile and civil litigants, as well as links to the appropriate civil and criminal forms. The current version corrects these omissions, and also improves the user experience by incorporating the design suggestions from user testing. For example, instead of defining specific terms or providing clarifying information within a prompt, options for requesting these details were added to the list of available responses.</p>
-<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>To make this chatbot completely viable, I will need a lawyer to review it for completeness. Further, while filling in the civil form has been automated, the criminal affidavit should also be automated.</p>
+<p>I wrote a chatbot, which you can find <a href="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/bot_2.html">here</a>, that helps the user assess their indigent status in the state of Ohio. To write my bot, I used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, this tool creates an interactive dicision tree by nesting questions and answers. The source code for my bot can be found <a href="bot_2.txt">here</a>.</p>
+<h2 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h2><p>Aside from my own testing during development, a classmate provided great feedback on a series of five use cases. This feedback highlighted the need to add juvenile and civil decision paths, noted some minor coding errors, and made several usability suggestions. The latter included adding options for clarifying information rather than including such detail within the prompt (which resulted in large blocks of text), as well as providing definition for the various degrees of felonies.</p>
+<p>I also reached out to an Ohio lawyer for feedback. While he initially agreed to review the bot, to date he has yet to do so.</p>
+<p>Further, a few minor bugs were discovered by several other users during development.</p>
+<h2 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h2><p>The original bot (source code <a href="bot.txt">here</a>) lacked decision points for juvenile and civil litigants, as well as links to the appropriate civil and criminal forms. The current version corrects these omissions, and also improves the user experience by incorporating the design suggestions from user testing (see above).</p>
+<p>Rather than design every form to be filled by user input, I selected just the civil affidavit to be fillable while the criminal affidavit just links to the template. This was done in part because the criminal form is a pdf that didn't transfer well to word, while the civil form was much easier to transfer.</p>
+<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>I am happy with how extensively applicable the bot became in only a few short weeks of development. I think it covers almost all use cases quite well. However, to make this chatbot completely viable I would need a lawyer to review it for completeness and accuracy.</p>
+<p>While filling in the civil form has been automated, this is only one generic version of such a form. Most Ohio courts would accept this generic form, but a few courts have their own templates that are mandatory. Further refinement would add these court-specific civil affidavits, and the chatbot would ask jurisdictional questions up front to direct the user to the proper form. I could further specify the exact address and provide contact info for filing the court-specific forms.</p>
+<p>Ideally, the chatbot would incorporate an option to assist the user in filling out the criminal affidavit as well.</p>
+<p>There are probably some other usability improvements that could be made. Additional user testing would be the most effective way to discover these, but personally I might have added more explanation to the rejection messages when a user doesn’t qualify for criminal legal assistance.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
