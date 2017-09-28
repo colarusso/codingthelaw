@@ -1,9 +1,10 @@
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
+Before: <input type="hidden" name="name" value="northcarolina (1).csv"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p1/Affadavit2.docx"/>
 Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>North Carolina Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-<input type="hidden" name="name" value="northcarolina (1).csv"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p1/Affadavit2.docx"/>
+
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 
 
@@ -57,13 +58,13 @@ A[javascript:if (fedpov(getvar('household'),getvar('income'),125/12)){ goto('ind
 Q(mayindig): You may qualify to be indigent and will receive representation through the IDS, but will be expected to pay whatever you can if found guilty. GOTO:hopefully
 
 Q(hopefully): Congraulations! Would you like to see your pre-filled affidavit of indigency?
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','json_doc','_blank')] Yes
 A: No
 
 Q(indig): You are probably considered to be indigent and will receive representation through the IDS. GOTO:yay
 
 Q(yay): Congraulations! Would you like to see your pre-filled affidavit of indigency?
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Yes
 A: No
 
 Q(notindig): I am sorry but you do not meet the standards to obtain free or reduced representation through the IDS.
