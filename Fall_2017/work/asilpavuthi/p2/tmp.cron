@@ -1,0 +1,5 @@
+PATH=/Users/Anon/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+MAILTO=""
+*/5 * * * * python "/Users/Anon/Documents/codingthelaw/Fall_2017/work/asilpavuthi/p2/code_sample_1.py" >/dev/null
+
