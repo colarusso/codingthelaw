@@ -1,0 +1,78 @@
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
+Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>North Carolina Indigency Calculator</h3>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+<input type="hidden" name="name" value="northcarolina (1).csv"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p1/Affadavit2.docx"/>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
+
+
+
+Q(resident): Are you inquiring about a case in North Carolina?
+A: Yes
+	Q(1.1):GOTO:develop
+A: No
+	Q(1.2): Unfortunately I am unable to assist you on issue not associated with claims in North Carolina.
+
+Q(develop): Have you completed and submited the affidavit of indigency?
+A: Yes
+	Q(2.1): Alright. Please answer the following to determine if you will obtain representation. GOTO:age
+A: No
+	Q(2.2): Please answer the following questions so that we are pre-fill the form and let you know if you will obtain representation. GOTO:name 
+
+Q(name): What is the defendant's name?
+X:
+	Q(interest): Is the defendant you or a dependent?
+	A: Self 
+		Q(3.1.1):GOTO:age
+	A: Dependent 
+		Q(3.1.2):GOTO:age
+
+Q(age): How old is the defendant?
+X[javascript: if (getvar('age') >= 18) { goto('dependent') } else if (getvar('age') < 18) { goto('indig') } else { goto('number') } ]:
+	Q(dependent):Are you dependent on your parent/guardian?
+	A[javascript: if (getvar('age') >= 18) { goto('indig') } else  { goto('indig') } ]:Yes
+	A: No
+
+		Q(publicassistance): Do you receive public assistance (i.e. food & nutrition benefits, work first family assistance, SSI, or being represented by a legal organization thats primary purpose is to furnish legal services to indigent individuals)?
+		A: Yes 
+			Q(4.1.2.1): How much do you receive in assistance on a monthly basis?
+			X:number
+				Q(4.1.2.1.1):GOTO:indig
+		A: No 
+			Q(4.1.2.2):You may still qualify for representation through IDS. GOTO:household
+
+Q(household): How many people (including yourself) reside in your home?
+X:number
+	Q(income): How much income does your household bring in monthly in after tax dollars?
+	X:number
+		Q(expenses): What are your monthly expenses?
+		X:number
+			Q(5.1.1.1): GOTO:action
+
+Q(action):Is this a civil or criminal action?
+A[javascript:if (fedpov(getvar('household')/12,getvar('income'),125)){ goto('indig') } else { goto('notindig') } ]: Civil
+A[javascript:if (fedpov(getvar('household')/12,getvar('income'),125)){ goto('indig') } else if (fedpov(getvar('house')/12,getvar('income'),250)) { goto('mayindig') } else { goto('notindig') } ]: Criminal 
+
+Q(mayindig): You may qualify to be indigent and will receive representation through the IDS, but will be expected to pay whatever you can if found guilty. GOTO:hopefully
+
+Q(hopefully): Congraulations! Would you like to see your pre-filled affidavit of indigency?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+A: No
+
+Q(indig): You are probably considered to be indigent and will receive representation through the IDS. GOTO:yay
+
+Q(yay): Congraulations! Would you like to see your pre-filled affidavit of indigency?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+A: No
+
+Q(notindig): I am sorry but you do not meet the standards to obtain free or reduced representation through the IDS.
+
+
+Q(number): That is not an age please provide an age. GOTO:age
+
+Q(nothing): There is nothing more I can do for you right now until the form is submitted.
+
+A:[javascript:save2('northcarolina.csv',csv())] 
+
+				
