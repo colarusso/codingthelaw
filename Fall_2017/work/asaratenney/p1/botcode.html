@@ -1,0 +1,1051 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.83">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">@ -1,1033 +0,0 @@</p>
+<p class="p1">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;HTML xmlns="http://www.w3.org/1999/xhtml"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>xmlns:og="http://ogp.me/ns#"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>xmlns:fb="http://www.facebook.com/2008/fbml"&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;HEAD&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;title&gt;Untitled QnA&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta http-equiv="Content-type" content="text/html;charset=UTF-8"/&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta name="apple-mobile-web-app-capable" content="no" /&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black" /&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta property="og:type" content="website"/&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta property="og:image" content=""/&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  <span class="Apple-tab-span">	</span></span>&lt;script src="http://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  <span class="Apple-tab-span">	</span></span>&lt;script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/HEAD&gt;</p>
+<p class="p1">&lt;BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"&gt;&lt;style&gt;<span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>body {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>#rawmarkup{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>display:none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>#QandA img{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.main{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>min-width:300px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>max-width:650px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>padding:0 5px 0 5px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.frame{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:5px 0 5px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.full{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>.button{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:8px 0 0px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.question_text{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color:#ffffff;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>min-width:30px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background:#5489eb;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 15px 14px 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin-right:45px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; }<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.question_arrow{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width: 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>height: 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-left: 5px solid transparent;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-right: 10px solid transparent;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top: 15px solid #5489eb;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:0 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.ans_text{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:right;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color:#000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>min-width:30px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background:#eeeeee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 15px 14px 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin-left:45px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.ans_arrow{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:right;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width: 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>height: 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-left: 10px solid transparent;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-right: 5px solid transparent;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top: 15px solid #eeeeee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:0 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.choices{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:15px 0 0 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.standard_buttons{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin-top:5px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top: 1px solid #ddd;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding-top:12px;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.credits{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>dispaly:none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background:#eee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin:0px 0 15px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.credit_text{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:4px 15px 10px 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>li.error{</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>list-style-type: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background:#ffdddd;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 10px 0 0 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding: 5px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>.qpad {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:0 15px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.sbutton {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:48%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #eee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 0px 12px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 0 3px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:center;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.sbutton:hover, a.sbutton:active {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:48%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #ddd;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 0px 12px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 0 3px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:center;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.qabutton {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #eee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 0px 12px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 0 8px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.qabutton:hover, a.qabutton:active {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #ddd;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 0px 12px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 0 8px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>div.xdiv {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin: 0 0 8px 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #eee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}<span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>input.xinput {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>-moz-box-sizing: border-box;<span class="Apple-converted-space">    </span>/* Firefox, other Gecko */<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>box-sizing: border-box; <span class="Apple-converted-space">        </span>/* Opera/IE 8+ */</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #fff;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top-left-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top-right-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 10px 12px 10px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border: solid 0px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-bottom: solid 1px #888;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.xbutton {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>float:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>width:100%;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-align:left;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: Verdana, Geneva, sans-serif;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>line-height: 20px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #eee;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>padding:10px 0px 12px 0px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #000000;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>a.xbutton:hover, a.xbutton:active {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top-left-radius: 0px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>border-top-right-radius: 0px;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #ddd;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;FORM name="FORM" id="FORM"&gt;&lt;div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"&gt;&lt;link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css"&gt;</p>
+<p class="p1">&lt;div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;h2 style="text-align:center;"&gt;[Maine] Indigency Calculator&lt;/h2&gt;</p>
+<p class="p1">&lt;p&gt;&lt;b&gt;This is a &lt;a href="http://www.codingthelaw.org/Fall_2017/work/"&gt;class project&lt;/a&gt;. You should not rely on it as a source of legal information. It is likely incomplete.&lt;/b&gt;&lt;/p&gt;</p>
+<p class="p1">&lt;p&gt;Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.&lt;/p&gt;</p>
+<p class="p1">&lt;input type="hidden" name="name" value="ApplicationtoProceed"/&gt;</p>
+<p class="p1">&lt;input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p1/APPLICATION_TO_PROCEED_1.docx"/&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id='QandA' class='QandA'&gt;&lt;div style='padding:15px;background:#ddffdd;text-align:center;'&gt;Loading QnA...&lt;/div&gt;&lt;/div&gt;&lt;div id='Choices' class='choices'&gt;&lt;/div&gt;&lt;div id="rawmarkup" style="display:none;"&gt;Before%3A%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fcss%2Fstyle.css%22%3E%0D%0A%3Cdiv+id%3D%22icon%22+style%3D%22background-size%3A+110px+99px%3Bbackground-image%3A+url%28%27http%3A%2F%2Fwww.codingthelaw.org%2Fimages%2Fmax_headroom.gif%27%29%3B%22%3E%3C%2Fdiv%3E%0D%0A%3Ch2+style%3D%22text-align%3Acenter%3B%22%3E%5BMaine%5D+Indigency+Calculator%3C%2Fh2%3E%0D%0A%3Cp%3E%3Cb%3EThis+is+a+%3Ca+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2F%22%3Eclass+project%3C%2Fa%3E.+You+should+not+rely+on+it+as+a+source+of+legal+information.+It+is+likely+incomplete.%3C%2Fb%3E%3C%2Fp%3E%0D%0A%3Cp%3EAnswer+the+following+questions+to+see+if+you+qualify+for+appointment+of+counsel+or+a+fee+waiver.%3C%2Fp%3E%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22ApplicationtoProceed%22%2F%3E%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fcolarusso%2Fp1%2FAPPLICATION_TO_PROCEED_1.docx%22%2F%3E%0D%0A%0D%0AQ%281%29%3A+Are+you+in+need+of+a+fee+waiver+or+a+public+defender%3F%0D%0AA%3A+Yes%0D%0A%09Q%28name%29%3AWhat+is+your+name%3F%0D%0A%09X%3A%0D%0A%09%09Q%281.1.1%29%3AGOTO%3Apartyname%0D%0AQ%28partyname%29%3AWhat+is+your+opposing+party%27s+name%3F%0D%0AX%3A%0D%0A%09Q%282.1%29%3AGOTO%3Aaddress+%0D%0AQ%28address%29%3AWhat+is+your+address%3F%0D%0AX%3A%0D%0A%09Q%283.1%29%3AGOTO%3Atelephone+%0D%0AQ%28telephone%29%3A+What+is+your+telephone+number%3F%0D%0AX%3A%0D%0A%09Q%284.1%29%3AGOTO%3A5+%0D%0AQ%285%29%3A+Is+your+matter+Civil+or+Criminal%3F+%0D%0AA%3A+Civil.%0D%0A%09Q%285.1%29%3AGOTO%3A6%0D%0AA%3A+Criminal.%0D%0A%09Q%285.2%29%3AGOTO%3A7%0D%0A%09%09%0D%0AQ%286%29%3A+Do+you+receive+public+assistance%3F%0D%0AA%3A+Yes%0D%0A%09Q%286.1%29%3A+Do+you+receive+assistance+under+SSI%2C+General+Assistance+or+TANF%3F%0D%0A%09A%3AYes%0D%0A%09%09Q%286.1.1%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+feewaiver.%0D%0A%09%09A%3A%5Bjavascript%3Asubmit2%28%27http%3A%2F%2Fcolarusso.pythonanywhere.com%2F%27%2C%27GET%27%2C%27%27%2C%27%27%2C%27%27%2C%27json_doc%27%2C%27_blank%27%29%5D+Click+here+for+your+automated+document.%0D%0A%09A%3ANo%0D%0A%09%09Q%286.1.2%29%3A+Does+your+income%2C+after+taxes%2C+fall+below+the+Federal+Poverty+Line%3F%0D%0A%09%09A%3A+Yes+%0D%0A%09%09%09Q%286.1.2.1%29%3A+GOTO%3A6.1.1%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%286.1.2.2%29%3A+Can+you+pay+the+court+fees+or+costs+without+depriving+yourself+or+those+who+are+dependent+on+you+of+the+necessities+of+life%2C+including+food%2C+shelter+and+clothing%3F%0D%0A%09%09%09A%3A+Yes%0D%0A%09%09%09%09Q%286.1.2.2.1%29%3A+You+are+likely+unable+to+qualify+as+an+indigent+and+receive+a+fee+waiver.++However%2C+you+may+still+apply+using+the+form+below%3Cimg+src%3D%22http%3A%2F%2Fptla.org%2Fsites%2F%09%09%09%09default%2Ffiles%2Fcv-067.pdf%22%2F%3E%09%09%09%0D%0A%09%09%09A%3A+No%0D%0A%09%09%09%09Q%286.1.2.2.2%29%3A+You+are+likely+able+to+qualify+as+indigent+receive+a+fee+waiver.%0D%0A%09%09%09%09A%3A%5Bjavascript%3Asubmit2%28%27http%3A%2F%2Fcolarusso.pythonanywhere.com%2F%27%2C%27GET%27%2C%27%27%2C%27%27%2C%27%27%2C%27json_doc%27%2C%27_blank%27%29%5D+Click+here+for+your+automated+document.%0D%0AA%3A+No%0D%0A%09Q%286.2%29%3A+Does+your+income%2C+after+taxes%2C+fall+below+the+Federal+Poverty+Line%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%286.2.1%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+fee+waiver.+%0D%0A%09A%3A+No%0D%0A%09%09Q%286.2.2%29%3A+Can+you+pay+the+court+fees+or+costs+without+depriving+yourself+or+those+who+are+dependent+on+you+of+the+necessities+of+life%2C+including+food%2C+shelter+and+clothing%3F%0D%0A%09%09A%3AYes%0D%0A%09%09%09Q%286.2.2.1%29%3A+You+are+likely+unable+to+qualify+as+an+indigent+and+receive+a+fee+waiver.++However%2C+you+may+still+apply+using+the+form+below.%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%286.2.2.2%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+fee+waiver.%0D%0AQ%287%29%3A+Do+you+receive+public+assistance%3F%0D%0AA%3A+Yes%0D%0A%09Q%287.1%29%3A+Do+you+receive+assistance+under+SSI%2C+General+Assistance+or+TANF%3F%0D%0A%09A%3AYes%0D%0A%09%09Q%287.1.1%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+public+defender.%0D%0A%09A%3ANo%0D%0A%09%09Q%287.1.2%29%3A+Does+your+income%2C+after+taxes%2C+fall+below+the+Federal+Poverty+Line%3F%0D%0A%09%09A%3A+Yes+%0D%0A%09%09%09Q%287.1.2.1%29%3A+GOTO%3A7.1.1%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%287.1.2.2%29%3A+Can+you+pay+the+court+fees+or+costs+without+depriving+yourself+or+those+who+are+dependent+on+you+of+the+necessities+of+life%2C+including+food%2C+shelter+and+clothing%3F%0D%0A%09%09%09A%3A+Yes%0D%0A%09%09%09%09Q%287.1.2.2.1%29%3A+You+are+likely+unable+to+qualify+as+an+indigent+and+receive+a+public+defender.++However%2C+you+may+still+apply+using+the+form+below.%0D%0A%09%09%09A%3A+No%0D%0A%09%09%09%09Q%287.1.2.2.2%29%3A+You+are+likely+able+to+qualify+as+indigent+receive+a+public+defender.%0D%0AA%3A+No%0D%0A%09Q%287.2%29%3A+Does+your+income%2C+after+taxes%2C+fall+below+the+Federal+Poverty+Line%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%287.2.1%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+public+defender.+%0D%0A%09A%3A+No%0D%0A%09%09Q%287.2.2%29%3A+Can+you+pay+the+court+fees+or+costs+without+depriving+yourself+or+those+who+are+dependent+on+you+of+the+necessities+of+life%2C+including+food%2C+shelter+and+clothing%3F%0D%0A%09%09A%3AYes%0D%0A%09%09%09Q%287.2.2.1%29%3A+You+are+likely+unable+to+qualify+as+an+indigent+and+receive+a+public+defender.++However%2C+you+may+still+apply+using+the+form+below.%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%287.2.2.2%29%3A+You+are+likely+able+to+qualify+as+indigent+and+receive+a+public+defender.&lt;/div&gt;&lt;div id="ondeck" name="ondeck"&gt;&lt;div id='Q-1' name='Q-1' style='display:none;'&gt; Are you in need of a fee waiver or a public defender?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-1.1' name='Q-1.1' style='display:none;'&gt;What is your name?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'&gt;GOTO:2&lt;/div&gt;&lt;div id='Q-2' name='Q-2' style='display:none;'&gt;What is your opposing party's name?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-2.1' name='Q-2.1' style='display:none;'&gt;GOTO:3&lt;/div&gt;&lt;div id='Q-3' name='Q-3' style='display:none;'&gt;What is your address?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-3.1' name='Q-3.1' style='display:none;'&gt;GOTO:4&lt;/div&gt;&lt;div id='Q-4' name='Q-4' style='display:none;'&gt; What is your telephone number?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-4.1' name='Q-4.1' style='display:none;'&gt;GOTO:5&lt;/div&gt;&lt;div id='Q-5' name='Q-5' style='display:none;'&gt; Is your matter Civil or Criminal?<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-5.1' name='Q-5.1' style='display:none;'&gt;GOTO:6&lt;/div&gt;&lt;div id='Q-5.2' name='Q-5.2' style='display:none;'&gt;GOTO:7&lt;/div&gt;&lt;div id='Q-6' name='Q-6' style='display:none;'&gt; Do you receive public assistance?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1' name='Q-6.1' style='display:none;'&gt; Do you receive assistance under SSI, General Assistance or TANF?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a feewaiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2' name='Q-6.1.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.1' name='Q-6.1.2.1' style='display:none;'&gt; GOTO:6.1.1&lt;/div&gt;&lt;div id='Q-6.1.2.2' name='Q-6.1.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.2.1' name='Q-6.1.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a fee waiver.<span class="Apple-converted-space">  </span>However, you may still apply using the form below&lt;img src="http://ptla.org/sites/<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>default/files/cv-067.pdf"/&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.2.2' name='Q-6.1.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent receive a fee waiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2' name='Q-6.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.1' name='Q-6.2.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a fee waiver.<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2' name='Q-6.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2.1' name='Q-6.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a fee waiver.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2.2' name='Q-6.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent and receive a fee waiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7' name='Q-7' style='display:none;'&gt; Do you receive public assistance?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1' name='Q-7.1' style='display:none;'&gt; Do you receive assistance under SSI, General Assistance or TANF?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2' name='Q-7.1.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.1' name='Q-7.1.2.1' style='display:none;'&gt; GOTO:7.1.1&lt;/div&gt;&lt;div id='Q-7.1.2.2' name='Q-7.1.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.2.1' name='Q-7.1.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a public defender.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.2.2' name='Q-7.1.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent receive a public defender.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2' name='Q-7.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.1' name='Q-7.2.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2' name='Q-7.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2.1' name='Q-7.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a public defender.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2.2' name='Q-7.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.&lt;/div&gt;&lt;div id='A-1.1' name='A-1.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-1.1' name='A-href-1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-1.1' name='A-target-1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-1.1' name='X-1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-1.1.1' name='A-1.1.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-1.1.1' name='X-1.1.1' style='display:none;'&gt;1.1.1&lt;/div&gt;&lt;div id='A-2.1' name='A-2.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-2.1' name='A-href-2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-2.1' name='A-target-2.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-2.1' name='X-2.1' style='display:none;'&gt;2.1&lt;/div&gt;&lt;div id='A-3.1' name='A-3.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-3.1' name='A-href-3.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-3.1' name='A-target-3.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-3.1' name='X-3.1' style='display:none;'&gt;3.1&lt;/div&gt;&lt;div id='A-4.1' name='A-4.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-4.1' name='A-href-4.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-4.1' name='A-target-4.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-4.1' name='X-4.1' style='display:none;'&gt;4.1&lt;/div&gt;&lt;div id='A-5.1' name='A-5.1' style='display:none;'&gt; Civil.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-5.1' name='A-href-5.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-5.1' name='A-target-5.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-5.1' name='X-5.1' style='display:none;'&gt;Civil.&lt;/div&gt;&lt;div id='A-5.2' name='A-5.2' style='display:none;'&gt; Criminal.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-5.2' name='A-href-5.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-5.2' name='A-target-5.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-5.2' name='X-5.2' style='display:none;'&gt;Criminal.&lt;/div&gt;&lt;div id='A-6.1' name='A-6.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1' name='A-href-6.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1' name='A-target-6.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1' name='X-6.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.1' name='A-6.1.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.1' name='X-6.1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'&gt; Click here for your automated document.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'&gt;javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')&lt;/div&gt;&lt;div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'&gt;target="_blank"&lt;/div&gt;&lt;div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'&gt;Click here for your automated document.&lt;/div&gt;&lt;div id='A-6.1.2' name='A-6.1.2' style='display:none;'&gt;No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2' name='A-href-6.1.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2' name='A-target-6.1.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2' name='X-6.1.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.1' name='A-6.1.2.1' style='display:none;'&gt; Yes<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.1' name='A-href-6.1.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.1' name='A-target-6.1.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.1' name='X-6.1.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.2.2' name='A-6.1.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2' name='A-href-6.1.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2' name='A-target-6.1.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2' name='X-6.1.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.2.1' name='A-6.1.2.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.1' name='A-href-6.1.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2.1' name='A-target-6.1.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2.1' name='X-6.1.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.2.2.2' name='A-6.1.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.2' name='A-href-6.1.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2.2' name='A-target-6.1.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2.2' name='X-6.1.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.2.2.1' name='A-6.1.2.2.2.1' style='display:none;'&gt; Click here for your automated document.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.2.1' name='A-href-6.1.2.2.2.1' style='display:none;'&gt;javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')&lt;/div&gt;&lt;div id='A-target-6.1.2.2.2.1' name='A-target-6.1.2.2.2.1' style='display:none;'&gt;target="_blank"&lt;/div&gt;&lt;div id='X-6.1.2.2.2.1' name='X-6.1.2.2.2.1' style='display:none;'&gt;Click here for your automated document.&lt;/div&gt;&lt;div id='A-6.2' name='A-6.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2' name='A-href-6.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2' name='A-target-6.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2' name='X-6.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.2.1' name='A-6.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.1' name='A-href-6.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.1' name='A-target-6.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.1' name='X-6.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.2.2' name='A-6.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2' name='A-href-6.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2' name='A-target-6.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2' name='X-6.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.2.2.1' name='A-6.2.2.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2.1' name='A-href-6.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2.1' name='A-target-6.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2.1' name='X-6.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.2.2.2' name='A-6.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2.2' name='A-href-6.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2.2' name='A-target-6.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2.2' name='X-6.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1' name='A-7.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1' name='A-href-7.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1' name='A-target-7.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1' name='X-7.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.1' name='A-7.1.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.1' name='X-7.1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2' name='A-7.1.2' style='display:none;'&gt;No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2' name='A-href-7.1.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2' name='A-target-7.1.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2' name='X-7.1.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1.2.1' name='A-7.1.2.1' style='display:none;'&gt; Yes<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.1' name='A-href-7.1.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.1' name='A-target-7.1.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.1' name='X-7.1.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2.2' name='A-7.1.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2' name='A-href-7.1.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2' name='A-target-7.1.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2' name='X-7.1.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1.2.2.1' name='A-7.1.2.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2.1' name='A-href-7.1.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2.1' name='A-target-7.1.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2.1' name='X-7.1.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2.2.2' name='A-7.1.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2.2' name='A-href-7.1.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2.2' name='A-target-7.1.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2.2' name='X-7.1.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2' name='A-7.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2' name='A-href-7.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2' name='A-target-7.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2' name='X-7.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2.1' name='A-7.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.1' name='A-href-7.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.1' name='A-target-7.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.1' name='X-7.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.2.2' name='A-7.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2' name='A-href-7.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2' name='A-target-7.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2' name='X-7.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2.2.1' name='A-7.2.2.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2.1' name='A-href-7.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2.1' name='A-target-7.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2.1' name='X-7.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.2.2.2' name='A-7.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2.2' name='A-href-7.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2.2' name='A-target-7.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2.2' name='X-7.2.2.2' style='display:none;'&gt;No&lt;/div&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var QVnames = [['1','1'],['1.1','name'],['1.1.1','1.1.1'],['2','partyname'],['2.1','2.1'],['3','address'],['3.1','3.1'],['4','telephone'],['4.1','4.1'],['5','5'],['5.1','5.1'],['5.2','5.2'],['6','6'],['6.1','6.1'],['6.1.1','6.1.1'],['6.1.2','6.1.2'],['6.1.2.1','6.1.2.1'],['6.1.2.2','6.1.2.2'],['6.1.2.2.1','6.1.2.2.1'],['6.1.2.2.2','6.1.2.2.2'],['6.2','6.2'],['6.2.1','6.2.1'],['6.2.2','6.2.2'],['6.2.2.1','6.2.2.1'],['6.2.2.2','6.2.2.2'],['7','7'],['7.1','7.1'],['7.1.1','7.1.1'],['7.1.2','7.1.2'],['7.1.2.1','7.1.2.1'],['7.1.2.2','7.1.2.2'],['7.1.2.2.1','7.1.2.2.1'],['7.1.2.2.2','7.1.2.2.2'],['7.2','7.2'],['7.2.1','7.2.1'],['7.2.2','7.2.2'],['7.2.2.1','7.2.2.1'],['7.2.2.2','7.2.2.2']];</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/div&gt;&lt;textarea id="original" name="original" style="display:none;" disabled="disabled"&gt;&lt;div id='Q-1' name='Q-1' style='display:none;'&gt; Are you in need of a fee waiver or a public defender?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-1.1' name='Q-1.1' style='display:none;'&gt;What is your name?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'&gt;GOTO:2&lt;/div&gt;&lt;div id='Q-2' name='Q-2' style='display:none;'&gt;What is your opposing party's name?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-2.1' name='Q-2.1' style='display:none;'&gt;GOTO:3&lt;/div&gt;&lt;div id='Q-3' name='Q-3' style='display:none;'&gt;What is your address?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-3.1' name='Q-3.1' style='display:none;'&gt;GOTO:4&lt;/div&gt;&lt;div id='Q-4' name='Q-4' style='display:none;'&gt; What is your telephone number?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-4.1' name='Q-4.1' style='display:none;'&gt;GOTO:5&lt;/div&gt;&lt;div id='Q-5' name='Q-5' style='display:none;'&gt; Is your matter Civil or Criminal?<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-5.1' name='Q-5.1' style='display:none;'&gt;GOTO:6&lt;/div&gt;&lt;div id='Q-5.2' name='Q-5.2' style='display:none;'&gt;GOTO:7&lt;/div&gt;&lt;div id='Q-6' name='Q-6' style='display:none;'&gt; Do you receive public assistance?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1' name='Q-6.1' style='display:none;'&gt; Do you receive assistance under SSI, General Assistance or TANF?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a feewaiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2' name='Q-6.1.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.1' name='Q-6.1.2.1' style='display:none;'&gt; GOTO:6.1.1&lt;/div&gt;&lt;div id='Q-6.1.2.2' name='Q-6.1.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.2.1' name='Q-6.1.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a fee waiver.<span class="Apple-converted-space">  </span>However, you may still apply using the form below&lt;img src="http://ptla.org/sites/<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>default/files/cv-067.pdf"/&gt;<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.1.2.2.2' name='Q-6.1.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent receive a fee waiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2' name='Q-6.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.1' name='Q-6.2.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a fee waiver.<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2' name='Q-6.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2.1' name='Q-6.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a fee waiver.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-6.2.2.2' name='Q-6.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent and receive a fee waiver.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7' name='Q-7' style='display:none;'&gt; Do you receive public assistance?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1' name='Q-7.1' style='display:none;'&gt; Do you receive assistance under SSI, General Assistance or TANF?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2' name='Q-7.1.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.1' name='Q-7.1.2.1' style='display:none;'&gt; GOTO:7.1.1&lt;/div&gt;&lt;div id='Q-7.1.2.2' name='Q-7.1.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.2.1' name='Q-7.1.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a public defender.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.1.2.2.2' name='Q-7.1.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent receive a public defender.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2' name='Q-7.2' style='display:none;'&gt; Does your income, after taxes, fall below the Federal Poverty Line?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.1' name='Q-7.2.1' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2' name='Q-7.2.2' style='display:none;'&gt; Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2.1' name='Q-7.2.2.1' style='display:none;'&gt; You are likely unable to qualify as an indigent and receive a public defender.<span class="Apple-converted-space">  </span>However, you may still apply using the form below.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='Q-7.2.2.2' name='Q-7.2.2.2' style='display:none;'&gt; You are likely able to qualify as indigent and receive a public defender.&lt;/div&gt;&lt;div id='A-1.1' name='A-1.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-1.1' name='A-href-1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-1.1' name='A-target-1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-1.1' name='X-1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-1.1.1' name='A-1.1.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-1.1.1' name='X-1.1.1' style='display:none;'&gt;1.1.1&lt;/div&gt;&lt;div id='A-2.1' name='A-2.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-2.1' name='A-href-2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-2.1' name='A-target-2.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-2.1' name='X-2.1' style='display:none;'&gt;2.1&lt;/div&gt;&lt;div id='A-3.1' name='A-3.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-3.1' name='A-href-3.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-3.1' name='A-target-3.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-3.1' name='X-3.1' style='display:none;'&gt;3.1&lt;/div&gt;&lt;div id='A-4.1' name='A-4.1' style='display:none;'&gt;&lt;variable&gt;&lt;/div&gt;&lt;div id='A-href-4.1' name='A-href-4.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-4.1' name='A-target-4.1' style='display:none;'&gt;text&lt;/div&gt;&lt;div id='X-4.1' name='X-4.1' style='display:none;'&gt;4.1&lt;/div&gt;&lt;div id='A-5.1' name='A-5.1' style='display:none;'&gt; Civil.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-5.1' name='A-href-5.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-5.1' name='A-target-5.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-5.1' name='X-5.1' style='display:none;'&gt;Civil.&lt;/div&gt;&lt;div id='A-5.2' name='A-5.2' style='display:none;'&gt; Criminal.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-5.2' name='A-href-5.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-5.2' name='A-target-5.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-5.2' name='X-5.2' style='display:none;'&gt;Criminal.&lt;/div&gt;&lt;div id='A-6.1' name='A-6.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1' name='A-href-6.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1' name='A-target-6.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1' name='X-6.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.1' name='A-6.1.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.1' name='X-6.1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'&gt; Click here for your automated document.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'&gt;javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')&lt;/div&gt;&lt;div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'&gt;target="_blank"&lt;/div&gt;&lt;div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'&gt;Click here for your automated document.&lt;/div&gt;&lt;div id='A-6.1.2' name='A-6.1.2' style='display:none;'&gt;No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2' name='A-href-6.1.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2' name='A-target-6.1.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2' name='X-6.1.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.1' name='A-6.1.2.1' style='display:none;'&gt; Yes<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.1' name='A-href-6.1.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.1' name='A-target-6.1.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.1' name='X-6.1.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.2.2' name='A-6.1.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2' name='A-href-6.1.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2' name='A-target-6.1.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2' name='X-6.1.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.2.1' name='A-6.1.2.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.1' name='A-href-6.1.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2.1' name='A-target-6.1.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2.1' name='X-6.1.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.1.2.2.2' name='A-6.1.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.2' name='A-href-6.1.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.1.2.2.2' name='A-target-6.1.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.1.2.2.2' name='X-6.1.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.1.2.2.2.1' name='A-6.1.2.2.2.1' style='display:none;'&gt; Click here for your automated document.</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.1.2.2.2.1' name='A-href-6.1.2.2.2.1' style='display:none;'&gt;javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')&lt;/div&gt;&lt;div id='A-target-6.1.2.2.2.1' name='A-target-6.1.2.2.2.1' style='display:none;'&gt;target="_blank"&lt;/div&gt;&lt;div id='X-6.1.2.2.2.1' name='X-6.1.2.2.2.1' style='display:none;'&gt;Click here for your automated document.&lt;/div&gt;&lt;div id='A-6.2' name='A-6.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2' name='A-href-6.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2' name='A-target-6.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2' name='X-6.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.2.1' name='A-6.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.1' name='A-href-6.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.1' name='A-target-6.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.1' name='X-6.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.2.2' name='A-6.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2' name='A-href-6.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2' name='A-target-6.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2' name='X-6.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-6.2.2.1' name='A-6.2.2.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2.1' name='A-href-6.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2.1' name='A-target-6.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2.1' name='X-6.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-6.2.2.2' name='A-6.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-6.2.2.2' name='A-href-6.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-6.2.2.2' name='A-target-6.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-6.2.2.2' name='X-6.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1' name='A-7.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1' name='A-href-7.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1' name='A-target-7.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1' name='X-7.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.1' name='A-7.1.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.1' name='X-7.1.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2' name='A-7.1.2' style='display:none;'&gt;No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2' name='A-href-7.1.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2' name='A-target-7.1.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2' name='X-7.1.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1.2.1' name='A-7.1.2.1' style='display:none;'&gt; Yes<span class="Apple-converted-space"> </span></p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.1' name='A-href-7.1.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.1' name='A-target-7.1.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.1' name='X-7.1.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2.2' name='A-7.1.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2' name='A-href-7.1.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2' name='A-target-7.1.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2' name='X-7.1.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.1.2.2.1' name='A-7.1.2.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2.1' name='A-href-7.1.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2.1' name='A-target-7.1.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2.1' name='X-7.1.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.1.2.2.2' name='A-7.1.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.1.2.2.2' name='A-href-7.1.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.1.2.2.2' name='A-target-7.1.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.1.2.2.2' name='X-7.1.2.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2' name='A-7.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2' name='A-href-7.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2' name='A-target-7.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2' name='X-7.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2.1' name='A-7.2.1' style='display:none;'&gt; Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.1' name='A-href-7.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.1' name='A-target-7.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.1' name='X-7.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.2.2' name='A-7.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2' name='A-href-7.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2' name='A-target-7.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2' name='X-7.2.2' style='display:none;'&gt;No&lt;/div&gt;&lt;div id='A-7.2.2.1' name='A-7.2.2.1' style='display:none;'&gt;Yes</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2.1' name='A-href-7.2.2.1' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2.1' name='A-target-7.2.2.1' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2.1' name='X-7.2.2.1' style='display:none;'&gt;Yes&lt;/div&gt;&lt;div id='A-7.2.2.2' name='A-7.2.2.2' style='display:none;'&gt; No</p>
+<p class="p1">&lt;/div&gt;&lt;div id='A-href-7.2.2.2' name='A-href-7.2.2.2' style='display:none;'&gt;javascript:void('');&lt;/div&gt;&lt;div id='A-target-7.2.2.2' name='A-target-7.2.2.2' style='display:none;'&gt;&lt;/div&gt;&lt;div id='X-7.2.2.2' name='X-7.2.2.2' style='display:none;'&gt;No&lt;/div&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var QVnames = [['1','1'],['1.1','name'],['1.1.1','1.1.1'],['2','partyname'],['2.1','2.1'],['3','address'],['3.1','3.1'],['4','telephone'],['4.1','4.1'],['5','5'],['5.1','5.1'],['5.2','5.2'],['6','6'],['6.1','6.1'],['6.1.1','6.1.1'],['6.1.2','6.1.2'],['6.1.2.1','6.1.2.1'],['6.1.2.2','6.1.2.2'],['6.1.2.2.1','6.1.2.2.1'],['6.1.2.2.2','6.1.2.2.2'],['6.2','6.2'],['6.2.1','6.2.1'],['6.2.2','6.2.2'],['6.2.2.1','6.2.2.1'],['6.2.2.2','6.2.2.2'],['7','7'],['7.1','7.1'],['7.1.1','7.1.1'],['7.1.2','7.1.2'],['7.1.2.1','7.1.2.1'],['7.1.2.2','7.1.2.2'],['7.1.2.2.1','7.1.2.2.1'],['7.1.2.2.2','7.1.2.2.2'],['7.2','7.2'],['7.2.1','7.2.1'],['7.2.2','7.2.2'],['7.2.2.1','7.2.2.1'],['7.2.2.2','7.2.2.2']];</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/textarea&gt;&lt;textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"&gt;&lt;/textarea&gt;&lt;div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"&gt;&lt;div id=credits class=credits style="display:none;"&gt;&lt;div class=credit_text&gt;&lt;/div&gt;&lt;/div&gt;&lt;p align=center&gt; &lt;a href="http://www.qnamarkup.org/" target=_top&gt;code your own&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/FORM&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;script type="text/javascript"&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var QNum = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var Qhtml = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var Dhtml = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var label = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var GOTOfired = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var path = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var doc_bin = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var convo_bin = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var freetext = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>var goingback = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>$("#conversation input").on("keypress", 'form', function (e) {</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>var code = e.keyCode || e.which;</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>if (code == 13) {</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>return false;</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function answerQ(lb,restart) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>currentQ = label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>label = lb;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Dhtml = 'D-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Qhtml = 'Q-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Ahtml = 'A-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Jhtml = 'J-'+QNum;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Xhtml = 'X-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Xihtml = 'Xi-'+label;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var input_error = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (restart == undefined) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var regexp = new RegExp("\&lt;variable\&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//if (document.getElementById(Xihtml)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//<span class="Apple-tab-span">	</span>console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//<span class="Apple-tab-span">	</span>console.log("NO document.getElementById("+Xihtml+").value: ");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Ahtml).innerHTML.match(regexp)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Xihtml).value == "") {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>input_error = "Your answer appears to be empty.";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>label = currentQ;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/&lt;/g,"&lt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/&gt;/g,"&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (input_error != 0) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>alert(input_error);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(Xihtml).focus();<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (restart == undefined) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += "&lt;div id=\"break-at-"+QNum+"\" class='frame'&gt;&lt;div class='full'&gt;&lt;div class='ans_text'&gt;"+document.getElementById(Ahtml).innerHTML+"&lt;/div&gt;&lt;/div&gt;&lt;div class='ans_arrow'&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// insert answer from button</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(valueis(currentQ))) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(valueis(currentQ)).outerHTML='';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Xihtml)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = "&lt;textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\"&gt;"+document.getElementById(Xihtml).value+"&lt;/textarea&gt;\n" + document.getElementById('QandA').innerHTML<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = "&lt;textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\"&gt;"+document.getElementById(Xhtml).innerHTML+"&lt;/textarea&gt;\n" + document.getElementById('QandA').innerHTML</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById('QandA').innerHTML.match(regexp)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-tab-span">	</span>var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\&lt;variable\&gt;(\&lt;\/variable\&gt;)?/, "&lt;input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/&gt;"+document.getElementById(Xihtml).value);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\&lt;variable\&gt;(\&lt;\/variable\&gt;)?/, document.getElementById(Xihtml).value+"\n");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var thisvariable = new RegExp("&lt;(X|x)&gt;"+document.getElementById(Xhtml).innerHTML+"&lt;\/(X|x)&gt;","g");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//console.log("thisvariable: "+thisvariable);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//console.log("Variable name: "+valueis(currentQ));</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if(document.getElementById(Ahtml).innerHTML != "") {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n";<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML = '';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (goingback == 0) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>renderQnA(Qhtml,Jhtml,Dhtml,restart);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML = '';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>path = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>renderQnA(Qhtml,Jhtml,Dhtml,restart);<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function renderQnA(Qht,Jht,Dht,restar) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Dhtml = Dht;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>GOTOfired = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>path.push(label);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>swapGOTO(Qht,Jht);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("After swap: "+GOTOfired);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (GOTOfired == 0) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += "&lt;div id="+Jht+" style=\"float:left;width:100%;height:1px;\"&gt; &lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += "&lt;div class='frame'&gt;&lt;div class='full'&gt;&lt;div class='question_text'&gt;"+swapvar(document.getElementById(Qhtml).innerHTML)+"&lt;/div&gt;&lt;/div&gt;&lt;div class='question_arrow'&gt;&lt;/div&gt;&lt;/div&gt;";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\&lt;br\&gt;){2}/gi,"&lt;/div&gt;&lt;/div&gt;&lt;div class='question_arrow'&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class='frame'&gt;&lt;div class='full'&gt;&lt;div class='question_text'&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\&lt;br\&gt; \&lt;br\&gt;)/gi,"&lt;br&gt;&lt;br&gt;");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// add question<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\&lt;br\&gt;){2}/gi,"\nBOT: ");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>this_text = this_text.replace(/(\&lt;br\&gt;){2}/gi,"\nBOT: ");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.push(this_text);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// make push doc into array in doc() cycle through array and put into output</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// maybe remove doc div</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Dhtml)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Xishere = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for ( var i = 0; i &lt; tmp.length; i++ ) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var nextlabel = tmp[i].id.substr(2);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Xihtml = 'Xi-'+nextlabel;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var regexp = "\&lt;variable\&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var regexp_js = "^javascript:";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var script_call = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (tmp[i].innerHTML.match(regexp)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (a_href[i].innerHTML.match('^_blank:')) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>script_call = "location.href = '"+a_href[i].innerHTML+"';";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;div class=\"xdiv\"&gt;&lt;input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/&gt;&lt;a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"&gt;&lt;span class=\"qpad\"&gt;Save above text as answer.&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Xishere = Xihtml;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>freetext = Xihtml;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else if (a_href[i].innerHTML.match(regexp_js) &amp;&amp; a_href[i].innerHTML != "javascript:void('');") {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\&lt;br\&gt;){2}/gi,"&lt;br&gt; &lt;br&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"&gt;&lt;span class=\"qpad\"&gt;"+tmp[i].innerHTML+"&lt;/span&gt;&lt;/a&gt;";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>freetext = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\&lt;br\&gt;){2}/gi,"&lt;br&gt; &lt;br&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"&gt;&lt;span class=\"qpad\"&gt;"+tmp[i].innerHTML+"&lt;/span&gt;&lt;/a&gt;";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>freetext = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (restar == undefined) {</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;div class=\"standard_buttons\"&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (QNum &gt; 1) {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\"&gt;GO BACK ONE&lt;/a&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\"&gt;START OVER&lt;/a&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else if (QNum == 1) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\"&gt;GO BACK ONE&lt;/a&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\"&gt;START OVER&lt;/a&gt;";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (QNum != 0) {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (goingback == 0) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>scroll2Q(Jht,800);<span class="Apple-converted-space">           <span class="Apple-tab-span">	</span></span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.scrollTo(0, document.getElementById(Jht).offsetTop);<span class="Apple-converted-space">     <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else if (restar != undefined) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.scrollTo(0,0);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (Xishere != 0 &amp;&amp; window.self == window.top) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Set focus for: "+Xishere);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(Xishere).focus();</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Q#: "+QNum);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("New Path: "+path);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>QNum++;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>goingback = 0;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function swapGOTO(QH,JH) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var regex = new RegExp("GOTO:(\d*)(\.\d+)*");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (regex.test(document.getElementById(QH).innerHTML)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += "&lt;div id="+JH+" style=\"float:left;width:100%;height:1px;\"&gt; &lt;/div&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// Add question</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// note I added () around the &lt; to avoid a &lt; followed by a ? which causes problems in php</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(&lt;)?GOTO:(\d*)(.\s*\d+)*&gt;?/,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Qtexttrans = Qtexttrans.replace(/\s*$/,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (Qtexttrans != "") {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(&lt;)?GOTO:(\d*)(.\s*\d+)*&gt;?/,"&lt;"+Qtext+"&gt;");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML += "&lt;div class='frame'&gt;&lt;div class='full'&gt;&lt;div class='question_text'&gt;"+ swapvar(document.getElementById(QH).innerHTML.replace(/(&lt;)?GOTO:(\d*)(.\s*\d+)*&gt;?/,"&lt;"+Qtext+"&gt;"))+"&lt;/div&gt;&lt;/div&gt;&lt;div class='question_arrow'&gt;&lt;/div&gt;&lt;/div&gt;";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// replace GOTO with text</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>label = Qtext[0].replace("GOTO:","");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Qhtml = 'Q-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Dhtml)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Dhtml = 'D-'+label;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>GOTOfired = 1;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("In swap: "+GOTOfired);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>swapGOTO(Qhtml,JH);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function scroll2Q(id,speed) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var top = document.getElementById(id).offsetTop; //Getting Y of target element</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Jump to Y for ("+id+"): "+top);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//adapted from https://github.com/Yappli/smooth-scroll</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var moving_frequency = 5; // Affects performance !</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var hop_count = speed/moving_frequency</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var gap = (top - getScrollTopDocumentAtBegin) / hop_count;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 1; i &lt;= hop_count; i++)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>(function()</p>
+<p class="p1"><span class="Apple-converted-space">           <span class="Apple-tab-span">	</span></span>{</p>
+<p class="p1"><span class="Apple-converted-space">           <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>var hop_top_position = gap*i;</p>
+<p class="p1"><span class="Apple-converted-space">           <span class="Apple-tab-span">	</span>    </span>setTimeout(function(){<span class="Apple-converted-space">  </span>window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);</p>
+<p class="p1"><span class="Apple-converted-space">           <span class="Apple-tab-span">	</span> </span>})();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function getElementsByIdIs(selectorTag, name) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var items = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var myPosts = document.getElementsByTagName(selectorTag);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//omitting undefined null check for brevity</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (myPosts[0].id == name) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>items.push(myPosts[0]);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return items;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function getElementsByIdRegExp(selectorTag, expression) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// note you need to escape \ in the expression with \, i.e., \\ = \</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var regex = new RegExp(expression);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var items = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var myPosts = document.getElementsByTagName(selectorTag);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for (var i = 0; i &lt; myPosts.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (regex.test(myPosts[i].id)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>items.push(myPosts[i]);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return items;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}<span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// startAT QnA</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function startAT(id) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('ondeck').innerHTML = document.getElementById('original').value;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('QandA').innerHTML = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//document.getElementById('transcript').value = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin = [];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>QNum = 0;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>answerQ(id,'1');</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>//show funtion</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function show(id) {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">   <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>if (document.getElementById) { // DOM3 = IE5, NS6</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>document.getElementById(id).style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>} else {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>if (document.layers) { <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>document.id.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.all.id.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>//hide funtion</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function hide(id) {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>if (document.getElementById) { // DOM3 = IE5, NS6</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>document.getElementById(id).style.display = 'none';<span class="Apple-converted-space">         </span></p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>} else {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>if (document.layers) { <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.id.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.all.id.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>//show OR hide funtion depends on if element is shown or hidden</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function shoh(id) {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>if (document.getElementById) { // DOM3 = IE5, NS6</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>if (document.getElementById(id).style.display == "none"){</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>document.getElementById(id).style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>document.getElementById(id).style.display = 'none';<span class="Apple-converted-space">         </span></p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>}<span class="Apple-converted-space">   </span></p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>} else {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>if (document.layers) { <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>if (document.id.display == "none"){</p>
+<p class="p1"><span class="Apple-converted-space">                <span class="Apple-tab-span">	</span></span>document.id.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                <span class="Apple-tab-span">	</span></span>document.id.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>if (document.all.id.style.visibility == "none"){</p>
+<p class="p1"><span class="Apple-converted-space">                <span class="Apple-tab-span">	</span></span>document.all.id.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                <span class="Apple-tab-span">	</span></span>document.all.id.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function swapvar(input) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var output;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(QVnames[i][1])) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var item = QVnames[i][1].replace(/\./g,"\\.");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var varegx = new RegExp("&lt;x&gt;"+item+"&lt;\/x&gt;","gi");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//console.log(QVnames[i][1]);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>output = input</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return output</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function docforindex(indexID) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; doc_bin.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if(doc_bin[i][1] == indexID) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return true;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function indexis(variablename) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if(QVnames[i][1] == variablename) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return QVnames[i][0];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function valueis(variablekey) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if(QVnames[i][0] == variablekey) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return QVnames[i][1];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function look4goto(qn,id) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("GOTO SEARCH: "+id);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var qID = "Q-"+id;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (docforindex(path.indexOf(id))) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("DOC FOUND "+id);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.splice(doc_bin.length-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.splice(-2,2);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(qID).innerHTML.match(re)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.splice(-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("GOTO FOUND: "+id);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (docforindex(indexis(textinput))) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("DOC FOUND "+textinput);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.splice(doc_bin.length-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>look4goto(qn,textinput);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function goback(qn) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Qlast = qn - 3</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>qn = qn - 2;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>label = path[qn];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>goingback = 1;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("GO BACK TO:"+qn);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var re = new RegExp('(((^|\\n).*)*)&lt;div id="break-at-'+qn+'" class="frame"&gt;((.*)(\\W.*))*', 'g');</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('Choices').innerHTML += "&lt;input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\"&gt;";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("####################: "+path[path.length-1]);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//look4goto(qn,path[path.length-1]);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>path.splice(-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_bin.splice(-4,4);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//convo_bin.splice(-2,2);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// If there's a doc in the last Q that you're removing, hold on to it.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// And put it back after you've removed it. When you rerender the Q.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById("X-"+path[qn]) &amp;&amp; document.getElementById(valueis(path[Qlast]))) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.splice(doc_bin.length-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// If there's a doc in the current Q, remove it.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (docforindex(currentQ)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("DOC FOUND (current) "+currentQ);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.splice(doc_bin.length-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>// If there's a doc in the queued up Q, remove it.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(Dhtml)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("DOC FOUND (ondeck)"+Dhtml);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_bin.splice(doc_bin.length-1,1);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>look4goto(qn,path[path.length-1]);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (freetext != 0) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById(freetext).value = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>QNum = qn;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>loadQ = path[path.length-1];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>path.splice(-1,1);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>console.log("Reload ans for: "+loadQ);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>answerQ(loadQ);</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function transcript(output) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var convo_output = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for (var i = 0, len = convo_bin.length; i &lt; len; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>convo_output += convo_bin[i];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (output == 1) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return convo_output;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return convo_output.replace(/&lt;[^&gt;]*&gt;/g,"");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function doc() {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var doc_output = "";<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for (var i = 0, len = doc_bin.length; i &lt; len; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doc_output += doc_bin[i][0];</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return swapvar(doc_output);</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}<span class="Apple-tab-span">	</span></p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function json_str() {</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var json_list = "{";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(QVnames[i][1])) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json_list = json_list+",";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (i+1 == QVnames.length) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json_list = json_list.replace(/,$/, '');</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json_list = json_list+"}";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return json_list;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function mail2(to,subject,body) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>to = encodeURIComponent(to);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>subject = encodeURIComponent(subject);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>body = encodeURIComponent(body);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.location.href = "mailto:"+to+"?subject="+subject+"&amp;body="+body;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.FORM.action = action;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.FORM.method = method;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (target) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.FORM.target = target;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.FORM.target = "_self";<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (docAs) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var doctext = document.createElement("textarea");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doctext.style.display ='none';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doctext.name= docAs;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>doctext.value= doc();</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('FORM').appendChild(doctext);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (instructions) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var instructtext = document.createElement("textarea");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>instructtext.type='hidden';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>instructtext.style.display ='none';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>instructtext.name= 'i';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>instructtext.value= instructions;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('FORM').appendChild(instructtext);<span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (transcriptAs) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var ttext = document.createElement("textarea");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ttext.type='hidden';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ttext.style.display ='none';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ttext.name= transcriptAs;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ttext.value= transcript();</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('FORM').appendChild(ttext);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (jsonAs) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var json = document.createElement("textarea");</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json.type='hidden';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json.style.display ='none';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json.name= jsonAs;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>json.value= json_str();</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('FORM').appendChild(json);</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var ondeckdiv = document.getElementById('ondeck').innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('ondeck').innerHTML = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('rawmarkup').innerHTML = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.FORM.submit();</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('ondeck').innerHTML = ondeckdiv;</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function csv() {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var csv_list = "";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+'"'+QVnames[i][1]+'"';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+",";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (i+1 == QVnames.length) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list.replace(/,$/, '');</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+"\n";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for(var i = 0; i &lt; QVnames.length; i++) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (document.getElementById(QVnames[i][1])) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+'""';</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+",";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}<span class="Apple-converted-space"> <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (i+1 == QVnames.length) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list.replace(/,$/, '');</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>csv_list = csv_list+"\n";</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return csv_list;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function getvar(val) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>return document.getElementById(val).value;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function goto(val) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">  </span>answerQ(indexis(val));</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file</p>
+<p class="p1"><span class="Apple-tab-span">	</span>function save2(filename,content)</p>
+<p class="p1"><span class="Apple-tab-span">	</span>{</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// I'm using file system support as a proxy for support for this feature.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Handle vendor prefixes.</p>
+<p class="p1"><span class="Apple-tab-span">	</span>window.requestFileSystem = window.requestFileSystem ||<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">  </span>window.webkitRequestFileSystem;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Check for support.</p>
+<p class="p1"><span class="Apple-tab-span">	</span>if (window.requestFileSystem) {</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// content = ID of textarea to save</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// name = name to save file as, including file extension<span class="Apple-converted-space">     </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// grab the content of the form field and place it into a variable</p>
+<p class="p1"><span class="Apple-tab-span">	</span>//<span class="Apple-converted-space">    </span>var textToWrite = document.getElementById(content).value;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>//<span class="Apple-converted-space">  </span>create a new Blob (html5 magic) that conatins the data from your form feild</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var textFileAsBlob = new Blob([content], {type:'text/plain'});</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Specify the name of the file to be saved</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var fileNamecontentAs = filename;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Optionally allow the user to choose a file name by providing<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// an imput field in the HTML and using the collected data here</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// var fileNamecontentAs = txtFileName.text;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// create a link for our script to 'click'</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var downloadLink = document.createElement("a");</p>
+<p class="p1"><span class="Apple-tab-span">	</span>//<span class="Apple-converted-space">  </span>supply the name of the file (from the var above).</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// you could create the name here but using a var</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// allows more flexability later.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.download = fileNamecontentAs;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// provide text for the link. This will be hidden so you</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// can actually use anything you want.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.innerHTML = "My Hidden Link";</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// allow our code to work in webkit &amp; Gecko based browsers</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// without the need for a if / else block.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.URL = window.URL || window.webkitURL;</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span> <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// Create the link Object.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.href = window.URL.createObjectURL(textFileAsBlob);</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// when link is clicked call a function to remove it from</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// the DOM in case user wants to save a second file.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.onclick = destroyClickedElement;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// make sure the link is hidden.</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.style.display = "none";</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// add the link to the DOM</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.body.appendChild(downloadLink);</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// click the new link</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>downloadLink.click();</p>
+<p class="p1"><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>alert('This feature is not supported by your browser.');</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>function destroyClickedElement(event)</p>
+<p class="p1"><span class="Apple-tab-span">	</span>{</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// remove the link from the DOM</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>document.body.removeChild(event.target);</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>// EOF</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/BODY&gt;</p>
+<p class="p1">&lt;/HTML&gt;</p>
+</body>
+</html>
