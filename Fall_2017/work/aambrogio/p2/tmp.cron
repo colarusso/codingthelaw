@@ -1,0 +1,5 @@
+PATH=/Users/alessandraambrogio1/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+mailto=""
+*/5 * * * * python "/Users/alessandraambrogio1/Documents/Law/Suffolk/Suffolk 3L/Fall 2017/Coding the Law/codingthelaw/Fall_2017/work/aambrogio/p2/code_sample_1.py" >/dev/null
+

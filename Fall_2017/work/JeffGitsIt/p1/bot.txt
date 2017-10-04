@@ -28,8 +28,8 @@ A: Tell me more about this poverty affidavit.\
 	Q(3.1): A poverty affidavit is your sworn statement that your income is too low to afford paying the fees. In this affidavit you will need to list your income, assets, and some other personal information. There is no strict income cutoff above which your fees will not be waived; rather the court will use the information in the affidavit to decide whether you are able to pay. You will also need to get the affidavit notarized. After completing this form, simply give it to the clerk at the court where your case is being heard.GOTO:pova\
 A: Yes, I'd like help filing out the affidavit.\
 	Q(3.2): Great. I will now ask you a series of questions to fully populate the form. However, if you don't know a particular piece of information right now, we'll just leave that field blank and you can fill it in after printing.GOTO:name\
-A: Yes, but just give me the blank form. I can fill it out myself.\
-	Q(3.3): placeholder\
+A:[http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplate.docx] Yes, but just give me the blank form. I can fill it out myself.\
+	Q(3.3):GOTO:signoff\
 A: No thanks, not right now.\
 	Q(3.4):GOTO:signoff\
 \
