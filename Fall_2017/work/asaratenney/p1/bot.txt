@@ -1,154 +1,85 @@
 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<<<<<<< HEAD
-<h2 style="text-align:center;">[State Name] Indigency Calculator</h2>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-
-Q(1): Is your matter Civil or Criminal? 
-A: Civil.
-	Q(1.1):GOTO:2
-A: Criminal.
-	Q(1.2):GOTO:3
-		
-Q(2): Do you receive public assistance?
-A: Yes
-	Q(2.1): Do you receive assistance under SSI, General Assistance or TANF?
-	A:Yes
-		Q(2.1.1): You are likely able to qualify as indigent and receive a feewaiver.
-	A:No
-		Q(2.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
-		A: Yes 
-			Q(2.1.2.1): GOTO:2.1.2.2.2
-		A: No
-			Q(2.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 			life, including food, shelter and clothing?
-			A: Yes
-				Q(2.1.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still 				apply using the form below<img src="http://ptla.org/sites/				default/files/cv-067.pdf"/>			
-			A: No
-				Q(2.1.2.2.2): You are likely able to qualify as indigent receive a fee waiver.
-A: No
-	Q(2.2): Does your income, after taxes, fall below the Federal Poverty Line?
-	A: Yes
-		Q(2.2.1): You are likely able to qualify as indigent and receive a fee waiver. 
-	A: No
-		Q(2.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including 		food, shelter and clothing?
-		A:Yes
-			Q(2.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form 			below.
-		A: No
-			Q(2.2.2.2): You are likely able to qualify as indigent and receive a fee waiver.
-Q(3): Do you receive public assistance?
-A: Yes
-	Q(3.1): Do you receive assistance under SSI, General Assistance or TANF?
-	A:Yes
-		Q(3.1.1): You are likely able to qualify as indigent and receive a public defender.
-	A:No
-		Q(3.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
-		A: Yes 
-			Q(3.1.2.1): GOTO:3.1.1
-		A: No
-			Q(3.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 			life, including food, shelter and clothing?
-			A: Yes
-				Q(3.1.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, 					you may still apply using the form below.
-			A: No
-				Q(3.1.2.2.2): You are likely able to qualify as indigent receive a public defender.
-A: No
-	Q(3.2): Does your income, after taxes, fall below the Federal Poverty Line?
-	A: Yes
-		Q(3.2.1): You are likely able to qualify as indigent and receive a public defender. 
-	A: No
-		Q(3.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 				life, including food, shelter and clothing?
-		A:Yes
-			Q(3.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still 					apply using the form below.
-		A: No
-			Q(3.2.2.2): You are likely able to qualify as indigent and receive a public defender.
-=======
 <h2 style="text-align:center;">[Maine] Indigency Calculator</h2>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
+<input type="hidden" name="name" value="name"/>
+<input type="hidden" name="partyname" value="partyname"/>
+<input type="hidden" name="address" value="address"/>
+<input type="hidden" name="telephone" value="telephone"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p1/APPLICATION_TO_PROCEED.docx"/>
 
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
-<h2 style="text-align:center;">[State Name] Indigency Calculator</h2>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
-<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
->>>>>>> aaf9ec17430e0509df3de87cdcfa30a9912d5b2c
-
-Q(1): Is your matter Civil or Criminal? 
+Q(1): Are you in need of a fee waiver or a public defender?
+A: Yes
+	Q(name):What is your name?
+	X:
+		Q(1.1.1):GOTO:partyname
+Q(partyname):What is your opposing party's name?
+X:
+	Q(2.1):GOTO:address
+Q(address):What is your address?
+X:
+	Q(3.1):GOTO:telephone
+Q(telephone): What is your telephone number?
+X:
+	Q(4.1):GOTO:5
+Q(5): Is your matter Civil or Criminal? 
 A: Civil.
-	Q(1.1):GOTO:2
+	Q(5.1):GOTO:6
 A: Criminal.
-	Q(1.2):GOTO:3
+	Q(5.2):GOTO:7
 		
-Q(2): Do you receive public assistance?
+Q(6): Do you receive public assistance?
 A: Yes
-	Q(2.1): Do you receive assistance under SSI, General Assistance or TANF?
+	Q(6.1): Do you receive assistance under SSI, General Assistance or TANF?
 	A:Yes
-		Q(2.1.1): You are likely able to qualify as indigent and receive a feewaiver.
+		Q(6.1.1): You are likely able to qualify as indigent and receive a feewaiver.
+		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
+ Click here for your automated document.
 	A:No
-		Q(2.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
+		Q(6.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
 		A: Yes 
-			Q(2.1.2.1): GOTO:2.1.2.2.2
+			Q(6.1.2.1): GOTO:6.1.1
 		A: No
-<<<<<<< HEAD
-			Q(2.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 			life, including food, shelter and clothing?
+			Q(6.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
 			A: Yes
-				Q(2.1.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still 				apply using the form below<img src="http://ptla.org/sites/				default/files/cv-067.pdf"/>			
-=======
-			Q(2.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
-			A: Yes
-				Q(2.1.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form below<img src="http://ptla.org/sites/				default/files/cv-067.pdf"/>			
->>>>>>> aaf9ec17430e0509df3de87cdcfa30a9912d5b2c
+				Q(6.1.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form below<img src="http://ptla.org/sites/				default/files/cv-067.pdf"/>			
 			A: No
-				Q(2.1.2.2.2): You are likely able to qualify as indigent receive a fee waiver.
+				Q(6.1.2.2.2): You are likely able to qualify as indigent receive a fee waiver.
+				A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
+ Click here for your automated document.
 A: No
-	Q(2.2): Does your income, after taxes, fall below the Federal Poverty Line?
+	Q(6.2): Does your income, after taxes, fall below the Federal Poverty Line?
 	A: Yes
-		Q(2.2.1): You are likely able to qualify as indigent and receive a fee waiver. 
+		Q(6.2.1): You are likely able to qualify as indigent and receive a fee waiver. 
 	A: No
-<<<<<<< HEAD
-		Q(2.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including 		food, shelter and clothing?
+		Q(6.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
 		A:Yes
-			Q(2.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form 			below.
-=======
-		Q(2.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
-		A:Yes
-			Q(2.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form below.
->>>>>>> aaf9ec17430e0509df3de87cdcfa30a9912d5b2c
+			Q(6.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form below.
 		A: No
-			Q(2.2.2.2): You are likely able to qualify as indigent and receive a fee waiver.
-Q(3): Do you receive public assistance?
+			Q(6.2.2.2): You are likely able to qualify as indigent and receive a fee waiver.
+Q(7): Do you receive public assistance?
 A: Yes
-	Q(3.1): Do you receive assistance under SSI, General Assistance or TANF?
+	Q(7.1): Do you receive assistance under SSI, General Assistance or TANF?
 	A:Yes
-		Q(3.1.1): You are likely able to qualify as indigent and receive a public defender.
+		Q(7.1.1): You are likely able to qualify as indigent and receive a public defender.
 	A:No
-		Q(3.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
+		Q(7.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
 		A: Yes 
-			Q(3.1.2.1): GOTO:3.1.1
+			Q(7.1.2.1): GOTO:7.1.1
 		A: No
-<<<<<<< HEAD
-			Q(3.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 			life, including food, shelter and clothing?
+			Q(7.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
 			A: Yes
-				Q(3.1.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, 					you may still apply using the form below.
-=======
-			Q(3.1.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
-			A: Yes
-				Q(3.1.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still apply using the form below.
->>>>>>> aaf9ec17430e0509df3de87cdcfa30a9912d5b2c
+				Q(7.1.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still apply using the form below.
 			A: No
-				Q(3.1.2.2.2): You are likely able to qualify as indigent receive a public defender.
+				Q(7.1.2.2.2): You are likely able to qualify as indigent receive a public defender.
 A: No
-	Q(3.2): Does your income, after taxes, fall below the Federal Poverty Line?
+	Q(7.2): Does your income, after taxes, fall below the Federal Poverty Line?
 	A: Yes
-		Q(3.2.1): You are likely able to qualify as indigent and receive a public defender. 
+		Q(7.2.1): You are likely able to qualify as indigent and receive a public defender. 
 	A: No
-		Q(3.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of 				life, including food, shelter and clothing?
+		Q(7.2.2): Can you pay the court fees or costs without depriving yourself or those who are dependent on you of the necessities of life, including food, shelter and clothing?
 		A:Yes
-<<<<<<< HEAD
-			Q(3.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still 					apply using the form below.
-=======
-			Q(3.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still apply using the form below.
->>>>>>> aaf9ec17430e0509df3de87cdcfa30a9912d5b2c
+			Q(7.2.2.1): You are likely unable to qualify as an indigent and receive a public defender.  However, you may still apply using the form below.
 		A: No
-			Q(3.2.2.2): You are likely able to qualify as indigent and receive a public defender.
-
+			Q(7.2.2.2): You are likely able to qualify as indigent and receive a public defender.
