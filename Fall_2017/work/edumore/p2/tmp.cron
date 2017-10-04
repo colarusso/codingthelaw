@@ -1,5 +1,0 @@
-PATH=/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
-MAILTO=""
-*/5 * * * * ~/Anaconda3/python "/Users/ericadumore/Documents/2L Year/Semester 1/Coding in Law/codingthelaw/Fall_2017/work/edumore/p2/code_sample_1.py" >/dev/null
- 
