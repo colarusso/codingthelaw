@@ -3,8 +3,11 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 <h2 style="text-align:center;">[Maine] Indigency Calculator</h2>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
-<input type="hidden" name="name" value="ApplicationtoProceed"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p1/APPLICATION_TO_PROCEED_1.docx"/>
+<input type="hidden" name="name" value="name"/>
+<input type="hidden" name="partyname" value="partyname"/>
+<input type="hidden" name="address" value="address"/>
+<input type="hidden" name="telephone" value="telephone"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p1/APPLICATION_TO_PROCEED.docx"/>
 
 Q(1): Are you in need of a fee waiver or a public defender?
 A: Yes
@@ -13,13 +16,13 @@ A: Yes
 		Q(1.1.1):GOTO:partyname
 Q(partyname):What is your opposing party's name?
 X:
-	Q(2.1):GOTO:address 
+	Q(2.1):GOTO:address
 Q(address):What is your address?
 X:
-	Q(3.1):GOTO:telephone 
+	Q(3.1):GOTO:telephone
 Q(telephone): What is your telephone number?
 X:
-	Q(4.1):GOTO:5 
+	Q(4.1):GOTO:5
 Q(5): Is your matter Civil or Criminal? 
 A: Civil.
 	Q(5.1):GOTO:6
@@ -31,7 +34,8 @@ A: Yes
 	Q(6.1): Do you receive assistance under SSI, General Assistance or TANF?
 	A:Yes
 		Q(6.1.1): You are likely able to qualify as indigent and receive a feewaiver.
-		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Click here for your automated document.
+		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
+ Click here for your automated document.
 	A:No
 		Q(6.1.2): Does your income, after taxes, fall below the Federal Poverty Line?
 		A: Yes 
@@ -42,7 +46,8 @@ A: Yes
 				Q(6.1.2.2.1): You are likely unable to qualify as an indigent and receive a fee waiver.  However, you may still apply using the form below<img src="http://ptla.org/sites/				default/files/cv-067.pdf"/>			
 			A: No
 				Q(6.1.2.2.2): You are likely able to qualify as indigent receive a fee waiver.
-				A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Click here for your automated document.
+				A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
+ Click here for your automated document.
 A: No
 	Q(6.2): Does your income, after taxes, fall below the Federal Poverty Line?
 	A: Yes

@@ -1,15 +1,14 @@
 
 # coding: utf-8
 
-# In[4]:
-
+# In[1]:
 
 import csv
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://spreadsheets.google.com/feeds']
 document_key = "13bsf7rP9ubfBSX7-hK3QayZIaUkTxrXaOZqGsfLjWX4"
-credentials = ServiceAccountCredentials.from_json_keyfile_name('/Users/ericadumore/Documents/2L Year/Semester 1/Coding in Law/SheetsBot-32718db5596a.json', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('../../../../../SheetsBot-32718db5596a.json', scope)
 csvfile = "output.csv"
 gc = gspread.authorize(credentials)
 wks = gc.open_by_key(document_key)
@@ -22,4 +21,9 @@ with open(csvfile, "w") as output:
 import pandas as pd
 output = pd.read_csv(csvfile)
 output[:3]
+
+
+# In[ ]:
+
+
 
