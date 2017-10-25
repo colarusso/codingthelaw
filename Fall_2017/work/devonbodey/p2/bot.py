@@ -15,7 +15,7 @@
 # 
 # Prior to finding specific sources to scrape, it is important to run a search and make sure that the information being scraped is not prohibited under the CFAA. In order to test a source prior to scraping its information "robots.txt" can be added to the end of the web address. It is also important to look at the websites terms and conditions to verify that they have not expressly prohibited secondhand publication, or unpermitted use. In conducting a thorough search, I was luckily unable to find any information which indicated that the sources disallowed scraping of the information they publish.
 # 
-# To ensure the TwitterBot continually tweets information every time one of the blogs posts a new post, I included a regular expression into my code. To format this regular expression I used [regular expression](https://regex101.com). The regular expression I used differs for both blogs. However, both are coded to post the title of the blog post and the link to the source. 
+# To ensure the TwitterBot continually tweets information every time one of the blogs posts a new post, I included a regular expression into my code. To format this regular expression I used [regex101](https://regex101.com). The regular expression I used differs for both blogs. However, both are coded to post the title of the blog post and the link to the source. 
 # 
 # 
 # ### Tweet
