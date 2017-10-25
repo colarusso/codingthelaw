@@ -1,3 +1,2 @@
-timestamp,wiki ,wiki name,temperature
-0,0,0,0
-2017-10-20 14:39:59,/wiki/Henry_III_of_England,Henry III of England,69
+timestamp,wiki ,wiki name,temperature,humidity
+0,0,0,0,0
