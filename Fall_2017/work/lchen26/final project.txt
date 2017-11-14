@@ -1,0 +1,39 @@
+Q(welcome): Welcome. What is your name?
+X:
+	Q(help): Hello <x>welcome</x>! What are seeking help with?
+	A(1): Residential Repairs
+		Q(landlordname): Thank you for that information. I will now guide you through the request for repairs form. First off, what is your landlord's full name?
+		X:
+			Q(landlordaddress): Got it,thanks.Next,what is your landlord's street address?(Please only give street address)
+			X:
+				Q(landlordrestofaddress): Thanks for that information. Next what is your landlord's city, state, and zip code. (please write it out as you would on a letter/envelope)
+				X:
+					Q(tenantname):Alright. Just a few more questions. Once again, what is your (or the tenant's) full name?
+					X:
+						Q(tenantaddress):Thanks. Now what is you (the tenant's) full address (the apartment in question)?
+						X:
+							Q(repair):Finally, what do you need repaired? (List only one)
+							X:
+								Q(needs): Do you have any other repair needs?
+								A: Yes
+									Q(issues): Please mention it here
+									X:
+										Q(otherneeds): Do you have any other repair needs?
+										A: Yes
+											Q(moreneeds1): GOTO:issues
+										A: No
+											Q(noneeds): GOTO:print
+								A: No
+									Q(print): Would you like to save a copy of this form? (will open in another window as a downloadable document)
+									A:[javascript:save2('mailmerge.csv',csv())] Yes
+										Q(yesprint): Here you go GOTO:bye
+									A: No
+										Q(noprint): GOTO:bye
+
+	A(2): Others
+		Q(sorry): Unfortunately for now, this section is currently unavailable. Have a nice day!
+
+
+
+
+Q(bye): have a good day
