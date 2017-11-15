@@ -1,0 +1,59 @@
+Title: Repair Request Form Help 
+Author: For HomeLine
+Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/homeline.jpg');"></div>
+<input type="hidden" name="name" value="Repair Request Form Help"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/RepairRequestForm.docx"/>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Repair Request Form Help</h3>
+<p>Answer the following questions to fill out a repair request form through HomeLine.</p>
+Q(welcome): Welcome. What is your name?
+X:
+	Q(help): Hello <x>welcome</x>! What are seeking help with?
+	A(1): Residential Repairs
+		Q(landlordname): Thank you for that information. I will now guide you through the request for repairs form. First off, what is your landlord's full name?
+		X:
+			Q(landlordaddress): Got it,thanks.Next,what is your landlord's street address?(Please only give street address)
+			X:
+				Q(landlordrestofaddress): Thanks for that information. Next what is your landlord's city, state, and zip code. (please write it out as you would on a letter/envelope)
+				X:
+					Q(tenantname):Alright. Just a few more questions. Once again, what is your (or the tenant's) full name?
+					X:
+						Q(tenantaddress):Thanks. Now what is you (the tenant's) full address (the apartment in question)?
+						X:
+							Q(repair):Finally, what do you need repaired? (List only one)
+							X:
+								Q(needs): Do you have any other repair needs?
+								A: Yes
+									Q(issues): Please mention it here
+									X:
+										Q(otherneeds): Do you have any other repair needs?
+										A: Yes
+											Q(moreneeds1): Please mention it here
+											X:
+												Q(otherneeds1): Do you have any other repair needs?
+												A: Yes
+													Q(moreneeds2): Please mention it here
+													X:
+														Q(needsmore): If you have any more needs, please send the tenant a followup
+														A: Continue
+															Q(continue): GOTO:print
+												A: No
+													Q(noneeds1): GOTO:print
+													
+										A: No
+											Q(noneeds): GOTO:print
+								A: No
+									Q(print): Would you like to save a copy of this form? (will open in another window as a downloadable document)
+									A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+										Q(yesprint): Here you go GOTO:bye
+									A: No
+										Q(noprint): GOTO:bye
+
+	A(2): Others
+		Q(sorry): Unfortunately for now, this section is currently unavailable. Have a nice day!
+
+
+
+
+Q(bye): have a good day
