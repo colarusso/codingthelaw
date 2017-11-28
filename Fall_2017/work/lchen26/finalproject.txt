@@ -37,12 +37,12 @@ X:
 													X:
 														Q(needsmore): If you have any more needs, please send the tenant a followup
 														A: Continue
-															Q(continue): GOTO:print
+															Q(continue):GOTO:print
 												A: No
-													Q(noneeds1): GOTO:print
+													Q(noneeds1):GOTO:print
 													
 										A: No
-											Q(noneeds): GOTO:print
+											Q(noneeds):GOTO:print
 								A: No
 									Q(print): Would you like to save a copy of this form? (will open in another window as a downloadable document)
 									A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
