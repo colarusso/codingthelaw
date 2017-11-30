@@ -59,42 +59,6 @@ Year,Age,Race,Birth Rate
 2006,15-19 years,Hispanic,65.9
 2006,15-19 years,Non-Hispanic white,21.6
 2006,15-19 years,White total,31.1
-2005,15-19 years,All Races,33.9
-2005,15-19 years,Asian or Pacific Islander total,11.9
-2005,15-19 years,Black total,58.7
-2005,15-19 years,Hispanic,63.7
-2005,15-19 years,Non-Hispanic white,20.9
-2005,15-19 years,White total,29.7
-2004,15-19 years,All Races,34.2
-2004,15-19 years,Asian or Pacific Islander total,12.3
-2004,15-19 years,Black total,60.1
-2004,15-19 years,Hispanic,64.2
-2004,15-19 years,Non-Hispanic white,21.3
-2004,15-19 years,White total,29.9
-2003,15-19 years,All Races,34.3
-2003,15-19 years,Asian or Pacific Islander total,12.3
-2003,15-19 years,Black total,61
-2003,15-19 years,Hispanic,63.5
-2003,15-19 years,Non-Hispanic white,21.5
-2003,15-19 years,White total,29.9
-2002,15-19 years,All Races,35.1
-2002,15-19 years,Asian or Pacific Islander total,13
-2002,15-19 years,Black total,64
-2002,15-19 years,Hispanic,63.9
-2002,15-19 years,Non-Hispanic white,22.1
-2002,15-19 years,White total,30.3
-2001,15-19 years,All Races,36.8
-2001,15-19 years,Asian or Pacific Islander total,14.2
-2001,15-19 years,Black total,69.4
-2001,15-19 years,Hispanic,65.5
-2001,15-19 years,Non-Hispanic white,23.1
-2001,15-19 years,White total,31.2
-2000,15-19 years,All Races,39
-2000,15-19 years,Asian or Pacific Islander total,15.2
-2000,15-19 years,Black total,75
-2000,15-19 years,Hispanic,68.5
-2000,15-19 years,Non-Hispanic white,24.7
-2000,15-19 years,White total,32.7
 2015,20-24 years,All Races,59.7
 2015,20-24 years,Asian or Pacific Islander total,17.9
 2015,20-24 years,Black total,94.2
@@ -155,42 +119,6 @@ Year,Age,Race,Birth Rate
 2006,20-24 years,Hispanic,155.1
 2006,20-24 years,Non-Hispanic white,52.6
 2006,20-24 years,White total,71.7
-2005,20-24 years,All Races,74.5
-2005,20-24 years,Asian or Pacific Islander total,25.8
-2005,20-24 years,Black total,120.4
-2005,20-24 years,Hispanic,142.5
-2005,20-24 years,Non-Hispanic white,49.9
-2005,20-24 years,White total,67
-2004,20-24 years,All Races,72.3
-2004,20-24 years,Asian or Pacific Islander total,24.8
-2004,20-24 years,Black total,119.6
-2004,20-24 years,Hispanic,133.4
-2004,20-24 years,Non-Hispanic white,48.6
-2004,20-24 years,White total,64.5
-2003,20-24 years,All Races,71
-2003,20-24 years,Asian or Pacific Islander total,24.2
-2003,20-24 years,Black total,117.8
-2003,20-24 years,Hispanic,130.2
-2003,20-24 years,Non-Hispanic white,47.6
-2003,20-24 years,White total,63.2
-2002,20-24 years,All Races,70
-2002,20-24 years,Asian or Pacific Islander total,24.4
-2002,20-24 years,Black total,119
-2002,20-24 years,Hispanic,127.2
-2002,20-24 years,Non-Hispanic white,46.3
-2002,20-24 years,White total,61.6
-2001,20-24 years,All Races,70.8
-2001,20-24 years,Asian or Pacific Islander total,23.9
-2001,20-24 years,Black total,122.5
-2001,20-24 years,Hispanic,129.8
-2001,20-24 years,Non-Hispanic white,46.4
-2001,20-24 years,White total,61.5
-2000,20-24 years,All Races,72.2
-2000,20-24 years,Asian or Pacific Islander total,24.2
-2000,20-24 years,Black total,129
-2000,20-24 years,Hispanic,130.5
-2000,20-24 years,Non-Hispanic white,47
-2000,20-24 years,White total,61.7
 2015,25-29 years,All Races,66.9
 2015,25-29 years,Asian or Pacific Islander total,28.8
 2015,25-29 years,Black total,91.9
@@ -251,42 +179,6 @@ Year,Age,Race,Birth Rate
 2006,25-29 years,Hispanic,160.7
 2006,25-29 years,Non-Hispanic white,49.1
 2006,25-29 years,White total,72.4
-2005,25-29 years,All Races,71.5
-2005,25-29 years,Asian or Pacific Islander total,31.4
-2005,25-29 years,Black total,94.7
-2005,25-29 years,Hispanic,151.2
-2005,25-29 years,Non-Hispanic white,46
-2005,25-29 years,White total,67.7
-2004,25-29 years,All Races,69.1
-2004,25-29 years,Asian or Pacific Islander total,30.7
-2004,25-29 years,Black total,92.5
-2004,25-29 years,Hispanic,142.5
-2004,25-29 years,Non-Hispanic white,44.2
-2004,25-29 years,White total,65
-2003,25-29 years,All Races,66.2
-2003,25-29 years,Asian or Pacific Islander total,29
-2003,25-29 years,Black total,91.3
-2003,25-29 years,Hispanic,135.6
-2003,25-29 years,Non-Hispanic white,41.5
-2003,25-29 years,White total,61.7
-2002,25-29 years,All Races,62
-2002,25-29 years,Asian or Pacific Islander total,26.7
-2002,25-29 years,Black total,86.3
-2002,25-29 years,Hispanic,125.1
-2002,25-29 years,Non-Hispanic white,38.9
-2002,25-29 years,White total,57.5
-2001,25-29 years,All Races,59.6
-2001,25-29 years,Asian or Pacific Islander total,25.7
-2001,25-29 years,Black total,84.4
-2001,25-29 years,Hispanic,121
-2001,25-29 years,Non-Hispanic white,37.8
-2001,25-29 years,White total,54.9
-2000,25-29 years,All Races,58.5
-2000,25-29 years,Asian or Pacific Islander total,25.4
-2000,25-29 years,Black total,85.9
-2000,25-29 years,Hispanic,121.6
-2000,25-29 years,Non-Hispanic white,36.9
-2000,25-29 years,White total,52.9
 2015,30-34 years,All Races,60.3
 2015,30-34 years,Asian or Pacific Islander total,47.3
 2015,30-34 years,Black total,63.9
@@ -347,42 +239,6 @@ Year,Age,Race,Birth Rate
 2006,30-34 years,Hispanic,122.9
 2006,30-34 years,Non-Hispanic white,35.1
 2006,30-34 years,White total,55.5
-2005,30-34 years,All Races,50.4
-2005,30-34 years,Asian or Pacific Islander total,36.8
-2005,30-34 years,Black total,53.9
-2005,30-34 years,Hispanic,116.7
-2005,30-34 years,Non-Hispanic white,31.7
-2005,30-34 years,White total,49.8
-2004,30-34 years,All Races,47.3
-2004,30-34 years,Asian or Pacific Islander total,35.8
-2004,30-34 years,Black total,52
-2004,30-34 years,Hispanic,108.8
-2004,30-34 years,Non-Hispanic white,30
-2004,30-34 years,White total,46.2
-2003,30-34 years,All Races,44.2
-2003,30-34 years,Asian or Pacific Islander total,31.8
-2003,30-34 years,Black total,51.2
-2003,30-34 years,Hispanic,98.7
-2003,30-34 years,Non-Hispanic white,28
-2003,30-34 years,White total,42.3
-2002,30-34 years,All Races,41.3
-2002,30-34 years,Asian or Pacific Islander total,29.4
-2002,30-34 years,Black total,50.2
-2002,30-34 years,Hispanic,91
-2002,30-34 years,Non-Hispanic white,26.2
-2002,30-34 years,White total,38.8
-2001,30-34 years,All Races,40.3
-2001,30-34 years,Asian or Pacific Islander total,28.7
-2001,30-34 years,Black total,51.2
-2001,30-34 years,Hispanic,91.4
-2001,30-34 years,Non-Hispanic white,25.4
-2001,30-34 years,White total,37.2
-2000,30-34 years,All Races,39.3
-2000,30-34 years,Asian or Pacific Islander total,29.7
-2000,30-34 years,Black total,50.2
-2000,30-34 years,Hispanic,89.4
-2000,30-34 years,Non-Hispanic white,24.8
-2000,30-34 years,White total,35.9
 2015,35-39 years,All Races,34.1
 2015,35-39 years,Asian or Pacific Islander total,33.6
 2015,35-39 years,Black total,32.6
@@ -443,42 +299,6 @@ Year,Age,Race,Birth Rate
 2006,35-39 years,Hispanic,61.3
 2006,35-39 years,Non-Hispanic white,17.9
 2006,35-39 years,White total,26.6
-2005,35-39 years,All Races,24.5
-2005,35-39 years,Asian or Pacific Islander total,24.6
-2005,35-39 years,Black total,25.9
-2005,35-39 years,Hispanic,58.1
-2005,35-39 years,Non-Hispanic white,16.2
-2005,35-39 years,White total,23.9
-2004,35-39 years,All Races,23.5
-2004,35-39 years,Asian or Pacific Islander total,20.7
-2004,35-39 years,Black total,25.7
-2004,35-39 years,Hispanic,56
-2004,35-39 years,Non-Hispanic white,15.7
-2004,35-39 years,White total,22.8
-2003,35-39 years,All Races,22.3
-2003,35-39 years,Asian or Pacific Islander total,19.8
-2003,35-39 years,Black total,25.2
-2003,35-39 years,Hispanic,54
-2003,35-39 years,Non-Hispanic white,14.8
-2003,35-39 years,White total,21.3
-2002,35-39 years,All Races,20.9
-2002,35-39 years,Asian or Pacific Islander total,19.1
-2002,35-39 years,Black total,24.9
-2002,35-39 years,Hispanic,52.4
-2002,35-39 years,Non-Hispanic white,13.6
-2002,35-39 years,White total,19.5
-2001,35-39 years,All Races,20.4
-2001,35-39 years,Asian or Pacific Islander total,19.5
-2001,35-39 years,Black total,25.4
-2001,35-39 years,Hispanic,49.6
-2001,35-39 years,Non-Hispanic white,13.2
-2001,35-39 years,White total,18.6
-2000,35-39 years,All Races,19.7
-2000,35-39 years,Asian or Pacific Islander total,18.4
-2000,35-39 years,Black total,25.4
-2000,35-39 years,Hispanic,46.1
-2000,35-39 years,Non-Hispanic white,12.9
-2000,35-39 years,White total,17.9
 2015,40-44 years,All Races,9
 2015,40-44 years,Asian or Pacific Islander total,11.2
 2015,40-44 years,Black total,9.1
@@ -539,39 +359,3 @@ Year,Age,Race,Birth Rate
 2006,40-44 years,Hispanic,14.8
 2006,40-44 years,Non-Hispanic white,4.5
 2006,40-44 years,White total,6.3
-2005,40-44 years,All Races,6.2
-2005,40-44 years,Asian or Pacific Islander total,9.3
-2005,40-44 years,Black total,7.1
-2005,40-44 years,Hispanic,14.1
-2005,40-44 years,Non-Hispanic white,4.3
-2005,40-44 years,White total,5.9
-2004,40-44 years,All Races,6
-2004,40-44 years,Asian or Pacific Islander total,8.6
-2004,40-44 years,Black total,6.8
-2004,40-44 years,Hispanic,13.7
-2004,40-44 years,Non-Hispanic white,4.2
-2004,40-44 years,White total,5.6
-2003,40-44 years,All Races,5.8
-2003,40-44 years,Asian or Pacific Islander total,7.9
-2003,40-44 years,Black total,6.5
-2003,40-44 years,Hispanic,13.2
-2003,40-44 years,Non-Hispanic white,4.1
-2003,40-44 years,White total,5.5
-2002,40-44 years,All Races,5.4
-2002,40-44 years,Asian or Pacific Islander total,6.9
-2002,40-44 years,Black total,6.3
-2002,40-44 years,Hispanic,12.8
-2002,40-44 years,Non-Hispanic white,3.7
-2002,40-44 years,White total,5.1
-2001,40-44 years,All Races,5.3
-2001,40-44 years,Asian or Pacific Islander total,6.3
-2001,40-44 years,Black total,6.3
-2001,40-44 years,Hispanic,12.2
-2001,40-44 years,Non-Hispanic white,3.6
-2001,40-44 years,White total,4.9
-2000,40-44 years,All Races,5
-2000,40-44 years,Asian or Pacific Islander total,6.9
-2000,40-44 years,Black total,6.3
-2000,40-44 years,Hispanic,12.2
-2000,40-44 years,Non-Hispanic white,3.3
-2000,40-44 years,White total,4.5
