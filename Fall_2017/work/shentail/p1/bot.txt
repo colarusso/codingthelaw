@@ -8,57 +8,61 @@ Before: <input type="hidden" name="name" value="Fee Waiver for Civil Cases"/>
 Title: California Indigency Calculator
 Author: Chantal Choi
 
-Q(fee): Are you requesting for a <a href="http://www.courts.ca.gov/documents/fw001info.pdf?1511991475674" target=_new>fee waiver</a> and or a court appointed lawyer?
+Q(fee): Are you requesting for a <a href="http://www.courts.ca.gov/documents/fw001info.pdf?1511991475674" target=_new>fee waiver</a> and/or a court appointed lawyer?
 A: Yes
-	Q(1.1):GOTO:quest
+	Q(1.1):GOTO:vet
 A: No
 	Q(1.2): Sorry this chatbot is not suitable for you. Please find more information at the California court <a href="http://www.courts.ca.gov/" target=_new>website</a>.
+Q(vet): Are you a veteran looking for legal assistant?
+A: Yes. For more information on please check out the <a href="http://www.courts.ca.gov/37706.htm" target=_new>California court website</a>, <a href="http://legalassistance.law.af.mil/content/locator.php" target=_new>Armed Force Legal Assistance Office</a> or the <a href="http://www.vetslegal.com/" target=_new>Veterans Legal Institute</a>. 
+	Q(2.1): Would you like to continue with this chatbot?
+	A:Yes
+		Q(2.1.1):GOTO:quest
+	A:No			
+A:No	
+Q(3):GOTO:quest
 Q(quest): Are you involved in a criminal case or civil case in California?
 A: Criminal 
-	Q(2.1):GOTO:juvenile
+	Q(4.1):GOTO:juvenile
 A: Civil
-	Q(2.2):GOTO:pb
+	Q(4.2):GOTO:pb
 Q(juvenile): Are you under 18 years old or within the juvenile court system?
 A: Yes
-	Q(3.1): Please speak to your parents or a <a href="http://www.cpda.org/publicarea/county/countypdwebsites.html" target=_new>public defender</a>
+	Q(5.1): Please speak to your parents or a <a href="http://www.cpda.org/publicarea/county/countypdwebsites.html" target=_new>public defender</a>
 A: No
-	Q(3.2):GOTO:CRIM
+	Q(5.2):GOTO:CRIM
 Q(CRIM): Is it a felony or misdemeanor? (see definition <a href="http://www.courts.ca.gov/1000.htm" target=_new>here</a>)
 A:Felony
-	Q(4.1):GOTO:incomecrim
+	Q(6.1):GOTO:incomecrim
 A: Misdemeanor
-	Q(4.2):GOTO:incomecrim
-
+	Q(6.2):GOTO:incomecrim
 Q(incomecrim): Do you have income?
 A:Yes
-	Q(5.1):GOTO:spouse
+	Q(7.1):GOTO:spouse
 A:No
-	Q(5.2):GOTO:spouse
+	Q(7.2):GOTO:spouse
 Q(spouse):Do you have a spouse earning income in the family?
 A:Yes
-	Q(6.1): GOTO:child
+	Q(8.1): GOTO:child
 A:No
-	Q(6.2):GOTO:child
-
+	Q(8.2):GOTO:child
 Q(child): Do you have children or need to pay child support?
 A:Yes
-	Q(7.1):GOTO:asset
+	Q(9.1):GOTO:asset
 A:No
-	Q(7.2):GOTO:asset
-
+	Q(9.2):GOTO:asset
 Q(asset): Do you own any assets (house, car, stock, etc.)
 A:Yes
-	Q(8.1):GOTO:SUFF
+	Q(10.1):GOTO:SUFF
 A:No
-	Q(8.2):GOTO:SUFF
-
+	Q(10.2):GOTO:SUFF
 Q(SUFF): Do you have sufficient income to provide for yourself (household income+assets- all expenses)AND hire a private attorney?
 A:Yes
-	Q(9.1):GOTO:CRIMMAY
+	Q(11.1):GOTO:CRIMMAY
 A: No
-	Q(9.2):GOTO:CRIMQUAL
+	Q(11.2):GOTO:CRIMQUAL
 A:Maybe
-	Q(9.3):GOTO:CRIMMAY
+	Q(11.3):GOTO:CRIMMAY
 
 Q(CRIMMAY): You may still qualify for a court-appointed attorney. See <a href="http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN§ionNum=987." target=_new>CA Penal Code §987</a>. You can also contact a <a href="http://www.cpda.org/County/CountyPDWebSites.html" target=_new>public defender</a> for more information. 
 A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial statement and the court would decide.
@@ -68,9 +72,9 @@ A:[http://www.courts.ca.gov/documents/mc210.pdf] Please fill out this financial 
 
 Q(pb):Do you receive any public benefits (Foodstamp, Supplemental Security Income, SSP, Medi-Cal, County Relief/Federal Assistance, IHSS, CalWORKS or Tribal TANF and/or CAPI)?
 A:Yes (Please check all that applies when finishing the fee waiver form)
-	Q(12.1):GOTO:qual
+	Q(14.1):GOTO:qual
 A:No
-	Q(12.2):GOTO:household
+	Q(14.2):GOTO:household
 												
 Q(household): How many people are in your household?
 X:number
@@ -90,9 +94,9 @@ A:Please fill out some information to submit to the court.
 
 Q(not): Sorry your income is too high for a court fee waiver. Do you have enough income to pay for your household’s basic needs (food, shelter, clothes) AND the court fees?
 A:Yes
-	Q(15.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an<a href="http://www.courts.ca.gov/1001.htm" target=_new> attorney</a> or click <a href="http://www.courts.ca.gov/selfhelp-feewaiver.htm" target=_new> here </a>for more information.																			
+	Q(17.1):Hmmm, it seems like you are not eligible for a fee waiver, please see an<a href="http://www.courts.ca.gov/1001.htm" target=_new> attorney</a> or click <a href="http://www.courts.ca.gov/selfhelp-feewaiver.htm" target=_new> here </a>for more information.																			
 A:No
-	Q(15.2):GOTO:qual
+	Q(17.2):GOTO:qual
 
 
 										
