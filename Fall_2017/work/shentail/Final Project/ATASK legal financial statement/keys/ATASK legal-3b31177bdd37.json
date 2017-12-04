@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "atask-legal",
+  "private_key_id": "3b31177bdd37b77bec5b881427d02ca656310af5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCJpcEPmcTxGwtZ\nmUWW1ZxSca+V03g9G+mM+qfRTNHdphpWQO4AwDszxpca5RFfhbbq0GxW/DxFGSCY\nVnoj/VnLo3kFRIBGBMkBWyZ7IHCl9fxCkm2dBECL/2ht6KG9tVF2auJ84IfgdE8X\nvXdW3788mljIcKV3dogGtmqSWrjeQeXdpiDuvYUPOcPNsSccQSvIa6ur4nyMKBRa\n47WQCRNbffKjxiy9ylp055eR83YFGeiB4lvogcIpHuqNXmAQ2flvexIrCvCBYccB\n56sRrr9Pm6/et1yjRt80NQfX504eTJS6VCMtnO+jMU2ozPa1Xv85K+/9ISxjLVW1\niPl5h5BlAgMBAAECggEAMamlwfizd2BQFIg59OVmTNKqzM5rI/U1q0Fmmhvy3ltH\nRlaP6KJy2cftje0W+xV1/Tus0yeXoUCjI4OT9vc6VkBJck6YT2r7kOsvs53tNtvN\nI8HMHapClaBVr84OyTEpzqVayT6Dl8avILwh2izJRVbU8KC/+p3AD1fylJJ5/+pU\nP835HEJXtcO/KTTgS9dQKaAqa24xJEEFCrrZCGccXnuZ8/PX11TTJIL6Nb0kH1ZN\nTxNoWtz6vazyemXOjjKSZSUQnq4q++Yv6DKNuxQQIpG0UmDqbQTSS6xdwRRotc1C\nLLeiT9+dhteJkaKpDsv0zL03/rnNFPJRj1FaAJ/KQwKBgQDBGvl6sVLkgdCXi2q7\nXsJXRmFdgy7oj/D+Hi42Eb4JzAH+hOG72F0bcCuuIhp9eyCSv5xhhs6awmixEUUq\nvjZlgxxmKZejcyc+bxU2WL+FchUtkF3aiiJ33FiKUOg6eCR0v0cLOJ84Wcclpylp\ntuq76d0sOXVFMCL0obwoadiLewKBgQC2erq2yo7LL7JGWJaY249GkRMn0i37ju4N\njTCIrU5WJZAIPcWgF8H7D9G0EJ5XSyBfw5NbPR5bjRsz0vqNpsVfO8Ax5TeKuRuy\nMTGckBPCDpJT0Nhl25cj8qGHkGyxWipP6QQg/H1BE8HmuyZgilxMF+yQpxNFoxHY\nFOkm2fQdnwKBgAI2e+tjAs8piali6JszD8kOPmli6nOxypIu6FqoQ2Q7WT6AaVHM\nvexlkaqSK3mKoqnr1i/r6owtdCOrTf6aZWcuZHHrQhiWZjm57iVMSQ2PbBy0jc7G\nTHTRKpaTLMYWwFwyIO9I+9IafUS6MKhMd04l9Onf0q8zSQNCozRXWirnAoGBAJLL\nfkKoBmEcGI0QnO2QytyYvlEteoJAw+4w45c/26Hfi9OlZcLY+dqvKiJxr/9HV17S\nZUtjinVZuUVidt7XBzYKSh2ZaKn3KXmaq29oVAyrTjmQ61RdZ2OqvxjgLSArCZjJ\nOeITW+urKjQj38aP55nrMQpY7V76xNMQV1NCyGe/AoGANpt2X8O7wpMgkBGtY7Uj\nrML6ULH7jX0hz7fuPXosLhCEvCHORWCHc7gxuQfhhWEbmdwkfp5dFRp3SroUO6jp\nY+C9YYe+LlJsSjc70u1vxJyXWocS+7iaoE5RBaMiLB4+3LOF9bUrA7ZJ4DRmiFtD\nFxMJQuIJaWGsKrGTYGmqprQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "atask-legal@atask-legal.iam.gserviceaccount.com",
+  "client_id": "112346895562884267024",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atask-legal%40atask-legal.iam.gserviceaccount.com"
+}
