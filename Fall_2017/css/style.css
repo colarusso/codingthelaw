@@ -351,3 +351,13 @@ color: #888;
 		border-top-right-radius: 0px;
 		background: #ddd;
 	}
+	
+	a.anchor {
+		display:block;
+		float:right;
+		width:22px;
+		height:16px;
+		background-image: url("http://www.codingthelaw.org/images/link.png");	
+		background-repeat: no-repeat;
+		background-position: center; 		
+	}
