@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Project 3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Project 3 Winning the flight game in December</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11778,14 +11778,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Project-Three:-Likelihood-of-Pregnancy-based-on-Race-and-Age">Project Three: Likelihood of Pregnancy based on Race and Age<a class="anchor-link" href="#Project-Three:-Likelihood-of-Pregnancy-based-on-Race-and-Age">&#182;</a></h1><p>The project is to predict if there is a significant likelihood of pregnancy using the race and age of a unmarried woman as factors based on US data from 2006-2015. The different races being measured are All Races, Asian/Pacific Islander, African American/Black, Hispanic, Non-hispanic White, and All whites. The age groups measured are 15-19, 20-24, 25-29, 30-34, 35-39, and 40-44.</p>
+<h1 id="Project-Three:-Winning-the-flight-game-in-December">Project Three: Winning the flight game in December<a class="anchor-link" href="#Project-Three:-Winning-the-flight-game-in-December">&#182;</a></h1><p>The project is to predict if an airline that flies out from Boston to Chicago will be delayed in the month of December.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -11819,6 +11819,9 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">random</span>
 
 
+
+<span class="c1"># Custom functions</span>
+
 <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">):</span>
     <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Accuracey: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">acc</span>)
@@ -11838,7 +11841,13 @@ div#notebook {
     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;F1 Score: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="k">f1</span>)
 
 <span class="k">def</span> <span class="nf">plot_bound</span><span class="p">(</span><span class="n">Z_val</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">,</span><span class="n">binary</span><span class="p">):</span>
-
+    <span class="c1"># Z-val equals &quot;Yes&quot; value. E.g., &quot;Y&quot; or &quot;1&quot;. </span>
+    <span class="c1"># data equals df</span>
+    <span class="c1"># col1 and col2 defines which colums to use from data</span>
+    <span class="c1"># Plot binary decision boundary. </span>
+    <span class="c1"># For this, we will assign a color to each</span>
+    <span class="c1"># point in the mesh [x_min, m_max]x[y_min, y_max].</span>
+    
     <span class="n">x_min</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="n">col1</span><span class="p">]]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="n">col1</span><span class="p">]]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">*</span><span class="mf">0.10</span> 
     <span class="n">x_max</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="n">col1</span><span class="p">]]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="n">col1</span><span class="p">]]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">*</span><span class="mf">0.10</span><span class="p">)</span>
     <span class="n">y_min</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> 
@@ -11851,7 +11860,7 @@ div#notebook {
         <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Z</span><span class="o">==</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">Z</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])[:,</span> <span class="mi">1</span><span class="p">]</span>
-
+    <span class="c1"># Put the result into a color plot</span>
     <span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">xx</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">yy</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
@@ -11869,17 +11878,20 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h2><p>I retrieved this data from data.gov. Here I'm loading an edited version of unmarried_woman.csv from: <a href="https://catalog.data.gov/dataset/nonmarital-birth-rates-by-race-and-hispanic-origin-for-women-aged-15-44-united-states-1970">https://catalog.data.gov/dataset/nonmarital-birth-rates-by-race-and-hispanic-origin-for-women-aged-15-44-united-states-1970</a>. I used that data to create a table that relies on two variables to possibly affect the target variable.</p>
+<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><p>Here I'm loading the <a href="http://www.codingthelaw.org/Fall_2017/work/shentail/p3/data coding.csv">data</a> which i retrieved from the <a href="https://www.transtats.bts.gov/">Bureau of Transporation Statistics</a> under the Department of Transportation. 
+I first picked the data set that I wanted through the online database. The website isolated all flights to and from Boston. I then use Excel to pick out those flying from Boston to Chicago. Then i further picked out those in December. In order to have a better prediction, I also added another year which adds to the amount of data I have. 
+The data include flights flying out of Boston to Chicago in the month of December 2015 and December 2016. The airline that flown are coded into numbers. <a href="http://www.codingthelaw.org/Fall_2017/work/shentail/p3/L_AIRLINE_ID.csv">Here</a> is the airline ID code. Then there is a column for delay over 15 minutes where 1 = there is a delay and 0 = there is no delay or delay was not over 15minutes. Then there is a third column where the flight was cancelled.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;unmarried_woman.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load and peek at your data. Change the file name as needed. </span>
+<span class="n">raw_data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data coding.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> 
 <span class="n">raw_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -11892,7 +11904,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -11914,47 +11926,211 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Age</th>
-      <th>Race</th>
-      <th>Birth_Rate</th>
+      <th>AIRLINE_ID</th>
+      <th>Delay over 15</th>
+      <th>CANCELLED</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2015-01-01</td>
-      <td>15-19 years</td>
-      <td>All Races</td>
-      <td>20.2</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2015-01-01</td>
-      <td>15-19 years</td>
-      <td>Asian or Pacific Islander total</td>
-      <td>5.5</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2015-01-01</td>
-      <td>15-19 years</td>
-      <td>Black total</td>
-      <td>31.5</td>
+      <td>19805</td>
+      <td>1.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2015-01-01</td>
-      <td>15-19 years</td>
-      <td>Hispanic</td>
-      <td>31.6</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2015-01-01</td>
-      <td>15-19 years</td>
-      <td>Non-Hispanic white</td>
-      <td>13.9</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can explore unique entires by stating the column and using .unique() like this:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;AIRLINE_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;CANCELLED&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;19805&#39; &#39;20409&#39; &#39;20304&#39; &#39;19977&#39; &#39;19393&#39;]
+[  0.   1.  nan]
+[0 1]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to differentiate the airlines, we need to split up the airlines into different columns.  I followed the <a href="http://www.codingthelaw.org/Fall_2017/work/shentail/p3/L_AIRLINE_ID.csv">airline ID</a> and created the following columns.</p>
+<p>19805=AA American,
+20409=B6 Jetblue,
+20304=OO Skywest,
+19977=UA United,
+19393=WN Southwest</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;American Airlines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Jetblue Airways&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;SkyWest Airlines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;United Air Lines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Southwest Airlines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">raw_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AIRLINE_ID</th>
+      <th>Delay over 15</th>
+      <th>CANCELLED</th>
+      <th>American Airlines</th>
+      <th>Jetblue Airways</th>
+      <th>SkyWest Airlines</th>
+      <th>United Air Lines</th>
+      <th>Southwest Airlines</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19805</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -11972,174 +12148,18 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Filtering-Data-and-Training-Data">Filtering Data and Training Data<a class="anchor-link" href="#Filtering-Data-and-Training-Data">&#182;</a></h2><p>I started filtering through the data, making sense of the different variables and the certain number of entries. I edited the entries for the variables so that they would all appear as numerical values. I also created a new column, which I named Pregnancy, which would gauge if there is a likelihood that the woman would become pregnant. This column uses the Birth_Rate column, and if that number is greater than 50, it would be "Y" for pregnancy likelihood. Otherwise it would be "N".</p>
-<p>I made a table to train the data to use the variables age and race to gauge birth rate. This table falls under pregnant_class.df and will be used to analyze the data to make predictions.</p>
+<p>I can find out how many delays over 15min are there in the whole data set as well.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Race&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Birth_Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;15-19 years&#39; &#39;20-24 years&#39; &#39;25-29 years&#39; &#39;30-34 years&#39; &#39;35-39 years&#39;
- &#39;40-44 years&#39;]
-[&#39;All Races&#39; &#39;Asian or Pacific Islander total&#39; &#39;Black total&#39; &#39;Hispanic&#39;
- &#39;Non-Hispanic white&#39; &#39;White total&#39;]
-[  20.2    5.5   31.5   31.6   13.9   18.8   22.     6.2   34.4   15.
-   20.3   24.     7.2   38.5   37.6   16.2   21.9   26.7    8.1   43.4
-   41.8   17.8   24.1   28.4    8.6   46.7   44.7   25.5   31.1    9.2
-   50.8   50.    27.9   34.    10.6   55.9   56.7   21.8   30.4   35.9
-   11.4   59.7   62.4   22.5   31.9   36.5   11.9   61.3   65.4   22.6
-   32.3   35.5   12.    61.1   65.9   21.6   17.9   94.2   87.9   43.3
-   54.6   61.6   19.4   97.4   92.3   44.4   63.1   20.7  100.7   93.1
-   45.6   56.9   64.7  103.5   96.5   46.6   58.3   66.7   22.3  106.9
-  100.6   47.8   60.1   70.    23.2  112.6  110.5   49.5   63.4   74.4
-   25.3  119.5  125.4   51.4   67.3   78.1   26.4  124.   141.    52.9
-   70.9   79.8   27.1  125.3  153.8   53.4   72.6   79.1   26.8  125.5
-  155.1   52.6   71.7   66.9   28.8   91.9  109.1   48.8   63.3   67.6
-   31.4   93.3  111.2   49.1   63.5  112.    47.6   62.5   67.2   35.2
-   91.2  113.2   63.2   67.8   35.1   92.4  116.2   63.8   69.2   35.
-   92.5  123.9   48.    65.8   73.    36.2   95.6  139.4   49.3   69.7
-   75.7   33.5   97.   151.1   73.1   76.9   99.1  161.1   50.7   74.3
-   75.4   30.5   98.   160.7   72.4   60.3   47.3   63.9  101.4   59.8
-   58.1   47.    67.    97.3   43.1   57.7   56.6   44.1   60.6  100.1
-   40.9   56.2   56.3   43.6   59.6  103.9   40.2   42.3   59.1  106.
-   39.2   40.    58.6  105.8   38.7   56.8   57.1  112.4   37.9   58.8
-  121.6   38.4   60.    58.    36.9   59.9  127.    37.2   59.5   55.3
-   58.4  122.9   55.5   34.1   33.6   32.6   24.8   34.8   33.4   36.    32.
-   58.2   24.2   31.8   30.9   30.1   29.7   57.6   29.9   27.    28.9
-   30.6   29.6   26.6   27.8   61.7   30.7   27.3   63.7   20.    30.2
-   30.3   28.5   20.4   28.7   28.    64.9   19.2   29.1    9.    11.2
-    9.1   18.1    6.8    8.2    8.5   12.6    8.8   16.8    6.5    7.6
-    8.3    8.4    6.1    7.7   12.1   16.5    9.9    7.8    6.     8.
-   16.3    5.8   17.1    7.5   10.8    5.2    7.3    7.4   14.9    4.6
-    9.4   14.8    4.5    6.3]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;20-24 years&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[37]:</div>
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Age</th>
-      <th>Race</th>
-      <th>Birth_Rate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>60</th>
-      <td>2015-01-01</td>
-      <td>20-24 years</td>
-      <td>All Races</td>
-      <td>59.7</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>2015-01-01</td>
-      <td>20-24 years</td>
-      <td>Asian or Pacific Islander total</td>
-      <td>17.9</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>2015-01-01</td>
-      <td>20-24 years</td>
-      <td>Black total</td>
-      <td>94.2</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>2015-01-01</td>
-      <td>20-24 years</td>
-      <td>Hispanic</td>
-      <td>87.9</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>2015-01-01</td>
-      <td>20-24 years</td>
-      <td>Non-Hispanic white</td>
-      <td>43.3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of entire table: </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="k">len</span>(raw_data_df))
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of entires matching filter: </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="k">len</span>(raw_data_df[raw_data_df[&quot;Age&quot;]==&quot;20-24 years&quot;]))
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of entires matching filter: </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="k">len</span>(raw_data_df[raw_data_df[&quot;Delay over 15&quot;]==1]))
 </pre></div>
 
 </div>
@@ -12154,8 +12174,8 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Size of entire table: 360 
-Size of entires matching filter: 60 
+<pre>Size of entire table: 1234 
+Size of entires matching filter: 181 
 </pre>
 </div>
 </div>
@@ -12164,24 +12184,26 @@ Size of entires matching filter: 60
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So there are a total of 1234 flights in the month of December 2015 and 2016. Out of the 1234 flights, 181 of them were delayed for over 15min.  Since i am only looking at the delays, I do not need the 'cancelled' column.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;15-19 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;20-24 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;25-29 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">26</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;30-34 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;35-39 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;40-44 years&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;All Races&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Asian or Pacific Islander total&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Black total&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Non-Hispanic white&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;White total&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can remove unwanted colums like so</span>
+<span class="c1"># for a single column</span>
+<span class="n">processed_data_df</span> <span class="o">=</span> <span class="n">raw_data_df</span>
+<span class="n">processed_data_df</span> <span class="o">=</span> <span class="n">processed_data_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;CANCELLED&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12193,7 +12215,7 @@ Size of entires matching filter: 60
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12215,47 +12237,65 @@ Size of entires matching filter: 60
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Age</th>
-      <th>Race</th>
-      <th>Birth_Rate</th>
+      <th>AIRLINE_ID</th>
+      <th>Delay over 15</th>
+      <th>American Airlines</th>
+      <th>Jetblue Airways</th>
+      <th>SkyWest Airlines</th>
+      <th>United Air Lines</th>
+      <th>Southwest Airlines</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>1</td>
-      <td>20.2</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>2</td>
-      <td>5.5</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>3</td>
-      <td>31.5</td>
+      <td>19805</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>4</td>
-      <td>31.6</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>5</td>
-      <td>13.9</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -12268,13 +12308,26 @@ Size of entires matching filter: 60
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are also NaN in the column on Delayed over 15. Those are empty becuse the flights were cancelled. These flights should not be counted in the data set. Therefore I have to remove the NaN data.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span><span class="p">[</span><span class="s2">&quot;Pregnant&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;N&quot;</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for the special case of when a value is NaN, you can filter based on the value not being null (i.e., empty)</span>
+<span class="n">processed_data_df</span> <span class="o">=</span> <span class="n">processed_data_df</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">])]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of entire table: </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="k">len</span>(processed_data_df)) 
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1"># this gets rid of a few rows from 1234 to 1200</span>
 </pre></div>
 
 </div>
@@ -12286,7 +12339,16 @@ Size of entires matching filter: 60
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Size of entire table: 1200 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12308,53 +12370,65 @@ Size of entires matching filter: 60
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Age</th>
-      <th>Race</th>
-      <th>Birth_Rate</th>
-      <th>Pregnant</th>
+      <th>AIRLINE_ID</th>
+      <th>Delay over 15</th>
+      <th>American Airlines</th>
+      <th>Jetblue Airways</th>
+      <th>SkyWest Airlines</th>
+      <th>United Air Lines</th>
+      <th>Southwest Airlines</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>1</td>
-      <td>20.2</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>2</td>
-      <td>5.5</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>3</td>
-      <td>31.5</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>4</td>
-      <td>31.6</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>5</td>
-      <td>13.9</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -12369,11 +12443,16 @@ Size of entires matching filter: 60
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw_data_df</span><span class="p">[</span><span class="s1">&#39;Birth_Rate&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;Pregnant&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
-<span class="n">raw_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can replace values in a column based on logic like so</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;19805&#39;</span><span class="p">,</span> <span class="s1">&#39;American Airlines&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;20409&#39;</span><span class="p">,</span> <span class="s1">&#39;Jetblue Airways&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;20304&#39;</span><span class="p">,</span> <span class="s1">&#39;SkyWest Airlines&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;19977&#39;</span><span class="p">,</span> <span class="s1">&#39;United Air Lines&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">processed_data_df</span><span class="p">[</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;19393&#39;</span><span class="p">,</span> <span class="s1">&#39;Southwest Airlines&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12385,7 +12464,7 @@ Size of entires matching filter: 60
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12407,53 +12486,181 @@ Size of entires matching filter: 60
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Age</th>
-      <th>Race</th>
-      <th>Birth_Rate</th>
-      <th>Pregnant</th>
+      <th>AIRLINE_ID</th>
+      <th>Delay over 15</th>
+      <th>American Airlines</th>
+      <th>Jetblue Airways</th>
+      <th>SkyWest Airlines</th>
+      <th>United Air Lines</th>
+      <th>Southwest Airlines</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2015-01-01</td>
-      <td>18</td>
+      <td>19805</td>
+      <td>0.0</td>
       <td>1</td>
-      <td>20.2</td>
-      <td>N</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>2</td>
-      <td>5.5</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>3</td>
-      <td>31.5</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>4</td>
-      <td>31.6</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2015-01-01</td>
-      <td>18</td>
-      <td>5</td>
-      <td>13.9</td>
-      <td>N</td>
+      <td>19805</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since i transferred all the data of Airline_ID to the table, i do not need that column anymore.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can remove unwanted colums like so</span>
+<span class="n">processed_data_df</span> <span class="o">=</span> <span class="n">processed_data_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;AIRLINE_ID&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">processed_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Delay over 15</th>
+      <th>American Airlines</th>
+      <th>Jetblue Airways</th>
+      <th>SkyWest Airlines</th>
+      <th>United Air Lines</th>
+      <th>Southwest Airlines</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -12468,30 +12675,16 @@ Size of entires matching filter: 60
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I&#39;m now going to make a table to be used in training some models</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The set will be for classifiers where the target is a class.</span>
-
-<span class="n">pregnant_class_df</span> <span class="o">=</span> <span class="n">raw_data_df</span><span class="p">[[</span>
-                               <span class="s1">&#39;Pregnant&#39;</span><span class="p">,</span> 
-                               <span class="s1">&#39;Age&#39;</span><span class="p">,</span>
-                                <span class="s1">&#39;Race&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This set will be for classifiers where the target is a class.</span>
+<span class="n">delay_class_df</span> <span class="o">=</span> <span class="n">processed_data_df</span><span class="p">[[</span>
+                               <span class="s1">&#39;Delay over 15&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;American Airlines&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;United Air Lines&#39;</span>
                                <span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">pregnant_class_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">delay_class_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12503,7 +12696,7 @@ Size of entires matching filter: 60
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[48]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12525,41 +12718,41 @@ Size of entires matching filter: 60
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Pregnant</th>
-      <th>Age</th>
-      <th>Race</th>
+      <th>Delay over 15</th>
+      <th>American Airlines</th>
+      <th>United Air Lines</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>N</td>
-      <td>18</td>
+      <td>0.0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>N</td>
-      <td>18</td>
-      <td>2</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>N</td>
-      <td>18</td>
-      <td>3</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>N</td>
-      <td>18</td>
-      <td>4</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>N</td>
-      <td>18</td>
-      <td>5</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -12577,52 +12770,39 @@ Size of entires matching filter: 60
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Training-and-Validation">Training and Validation<a class="anchor-link" href="#Training-and-Validation">&#182;</a></h2><p>Above I created the dataset worth exploring:</p>
-<ul>
-<li><strong><code>pregnancy_class_df</code></strong>. The data needed to access <em>pregnancy likelihood</em> as a categorical variable.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pregnant_class_df">pregnant_class_df<a class="anchor-link" href="#pregnant_class_df">&#182;</a></h2>
+<h2 id="Taining-and-Validation:-delay_class_df">Taining and Validation: delay_class_df<a class="anchor-link" href="#Taining-and-Validation:-delay_class_df">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pregnant_class_df</span>
-<span class="n">holdout</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.20</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">delay_class_df</span>
+<span class="n">holdout</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 <span class="n">training</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">holdout</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
 
 <span class="c1"># Define the target (y) and feature(s) (X)</span>
-<span class="n">features_train</span> <span class="o">=</span> <span class="n">training</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Pregnant&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">labels_train</span> <span class="o">=</span> <span class="n">training</span><span class="p">[</span><span class="s2">&quot;Pregnant&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">features_train</span> <span class="o">=</span> <span class="n">training</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">labels_train</span> <span class="o">=</span> <span class="n">training</span><span class="p">[</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
-<span class="n">features_test</span> <span class="o">=</span> <span class="n">holdout</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span> <span class="s2">&quot;Pregnant&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">labels_test</span> <span class="o">=</span> <span class="n">holdout</span><span class="p">[</span><span class="s2">&quot;Pregnant&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">features_test</span> <span class="o">=</span> <span class="n">holdout</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">labels_test</span> <span class="o">=</span> <span class="n">holdout</span><span class="p">[</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
 <span class="c1"># What percentage of the time is target Y?</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentage of Ys: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Pregnant&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Y&quot;</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentage of 1s: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">]</span><span class="o">==</span> <span class="mi">1</span> <span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
 
 <span class="c1">#### initial visualization</span>
-<span class="n">feature_1_no</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;N&quot;</span><span class="p">]</span>
-<span class="n">feature_2_no</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;N&quot;</span><span class="p">]</span>
-<span class="n">feature_1_yes</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Y&quot;</span><span class="p">]</span>
-<span class="n">feature_2_yes</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Y&quot;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">feature_1_yes</span><span class="p">,</span> <span class="n">feature_2_yes</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Likely Pregnant&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">feature_1_no</span><span class="p">,</span> <span class="n">feature_2_no</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Unlikely Pregnant&quot;</span><span class="p">)</span>
+<span class="n">feature_1_no</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">feature_2_no</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">feature_1_yes</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">feature_2_yes</span> <span class="o">=</span> <span class="p">[</span><span class="n">features_test</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features_test</span><span class="p">))</span> <span class="k">if</span> <span class="n">labels_test</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">feature_1_yes</span><span class="p">,</span> <span class="n">feature_2_yes</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Delay over 15&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">feature_1_no</span><span class="p">,</span> <span class="n">feature_2_no</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Not Delay over 15&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Race&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;American Airlines&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;United Air Lines&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -12638,7 +12818,7 @@ Size of entires matching filter: 60
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Percentage of Ys: 0.2861111111111111
+<pre>Percentage of 1s: 0.15083333333333335
 
 </pre>
 </div>
@@ -12650,189 +12830,163 @@ Size of entires matching filter: 60
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -12845,7 +12999,7 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Logistic Regression</span>
@@ -12854,12 +13008,12 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 <span class="n">pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Logistic Regression&quot;</span><span class="p">)</span>
 <span class="n">evaluate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">)</span>  
-<span class="n">plot_bound</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span><span class="n">holdout</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#plot_bound(&quot;Y&quot;,holdout,1,2,0)</span>
 
 
 <span class="c1"># Test some spot</span>
 <span class="n">x_test</span> <span class="o">=</span> <span class="mi">70</span>
-<span class="n">y_test</span> <span class="o">=</span> <span class="mi">16000</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="mi">160000</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">]])[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">([[</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">]])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
@@ -12871,7 +13025,7 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 <span class="n">pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Decision Tree&quot;</span><span class="p">)</span>
 <span class="n">evaluate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">)</span>
-<span class="n">plot_bound</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span><span class="n">holdout</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#plot_bound(&quot;Y&quot;,holdout,1,2,0)</span>
 
 
 
@@ -12881,7 +13035,7 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 <span class="n">pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Forest&quot;</span><span class="p">)</span>
 <span class="n">evaluate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">)</span>  
-<span class="n">plot_bound</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span><span class="n">holdout</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#plot_bound(&quot;Y&quot;,holdout,1,2,0)</span>
 
 
 <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">SVC</span>
@@ -12890,6 +13044,7 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 <span class="n">pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SVM&quot;</span><span class="p">)</span>
 <span class="n">evaluate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">labels_test</span><span class="p">)</span>  
+<span class="c1">#plot_bound(&quot;Y&quot;,holdout,1,2,0) # plot doesn&#39;t work with SVM</span>
 </pre></div>
 
 </div>
@@ -12905,11 +13060,46 @@ DvFlb79nrT1gjPkGMN5a+800hybSLxqWEUmg45vum4DXO944PQ+4Jb1RifSfeu4iIg5Sz11ExEEq
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Logistic Regression
-Accuracey: 0.75
+Accuracey: 0.85
 
-True Negatives: 54
+True Negatives: 51
 False Positives: 0
-False Negatives: 18
+False Negatives: 9
+True Positives: 0
+Recall: nan
+Precision: 0.0
+F1 Score: nan
+
+0.0
+0.0
+
+
+Decision Tree
+Accuracey: 0.85
+
+True Negatives: 51
+False Positives: 0
+False Negatives: 9
+True Positives: 0
+Recall: nan
+Precision: 0.0
+F1 Score: nan
+Random Forest
+Accuracey: 0.85
+
+True Negatives: 51
+False Positives: 0
+False Negatives: 9
+True Positives: 0
+Recall: nan
+Precision: 0.0
+F1 Score: nan
+SVM
+Accuracey: 0.85
+
+True Negatives: 51
+False Positives: 0
+False Negatives: 9
 True Positives: 0
 Recall: nan
 Precision: 0.0
@@ -12922,329 +13112,12 @@ F1 Score: nan
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\Loren\Anaconda3\lib\site-packages\ipykernel_launcher.py:37: RuntimeWarning: invalid value encountered in long_scalars
-C:\Users\Loren\Anaconda3\lib\site-packages\ipykernel_launcher.py:39: RuntimeWarning: divide by zero encountered in double_scalars
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-jLZO5BcqAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Y
-1.0
-
-
-Decision Tree
-Accuracey: 0.819444444444
-
-True Negatives: 54
-False Positives: 0
-False Negatives: 13
-True Positives: 5
-Recall: 1.0
-Precision: 0.277777777778
-F1 Score: 0.434782608696
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-u9aJ9E8l+VSSdPfnkrxi0YkAeMqBlzuSXJrkf/bcf7KqjnT3qf0efNlll22dlckWcvz48cMeAWBt
-6+ykH0tyyd6/c6ZAA3B2rRPpv0vyM0lSVa9M8sVFJwLgKetc7rgnybVV9fdJtpK8admRANi1tb29
-fdgzAHAG3swCMJhIAwwm0gCDrfPE4capqouS3JXkxUmem+TtSf45yfuTbCf5UpI3d/f3D2nEs+4M
-5/xwkk8k+dfVw/6su//8UAZcSFU9O8kdSSo7a3siyXey2Wu93zlflA1f6ySpqiuSPJjk2iSnsgHr
-fKHupN+Q5JHuflWS65K8O8m7kty6OraV5OcPcb4l7HfOL0/yru4+tvqzcf9pk7w+Sbr76iS3JnlH
-Nn+t9zvnjV/r1UbkfUmeWB3aiHW+UCP9kSS3rW5vZecn7suT/M3q2CeT/PQhzLWkM53zz1bVZ6rq
-zqq65Ix/+zzV3R9PctPq7ouSfCMbvtbPcM4bvdZJbk/y3iRfXd3fiHW+ICPd3d/q7m+u/qF+NDu7
-ja3u3n094jeT/NChDbiAM5zz55O8pbuvSfLvSf7gMGdcSnefqqoPJPnTJCez4Wud7HvOG73WVXU8
-yde7+949hzdinS/ISCdJVV2V5NNJPtTdH06y91rVJdnZfWyUfc75nu5+cPXle5L86KENt7DufmOS
-l2TnWu0P7PnSRq518rRzvm/D1/rG7Lzp7oEkL0vywSRX7Pn6ebvOF2Skq+r5Se5L8rvdfdfq8Beq
-6tjq9uuS/O1hzLaUM5zzvVX1Y6vbr8nOEy4bpapuqKpbVncfz84P43/Y8LXe75w/tslr3d3XdPer
-u/tYkn9K8htJPrkJ63xBvuOwqv44ya8leWjP4ZuT/EmS5yT5lyS/1d1PHsJ4izjDOf9+kj9K8r0k
-X0tyU3c/dgjjLaaqLk5yd5Irs/MKhz/Mzvrekc1d6/3O+eHsXPrY2LXetdpNn8jOD6fzfp0vyEgD
-nC8uyMsdAOcLkQYYTKQBBhNpgMFEGmAwkQYYTKQBBvs/7F8nqoPYxBwAAAAASUVORK5CYII=
-"
->
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Random Forest
-Accuracey: 0.902777777778
-
-True Negatives: 52
-False Positives: 2
-False Negatives: 5
-True Positives: 13
-Recall: 0.866666666667
-Precision: 0.722222222222
-F1 Score: 0.787878787879
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-gg==
-"
->
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>SVM
-Accuracey: 0.902777777778
-
-True Negatives: 50
-False Positives: 4
-False Negatives: 3
-True Positives: 15
-Recall: 0.789473684211
-Precision: 0.833333333333
-F1 Score: 0.810810810811
+<pre>/Applications/anaconda/lib/python3.6/site-packages/ipykernel_launcher.py:40: RuntimeWarning: invalid value encountered in long_scalars
+/Applications/anaconda/lib/python3.6/site-packages/ipykernel_launcher.py:42: RuntimeWarning: divide by zero encountered in double_scalars
+/Applications/anaconda/lib/python3.6/site-packages/sklearn/linear_model/base.py:352: RuntimeWarning: overflow encountered in exp
+  np.exp(prob, prob)
+/Applications/anaconda/lib/python3.6/site-packages/ipykernel_launcher.py:40: RuntimeWarning: invalid value encountered in long_scalars
+/Applications/anaconda/lib/python3.6/site-packages/ipykernel_launcher.py:42: RuntimeWarning: divide by zero encountered in double_scalars
 </pre>
 </div>
 </div>
@@ -13258,10 +13131,26 @@ F1 Score: 0.810810810811
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Result-analysis">Result analysis<a class="anchor-link" href="#Result-analysis">&#182;</a></h2><p>Based on the result, the analysis is that there is a possibility at most ages and races that pregnancy will occur. However, the most common age was the 25-29 range, and the most common races to get pregnant were Hispanics and African-Americans. The logisitical regression was the least accurate with many false negatives, meaning that it was predicting that the pregnancy probability would be less than was suggested in the data. There was the fact that there were several variables being tested and spewing out multiple results for each data point, which may have resulted in the inconsistencies. There was also fewer false positives, proving that the data was skewed toward the side of less likely. Overall, the conclusion that all the graphs and analysis pointed to was that unmarried Hispanic and African-American women were more likely to become pregnant.</p>
+<h2 id="Result-analysis">Result analysis<a class="anchor-link" href="#Result-analysis">&#182;</a></h2><p>Based on the result, the accuracy was about 83%. This seems to say that the prediction was pretty accurate. If you look further into the results though, you can see the flaw in this prediction model.</p>
+<p>First there are no positives in the model. The model is basically saying that there are no delays at all. But from the data, there are about 6.7% of flights delayed in the month of December 2015,2016, and there is bound to be a delay during the cold snowy month from Boston to Chicago. 
+The high negative predictive values also conform to the result, which shows that there is a high probablity (FN:9, TN: 51) an airline you pick would not be delayed most of the time.</p>
+<p>Therefore even though the accuracy is high, the model was shown not to be very good at predicting if a certain airline flying to Chicago will be delayed. The model therefore is not very useful when it always suggest the same result. To create a better model, maybe there could be an additional row of other months which can change the prediction to which month is better suited to fly without delays or another feature like when it snows or not to add to the mix of data. The increase of data might also be helpful because it might increase the percentage of delays and therefore have a better predictive model.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
