@@ -21,8 +21,8 @@ X:
 	X:
 		Q(2.1.1):Thanks, nice to meet you <x>tname1</x>!  I'm here to help you with a variety of issues with your landlord.  I just need a bit more background information. GOTO:number
 
-Q(number):What is the best phone number to reach you?
-X:number
+Q(number):What is the best phone number to reach you? (format (xxx) xxx-xxxx)
+X:
 	Q(lname):What is your landlord's full name?
 	X:
 		Q(laddress):What is your landlord's street address?  For example: "123 Main st."
