@@ -122,9 +122,8 @@ X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
-Q(repairs):
-<input type="hidden" name="name" value="Repair Request Form Help"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
+Q(repairs):<input type="hidden" name="name" value="Repair Request Form Help"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
 What do you need repaired? (List only one)
 X:
 	Q(needs): Do you have any other repair needs?
