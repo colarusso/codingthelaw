@@ -152,9 +152,8 @@ X:
 Q(lease):<input type="hidden" name="name" value="Request for Lease"/>
 	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 	Your request for the lease is ready. GOTO:print
-Q(utility):
-<input type="hidden" name="name" value="Utility Bill Request"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+Q(utility): <input type="hidden" name="name" value="Utility Bill Request"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
 What utility bill do you need? (Examples: Electricity, Gas, Water)
 X:
 	Q(thanks): That's all the information I need. GOTO:print
