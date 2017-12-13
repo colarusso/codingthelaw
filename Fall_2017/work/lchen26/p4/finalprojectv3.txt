@@ -37,8 +37,8 @@ X:
 Q(issue):What can we help you with?
 A:You want your landlord to return a security deposit.
 	Q(4.1):GOTO:deposit
-A:You want to request repair on your property.
-	Q(4.2):GOTO:repairs
+A:You want to request a copy of a utility bill.
+	Q:GOTO:utility
 A:You received a bill from your landlord for repairs.
 	Q(4.3):GOTO:repairbill
 A:You want to remind your landlord of your right to privacy.
@@ -53,8 +53,6 @@ A:You want to request a copy of your lease.
 	Q(4.8):GOTO:lease
 A:See More Issues
 	Q(4.9):What can we help you with?
-	A:You want to request a copy of a utility bill.
-		Q(4.9.1):GOTO:utility
 	A:You want to demand the return of your property that's been taken.
 		Q(4.9.2):GOTO:property 
 	A:You received a bill from your landlord for bug exterminations.
@@ -122,32 +120,7 @@ X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
-Q(repairs):<input type="hidden" name="name" value="Repair Request Form Help"/> 
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
-What do you need repaired? (List only one)
-X:
-	Q(needs): Do you have any other repair needs?
-	A: Yes
-		Q(issues): Please mention it here
-		X:
-			Q(otherneeds): Do you have any other repair needs?
-			A: Yes
-				Q(moreneeds1): Please mention it here
-				X:
-					Q(otherneeds1): Do you have any other repair needs?
-					A: Yes
-						Q(moreneeds2): Please mention it here
-						X:
-							Q(needsmore): If you have any more needs, please send the landlord a followup
-							A: Continue
-								Q(continue):GOTO:print
-					A: No
-						Q(noneeds2):GOTO:print
 
-			A: No
-				Q(noneeds1):GOTO:print
-	A: No
-		Q(noneeds):GOTO:print	
 Q(lease):<input type="hidden" name="name" value="Request for Lease"/>
 	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 	Your request for the lease is ready. GOTO:print
