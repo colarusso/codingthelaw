@@ -61,9 +61,10 @@ A:See More Issues
 		Q(4.9.3):GOTO:bugbill
 
 
-Q(deposit):How much was your security deposit before interest? (Example: 2500.00)
+Q(deposit):
 <input type="hidden" name="name" value="Deposit Request"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/deposit.docx"/>
+How much was your security deposit before interest? (Example: 2500.00)
 X:
 	Q(interest): How much is that with interest? (Example: 2645.23)
 	X:
@@ -84,9 +85,10 @@ Your response to an invoice for repairs is ready. GOTO:print
 Q(privacy): <input type="hidden" name="name" value="Privacy Rights"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
 I have all the information I need. GOTO:print
-Q(neighbor1): What is the name of the neighbor who has been causing an incident? (First and last name)
+Q(neighbor1): 
 <input type="hidden" name="name" value="Neighbor Incident"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/>
+What is the name of the neighbor who has been causing an incident? (First and last name)
 X:
 	Q(date1): When did this incident occur? (Month Day, Year)
 	X:
@@ -119,9 +121,10 @@ X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
-Q(repair):What do you need repaired? (List only one)
+Q(repair):
 <input type="hidden" name="name" value="Repair Request Form Help"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
+What do you need repaired? (List only one)
 X:
 	Q(needs): Do you have any other repair needs?
 	A: Yes
@@ -148,9 +151,10 @@ X:
 Q(lease):<input type="hidden" name="name" value="Request for Lease"/>
 	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 	Your request for the lease is ready. GOTO:print
-Q(utility):What utility bill do you need? (Examples: Electricity, Gas, Water)
+Q(utility):
 <input type="hidden" name="name" value="Utility Bill Request"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+What utility bill do you need? (Examples: Electricity, Gas, Water)
 X:
 	Q(thanks): That's all the information I need. GOTO:print
 Q(property):Has the property the landlord taken being held on the premises or off the premises?
