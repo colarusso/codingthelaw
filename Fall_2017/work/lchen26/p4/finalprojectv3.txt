@@ -38,7 +38,7 @@ Q(issue):What can we help you with?
 A:You want your landlord to return a security deposit.
 	Q(4.1):GOTO:deposit
 A:You want to request repair on your property.
-	Q(4.2):GOTO:repair
+	Q(4.2):GOTO:repairs
 A:You received a bill from your landlord for repairs.
 	Q(4.3):GOTO:repairbill
 A:You want to remind your landlord of your right to privacy.
@@ -121,7 +121,7 @@ X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
-Q(repair):
+Q(repairs):
 <input type="hidden" name="name" value="Repair Request Form Help"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
 What do you need repaired? (List only one)
