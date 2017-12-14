@@ -21,7 +21,7 @@ X:
 	X:
 		Q(2.1.1):Thanks, nice to meet you <x>tname1</x>!  I'm here to help you with a variety of issues with your landlord.  I just need a bit more background information. GOTO:number
 
-Q(number):What is the best phone number to reach you? (example (618)-344-3433))
+Q(number):What is the best phone number to reach you? (example (618)-344-3433)
 X:
 	Q(taddress):What is your street address?  For example: "123 Main st."
 	X:
@@ -37,14 +37,14 @@ X:
 Q(issue):What can we help you with?
 A:You want your landlord to return a security deposit.
 	Q(4.1):GOTO:deposit
-A:You want to request repair on your property.
-	Q(4.2):GOTO:repair
+A:You want to request a copy of a utility bill.
+	Q:GOTO:utility
 A:You received a bill from your landlord for repairs.
 	Q(4.3):GOTO:repairbill
 A:You want to remind your landlord of your right to privacy.
 	Q(4.4):GOTO:privacy
 A:You want your landlord to do something about an incident with your neighbors.
-	Q(4.5):GOTO:neighbor1
+	Q(4.5):GOTO:neighbor
 A:You want to remind your landlord of your right to have guests.
 	Q(4.6):GOTO:guests
 A:You feel your landlord has retaliated/punished you because you previously asserted your rights.
@@ -53,17 +53,16 @@ A:You want to request a copy of your lease.
 	Q(4.8):GOTO:lease
 A:See More Issues
 	Q(4.9):What can we help you with?
-	A:You want to request a copy of a utility bill.
-		Q(4.9.1):GOTO:utility
 	A:You want to demand the return of your property that's been taken.
 		Q(4.9.2):GOTO:property 
 	A:You received a bill from your landlord for bug exterminations.
 		Q(4.9.3):GOTO:bugbill
 
 
-Q(deposit):How much was your security deposit before interest? (Example: 2500.00)
+Q(deposit):
 <input type="hidden" name="name" value="Deposit Request"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/deposit.docx"/>
+How much was your security deposit before interest? (Example: 2500.00)
 X:
 	Q(interest): How much is that with interest? (Example: 2645.23)
 	X:
@@ -84,13 +83,14 @@ Your response to an invoice for repairs is ready. GOTO:print
 Q(privacy): <input type="hidden" name="name" value="Privacy Rights"/> 
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
 I have all the information I need. GOTO:print
-Q(neighbor1): What is the name of the neighbor who has been causing an incident? (First and last name)
-<input type="hidden" name="name" value="Neighbor Incident"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/>
+Q(neighbor):
+	<input type="hidden" name="name" value="Neighbor Incident"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/> 
+What is the name of the neighbor who has been causing an incident? (First and last name)
 X:
-	Q(date1): When did this incident occur? (Month Day, Year)
+	Q(date): When did this incident occur? (Month Day, Year)
 	X:
-		Q(incident1): What was this incident?  (example: Loud noise, violence, trespassing)
+		Q(incident): What was this incident?  (example: Loud noise, violence, trespassing)
 		X:
 			Q(more): Do you have another incident to report?
 			A(yes): Yes
@@ -101,11 +101,12 @@ X:
 						Q(incident2): What was this incident?  (example: Loud noise, violence, trespassing)
 						X:
 							Q(more2): Do you have another incident to report?
+						
 							A(yes2): Yes
 								Q(followup): Please send your landlord a followup.
 								A:Continue
 									Q(continue2):GOTO:print
-							A(no2):
+							A(no2): No
 								Q(thanks4): That is all the info I need. GOTO:print
 			A(no): No
 				Q(thanks5): That is all the info I need. GOTO:print
@@ -119,38 +120,13 @@ X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
-Q(repair):What do you need repaired? (List only one)
-<input type="hidden" name="name" value="Repair Request Form Help"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/RepairRequestForm.docx"/>
-X:
-	Q(needs): Do you have any other repair needs?
-	A: Yes
-		Q(issues): Please mention it here
-		X:
-			Q(otherneeds): Do you have any other repair needs?
-			A: Yes
-				Q(moreneeds1): Please mention it here
-				X:
-					Q(otherneeds1): Do you have any other repair needs?
-					A: Yes
-						Q(moreneeds2): Please mention it here
-						X:
-							Q(needsmore): If you have any more needs, please send the landlord a followup
-							A: Continue
-								Q(continue):GOTO:print
-						A: No
-							Q(noneeds2):GOTO:print
 
-			A: No
-				Q(noneeds1):GOTO:print
-	A: No
-		Q(noneeds):GOTO:print	
 Q(lease):<input type="hidden" name="name" value="Request for Lease"/>
 	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 	Your request for the lease is ready. GOTO:print
-Q(utility):What utility bill do you need? (Examples: Electricity, Gas, Water)
-<input type="hidden" name="name" value="Utility Bill Request"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+Q(utility): <input type="hidden" name="name" value="Utility Bill Request"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+What utility bill do you need? (Examples: Electricity, Gas, Water)
 X:
 	Q(thanks): That's all the information I need. GOTO:print
 Q(property):Has the property the landlord taken being held on the premises or off the premises?
