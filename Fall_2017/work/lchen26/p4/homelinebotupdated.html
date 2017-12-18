@@ -1,0 +1,1131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<HEAD>
+	<title>Repair Request Form Help</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Repair Request Form Help"/>
+	<meta property="og:image" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"><style>	
+	body {
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	}
+
+	#rawmarkup{
+		display:none;
+	}
+	
+	#QandA img{
+		width:100%;
+	}
+
+	div.main{
+		min-width:300px;
+		max-width:650px;
+		margin: 0 auto;
+	padding:0 5px 0 5px;
+		}
+	div.frame{
+		float:left;
+		width:100%;
+		margin:5px 0 5px 0;
+	}
+	div.full{
+		float:left;
+		width:100%;
+	}
+	.button{
+		padding:8px;
+		margin:8px 0 0px 0;
+		width:100%;
+	}
+	div.question_text{
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#ffffff;
+		min-width:30px;
+		background:#5489eb;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-right:45px;
+	}
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
+
+	div.question_arrow{
+		float:left; 
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent; 
+		border-right: 10px solid transparent; 
+		border-top: 15px solid #5489eb;
+		margin:0 20px;
+	}
+	div.ans_text{
+		float:right;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#000000;
+		min-width:30px;
+		background:#eeeeee;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-left:45px;
+	}
+	div.ans_arrow{
+		float:right; 
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent; 
+		border-right: 5px solid transparent; 
+		border-top: 15px solid #eeeeee;
+		margin:0 20px;
+	}
+	div.choices{
+		float:left;
+		width:100%;
+		margin:15px 0 0 0;
+	}
+	div.standard_buttons{
+		float:left;
+		width:100%;
+		margin-top:5px;
+		border-top: 1px solid #ddd; 
+		padding-top:12px;		
+	}
+	div.credits{
+		float:left;
+		dispaly:none;
+		width:100%;
+		background:#eee;
+		margin:0px 0 15px 0;
+	}
+	div.credit_text{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		padding:4px 15px 10px 15px;
+	}
+	li.error{
+		list-style-type: none;
+		background:#ffdddd;
+		margin: 10px 0 0 0;
+		padding: 5px;
+	}
+
+	.qpad {
+		float:left;
+		padding:0 15px;
+	}
+	
+	a.sbutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.sbutton:hover, a.sbutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton:hover, a.qabutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+
+	div.xdiv {
+		float:left;
+		width:100%;
+		margin: 0 0 8px 0;
+		background: #eee;
+		border: solid 1px #888;
+		border-radius: 8px;
+	}	
+
+	input.xinput {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		float:left;
+		width:100%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #fff;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding:10px 10px 12px 10px;
+		border: solid 0px #888;
+		border-bottom: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton {
+		float:left;
+		width:100%;
+		text-align:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0px;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton:hover, a.xbutton:active {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		background: #ddd;
+	}
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"> <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/homeline.jpg');"></div>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Landlord-Tenant Form Help</h3>
+<p>Welcome!  I'm here to help you fill out a variety of forms for different landlord-tenant issues through HomeLine.  Here are some of the issues I can help you with: 
+<br>Requesting Repairs</br>
+<br>Security Deposits</br>
+<br>Utility Bills</br>
+<br>Bills for Repairs</br>
+<br>Bill for Bug Extermination</br>
+<br>Privacy Rights</br>
+<br>Neighbor Complaints</br>
+<br>Right to Guests</br>
+<br>Landlord Retaliation Against You</br>
+<br>Copy of Lease</br>
+<br>Confiscated Property</br>
+<br>If you'd like some help with any of these issues, fill out the questions below!</br></p>
+<div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Title%3A+Repair+Request+Form+Help+%0D%0AAuthor%3A+For+HomeLine%0D%0ABefore%3A+%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fcss%2Fstyle.css%22%3E%0D%0A%3Cdiv+id%3D%22icon%22+style%3D%22background-size%3A+110px+99px%3Bbackground-image%3A+url%28%27http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Flchen26%2Fp4%2Fhomeline.jpg%27%29%3B%22%3E%3C%2Fdiv%3E%0D%0A%3Cp%3E%3Cb%3EThis+is+a+%3Ca+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2F%22+target%3D_new%3Eclass+project%3C%2Fa%3E.+You+should+not+rely+on+it+as+a+source+of+legal+information.+It+is+likely+incomplete.%3C%2Fb%3E%3C%2Fp%3E%0D%0A%3Ch3%3ELandlord-Tenant+Form+Help%3C%2Fh3%3E%0D%0A%3Cp%3EWelcome%21++I%27m+here+to+help+you+fill+out+a+variety+of+forms+for+different+landlord-tenant+issues+through+HomeLine.++Here+are+some+of+the+issues+I+can+help+you+with%3A+%0D%0A%3Cbr%3ERequesting+Repairs%3C%2Fbr%3E%0D%0A%3Cbr%3ESecurity+Deposits%3C%2Fbr%3E%0D%0A%3Cbr%3EUtility+Bills%3C%2Fbr%3E%0D%0A%3Cbr%3EBills+for+Repairs%3C%2Fbr%3E%0D%0A%3Cbr%3EBill+for+Bug+Extermination%3C%2Fbr%3E%0D%0A%3Cbr%3EPrivacy+Rights%3C%2Fbr%3E%0D%0A%3Cbr%3ENeighbor+Complaints%3C%2Fbr%3E%0D%0A%3Cbr%3ERight+to+Guests%3C%2Fbr%3E%0D%0A%3Cbr%3ELandlord+Retaliation+Against+You%3C%2Fbr%3E%0D%0A%3Cbr%3ECopy+of+Lease%3C%2Fbr%3E%0D%0A%3Cbr%3EConfiscated+Property%3C%2Fbr%3E%0D%0A%3Cbr%3EIf+you%27d+like+some+help+with+any+of+these+issues%2C+fill+out+the+questions+below%21%3C%2Fbr%3E%3C%2Fp%3E%0D%0AQ%28person%29%3AAre+you+the+tenant+or+are+you+filling+this+out+on+behalf+of+someone+else%3F%0D%0AA%3AI+am+the+tenant.%0D%0A%09Q%281.1%29%3AGOTO%3Atname1%0D%0AA%3AI+am+filling+this+out+for+someone+else.%0D%0A%09Q%281.2%29%3A+Are+you+authorized+to+fill+this+out%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%281.2.1%29%3A+Please+fill+this+as+if+you+were+the+tenant.+GOTO%3Atname1%0D%0A%09A%3A+No%0D%0A%09%09Q%281.2.2%29%3A+Please+obtain+permission+to+fill+it+out+or+have+the+tenant+do+so+when+available.+GOTO%3Abye%0D%0A%09%0D%0AQ%28tname1%29%3AWhat%27s+your+first+name%3F%0D%0AX%3A%0D%0A%09Q%28tname2%29%3A+and+what%27s+your+last+name%3F%0D%0A%09X%3A%0D%0A%09%09Q%282.1.1%29%3AThanks%2C+nice+to+meet+you+%3Cx%3Etname1%3C%2Fx%3E%21++I%27m+here+to+help+you+with+a+variety+of+issues+with+your+landlord.++I+just+need+a+bit+more+background+information.+GOTO%3Anumber%0D%0A%0D%0AQ%28number%29%3AWhat+is+the+best+phone+number+to+reach+you%3F+%28example+%28618%29-344-3433%29%0D%0AX%3A%0D%0A%09Q%28taddress%29%3AWhat+is+your+street+address%3F++For+example%3A+%22123+Main+st.%22%0D%0A%09X%3A%0D%0A%09%09Q%28taddress2%29%3AWhat+is+your+city%2C+state%2C+and+zip%3F++For+example%3A+%22Boston%2C+MA.+02108%22%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28lname%29%3AWhat+is+your+landlord%27s+full+name%3F%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28laddress%29%3AWhat+is+your+landlord%27s+street+address%3F++For+example%3A+%22123+Main+st.%22%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%28laddress2%29%3AWhat+is+your+landlord%27s+city%2C+state%2C+and+zip%3F++For+example%3A+%22Boston%2C+MA.+02108%22%0D%0A%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09Q%283.1.1.1.1.1.1%29%3AThanks+for+that+info%21++GOTO%3Aissue%09%09%09%09%09%09%09%09%09%09%0D%0AQ%28issue%29%3AWhat+can+we+help+you+with%3F%0D%0AA%3AYou+want+to+request+repairs+from+your+landloard.%0D%0A%09Q%284.1%29%3AGOTO%3Arepairs%0D%0AA%3AYou+want+your+landlord+to+return+a+security+deposit.%0D%0A%09Q%284.2%29%3AGOTO%3Adeposit%0D%0AA%3AYou+want+to+request+a+copy+of+a+utility+bill.%0D%0A%09Q%284.3%29%3AGOTO%3Autility%0D%0AA%3AYou+received+a+bill+from+your+landlord+for+repairs.%0D%0A%09Q%284.4%29%3AGOTO%3Arepairbill%0D%0AA%3AYou+want+to+remind+your+landlord+of+your+right+to+privacy.%0D%0A%09Q%284.5%29%3AGOTO%3Aprivacy%0D%0AA%3AYou+want+your+landlord+to+do+something+about+an+incident+with+your+neighbors.%0D%0A%09Q%284.6%29%3AGOTO%3Aneighbor%0D%0AA%3AYou+want+to+remind+your+landlord+of+your+right+to+have+guests.%0D%0A%09Q%284.7%29%3AGOTO%3Aguests%0D%0AA%3AYou+feel+your+landlord+has+retaliated%2Fpunished+you+because+you+previously+asserted+your+rights.%0D%0A%09Q%284.8%29%3AGOTO%3Aretaliation%0D%0AA%3ASee+More+Issues%0D%0A%09Q%284.9%29%3AWhat+can+we+help+you+with%3F%0D%0A%09A%3AYou+want+to+demand+the+return+of+your+property+that%27s+been+taken.%0D%0A%09%09Q%284.9.1%29%3AGOTO%3Aproperty+%0D%0A%09A%3AYou+received+a+bill+from+your+landlord+for+bug+exterminations.%0D%0A%09%09Q%284.9.2%29%3AGOTO%3Abugbill%0D%0A%09A%3AYou+want+to+request+a+copy+of+your+lease.%0D%0A%09%09Q%284.9.3%29%3AGOTO%3Alease%0D%0A%0D%0AQ%28repairs%29%3A%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Repair+Request+Form%22%2F%3E%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FRepair-Request-Form.docx%22%2F%3E%0D%0AWhat+do+you+need+repaired%3F+%28please+list+only+one+for+now%29%0D%0AX%3A%0D%0A%09Q%28needs%29%3A+Do+you+have+any+other+repair+needs%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%28issues%29%3A+Please+describe+it+here%3A%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28otherneeds%29%3A+Do+you+have+any+other+repair+needs%3F%0D%0A%09%09%09A%3A+Yes%0D%0A%09%09%09%09Q%28moreneeds%29%3A+Please+describe+it+here%3A%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%28otherneeds1%29%3A+Do+you+have+any+other+repair+needs%3F%0D%0A%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09Q%28ntwo%29%3A+Please+describe+it+here%3A%0D%0A%09%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09%09Q%285.1.1.1.1.1.1.1%29%3AIf+you+have+any+more+needs%2C+please+send+the+landlord+a+followup.+GOTO%3Aprint%0D%0A%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09Q%285.1.1.1.1.1.2%29%3AGOTO%3Aprint%0D%0A%09%09%09%09%09%09%09%09%09%09%09%09%0D%0A%09%09%09A%3A+No%0D%0A%09%09%09%09Q%285.1.1.1.2%29%3AGOTO%3Aprint%0D%0A%09A%3A+No%0D%0A%09%09Q%285.1.2%29%3AGOTO%3Aprint%0D%0AQ%28deposit%29%3A%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Deposit+Request%22%2F%3E+%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2Fdeposit.docx%22%2F%3E%0D%0AHow+much+was+your+security+deposit+before+interest%3F+%28Example%3A+2500.00%29%0D%0AX%3A%0D%0A%09Q%28interest%29%3A+How+much+is+that+with+interest%3F+%28Example%3A+2645.23%29%0D%0A%09X%3A%0D%0A%09%09Q%28vacate%29%3A+What+date+did+you+vacate+the+apartment%3F+%28Month+Day%2CYear.+Example%3A+January+2%2C+2017%29%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28forwarding%29%3A+Wheat+is+the+street+address+you+would+like+that+to+be+forwarded+to%3F+%28Example%3A+111+New+Street%29%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28forward2%29%3A+What+is+the+city%2C+state%2C+zip+that+you+want+it+to+be+forwarded+to%3F+%28Example%3A+Here%2C+Somewhere+00000%29%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%28thanks2%29%3A+That+is+all+the+info+I+need.+GOTO%3Aprint%0D%0A%0D%0AQ%28bugbill%29%3A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Response+to+Invoice+for+Bug+Extermination%22%2F%3E%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FResponse-For-Bug.docx%22%2F%3E%0D%0AYour+response+to+an+invoice+for+bug+extermination+is+ready.+GOTO%3Aprint%09%0D%0AQ%28repairbill%29%3A%09%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Response+to+Invoice+for+Repairs%22%2F%3E%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FResponse-For-Repairs.docx%22%2F%3E+%0D%0AYour+response+to+an+invoice+for+repairs+is+ready.+GOTO%3Aprint%0D%0AQ%28privacy%29%3A+%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Privacy+Rights%22%2F%3E+%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Flchen26%2Fp4%2Fprivacy.docx%22%2F%3E%0D%0AI+have+all+the+information+I+need.+GOTO%3Aprint%0D%0AQ%28neighbor%29%3A%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Neighbor+Incident%22%2F%3E+%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Flchen26%2Fp4%2Fneighbor.docx%22%2F%3E+%0D%0AWhat+is+the+name+of+the+neighbor+who+has+been+causing+an+incident%3F+%28First+and+last+name%29%0D%0AX%3A%0D%0A%09Q%28date%29%3A+When+did+this+incident+occur%3F+%28Month+Day%2C+Year%29%0D%0A%09X%3A%0D%0A%09%09Q%28incident%29%3A+What+was+this+incident%3F++%28example%3A+Loud+noise%2C+violence%2C+trespassing%29%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28more%29%3A+Do+you+have+another+incident+to+report%3F%0D%0A%09%09%09A%28yes%29%3A+Yes%0D%0A%09%09%09%09Q%28n2%29%3A+What+is+the+name+of+the+neighbor+who+has+been+causing+an+incident%3F+%28First+and+last+name%29%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%28d2%29%3A+When+did+this+incident+occur%3F+%28Month+Day%2C+Year%29%0D%0A%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09Q%28i2%29%3A+What+was+this+incident%3F++%28example%3A+Loud+noise%2C+violence%2C+trespassing%29%0D%0A%09%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09%09Q%28more2%29%3A+Do+you+have+another+incident+to+report%3F%0D%0A%09%09%09%09%09%09%0D%0A%09%09%09%09%09%09%09A%28yes2%29%3A+Yes%0D%0A%09%09%09%09%09%09%09%09Q%28followup%29%3A+Please+send+your+landlord+a+followup.%0D%0A%09%09%09%09%09%09%09%09A%3AContinue%0D%0A%09%09%09%09%09%09%09%09%09Q%28continue2%29%3AGOTO%3Aprint%0D%0A%09%09%09%09%09%09%09A%28no2%29%3A+No%0D%0A%09%09%09%09%09%09%09%09Q%28thanks4%29%3A+That+is+all+the+info+I+need.+GOTO%3Aprint%0D%0A%09%09%09A%28no%29%3A+No%0D%0A%09%09%09%09Q%28thanks5%29%3A+That+is+all+the+info+I+need.+GOTO%3Aprint%0D%0AQ%28guests%29%3A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Letter+to+Assert+Guest+Rights%22%2F%3E%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FGuest-Rights.docx%22%2F%3E%0D%0AI+have+all+the+info+I+need.+GOTO%3Aprint%0D%0AQ%28retaliation%29%3AWhat+sort+of+notice+were+you+given+by+your+landlord%3F+%28Example%3A+rent+increase%2C+reduction+of+electricity%29%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Retaliation+Notice%22%2F%3E+%0D%0A%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Flchen26%2Fp4%2Fretaliation.docx%22%2F%3E%0D%0AX%3A%0D%0A%09Q%28action%29%3A+Please+describe+what+actions+may+have+led+to+this+retaliatory+notice%3F+%28Be+descriptive%29%0D%0A%09X%3A%0D%0A%09%09Q%28thanks3%29%3A+That+is+all+the+info+I+need.+GOTO%3Aprint%0D%0A%0D%0AQ%28lease%29%3A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Request+for+Lease%22%2F%3E%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FRequest-For-Lease.docx%22%2F%3E%0D%0A%09Your+request+for+the+lease+is+ready.+GOTO%3Aprint%0D%0AQ%28utility%29%3A+%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Utility+Bill+Request%22%2F%3E+%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Flchen26%2Fp4%2Futility.docx%22%2F%3E%0D%0AWhat+utility+bill+do+you+need%3F+%28Examples%3A+Electricity%2C+Gas%2C+Water%29%0D%0AX%3A%0D%0A%09Q%28thanks%29%3A+That%27s+all+the+information+I+need.+GOTO%3Aprint%0D%0AQ%28property%29%3AHas+the+property+the+landlord+taken+being+held+on+the+premises+or+off+the+premises%3F%0D%0AA%3AOn+the+premises.%0D%0A%09Q%28pickup1%29%3A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Demand+Letter+for+Return+of+Property%22%2F%3E+%0D%0A%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FProperty-DemandOn.docx%22%2F%3E+%0D%0AWhen+will+you+be+able+to+pick+up+the+property%3F%0D%0A%09X%3Adate%0D%0A%09%09Q%2815.1.1%29%3AYour+demand+letter+for+the+return+of+your+property+is+ready.+GOTO%3Aprint%0D%0AA%3AOff+the+premises.%0D%0A%09Q%2815.2%29%3AWhat+is+the+full+address+where+the+property+is+being+stored%3F%0D%0A%09X%3A%0D%0A%09%09Q%28pickup2%29%3A%3Cinput+type%3D%22hidden%22+name%3D%22name%22+value%3D%22Demand+Letter+for+Return+of+Property%22%2F%3E%0D%0A%09%09%09%09%3Cinput+type%3D%22hidden%22+name%3D%22docx_uri%22+value%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fwork%2Fmoiucihdaa%2Fp4%2FProperty-DemandOff.docx%22%2F%3E%0D%0AWhen+will+you+be+able+to+pick+up+the+property%3F%0D%0A%09%09X%3Adate%0D%0A%09%09%09Q%2815.2.1.1%29%3AYour+demand+letter+for+the+return+of+your+property+is+ready.+GOTO%3Aprint%0D%0A%09A%3AI%27m+not+sure.%0D%0A%0D%0AQ%28print%29%3A+Would+you+like+to+save+a+copy+of+this+form%3F+%28will+open+in+another+window+as+a+downloadable+document%29%0D%0AA%3A%5Bjavascript%3Asubmit2%28%27http%3A%2F%2Fcolarusso.pythonanywhere.com%2F%27%2C%27GET%27%2C%27%27%2C%27%27%2C%27%27%2C%27json_doc%27%2C%27_blank%27%29%5DYes%0D%0A%09Q%28yesprint%29%3A+Here+you+go%21+GOTO%3Abye%0D%0AA%3A+No%0D%0A%09Q%28noprint%29%3AGOTO%3Abye%0D%0A%0D%0AQ%28bye%29%3A+have+a+good+day%21</div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'>Are you the tenant or are you filling this out on behalf of someone else?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'> Are you authorized to fill this out?
+</div><div id='Q-1.2.1' name='Q-1.2.1' style='display:none;'> Please fill this as if you were the tenant. GOTO:2</div><div id='Q-1.2.2' name='Q-1.2.2' style='display:none;'> Please obtain permission to fill it out or have the tenant do so when available. GOTO:17</div><div id='Q-2' name='Q-2' style='display:none;'>What's your first name?
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'> and what's your last name?
+</div><div id='Q-2.1.1' name='Q-2.1.1' style='display:none;'>Thanks, nice to meet you <x>tname1</x>!  I'm here to help you with a variety of issues with your landlord.  I just need a bit more background information. GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'>What is the best phone number to reach you? (example (618)-344-3433)
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>What is your street address?  For example: "123 Main st."
+</div><div id='Q-3.1.1' name='Q-3.1.1' style='display:none;'>What is your city, state, and zip?  For example: "Boston, MA. 02108"
+</div><div id='Q-3.1.1.1' name='Q-3.1.1.1' style='display:none;'>What is your landlord's full name?
+</div><div id='Q-3.1.1.1.1' name='Q-3.1.1.1.1' style='display:none;'>What is your landlord's street address?  For example: "123 Main st."
+</div><div id='Q-3.1.1.1.1.1' name='Q-3.1.1.1.1.1' style='display:none;'>What is your landlord's city, state, and zip?  For example: "Boston, MA. 02108"
+</div><div id='Q-3.1.1.1.1.1.1' name='Q-3.1.1.1.1.1.1' style='display:none;'>Thanks for that info!  GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'>What can we help you with?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:6</div><div id='Q-4.3' name='Q-4.3' style='display:none;'>GOTO:14</div><div id='Q-4.4' name='Q-4.4' style='display:none;'>GOTO:8</div><div id='Q-4.5' name='Q-4.5' style='display:none;'>GOTO:9</div><div id='Q-4.6' name='Q-4.6' style='display:none;'>GOTO:10</div><div id='Q-4.7' name='Q-4.7' style='display:none;'>GOTO:11</div><div id='Q-4.8' name='Q-4.8' style='display:none;'>GOTO:12</div><div id='Q-4.9' name='Q-4.9' style='display:none;'>What can we help you with?
+</div><div id='Q-4.9.1' name='Q-4.9.1' style='display:none;'>GOTO:15</div><div id='Q-4.9.2' name='Q-4.9.2' style='display:none;'>GOTO:7</div><div id='Q-4.9.3' name='Q-4.9.3' style='display:none;'>GOTO:13</div><div id='Q-5' name='Q-5' style='display:none;'>
+<input type="hidden" name="name" value="Repair Request Form"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Repair-Request-Form.docx"/>
+What do you need repaired? (please list only one for now)
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1' name='Q-5.1.1.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1.1.1' name='Q-5.1.1.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1.1.1' name='Q-5.1.1.1.1.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1.1.1.1.1' name='Q-5.1.1.1.1.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1.1.1.1.1' name='Q-5.1.1.1.1.1.1.1' style='display:none;'>If you have any more needs, please send the landlord a followup. GOTO:16</div><div id='Q-5.1.1.1.1.1.2' name='Q-5.1.1.1.1.1.2' style='display:none;'>GOTO:16</div><div id='Q-5.1.1.1.2' name='Q-5.1.1.1.2' style='display:none;'>GOTO:16</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:16</div><div id='Q-6' name='Q-6' style='display:none;'>
+<input type="hidden" name="name" value="Deposit Request"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/deposit.docx"/>
+How much was your security deposit before interest? (Example: 2500.00)
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'> How much is that with interest? (Example: 2645.23)
+</div><div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'> What date did you vacate the apartment? (Month Day,Year. Example: January 2, 2017)
+</div><div id='Q-6.1.1.1' name='Q-6.1.1.1' style='display:none;'> Wheat is the street address you would like that to be forwarded to? (Example: 111 New Street)
+</div><div id='Q-6.1.1.1.1' name='Q-6.1.1.1.1' style='display:none;'> What is the city, state, zip that you want it to be forwarded to? (Example: Here, Somewhere 00000)
+</div><div id='Q-6.1.1.1.1.1' name='Q-6.1.1.1.1.1' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-7' name='Q-7' style='display:none;'><input type="hidden" name="name" value="Response to Invoice for Bug Extermination"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
+Your response to an invoice for bug extermination is ready. GOTO:16</div><div id='Q-8' name='Q-8' style='display:none;'>	<input type="hidden" name="name" value="Response to Invoice for Repairs"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/> 
+Your response to an invoice for repairs is ready. GOTO:16</div><div id='Q-9' name='Q-9' style='display:none;'> <input type="hidden" name="name" value="Privacy Rights"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
+I have all the information I need. GOTO:16</div><div id='Q-10' name='Q-10' style='display:none;'>
+	<input type="hidden" name="name" value="Neighbor Incident"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/> 
+What is the name of the neighbor who has been causing an incident? (First and last name)
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'> When did this incident occur? (Month Day, Year)
+</div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'> What was this incident?  (example: Loud noise, violence, trespassing)
+</div><div id='Q-10.1.1.1' name='Q-10.1.1.1' style='display:none;'> Do you have another incident to report?
+</div><div id='Q-10.1.1.1.1' name='Q-10.1.1.1.1' style='display:none;'> What is the name of the neighbor who has been causing an incident? (First and last name)
+</div><div id='Q-10.1.1.1.1.1' name='Q-10.1.1.1.1.1' style='display:none;'> When did this incident occur? (Month Day, Year)
+</div><div id='Q-10.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1' style='display:none;'> What was this incident?  (example: Loud noise, violence, trespassing)
+</div><div id='Q-10.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1' style='display:none;'> Do you have another incident to report?
+						
+</div><div id='Q-10.1.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1.1' style='display:none;'> Please send your landlord a followup.
+</div><div id='Q-10.1.1.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1.1.1' style='display:none;'>GOTO:16</div><div id='Q-10.1.1.1.1.1.1.1.2' name='Q-10.1.1.1.1.1.1.1.2' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-10.1.1.1.2' name='Q-10.1.1.1.2' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-11' name='Q-11' style='display:none;'><input type="hidden" name="name" value="Letter to Assert Guest Rights"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
+I have all the info I need. GOTO:16</div><div id='Q-12' name='Q-12' style='display:none;'>What sort of notice were you given by your landlord? (Example: rent increase, reduction of electricity)
+<input type="hidden" name="name" value="Retaliation Notice"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/retaliation.docx"/>
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'> Please describe what actions may have led to this retaliatory notice? (Be descriptive)
+</div><div id='Q-12.1.1' name='Q-12.1.1' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-13' name='Q-13' style='display:none;'><input type="hidden" name="name" value="Request for Lease"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
+	Your request for the lease is ready. GOTO:16</div><div id='Q-14' name='Q-14' style='display:none;'> <input type="hidden" name="name" value="Utility Bill Request"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+What utility bill do you need? (Examples: Electricity, Gas, Water)
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'> That's all the information I need. GOTO:16</div><div id='Q-15' name='Q-15' style='display:none;'>Has the property the landlord taken being held on the premises or off the premises?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'><input type="hidden" name="name" value="Demand Letter for Return of Property"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/> 
+When will you be able to pick up the property?
+</div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'>Your demand letter for the return of your property is ready. GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>What is the full address where the property is being stored?
+</div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'><input type="hidden" name="name" value="Demand Letter for Return of Property"/>
+				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
+When will you be able to pick up the property?
+</div><div id='Q-15.2.1.1' name='Q-15.2.1.1' style='display:none;'>Your demand letter for the return of your property is ready. GOTO:16</div><div id='Q-16' name='Q-16' style='display:none;'> Would you like to save a copy of this form? (will open in another window as a downloadable document)
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'> Here you go! GOTO:17</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> have a good day!</div><div id='A-1.1' name='A-1.1' style='display:none;'>I am the tenant.
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>I am the tenant.</div><div id='A-1.2' name='A-1.2' style='display:none;'>I am filling this out for someone else.
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>I am filling this out for someone else.</div><div id='A-1.2.1' name='A-1.2.1' style='display:none;'> Yes
+</div><div id='A-href-1.2.1' name='A-href-1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.2.1' name='A-target-1.2.1' style='display:none;'></div><div id='X-1.2.1' name='X-1.2.1' style='display:none;'>Yes</div><div id='A-1.2.2' name='A-1.2.2' style='display:none;'> No
+</div><div id='A-href-1.2.2' name='A-href-1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2.2' name='A-target-1.2.2' style='display:none;'></div><div id='X-1.2.2' name='X-1.2.2' style='display:none;'>No</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>text</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'>text</div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'>2.1.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'>text</div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-3.1.1' name='A-3.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1' name='A-href-3.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1' name='A-target-3.1.1' style='display:none;'>text</div><div id='X-3.1.1' name='X-3.1.1' style='display:none;'>3.1.1</div><div id='A-3.1.1.1' name='A-3.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1' name='A-href-3.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1' name='A-target-3.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1' name='X-3.1.1.1' style='display:none;'>3.1.1.1</div><div id='A-3.1.1.1.1' name='A-3.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1' name='A-href-3.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1' name='A-target-3.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1' name='X-3.1.1.1.1' style='display:none;'>3.1.1.1.1</div><div id='A-3.1.1.1.1.1' name='A-3.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1.1' name='A-href-3.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1.1' name='A-target-3.1.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1.1' name='X-3.1.1.1.1.1' style='display:none;'>3.1.1.1.1.1</div><div id='A-3.1.1.1.1.1.1' name='A-3.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1.1.1' name='A-href-3.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1.1.1' name='A-target-3.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1.1.1' name='X-3.1.1.1.1.1.1' style='display:none;'>3.1.1.1.1.1.1</div><div id='A-4.1' name='A-4.1' style='display:none;'>You want to request repairs from your landloard.
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>You want to request repairs from your landloard.</div><div id='A-4.2' name='A-4.2' style='display:none;'>You want your landlord to return a security deposit.
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>You want your landlord to return a security deposit.</div><div id='A-4.3' name='A-4.3' style='display:none;'>You want to request a copy of a utility bill.
+</div><div id='A-href-4.3' name='A-href-4.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.3' name='A-target-4.3' style='display:none;'></div><div id='X-4.3' name='X-4.3' style='display:none;'>You want to request a copy of a utility bill.</div><div id='A-4.4' name='A-4.4' style='display:none;'>You received a bill from your landlord for repairs.
+</div><div id='A-href-4.4' name='A-href-4.4' style='display:none;'>javascript:void('');</div><div id='A-target-4.4' name='A-target-4.4' style='display:none;'></div><div id='X-4.4' name='X-4.4' style='display:none;'>You received a bill from your landlord for repairs.</div><div id='A-4.5' name='A-4.5' style='display:none;'>You want to remind your landlord of your right to privacy.
+</div><div id='A-href-4.5' name='A-href-4.5' style='display:none;'>javascript:void('');</div><div id='A-target-4.5' name='A-target-4.5' style='display:none;'></div><div id='X-4.5' name='X-4.5' style='display:none;'>You want to remind your landlord of your right to privacy.</div><div id='A-4.6' name='A-4.6' style='display:none;'>You want your landlord to do something about an incident with your neighbors.
+</div><div id='A-href-4.6' name='A-href-4.6' style='display:none;'>javascript:void('');</div><div id='A-target-4.6' name='A-target-4.6' style='display:none;'></div><div id='X-4.6' name='X-4.6' style='display:none;'>You want your landlord to do something about an incident with your neighbors.</div><div id='A-4.7' name='A-4.7' style='display:none;'>You want to remind your landlord of your right to have guests.
+</div><div id='A-href-4.7' name='A-href-4.7' style='display:none;'>javascript:void('');</div><div id='A-target-4.7' name='A-target-4.7' style='display:none;'></div><div id='X-4.7' name='X-4.7' style='display:none;'>You want to remind your landlord of your right to have guests.</div><div id='A-4.8' name='A-4.8' style='display:none;'>You feel your landlord has retaliated/punished you because you previously asserted your rights.
+</div><div id='A-href-4.8' name='A-href-4.8' style='display:none;'>javascript:void('');</div><div id='A-target-4.8' name='A-target-4.8' style='display:none;'></div><div id='X-4.8' name='X-4.8' style='display:none;'>You feel your landlord has retaliated/punished you because you previously asserted your rights.</div><div id='A-4.9' name='A-4.9' style='display:none;'>See More Issues
+</div><div id='A-href-4.9' name='A-href-4.9' style='display:none;'>javascript:void('');</div><div id='A-target-4.9' name='A-target-4.9' style='display:none;'></div><div id='X-4.9' name='X-4.9' style='display:none;'>See More Issues</div><div id='A-4.9.1' name='A-4.9.1' style='display:none;'>You want to demand the return of your property that's been taken.
+</div><div id='A-href-4.9.1' name='A-href-4.9.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.1' name='A-target-4.9.1' style='display:none;'></div><div id='X-4.9.1' name='X-4.9.1' style='display:none;'>You want to demand the return of your property that's been taken.</div><div id='A-4.9.2' name='A-4.9.2' style='display:none;'>You received a bill from your landlord for bug exterminations.
+</div><div id='A-href-4.9.2' name='A-href-4.9.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.2' name='A-target-4.9.2' style='display:none;'></div><div id='X-4.9.2' name='X-4.9.2' style='display:none;'>You received a bill from your landlord for bug exterminations.</div><div id='A-4.9.3' name='A-4.9.3' style='display:none;'>You want to request a copy of your lease.
+</div><div id='A-href-4.9.3' name='A-href-4.9.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.3' name='A-target-4.9.3' style='display:none;'></div><div id='X-4.9.3' name='X-4.9.3' style='display:none;'>You want to request a copy of your lease.</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'>text</div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1' name='A-5.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1' name='A-href-5.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1' name='A-target-5.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1' name='X-5.1.1.1' style='display:none;'>5.1.1.1</div><div id='A-5.1.1.1.1' name='A-5.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1.1.1' name='A-href-5.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1' name='A-target-5.1.1.1.1' style='display:none;'></div><div id='X-5.1.1.1.1' name='X-5.1.1.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1.1.1' name='A-5.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1.1.1' name='A-href-5.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1' name='A-target-5.1.1.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1.1.1' name='X-5.1.1.1.1.1' style='display:none;'>5.1.1.1.1.1</div><div id='A-5.1.1.1.1.1.1' name='A-5.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1.1.1.1.1' name='A-href-5.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.1' name='A-target-5.1.1.1.1.1.1' style='display:none;'></div><div id='X-5.1.1.1.1.1.1' name='X-5.1.1.1.1.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1.1.1.1.1' name='A-5.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1.1.1.1.1' name='A-href-5.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.1.1' name='A-target-5.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1.1.1.1.1' name='X-5.1.1.1.1.1.1.1' style='display:none;'>5.1.1.1.1.1.1.1</div><div id='A-5.1.1.1.1.1.2' name='A-5.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.1.1.1.1.2' name='A-href-5.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.2' name='A-target-5.1.1.1.1.1.2' style='display:none;'></div><div id='X-5.1.1.1.1.1.2' name='X-5.1.1.1.1.1.2' style='display:none;'>No</div><div id='A-5.1.1.1.2' name='A-5.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.1.1.2' name='A-href-5.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.2' name='A-target-5.1.1.1.2' style='display:none;'></div><div id='X-5.1.1.1.2' name='X-5.1.1.1.2' style='display:none;'>No</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'>text</div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-6.1.1' name='A-6.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'>text</div><div id='X-6.1.1' name='X-6.1.1' style='display:none;'>6.1.1</div><div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'>6.1.1.1</div><div id='A-6.1.1.1.1' name='A-6.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1' name='A-href-6.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1' name='A-target-6.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1' name='X-6.1.1.1.1' style='display:none;'>6.1.1.1.1</div><div id='A-6.1.1.1.1.1' name='A-6.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1' name='A-href-6.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1' name='A-target-6.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1' name='X-6.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'>text</div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>text</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'>10.1.1</div><div id='A-10.1.1.1' name='A-10.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1' name='A-href-10.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1' name='A-target-10.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1' name='X-10.1.1.1' style='display:none;'>10.1.1.1</div><div id='A-10.1.1.1.1' name='A-10.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1.1' name='A-href-10.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1' name='A-target-10.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1' name='X-10.1.1.1.1' style='display:none;'>yes</div><div id='A-10.1.1.1.1.1' name='A-10.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1' name='A-href-10.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1' name='A-target-10.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1' name='X-10.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1.1' style='display:none;'>yes2</div><div id='A-10.1.1.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1.1.1' style='display:none;'>Continue
+</div><div id='A-href-10.1.1.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1.1.1' style='display:none;'>Continue</div><div id='A-10.1.1.1.1.1.1.1.2' name='A-10.1.1.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.1.1.1.1.1.2' name='A-href-10.1.1.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.2' name='A-target-10.1.1.1.1.1.1.1.2' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.2' name='X-10.1.1.1.1.1.1.1.2' style='display:none;'>no2</div><div id='A-10.1.1.1.2' name='A-10.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.1.2' name='A-href-10.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.2' name='A-target-10.1.1.1.2' style='display:none;'></div><div id='X-10.1.1.1.2' name='X-10.1.1.1.2' style='display:none;'>no</div><div id='A-12.1' name='A-12.1' style='display:none;'><variable></div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'>text</div><div id='X-12.1' name='X-12.1' style='display:none;'>12.1</div><div id='A-12.1.1' name='A-12.1.1' style='display:none;'><variable></div><div id='A-href-12.1.1' name='A-href-12.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1.1' name='A-target-12.1.1' style='display:none;'>text</div><div id='X-12.1.1' name='X-12.1.1' style='display:none;'>12.1.1</div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'>text</div><div id='X-14.1' name='X-14.1' style='display:none;'>14.1</div><div id='A-15.1' name='A-15.1' style='display:none;'>On the premises.
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>On the premises.</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'><variable></div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'>date</div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'>15.1.1</div><div id='A-15.2' name='A-15.2' style='display:none;'>Off the premises.
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>Off the premises.</div><div id='A-15.2.1' name='A-15.2.1' style='display:none;'><variable></div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'>text</div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'>15.2.1</div><div id='A-15.2.1.1' name='A-15.2.1.1' style='display:none;'><variable></div><div id='A-href-15.2.1.1' name='A-href-15.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1.1' name='A-target-15.2.1.1' style='display:none;'>date</div><div id='X-15.2.1.1' name='X-15.2.1.1' style='display:none;'>15.2.1.1</div><div id='A-15.2.2' name='A-15.2.2' style='display:none;'>I'm not sure.
+
+</div><div id='A-href-15.2.2' name='A-href-15.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.2' name='A-target-15.2.2' style='display:none;'></div><div id='X-15.2.2' name='X-15.2.2' style='display:none;'>I'm not sure.</div><div id='A-16.1' name='A-16.1' style='display:none;'>Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'>target="_blank"</div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'>No</div>
+<script>
+	var QVnames = [['1','person'],['1.1','1.1'],['1.2','1.2'],['1.2.1','1.2.1'],['1.2.2','1.2.2'],['2','tname1'],['2.1','tname2'],['2.1.1','2.1.1'],['3','number'],['3.1','taddress'],['3.1.1','taddress2'],['3.1.1.1','lname'],['3.1.1.1.1','laddress'],['3.1.1.1.1.1','laddress2'],['3.1.1.1.1.1.1','3.1.1.1.1.1.1'],['4','issue'],['4.1','4.1'],['4.2','4.2'],['4.3','4.3'],['4.4','4.4'],['4.5','4.5'],['4.6','4.6'],['4.7','4.7'],['4.8','4.8'],['4.9','4.9'],['4.9.1','4.9.1'],['4.9.2','4.9.2'],['4.9.3','4.9.3'],['5','repairs'],['5.1','needs'],['5.1.1','issues'],['5.1.1.1','otherneeds'],['5.1.1.1.1','moreneeds'],['5.1.1.1.1.1','otherneeds1'],['5.1.1.1.1.1.1','ntwo'],['5.1.1.1.1.1.1.1','5.1.1.1.1.1.1.1'],['5.1.1.1.1.1.2','5.1.1.1.1.1.2'],['5.1.1.1.2','5.1.1.1.2'],['5.1.2','5.1.2'],['6','deposit'],['6.1','interest'],['6.1.1','vacate'],['6.1.1.1','forwarding'],['6.1.1.1.1','forward2'],['6.1.1.1.1.1','thanks2'],['7','bugbill'],['8','repairbill'],['9','privacy'],['10','neighbor'],['10.1','date'],['10.1.1','incident'],['10.1.1.1','more'],['10.1.1.1.1','n2'],['10.1.1.1.1.1','d2'],['10.1.1.1.1.1.1','i2'],['10.1.1.1.1.1.1.1','more2'],['10.1.1.1.1.1.1.1.1','followup'],['10.1.1.1.1.1.1.1.1.1','continue2'],['10.1.1.1.1.1.1.1.2','thanks4'],['10.1.1.1.2','thanks5'],['11','guests'],['12','retaliation'],['12.1','action'],['12.1.1','thanks3'],['13','lease'],['14','utility'],['14.1','thanks'],['15','property'],['15.1','pickup1'],['15.1.1','15.1.1'],['15.2','15.2'],['15.2.1','pickup2'],['15.2.1.1','15.2.1.1'],['16','print'],['16.1','yesprint'],['16.2','noprint'],['17','bye']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'>Are you the tenant or are you filling this out on behalf of someone else?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'> Are you authorized to fill this out?
+</div><div id='Q-1.2.1' name='Q-1.2.1' style='display:none;'> Please fill this as if you were the tenant. GOTO:2</div><div id='Q-1.2.2' name='Q-1.2.2' style='display:none;'> Please obtain permission to fill it out or have the tenant do so when available. GOTO:17</div><div id='Q-2' name='Q-2' style='display:none;'>What's your first name?
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'> and what's your last name?
+</div><div id='Q-2.1.1' name='Q-2.1.1' style='display:none;'>Thanks, nice to meet you <x>tname1</x>!  I'm here to help you with a variety of issues with your landlord.  I just need a bit more background information. GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'>What is the best phone number to reach you? (example (618)-344-3433)
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>What is your street address?  For example: "123 Main st."
+</div><div id='Q-3.1.1' name='Q-3.1.1' style='display:none;'>What is your city, state, and zip?  For example: "Boston, MA. 02108"
+</div><div id='Q-3.1.1.1' name='Q-3.1.1.1' style='display:none;'>What is your landlord's full name?
+</div><div id='Q-3.1.1.1.1' name='Q-3.1.1.1.1' style='display:none;'>What is your landlord's street address?  For example: "123 Main st."
+</div><div id='Q-3.1.1.1.1.1' name='Q-3.1.1.1.1.1' style='display:none;'>What is your landlord's city, state, and zip?  For example: "Boston, MA. 02108"
+</div><div id='Q-3.1.1.1.1.1.1' name='Q-3.1.1.1.1.1.1' style='display:none;'>Thanks for that info!  GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'>What can we help you with?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:6</div><div id='Q-4.3' name='Q-4.3' style='display:none;'>GOTO:14</div><div id='Q-4.4' name='Q-4.4' style='display:none;'>GOTO:8</div><div id='Q-4.5' name='Q-4.5' style='display:none;'>GOTO:9</div><div id='Q-4.6' name='Q-4.6' style='display:none;'>GOTO:10</div><div id='Q-4.7' name='Q-4.7' style='display:none;'>GOTO:11</div><div id='Q-4.8' name='Q-4.8' style='display:none;'>GOTO:12</div><div id='Q-4.9' name='Q-4.9' style='display:none;'>What can we help you with?
+</div><div id='Q-4.9.1' name='Q-4.9.1' style='display:none;'>GOTO:15</div><div id='Q-4.9.2' name='Q-4.9.2' style='display:none;'>GOTO:7</div><div id='Q-4.9.3' name='Q-4.9.3' style='display:none;'>GOTO:13</div><div id='Q-5' name='Q-5' style='display:none;'>
+<input type="hidden" name="name" value="Repair Request Form"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Repair-Request-Form.docx"/>
+What do you need repaired? (please list only one for now)
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1' name='Q-5.1.1.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1.1.1' name='Q-5.1.1.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1.1.1' name='Q-5.1.1.1.1.1' style='display:none;'> Do you have any other repair needs?
+</div><div id='Q-5.1.1.1.1.1.1' name='Q-5.1.1.1.1.1.1' style='display:none;'> Please describe it here:
+</div><div id='Q-5.1.1.1.1.1.1.1' name='Q-5.1.1.1.1.1.1.1' style='display:none;'>If you have any more needs, please send the landlord a followup. GOTO:16</div><div id='Q-5.1.1.1.1.1.2' name='Q-5.1.1.1.1.1.2' style='display:none;'>GOTO:16</div><div id='Q-5.1.1.1.2' name='Q-5.1.1.1.2' style='display:none;'>GOTO:16</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:16</div><div id='Q-6' name='Q-6' style='display:none;'>
+<input type="hidden" name="name" value="Deposit Request"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/deposit.docx"/>
+How much was your security deposit before interest? (Example: 2500.00)
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'> How much is that with interest? (Example: 2645.23)
+</div><div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'> What date did you vacate the apartment? (Month Day,Year. Example: January 2, 2017)
+</div><div id='Q-6.1.1.1' name='Q-6.1.1.1' style='display:none;'> Wheat is the street address you would like that to be forwarded to? (Example: 111 New Street)
+</div><div id='Q-6.1.1.1.1' name='Q-6.1.1.1.1' style='display:none;'> What is the city, state, zip that you want it to be forwarded to? (Example: Here, Somewhere 00000)
+</div><div id='Q-6.1.1.1.1.1' name='Q-6.1.1.1.1.1' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-7' name='Q-7' style='display:none;'><input type="hidden" name="name" value="Response to Invoice for Bug Extermination"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
+Your response to an invoice for bug extermination is ready. GOTO:16</div><div id='Q-8' name='Q-8' style='display:none;'>	<input type="hidden" name="name" value="Response to Invoice for Repairs"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/> 
+Your response to an invoice for repairs is ready. GOTO:16</div><div id='Q-9' name='Q-9' style='display:none;'> <input type="hidden" name="name" value="Privacy Rights"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
+I have all the information I need. GOTO:16</div><div id='Q-10' name='Q-10' style='display:none;'>
+	<input type="hidden" name="name" value="Neighbor Incident"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/> 
+What is the name of the neighbor who has been causing an incident? (First and last name)
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'> When did this incident occur? (Month Day, Year)
+</div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'> What was this incident?  (example: Loud noise, violence, trespassing)
+</div><div id='Q-10.1.1.1' name='Q-10.1.1.1' style='display:none;'> Do you have another incident to report?
+</div><div id='Q-10.1.1.1.1' name='Q-10.1.1.1.1' style='display:none;'> What is the name of the neighbor who has been causing an incident? (First and last name)
+</div><div id='Q-10.1.1.1.1.1' name='Q-10.1.1.1.1.1' style='display:none;'> When did this incident occur? (Month Day, Year)
+</div><div id='Q-10.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1' style='display:none;'> What was this incident?  (example: Loud noise, violence, trespassing)
+</div><div id='Q-10.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1' style='display:none;'> Do you have another incident to report?
+						
+</div><div id='Q-10.1.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1.1' style='display:none;'> Please send your landlord a followup.
+</div><div id='Q-10.1.1.1.1.1.1.1.1.1' name='Q-10.1.1.1.1.1.1.1.1.1' style='display:none;'>GOTO:16</div><div id='Q-10.1.1.1.1.1.1.1.2' name='Q-10.1.1.1.1.1.1.1.2' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-10.1.1.1.2' name='Q-10.1.1.1.2' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-11' name='Q-11' style='display:none;'><input type="hidden" name="name" value="Letter to Assert Guest Rights"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
+I have all the info I need. GOTO:16</div><div id='Q-12' name='Q-12' style='display:none;'>What sort of notice were you given by your landlord? (Example: rent increase, reduction of electricity)
+<input type="hidden" name="name" value="Retaliation Notice"/> 
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/retaliation.docx"/>
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'> Please describe what actions may have led to this retaliatory notice? (Be descriptive)
+</div><div id='Q-12.1.1' name='Q-12.1.1' style='display:none;'> That is all the info I need. GOTO:16</div><div id='Q-13' name='Q-13' style='display:none;'><input type="hidden" name="name" value="Request for Lease"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
+	Your request for the lease is ready. GOTO:16</div><div id='Q-14' name='Q-14' style='display:none;'> <input type="hidden" name="name" value="Utility Bill Request"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+What utility bill do you need? (Examples: Electricity, Gas, Water)
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'> That's all the information I need. GOTO:16</div><div id='Q-15' name='Q-15' style='display:none;'>Has the property the landlord taken being held on the premises or off the premises?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'><input type="hidden" name="name" value="Demand Letter for Return of Property"/> 
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/> 
+When will you be able to pick up the property?
+</div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'>Your demand letter for the return of your property is ready. GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>What is the full address where the property is being stored?
+</div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'><input type="hidden" name="name" value="Demand Letter for Return of Property"/>
+				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
+When will you be able to pick up the property?
+</div><div id='Q-15.2.1.1' name='Q-15.2.1.1' style='display:none;'>Your demand letter for the return of your property is ready. GOTO:16</div><div id='Q-16' name='Q-16' style='display:none;'> Would you like to save a copy of this form? (will open in another window as a downloadable document)
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'> Here you go! GOTO:17</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> have a good day!</div><div id='A-1.1' name='A-1.1' style='display:none;'>I am the tenant.
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>I am the tenant.</div><div id='A-1.2' name='A-1.2' style='display:none;'>I am filling this out for someone else.
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>I am filling this out for someone else.</div><div id='A-1.2.1' name='A-1.2.1' style='display:none;'> Yes
+</div><div id='A-href-1.2.1' name='A-href-1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.2.1' name='A-target-1.2.1' style='display:none;'></div><div id='X-1.2.1' name='X-1.2.1' style='display:none;'>Yes</div><div id='A-1.2.2' name='A-1.2.2' style='display:none;'> No
+</div><div id='A-href-1.2.2' name='A-href-1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2.2' name='A-target-1.2.2' style='display:none;'></div><div id='X-1.2.2' name='X-1.2.2' style='display:none;'>No</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>text</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'>text</div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'>2.1.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'>text</div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-3.1.1' name='A-3.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1' name='A-href-3.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1' name='A-target-3.1.1' style='display:none;'>text</div><div id='X-3.1.1' name='X-3.1.1' style='display:none;'>3.1.1</div><div id='A-3.1.1.1' name='A-3.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1' name='A-href-3.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1' name='A-target-3.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1' name='X-3.1.1.1' style='display:none;'>3.1.1.1</div><div id='A-3.1.1.1.1' name='A-3.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1' name='A-href-3.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1' name='A-target-3.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1' name='X-3.1.1.1.1' style='display:none;'>3.1.1.1.1</div><div id='A-3.1.1.1.1.1' name='A-3.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1.1' name='A-href-3.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1.1' name='A-target-3.1.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1.1' name='X-3.1.1.1.1.1' style='display:none;'>3.1.1.1.1.1</div><div id='A-3.1.1.1.1.1.1' name='A-3.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1.1.1.1.1' name='A-href-3.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1.1.1.1' name='A-target-3.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-3.1.1.1.1.1.1' name='X-3.1.1.1.1.1.1' style='display:none;'>3.1.1.1.1.1.1</div><div id='A-4.1' name='A-4.1' style='display:none;'>You want to request repairs from your landloard.
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>You want to request repairs from your landloard.</div><div id='A-4.2' name='A-4.2' style='display:none;'>You want your landlord to return a security deposit.
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>You want your landlord to return a security deposit.</div><div id='A-4.3' name='A-4.3' style='display:none;'>You want to request a copy of a utility bill.
+</div><div id='A-href-4.3' name='A-href-4.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.3' name='A-target-4.3' style='display:none;'></div><div id='X-4.3' name='X-4.3' style='display:none;'>You want to request a copy of a utility bill.</div><div id='A-4.4' name='A-4.4' style='display:none;'>You received a bill from your landlord for repairs.
+</div><div id='A-href-4.4' name='A-href-4.4' style='display:none;'>javascript:void('');</div><div id='A-target-4.4' name='A-target-4.4' style='display:none;'></div><div id='X-4.4' name='X-4.4' style='display:none;'>You received a bill from your landlord for repairs.</div><div id='A-4.5' name='A-4.5' style='display:none;'>You want to remind your landlord of your right to privacy.
+</div><div id='A-href-4.5' name='A-href-4.5' style='display:none;'>javascript:void('');</div><div id='A-target-4.5' name='A-target-4.5' style='display:none;'></div><div id='X-4.5' name='X-4.5' style='display:none;'>You want to remind your landlord of your right to privacy.</div><div id='A-4.6' name='A-4.6' style='display:none;'>You want your landlord to do something about an incident with your neighbors.
+</div><div id='A-href-4.6' name='A-href-4.6' style='display:none;'>javascript:void('');</div><div id='A-target-4.6' name='A-target-4.6' style='display:none;'></div><div id='X-4.6' name='X-4.6' style='display:none;'>You want your landlord to do something about an incident with your neighbors.</div><div id='A-4.7' name='A-4.7' style='display:none;'>You want to remind your landlord of your right to have guests.
+</div><div id='A-href-4.7' name='A-href-4.7' style='display:none;'>javascript:void('');</div><div id='A-target-4.7' name='A-target-4.7' style='display:none;'></div><div id='X-4.7' name='X-4.7' style='display:none;'>You want to remind your landlord of your right to have guests.</div><div id='A-4.8' name='A-4.8' style='display:none;'>You feel your landlord has retaliated/punished you because you previously asserted your rights.
+</div><div id='A-href-4.8' name='A-href-4.8' style='display:none;'>javascript:void('');</div><div id='A-target-4.8' name='A-target-4.8' style='display:none;'></div><div id='X-4.8' name='X-4.8' style='display:none;'>You feel your landlord has retaliated/punished you because you previously asserted your rights.</div><div id='A-4.9' name='A-4.9' style='display:none;'>See More Issues
+</div><div id='A-href-4.9' name='A-href-4.9' style='display:none;'>javascript:void('');</div><div id='A-target-4.9' name='A-target-4.9' style='display:none;'></div><div id='X-4.9' name='X-4.9' style='display:none;'>See More Issues</div><div id='A-4.9.1' name='A-4.9.1' style='display:none;'>You want to demand the return of your property that's been taken.
+</div><div id='A-href-4.9.1' name='A-href-4.9.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.1' name='A-target-4.9.1' style='display:none;'></div><div id='X-4.9.1' name='X-4.9.1' style='display:none;'>You want to demand the return of your property that's been taken.</div><div id='A-4.9.2' name='A-4.9.2' style='display:none;'>You received a bill from your landlord for bug exterminations.
+</div><div id='A-href-4.9.2' name='A-href-4.9.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.2' name='A-target-4.9.2' style='display:none;'></div><div id='X-4.9.2' name='X-4.9.2' style='display:none;'>You received a bill from your landlord for bug exterminations.</div><div id='A-4.9.3' name='A-4.9.3' style='display:none;'>You want to request a copy of your lease.
+</div><div id='A-href-4.9.3' name='A-href-4.9.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.9.3' name='A-target-4.9.3' style='display:none;'></div><div id='X-4.9.3' name='X-4.9.3' style='display:none;'>You want to request a copy of your lease.</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'>text</div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1' name='A-5.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1' name='A-href-5.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1' name='A-target-5.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1' name='X-5.1.1.1' style='display:none;'>5.1.1.1</div><div id='A-5.1.1.1.1' name='A-5.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1.1.1' name='A-href-5.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1' name='A-target-5.1.1.1.1' style='display:none;'></div><div id='X-5.1.1.1.1' name='X-5.1.1.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1.1.1' name='A-5.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1.1.1' name='A-href-5.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1' name='A-target-5.1.1.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1.1.1' name='X-5.1.1.1.1.1' style='display:none;'>5.1.1.1.1.1</div><div id='A-5.1.1.1.1.1.1' name='A-5.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1.1.1.1.1' name='A-href-5.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.1' name='A-target-5.1.1.1.1.1.1' style='display:none;'></div><div id='X-5.1.1.1.1.1.1' name='X-5.1.1.1.1.1.1' style='display:none;'>Yes</div><div id='A-5.1.1.1.1.1.1.1' name='A-5.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-5.1.1.1.1.1.1.1' name='A-href-5.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.1.1' name='A-target-5.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-5.1.1.1.1.1.1.1' name='X-5.1.1.1.1.1.1.1' style='display:none;'>5.1.1.1.1.1.1.1</div><div id='A-5.1.1.1.1.1.2' name='A-5.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.1.1.1.1.2' name='A-href-5.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.1.1.2' name='A-target-5.1.1.1.1.1.2' style='display:none;'></div><div id='X-5.1.1.1.1.1.2' name='X-5.1.1.1.1.1.2' style='display:none;'>No</div><div id='A-5.1.1.1.2' name='A-5.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.1.1.2' name='A-href-5.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1.1.2' name='A-target-5.1.1.1.2' style='display:none;'></div><div id='X-5.1.1.1.2' name='X-5.1.1.1.2' style='display:none;'>No</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'>text</div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-6.1.1' name='A-6.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'>text</div><div id='X-6.1.1' name='X-6.1.1' style='display:none;'>6.1.1</div><div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'>6.1.1.1</div><div id='A-6.1.1.1.1' name='A-6.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1' name='A-href-6.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1' name='A-target-6.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1' name='X-6.1.1.1.1' style='display:none;'>6.1.1.1.1</div><div id='A-6.1.1.1.1.1' name='A-6.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1' name='A-href-6.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1' name='A-target-6.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1' name='X-6.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'>text</div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>text</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'>10.1.1</div><div id='A-10.1.1.1' name='A-10.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1' name='A-href-10.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1' name='A-target-10.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1' name='X-10.1.1.1' style='display:none;'>10.1.1.1</div><div id='A-10.1.1.1.1' name='A-10.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1.1' name='A-href-10.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1' name='A-target-10.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1' name='X-10.1.1.1.1' style='display:none;'>yes</div><div id='A-10.1.1.1.1.1' name='A-10.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1' name='A-href-10.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1' name='A-target-10.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1' name='X-10.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-10.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1' style='display:none;'>10.1.1.1.1.1.1.1</div><div id='A-10.1.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1.1' style='display:none;'>yes2</div><div id='A-10.1.1.1.1.1.1.1.1.1' name='A-10.1.1.1.1.1.1.1.1.1' style='display:none;'>Continue
+</div><div id='A-href-10.1.1.1.1.1.1.1.1.1' name='A-href-10.1.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.1.1' name='A-target-10.1.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.1.1' name='X-10.1.1.1.1.1.1.1.1.1' style='display:none;'>Continue</div><div id='A-10.1.1.1.1.1.1.1.2' name='A-10.1.1.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.1.1.1.1.1.2' name='A-href-10.1.1.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.1.1.1.1.2' name='A-target-10.1.1.1.1.1.1.1.2' style='display:none;'></div><div id='X-10.1.1.1.1.1.1.1.2' name='X-10.1.1.1.1.1.1.1.2' style='display:none;'>no2</div><div id='A-10.1.1.1.2' name='A-10.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.1.2' name='A-href-10.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1.2' name='A-target-10.1.1.1.2' style='display:none;'></div><div id='X-10.1.1.1.2' name='X-10.1.1.1.2' style='display:none;'>no</div><div id='A-12.1' name='A-12.1' style='display:none;'><variable></div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'>text</div><div id='X-12.1' name='X-12.1' style='display:none;'>12.1</div><div id='A-12.1.1' name='A-12.1.1' style='display:none;'><variable></div><div id='A-href-12.1.1' name='A-href-12.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1.1' name='A-target-12.1.1' style='display:none;'>text</div><div id='X-12.1.1' name='X-12.1.1' style='display:none;'>12.1.1</div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'>text</div><div id='X-14.1' name='X-14.1' style='display:none;'>14.1</div><div id='A-15.1' name='A-15.1' style='display:none;'>On the premises.
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>On the premises.</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'><variable></div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'>date</div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'>15.1.1</div><div id='A-15.2' name='A-15.2' style='display:none;'>Off the premises.
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>Off the premises.</div><div id='A-15.2.1' name='A-15.2.1' style='display:none;'><variable></div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'>text</div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'>15.2.1</div><div id='A-15.2.1.1' name='A-15.2.1.1' style='display:none;'><variable></div><div id='A-href-15.2.1.1' name='A-href-15.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1.1' name='A-target-15.2.1.1' style='display:none;'>date</div><div id='X-15.2.1.1' name='X-15.2.1.1' style='display:none;'>15.2.1.1</div><div id='A-15.2.2' name='A-15.2.2' style='display:none;'>I'm not sure.
+
+</div><div id='A-href-15.2.2' name='A-href-15.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.2' name='A-target-15.2.2' style='display:none;'></div><div id='X-15.2.2' name='X-15.2.2' style='display:none;'>I'm not sure.</div><div id='A-16.1' name='A-16.1' style='display:none;'>Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'>target="_blank"</div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'>No</div>
+<script>
+	var QVnames = [['1','person'],['1.1','1.1'],['1.2','1.2'],['1.2.1','1.2.1'],['1.2.2','1.2.2'],['2','tname1'],['2.1','tname2'],['2.1.1','2.1.1'],['3','number'],['3.1','taddress'],['3.1.1','taddress2'],['3.1.1.1','lname'],['3.1.1.1.1','laddress'],['3.1.1.1.1.1','laddress2'],['3.1.1.1.1.1.1','3.1.1.1.1.1.1'],['4','issue'],['4.1','4.1'],['4.2','4.2'],['4.3','4.3'],['4.4','4.4'],['4.5','4.5'],['4.6','4.6'],['4.7','4.7'],['4.8','4.8'],['4.9','4.9'],['4.9.1','4.9.1'],['4.9.2','4.9.2'],['4.9.3','4.9.3'],['5','repairs'],['5.1','needs'],['5.1.1','issues'],['5.1.1.1','otherneeds'],['5.1.1.1.1','moreneeds'],['5.1.1.1.1.1','otherneeds1'],['5.1.1.1.1.1.1','ntwo'],['5.1.1.1.1.1.1.1','5.1.1.1.1.1.1.1'],['5.1.1.1.1.1.2','5.1.1.1.1.1.2'],['5.1.1.1.2','5.1.1.1.2'],['5.1.2','5.1.2'],['6','deposit'],['6.1','interest'],['6.1.1','vacate'],['6.1.1.1','forwarding'],['6.1.1.1.1','forward2'],['6.1.1.1.1.1','thanks2'],['7','bugbill'],['8','repairbill'],['9','privacy'],['10','neighbor'],['10.1','date'],['10.1.1','incident'],['10.1.1.1','more'],['10.1.1.1.1','n2'],['10.1.1.1.1.1','d2'],['10.1.1.1.1.1.1','i2'],['10.1.1.1.1.1.1.1','more2'],['10.1.1.1.1.1.1.1.1','followup'],['10.1.1.1.1.1.1.1.1.1','continue2'],['10.1.1.1.1.1.1.1.2','thanks4'],['10.1.1.1.2','thanks5'],['11','guests'],['12','retaliation'],['12.1','action'],['12.1.1','thanks3'],['13','lease'],['14','utility'],['14.1','thanks'],['15','property'],['15.1','pickup1'],['15.1.1','15.1.1'],['15.2','15.2'],['15.2.1','pickup2'],['15.2.1.1','15.2.1.1'],['16','print'],['16.1','yesprint'],['16.2','noprint'],['17','bye']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b> Repair Request Form Help</b></p><p>By  For HomeLine</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+		
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			} 
+		}
+			
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();			
+		} else {
+			if (restart == undefined) {
+				document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML				
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") { 
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n"; 
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);			
+			}
+
+		}
+		
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+					
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";		
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question 
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+				
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+						
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			var script_call = "";
+			if (tmp[i].innerHTML.match(regexp)) {
+				if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {
+					script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");
+				} else {
+					if (a_href[i].innerHTML.match('^_blank:')) {
+						script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";			
+					} else {
+						script_call = "location.href = '"+a_href[i].innerHTML+"';";
+					}
+				}
+				document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";							
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";				
+				freetext = 0;
+			}
+		}			
+
+		if (restar == undefined) {
+			
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) { 
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";				
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+				
+		if (QNum != 0) { 
+			if (goingback == 0) {
+				scroll2Q(Jht,800);           	
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);     		
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+					
+	}
+
+	
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";						
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+	
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+		
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+		
+		return items;
+	}	
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+		
+	//show funtion
+	function show(id) { 
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else { 
+        	if (document.layers) {  
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';         
+    	} else { 
+        	if (document.layers) {  
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';         
+        	}   
+    	} else { 
+        	if (document.layers) {  
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+	
+	function swapvar(input) {
+		var output; 
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			} 
+		}
+		output = input
+		return output
+	}
+	
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+	
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+	
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+		
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+		
+		//look4goto(qn,path[path.length-1]);
+		
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it. 
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		look4goto(qn,path[path.length-1]);
+		
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+		
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}		
+	
+	function doc() {
+		var doc_output = ""; 
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}	
+	
+	function json_str() {
+		
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+	
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";		
+		}
+		
+		if (docAs) {
+			var doctext = document.createElement("textarea");
+			doctext.style.display ='none';
+			doctext.name= docAs;
+			doctext.value= doc();
+			document.getElementById('FORM').appendChild(doctext);
+			if (instructions) {
+				var instructtext = document.createElement("textarea");
+				instructtext.type='hidden';
+				instructtext.style.display ='none';
+				instructtext.name= 'i';
+				instructtext.value= instructions;
+				document.getElementById('FORM').appendChild(instructtext);	
+			}
+		}
+		if (transcriptAs) {
+			var ttext = document.createElement("textarea");
+			ttext.type='hidden';
+			ttext.style.display ='none';
+			ttext.name= transcriptAs;
+			ttext.value= transcript();
+			document.getElementById('FORM').appendChild(ttext);
+		}
+		if (jsonAs) {
+			var json = document.createElement("textarea");
+			json.type='hidden';
+			json.style.display ='none';
+			json.name= jsonAs;
+			json.value= json_str();
+			document.getElementById('FORM').appendChild(json);
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+	
+	function csv() {
+		var csv_list = "";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				csv_list = csv_list+'"'+QVnames[i][1]+'"';
+				csv_list = csv_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					csv_list = csv_list+'""';
+				}
+				csv_list = csv_list+",";
+			} 			
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+
+		return csv_list;
+	}
+	
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature. 
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem || 
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension     
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+		
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+		
+	// Optionally allow the user to choose a file name by providing 
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+		
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+			  
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+		
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+		
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+</BODY>
+</HTML>
