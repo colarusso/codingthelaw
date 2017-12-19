@@ -1,0 +1,99 @@
+Q(1):Welcome!  Are you the tenant or are you filling this out on behalf of someone else?
+A:I am the tenant.
+	Q(1.1):GOTO:tname1
+A:I am filling this out for someone else.  
+	
+Q(tname1):What's your first name?
+X:
+	Q(tname2): and what's your last name?
+	X:
+		Q(2.1.1):Thanks, nice to meet you <x>tname1</x>!  I'm here to help you with a variety of issues with your landlord.  I just need a bit more background information. GOTO:number
+
+Q(number):What is the best phone number to reach you?
+X:number
+	Q(taddress):What is your street address?  For example: "123 Main st."
+	X:
+		Q(taddress2):What is your city, state, and zip?  For example: "Boston, MA. 02108"
+		X:
+			Q(lname):What is your landlord's full name?
+			X:
+				Q(laddress):What is your landlord's street address?  For example: "123 Main st."
+				X:
+					Q(laddress2):What is your landlord's city, state, and zip?  For example: "Boston, MA. 02108"
+					X:
+						Q(3.1.1.1.1.1.1):Thanks for that info!  GOTO:issue
+
+
+Q(issue):What can we help you with?
+A:You want your landlord to return a security deposit.
+	Q(4.1):GOTO:deposit
+A:You received a bill from your landlord for bug exterminations.
+	Q(4.2):GOTO:bugbill
+A:You received a bill from your landlord for repairs.
+	Q(4.3):GOTO:repairbill
+A:You want to remind your landlord of your right to privacy.
+	Q(4.4):GOTO:privacy
+A:You want your landlord to do something about an incident with your neighbors.
+	Q(4.5):GOTO:neighbors
+A:You want to remind your landlord of your right to have guests.
+	Q(4.6):GOTO:guests
+A:You feel your landlord has retaliated/punished you because you previously asserted your rights.
+	Q(4.7):GOTO:retaliation
+A:You want to request a copy of your lease.
+	Q(4.8):GOTO:lease
+A:See More Issues
+	Q(4.9):What can we help you with?
+	A:You want to request a copy of a utility bill.
+		Q(4.9.1):GOTO:utility
+	A:You want to demand the return of your property that's been taken.
+		Q(4.9.2):GOTO:property 
+
+
+Q(deposit):Your letter to demand the return of your security deposit is ready. 
+
+
+Q(bugbill):Your response to an invoice for bug extermination is ready.
+	<input type="hidden" name="name" value="Response to Invoice for Bug Extermination"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+
+Q(repairbill):Your response to an invoice for repairs is ready.
+	<input type="hidden" name="name" value="Response to Invoice for Repairs"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/>
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+
+Q(privacy):This begins the privacy notice tree.
+Q(neighbors):This begins the neighbor incident tree.
+Q(guests):This begins the guest tree.  
+	<input type="hidden" name="name" value="Letter to Assert Guest Rights"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+
+Q(retaliation):This begins the retaliation tree.
+
+Q(lease):This begins the lease tree.
+	<input type="hidden" name="name" value="Request for Lease"/>
+	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+
+
+Q(utility):This begins the utility tree.
+Q(property):Has the property the landlord taken being held on the premises or off the premises?
+A:On the premises.
+	Q(pickup1):When will you be able to pick up the property?
+	X:date
+		Q(14.1.1):Your demand letter for the return of your property is ready.
+			<input type="hidden" name="name" value="Demand Letter for Return of Property"/>
+			<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/>
+		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+
+A:Off the premises.
+	Q(14.2):What is the full address where the property is being stored?
+	X:
+		Q(pickup2):When will you be able to pick up the property?
+		X:date
+			Q(14.2.1.1):Your demand letter for the return of your property is ready.
+				<input type="hidden" name="name" value="Demand Letter for Return of Property"/>
+				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
+			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+	A:I'm not sure.

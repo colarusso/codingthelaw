@@ -1,0 +1,1057 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<HEAD>
+	<title>Untitled QnA</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"><style>	
+	body {
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	}
+
+	#rawmarkup{
+		display:none;
+	}
+	
+	#QandA img{
+		width:100%;
+	}
+
+	div.main{
+		min-width:300px;
+		max-width:650px;
+		margin: 0 auto;
+	padding:0 5px 0 5px;
+		}
+	div.frame{
+		float:left;
+		width:100%;
+		margin:5px 0 5px 0;
+	}
+	div.full{
+		float:left;
+		width:100%;
+	}
+	.button{
+		padding:8px;
+		margin:8px 0 0px 0;
+		width:100%;
+	}
+	div.question_text{
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#ffffff;
+		min-width:30px;
+		background:#5489eb;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-right:45px;
+	}
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
+
+	div.question_arrow{
+		float:left; 
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent; 
+		border-right: 10px solid transparent; 
+		border-top: 15px solid #5489eb;
+		margin:0 20px;
+	}
+	div.ans_text{
+		float:right;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#000000;
+		min-width:30px;
+		background:#eeeeee;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-left:45px;
+	}
+	div.ans_arrow{
+		float:right; 
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent; 
+		border-right: 5px solid transparent; 
+		border-top: 15px solid #eeeeee;
+		margin:0 20px;
+	}
+	div.choices{
+		float:left;
+		width:100%;
+		margin:15px 0 0 0;
+	}
+	div.standard_buttons{
+		float:left;
+		width:100%;
+		margin-top:5px;
+		border-top: 1px solid #ddd; 
+		padding-top:12px;		
+	}
+	div.credits{
+		float:left;
+		dispaly:none;
+		width:100%;
+		background:#eee;
+		margin:0px 0 15px 0;
+	}
+	div.credit_text{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		padding:4px 15px 10px 15px;
+	}
+	li.error{
+		list-style-type: none;
+		background:#ffdddd;
+		margin: 10px 0 0 0;
+		padding: 5px;
+	}
+
+	.qpad {
+		float:left;
+		padding:0 15px;
+	}
+	
+	a.sbutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.sbutton:hover, a.sbutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton:hover, a.qabutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+
+	div.xdiv {
+		float:left;
+		width:100%;
+		margin: 0 0 8px 0;
+		background: #eee;
+		border: solid 1px #888;
+		border-radius: 8px;
+	}	
+
+	input.xinput {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		float:left;
+		width:100%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #fff;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding:10px 10px 12px 10px;
+		border: solid 0px #888;
+		border-bottom: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton {
+		float:left;
+		width:100%;
+		text-align:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0px;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton:hover, a.xbutton:active {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		background: #ddd;
+	}
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Q%28hello%29%3A+Hello%21+Would+you+like+some+assistance+with+Property+Law%3F%0D%0AA%3A+Yes%21+%0D%0A%09Q%281.1%29%3AGOTO%3Aname%0D%0AA%3A+No.++%0D%0A%09Q%281.2%29%3AGOTO%3Agoodbye%0D%0A%0D%0AQ%28name%29%3A+Great%21+First%2C+let%27s+get+your+name.%0D%0AX%3Atext%0D%0A%09Q%282.1%29%3AGOTO%3Atopics%0D%0A%0D%0AQ%28goodbye%29%3A+I%27m+sorry%2C+there+isn%27t+anything+more+I+can+help+you+with.+Goodbye.%0D%0AA%3A+Start+over%3F%0D%0A%09Q%283.1%29%3AGOTO%3Ahello%0D%0A%0D%0A%0D%0AQ%28topics%29%3A+Hi%2C+%3Cx%3Ename%3C%2Fx%3E%2C+what+can+I+help+you+with%3F+Keep+in+mind+this+chatbot+helps+you+if+you+already+have+a+hypothetical+situation+ready+to+analyze.+%0D%0AA%3A+Rule+Against+Perpetuities+%28%22RAP%22%29%0D%0A%09Q%284.1%29%3AGOTO%3ARAP%0D%0AA%3A+Landlord%2FTenant+issues%0D%0A%09Q%284.2%29%3AGOTO%3ALanTen%0D%0A%0D%0AQ%28RAP%29%3A+Good+choice%2C+%3Cx%3Ename%3C%2Fx%3E%21+The+Rule+Against+Perpetuities+%22RAP%22+can+be+difficult%21+Lots+of+people+struggle+with+this+topic.+We%27ll+take+it+step+by+step.+Are+you+ready+to+understand+RAP%3F+Make+sure+you+have+a+conveyance+to+analyze+when+going+through+these+steps.+This+chatbot+also+assumes+you+have+a+grounded+understanding+of+future+interests%2C+life+estates%2C+and+remainders.+If+you+don%27t%2C+click+below.%0D%0AA%3A+I%27m+ready.+Let%27s+go%21%0D%0A%09Q%285.1%29%3AGOTO%3AR_one%0D%0AA%3A%5Bhttps%3A%2F%2Fsubscription.westacademic.com%2FBook%2FDetail%2F24056%5D+I+need+future+interest+help%21%0D%0A%09Q%285.2%29%3AGOTO%3Atopics%0D%0A%0D%0AQ%28R_one%29%3A+%3Cx%3Ename%3C%2Fx%3E%2C+The+RAP+only+applies+to+conveyances+where+a+contingent+interest+exists.+Is+there+a+contingent+interest%3F+Make+sure+you+identify+what+the+contingencies+are+and+what+interests+each+individual+or+class+has.%0D%0AA%3A+There+is+a+contingent+interest%21%0D%0A%09Q%286.1%29%3AGOTO%3AR_two%0D%0AA%3A+There+is+not+a+contingent+interest.%0D%0A%09Q%286.2%29%3A+Then+the+RAP+doesn%27t+apply+and+you%27re+done%21+GOTO%3Ahello%0D%0AA%3A+Contingent+interest%3F+What%27s+that%3F%0D%0A%09Q%286.3%29%3A+An+interest+is+contingent+if+there+is+a+condition+precedent+to+the+interest+vesting.+In+other+words%2C+there+is+an+occurrence+or+nonoccurrence+of+an+event+prior+to+the+interest+vesting.%0D%0A%09A%3A+Great%2C+I+got+it+now.%0D%0A%09%09Q%286.3.1%29%3AGOTO%3AR_one%0D%0A%09A%3A+What+does+it+mean+for+an+interest+to+vest%3F%0D%0A%09%09Q%286.3.2%29%3A+An+interest+vests+when+there+are+no+conditions+precedent.+In+other+words%2C+while+the+interest+may+not+become+immediately+possessory%2C+no+other+events+must+occur+for+the+interest+to+be+guaranteed+to+the+beneficiary.%0D%0A%09%09A%3A+Great%2C+I+got+it+now%21%0D%0A%09%09%09Q%286.3.2.1%29%3AGOTO%3AR_one%0D%0A%09%09A%3A+What%27s+a+%22conveyance%3F%22%0D%0A%09%09%09Q%286.3.2.2%29%3AGOTO%3A6.3.3+%0D%0A%09A%3A+What%27s+a+%22conveyance%3F%22%0D%0A%09%09Q%286.3.3%29%3A+A+conveyance+is+a+granting+of+land+or+personal+property+from+one+person+or+entity+to+another+person+or+entity.%0D%0A%09%09A%3A+That+makes+sense%21%0D%0A%09%09%09Q%286.3.3.1%29%3AGOTO%3AR_one%0D%0A%09%09A%3A+What+does+it+mean+for+an+interest+to+vest%3F%0D%0A%09%09%09Q%286.3.3.2%29%3AGOTO%3A6.3.2++%0D%0A%0D%0AQ%28R_two%29%3A+Great%21+The+next+step+is+to+determine+when+the+interest+is+deemed+to+be+created.+This+will+help+you+in+the+next+few+steps.%0D%0AA%3A+When+the+grantor+dies.%0D%0A%09Q%287.1%29%3AGOTO%3AR_three%0D%0AA%3A+At+delivery+of+the+deed.%0D%0A%09Q%287.2%29%3AGOTO%3AR_three%0D%0AA%3A+How+do+I+tell%3F%0D%0A%09Q%287.3%29%3A+If+the+conveyance+is+made+in+a+will%2C+the+interest+is+created+at+the+death+of+the+testator.+If+the+conveyance+is+an+inter+vivos+transfer%2C+the+interest+is+created+at+delivery+of+the+conveyance.%0D%0A%09A%3A+Got+it%21%0D%0A%09%09Q%287.3.1%29%3AGOTO%3AR_two%0D%0A%0D%0AQ%28R_three%29%3A+%3Cx%3Ename%3C%2Fx%3E+you%27ve+made+it+so+far%21+Almost+done%2C+but+now+comes+the+hard+part.+Figure+out+who+is+the+worst-case+life+in+being.+Sometimes+this+is+called+a+measuring+life.%0D%0AA%3A+Ok%2C+I+think+I+know+who+is+the+worst-case+life+in+being%21%0D%0A%09Q%288.1%29%3AGOTO%3AR_four%0D%0AA%3A+What+is+a+life+in+being%3F%0D%0A%09Q%288.2%29%3A+A+life+in+being+is+an+ascertainable+individual+at+the+time+the+interest+is+created.+In+other+words%2C+they+are+alive+and+we+know+who+they+are+at+the+time+the+interest+is+created.+In+a+conveyance+that+names+an+%22A%22+we+can+assume+A+was+born+and+a+named+individual+at+the+time+the+conveyance+was+written.+Compare+that+with+%22A%27s+children%22+where+we+may+not+be+sure+who+all+of+A%27s+children+are+until+A+dies.+Therefore%2C+unless+we+know+A+is+dead%2C+we+cannot+use+his+children+as+a+life+in+being+because+A+can+continue+to+have+children+until+his+death.+There+can+be+children+born+after+the+interest+is+created%2C+and+therefore+they+cannot+be+lives+in+being.%0D%0A%09A%3A+Alright%2C+that+helps%2C+I+think+I%27ve+got+it%21%0D%0A%09%09Q%288.2.1%29%3AGOTO%3AR_four%0D%0A%09A%3A+How+do+I+know+which+is+the+worst+case+life+in+being%3F%0D%0A%09%09Q%288.2.2%29%3AGOTO%3A8.3%0D%0AA%3A+How+do+I+know+which+is+the+worst-case+life+in+being%3F%0D%0A%09Q%288.3%29%3A+Sometimes+it%27s+difficult+to+tell.+Usually+it%27s+the+last+person+who+dies+that+was+alive+at+the+creation+of+the+interest+for+the+next+class+of+individuals+to+receive+a+vesting+interest+in+the+property.+It+also+could+be+the+individual+that+dies+that+closes+a+class+gift.+A+class+is+a+group+of+people%2C+like+someone%27s+children.+We+won%27t+know+who+are+the+children+of+a+person+until+they+die%2C+because+we+assume+a+person+can+have+children+up+to+the+point+of+death.+Ignore+science+for+now+%28think+in+vitro+fertilization%29.%0D%0A%09A%3A+I+think+I%27ve+got+it%2C+but+I+may+need+more+help.%0D%0A%09%09Q%288.3.1%29%3A+Ok%2C+you+can+always+go+here.%0D%0A%09%09A%3A%5Bhttps%3A%2F%2Fwww.jstor.org%2Fstable%2Fpdf%2F1333874.pdf%5D+Thanks%21%0D%0A%09%09%09Q%288.3.1.1%29%3AGOTO%3AR_four%0D%0A%09A%3A+What+is+a+life+in+being%3F%0D%0A%09%09Q%288.3.2%29%3AGOTO%3A8.2%0D%0A%0D%0AQ%28R_four%29%3A+When%2C+after+the+death+of+the+worst+case+life+in+being%2C+does+the+interest+vest%3F%0D%0AA%3A+More+than+twenty-one+years.%0D%0A%09Q%289.1%29%3A+Then+this+interest+is+void+because+it+violates+the+RAP%21%0D%0AA%3A+Less+than+twenty-one+years.%0D%0A%09Q%289.2%29%3A+Then+this+interest+is+good%21+Yay%21%0D%0AA%3A+I+have+no+idea+if+it+does.%0D%0A%09Q%289.3%29%3A+If+the+interest+vests+more+than+twenty-one+years+after+the+death+of+the+worst+case+life+in+being+at+the+creation+of+the+interest+then+it+violates+the+RAP.+For+example%2C+if+an+individual+needs+to+reach+the+age+of+30+before+the+interest+vests%2C+and+they+are+born+the+day+the+worst+case+life+in+being+dies%2C+then+the+interest+is+void+because+the+interest+vests+more+than+twenty-one+years+after+the+death+of+the+worst+case+life+in+being.%0D%0A%09A%3A+I+think+I%27ve+got+it%2C+thanks%21%0D%0A%09%09Q%289.3.1%29%3AGOTO%3AR_five%0D%0A%0D%0AQ%28R_five%29%3A+You%27ve+successfully+completed+evaluating+whether+an+interest+violates+the+RAP.+Remember+to+follow+these+steps+for+each+interest+in+the+conveyance+as+if+there+is+no+rule.+%0D%0AA%3A+YAY%21%0D%0A%09Q%2810.1%29%3AGOTO%3Atopics%0D%0AA%3A+I+think+I+got+it%2C+but+where+can+I+go+for+more+practice%3F%0D%0A%09Q%2810.2%29%3A+I+can+give+you+some+very+common+hypothetical+conveyances+if+that+would+help%3F%0D%0A%09A%3A%5Bhttps%3A%2F%2Fwww.jstor.org%2Fstable%2Fpdf%2F1333874.pdf%5D+Yes%21+Let%27s+test+this%21%0D%0A%09%09%0D%0A%0D%0A%0D%0A%0D%0AQ%28LanTen%29%3A+With+landlord+and+tenant+issues%2C+this+program+will+cover+common+landlord+breaches.+These+breaches+include+Breach+of+the+Covenant+of+Quiet+Enjoyment%2C+Warranty+of+Habitability%2C+Constructive+Eviction%2C+and+Partial+Actual+Eviction.+This+will+help+you+figure+out+which+of+these+may+be+applicable+to+your+issue.+Ready+to+get+started%3F%0D%0AA%3A+Yes%21%0D%0A%09Q%2811.1%29%3AGOTO%3ALanTen_one%0D%0AA%3A+No.%0D%0A%09Q%2811.2%29%3AGOTO%3Agoodbye%0D%0A%0D%0AQ%28LanTen_one%29%3A+Do+you+see+any+of+the+following+in+your+fact+pattern+hypothetical%3F%0D%0AA%3A+The+landlord+is+interfering+with+the+Tenant%27s+enjoyment+of+the+premise.+For+example%2C+the+landlord+is+making+a+nuisance+by+loud+noise.+The+landlord+is+coming+onto+the+property+without+notifying+the+tenant.%0D%0A%09Q%2812.1%29%3AGOTO%3ALanTen_Quiet++%0D%0AA%3A+The+landlord+has+built+or+allowed+to+be+built+a+permanent+physical+structure+on+the+leased+premise%2C+no+matter+how+slight+an+encroachment.%0D%0A%09Q%2812.2%29%3AGOTO%3ALanTen_Actual%0D%0AA%3A+The+landlord+has+failed+to+repair+an+essential+aspect+of+the+premise+such+that+the+tenant+cannot+safely+live+there+anymore.+Examples+would+be+that+the+apartment+does+not+have+any+heat+and+is+located+in+a+particularly+cold+environment.+Another+example+would+be+that+the+landlord+has+failed+to+repair+a+bathroom+and+there+is+only+one+bathroom+for+the+apartment.%0D%0A%09Q%2812.3%29%3AGOTO%3ALanTen_Habit%0D%0AA%3A+The+premise+is+in+such+disrepair+or+so+unusable+and+the+landlord+refuses+to+repair+or+fix+the+issue+that+the+tenant+has+left+the+premise.%0D%0A%09Q%2812.4%29%3AGOTO%3ALanTen_Cons%0D%0A%0D%0AQ%28LanTen_Quiet%29%3A+If+the+landlord+has+done+any+one+of+those+examples%2C+or+something+like+it%2C+then+there+is+probably+a+breach+of+the+Covenant+of+Quiet+Enjoyment.%0D%0AQ%28LanTen_Habit%29%3A+If+the+landlord+has+done+any+one+of+those+examples%2C+or+something+like+it%2C+then+there+is+probably+a+breach+warranty+of+habitability.%0D%0AQ%28LanTen_Cons%29%3A+If+the+landlord+has+done+any+one+of+those+examples%2C+or+something+like+it%2C+then+there+is+probably+a+Constructive+Eviction.+Remember%2C+the+tenant+must+leave+in+order+for+there+to+be+a+constructive+eviction.%0D%0AQ%28LanTen_Actual%29%3A+If+the+landlord+has+done+any+one+of+those+examples%2C+or+something+like+it%2C+then+there+is+probably+a+Partial+Actual+Eviction.+Remember+there+must+be+a+physical+encroachment+of+a+permanent+nature+on+the+leased+premise+in+order+for+there+to+be+a+partial+actual+eviction.+%0D%0A%0D%0A</div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'> Hello! Would you like some assistance with Property Law?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'>GOTO:3</div><div id='Q-2' name='Q-2' style='display:none;'> Great! First, let's get your name.
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:4</div><div id='Q-3' name='Q-3' style='display:none;'> I'm sorry, there isn't anything more I can help you with. Goodbye.
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:1</div><div id='Q-4' name='Q-4' style='display:none;'> Hi, <x>name</x>, what can I help you with? Keep in mind this chatbot helps you if you already have a hypothetical situation ready to analyze. 
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:11</div><div id='Q-5' name='Q-5' style='display:none;'> Good choice, <x>name</x>! The Rule Against Perpetuities "RAP" can be difficult! Lots of people struggle with this topic. We'll take it step by step. Are you ready to understand RAP? Make sure you have a conveyance to analyze when going through these steps. This chatbot also assumes you have a grounded understanding of future interests, life estates, and remainders. If you don't, click below.
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:6</div><div id='Q-5.2' name='Q-5.2' style='display:none;'>GOTO:4</div><div id='Q-6' name='Q-6' style='display:none;'> <x>name</x>, The RAP only applies to conveyances where a contingent interest exists. Is there a contingent interest? Make sure you identify what the contingencies are and what interests each individual or class has.
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> Then the RAP doesn't apply and you're done! GOTO:1</div><div id='Q-6.3' name='Q-6.3' style='display:none;'> An interest is contingent if there is a condition precedent to the interest vesting. In other words, there is an occurrence or nonoccurrence of an event prior to the interest vesting.
+</div><div id='Q-6.3.1' name='Q-6.3.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.2' name='Q-6.3.2' style='display:none;'> An interest vests when there are no conditions precedent. In other words, while the interest may not become immediately possessory, no other events must occur for the interest to be guaranteed to the beneficiary.
+</div><div id='Q-6.3.2.1' name='Q-6.3.2.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.2.2' name='Q-6.3.2.2' style='display:none;'>GOTO:6.3.3</div><div id='Q-6.3.3' name='Q-6.3.3' style='display:none;'> A conveyance is a granting of land or personal property from one person or entity to another person or entity.
+</div><div id='Q-6.3.3.1' name='Q-6.3.3.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.3.2' name='Q-6.3.3.2' style='display:none;'>GOTO:6.3.2</div><div id='Q-7' name='Q-7' style='display:none;'> Great! The next step is to determine when the interest is deemed to be created. This will help you in the next few steps.
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-7.2' name='Q-7.2' style='display:none;'>GOTO:8</div><div id='Q-7.3' name='Q-7.3' style='display:none;'> If the conveyance is made in a will, the interest is created at the death of the testator. If the conveyance is an inter vivos transfer, the interest is created at delivery of the conveyance.
+</div><div id='Q-7.3.1' name='Q-7.3.1' style='display:none;'>GOTO:7</div><div id='Q-8' name='Q-8' style='display:none;'> <x>name</x> you've made it so far! Almost done, but now comes the hard part. Figure out who is the worst-case life in being. Sometimes this is called a measuring life.
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'> A life in being is an ascertainable individual at the time the interest is created. In other words, they are alive and we know who they are at the time the interest is created. In a conveyance that names an "A" we can assume A was born and a named individual at the time the conveyance was written. Compare that with "A's children" where we may not be sure who all of A's children are until A dies. Therefore, unless we know A is dead, we cannot use his children as a life in being because A can continue to have children until his death. There can be children born after the interest is created, and therefore they cannot be lives in being.
+</div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:9</div><div id='Q-8.2.2' name='Q-8.2.2' style='display:none;'>GOTO:8.3</div><div id='Q-8.3' name='Q-8.3' style='display:none;'> Sometimes it's difficult to tell. Usually it's the last person who dies that was alive at the creation of the interest for the next class of individuals to receive a vesting interest in the property. It also could be the individual that dies that closes a class gift. A class is a group of people, like someone's children. We won't know who are the children of a person until they die, because we assume a person can have children up to the point of death. Ignore science for now (think in vitro fertilization).
+</div><div id='Q-8.3.1' name='Q-8.3.1' style='display:none;'> Ok, you can always go here.
+</div><div id='Q-8.3.1.1' name='Q-8.3.1.1' style='display:none;'>GOTO:9</div><div id='Q-8.3.2' name='Q-8.3.2' style='display:none;'>GOTO:8.2</div><div id='Q-9' name='Q-9' style='display:none;'> When, after the death of the worst case life in being, does the interest vest?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Then this interest is void because it violates the RAP!
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'> Then this interest is good! Yay!
+</div><div id='Q-9.3' name='Q-9.3' style='display:none;'> If the interest vests more than twenty-one years after the death of the worst case life in being at the creation of the interest then it violates the RAP. For example, if an individual needs to reach the age of 30 before the interest vests, and they are born the day the worst case life in being dies, then the interest is void because the interest vests more than twenty-one years after the death of the worst case life in being.
+</div><div id='Q-9.3.1' name='Q-9.3.1' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> You've successfully completed evaluating whether an interest violates the RAP. Remember to follow these steps for each interest in the conveyance as if there is no rule. 
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:4</div><div id='Q-10.2' name='Q-10.2' style='display:none;'> I can give you some very common hypothetical conveyances if that would help?
+</div><div id='Q-11' name='Q-11' style='display:none;'> With landlord and tenant issues, this program will cover common landlord breaches. These breaches include Breach of the Covenant of Quiet Enjoyment, Warranty of Habitability, Constructive Eviction, and Partial Actual Eviction. This will help you figure out which of these may be applicable to your issue. Ready to get started?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:3</div><div id='Q-12' name='Q-12' style='display:none;'> Do you see any of the following in your fact pattern hypothetical?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:16</div><div id='Q-12.3' name='Q-12.3' style='display:none;'>GOTO:14</div><div id='Q-12.4' name='Q-12.4' style='display:none;'>GOTO:15</div><div id='Q-13' name='Q-13' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a breach of the Covenant of Quiet Enjoyment.
+</div><div id='Q-14' name='Q-14' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a breach warranty of habitability.
+</div><div id='Q-15' name='Q-15' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a Constructive Eviction. Remember, the tenant must leave in order for there to be a constructive eviction.
+</div><div id='Q-16' name='Q-16' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a Partial Actual Eviction. Remember there must be a physical encroachment of a permanent nature on the leased premise in order for there to be a partial actual eviction. 
+
+</div><div id='A-1.1' name='A-1.1' style='display:none;'> Yes! 
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>Yes!</div><div id='A-1.2' name='A-1.2' style='display:none;'> No.  
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>No.</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>text</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-3.1' name='A-3.1' style='display:none;'> Start over?
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>Start over?</div><div id='A-4.1' name='A-4.1' style='display:none;'> Rule Against Perpetuities ("RAP")
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Rule Against Perpetuities ("RAP")</div><div id='A-4.2' name='A-4.2' style='display:none;'> Landlord/Tenant issues
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>Landlord/Tenant issues</div><div id='A-5.1' name='A-5.1' style='display:none;'> I'm ready. Let's go!
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>I'm ready. Let's go!</div><div id='A-5.2' name='A-5.2' style='display:none;'> I need future interest help!
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>https://subscription.westacademic.com/Book/Detail/24056</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'>target="_blank"</div><div id='X-5.2' name='X-5.2' style='display:none;'>I need future interest help!</div><div id='A-6.1' name='A-6.1' style='display:none;'> There is a contingent interest!
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>There is a contingent interest!</div><div id='A-6.2' name='A-6.2' style='display:none;'> There is not a contingent interest.
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>There is not a contingent interest.</div><div id='A-6.3' name='A-6.3' style='display:none;'> Contingent interest? What's that?
+</div><div id='A-href-6.3' name='A-href-6.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3' name='A-target-6.3' style='display:none;'></div><div id='X-6.3' name='X-6.3' style='display:none;'>Contingent interest? What's that?</div><div id='A-6.3.1' name='A-6.3.1' style='display:none;'> Great, I got it now.
+</div><div id='A-href-6.3.1' name='A-href-6.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.1' name='A-target-6.3.1' style='display:none;'></div><div id='X-6.3.1' name='X-6.3.1' style='display:none;'>Great, I got it now.</div><div id='A-6.3.2' name='A-6.3.2' style='display:none;'> What does it mean for an interest to vest?
+</div><div id='A-href-6.3.2' name='A-href-6.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2' name='A-target-6.3.2' style='display:none;'></div><div id='X-6.3.2' name='X-6.3.2' style='display:none;'>What does it mean for an interest to vest?</div><div id='A-6.3.2.1' name='A-6.3.2.1' style='display:none;'> Great, I got it now!
+</div><div id='A-href-6.3.2.1' name='A-href-6.3.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2.1' name='A-target-6.3.2.1' style='display:none;'></div><div id='X-6.3.2.1' name='X-6.3.2.1' style='display:none;'>Great, I got it now!</div><div id='A-6.3.2.2' name='A-6.3.2.2' style='display:none;'> What's a "conveyance?"
+</div><div id='A-href-6.3.2.2' name='A-href-6.3.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2.2' name='A-target-6.3.2.2' style='display:none;'></div><div id='X-6.3.2.2' name='X-6.3.2.2' style='display:none;'>What's a "conveyance?"</div><div id='A-6.3.3' name='A-6.3.3' style='display:none;'> What's a "conveyance?"
+</div><div id='A-href-6.3.3' name='A-href-6.3.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3' name='A-target-6.3.3' style='display:none;'></div><div id='X-6.3.3' name='X-6.3.3' style='display:none;'>What's a "conveyance?"</div><div id='A-6.3.3.1' name='A-6.3.3.1' style='display:none;'> That makes sense!
+</div><div id='A-href-6.3.3.1' name='A-href-6.3.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3.1' name='A-target-6.3.3.1' style='display:none;'></div><div id='X-6.3.3.1' name='X-6.3.3.1' style='display:none;'>That makes sense!</div><div id='A-6.3.3.2' name='A-6.3.3.2' style='display:none;'> What does it mean for an interest to vest?
+</div><div id='A-href-6.3.3.2' name='A-href-6.3.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3.2' name='A-target-6.3.3.2' style='display:none;'></div><div id='X-6.3.3.2' name='X-6.3.3.2' style='display:none;'>What does it mean for an interest to vest?</div><div id='A-7.1' name='A-7.1' style='display:none;'> When the grantor dies.
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>When the grantor dies.</div><div id='A-7.2' name='A-7.2' style='display:none;'> At delivery of the deed.
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>At delivery of the deed.</div><div id='A-7.3' name='A-7.3' style='display:none;'> How do I tell?
+</div><div id='A-href-7.3' name='A-href-7.3' style='display:none;'>javascript:void('');</div><div id='A-target-7.3' name='A-target-7.3' style='display:none;'></div><div id='X-7.3' name='X-7.3' style='display:none;'>How do I tell?</div><div id='A-7.3.1' name='A-7.3.1' style='display:none;'> Got it!
+</div><div id='A-href-7.3.1' name='A-href-7.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.3.1' name='A-target-7.3.1' style='display:none;'></div><div id='X-7.3.1' name='X-7.3.1' style='display:none;'>Got it!</div><div id='A-8.1' name='A-8.1' style='display:none;'> Ok, I think I know who is the worst-case life in being!
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Ok, I think I know who is the worst-case life in being!</div><div id='A-8.2' name='A-8.2' style='display:none;'> What is a life in being?
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>What is a life in being?</div><div id='A-8.2.1' name='A-8.2.1' style='display:none;'> Alright, that helps, I think I've got it!
+</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'>Alright, that helps, I think I've got it!</div><div id='A-8.2.2' name='A-8.2.2' style='display:none;'> How do I know which is the worst case life in being?
+</div><div id='A-href-8.2.2' name='A-href-8.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.2' name='A-target-8.2.2' style='display:none;'></div><div id='X-8.2.2' name='X-8.2.2' style='display:none;'>How do I know which is the worst case life in being?</div><div id='A-8.3' name='A-8.3' style='display:none;'> How do I know which is the worst-case life in being?
+</div><div id='A-href-8.3' name='A-href-8.3' style='display:none;'>javascript:void('');</div><div id='A-target-8.3' name='A-target-8.3' style='display:none;'></div><div id='X-8.3' name='X-8.3' style='display:none;'>How do I know which is the worst-case life in being?</div><div id='A-8.3.1' name='A-8.3.1' style='display:none;'> I think I've got it, but I may need more help.
+</div><div id='A-href-8.3.1' name='A-href-8.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.3.1' name='A-target-8.3.1' style='display:none;'></div><div id='X-8.3.1' name='X-8.3.1' style='display:none;'>I think I've got it, but I may need more help.</div><div id='A-8.3.1.1' name='A-8.3.1.1' style='display:none;'> Thanks!
+</div><div id='A-href-8.3.1.1' name='A-href-8.3.1.1' style='display:none;'>https://www.jstor.org/stable/pdf/1333874.pdf</div><div id='A-target-8.3.1.1' name='A-target-8.3.1.1' style='display:none;'>target="_blank"</div><div id='X-8.3.1.1' name='X-8.3.1.1' style='display:none;'>Thanks!</div><div id='A-8.3.2' name='A-8.3.2' style='display:none;'> What is a life in being?
+</div><div id='A-href-8.3.2' name='A-href-8.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.3.2' name='A-target-8.3.2' style='display:none;'></div><div id='X-8.3.2' name='X-8.3.2' style='display:none;'>What is a life in being?</div><div id='A-9.1' name='A-9.1' style='display:none;'> More than twenty-one years.
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>More than twenty-one years.</div><div id='A-9.2' name='A-9.2' style='display:none;'> Less than twenty-one years.
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'>Less than twenty-one years.</div><div id='A-9.3' name='A-9.3' style='display:none;'> I have no idea if it does.
+</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'></div><div id='X-9.3' name='X-9.3' style='display:none;'>I have no idea if it does.</div><div id='A-9.3.1' name='A-9.3.1' style='display:none;'> I think I've got it, thanks!
+</div><div id='A-href-9.3.1' name='A-href-9.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.3.1' name='A-target-9.3.1' style='display:none;'></div><div id='X-9.3.1' name='X-9.3.1' style='display:none;'>I think I've got it, thanks!</div><div id='A-10.1' name='A-10.1' style='display:none;'> YAY!
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>YAY!</div><div id='A-10.2' name='A-10.2' style='display:none;'> I think I got it, but where can I go for more practice?
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>I think I got it, but where can I go for more practice?</div><div id='A-10.2.1' name='A-10.2.1' style='display:none;'> Yes! Let's test this!
+		
+
+
+
+</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>https://www.jstor.org/stable/pdf/1333874.pdf</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'>target="_blank"</div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'>Yes! Let's test this!</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes!
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes!</div><div id='A-11.2' name='A-11.2' style='display:none;'> No.
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No.</div><div id='A-12.1' name='A-12.1' style='display:none;'> The landlord is interfering with the Tenant's enjoyment of the premise. For example, the landlord is making a nuisance by loud noise. The landlord is coming onto the property without notifying the tenant.
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>The landlord is interfering with the Tenant's enjoyment of the premise. For example, the landlord is making a nuisance by loud noise. The landlord is coming onto the property without notifying the tenant.</div><div id='A-12.2' name='A-12.2' style='display:none;'> The landlord has built or allowed to be built a permanent physical structure on the leased premise, no matter how slight an encroachment.
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>The landlord has built or allowed to be built a permanent physical structure on the leased premise, no matter how slight an encroachment.</div><div id='A-12.3' name='A-12.3' style='display:none;'> The landlord has failed to repair an essential aspect of the premise such that the tenant cannot safely live there anymore. Examples would be that the apartment does not have any heat and is located in a particularly cold environment. Another example would be that the landlord has failed to repair a bathroom and there is only one bathroom for the apartment.
+</div><div id='A-href-12.3' name='A-href-12.3' style='display:none;'>javascript:void('');</div><div id='A-target-12.3' name='A-target-12.3' style='display:none;'></div><div id='X-12.3' name='X-12.3' style='display:none;'>The landlord has failed to repair an essential aspect of the premise such that the tenant cannot safely live there anymore. Examples would be that the apartment does not have any heat and is located in a particularly cold environment. Another example would be that the landlord has failed to repair a bathroom and there is only one bathroom for the apartment.</div><div id='A-12.4' name='A-12.4' style='display:none;'> The premise is in such disrepair or so unusable and the landlord refuses to repair or fix the issue that the tenant has left the premise.
+</div><div id='A-href-12.4' name='A-href-12.4' style='display:none;'>javascript:void('');</div><div id='A-target-12.4' name='A-target-12.4' style='display:none;'></div><div id='X-12.4' name='X-12.4' style='display:none;'>The premise is in such disrepair or so unusable and the landlord refuses to repair or fix the issue that the tenant has left the premise.</div>
+<script>
+	var QVnames = [['1','hello'],['1.1','1.1'],['1.2','1.2'],['2','name'],['2.1','2.1'],['3','goodbye'],['3.1','3.1'],['4','topics'],['4.1','4.1'],['4.2','4.2'],['5','RAP'],['5.1','5.1'],['5.2','5.2'],['6','R_one'],['6.1','6.1'],['6.2','6.2'],['6.3','6.3'],['6.3.1','6.3.1'],['6.3.2','6.3.2'],['6.3.2.1','6.3.2.1'],['6.3.2.2','6.3.2.2'],['6.3.3','6.3.3'],['6.3.3.1','6.3.3.1'],['6.3.3.2','6.3.3.2'],['7','R_two'],['7.1','7.1'],['7.2','7.2'],['7.3','7.3'],['7.3.1','7.3.1'],['8','R_three'],['8.1','8.1'],['8.2','8.2'],['8.2.1','8.2.1'],['8.2.2','8.2.2'],['8.3','8.3'],['8.3.1','8.3.1'],['8.3.1.1','8.3.1.1'],['8.3.2','8.3.2'],['9','R_four'],['9.1','9.1'],['9.2','9.2'],['9.3','9.3'],['9.3.1','9.3.1'],['10','R_five'],['10.1','10.1'],['10.2','10.2'],['11','LanTen'],['11.1','11.1'],['11.2','11.2'],['12','LanTen_one'],['12.1','12.1'],['12.2','12.2'],['12.3','12.3'],['12.4','12.4'],['13','LanTen_Quiet'],['14','LanTen_Habit'],['15','LanTen_Cons'],['16','LanTen_Actual']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'> Hello! Would you like some assistance with Property Law?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'>GOTO:3</div><div id='Q-2' name='Q-2' style='display:none;'> Great! First, let's get your name.
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:4</div><div id='Q-3' name='Q-3' style='display:none;'> I'm sorry, there isn't anything more I can help you with. Goodbye.
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:1</div><div id='Q-4' name='Q-4' style='display:none;'> Hi, <x>name</x>, what can I help you with? Keep in mind this chatbot helps you if you already have a hypothetical situation ready to analyze. 
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:11</div><div id='Q-5' name='Q-5' style='display:none;'> Good choice, <x>name</x>! The Rule Against Perpetuities "RAP" can be difficult! Lots of people struggle with this topic. We'll take it step by step. Are you ready to understand RAP? Make sure you have a conveyance to analyze when going through these steps. This chatbot also assumes you have a grounded understanding of future interests, life estates, and remainders. If you don't, click below.
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:6</div><div id='Q-5.2' name='Q-5.2' style='display:none;'>GOTO:4</div><div id='Q-6' name='Q-6' style='display:none;'> <x>name</x>, The RAP only applies to conveyances where a contingent interest exists. Is there a contingent interest? Make sure you identify what the contingencies are and what interests each individual or class has.
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> Then the RAP doesn't apply and you're done! GOTO:1</div><div id='Q-6.3' name='Q-6.3' style='display:none;'> An interest is contingent if there is a condition precedent to the interest vesting. In other words, there is an occurrence or nonoccurrence of an event prior to the interest vesting.
+</div><div id='Q-6.3.1' name='Q-6.3.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.2' name='Q-6.3.2' style='display:none;'> An interest vests when there are no conditions precedent. In other words, while the interest may not become immediately possessory, no other events must occur for the interest to be guaranteed to the beneficiary.
+</div><div id='Q-6.3.2.1' name='Q-6.3.2.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.2.2' name='Q-6.3.2.2' style='display:none;'>GOTO:6.3.3</div><div id='Q-6.3.3' name='Q-6.3.3' style='display:none;'> A conveyance is a granting of land or personal property from one person or entity to another person or entity.
+</div><div id='Q-6.3.3.1' name='Q-6.3.3.1' style='display:none;'>GOTO:6</div><div id='Q-6.3.3.2' name='Q-6.3.3.2' style='display:none;'>GOTO:6.3.2</div><div id='Q-7' name='Q-7' style='display:none;'> Great! The next step is to determine when the interest is deemed to be created. This will help you in the next few steps.
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-7.2' name='Q-7.2' style='display:none;'>GOTO:8</div><div id='Q-7.3' name='Q-7.3' style='display:none;'> If the conveyance is made in a will, the interest is created at the death of the testator. If the conveyance is an inter vivos transfer, the interest is created at delivery of the conveyance.
+</div><div id='Q-7.3.1' name='Q-7.3.1' style='display:none;'>GOTO:7</div><div id='Q-8' name='Q-8' style='display:none;'> <x>name</x> you've made it so far! Almost done, but now comes the hard part. Figure out who is the worst-case life in being. Sometimes this is called a measuring life.
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'> A life in being is an ascertainable individual at the time the interest is created. In other words, they are alive and we know who they are at the time the interest is created. In a conveyance that names an "A" we can assume A was born and a named individual at the time the conveyance was written. Compare that with "A's children" where we may not be sure who all of A's children are until A dies. Therefore, unless we know A is dead, we cannot use his children as a life in being because A can continue to have children until his death. There can be children born after the interest is created, and therefore they cannot be lives in being.
+</div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:9</div><div id='Q-8.2.2' name='Q-8.2.2' style='display:none;'>GOTO:8.3</div><div id='Q-8.3' name='Q-8.3' style='display:none;'> Sometimes it's difficult to tell. Usually it's the last person who dies that was alive at the creation of the interest for the next class of individuals to receive a vesting interest in the property. It also could be the individual that dies that closes a class gift. A class is a group of people, like someone's children. We won't know who are the children of a person until they die, because we assume a person can have children up to the point of death. Ignore science for now (think in vitro fertilization).
+</div><div id='Q-8.3.1' name='Q-8.3.1' style='display:none;'> Ok, you can always go here.
+</div><div id='Q-8.3.1.1' name='Q-8.3.1.1' style='display:none;'>GOTO:9</div><div id='Q-8.3.2' name='Q-8.3.2' style='display:none;'>GOTO:8.2</div><div id='Q-9' name='Q-9' style='display:none;'> When, after the death of the worst case life in being, does the interest vest?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Then this interest is void because it violates the RAP!
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'> Then this interest is good! Yay!
+</div><div id='Q-9.3' name='Q-9.3' style='display:none;'> If the interest vests more than twenty-one years after the death of the worst case life in being at the creation of the interest then it violates the RAP. For example, if an individual needs to reach the age of 30 before the interest vests, and they are born the day the worst case life in being dies, then the interest is void because the interest vests more than twenty-one years after the death of the worst case life in being.
+</div><div id='Q-9.3.1' name='Q-9.3.1' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> You've successfully completed evaluating whether an interest violates the RAP. Remember to follow these steps for each interest in the conveyance as if there is no rule. 
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:4</div><div id='Q-10.2' name='Q-10.2' style='display:none;'> I can give you some very common hypothetical conveyances if that would help?
+</div><div id='Q-11' name='Q-11' style='display:none;'> With landlord and tenant issues, this program will cover common landlord breaches. These breaches include Breach of the Covenant of Quiet Enjoyment, Warranty of Habitability, Constructive Eviction, and Partial Actual Eviction. This will help you figure out which of these may be applicable to your issue. Ready to get started?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:3</div><div id='Q-12' name='Q-12' style='display:none;'> Do you see any of the following in your fact pattern hypothetical?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:16</div><div id='Q-12.3' name='Q-12.3' style='display:none;'>GOTO:14</div><div id='Q-12.4' name='Q-12.4' style='display:none;'>GOTO:15</div><div id='Q-13' name='Q-13' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a breach of the Covenant of Quiet Enjoyment.
+</div><div id='Q-14' name='Q-14' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a breach warranty of habitability.
+</div><div id='Q-15' name='Q-15' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a Constructive Eviction. Remember, the tenant must leave in order for there to be a constructive eviction.
+</div><div id='Q-16' name='Q-16' style='display:none;'> If the landlord has done any one of those examples, or something like it, then there is probably a Partial Actual Eviction. Remember there must be a physical encroachment of a permanent nature on the leased premise in order for there to be a partial actual eviction. 
+
+</div><div id='A-1.1' name='A-1.1' style='display:none;'> Yes! 
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>Yes!</div><div id='A-1.2' name='A-1.2' style='display:none;'> No.  
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>No.</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>text</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-3.1' name='A-3.1' style='display:none;'> Start over?
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>Start over?</div><div id='A-4.1' name='A-4.1' style='display:none;'> Rule Against Perpetuities ("RAP")
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Rule Against Perpetuities ("RAP")</div><div id='A-4.2' name='A-4.2' style='display:none;'> Landlord/Tenant issues
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>Landlord/Tenant issues</div><div id='A-5.1' name='A-5.1' style='display:none;'> I'm ready. Let's go!
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>I'm ready. Let's go!</div><div id='A-5.2' name='A-5.2' style='display:none;'> I need future interest help!
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>https://subscription.westacademic.com/Book/Detail/24056</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'>target="_blank"</div><div id='X-5.2' name='X-5.2' style='display:none;'>I need future interest help!</div><div id='A-6.1' name='A-6.1' style='display:none;'> There is a contingent interest!
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>There is a contingent interest!</div><div id='A-6.2' name='A-6.2' style='display:none;'> There is not a contingent interest.
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>There is not a contingent interest.</div><div id='A-6.3' name='A-6.3' style='display:none;'> Contingent interest? What's that?
+</div><div id='A-href-6.3' name='A-href-6.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3' name='A-target-6.3' style='display:none;'></div><div id='X-6.3' name='X-6.3' style='display:none;'>Contingent interest? What's that?</div><div id='A-6.3.1' name='A-6.3.1' style='display:none;'> Great, I got it now.
+</div><div id='A-href-6.3.1' name='A-href-6.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.1' name='A-target-6.3.1' style='display:none;'></div><div id='X-6.3.1' name='X-6.3.1' style='display:none;'>Great, I got it now.</div><div id='A-6.3.2' name='A-6.3.2' style='display:none;'> What does it mean for an interest to vest?
+</div><div id='A-href-6.3.2' name='A-href-6.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2' name='A-target-6.3.2' style='display:none;'></div><div id='X-6.3.2' name='X-6.3.2' style='display:none;'>What does it mean for an interest to vest?</div><div id='A-6.3.2.1' name='A-6.3.2.1' style='display:none;'> Great, I got it now!
+</div><div id='A-href-6.3.2.1' name='A-href-6.3.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2.1' name='A-target-6.3.2.1' style='display:none;'></div><div id='X-6.3.2.1' name='X-6.3.2.1' style='display:none;'>Great, I got it now!</div><div id='A-6.3.2.2' name='A-6.3.2.2' style='display:none;'> What's a "conveyance?"
+</div><div id='A-href-6.3.2.2' name='A-href-6.3.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.2.2' name='A-target-6.3.2.2' style='display:none;'></div><div id='X-6.3.2.2' name='X-6.3.2.2' style='display:none;'>What's a "conveyance?"</div><div id='A-6.3.3' name='A-6.3.3' style='display:none;'> What's a "conveyance?"
+</div><div id='A-href-6.3.3' name='A-href-6.3.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3' name='A-target-6.3.3' style='display:none;'></div><div id='X-6.3.3' name='X-6.3.3' style='display:none;'>What's a "conveyance?"</div><div id='A-6.3.3.1' name='A-6.3.3.1' style='display:none;'> That makes sense!
+</div><div id='A-href-6.3.3.1' name='A-href-6.3.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3.1' name='A-target-6.3.3.1' style='display:none;'></div><div id='X-6.3.3.1' name='X-6.3.3.1' style='display:none;'>That makes sense!</div><div id='A-6.3.3.2' name='A-6.3.3.2' style='display:none;'> What does it mean for an interest to vest?
+</div><div id='A-href-6.3.3.2' name='A-href-6.3.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.3.3.2' name='A-target-6.3.3.2' style='display:none;'></div><div id='X-6.3.3.2' name='X-6.3.3.2' style='display:none;'>What does it mean for an interest to vest?</div><div id='A-7.1' name='A-7.1' style='display:none;'> When the grantor dies.
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>When the grantor dies.</div><div id='A-7.2' name='A-7.2' style='display:none;'> At delivery of the deed.
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>At delivery of the deed.</div><div id='A-7.3' name='A-7.3' style='display:none;'> How do I tell?
+</div><div id='A-href-7.3' name='A-href-7.3' style='display:none;'>javascript:void('');</div><div id='A-target-7.3' name='A-target-7.3' style='display:none;'></div><div id='X-7.3' name='X-7.3' style='display:none;'>How do I tell?</div><div id='A-7.3.1' name='A-7.3.1' style='display:none;'> Got it!
+</div><div id='A-href-7.3.1' name='A-href-7.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.3.1' name='A-target-7.3.1' style='display:none;'></div><div id='X-7.3.1' name='X-7.3.1' style='display:none;'>Got it!</div><div id='A-8.1' name='A-8.1' style='display:none;'> Ok, I think I know who is the worst-case life in being!
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Ok, I think I know who is the worst-case life in being!</div><div id='A-8.2' name='A-8.2' style='display:none;'> What is a life in being?
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>What is a life in being?</div><div id='A-8.2.1' name='A-8.2.1' style='display:none;'> Alright, that helps, I think I've got it!
+</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'>Alright, that helps, I think I've got it!</div><div id='A-8.2.2' name='A-8.2.2' style='display:none;'> How do I know which is the worst case life in being?
+</div><div id='A-href-8.2.2' name='A-href-8.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.2' name='A-target-8.2.2' style='display:none;'></div><div id='X-8.2.2' name='X-8.2.2' style='display:none;'>How do I know which is the worst case life in being?</div><div id='A-8.3' name='A-8.3' style='display:none;'> How do I know which is the worst-case life in being?
+</div><div id='A-href-8.3' name='A-href-8.3' style='display:none;'>javascript:void('');</div><div id='A-target-8.3' name='A-target-8.3' style='display:none;'></div><div id='X-8.3' name='X-8.3' style='display:none;'>How do I know which is the worst-case life in being?</div><div id='A-8.3.1' name='A-8.3.1' style='display:none;'> I think I've got it, but I may need more help.
+</div><div id='A-href-8.3.1' name='A-href-8.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.3.1' name='A-target-8.3.1' style='display:none;'></div><div id='X-8.3.1' name='X-8.3.1' style='display:none;'>I think I've got it, but I may need more help.</div><div id='A-8.3.1.1' name='A-8.3.1.1' style='display:none;'> Thanks!
+</div><div id='A-href-8.3.1.1' name='A-href-8.3.1.1' style='display:none;'>https://www.jstor.org/stable/pdf/1333874.pdf</div><div id='A-target-8.3.1.1' name='A-target-8.3.1.1' style='display:none;'>target="_blank"</div><div id='X-8.3.1.1' name='X-8.3.1.1' style='display:none;'>Thanks!</div><div id='A-8.3.2' name='A-8.3.2' style='display:none;'> What is a life in being?
+</div><div id='A-href-8.3.2' name='A-href-8.3.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.3.2' name='A-target-8.3.2' style='display:none;'></div><div id='X-8.3.2' name='X-8.3.2' style='display:none;'>What is a life in being?</div><div id='A-9.1' name='A-9.1' style='display:none;'> More than twenty-one years.
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>More than twenty-one years.</div><div id='A-9.2' name='A-9.2' style='display:none;'> Less than twenty-one years.
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'>Less than twenty-one years.</div><div id='A-9.3' name='A-9.3' style='display:none;'> I have no idea if it does.
+</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'></div><div id='X-9.3' name='X-9.3' style='display:none;'>I have no idea if it does.</div><div id='A-9.3.1' name='A-9.3.1' style='display:none;'> I think I've got it, thanks!
+</div><div id='A-href-9.3.1' name='A-href-9.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.3.1' name='A-target-9.3.1' style='display:none;'></div><div id='X-9.3.1' name='X-9.3.1' style='display:none;'>I think I've got it, thanks!</div><div id='A-10.1' name='A-10.1' style='display:none;'> YAY!
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>YAY!</div><div id='A-10.2' name='A-10.2' style='display:none;'> I think I got it, but where can I go for more practice?
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>I think I got it, but where can I go for more practice?</div><div id='A-10.2.1' name='A-10.2.1' style='display:none;'> Yes! Let's test this!
+		
+
+
+
+</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>https://www.jstor.org/stable/pdf/1333874.pdf</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'>target="_blank"</div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'>Yes! Let's test this!</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes!
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes!</div><div id='A-11.2' name='A-11.2' style='display:none;'> No.
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No.</div><div id='A-12.1' name='A-12.1' style='display:none;'> The landlord is interfering with the Tenant's enjoyment of the premise. For example, the landlord is making a nuisance by loud noise. The landlord is coming onto the property without notifying the tenant.
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>The landlord is interfering with the Tenant's enjoyment of the premise. For example, the landlord is making a nuisance by loud noise. The landlord is coming onto the property without notifying the tenant.</div><div id='A-12.2' name='A-12.2' style='display:none;'> The landlord has built or allowed to be built a permanent physical structure on the leased premise, no matter how slight an encroachment.
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>The landlord has built or allowed to be built a permanent physical structure on the leased premise, no matter how slight an encroachment.</div><div id='A-12.3' name='A-12.3' style='display:none;'> The landlord has failed to repair an essential aspect of the premise such that the tenant cannot safely live there anymore. Examples would be that the apartment does not have any heat and is located in a particularly cold environment. Another example would be that the landlord has failed to repair a bathroom and there is only one bathroom for the apartment.
+</div><div id='A-href-12.3' name='A-href-12.3' style='display:none;'>javascript:void('');</div><div id='A-target-12.3' name='A-target-12.3' style='display:none;'></div><div id='X-12.3' name='X-12.3' style='display:none;'>The landlord has failed to repair an essential aspect of the premise such that the tenant cannot safely live there anymore. Examples would be that the apartment does not have any heat and is located in a particularly cold environment. Another example would be that the landlord has failed to repair a bathroom and there is only one bathroom for the apartment.</div><div id='A-12.4' name='A-12.4' style='display:none;'> The premise is in such disrepair or so unusable and the landlord refuses to repair or fix the issue that the tenant has left the premise.
+</div><div id='A-href-12.4' name='A-href-12.4' style='display:none;'>javascript:void('');</div><div id='A-target-12.4' name='A-target-12.4' style='display:none;'></div><div id='X-12.4' name='X-12.4' style='display:none;'>The premise is in such disrepair or so unusable and the landlord refuses to repair or fix the issue that the tenant has left the premise.</div>
+<script>
+	var QVnames = [['1','hello'],['1.1','1.1'],['1.2','1.2'],['2','name'],['2.1','2.1'],['3','goodbye'],['3.1','3.1'],['4','topics'],['4.1','4.1'],['4.2','4.2'],['5','RAP'],['5.1','5.1'],['5.2','5.2'],['6','R_one'],['6.1','6.1'],['6.2','6.2'],['6.3','6.3'],['6.3.1','6.3.1'],['6.3.2','6.3.2'],['6.3.2.1','6.3.2.1'],['6.3.2.2','6.3.2.2'],['6.3.3','6.3.3'],['6.3.3.1','6.3.3.1'],['6.3.3.2','6.3.3.2'],['7','R_two'],['7.1','7.1'],['7.2','7.2'],['7.3','7.3'],['7.3.1','7.3.1'],['8','R_three'],['8.1','8.1'],['8.2','8.2'],['8.2.1','8.2.1'],['8.2.2','8.2.2'],['8.3','8.3'],['8.3.1','8.3.1'],['8.3.1.1','8.3.1.1'],['8.3.2','8.3.2'],['9','R_four'],['9.1','9.1'],['9.2','9.2'],['9.3','9.3'],['9.3.1','9.3.1'],['10','R_five'],['10.1','10.1'],['10.2','10.2'],['11','LanTen'],['11.1','11.1'],['11.2','11.2'],['12','LanTen_one'],['12.1','12.1'],['12.2','12.2'],['12.3','12.3'],['12.4','12.4'],['13','LanTen_Quiet'],['14','LanTen_Habit'],['15','LanTen_Cons'],['16','LanTen_Actual']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text></div></div><p align=center> <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+		
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			} 
+		}
+			
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();			
+		} else {
+			if (restart == undefined) {
+				document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML				
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") { 
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n"; 
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);			
+			}
+
+		}
+		
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+					
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";		
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question 
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+				
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+						
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			var script_call = "";
+			if (tmp[i].innerHTML.match(regexp)) {
+				if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {
+					script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");
+				} else {
+					if (a_href[i].innerHTML.match('^_blank:')) {
+						script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";			
+					} else {
+						script_call = "location.href = '"+a_href[i].innerHTML+"';";
+					}
+				}
+				document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";							
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";				
+				freetext = 0;
+			}
+		}			
+
+		if (restar == undefined) {
+			
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) { 
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";				
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+				
+		if (QNum != 0) { 
+			if (goingback == 0) {
+				scroll2Q(Jht,800);           	
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);     		
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+					
+	}
+
+	
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";						
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+	
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+		
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+		
+		return items;
+	}	
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+		
+	//show funtion
+	function show(id) { 
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else { 
+        	if (document.layers) {  
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';         
+    	} else { 
+        	if (document.layers) {  
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';         
+        	}   
+    	} else { 
+        	if (document.layers) {  
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+	
+	function swapvar(input) {
+		var output; 
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			} 
+		}
+		output = input
+		return output
+	}
+	
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+	
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+	
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+		
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+		
+		//look4goto(qn,path[path.length-1]);
+		
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it. 
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		look4goto(qn,path[path.length-1]);
+		
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+		
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}		
+	
+	function doc() {
+		var doc_output = ""; 
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}	
+	
+	function json_str() {
+		
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+	
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";		
+		}
+		
+		if (docAs) {
+			var doctext = document.createElement("textarea");
+			doctext.style.display ='none';
+			doctext.name= docAs;
+			doctext.value= doc();
+			document.getElementById('FORM').appendChild(doctext);
+			if (instructions) {
+				var instructtext = document.createElement("textarea");
+				instructtext.type='hidden';
+				instructtext.style.display ='none';
+				instructtext.name= 'i';
+				instructtext.value= instructions;
+				document.getElementById('FORM').appendChild(instructtext);	
+			}
+		}
+		if (transcriptAs) {
+			var ttext = document.createElement("textarea");
+			ttext.type='hidden';
+			ttext.style.display ='none';
+			ttext.name= transcriptAs;
+			ttext.value= transcript();
+			document.getElementById('FORM').appendChild(ttext);
+		}
+		if (jsonAs) {
+			var json = document.createElement("textarea");
+			json.type='hidden';
+			json.style.display ='none';
+			json.name= jsonAs;
+			json.value= json_str();
+			document.getElementById('FORM').appendChild(json);
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+	
+	function csv() {
+		var csv_list = "";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				csv_list = csv_list+'"'+QVnames[i][1]+'"';
+				csv_list = csv_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					csv_list = csv_list+'""';
+				}
+				csv_list = csv_list+",";
+			} 			
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+
+		return csv_list;
+	}
+	
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature. 
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem || 
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension     
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+		
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+		
+	// Optionally allow the user to choose a file name by providing 
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+		
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+			  
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+		
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+		
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+</BODY>
+</HTML>

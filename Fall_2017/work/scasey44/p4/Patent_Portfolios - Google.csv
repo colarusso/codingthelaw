@@ -1,0 +1,972 @@
+patent_number,patent_title,patent_date,patent_num_claims,patent_num_combined_citations,inventor_last_name,inventor_first_name,assignee_organization
+7783639,Methods and apparatus for increasing efficiency of electronic document delivery to users,2008-04-22,26,19,Page,Lawrence E.,Google Inc.
+7788245,Using boundaries associated with a map view for business location searching,2008-05-13,14,17,O'Clair,Brian,Google Inc.
+7788258,Method and apparatus for event modeling,2008-05-13,23,6,Nye,Jeff,Google Inc.
+7788421,Support for object search,2008-11-18,29,7,Kehlenbeck,Alexander P.,Google Inc.
+7801738,Support for object search,2008-11-18,29,7,Hogue,Andrew,Google Inc.
+7801948,Systems and methods for using image duplicates to assign labels to images,2008-12-02,33,5,Rowley,Henry,Google Inc.
+7806329,Systems and methods for using image duplicates to assign labels to images,2008-12-02,33,5,Narendran,Arungundram C.,Google Inc.
+7822751,Systems and methods for using image duplicates to assign labels to images,2008-12-02,33,5,Baluja,Shumeet,Google Inc.
+7831438,Method and system for autocompletion using ranked results,2009-02-03,24,60,Gibbs,Kevin,Google Inc.
+7835903,Method and system for autocompletion using ranked results,2009-02-03,24,60,Jeh,Glen M.,Google Inc.
+7840572,Method and system for autocompletion using ranked results,2009-02-03,24,60,Kamvar,Sepandar D.,Google Inc.
+7860751,Method and system for autocompletion using ranked results,2009-02-03,24,60,Haveliwala,Taher H.,Google Inc.
+7860928,Web page zoom feature,2009-02-03,25,27,Jerger,John Joseph,Google Inc.
+7870147,Assimilator using image check data,2009-06-02,16,30,Pandurangan,Vijay,Google Inc.
+7882268,Assimilator using image check data,2009-06-02,16,30,Reiss,David Scott,Google Inc.
+7886032,Integration of multiple query revision models,2009-07-21,29,42,Nayak,P. Pandurang,Google Inc.
+7890521,Integration of multiple query revision models,2009-07-21,29,42,Battle,Alexis J.,Google Inc.
+7912837,Integration of multiple query revision models,2009-07-21,29,42,Bailey,David R.,Google Inc.
+7917480,Integration of multiple query revision models,2009-07-21,29,42,Gomes,Benedict A.,Google Inc.
+7920149,Phrase identification in an information retrieval system,2009-08-25,25,109,Patterson,Anna,Google Inc.
+7930736,Phrase-based personalization of searches in an information retrieval system,2009-08-25,28,126,Patterson,Anna,Google Inc.
+7945579,Phrase-based generation of document descriptions,2009-09-01,9,120,Patterson,Anna,Google Inc.
+7953741,System and method for monitoring and analyzing internet traffic,2009-10-27,16,29,Moon,Hui Sok,Google Inc.
+7958544,System and method for monitoring and analyzing internet traffic,2009-10-27,16,29,Muret,Paul N.,Google Inc.
+7961986,Dynamic exploration of electronic maps,2009-11-10,43,16,Ross,Max C.,Google Inc.
+7974463,Dynamic exploration of electronic maps,2009-11-10,43,16,Dayan,Tal,Google Inc.
+7979425,Three-dimensional calibration using orientation and position sensitive calibration pattern,2009-11-24,35,5,Lefevere,Francois-Marie,Google Inc.
+7987172,Event searching,2010-01-12,63,12,Juang,Philo,Google Inc.
+8005826,Event searching,2010-01-12,63,12,Solderitsch,Peter James,Google Inc.
+8014634,Event searching,2010-01-12,63,12,Chandhok,Nikhil Vijay,Google Inc.
+8015170,Event searching,2010-01-12,63,12,Gordon,Michael S.,Google Inc.
+8018094,Automatic completion of fragments of text,2010-02-02,30,36,Harik,Georges R.,Google Inc.
+8037325,Automatic completion of fragments of text,2010-02-02,30,36,Tong,Simon Frederick,Google Inc.
+8041506,Automatic completion of fragments of text,2010-02-02,30,36,Cheng,David R.,Google Inc.
+8042142,Electronic message source reputation information system,2010-02-23,38,75,Lund,Peter K.,Google Inc.
+8051104,Electronic message source reputation information system,2010-02-23,38,75,Carroll,Dorion A.,Google Inc.
+8065309,Electronic message source reputation information system,2010-02-23,38,75,Petry,Scott M.,Google Inc.
+8069176,Electronic message source reputation information system,2010-02-23,38,75,Croteau,Craig S.,Google Inc.
+8078629,Electronic message source reputation information system,2010-02-23,38,75,Okumura,Kenneth K.,Google Inc.
+8086725,Shape clustering and cluster-level manual identification in post optical character recognition processing,2010-04-13,24,17,Smith,Raymond W.,Google Inc.
+8090222,Shape clustering and cluster-level manual identification in post optical character recognition processing,2010-04-13,24,17,Vincent,Luc,Google Inc.
+8090736,Meaning-based advertising and document relevance determination,2010-04-13,19,75,Weissman,Adam J.,Google Inc.
+8090951,Meaning-based advertising and document relevance determination,2010-04-13,19,75,Elbaz,Gilad Israel,Google Inc.
+8095876,Systems and methods for providing and installing software,2010-04-27,25,22,Lawrence,Stephen R.,Google Inc.
+8108464,Systems and methods for providing and installing software,2010-04-27,25,22,Ionescu,Mihai Florin,Google Inc.
+8112702,Systems and methods for providing and installing software,2010-04-27,25,22,Khan,Omar Habib,Google Inc.
+8121619,Systems and methods for providing and installing software,2010-04-27,25,22,Wang,Niniane,Google Inc.
+8130560,Systems and methods for providing and installing software,2010-04-27,25,22,Marmaros,David P.,Google Inc.
+8131543,Custom search index,2010-05-25,9,16,Mysen,Clarence,Google Inc.
+8131751,Custom search index,2010-05-25,9,16,Verma,Naval,Google Inc.
+8135712,Custom search index,2010-05-25,9,16,Chen,Johnny,Google Inc.
+8136167,Document similarity detection,2010-06-08,20,30,Tong,Simon Frederick,Google Inc.
+8145630,System and method for updating facts in a fact repository,2010-06-15,42,11,Yehuda,Daniel J.,Google Inc.
+8150824,System and method for updating facts in a fact repository,2010-06-15,42,11,Reynar,Jeffrey C.,Google Inc.
+8150842,System and method for updating facts in a fact repository,2010-06-15,42,11,Miller,Andrew,Google Inc.
+8166046,Streaming and interactive visualization of filled polygon data in a geographic information system,2010-06-29,25,55,Jones,Michael T.,Google Inc.
+8166399,Streaming and interactive visualization of filled polygon data in a geographic information system,2010-06-29,25,55,Rohlf,John H.,Google Inc.
+8171424,Streaming and interactive visualization of filled polygon data in a geographic information system,2010-06-29,25,55,Charaniya,Amin P.,Google Inc.
+8174933,Geographic coding for location search queries,2010-06-29,25,6,Muller,James R.,Google Inc.
+8175872,Geographic coding for location search queries,2010-06-29,25,6,Norris,James Christopher,Google Inc.
+8176176,Geographic coding for location search queries,2010-06-29,25,6,Tran,Thai Gia,Google Inc.
+8179095,Geographic coding for location search queries,2010-06-29,25,6,Buron,Florian Michel,Google Inc.
+8180583,Geographic coding for location search queries,2010-06-29,25,6,Rasmussen,Lars Eilstrup,Google Inc.
+8180760,Geographic coding for location search queries,2010-06-29,25,6,Balakrishnan,Ramesh,Google Inc.
+8185762,Limiting requests by web crawlers to a web host,2010-08-10,27,8,Acharya,Anurag,Google Inc.
+8195637,Limiting requests by web crawlers to a web host,2010-08-10,27,8,Popescu,Catalin T.,Google Inc.
+8201081,User interface for mobile devices,2010-08-17,17,34,Baluja,Shumeet,Google Inc.
+8201089,User interface for mobile devices,2010-08-17,17,34,Mavinkurve,Sanjay Gajanan,Google Inc.
+8204513,User interface for mobile devices,2010-08-17,17,34,Kamvar,Maryam,Google Inc.
+8209315,Determining quality of linked documents,2010-08-24,21,8,Bharat,Krishna,Google Inc.
+8212821,Determining quality of linked documents,2010-08-24,21,8,Singhal,Amit,Google Inc.
+8213689,Determining quality of linked documents,2010-08-24,21,8,Haahr,Paul G.,Google Inc.
+8214373,Method and system for dynamically generating search links embedded in content,2010-08-31,27,7,Eddings,Jeffrey Kenn,Google Inc.
+8218514,Method and system for dynamically generating search links embedded in content,2010-08-31,27,7,Fu,John Eric,Google Inc.
+8220047,Method and system for dynamically generating search links embedded in content,2010-08-31,27,7,Kwak,Grace,Google Inc.
+8224802,Automatic determination of whether a document includes an image gallery,2010-08-31,29,16,Zunger,Yonatan,Google Inc.
+8224890,Automatic determination of whether a document includes an image gallery,2010-08-31,29,16,Yang,Cheng Jer,Google Inc.
+8229156,Automatic determination of whether a document includes an image gallery,2010-08-31,29,16,Malpani,Radhika A.,Google Inc.
+8234265,Detectable null memory for airflow baffling,2010-08-31,18,20,Stiver,David W.,Google Inc.
+8234266,Detectable null memory for airflow baffling,2010-08-31,18,20,Laurie,Duncan,Google Inc.
+8234280,Detectable null memory for airflow baffling,2010-08-31,18,20,Hockin,Timothe P.,Google Inc.
+8234397,Detectable null memory for airflow baffling,2010-08-31,18,20,Heath,Taliver Brooks,Google Inc.
+8235814,System and method for rating documents comprising an image,2010-09-21,59,92,Chan,Wesley T.,Google Inc.
+8239515,System and method for rating documents comprising an image,2010-09-21,59,92,Wiseman,Leora Ruth,Google Inc.
+8245066,System and method for rating documents comprising an image,2010-09-21,59,92,Agarwal,Sumit,Google Inc.
+8253684,Methods and systems for transferring client device data over a network,2010-09-21,22,5,Lim,Jing Yee,Google Inc.
+8255812,Methods and systems for transferring client device data over a network,2010-09-21,22,5,Buchheit,Paul T.,Google Inc.
+8255836,Methods and systems for transferring client device data over a network,2010-09-21,22,5,Singh,Sanjeev Kumar,Google Inc.
+8255991,Targeted video advertising,2010-10-05,26,8,Dmitriev,Mikhail A.,Google Inc.
+8259830,Targeted video advertising,2010-10-05,26,8,Gupta,Manish Satyapal,Google Inc.
+8260615,Targeted video advertising,2010-10-05,26,8,Moonka,Rajas,Google Inc.
+8265966,Targeted video advertising,2010-10-05,26,8,Lee,Nicholas J.,Google Inc.
+8279690,Scoring local search results based on location prominence,2010-10-26,40,36,O'Clair,Brian,Google Inc.
+8285342,Scoring local search results based on location prominence,2010-10-26,40,36,Egnor,Daniel Trawick,Google Inc.
+8290521,Scoring local search results based on location prominence,2010-10-26,40,36,Greenfield,Lawrence E.,Google Inc.
+8290928,Local item extraction,2010-11-09,36,10,Riley,Michael,Google Inc.
+8290962,Simplifying query terms with transliteration,2010-11-16,18,54,Datta,Ruchira S.,Google Inc.
+8296285,Document scoring based on document inception date,2010-11-23,18,38,Dean,Jeffrey,Google Inc.
+8296741,Document scoring based on document inception date,2010-11-23,18,38,Lawrence,Stephen R.,Google Inc.
+8300551,Document scoring based on document inception date,2010-11-23,18,38,Pfleger,Karl Robert,Google Inc.
+8307300,Document scoring based on document inception date,2010-11-23,18,38,Haahr,Paul G.,Google Inc.
+8311111,Document scoring based on document inception date,2010-11-23,18,38,Cutts,Matthew,Google Inc.
+8311289,Document scoring based on document inception date,2010-11-23,18,38,Tong,Simon Frederick,Google Inc.
+8312001,Document scoring based on document inception date,2010-11-23,18,38,Henzinger,Monika,Google Inc.
+8312032,Cross domain customer interface updates,2010-12-28,31,44,Dierks,Timothy M.,Google Inc.
+8314790,Cross domain customer interface updates,2010-12-28,31,44,Mangalick,Piyush,Google Inc.
+8315563,Voting in chat system without topic-specific rooms,2010-12-28,28,74,Anderson,Monica,Google Inc.
+8320939,Query revision using known highly-ranked queries,2011-01-11,33,81,Nayak,P. Pandurang,Google Inc.
+8321510,Query revision using known highly-ranked queries,2011-01-11,33,81,Battle,Alexis J.,Google Inc.
+8321677,Query revision using known highly-ranked queries,2011-01-11,33,81,Cohn,David Ariel,Google Inc.
+8326231,Query revision using known highly-ranked queries,2011-01-11,33,81,Bailey,David R.,Google Inc.
+8327330,Query revision using known highly-ranked queries,2011-01-11,33,81,Engelhardt,Barbara,Google Inc.
+8332477,UDP transport for web services,2011-02-01,24,6,Broido,Andre,Google Inc.
+8341138,Content retrieval from sites that use session identifiers,2011-02-08,22,18,Louz-On,Michal,Google Inc.
+8346590,Document-based synonym generation,2011-02-15,22,37,Baker,Steven D.,Google Inc.
+8346604,Document-based synonym generation,2011-02-15,22,37,Grushetskyy,Oleksandr,Google Inc.
+8346607,Geographic coding for location search queries,2011-03-22,28,12,Balakrishnan,Ramesh,Google Inc.
+8346755,Geographic coding for location search queries,2011-03-22,28,12,Rasmussen,Lars Eilstrup,Google Inc.
+8346791,Geographic coding for location search queries,2011-03-22,28,12,Tran,Thai Gia,Google Inc.
+8352424,Geographic coding for location search queries,2011-03-22,28,12,Norris,James Christopher,Google Inc.
+8352467,Geographic coding for location search queries,2011-03-22,28,12,Buron,Florian Michel,Google Inc.
+8364959,Geographic coding for location search queries,2011-03-22,28,12,Muller,James R.,Google Inc.
+8375140,Document compression system and method for use with tokenspace repository,2011-03-29,60,11,Ghemawat,Sanjay,Google Inc.
+8375185,Document compression system and method for use with tokenspace repository,2011-03-29,60,11,Dean,Jeffrey,Google Inc.
+8380502,Document compression system and method for use with tokenspace repository,2011-03-29,60,11,Gomes,Benedict A.,Google Inc.
+8380705,Document compression system and method for use with tokenspace repository,2011-03-29,60,11,Thambidorai,Gautham K.,Google Inc.
+8381102,Document compression system and method for use with tokenspace repository,2011-03-29,60,11,Sercinoglu,Olcan,Google Inc.
+8381192,Rollback in a browser,2011-04-05,6,26,Hertzfeld,Andrew J.,Google Inc.
+8385633,Providing selective access to a web site,2011-04-19,17,14,Crespo,Arturo E.,Google Inc.
+8386604,Providing selective access to a web site,2011-04-19,17,14,Perrochon,Louis Vincent,Google Inc.
+8387020,Locating meaningful stopwords or stop-phrases in keyword-based retrieval systems,2011-05-17,27,14,Singhal,Amit,Google Inc.
+8390636,Locating meaningful stopwords or stop-phrases in keyword-based retrieval systems,2011-05-17,27,14,Baker,Steven D.,Google Inc.
+8392435,Locating meaningful stopwords or stop-phrases in keyword-based retrieval systems,2011-05-17,27,14,Tong,Simon Frederick,Google Inc.
+8396325,Locating meaningful stopwords or stop-phrases in keyword-based retrieval systems,2011-05-17,27,14,Haahr,Paul G.,Google Inc.
+8396888,Locating meaningful stopwords or stop-phrases in keyword-based retrieval systems,2011-05-17,27,14,Lerner,Uri N.,Google Inc.
+8402387,Online ranking metric,2011-05-31,18,18,Takahashi,Ryohei,Google Inc.
+8406397,Online ranking metric,2011-05-31,18,18,Tarlow,Daniel S.,Google Inc.
+8407091,Online ranking metric,2011-05-31,18,18,Shih,Lawrence Wen-Kai,Google Inc.
+8407099,Online ranking metric,2011-05-31,18,18,Yang,Beverly,Google Inc.
+8407239,Online ranking metric,2011-05-31,18,18,Rohrs,Christopher H.,Google Inc.
+8408924,Online ranking metric,2011-05-31,18,18,Sah,Adam D.,Google Inc.
+8412699,Device authentication,2011-06-07,24,17,Chen,Kai,Google Inc.
+8412709,Device authentication,2011-06-07,24,17,Milner,Marius C.,Google Inc.
+8412719,Device authentication,2011-06-07,24,17,Chen,Tsuwei,Google Inc.
+8417222,Device authentication,2011-06-07,24,17,Shen,Shioupyn,Google Inc.
+8417223,Ranking of images and image labels,2011-06-14,34,102,Jing,Yushi,Google Inc.
+8417530,Ranking of images and image labels,2011-06-14,34,102,Baluja,Shumeet,Google Inc.
+8417884,Compensating for distortion in digital images,2011-07-05,26,11,Saric,Marin,Google Inc.
+8423350,Server-side match,2011-07-12,32,119,Garg,Ashutosh,Google Inc.
+8423413,Server-side match,2011-07-12,32,119,Datar,Mayur,Google Inc.
+8423459,Minimizing visibility of stale content in web searching including revising web crawl intervals of documents,2011-07-26,48,68,Carver,Anton P.,Google Inc.
+8424082,Identifying media content in queries,2011-08-23,8,61,Blackburn,John Wayne,Google Inc.
+8429666,Identifying media content in queries,2011-08-23,8,61,"Sahami, III",Mehran,Google Inc.
+8429741,Identifying media content in queries,2011-08-23,8,61,"Gossweiler, III",Richard,Google Inc.
+8433513,Identifying media content in queries,2011-08-23,8,61,Patel,Manish,Google Inc.
+8435113,Identifying media content in queries,2011-08-23,8,61,Brown,David A.,Google Inc.
+8436829,Identifying media content in queries,2011-08-23,8,61,Gupta,Neha,Google Inc.
+8438029,Identifying media content in queries,2011-08-23,8,61,"Taylor, Jr.",Thomas H.,Google Inc.
+8438154,Method and system for approving documents based on image similarity,2011-09-06,63,82,Chan,Wesley T.,Google Inc.
+8442984,Personalized network searching,2011-09-06,24,34,Lawrence,Stephen R.,Google Inc.
+8447020,Personalized network searching,2011-09-06,24,34,Badros,Gregory Joseph,Google Inc.
+8447144,Interim power source,2011-09-13,26,2,Hamburgen,William,Google Inc.
+8452650,Interim power source,2011-09-13,26,2,Whitted,William H.,Google Inc.
+8458193,Interim power source,2011-09-13,26,2,Jai,Benchiao,Google Inc.
+8463731,System and method for determining power consumption,2011-10-11,13,16,Dalal,Jinal,Google Inc.
+8466841,Mapping in mobile devices,2011-10-18,30,30,Jenson,Scott A.,Google Inc.
+8468145,Mapping in mobile devices,2011-10-18,30,30,Chu,Michael Jesse,Google Inc.
+8473276,Mapping in mobile devices,2011-10-18,30,30,Crady,Mark,Google Inc.
+8473857,Mapping in mobile devices,2011-10-18,30,30,Bliss,Adam,Google Inc.
+8479154,Mapping in mobile devices,2011-10-18,30,30,Morrison,Jerry Howard,Google Inc.
+8484075,Mapping in mobile devices,2011-10-18,30,30,Sacks,Joshua J.,Google Inc.
+8489732,Mapping in mobile devices,2011-10-18,30,30,Mavinkurve,Sanjay Gajanan,Google Inc.
+8493411,Streaming video processing,2011-10-18,28,2,Shastri,Vijnan M.,Google Inc.
+8494586,Streaming video processing,2011-10-18,28,2,Chaland,Christophe,Google Inc.
+8498490,Streaming video processing,2011-10-18,28,2,Tobagus,Wendy,Google Inc.
+8503654,Streaming video processing,2011-10-18,28,2,Doshi,Rushabh Ashok,Google Inc.
+8504404,Editing a network of interconnected concepts,2011-11-01,45,59,Weissman,Adam J.,Google Inc.
+8504551,Editing a network of interconnected concepts,2011-11-01,45,59,Elbaz,Gilad Israel,Google Inc.
+8505090,Counting unique search results,2011-11-22,36,8,Bar-Yossef,Ziv,Google Inc.
+8510289,Counting unique search results,2011-11-22,36,8,Karmon,Kfir,Google Inc.
+8510644,LSH-based retrieval using sub-sampling,2011-11-29,12,2,Covell,Michele M.,Google Inc.
+8515888,LSH-based retrieval using sub-sampling,2011-11-29,12,2,Ioffe,Sergey,Google Inc.
+8515896,Detecting spam documents in a phrase based information retrieval system,2011-12-13,36,198,Patterson,Anna,Google Inc.
+8515973,Identifying associated systems such as advertising networks,2011-12-27,28,35,Liang,Mike Hsin-Ping,Google Inc.
+8521523,Identifying associated systems such as advertising networks,2011-12-27,28,35,Kulkarni,Sanjeev,Google Inc.
+8521541,Identifying associated systems such as advertising networks,2011-12-27,28,35,Deckel,Johan,Google Inc.
+8521823,Identifying associated systems such as advertising networks,2011-12-27,28,35,Kawasaki,Christine I.,Google Inc.
+8527350,Selection of an image or images most representative of a set of images,2012-01-03,58,8,Baluja,Shumeet,Google Inc.
+8532382,Selection of an image or images most representative of a set of images,2012-01-03,58,8,Jing,Yushi,Google Inc.
+8533146,Enhancing search results using conceptual document relationships,2012-01-03,36,14,Waddell,Matthew Eric,Google Inc.
+8533336,Enhancing search results using conceptual document relationships,2012-01-03,36,14,Knapp,Sean Michael,Google Inc.
+8538970,Systems and methods for transparent configuration authentication of networked devices,2012-01-03,4,11,Erlingsson,Ãlfar,Google Inc.
+8538973,Systems and methods for transparent configuration authentication of networked devices,2012-01-03,4,11,Boyen,Xavier,Google Inc.
+8539067,Systems and methods for transparent configuration authentication of networked devices,2012-01-03,4,11,"Gray, Jr.",Wayne P.,Google Inc.
+8542879,Systems and methods for transparent configuration authentication of networked devices,2012-01-03,4,11,Anderson,Darrell,Google Inc.
+8543720,Identifying a primary version of a document,2012-01-10,17,16,Acharya,Anurag,Google Inc.
+8543900,Identifying a primary version of a document,2012-01-10,17,16,Verstak,Alexandre A.,Google Inc.
+8548505,Collaborative workflow through messaging conversations,2012-01-31,25,25,Danaher,John Stephen,Google Inc.
+8549173,Collaborative workflow through messaging conversations,2012-01-31,25,25,Rochelle,Jonathan P.,Google Inc.
+8554724,Collaborative workflow through messaging conversations,2012-01-31,25,25,Lemonik,Micah G.,Google Inc.
+8560405,Collaborative workflow through messaging conversations,2012-01-31,25,25,Khosrowshahi,Farzad,Google Inc.
+8560468,Annotating video intervals,2012-02-07,23,50,Badoiu,Mihai,Google Inc.
+8560579,Annotating video intervals,2012-02-07,23,50,Muthukrishnan,Shanmugavelayutham,Google Inc.
+8566150,Geographic location information updates,2012-02-21,16,18,Ghosh,Debajit,Google Inc.
+8566315,Geographic location information updates,2012-02-21,16,18,Mendis,Charles,Google Inc.
+8566507,Multi-rank partial width memory modules,2012-03-06,30,829,Smith,Michael,Google Inc.
+8566516,Multi-rank partial width memory modules,2012-03-06,30,829,Rajan,Suresh Natarajan,Google Inc.
+8566531,Speech detection,2012-03-06,30,7,Kristjansson,Trausti,Google Inc.
+8571871,Speech detection,2012-03-06,30,7,Weiss,Ron J.,Google Inc.
+8572094,Algorithms for selecting subsequences,2012-03-06,34,9,Henzinger,Monika,Google Inc.
+8572121,Algorithms for selecting subsequences,2012-03-06,34,9,Bernstein,Yaniv,Google Inc.
+8572231,Algorithms for selecting subsequences,2012-03-06,34,9,Behzadi,Behshad,Google Inc.
+8572696,Algorithms for selecting subsequences,2012-03-06,34,9,Liebald,Benjamin,Google Inc.
+8576223,Algorithms for selecting subsequences,2012-03-06,34,9,"Tucker, Jr.",Richard Iles,Google Inc.
+8577846,Algorithms for selecting subsequences,2012-03-06,34,9,Burkhardt,Stefan,Google Inc.
+8583460,Posting questions from search queries,2012-03-13,21,9,Coladonato,Greg,Google Inc.
+8583636,Posting questions from search queries,2012-03-13,21,9,Ke,Huacheng,Google Inc.
+8583656,Systems and methods for providing image feedback,2012-03-13,14,25,"Gossweiler, III",Richard,Google Inc.
+8583787,Systems and methods for providing image feedback,2012-03-13,14,25,Kamvar,Maryam,Google Inc.
+8589421,Systems and methods for providing image feedback,2012-03-13,14,25,Baluja,Shumeet,Google Inc.
+8589784,Session-based dynamic search snippets,2012-03-27,16,9,Dhamdhere,Kedar,Google Inc.
+8595071,Session-based dynamic search snippets,2012-03-27,16,9,Garg,Ashutosh,Google Inc.
+8595214,Systems and methods for direct navigation to specific portion of target document,2012-04-03,22,16,Bharat,Krishna,Google Inc.
+8595228,Systems and methods for direct navigation to specific portion of target document,2012-04-03,22,16,Marmaros,David P.,Google Inc.
+8595252,Systems and methods for direct navigation to specific portion of target document,2012-04-03,22,16,Gomes,Benedict A.,Google Inc.
+8595619,Reputation of an author of online content,2012-04-03,51,110,Brougher,William C.,Google Inc.
+8595814,Reputation of an author of online content,2012-04-03,51,110,Stoll,Nathan,Google Inc.
+8599217,Reputation of an author of online content,2012-04-03,51,110,Dixon,Michael D.,Google Inc.
+8601547,Reputation of an author of online content,2012-04-03,51,110,Kamvar,Sepandar D.,Google Inc.
+8606568,Link filter,2012-04-24,22,21,Eddings,Jeffery K.,Google Inc.
+8607140,Link filter,2012-04-24,22,21,Ghosemajumder,Shuman,Google Inc.
+8611272,Link filter,2012-04-24,22,21,Krikheli,Jerry P.,Google Inc.
+8612517,In-page full screen internet video method,2012-04-24,20,12,Young,Christopher B.,Google Inc.
+8615433,In-page full screen internet video method,2012-04-24,20,12,Klink,Maria C.,Google Inc.
+8619415,In-page full screen internet video method,2012-04-24,20,12,Amzallag,Tristan D.,Google Inc.
+8620077,"Method, system, and graphical user interface for meeting-spot maps for online communications",2012-05-01,26,97,Karam,Joseph F.,Google Inc.
+8620579,Listening with multiple computing devices,2012-05-08,22,11,Jitkoff,John Nicholas,Google Inc.
+8620742,Listening with multiple computing devices,2012-05-08,22,11,LeBeau,Michael J.,Google Inc.
+8621344,Geotagged and weighted environmental audio for enhanced speech recognition accuracy,2012-05-08,20,24,Lloyd,Matthew I.,Google Inc.
+8621432,Geotagged and weighted environmental audio for enhanced speech recognition accuracy,2012-05-08,20,24,Kristjansson,Trausti,Google Inc.
+8621450,Scheduling data pushes to a mobile device based on usage and applications thereof,2012-05-08,24,37,Chan,Michael,Google Inc.
+8621631,Estimating remaining use time of a mobile device,2012-05-15,30,7,Onorato,Joseph M.,Google Inc.
+8626492,Estimating remaining use time of a mobile device,2012-05-15,30,7,Rubin,Andrew E.,Google Inc.
+8626588,Methods and systems to determine a context of a device,2012-05-15,23,6,Miller,James Brooks,Google Inc.
+8626835,Methods and systems to determine a context of a device,2012-05-15,23,6,"Gossweiler, III",Richard,Google Inc.
+8626851,Organization system for ad campaigns,2012-05-15,21,20,Jakobi,Nick,Google Inc.
+8630454,Organization system for ad campaigns,2012-05-15,21,20,Ashton,Will,Google Inc.
+8631146,Organization system for ad campaigns,2012-05-15,21,20,Carver,Anton P.,Google Inc.
+8631440,Low power display,2012-05-22,25,11,Wilson,Matthew,Google Inc.
+8639693,Low power display,2012-05-22,25,11,Spangler,Aaron,Google Inc.
+8639770,Rank-adjusted content items,2012-06-05,28,6,Dhamdhere,Kedar,Google Inc.
+8640167,Rank-adjusted content items,2012-06-05,28,6,Datar,Mayur,Google Inc.
+8644472,Rank-adjusted content items,2012-06-05,28,6,Garg,Ashutosh,Google Inc.
+8645429,Systems and methods for processing inoperative document links,2012-06-12,29,14,Stroe,Mihai,Google Inc.
+8646077,Systems and methods for processing inoperative document links,2012-06-12,29,14,Berinde,Radu,Google Inc.
+8655819,Content item selection,2012-06-12,7,10,Zhang,Dana,Google Inc.
+8660969,Content item selection,2012-06-12,7,10,Verne,Nicholas,Google Inc.
+8661029,Content item selection,2012-06-12,7,10,Symonds,David,Google Inc.
+8666740,Content item selection,2012-06-12,7,10,Perrow,Mike,Google Inc.
+8669976,Content item selection,2012-06-12,7,10,Macgill,James Robert,Google Inc.
+8676790,Location-based social software for mobile devices,2012-06-19,67,24,Crowley,Dennis P.,Google Inc.
+8676803,Location-based social software for mobile devices,2012-06-19,67,24,Rainert,Alexander M.,Google Inc.
+8677133,Search engine with fill-the-blanks capability,2012-06-26,27,5,Alshawi,Hiyan,Google Inc.
+8681954,Decomposing animations into primitives for browser-dependent rendering,2012-07-03,24,8,Kopylov,Igor,Google Inc.
+8682661,Decomposing animations into primitives for browser-dependent rendering,2012-07-03,24,8,Favaro,Alexander Paul,Google Inc.
+8683051,Method and system for automated annotation of persons in video content,2012-07-03,20,8,Zhao,Ming,Google Inc.
+8683112,Method and system for automated annotation of persons in video content,2012-07-03,20,8,Yagnik,Jay N.,Google Inc.
+8687018,Systems and methods for assignment of human reviewers using probabilistic prioritization,2012-07-03,34,2,Kulshreshtha,Ashutosh,Google Inc.
+8688377,Systems and methods for assignment of human reviewers using probabilistic prioritization,2012-07-03,34,2,Bakir,GÃ¶khan Hasan,Google Inc.
+8688379,Wireless data communications network system for tracking containers,2012-07-10,11,233,"Twitchell, Jr.",Robert W.,Google Inc.
+8688590,Anti-phishing system and method,2012-07-10,24,28,Caine,Kelly,Google Inc.
+8688857,Anti-phishing system and method,2012-07-10,24,28,Soghoian,Christopher,Google Inc.
+8689117,User interface for facts query engine with snippets from information sources that include query terms and answer terms,2012-07-17,24,134,Hogue,Andrew,Google Inc.
+8694240,Reusing data in content files,2012-07-17,15,9,Kakligian,Kyle,Google Inc.
+8694593,Reusing data in content files,2012-07-17,15,9,Lacy,Stephen Michael,Google Inc.
+8698772,Reusing data in content files,2012-07-17,15,9,Marwood,David Everett,Google Inc.
+8698875,Using curve invariants to automatically characterize videos,2012-07-24,24,7,Yagnik,Jay N.,Google Inc.
+8700089,Content selection data expansion,2012-07-31,19,7,Yagnik,Niyati,Google Inc.
+8700328,Mobile SiteMaps,2012-07-31,17,47,Strohm,Alan C.,Google Inc.
+8700628,Mobile SiteMaps,2012-07-31,17,47,Ibel,Maximilian,Google Inc.
+8700722,Mobile SiteMaps,2012-07-31,17,47,Shivakumar,Narayanan,Google Inc.
+8712985,Mobile SiteMaps,2012-07-31,17,47,Gil,Elad,Google Inc.
+8713032,Mobile SiteMaps,2012-07-31,17,47,Keller,Ralph Michael,Google Inc.
+8713429,Mobile SiteMaps,2012-07-31,17,47,Brawer,Sascha B.,Google Inc.
+8718145,Mobile SiteMaps,2012-07-31,17,47,Hu,Feng,Google Inc.
+8719089,Dynamic bitwise sharding of live stream comment groups,2012-07-31,18,13,Siegel,Joshua R.,Google Inc.
+8719462,Dynamic bitwise sharding of live stream comment groups,2012-07-31,18,13,Mayle,Douglas Michael,Google Inc.
+8719675,Media article adaptation to client device,2012-07-31,26,6,Gupta,Manish Satyapal,Google Inc.
+8719854,Media article adaptation to client device,2012-07-31,26,6,Harding,John A.,Google Inc.
+8725585,Media article adaptation to client device,2012-07-31,26,6,Lacy,Stephen Michael,Google Inc.
+8726092,Media article adaptation to client device,2012-07-31,26,6,"Rusch, II",Willard Tuyl,Google Inc.
+8726165,Impression normalization,2012-08-07,18,9,Doiron,Michael,Google Inc.
+8731305,Impression normalization,2012-08-07,18,9,Willis,Daniel J.,Google Inc.
+8731489,Parallel data transfer over multiple channels with data order prioritization,2012-08-07,20,5,Chapweske,Justin F.,Google Inc.
+8736706,Smart limited functionality mode manager,2012-08-14,24,15,Sharkey,Jeffrey A.,Google Inc.
+8738060,Position and orientation determination for a mobile computing device,2012-08-28,15,20,Lloyd,Matthew I.,Google Inc.
+8738706,Embedding user-selected content feed items in a webpage,2012-08-28,16,11,Wetherell,Christopher Jason,Google Inc.
+8739207,Embedding user-selected content feed items in a webpage,2012-08-28,16,11,Parparita,Mihai,Google Inc.
+8745018,Embedding user-selected content feed items in a webpage,2012-08-28,16,11,Shellen,Jason H.,Google Inc.
+8745028,Hover-over gesturing on mobile devices,2012-08-28,21,16,Gildfind,Andrew,Google Inc.
+8745104,Computer application pre-permissioning,2012-08-28,18,11,Swetland,Brian J.,Google Inc.
+8745168,Computer application pre-permissioning,2012-08-28,18,11,Hackborn,Dianne K.,Google Inc.
+8745226,Computer application pre-permissioning,2012-08-28,18,11,Bort,David P.,Google Inc.
+8745477,Computer application pre-permissioning,2012-08-28,18,11,Onorato,Joseph M.,Google Inc.
+8745741,Computer application pre-permissioning,2012-08-28,18,11,Bornstein,Daniel R.,Google Inc.
+8746549,Computer application pre-permissioning,2012-08-28,18,11,Cannings,Richard G.,Google Inc.
+8749580,Computer application pre-permissioning,2012-08-28,18,11,McFadden,Andrew T.,Google Inc.
+8749641,Simultaneous use of multiple radio frequency channels,2012-09-04,20,14,McCloskey,E. Daniel,Google Inc.
+8751304,Simultaneous use of multiple radio frequency channels,2012-09-04,20,14,Gossett,C. Philip,Google Inc.
+8751965,Cross-lingual initialization of language models,2012-09-04,18,8,Nakajima,Kaisuke,Google Inc.
+8751972,Cross-lingual initialization of language models,2012-09-04,18,8,Strope,Brian,Google Inc.
+8752204,Multi-passenger multi-route travel planning through common locations,2012-09-11,24,56,Boyan,Justin A.,Google Inc.
+8754861,Multi-passenger multi-route travel planning through common locations,2012-09-11,24,56,DeMarcken,Carl G.,Google Inc.
+8755595,Optimal channel design for memory devices for providing a high-speed memory interface,2012-10-02,17,22,Wang,Min Chuan,Google Inc.
+8755628,Optimal channel design for memory devices for providing a high-speed memory interface,2012-10-02,17,22,Rajan,Suresh Natarajan,Google Inc.
+8760936,Optimal channel design for memory devices for providing a high-speed memory interface,2012-10-02,17,22,Ferolito,Philip Arnold,Google Inc.
+8761457,Optimal channel design for memory devices for providing a high-speed memory interface,2012-10-02,17,22,Smith,Michael,Google Inc.
+8762893,Wireless telecommunication device and uses thereof,2012-10-09,13,26,Pomerantz,Itzhak,Google Inc.
+8766986,Wireless telecommunication device and uses thereof,2012-10-09,13,26,Moran,Dov,Google Inc.
+8767305,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Marmasse,Natalia,Google Inc.
+8768048,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Franji,Tal,Google Inc.
+8769020,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Marcus,Dror Michael,Google Inc.
+8769045,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Maor,Michal,Google Inc.
+8769116,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Grossmann,Mark,Google Inc.
+8769400,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Lan,Divon,Google Inc.
+8774955,Methods for user-interface over SMS messages based on a reusable stream model,2012-10-16,11,5,Gutner,Shai,Google Inc.
+8775177,Generating sitemap where last modified time is not available to a network crawler,2012-10-16,7,10,Pillai,Anand,Google Inc.
+8775923,Determining the relationship between source code bases,2012-10-16,26,18,Chu,Andy,Google Inc.
+8779999,Rendering advertisements with documents having one or more topics using user topic interest information,2012-10-23,20,5,Bharat,Krishna,Google Inc.
+8781500,Identifying function-level code dependency by simulating runtime binding,2012-10-23,15,34,Yan,Hong,Google Inc.
+8782034,Identifying function-level code dependency by simulating runtime binding,2012-10-23,15,34,Huang,Andrew T.,Google Inc.
+8782077,Ascertaining presence in wireless networks,2012-10-30,13,216,Koop,LaMonte Peter,Google Inc.
+8782129,Ascertaining presence in wireless networks,2012-10-30,13,216,Payne,Edward Allen,Google Inc.
+8782136,Content resizing and caching in multi-process browser architecture,2012-11-06,21,50,Wilson,Brett Michael,Google Inc.
+8782693,Content resizing and caching in multi-process browser architecture,2012-11-06,21,50,Fisher,Darin W.,Google Inc.
+8782698,System and method for decoding using parallel processing,2012-11-13,19,105,Xu,Yaowu,Google Inc.
+8787454,System and method for decoding using parallel processing,2012-11-13,19,105,Wilkins,Paul,Google Inc.
+8788659,System and method for decoding using parallel processing,2012-11-13,19,105,Bankoski,James,Google Inc.
+8793696,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Gokturk,Salih Burak,Google Inc.
+8793776,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Lee,Kuang-chih,Google Inc.
+8796830,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Anguelov,Dragomir D.,Google Inc.
+8798685,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Vanhoucke,Vincent O.,Google Inc.
+8799139,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Shah,Munjal,Google Inc.
+8799302,Computer-implemented method for performing similarity searches,2012-11-13,19,114,Tengli,Ashwin,Google Inc.
+8799951,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Newton,Kevan Quincy,Google Inc.
+8806384,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Shivakumar,Narayanan,Google Inc.
+8810599,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Cui,Yingwei Claire,Google Inc.
+8811685,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Ranganath,Rama,Google Inc.
+8817021,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Liebman,Jason B.,Google Inc.
+8817067,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Bronson,Kenneth W.,Google Inc.
+8818043,Determining content to be provided by an entity for rendering via a resource in a target document or notifying an alternative entity of the availability of the resource,2012-11-13,19,5,Jindal,Deepak,Google Inc.
+8818416,Dictionary suggestions for partial user entries,2012-11-13,42,83,Lee,Dong-Hoon,Google Inc.
+8818971,Dictionary suggestions for partial user entries,2012-11-13,42,83,Jang,Jungshik,Google Inc.
+8818982,Dictionary suggestions for partial user entries,2012-11-13,42,83,Choi,Yung Ran,Google Inc.
+8819356,Dictionary suggestions for partial user entries,2012-11-13,42,83,Lee,Hai-Min,Google Inc.
+8819564,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Kokkevis,Evangelos,Google Inc.
+8819856,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Petterson,Rachel L.,Google Inc.
+8823457,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Zeiger,Roni F.,Google Inc.
+8825698,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Chun,Won S.,Google Inc.
+8826320,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Kogan,David,Google Inc.
+8826460,Layer opacity adjustment for a three-dimensional object,2012-11-20,14,13,Blume,Arthur E.,Google Inc.
+8832003,Wireless reader tags (WRTs) with sensor components in asset monitoring and tracking systems,2012-11-20,19,95,"Twitchell, Jr.",Robert W.,Google Inc.
+8832088,Crowd-sourced information for interior localization and navigation,2012-11-27,21,2,Vincent,Luc,Google Inc.
+8832132,Automated metadata updates,2012-11-27,20,14,Queru,Jean Baptiste,Google Inc.
+8832193,Pre-binding and tight binding of an on-line identity to a digital signature,2012-11-27,16,26,Morten,Glenn A.,Google Inc.
+8837849,Preserving cell phone battery life,2012-12-04,18,12,Davis,Benjamin Max,Google Inc.
+8838595,System and method of generating build instructions,2012-12-04,19,12,Yang,Don Hsi-Yun,Google Inc.
+8843304,System and method of generating build instructions,2012-12-04,19,12,Marks,Paul Anthony,Google Inc.
+8843455,Presenting related communications,2012-12-11,30,46,Kaiserlian,Christian,Google Inc.
+8843536,Presenting related communications,2012-12-11,30,46,Berenzweig,Adam L.,Google Inc.
+8843603,Presenting related communications,2012-12-11,30,46,Huelsbergen,Lorenz Francis,Google Inc.
+8847949,Providing content using stored query information,2012-12-25,20,32,Garg,Ashutosh,Google Inc.
+8849567,Providing content using stored query information,2012-12-25,20,32,Dhamdhere,Kedar,Google Inc.
+8850227,Automatically schedule and re-schedule meetings through search interface,2013-01-01,25,16,Norton,Kenneth S.,Google Inc.
+8850354,Automatically schedule and re-schedule meetings through search interface,2013-01-01,25,16,Nelson,Phillip C.,Google Inc.
+8854669,Automatically schedule and re-schedule meetings through search interface,2013-01-01,25,16,Marmaros,David P.,Google Inc.
+8856111,Automatically schedule and re-schedule meetings through search interface,2013-01-01,25,16,Ashear,Joseph M.,Google Inc.
+8856124,Facilitating bidding on images,2013-01-01,18,42,Baluja,Shumeet,Google Inc.
+8860717,Facilitating bidding on images,2013-01-01,18,42,Jing,Yushi,Google Inc.
+8862474,Automatic adjustment of advertiser bids to equalize cost-per-conversion among publishers for an advertisement,2013-01-01,20,23,Tong,Simon Frederick,Google Inc.
+8862595,Automatic adjustment of advertiser bids to equalize cost-per-conversion among publishers for an advertisement,2013-01-01,20,23,Benson,Scott S.,Google Inc.
+8862976,Iterative off-line rendering process,2013-01-01,26,6,Fedorynski,Pawel Aleksander,Google Inc.
+8863085,Iterative off-line rendering process,2013-01-01,26,6,Pascovici,Andrei,Google Inc.
+8866923,Iterative off-line rendering process,2013-01-01,26,6,Kapoor,Rupesh,Google Inc.
+8866926,Iterative off-line rendering process,2013-01-01,26,6,Hendriks,Erik Arjan,Google Inc.
+8867849,Iterative off-line rendering process,2013-01-01,26,6,Giridhar,Sathayanarayana,Google Inc.
+8868142,Search augmentation,2013-01-01,29,105,Buettcher,Stefan,Google Inc.
+8868428,Search augmentation,2013-01-01,29,105,Bharat,Krishna,Google Inc.
+8868472,Search augmentation,2013-01-01,29,105,Shukla,Anand,Google Inc.
+8868536,Search augmentation,2013-01-01,29,105,Pearson,Mark A.,Google Inc.
+8869134,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Vickrey,Rebekah C.,Google Inc.
+8874182,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Datuashvili,George,Google Inc.
+8874372,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Drobychev,Alexandre,Google Inc.
+8874523,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Zunger,Yonatan,Google Inc.
+8880882,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Dachille,Frank C.,Google Inc.
+8882598,System and method for managing replicas of objects in a distributed storage system,2013-01-08,24,50,Kesselman,Alexander,Google Inc.
+8884955,Search result ranking based on trust,2013-01-08,42,92,Guha,Ramanathan V.,Google Inc.
+8886275,Systems and methods for using a domain-specific security sandbox to facilitate secure transactions,2013-01-29,53,18,Bhanoo,Hemant Madhav,Google Inc.
+8886585,Systems and methods for using a domain-specific security sandbox to facilitate secure transactions,2013-01-29,53,18,Mills,Allan Stephan,Google Inc.
+8886735,Systems and methods for using a domain-specific security sandbox to facilitate secure transactions,2013-01-29,53,18,Bayes,Luke,Google Inc.
+8887070,Adaptive playback rate with look-ahead,2013-02-12,28,70,Wormley,Nicholas A.,Google Inc.
+8888898,Adaptive playback rate with look-ahead,2013-02-12,28,70,Tippin,Chad A.,Google Inc.
+8890676,Permissions of objects in hosted storage,2013-02-12,14,10,Aikas,Erkki Ville,Google Inc.
+8890863,Permissions of objects in hosted storage,2013-02-12,14,10,Hanson,David R.,Google Inc.
+8890969,Voice interface for a search engine,2013-02-19,27,66,Milch,Brian Christopher,Google Inc.
+8891883,Voice interface for a search engine,2013-02-19,27,66,Brin,Sergey,Google Inc.
+8895830,Voice interface for a search engine,2013-02-19,27,66,Franz,Alexander,Google Inc.
+8896617,Voice interface for a search engine,2013-02-19,27,66,Henzinger,Monika,Google Inc.
+8896630,Methods and systems for improving a search ranking using related queries,2013-02-19,21,208,Brin,Sergey,Google Inc.
+8897565,Methods and systems for improving a search ranking using related queries,2013-02-19,21,208,Pearson,Mark A.,Google Inc.
+8898270,Methods and systems for improving a search ranking using related queries,2013-02-19,21,208,Tong,Simon Frederick,Google Inc.
+8898410,Systems and methods for visually scrolling through a stack of items displayed on a device,2013-02-19,20,4,Scholler,Jerome F.,Google Inc.
+8898496,Software testing using taint analysis and execution path alteration,2013-02-19,22,27,Ormandy,Tavis,Google Inc.
+8902333,Software testing using taint analysis and execution path alteration,2013-02-19,22,27,Drewry,William,Google Inc.
+8903752,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Lee,Kuang-chih,Google Inc.
+8904447,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Anguelov,Dragomir D.,Google Inc.
+8908005,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Gokturk,Salih Burak,Google Inc.
+8909939,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Vanhoucke,Vincent O.,Google Inc.
+8909943,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Torresani,Lorenzo,Google Inc.
+8914346,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Vu,Diem Thanh,Google Inc.
+8917992,Techniques for enabling or establishing the use of face recognition algorithms,2013-02-26,17,117,Shah,Munjal,Google Inc.
+8918330,Assigning blame to web browser extensions and applications,2013-02-26,20,18,Kay,Erik,Google Inc.
+8922507,Assigning blame to web browser extensions and applications,2013-02-26,20,18,Eisinger,Jochen Mathias,Google Inc.
+8924435,Assigning blame to web browser extensions and applications,2013-02-26,20,18,Perry,Matthew C.,Google Inc.
+8924850,Verifying that a method has been implemented for a program written in a dynamic programming language,2013-02-26,18,21,MacLachlan,David I.,Google Inc.
+8930044,Verifying that a method has been implemented for a program written in a dynamic programming language,2013-02-26,18,21,Van Lenten,Thomas E.,Google Inc.
+8930392,Graphics display coordination,2013-03-05,19,13,Agopian,Mathias Marc,Google Inc.
+8930721,Query suggestions for a document based on user history,2013-03-05,14,14,Yamauchi,Tomoaki,Google Inc.
+8934015,Image enhancement through discrete patch optimization,2013-03-12,20,71,Kwatra,Vivek,Google Inc.
+8934544,Image enhancement through discrete patch optimization,2013-03-12,20,71,Han,Mei,Google Inc.
+8935034,Image enhancement through discrete patch optimization,2013-03-12,20,71,Yagnik,Jay N.,Google Inc.
+8935151,Location-based searching using a search area that corresponds to a geographical location of a computing device,2013-03-12,27,56,von Behren,James R.,Google Inc.
+8937620,Location-based searching using a search area that corresponds to a geographical location of a computing device,2013-03-12,27,56,Cheng,Tak Keung,Google Inc.
+8938464,Advertising based on user models,2013-03-19,27,10,Iversen,Grim H.,Google Inc.
+8941777,Method and system for providing information for identifying callers,2013-03-26,18,13,Lemke,Steve C.,Google Inc.
+8942415,Optimizing placement and delivery of advertisements,2013-03-26,27,18,Baluja,Shumeet,Google Inc.
+8942535,Travel suggestions,2013-03-26,36,1,Frank,Stefan,Google Inc.
+8949179,Travel suggestions,2013-03-26,36,1,Daughtrey,Rodney S.,Google Inc.
+8949242,Multi-stage query processing system and method for use with tokenspace repository,2013-03-26,18,37,Sercinoglu,Olcan,Google Inc.
+8949283,Multi-stage query processing system and method for use with tokenspace repository,2013-03-26,18,37,Haahr,Paul G.,Google Inc.
+8949361,Multi-stage query processing system and method for use with tokenspace repository,2013-03-26,18,37,Dean,Jeffrey,Google Inc.
+8953886,Multi-stage query processing system and method for use with tokenspace repository,2013-03-26,18,37,Singhal,Amit,Google Inc.
+8954092,Multi-orientation plug,2013-04-02,16,58,Queru,Jean Baptiste,Google Inc.
+8954252,Fresh related search suggestions,2013-04-02,25,16,Mukherjee,Rajat P.,Google Inc.
+8954412,Fresh related search suggestions,2013-04-02,25,16,Westall,Adam,Google Inc.
+8954887,Fresh related search suggestions,2013-04-02,25,16,Das,Abhinandan,Google Inc.
+8954951,Distributed information collection using pre-generated identifier,2013-04-02,17,14,Yadavilli,Ravi,Google Inc.
+8959093,Distributed information collection using pre-generated identifier,2013-04-02,17,14,Belwadi,Subramanya Srikanth,Google Inc.
+8961005,Distributed information collection using pre-generated identifier,2013-04-02,17,14,Ruhela,Surendra,Google Inc.
+8965203,Distributed information collection using pre-generated identifier,2013-04-02,17,14,Khanna,Suresh,Google Inc.
+8971024,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Jones,Matthew Reardon,Google Inc.
+8971642,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Vandermolen,Wayne Douglas,Google Inc.
+8972432,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Mui,Lik,Google Inc.
+8972448,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Patton,Brian Jonathan,Google Inc.
+8976188,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Moon,Hui Sok,Google Inc.
+8977074,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Nandy,Sagnik,Google Inc.
+8982145,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Seckar,Nicholas John,Google Inc.
+8983764,Method and system for segmenting a multidimensional dataset,2013-04-02,30,40,Choc,Theodore Nicholas,Google Inc.
+8983845,Systems and methods for delivering messages based on a device radio status,2013-04-09,17,20,Sharma,Ashish Kumar,Google Inc.
+8984008,Systems and methods for delivering messages based on a device radio status,2013-04-09,17,20,Nerieri,Francesco,Google Inc.
+8988232,Advanced voicemail features without carrier voicemail support,2013-04-09,14,48,Trivi,Jean-Michel Roland,Google Inc.
+8989101,Accent-influenced search results,2013-04-09,16,20,Hayes,Barry,Google Inc.
+8989834,Methods and systems for controlling multiple operations of disk drives,2013-04-09,7,14,Villela,Caio Botelho,Google Inc.
+8990580,Segmenting text for searching,2013-04-16,20,19,Chopra,Harshit,Google Inc.
+8994681,Segmenting text for searching,2013-04-16,20,19,Shanmugam,Siddaarth,Google Inc.
+8996312,Segmenting text for searching,2013-04-16,20,19,Chandra,Sunil,Google Inc.
+8996887,Advertisement approval,2013-04-16,13,25,Badros,Gregory Joseph,Google Inc.
+8997225,Advertisement approval,2013-04-16,13,25,Zhang,Lucy Congyun,Google Inc.
+9002525,Advertisement approval,2013-04-16,13,25,"Stets, Jr.",Robert J.,Google Inc.
+9002819,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,Cozens,Narelle,Google Inc.
+9002835,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,Schmitt,Peter C.,Google Inc.
+9003557,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,DePasquale,Michael J.,Google Inc.
+9003558,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,Mizhen,Boris,Google Inc.
+9007224,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,Pennarun,Avery,Google Inc.
+9007934,Prioritizing potential transaction counter-parties with social network content,2013-04-16,22,4,Green,Travis Harrison,Google Inc.
+9008363,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Yee,Bennet S.,Google Inc.
+9009170,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Harren,Matthew T.,Google Inc.
+9009582,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Sehr,David C.,Google Inc.
+9009788,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Dardyk,Gregory,Google Inc.
+9014905,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Papakipos,Matthew,Google Inc.
+9015801,Safely executing an untrusted native code module on a computing device,2013-04-16,22,17,Chen,J. Bradley,Google Inc.
+9015824,Computing platform with resource constraint negotiation,2013-04-23,25,7,Tate,Christopher L.,Google Inc.
+9015832,Computing platform with resource constraint negotiation,2013-04-23,25,7,Shapiro,Carl S.,Google Inc.
+9020485,Computing platform with resource constraint negotiation,2013-04-23,25,7,Bornstein,Daniel R.,Google Inc.
+9020927,Computing platform with resource constraint negotiation,2013-04-23,25,7,Brown,Jeffrey M.,Google Inc.
+9021087,Altered token sandboxing,2013-04-23,24,12,Puentes,Jose Ricardo,Google Inc.
+9021270,Altered token sandboxing,2013-04-23,24,12,Thorarinsson,Finnur Breki,Google Inc.
+9021372,Altered token sandboxing,2013-04-23,24,12,Pizano,Carlos E.,Google Inc.
+9021468,Altered token sandboxing,2013-04-23,24,12,Larson,Mark A.,Google Inc.
+9024843,Altered token sandboxing,2013-04-23,24,12,Sylvain,Nicolas,Google Inc.
+9025861,System and method for storing and providing routes,2013-04-30,18,26,Goel,Vinay,Google Inc.
+9026080,Method and system for displaying of transparent ads,2013-05-07,26,18,Godse,Dhananjay Damodar,Google Inc.
+9026676,Method and system for displaying of transparent ads,2013-05-07,26,18,Freedman,Gordon J.,Google Inc.
+9026914,Method and system for displaying of transparent ads,2013-05-07,26,18,Willis,Daniel J.,Google Inc.
+9033274,Touchscreen keyboard simulation for performance evaluation,2013-05-07,17,19,Azenkot,Shiri,Google Inc.
+9035999,Touchscreen keyboard simulation for performance evaluation,2013-05-07,17,19,Zhai,Shumin,Google Inc.
+9036162,Confidence tying for unsupervised synthetic speech adaptation,2013-05-07,17,10,Chun,Byungha,Google Inc.
+9037676,Confidence tying for unsupervised synthetic speech adaptation,2013-05-07,17,10,Stuttle,Matthew Nicholas,Google Inc.
+9037976,Generating information for online advertisements from internet data and traditional media data,2013-05-07,30,5,Harik,Georges R.,Google Inc.
+9038038,Website quality signal generation,2013-05-14,28,16,Hylton,Jeremy A.,Google Inc.
+9043198,Website quality signal generation,2013-05-14,28,16,Pennock,Christopher C.,Google Inc.
+9043403,Website quality signal generation,2013-05-14,28,16,Cortes,Corinna,Google Inc.
+9047259,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Perry,Hagit,Google Inc.
+9047348,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Engelstein,Tal,Google Inc.
+9047613,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Leshem,Yair,Google Inc.
+9049055,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Levy,Ron,Google Inc.
+9049309,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Cohen,Yohan Yehouda,Google Inc.
+9053078,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Ron,Uri,Google Inc.
+9053156,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Refaeli,Yuval,Google Inc.
+9053416,Speed-dial and speed-contact with predictive logic,2013-05-21,38,33,Bychkov,Eyal,Google Inc.
+9055332,Data capture from rendered documents using handheld device,2013-05-21,16,414,King,Martin T.,Google Inc.
+9058054,Data capture from rendered documents using handheld device,2013-05-21,16,414,Kushler,Clifford A.,Google Inc.
+9058480,Data capture from rendered documents using handheld device,2013-05-21,16,414,Grover,Dale L.,Google Inc.
+9060059,Data capture from rendered documents using handheld device,2013-05-21,16,414,Stafford-Fraser,James Q.,Google Inc.
+9060062,Dynamic pricing for content presentations,2013-05-28,26,6,Hochberg,Michael M.,Google Inc.
+9066130,Dynamic pricing for content presentations,2013-05-28,26,6,Paunikar,Amit,Google Inc.
+9067666,System and method for determining active topics,2013-06-04,18,35,Procopio,Michael Jeffrey,Google Inc.
+9069567,Translating user interaction with a touch screen into text,2013-06-11,22,10,Li,Yang Edward,Google Inc.
+9070183,Dipole antenna with gamma matching,2013-06-18,26,6,"Britt, Jr.",Joe,Google Inc.
+9070305,Dipole antenna with gamma matching,2013-06-18,26,6,Kough,Douglas,Google Inc.
+9075779,Indexing of URLs with fragments,2013-06-18,18,36,Kapoor,Rupesh,Google Inc.
+9077541,Indexing of URLs with fragments,2013-06-18,18,36,Fedorynski,Pawel Aleksander,Google Inc.
+9082407,Universal language input,2013-06-25,2,14,Zhang,Lei Larry,Google Inc.
+9083676,Universal language input,2013-06-25,2,14,Qian,Jiang,Google Inc.
+9087058,Link annotation for keyboard navigation,2013-06-25,20,42,Schneider,Fritz John,Google Inc.
+9087235,Interaction with partially constructed mobile device applications,2013-07-02,16,24,Friedman,Mark S.,Google Inc.
+9087297,Determining and displaying impression share to advertisers,2013-07-09,25,13,Yan,Weipeng Paul,Google Inc.
+9092390,Determining and displaying impression share to advertisers,2013-07-09,25,13,Venkataraman,Shivakumar,Google Inc.
+9092529,Determining and displaying impression share to advertisers,2013-07-09,25,13,Kothari,Anshul,Google Inc.
+9092900,System and method of using spatial and temporal signals to identify and prevent attacks,2013-07-16,6,22,Liang,Sam Song,Google Inc.
+9096920,System and method of using spatial and temporal signals to identify and prevent attacks,2013-07-16,6,22,Yu,Yang J.,Google Inc.
+9100727,System and method of using spatial and temporal signals to identify and prevent attacks,2013-07-16,6,22,Luo,Yuhua,Google Inc.
+9103689,System and method of using spatial and temporal signals to identify and prevent attacks,2013-07-16,6,22,Ji,Zhengrong,Google Inc.
+9104630,System and method of using spatial and temporal signals to identify and prevent attacks,2013-07-16,6,22,Chu,Michael Jesse,Google Inc.
+9105974,Methods and apparatus for extensions to directed graphs with minimal and maximal constraints are encoded by arcs in opposite directions,2013-07-23,30,20,Milne,Philip S.,Google Inc.
+9106482,Wireless communicator jacket with multiple operational stages,2013-07-23,11,51,Sherman,Itay,Google Inc.
+9106518,Wireless communicator jacket with multiple operational stages,2013-07-23,11,51,Cohen,Yohan Yehouda,Google Inc.
+9106646,Selection of an image or images most representative of a set of images,2013-07-30,20,16,Baluja,Shumeet,Google Inc.
+9110993,Selection of an image or images most representative of a set of images,2013-07-30,20,16,Jing,Yushi,Google Inc.
+9110995,Systems and methods for automated conference call initiation,2013-08-06,17,8,Ludwig,Scott R.,Google Inc.
+9111011,Distance and location-aware scheduling assistance in a calendar system with notification of potential conflicts,2013-08-06,22,5,Norton,Kenneth S.,Google Inc.
+9111218,Serving advertisements based on content,2013-08-06,20,19,Harik,Georges R.,Google Inc.
+9111397,Serving advertisements based on content,2013-08-06,20,19,Carobus,Alexander Paul,Google Inc.
+9113076,Serving advertisements based on content,2013-08-06,20,19,Shivakumar,Narayanan,Google Inc.
+9118626,Serving advertisements based on content,2013-08-06,20,19,Dean,Jeffrey,Google Inc.
+9118632,Serving advertisements based on content,2013-08-06,20,19,Anderson,Darrell,Google Inc.
+9118758,Serving advertisements based on content,2013-08-06,20,19,Buchheit,Paul T.,Google Inc.
+9121645,Serving advertisements based on content,2013-08-06,20,19,Cui,Yingwei Claire,Google Inc.
+9121717,Serving advertisements based on content,2013-08-06,20,19,Jindal,Deepak,Google Inc.
+9123330,Archive of text captures from rendered documents,2013-08-06,20,1145,Mannby,Claes-Fredrik,Google Inc.
+9124631,Archive of text captures from rendered documents,2013-08-06,20,1145,King,Martin T.,Google Inc.
+9124664,Archive of text captures from rendered documents,2013-08-06,20,1145,Grover,Dale L.,Google Inc.
+9128285,Archive of text captures from rendered documents,2013-08-06,20,1145,Kushler,Clifford A.,Google Inc.
+9129016,Archive of text captures from rendered documents,2013-08-06,20,1145,Stafford-Fraser,James Q.,Google Inc.
+9129598,Systems and methods for detecting commercial queries,2013-08-13,17,7,Singhal,Amit,Google Inc.
+9134948,Systems and methods for detecting commercial queries,2013-08-13,17,7,Wu,Jun Jun,Google Inc.
+9135239,Systems and methods for detecting commercial queries,2013-08-13,17,7,Cutts,Matthew,Google Inc.
+9135364,Optimization of web page content including video,2013-08-13,17,30,Funk,Gregory Allan,Google Inc.
+9135414,Optimization of web page content including video,2013-08-13,17,30,"Gatto, Jr.",Vincent,Google Inc.
+9135445,Optimization of web page content including video,2013-08-13,17,30,Hamilton,Theodore Kent,Google Inc.
+9135461,Optimization of web page content including video,2013-08-13,17,30,Rajkumar,Nareshkumar,Google Inc.
+9135644,Affiliate linking where answerer requests permission to insert an interactive link in an answer,2013-08-20,25,19,Horowitz,Damon M.,Google Inc.
+9137108,Affiliate linking where answerer requests permission to insert an interactive link in an answer,2013-08-20,25,19,Spiro,Robert J.,Google Inc.
+9137194,Affiliate linking where answerer requests permission to insert an interactive link in an answer,2013-08-20,25,19,Ventilla,Max,Google Inc.
+9137642,Affiliate linking where answerer requests permission to insert an interactive link in an answer,2013-08-20,25,19,Stoll,Nathan,Google Inc.
+9141616,Intrusive software management,2013-08-20,33,18,"Bavor, Jr.",Clayton W.,Google Inc.
+9141674,Intrusive software management,2013-08-20,33,18,"Davis, Jr.",Eric L.,Google Inc.
+9141722,Intrusive software management,2013-08-20,33,18,Nakauchi,Rachel,Google Inc.
+9142242,Intrusive software management,2013-08-20,33,18,Palatucci,Mark Matthew,Google Inc.
+9143673,Intrusive software management,2013-08-20,33,18,Zhou,Yunkai,Google Inc.
+9146114,Intrusive software management,2013-08-20,33,18,Monson,Christopher K.,Google Inc.
+9147001,Intrusive software management,2013-08-20,33,18,Mavrommatis,Panayiotis,Google Inc.
+9148371,Intrusive software management,2013-08-20,33,18,Nigam,Kamal P.,Google Inc.
+9148702,Intrusive software management,2013-08-20,33,18,Provos,Niels,Google Inc.
+9152692,Identifying geographic features from query prefixes,2013-08-20,18,12,van Dijk,Luuk,Google Inc.
+9152701,Identifying geographic features from query prefixes,2013-08-20,18,12,Zauharodneu,Ivan,Google Inc.
+9152736,Identifying geographic features from query prefixes,2013-08-20,18,12,Hauth,Anja,Google Inc.
+9154647,Identifying geographic features from query prefixes,2013-08-20,18,12,Meschkat,Steffen Gerd,Google Inc.
+9154915,Identifying geographic features from query prefixes,2013-08-20,18,12,Jurca,Radu,Google Inc.
+9159312,Identifying geographic features from query prefixes,2013-08-20,18,12,Lecomte,David E.,Google Inc.
+9161165,Identifying geographic features from query prefixes,2013-08-20,18,12,Zhdanovich,Matsvei,Google Inc.
+9164588,Selecting speech data for speech recognition vocabulary,2013-08-27,12,23,Chelba,Ciprian,Google Inc.
+9165040,Selecting speech data for speech recognition vocabulary,2013-08-27,12,23,Garrett,Maryam Kamvar,Google Inc.
+9165081,Adaptive audio transcoding,2013-08-27,24,15,Yi,Xiaoquan,Google Inc.
+9166410,Adaptive audio transcoding,2013-08-27,24,15,Shastri,Vijnan M.,Google Inc.
+9166665,Adaptive audio transcoding,2013-08-27,24,15,Wang,Huisheng,Google Inc.
+9167207,System and method for targeting information based on message content in a reply,2013-08-27,19,22,Chen,Stanley F.,Google Inc.
+9167644,System and method for targeting information based on message content in a reply,2013-08-27,19,22,Sheinberg,Alan B.,Google Inc.
+9167724,Conversion crediting,2013-09-03,20,6,Masters,Sarah,Google Inc.
+9169013,Conversion crediting,2013-09-03,20,6,Zhang,Fan,Google Inc.
+9170113,Conversion crediting,2013-09-03,20,6,Ma,Sheng,Google Inc.
+9171149,Full-length video fingerprinting,2013-09-10,28,6,Ioffe,Sergey,Google Inc.
+9171302,Identification of over-clustered map features,2013-09-10,12,38,de Alfaro,Luca,Google Inc.
+9171313,Identification of over-clustered map features,2013-09-10,12,38,Kulshreshtha,Ashutosh,Google Inc.
+9171642,Identification of over-clustered map features,2013-09-10,12,38,Cornea,Nicu D.,Google Inc.
+9172670,Automated web frontend sharding,2013-09-10,24,7,Haldimann,Niklaus,Google Inc.
+9172888,Automated web frontend sharding,2013-09-10,24,7,Winer,Adam E.,Google Inc.
+9172970,Automated web frontend sharding,2013-09-10,24,7,Scheffler,Jens,Google Inc.
+9177062,Personalizing search results,2013-09-17,29,19,Tucker,Paul A.,Google Inc.
+9178746,Directions-based ranking of places returned by local search queries,2013-09-17,31,1,Gonzalez,Hector H,Google Inc.
+9179020,Directions-based ranking of places returned by local search queries,2013-09-17,31,1,Halevy,Alon Yitzchak,Google Inc.
+9180369,Directions-based ranking of places returned by local search queries,2013-09-17,31,1,Venetis,Petros,Google Inc.
+9183566,Directions-based ranking of places returned by local search queries,2013-09-17,31,1,Jensen,Christian S.,Google Inc.
+9189375,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Desikan,Pavan K.,Google Inc.
+9189826,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Mirkin,Ilia,Google Inc.
+9191705,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Juda,Adam I.,Google Inc.
+9195880,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Black,Julie A.,Google Inc.
+9195987,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Baugher,Alexandra,Google Inc.
+9197929,Multi-campaign content allocation based on experiment difference data,2013-09-17,21,43,Meyer,Michael G.,Google Inc.
+9198214,Facial recognition,2013-09-24,23,27,Schneiderman,Henry Will,Google Inc.
+9201797,Facial recognition,2013-09-24,23,27,Sipe,Michael Andrew,Google Inc.
+9202280,Facial recognition,2013-09-24,23,27,Nechyba,Michael Christian,Google Inc.
+9202462,Dynamic bit rate scaling,2013-09-24,20,83,Brase,Ryan,Google Inc.
+9204189,Dynamic bit rate scaling,2013-09-24,20,83,Chapweske,Justin F.,Google Inc.
+9207794,Dynamic bit rate scaling,2013-09-24,20,83,Wormley,Nicholas A.,Google Inc.
+9208229,Web page associated with a node in a website traffic pattern,2013-09-24,21,11,Kent,James S.,Google Inc.
+9210109,System and method of accessing and recording messages at coordinate way points,2013-10-01,6,72,Jenkins,Michael D.,Google Inc.
+9210357,User-space resource management,2013-10-01,33,9,Ji,Zhengrong,Google Inc.
+9213703,User-space resource management,2013-10-01,33,9,Zhou,Junlan,Google Inc.
+9213989,User-space resource management,2013-10-01,33,9,Wu,Yuguang,Google Inc.
+9215245,Method and system for efficiently replicating data in non-relational databases,2013-10-08,15,71,Zunger,Yonatan,Google Inc.
+9215315,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,Buron,Florian Michel,Google Inc.
+9215411,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,Schrock,Jasson Arthur,Google Inc.
+9218420,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,Krishnappa,Chirayu,Google Inc.
+9223596,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,McClendon,BethEllyn,Google Inc.
+9223683,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,Tibell,Johan Larsson,Google Inc.
+9224068,"Method, system, and computer readable medium for displaying items for sale in uploaded video content",2013-10-15,17,10,Tran,Thai Gia,Google Inc.
+9224072,Learning expected values for facts,2013-10-15,24,19,Fortuna,Vinicius J.,Google Inc.
+9225614,Learning expected values for facts,2013-10-15,24,19,Lee,John,Google Inc.
+9225741,Learning expected values for facts,2013-10-15,24,19,Provine,John R.,Google Inc.
+9225794,Learning expected values for facts,2013-10-15,24,19,Lerman,Kevin,Google Inc.
+9230134,Learning expected values for facts,2013-10-15,24,19,Sahin,Engin Cinar,Google Inc.
+9231873,Learning expected values for facts,2013-10-15,24,19,Hogue,Andrew,Google Inc.
+9235552,Systems and methods for managing a network by generating files in a virtual file system,2013-10-15,26,10,Gross,Dor,Google Inc.
+9235782,Systems and methods for managing a network by generating files in a virtual file system,2013-10-15,26,10,Nicolaou,Cosmos,Google Inc.
+9237087,Analyzing a content-requesting media item,2013-10-22,29,17,Chen,Xiaoming,Google Inc.
+9237380,Analyzing a content-requesting media item,2013-10-22,29,17,Hickman,Ryan,Google Inc.
+9240855,Analyzing a content-requesting media item,2013-10-22,29,17,Deodhar,Girish,Google Inc.
+9240969,Sequenced video segment mix,2013-10-22,37,11,Schrock,Jasson Arthur,Google Inc.
+9245022,Sequenced video segment mix,2013-10-22,37,11,Davtchev,Ivan D.,Google Inc.
+9245151,Sequenced video segment mix,2013-10-22,37,11,Muthukrishnan,Shanmugavelayutham,Google Inc.
+9246570,Data storage device capable of recognizing and controlling multiple types of memory chips,2013-10-22,18,203,Swing,Andrew T.,Google Inc.
+9247029,Data storage device capable of recognizing and controlling multiple types of memory chips,2013-10-22,18,203,Sprinkle,Robert S.,Google Inc.
+9248910,Data storage device capable of recognizing and controlling multiple types of memory chips,2013-10-22,18,203,Borchers,Albert T.,Google Inc.
+9250830,Refresh management of memory modules,2013-10-22,24,878,Rajan,Suresh Natarajan,Google Inc.
+9251171,Refresh management of memory modules,2013-10-22,24,878,Smith,Michael,Google Inc.
+9252973,Refresh management of memory modules,2013-10-22,24,878,Schakel,Keith R.,Google Inc.
+9253196,Refresh management of memory modules,2013-10-22,24,878,Wang,David T.,Google Inc.
+9256343,System and method of selectively caching information based on the interarrival time of requests for the same information,2013-10-22,27,23,Presotto,David Leo,Google Inc.
+9256457,System and method of selectively caching information based on the interarrival time of requests for the same information,2013-10-22,27,23,Burkard,Timo,Google Inc.
+9256743,Methods and systems for adaptation of synthetic speech in an environment,2013-10-29,17,13,Agiomyrgiannakis,Ioannis,Google Inc.
+9261879,Methods and systems for adaptation of synthetic speech in an environment,2013-10-29,17,13,Stuttle,Matthew Nicholas,Google Inc.
+9261989,Ranking social network objects,2013-10-29,24,57,Zhang,Dong Ping,Google Inc.
+9263042,Ranking social network objects,2013-10-29,24,57,Cui,Hang,Google Inc.
+9263048,Ranking social network objects,2013-10-29,24,57,Luo,Qingshan,Google Inc.
+9268670,Ranking social network objects,2013-10-29,24,57,Zhang,Bo B.,Google Inc.
+9270364,Blocking of unlicensed audio content in video files on a video hosting website,2013-10-29,18,36,Chastagnol,Franck,Google Inc.
+9274683,Blocking of unlicensed audio content in video files on a video hosting website,2013-10-29,18,36,Karunamurthy,Vijay,Google Inc.
+9275051,Blocking of unlicensed audio content in video files on a video hosting website,2013-10-29,18,36,Maxcy,Christopher,Google Inc.
+9275113,Blocking of unlicensed audio content in video files on a video hosting website,2013-10-29,18,36,Liu,Matthew Cheng-Yu,Google Inc.
+9275460,Variable-length nonce generation,2013-10-29,20,13,Liu,Likai,Google Inc.
+9276678,Contextual data aided security protection,2013-10-29,18,10,"Wiacek, Jr.",Michael Joseph,Google Inc.
+9279595,Multiple label display for 3D objects,2013-11-05,15,15,Kogan,David,Google Inc.
+9280579,Autosave functionality,2013-11-05,22,13,Williams,Evan,Google Inc.
+9280785,Autosave functionality,2013-11-05,22,13,Axe,Brian,Google Inc.
+9285877,Pricing tickets based on constructing tables of pricing units for sub-portions of a ticket,2013-11-12,42,31,DeMarcken,Carl G.,Google Inc.
+9286092,Systems and methods for determining a quality of provided items,2013-11-12,20,15,Henzinger,Monika,Google Inc.
+9286356,Systems and methods for determining a quality of provided items,2013-11-12,20,15,Franz,Alexander,Google Inc.
+9286397,Fast covariance matrix generation,2013-11-12,45,73,Kwatra,Vivek,Google Inc.
+9286787,Zero-minute virus and spam detection,2013-11-12,28,2,Oswall,Michael J.,Google Inc.
+9290201,Zero-minute virus and spam detection,2013-11-12,28,2,Petry,Scott M.,Google Inc.
+9291460,Zero-minute virus and spam detection,2013-11-12,28,2,Akamine,Shinya,Google Inc.
+9292479,Zero-minute virus and spam detection,2013-11-12,28,2,Lund,Peter K.,Google Inc.
+9294479,Zero-minute virus and spam detection,2013-11-12,28,2,Cox,Fredric L.,Google Inc.
+9298778,System and method for navigating documents,2013-11-19,15,34,Fredricksen,Eric Russell,Google Inc.
+9298942,System and method for navigating documents,2013-11-19,15,34,Chang,Bay-Wei W.,Google Inc.
+9299339,Identifying multiple versions of documents,2013-11-19,20,34,Acharya,Anurag,Google Inc.
+9304572,Identifying multiple versions of documents,2013-11-19,20,34,Verstak,Alexandre A.,Google Inc.
+9304757,Using enhanced ad features to increase competition in online advertising,2013-11-26,55,34,Veach,Eric Hugh,Google Inc.
+9304787,Systems and methods for article location and retrieval,2013-11-26,20,79,Auerbach,David Benjamin,Google Inc.
+9305092,Systems and methods for article location and retrieval,2013-11-26,20,79,Lawrence,Stephen R.,Google Inc.
+9307368,Preferred sites,2013-11-26,29,36,Otto,Owen Daniel,Google Inc.
+9310992,Preferred sites,2013-11-26,29,36,Goel,Kavi J.,Google Inc.
+9311194,Preferred sites,2013-11-26,29,36,Haahr,Paul G.,Google Inc.
+9311530,Preferred sites,2013-11-26,29,36,McDonnell,Philip A.,Google Inc.
+9311915,Preferred sites,2013-11-26,29,36,Horling,Bryan C.,Google Inc.
+9317523,Preferred sites,2013-11-26,29,36,Brukman,Michael Y.,Google Inc.
+9317709,Suggesting alternative queries in query results,2013-11-26,12,32,Wang,Tiejun (Ronald),Google Inc.
+9317738,Suggesting alternative queries in query results,2013-11-26,12,32,Wu,Jun Jun,Google Inc.
+9318104,Suggesting alternative queries in query results,2013-11-26,12,32,Shaw,Hayden,Google Inc.
+9319832,In response to a search result query providing a snippet of a document including an element previously highlighted by a user,2013-11-26,21,9,Cierniak,Michal,Google Inc.
+9321517,In response to a search result query providing a snippet of a document including an element previously highlighted by a user,2013-11-26,21,9,Gomes,Benedict A.,Google Inc.
+9323598,In response to a search result query providing a snippet of a document including an element previously highlighted by a user,2013-11-26,21,9,Anderson,Corin Ross,Google Inc.
+9323601,In response to a search result query providing a snippet of a document including an element previously highlighted by a user,2013-11-26,21,9,Stoppelman,Michael,Google Inc.
+9323731,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Dawes,Adam,Google Inc.
+9323853,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Green,Joseph C.,Google Inc.
+9325564,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Le,Binh,Google Inc.
+9325783,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Okumura,Kenneth K.,Google Inc.
+9327816,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Chen,Erik Yi-hua,Google Inc.
+9327851,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Lund,Lisa,Google Inc.
+9329388,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Oswall,Michael J.,Google Inc.
+9329764,TLS encryption in a managed e-mail service environment,2013-11-26,26,10,Petry,Scott M.,Google Inc.
+9330278,Methods and apparatus for reordering of rows and columns in layout grids,2013-12-03,30,20,Milne,Philip S.,Google Inc.
+9332031,Cookie-based detection of spam account generation,2013-12-03,18,32,Shen,HongHai,Google Inc.
+9332388,Evaluating pronouns in context,2013-12-10,23,8,Cohen,Richard Zarek,Google Inc.
+9335976,Evaluating pronouns in context,2013-12-10,23,8,Tickner,Simon,Google Inc.
+9336277,Classifying changes to resources,2013-12-10,26,23,Pascovici,Andrei,Google Inc.
+9336582,Classifying changes to resources,2013-12-10,26,23,Lin,Zhen,Google Inc.
+9342609,Classifying changes to resources,2013-12-10,26,23,Fu,Xiaodong,Google Inc.
+9342619,Classifying changes to resources,2013-12-10,26,23,Vassilakis,Theodore,Google Inc.
+9342849,Disruption blocking in mobile devices,2013-12-17,20,8,Agopian,Mathias Marc,Google Inc.
+9342981,Disruption blocking in mobile devices,2013-12-17,20,8,Hertzfeld,Andrew J.,Google Inc.
+9344509,Social based aggregation of related media content,2013-12-17,20,46,Barkai,Eldad,Google Inc.
+9348535,Social based aggregation of related media content,2013-12-17,20,46,Urbach,Shlomo Reuben,Google Inc.
+9348625,Social based aggregation of related media content,2013-12-17,20,46,Yadid,Tal,Google Inc.
+9348922,Social based aggregation of related media content,2013-12-17,20,46,Amira,Rony,Google Inc.
+9348925,Social based aggregation of related media content,2013-12-17,20,46,Zomet,Asaf,Google Inc.
+9349279,Methods and systems for determining and utilizing selection data,2013-12-24,20,33,Desikan,Pavan K.,Google Inc.
+9350599,Rotatable and extendable display portion of a computing device,2013-12-31,23,22,Amit,Gadi,Google Inc.
+9353963,Rotatable and extendable display portion of a computing device,2013-12-31,23,22,Lam,Lawrence K.,Google Inc.
+9354794,Spatio-temporal segmentation for video,2013-12-31,24,7,Kwatra,Vivek,Google Inc.
+9355072,Spatio-temporal segmentation for video,2013-12-31,24,7,Han,Mei,Google Inc.
+9355191,Spatio-temporal segmentation for video,2013-12-31,24,7,Grundmann,Matthias,Google Inc.
+9357271,Enhanced identification of interesting points-of-interest,2013-12-31,18,31,Lopatenko,Andrei,Google Inc.
+9358975,Enhanced identification of interesting points-of-interest,2013-12-31,18,31,Upstill,Trystan G.,Google Inc.
+9360340,Enhanced identification of interesting points-of-interest,2013-12-31,18,31,Mazumdar,Soham,Google Inc.
+9361851,Advertisement approval,2013-12-31,29,8,Mutlu,Emel,Google Inc.
+9367814,Advertisement approval,2013-12-31,29,8,Karen,Alana,Google Inc.
+9369979,Advertisement approval,2013-12-31,29,8,Crow,Karen,Google Inc.
+9371124,Advertisement approval,2013-12-31,29,8,Coit,Kristin,Google Inc.
+9372137,Method of spell-checking search queries,2013-12-31,28,44,Shazeer,Noam M.,Google Inc.
+9373004,Visually oriented computer implemented application development system utilizing standardized objects and multiple views,2013-12-31,4,40,Morris,Robert M.,Google Inc.
+9377938,Visually oriented computer implemented application development system utilizing standardized objects and multiple views,2013-12-31,4,40,"Denton, III",Leet E.,Google Inc.
+9378249,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Firman,Ilya,Google Inc.
+9381917,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Lin,Jasper S.,Google Inc.
+9381961,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Tsang,Juliana Hing,Google Inc.
+9383753,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Lin,Yu-Kuan,Google Inc.
+9384073,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Hsieh,Sheng-Hsien Chi,Google Inc.
+9384467,Method for determining a version of a software application targeted for a computing device,2013-12-31,19,33,Womack,Mark D.,Google Inc.
+9384517,Method for evolving detectors to detect malign behavior in an artificial immune system,2013-12-31,15,135,Koelle,Katharina Veronika,Google Inc.
+9384734,Method for evolving detectors to detect malign behavior in an artificial immune system,2013-12-31,15,135,Midwinter,Wendy,Google Inc.
+9385845,Semantic unit recognition,2014-01-07,20,6,Brants,Thorsten H.,Google Inc.
+9388934,Semantic unit recognition,2014-01-07,20,6,Ponte,Jay Michael,Google Inc.
+9395726,Advertising with audio content,2014-01-07,34,9,Rajaram,Gokul,Google Inc.
+9396235,Social identity clustering,2014-01-07,19,10,Lopyrev,Mikhail,Google Inc.
+9396263,Social identity clustering,2014-01-07,19,10,Gyongyi,Zoltan I.,Google Inc.
+9396501,Social identity clustering,2014-01-07,19,10,Roehrig,Hein,Google Inc.
+9397957,Social identity clustering,2014-01-07,19,10,Heymans,Maureen,Google Inc.
+9400630,Email conversation management system,2014-01-07,19,179,Singh,Sanjeev Kumar,Google Inc.
+9400643,Email conversation management system,2014-01-07,19,179,Buchheit,Paul T.,Google Inc.
+9400816,Method and system for motion detection in an image,2014-01-14,21,6,Wang,Meng Jun,Google Inc.
+9412260,Method and system for motion detection in an image,2014-01-14,21,6,Jing,Yushi,Google Inc.
+9413756,Dynamic media serving infrastructure,2014-01-14,18,13,Harding,John M.,Google Inc.
+9413883,Dynamic media serving infrastructure,2014-01-14,18,13,Lacy,Stephen Michael,Google Inc.
+9417631,Dynamic media serving infrastructure,2014-01-14,18,13,Gupta,Manish Satyapal,Google Inc.
+9417835,Dynamic media serving infrastructure,2014-01-14,18,13,"Rusch, II",Willard Tuyl,Google Inc.
+9418441,Program guide user interface,2014-01-14,21,90,"Taylor, Jr.",Thomas H.,Google Inc.
+9420213,Program guide user interface,2014-01-14,21,90,Blackburn,John Wayne,Google Inc.
+9420352,Program guide user interface,2014-01-14,21,90,"Gossweiler, III",Richard,Google Inc.
+9420580,Program guide user interface,2014-01-14,21,90,Patel,Manish,Google Inc.
+9423672,Program guide user interface,2014-01-14,21,90,Gupta,Neha,Google Inc.
+9424125,Program guide user interface,2014-01-14,21,90,Brown,David A.,Google Inc.
+9426205,Program guide user interface,2014-01-14,21,90,"Sahami, III",Mehran,Google Inc.
+9426592,Personalized place recommendations using collections of place listings,2014-01-28,20,2,Eland,Andrew,Google Inc.
+9430454,Personalized place recommendations using collections of place listings,2014-01-28,20,2,Seefeld,Bernhard M.,Google Inc.
+9430466,Personalized place recommendations using collections of place listings,2014-01-28,20,2,Hawkins,John Alastair,Google Inc.
+9432242,Separation of mutable and immutable data in a memory cache for improvement of data updates,2014-01-28,20,4,Jenkins,Jessica,Google Inc.
+9432464,Separation of mutable and immutable data in a memory cache for improvement of data updates,2014-01-28,20,4,Solomita,Ethan,Google Inc.
+9436531,Separation of mutable and immutable data in a memory cache for improvement of data updates,2014-01-28,20,4,Raley,John,Google Inc.
+9436682,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Bauer,Marisa B.,Google Inc.
+9436747,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Brown,David A.,Google Inc.
+9449370,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Wagner,Mark D.,Google Inc.
+9451039,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Zigmond,Daniel J.,Google Inc.
+9454345,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Zhang,Lucy Congyun,Google Inc.
+9454354,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,"Taylor, Jr.",Thomas H.,Google Inc.
+9456297,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Reiss,David Scott,Google Inc.
+9460167,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Tull,Alice S.,Google Inc.
+9460346,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Scott,Maricia S.,Google Inc.
+9460600,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Gupta,Neha,Google Inc.
+9460713,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Heilman,Timothy Dharma,Google Inc.
+9463536,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,"Sahami, III",Mehran,Google Inc.
+9465797,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,"Gossweiler, III",Richard,Google Inc.
+9465822,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Patel,Manish,Google Inc.
+9467815,System and method for displaying and searching multimedia events scheduling information,2014-01-28,15,127,Blackburn,John Wayne,Google Inc.
+9467899,Method and system for providing information for identifying callers,2014-02-04,18,15,Lemke,Steve C.,Google Inc.
+9471201,Resolving conflicting graph mutations,2014-02-04,15,10,Leiser,Naty,Google Inc.
+9471671,Resolving conflicting graph mutations,2014-02-04,15,10,Bik,Aart J.,Google Inc.
+9477262,Resolving conflicting graph mutations,2014-02-04,15,10,Dehnert,James C.,Google Inc.
+9477368,Resolving conflicting graph mutations,2014-02-04,15,10,Czajkowski,Grzegorz J.,Google Inc.
+9477635,Resolving conflicting graph mutations,2014-02-04,15,10,Austern,Matthew H.,Google Inc.
+9477663,Resolving conflicting graph mutations,2014-02-04,15,10,Malewicz,Grzegorz,Google Inc.
+9478869,IP address based detection of spam account generation,2014-02-04,20,31,Shen,HongHai,Google Inc.
+9479468,Predicting user navigation events based on chronological history data,2014-02-18,20,86,Jain,Arvind,Google Inc.
+9479822,Predicting user navigation events based on chronological history data,2014-02-18,20,86,Burkard,Timo,Google Inc.
+9483652,Predicting user navigation events based on chronological history data,2014-02-18,20,86,Hamon,Dominic,Google Inc.
+9485602,Training dependency parsers by jointly optimizing multiple objectives,2014-02-25,20,0,McDonald,Ryan T.,Google Inc.
+9485640,Training dependency parsers by jointly optimizing multiple objectives,2014-02-25,20,0,Katz-Brown,Jason,Google Inc.
+9489447,Training dependency parsers by jointly optimizing multiple objectives,2014-02-25,20,0,Hall,Keith B.,Google Inc.
+9489716,Modifying search result ranking based on implicit user feedback,2014-02-25,30,231,Shazeer,Noam M.,Google Inc.
+9489807,Modifying search result ranking based on implicit user feedback,2014-02-25,30,231,Diligenti,Michelangelo,Google Inc.
+9491616,Modifying search result ranking based on implicit user feedback,2014-02-25,30,231,Kim,Hyun-Sook Jin,Google Inc.
+9496927,Modifying search result ranking based on implicit user feedback,2014-02-25,30,231,Tong,Simon Frederick,Google Inc.
+9497068,Speech and noise models for speech recognition,2014-03-04,19,11,Kristjansson,Trausti,Google Inc.
+9497153,Speech and noise models for speech recognition,2014-03-04,19,11,Lloyd,Matthew I.,Google Inc.
+9501058,"Selecting and verifying textures in image-based three-dimensional modeling, and applications thereof",2014-03-11,18,5,Reinhardt,Tilman,Google Inc.
+9501510,"Selecting and verifying textures in image-based three-dimensional modeling, and applications thereof",2014-03-11,18,5,Simpson,Matthew Robert,Google Inc.
+9503395,"Selecting and verifying textures in image-based three-dimensional modeling, and applications thereof",2014-03-11,18,5,Brown,Brian Gammon,Google Inc.
+9507860,"Selecting and verifying textures in image-based three-dimensional modeling, and applications thereof",2014-03-11,18,5,Fan,Zhe,Google Inc.
+9508023,Methods and systems for improving search rankings using advertising data,2014-03-18,44,46,Franz,Alexander,Google Inc.
+9509644,Methods and systems for improving search rankings using advertising data,2014-03-18,44,46,Henzinger,Monika,Google Inc.
+9509681,Clustering images,2014-03-18,20,25,Leung,Thomas King-Hong,Google Inc.
+9509894,Clustering images,2014-03-18,20,25,Yagnik,Jay N.,Google Inc.
+9514194,Systems and methods for verifying an electronic documents provenance date,2014-03-18,3,20,Spencer,Gregory Reeves,Google Inc.
+9514752,Multi-device video communication session,2014-03-25,20,7,Garrett,Maryam Kamvar,Google Inc.
+9519351,Multi-device video communication session,2014-03-25,20,7,Shires,Glen E.,Google Inc.
+9523226,Robust speech recognition,2014-03-25,12,11,Singleton,David P.,Google Inc.
+9524635,Robust speech recognition,2014-03-25,12,11,Bringert,Bjorn Erik,Google Inc.
+9525599,Robust speech recognition,2014-03-25,12,11,Schalkwyk,Johan,Google Inc.
+9525627,System and method for tracking unique visitors to a website,2014-03-25,20,33,Moon,Hui Sok,Google Inc.
+9529201,System and method for tracking unique visitors to a website,2014-03-25,20,33,Muret,Paul N.,Google Inc.
+9531265,System and method for tracking unique visitors to a website,2014-03-25,20,33,Vance,Jonathon A.,Google Inc.
+9531805,Asynchronous distributed object uploading for replicated content addressable storage clusters,2014-03-25,20,19,Kesselman,Alexander,Google Inc.
+9535887,Asynchronous distributed object uploading for replicated content addressable storage clusters,2014-03-25,20,19,Drobychev,Alexandre,Google Inc.
+9536012,Collection and confirmation of place metadata and graphic representations of fixed objects displayed in a mapping system,2014-04-01,26,11,Stout,Bryce,Google Inc.
+9536151,System and method of using automatically-identified prominent establishments in driving directions,2014-04-01,21,15,Ron,Lior,Google Inc.
+9536180,System and method of using automatically-identified prominent establishments in driving directions,2014-04-01,21,15,Urbach,Shlomo Reuben,Google Inc.
+9536691,System and method of using automatically-identified prominent establishments in driving directions,2014-04-01,21,15,Geller,Felix,Google Inc.
+9541996,Method and system for generating drive time isocontours using nested graphs,2014-04-01,22,45,McGill,James Brian,Google Inc.
+9542353,System and method to strengthen advertiser and consumer affinity,2014-04-01,27,28,"Grim, III",Clifton E.,Google Inc.
+9542365,System and method to strengthen advertiser and consumer affinity,2014-04-01,27,28,Wilson,John D.,Google Inc.
+9542419,System and method to strengthen advertiser and consumer affinity,2014-04-01,27,28,Schmidt,Christopher I.,Google Inc.
+9542462,Filtering messages based on pruning profile generated from pruning profile schema,2014-04-01,15,7,Michael,Constantinos,Google Inc.
+9544451,Webpages with conditional content,2014-04-01,26,87,Reiter,Kobi Isaac,Google Inc.
+9544650,Webpages with conditional content,2014-04-01,26,87,Vasilik,Kenneth Eric,Google Inc.
+9547711,Visualization of paths using GPS data,2014-04-08,27,46,Lookingbill,Andrew,Google Inc.
+9551872,Visualization of paths using GPS data,2014-04-08,27,46,Kadous,Mohammed Waleed,Google Inc.
+9552552,Tools for micro-communities,2014-04-08,23,41,Wren,Christopher,Google Inc.
+9553830,Tools for micro-communities,2014-04-08,23,41,Aharony,Nadav,Google Inc.
+9558280,Visual object manipulation,2014-04-15,15,13,Grieve,Andrew Alexander,Google Inc.
+9558713,Estimation of panoramic camera orientation relative to a vehicle coordinate frame,2014-04-15,26,14,Filip,Daniel Joseph,Google Inc.
+9559956,Estimation of panoramic camera orientation relative to a vehicle coordinate frame,2014-04-15,26,14,Anguelov,Dragomir D.,Google Inc.
+9559996,Mobile device configured to operate on multiple different networks,2014-04-15,21,25,Tseng,Erick,Google Inc.
+9560090,Better diversity for transit routing,2014-04-15,31,4,Raychev,Veselin,Google Inc.
+9563308,Better diversity for transit routing,2014-04-15,31,4,Pech,Lucien,Google Inc.
+9563646,Personalized aggregation of annotations,2014-04-15,13,5,Damania,Dhyanesh Harishchandra,Google Inc.
+9563695,Personalized aggregation of annotations,2014-04-15,13,5,Korn,Jeffrey L.,Google Inc.
+9563750,User-aware cloud to device messaging systems and methods,2014-04-15,20,5,Nerieri,Francesco,Google Inc.
+9566939,User-aware cloud to device messaging systems and methods,2014-04-15,20,5,Manolache,Doru Costin,Google Inc.
+9569527,User-aware cloud to device messaging systems and methods,2014-04-15,20,5,Sharma,Ashish Kumar,Google Inc.
+9571629,Social network user data advertising,2014-04-29,20,20,Tunguz-Zawislak,Tomasz J.,Google Inc.
+9575896,Cross-platform cloud-based map creation,2014-04-29,31,10,Kramer,David B.,Google Inc.
+9576024,Cross-platform cloud-based map creation,2014-04-29,31,10,Wheeler,Mark Damon,Google Inc.
+9578324,Cross-platform cloud-based map creation,2014-04-29,31,10,Lorimer,Eli Dylan,Google Inc.
+9578358,Generating wiki pages from content and transformation objects,2014-04-29,12,4,Kraus,Joe,Google Inc.
+9578602,Generating wiki pages from content and transformation objects,2014-04-29,12,4,Spencer,Graham,Google Inc.
+9583288,Relative quality score for video transcoding,2014-05-06,18,28,Yi,Xiaoquan,Google Inc.
+9584448,Relative quality score for video transcoding,2014-05-06,18,28,Wang,Huiseng,Google Inc.
+9594732,Methods and systems for improving bid efficiency of a content provider,2014-05-06,22,41,Kent,James S.,Google Inc.
+9594806,Systems and methods for distributed log file processing,2014-05-06,20,16,Jiang,Haifeng,Google Inc.
+9596294,Systems and methods for distributed log file processing,2014-05-06,20,16,Vasilevski,Yuri,Google Inc.
+9596295,Systems and methods for distributed log file processing,2014-05-06,20,16,Sikka,Namit,Google Inc.
+9596516,Systems and methods for distributed log file processing,2014-05-06,20,16,Melville,Navin Reginald,Google Inc.
+9600011,Systems and methods for distributed log file processing,2014-05-06,20,16,Ganeshan,Vinayak,Google Inc.
+9600258,Systems and methods for distributed log file processing,2014-05-06,20,16,Gupta,Ashish,Google Inc.
+9600724,Systems and methods for distributed log file processing,2014-05-06,20,16,He,Shan,Google Inc.
+9600932,"Orthogonal coding for data storage, access, and maintenance",2014-05-06,24,48,Cypher,Robert E.,Google Inc.
+9601001,User viewing data collection for generating media viewing achievements,2014-05-06,19,20,Bayer,Jason,Google Inc.
+9602343,User viewing data collection for generating media viewing achievements,2014-05-06,19,20,Baker,Erica,Google Inc.
+9606609,User viewing data collection for generating media viewing achievements,2014-05-06,19,20,Bragg,Richard William,Google Inc.
+9606716,Automatic vetting of web applications to be listed in a marketplace for web applications,2014-05-13,16,6,Kay,Erik,Google Inc.
+9608714,Automatic vetting of web applications to be listed in a marketplace for web applications,2014-05-13,16,6,Noth,Michael E.,Google Inc.
+9609380,Automatic vetting of web applications to be listed in a marketplace for web applications,2014-05-13,16,6,Zheng,Lei,Google Inc.
+9611946,Automatic vetting of web applications to be listed in a marketplace for web applications,2014-05-13,16,6,Boodman,Aaron S.,Google Inc.
+9613620,Identifying causes of application crashes,2014-05-13,18,12,Gray,Jessica Lynn,Google Inc.
+9618604,Identifying causes of application crashes,2014-05-13,18,12,Noth,Michael E.,Google Inc.
+9620145,Identifying causes of application crashes,2014-05-13,18,12,Keiger,James K.,Google Inc.
+9620886,Identifying causes of application crashes,2014-05-13,18,12,Xie,Siyang,Google Inc.
+9621403,Methods for auto-completing contact entry on mobile devices,2014-05-13,9,27,Shamis,Zhanna,Google Inc.
+9621636,Methods for auto-completing contact entry on mobile devices,2014-05-13,9,27,McKinley,Joanne L.,Google Inc.
+9625612,Methods for auto-completing contact entry on mobile devices,2014-05-13,9,27,Phillips,Derek J.,Google Inc.
+9625987,Methods for auto-completing contact entry on mobile devices,2014-05-13,9,27,Shih,Jimmy S.,Google Inc.
+9626556,Updating map data using satellite imagery,2014-05-20,21,3,Mantri,Anup,Google Inc.
+9626781,Method and apparatus for random access channel probe initialization using transmit diversity,2014-05-20,20,69,Wang,Sherwin J.,Google Inc.
+9631933,Method and apparatus for random access channel probe initialization using transmit diversity,2014-05-20,20,69,Kludt,Kenneth A.,Google Inc.
+9633184,Method and apparatus for random access channel probe initialization using transmit diversity,2014-05-20,20,69,Chen,Phil F.,Google Inc.
+9635138,Method and apparatus for random access channel probe initialization using transmit diversity,2014-05-20,20,69,Harel,Haim,Google Inc.
+9639708,Method and system for generating high resolution composite images,2014-05-27,13,5,Brueckner,Peter Gregory,Google Inc.
+9639890,Method and system for generating high resolution composite images,2014-05-27,13,5,Lyon,Richard F.,Google Inc.
+9639976,Method and system for generating high resolution composite images,2014-05-27,13,5,Valente,Matthew Thomas,Google Inc.
+9641574,Method and system for circulating messages,2014-05-27,14,49,Ron,Uri,Google Inc.
+9645733,Method and system for circulating messages,2014-05-27,14,49,Engelstein,Tal,Google Inc.
+9648394,Method and system for circulating messages,2014-05-27,14,49,Bychkov,Eyal,Google Inc.
+9652115,Systems and methods for collaborative document editing,2014-05-27,20,37,Grieve,Andrew Alexander,Google Inc.
+9652547,Systems and methods for collaborative document editing,2014-05-27,20,37,Attar,Mohammad Hossain,Google Inc.
+9652976,Demographic classifiers from media content,2014-05-27,22,34,Ip,Lawrence P.,Google Inc.
+9654427,Demographic classifiers from media content,2014-05-27,22,34,Baran,Emre Y.,Google Inc.
+9654834,Demographic classifiers from media content,2014-05-27,22,34,Black,Julie A.,Google Inc.
+9659097,Search application and web browser interaction,2014-06-03,15,64,Tse,Alastair,Google Inc.
+9660914,Search application and web browser interaction,2014-06-03,15,64,Jitkoff,John Nicholas,Google Inc.
+9661381,Search application and web browser interaction,2014-06-03,15,64,Singleton,David P.,Google Inc.
+9661466,Interpreting adjacent search terms based on a hierarchical relationship,2014-06-03,20,10,Dijk,Luuk van,Google Inc.
+9665972,Interpreting adjacent search terms based on a hierarchical relationship,2014-06-03,20,10,Zauharodneu,Ivan,Google Inc.
+9672285,Collaborative rejection of media for physical establishments,2014-06-03,22,317,Rosenberg,Louis B.,Google Inc.
+9672656,Buffering user interaction data,2014-06-03,20,65,Tse,Alastair,Google Inc.
+9674179,Buffering user interaction data,2014-06-03,20,65,Singleton,David P.,Google Inc.
+9674570,Customization of content and advertisements in publications,2014-06-03,30,58,Harinstein,Jason,Google Inc.
+9684645,Customization of content and advertisements in publications,2014-06-03,30,58,Davis,Karen Roter,Google Inc.
+9686145,Tool for managing online content,2014-06-03,20,31,Gordon,Cathy,Google Inc.
+9690667,Tool for managing online content,2014-06-03,20,31,O'Sullivan,Joseph K.,Google Inc.
+9691019,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Buchanan,Kenneth,Google Inc.
+9692309,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Coutant,Cary A.,Google Inc.
+9696756,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Li,Xinliang David,Google Inc.
+9697249,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Tice,Caroline M.,Google Inc.
+9697475,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Pike,Geoffrey Roeder,Google Inc.
+9697829,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Crowl,Lawrence A.,Google Inc.
+9703691,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Erlingsson,Ãlfar,Google Inc.
+9705798,Detecting and handling vtable pointer corruption,2014-06-03,19,2,Tallam,Sriraman,Google Inc.
+9710452,Automated appliance registration,2014-06-10,8,64,Margalit,Ran,Google Inc.
+9710621,Automated appliance registration,2014-06-10,8,64,Katz,Hagay,Google Inc.
+9712920,Automated appliance registration,2014-06-10,8,64,Bychkov,Eyal,Google Inc.
+9716551,Automated appliance registration,2014-06-10,8,64,Sherman,Itay,Google Inc.
+9716658,Automated appliance registration,2014-06-10,8,64,Ron,Uri,Google Inc.
+9721012,Automated appliance registration,2014-06-10,8,64,Perry,Hagit,Google Inc.
+9721214,System and method of texturing a 3D model from video,2014-06-10,14,20,Lininger,Scott E.,Google Inc.
+9721562,Detecting media source quality to determine introduced phenomenon,2014-06-10,18,12,Kum,Sang-Uok,Google Inc.
+9722305,Detecting media source quality to determine introduced phenomenon,2014-06-10,18,12,Wang,Meng Jun,Google Inc.
+9723265,Detecting media source quality to determine introduced phenomenon,2014-06-10,18,12,Wu,Chen Yang,Google Inc.
+9723564,Monitoring content item expansion events across multiple content item providers,2014-06-10,15,15,Kobyakov,Pavel V.,Google Inc.
+9723588,Monitoring content item expansion events across multiple content item providers,2014-06-10,15,15,Shubina,Ksenia,Google Inc.
+9727425,Interface for toggling objects,2014-06-10,26,6,McBride,Sean E.,Google Inc.
+9727546,Interface for toggling objects,2014-06-10,26,6,Leggett,Michael H.,Google Inc.
+9727587,Interface for toggling objects,2014-06-10,26,6,Wiley,Jon M.,Google Inc.
+9727603,Collaborative gesture-based input language,2014-06-10,21,21,Li,Yang Edward,Google Inc.
+9727949,Collaborative gesture-based input language,2014-06-10,21,21,Ouyang,Yu,Google Inc.
+D528552,Identifying and redacting privileged information,2014-06-10,17,2,Davis,Pamela H.,Google Inc.
+D620950,Identifying and redacting privileged information,2014-06-10,17,2,Beaumont,Theresa Hughes,Google Inc.
+D667430,Identifying and redacting privileged information,2014-06-10,17,2,Kumar,Shailesh,Google Inc.
+D669066,Touch-screen keyboard facilitating touch typing with minimal finger movement,2014-06-17,10,51,Paul,Sean,Google Inc.
+D681639,Automatic extraction of character ground truth data from images,2014-06-17,19,5,Chaudhury,Krishnendu,Google Inc.
+D700600,Automatic extraction of character ground truth data from images,2014-06-17,19,5,Bissacco,Alessandro,Google Inc.
+D701516,Image de-hazing by solving transmission value,2014-06-17,20,1,Zhang,Meng,Google Inc.
+D703223,Image de-hazing by solving transmission value,2014-06-17,20,1,Kwatra,Vivek,Google Inc.
+D709069,Image de-hazing by solving transmission value,2014-06-17,20,1,Fang,Hui,Google Inc.
+D723575,Multi-rank partial width memory modules,2014-06-24,20,908,Rajan,Suresh Natarajan,Google Inc.
+D725105,Multi-rank partial width memory modules,2014-06-24,20,908,Smith,Michael,Google Inc.
+D730372,Aligning ground based images and aerial imagery,2014-06-24,20,6,Seitz,Steven Maxwell,Google Inc.
+D730755,Aligning ground based images and aerial imagery,2014-06-24,20,6,Shan,Qi,Google Inc.
+D731484,Aligning ground based images and aerial imagery,2014-06-24,20,6,Esteban,Carlos Hernandez,Google Inc.
+D732048,Automatic derivation of analogous touch gestures from a user-defined gesture,2014-06-24,17,6,Trivi,Jean-Michel Roland,Google Inc.
+D734319,Automatic derivation of analogous touch gestures from a user-defined gesture,2014-06-24,17,6,Miller,James Brooks,Google Inc.
+D741843,Efficient caching and drawing of objects whose rendering properties change frequently,2014-07-01,22,7,Guy,Romain P.,Google Inc.
+D752094,Efficient caching and drawing of objects whose rendering properties change frequently,2014-07-01,22,7,Haase,Chet S.,Google Inc.
+D752575,Method and apparatus for a near-to-eye display,2014-07-01,18,74,Amirparviz,Babak,Google Inc.
+D753132,Method and apparatus for a near-to-eye display,2014-07-01,18,74,Miao,Xiaoyu,Google Inc.
+D757002,Method and apparatus for a near-to-eye display,2014-07-01,18,74,Spitzer,Mark B.,Google Inc.
+D759664,System and method for exploiting segment co-occurrence relationships to identify object location in images,2014-07-01,32,6,Suryanarayan,Poonam,Google Inc.
+D761295,System and method for exploiting segment co-occurrence relationships to identify object location in images,2014-07-01,32,6,Toshev,Alexander Toshkov,Google Inc.
+D761837,System and method for exploiting segment co-occurrence relationships to identify object location in images,2014-07-01,32,6,Kwatra,Vivek,Google Inc.
+D764519,System and method for exploiting segment co-occurrence relationships to identify object location in images,2014-07-01,32,6,Yagnik,Jay N.,Google Inc.
+D765103,Systems and methods for managing the transmission of electronic messages via message source data,2014-07-01,21,93,Akamine,Shinya,Google Inc.
+D768084,Systems and methods for managing the transmission of electronic messages via message source data,2014-07-01,21,93,Lund,Peter K.,Google Inc.
+D768184,Systems and methods for managing the transmission of electronic messages via message source data,2014-07-01,21,93,Cox,Fredric L.,Google Inc.
+D771681,Systems and methods for managing the transmission of electronic messages via message source data,2014-07-01,21,93,Oswall,Michael J.,Google Inc.
+D777768,Systems and methods for managing the transmission of electronic messages via message source data,2014-07-01,21,93,Petry,Scott M.,Google Inc.
+D779345,Systems and methods for incremental loading of collaboratively generated presentations,2014-07-01,18,141,Saviano,Steven Joseph,Google Inc.
+D780210,Systems and methods for incremental loading of collaboratively generated presentations,2014-07-01,18,141,Kopylov,Igor,Google Inc.
+D781624,"Full-duplex bi-directional communication over a remote procedure call based communications protocol, and applications thereof",2014-07-01,22,15,Zhu,Wenbo,Google Inc.
+D781844,"Full-duplex bi-directional communication over a remote procedure call based communications protocol, and applications thereof",2014-07-01,22,15,Yu,Kevin C.,Google Inc.
+D785013,Accelerating view transitions,2014-07-01,21,20,Thomas,Neil Richard,Google Inc.
+D789300,Accelerating view transitions,2014-07-01,21,20,Bolohan,Matthew J.,Google Inc.
+D794056,Audio control of multimedia objects,2014-07-08,20,21,Chen,Johnny,Google Inc.
