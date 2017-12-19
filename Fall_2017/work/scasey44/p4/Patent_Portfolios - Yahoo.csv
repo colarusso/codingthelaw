@@ -1,0 +1,1001 @@
+patent_number,patent_title,patent_date,patent_num_claims,patent_num_combined_citations,inventor_last_name,inventor_first_name,assignee_organization
+5983227,Dynamic page generator,1999-11-09,9,9,Patel,Ashvinkumar P.,Yahoo! Inc.
+6216157,Dynamic page generator,1999-11-09,9,9,Nazem,Farzad,Yahoo! Inc.
+6343302,Method and apparatus for a client-server system with heterogeneous clients,2001-04-10,13,29,Mendhekar,Anurag D.,Yahoo! Inc.
+6446040,Method and apparatus for a client-server system with heterogeneous clients,2001-04-10,13,29,Vishwanath,Mohan,Yahoo! Inc.
+6523069,Remote web site authoring system and method,2002-01-29,12,8,Graham,Paul Andrew,Yahoo! Inc.
+6556563,Intelligent text-to-speech synthesis,2002-09-03,29,14,Vishwanath,Mohan,Yahoo! Inc.
+6567419,Intelligent text-to-speech synthesis,2002-09-03,29,14,Mendhekar,Anurag D.,Yahoo! Inc.
+6580786,Intelligent text-to-speech synthesis,2002-09-03,29,14,Socher,Gudrun,Yahoo! Inc.
+6581061,Transmission of multicast media between networks,2003-02-18,29,1,Luczycki,Edward A.,Yahoo! Inc.
+6801945,Transmission of multicast media between networks,2003-02-18,29,1,Divinia,Darin D.,Yahoo! Inc.
+6873996,Intelligent voice bridging,2003-04-29,7,29,Yarlagadda,Madhu,Yahoo! Inc.
+6938073,Intelligent voice converter,2003-05-20,8,32,Yarlagadda,Madhu,Yahoo! Inc.
+6950994,Message store architecture,2003-06-17,10,30,Yarlagadda,Madhu,Yahoo! Inc.
+6974078,Remote web site authoring system and method,2003-06-17,14,6,Graham,Paul Andrew,Yahoo! Inc.
+7007014,Systems and methods for predicting traffic on internet sites,2004-10-05,27,11,Lin,Long-Ji Ji,Yahoo! Inc.
+7016307,Systems and methods for predicting traffic on internet sites,2004-10-05,27,11,Jung,Dz-Mou,Yahoo! Inc.
+7028027,Affinity analysis method and article of manufacture,2005-03-29,31,16,Chand,Jagdish,Yahoo! Inc.
+7051023,Method and apparatus for re-formatting web pages,2005-08-30,12,32,Socher,Gudrun,Yahoo! Inc.
+7095733,Method and apparatus for re-formatting web pages,2005-08-30,12,32,Mendhekar,Anurag D.,Yahoo! Inc.
+7107548,Method and apparatus for re-formatting web pages,2005-08-30,12,32,Vishwanath,Mohan,Yahoo! Inc.
+7111229,Data list transmutation and input mapping,2005-09-27,21,29,Dharap,Sanjeev,Yahoo! Inc.
+7120668,Personal communication device with bar code reader for obtaining product information from multiple databases,2005-12-13,25,23,Simon,David,Yahoo! Inc.
+7133928,Canonicalization of terms in a keyword-based presentation system,2006-02-28,2,8,Liu,Hongche,Yahoo! Inc.
+7143118,Canonicalization of terms in a keyword-based presentation system,2006-02-28,2,8,Raj,Ravi Narasimhan,Yahoo! Inc.
+7155738,Method and system for finding related nodes in a social network,2006-03-21,42,7,Vasudev,Varun,Yahoo! Inc.
+7181764,Method and system for finding related nodes in a social network,2006-03-21,42,7,Suresh,Bipin,Yahoo! Inc.
+7185333,Associating documents with classifications and ranking documents based on classification weights,2006-04-11,8,11,Suchter,Sean Andrew,Yahoo! Inc.
+7188143,Associating documents with classifications and ranking documents based on classification weights,2006-04-11,8,11,Zha,Hongyuan,Yahoo! Inc.
+7197544,Systems and methods for generating concept units from search queries,2006-05-23,34,9,Kapur,Shyam,Yahoo! Inc.
+7203754,Systems and methods for generating concept units from search queries,2006-05-23,34,9,Joshi,Deepa B.,Yahoo! Inc.
+7206745,Voice integrated VOIP system,2006-08-22,7,34,Yarlagadda,Madhu,Yahoo! Inc.
+7240214,Voice integrated VOIP system,2006-08-22,7,34,Loo,Patrick S.,Yahoo! Inc.
+7251665,Voice integrated VOIP system,2006-08-22,7,34,Nakayama,David H.,Yahoo! Inc.
+7269590,Method of controlling an internet browser interface and a controllable browser interface,2006-09-12,26,89,Shafron,Thomas Joshua,Yahoo! Inc.
+7298714,System and method for providing a webpage,2006-09-19,14,5,Dong,Veena Y.,Yahoo! Inc.
+7313700,System and method for providing a webpage,2006-09-19,14,5,Nicholas,Ethan R.,Yahoo! Inc.
+7315899,Systems and methods for matching participants to a conversation,2006-10-10,23,74,Chang,Chi Chao,Yahoo! Inc.
+7334001,Systems and methods for matching participants to a conversation,2006-10-10,23,74,LaMarca,Anthony G.,Yahoo! Inc.
+7346556,Systems and methods for matching participants to a conversation,2006-10-10,23,74,Manber,Udi,Yahoo! Inc.
+7346630,Performing multicast communication in computer networks by using overlay routing,2006-11-07,7,8,McCanne,Steven R.,Yahoo! Inc.
+7350231,Method and system for alert delivery architecture,2006-11-28,22,17,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7356572,Method and system for alert delivery architecture,2006-11-28,22,17,Menon,Jayachandran R.,Yahoo! Inc.
+7359893,Method and system for alert delivery architecture,2006-11-28,22,17,Matzanas,Sotiris,Yahoo! Inc.
+7359898,Method and system for alert delivery architecture,2006-11-28,22,17,Loo,Patrick S.,Yahoo! Inc.
+7359948,Method and system for alert delivery architecture,2006-11-28,22,17,Eichstaedt,Matthias,Yahoo! Inc.
+7359952,System and method for managing a trusted email datastore,2006-12-26,30,7,Hu,George T.,Yahoo! Inc.
+7370011,System and method for managing a trusted email datastore,2006-12-26,30,7,Zhu,Jing,Yahoo! Inc.
+7398271,System and method for a subscription model trusted email database for use in antispam,2007-02-20,26,6,Hu,George T.,Yahoo! Inc.
+7406458,System and method for a subscription model trusted email database for use in antispam,2007-02-20,26,6,Zhu,Jing,Yahoo! Inc.
+7406465,Method and system for managing the resources of a toolbar application program,2007-02-27,16,138,Shafron,Thomas Joshua,Yahoo! Inc.
+7412534,Messenger-controlled applications in an instant messaging environment,2007-03-06,14,28,Szeto,Christopher,Yahoo! Inc.
+7428522,Voice and video greeting system for personal advertisement and method,2007-03-27,21,29,Zhang,Hui Gang,Yahoo! Inc.
+7428533,Voice and video greeting system for personal advertisement and method,2007-03-27,21,29,Wang,Wei Kung,Yahoo! Inc.
+7430118,Voice and video greeting system for personal advertisement and method,2007-03-27,21,29,Zvinyatskovsky,Stanislav,Yahoo! Inc.
+7447839,Cooperative management of distributed network caches,2007-04-10,19,18,Carney,Robert J.,Yahoo! Inc.
+7451190,Cooperative management of distributed network caches,2007-04-10,19,18,Cheng,Paul C.,Yahoo! Inc.
+7454509,Cooperative management of distributed network caches,2007-04-10,19,18,Crane,Jonathan C.,Yahoo! Inc.
+7457935,Cooperative management of distributed network caches,2007-04-10,19,18,Bai,Joseph J.,Yahoo! Inc.
+7458093,"Method and apparatus for accessing targeted, personalized voice/audio web content through wireless devices",2007-04-17,22,26,Sarukkai,Ramesh R.,Yahoo! Inc.
+7464020,"Method and apparatus for accessing targeted, personalized voice/audio web content through wireless devices",2007-04-17,22,26,Mendhekar,Anurag D.,Yahoo! Inc.
+7469302,Centrally controllable instant messaging system,2007-07-03,25,2,Wan,Warren,Yahoo! Inc.
+7483903,Centrally controllable instant messaging system,2007-07-03,25,2,Gazzetta,Marco,Yahoo! Inc.
+7487441,Determining a known character string equivalent to a query string,2007-07-31,12,220,Dunning,Ted E.,Yahoo! Inc.
+7496857,Determining a known character string equivalent to a query string,2007-07-31,12,220,Kindig,Bradley D.,Yahoo! Inc.
+7506029,Method and system for customizing views of information associated with a social network user,2007-09-11,30,36,Farmer,F. Randall,Yahoo! Inc.
+7506260,Method and system for customizing views of information associated with a social network user,2007-09-11,30,36,Perelman,Ellen Sue,Yahoo! Inc.
+7509377,Method and system for customizing views of information associated with a social network user,2007-09-11,30,36,Hull,Mark Everett,Yahoo! Inc.
+7516092,Peer-to-peer message chaining for initiating a data exchange with a server,2007-11-20,22,3,Foster,Marcus Alexander,Yahoo! Inc.
+7523071,Method and system for authenticating a message sender using domain keys,2007-12-25,28,8,Delany,Mark,Yahoo! Inc.
+7523123,System for controlling and enforcing playback restrictions for a media file by splitting the media file into usable and unusable portions for playback,2008-01-01,76,225,Dunning,Ted E.,Yahoo! Inc.
+7533414,System for controlling and enforcing playback restrictions for a media file by splitting the media file into usable and unusable portions for playback,2008-01-01,76,225,Doron,Amir,Yahoo! Inc.
+7539699,Method and system for data collection for alert delivery,2008-02-19,22,34,Menon,Jayachandran R.,Yahoo! Inc.
+7545784,Method and system for data collection for alert delivery,2008-02-19,22,34,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7546316,Method and system for data collection for alert delivery,2008-02-19,22,34,Matzanas,Sotiris,Yahoo! Inc.
+7546321,Method and system for data collection for alert delivery,2008-02-19,22,34,Loo,Patrick S.,Yahoo! Inc.
+7548929,Method and system for data collection for alert delivery,2008-02-19,22,34,Eichstaedt,Matthias,Yahoo! Inc.
+7552112,System and method for performing purchase transactions utilizing a broadcast-based device,2008-03-18,24,48,Behhnam-Dehkordy,Hamid-Reza,Yahoo! Inc.
+7552193,System and method for performing purchase transactions utilizing a broadcast-based device,2008-03-18,24,48,Upendran,Manish,Yahoo! Inc.
+7558865,System and method for performing purchase transactions utilizing a broadcast-based device,2008-03-18,24,48,Vakili,Valla,Yahoo! Inc.
+7562076,System and method for performing purchase transactions utilizing a broadcast-based device,2008-03-18,24,48,Rowlen,Matthew,Yahoo! Inc.
+7562311,Method and system for delivery alerts to a user,2008-03-18,23,31,Matzanas,Sotiris,Yahoo! Inc.
+7565359,Method and system for delivery alerts to a user,2008-03-18,23,31,Menon,Jayachandran R.,Yahoo! Inc.
+7567945,Method and system for delivery alerts to a user,2008-03-18,23,31,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7571145,Method and system for delivery alerts to a user,2008-03-18,23,31,Eichstaedt,Matthias,Yahoo! Inc.
+7574422,Method and system for delivery alerts to a user,2008-03-18,23,31,Loo,Patrick S.,Yahoo! Inc.
+7574436,"System and method for controlling access to digital content, including streaming media",2008-03-25,39,40,Rodiger,Anthony Joseph,Yahoo! Inc.
+7574448,"System and method for controlling access to digital content, including streaming media",2008-03-25,39,40,Madison,Justin Paul,Yahoo! Inc.
+7574651,"System and method for controlling access to digital content, including streaming media",2008-03-25,39,40,Chintala,Ajay Kumar,Yahoo! Inc.
+7580944,"Method, apparatus and system for providing a server agent for a mobile device",2008-04-08,31,17,Zhou,Min Jun,Yahoo! Inc.
+7581193,"Method, apparatus and system for providing a server agent for a mobile device",2008-04-08,31,17,Cui,Yingqing Lawrence,Yahoo! Inc.
+7584171,"Method, apparatus and system for providing a server agent for a mobile device",2008-04-08,31,17,Jiang,Zhaowei Charlie,Yahoo! Inc.
+7587482,Delivering items based on links to resources associated with search results,2008-04-15,36,32,Walther,Eckart,Yahoo! Inc.
+7587569,Delivering items based on links to resources associated with search results,2008-04-15,36,32,Tran,Thai Gia,Yahoo! Inc.
+7590616,Delivering items based on links to resources associated with search results,2008-04-15,36,32,Sadri,Pasha,Yahoo! Inc.
+7596594,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Cadogan,Catherine,Yahoo! Inc.
+7599935,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Weiner,Jeff,Yahoo! Inc.
+7603294,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Solomon,Rob,Yahoo! Inc.
+7603348,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Stolte,Brian M.,Yahoo! Inc.
+7603349,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Arendt,Charles,Yahoo! Inc.
+7606794,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Heist,Matt,Yahoo! Inc.
+7606816,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Acton,Brian L.,Yahoo! Inc.
+7616964,Scoring mechanism selection along multiple dimensions,2008-04-15,18,15,Baldua,Manish R.,Yahoo! Inc.
+7626991,Automated bulk communication responder,2008-04-15,20,28,Manber,Udi,Yahoo! Inc.
+7630970,Automated bulk communication responder,2008-04-15,20,28,Ralston,Geoffrey D.,Yahoo! Inc.
+7630972,Automated bulk communication responder,2008-04-15,20,28,Nakayama,David H.,Yahoo! Inc.
+7630973,Automated bulk communication responder,2008-04-15,20,28,Lewin,Matthew E.,Yahoo! Inc.
+7630978,Automated bulk communication responder,2008-04-15,20,28,Jayachandran,Ravichandran Menon,Yahoo! Inc.
+7631008,Automated bulk communication responder,2008-04-15,20,28,Woods,Brian R.,Yahoo! Inc.
+7631045,Content delivery frequency capping method,2008-04-15,34,5,Matsuo,Peter J.,Yahoo! Inc.
+7634466,Content delivery frequency capping method,2008-04-15,34,5,Doemling,Marcus F.,Yahoo! Inc.
+7634472,Financial information portal,2008-05-06,16,6,Bennett,Michael J.,Yahoo! Inc.
+7636713,Financial information portal,2008-05-06,16,6,Nesbitt,Susan,Yahoo! Inc.
+7636766,Financial information portal,2008-05-06,16,6,Bergquist,John F.,Yahoo! Inc.
+7636779,Using network traffic logs for search enhancement,2008-07-08,4,23,Zha,Hongyuan,Yahoo! Inc.
+7640210,Using network traffic logs for search enhancement,2008-07-08,4,23,Poutanen,Tomi J.,Yahoo! Inc.
+7650378,Using network traffic logs for search enhancement,2008-07-08,4,23,Langlois,Jean-Marc,Yahoo! Inc.
+7672927,Using network traffic logs for search enhancement,2008-07-08,4,23,Cook,Douglas M.,Yahoo! Inc.
+7672932,Using network traffic logs for search enhancement,2008-07-08,4,23,Borkovsky,Arkady,Yahoo! Inc.
+7673062,"Generating descriptions of matching resources based on the kind, quality, and relevance of available sources of information about the matching resources",2008-07-29,14,13,Cook,Douglas M.,Yahoo! Inc.
+7676762,"Generating descriptions of matching resources based on the kind, quality, and relevance of available sources of information about the matching resources",2008-07-29,14,13,Pavlovski,Dmitri,Yahoo! Inc.
+7680746,"Generating descriptions of matching resources based on the kind, quality, and relevance of available sources of information about the matching resources",2008-07-29,14,13,Nibhanupudi,Mohan V.,Yahoo! Inc.
+7680804,"Generating descriptions of matching resources based on the kind, quality, and relevance of available sources of information about the matching resources",2008-07-29,14,13,Meyers,Robert Alan,Yahoo! Inc.
+7680855,"Generating descriptions of matching resources based on the kind, quality, and relevance of available sources of information about the matching resources",2008-07-29,14,13,Carson,Chad,Yahoo! Inc.
+7680858,System and methods for ranking the relative value of terms in a multi-term search query using deletion prediction,2008-07-29,12,9,Fain,Daniel C.,Yahoo! Inc.
+7680939,System and methods for ranking the relative value of terms in a multi-term search query using deletion prediction,2008-07-29,12,9,Jones,Rosie,Yahoo! Inc.
+7685041,Subscription control panel,2008-08-12,5,67,Hayashi,Nathanael Joe,Yahoo! Inc.
+7685084,Subscription control panel,2008-08-12,5,67,Wascovich,Dan James,Yahoo! Inc.
+7685204,Subscription control panel,2008-08-12,5,67,Tsang,Audrey Y.,Yahoo! Inc.
+7685209,Subscription control panel,2008-08-12,5,67,Fukuda,Matthew Kenjiro,Yahoo! Inc.
+7685241,Subscription control panel,2008-08-12,5,67,"Ott, IV",Edward Stanley,Yahoo! Inc.
+7685304,"Real-time search term popularity determination, by search origin geographic location",2008-09-23,5,27,Raghunathan,Vijay,Yahoo! Inc.
+7689527,Automatic generation of taxonomies for categorizing queries and search query processing using taxonomies,2008-09-23,12,20,Joshi,Deepa B.,Yahoo! Inc.
+7689650,Automatic generation of taxonomies for categorizing queries and search query processing using taxonomies,2008-09-23,12,20,Parikh,Jignashu G.,Yahoo! Inc.
+7692536,Automatic generation of taxonomies for categorizing queries and search query processing using taxonomies,2008-09-23,12,20,Kapur,Shyam,Yahoo! Inc.
+7698281,Cold row encapsulation for server farm cooling system,2008-09-30,25,18,Suarez,Jesus Lalo,Yahoo! Inc.
+7698327,Cold row encapsulation for server farm cooling system,2008-09-30,25,18,Holt,Norman,Yahoo! Inc.
+7698331,Cold row encapsulation for server farm cooling system,2008-09-30,25,18,Robison,Albert Dell,Yahoo! Inc.
+7702672,Cold row encapsulation for server farm cooling system,2008-09-30,25,18,Noteboom,Scott,Yahoo! Inc.
+7702772,System for a distributed column chunk data store,2008-11-04,20,1,Uppala,Radha Krishna,Yahoo! Inc.
+7706263,Associating multiple visibility profiles with a user of a real-time communication system,2008-11-11,14,55,Szeto,Christopher,Yahoo! Inc.
+7707127,Online playback system with community bias,2008-11-18,44,296,Beaupre,Todd M.,Yahoo! Inc.
+7707198,Online playback system with community bias,2008-11-18,44,296,Boulter,Jeffrey R.,Yahoo! Inc.
+7707201,Online playback system with community bias,2008-11-18,44,296,Veilleux,John-Paul,Yahoo! Inc.
+7707500,Method for a distributed column chunk data store,2008-11-25,20,4,Uppala,Radha Krishna,Yahoo! Inc.
+7707520,System and method for presenting fantasy sports content with broadcast content,2008-11-25,39,13,Rowlen,Matthew,Yahoo! Inc.
+7716235,System and method for presenting fantasy sports content with broadcast content,2008-11-25,39,13,Behhnam-Dehkordy,Hamid-Reza,Yahoo! Inc.
+7720686,System and method for presenting fantasy sports content with broadcast content,2008-11-25,39,13,Vakili,Valla,Yahoo! Inc.
+7721217,System and method for presenting fantasy sports content with broadcast content,2008-11-25,39,13,Dukes,Derek,Yahoo! Inc.
+7721228,Visibly distinguishing portions of compound words,2008-12-09,6,9,Wong,Chung Kei,Yahoo! Inc.
+7725551,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Bollas,James Zachary,Yahoo! Inc.
+7725927,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Seitz,Edward F.,Yahoo! Inc.
+7734565,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Davis,Brockton Scott,Yahoo! Inc.
+7734629,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Sollicito,Vincent L.,Yahoo! Inc.
+7734730,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Whittle,Derrick Wang,Yahoo! Inc.
+7739142,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Vaughan,Richard George,Yahoo! Inc.
+7747612,System and method for ensuring consistent web display by multiple independent client programs with a server that is not persistently connected to client computer systems,2008-12-23,48,13,Owens,Stephen Kent,Yahoo! Inc.
+7747613,Unsupervised learning tool for feature correction,2009-01-27,16,4,Raj,Binu,Yahoo! Inc.
+7747614,Unsupervised learning tool for feature correction,2009-01-27,16,4,Kulkarni,Parashuram,Yahoo! Inc.
+7747638,Method and system of enhanced messaging,2009-02-03,2,7,Szeto,Christopher,Yahoo! Inc.
+7747648,Systems and methods for relating events to a date or date range selection,2009-02-24,22,20,Prasad,Maram Nagendra,Yahoo! Inc.
+7747680,Systems and methods for relating events to a date or date range selection,2009-02-24,22,20,Stata,Raymond P.,Yahoo! Inc.
+7747792,Systems and methods for relating events to a date or date range selection,2009-02-24,22,20,Jhunjhunwala,Ashok,Yahoo! Inc.
+7752285,Establishing communication between a messaging client and a remote device running a browsing application,2009-03-17,20,9,Henderson,Irvin,Yahoo! Inc.
+7756752,Establishing communication between a messaging client and a remote device running a browsing application,2009-03-17,20,9,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7756845,Establishing communication between a messaging client and a remote device running a browsing application,2009-03-17,20,9,Sanjeeva,Naveen Dasa,Yahoo! Inc.
+7756900,Method and system of providing browser functionality through a browser button,2009-03-17,58,164,Fan,Duke Tsao-Ming,Yahoo! Inc.
+7756936,Method and system of providing browser functionality through a browser button,2009-03-17,58,164,Wada,Alan,Yahoo! Inc.
+7761436,Method and system of providing browser functionality through a browser button,2009-03-17,58,164,Burke,Eric P.,Yahoo! Inc.
+7761805,System and method for communicating images between intercommunicating users,2009-03-24,19,17,New,Matthew David,Yahoo! Inc.
+7769745,System and method for communicating images between intercommunicating users,2009-03-24,19,17,Harvey,Christopher Forrest,Yahoo! Inc.
+7770229,System and method for communicating images between intercommunicating users,2009-03-24,19,17,Ramani,Ramkumar,Yahoo! Inc.
+7774330,System and method for performing purchase transactions utilizing a broadcast-based device,2009-04-07,12,5,Rowlen,Matthew,Yahoo! Inc.
+7774348,System and method for performing purchase transactions utilizing a broadcast-based device,2009-04-07,12,5,Upendran,Manish,Yahoo! Inc.
+7778407,System and method for performing purchase transactions utilizing a broadcast-based device,2009-04-07,12,5,Behhnam-Denkordy,Hamid-Reza,Yahoo! Inc.
+7783540,System and method for performing purchase transactions utilizing a broadcast-based device,2009-04-07,12,5,Vakilli,Valla,Yahoo! Inc.
+7783623,On-line software rental,2009-04-21,84,9,Fox,Allen,Yahoo! Inc.
+7783624,On-line software rental,2009-04-21,84,9,Macnish,Jesse,Yahoo! Inc.
+7788158,Map-reduce with merge to process multiple relational datasets,2009-04-21,55,2,Hsiao,Ruey-Lung,Yahoo! Inc.
+7788210,Map-reduce with merge to process multiple relational datasets,2009-04-21,55,2,Yang,Hung-Chih,Yahoo! Inc.
+7788276,Map-reduce with merge to process multiple relational datasets,2009-04-21,55,2,Dasdan,Ali,Yahoo! Inc.
+7788284,Detecting system abuse,2009-05-12,21,6,Manber,Udi,Yahoo! Inc.
+7788603,Detecting system abuse,2009-05-12,21,6,Reed,Erik James,Yahoo! Inc.
+7792926,"Apparatus, system and method for use in generating and maintaining an electronic address book",2009-05-26,27,12,Miller,Ryan K.,Yahoo! Inc.
+7793227,"Apparatus, system and method for use in generating and maintaining an electronic address book",2009-05-26,27,12,Wang,Pauli,Yahoo! Inc.
+7797260,"Apparatus, system and method for use in generating and maintaining an electronic address book",2009-05-26,27,12,Bhatia,Gitanjali,Yahoo! Inc.
+7805331,"Apparatus, system and method for use in generating and maintaining an electronic address book",2009-05-26,27,12,Kobashikawa,Brian Tadao,Yahoo! Inc.
+7805450,"Apparatus, system and method for use in generating and maintaining an electronic address book",2009-05-26,27,12,Thompson,Brooke Anne,Yahoo! Inc.
+7805608,System and method for wireless communication between previously known and unknown users,2009-06-09,34,22,Mgrdechian,Richard,Yahoo! Inc.
+7805667,System and method for wireless communication between previously known and unknown users,2009-06-09,34,22,Lee,Man-ho Lawrence,Yahoo! Inc.
+7809664,Determining a known character string equivalent to a query string,2009-06-09,38,220,Dunning,Ted E.,Yahoo! Inc.
+7809715,Determining a known character string equivalent to a query string,2009-06-09,38,220,Kindig,Bradley D.,Yahoo! Inc.
+7809824,System and method for recovery from failure of a storage server in a distributed column chunk data store,2009-06-09,20,5,Uppala,Radha Krishna,Yahoo! Inc.
+7814096,System and method for determining semantically related terms,2009-06-16,23,19,Riedel,Lance Alan,Yahoo! Inc.
+7818534,System and method for determining semantically related terms,2009-06-16,23,19,Kushida,Grant,Yahoo! Inc.
+7821953,System and method for determining semantically related terms,2009-06-16,23,19,Harris,Graham,Yahoo! Inc.
+7822564,System and method for determining semantically related terms,2009-06-16,23,19,Collins,Robert J.,Yahoo! Inc.
+7826657,System and method for determining semantically related terms,2009-06-16,23,19,Harris,Jesse W.,Yahoo! Inc.
+7827166,System and method for determining semantically related terms,2009-06-16,23,19,Sebastian,Shaji,Yahoo! Inc.
+7827172,System and method for determining semantically related terms,2009-06-16,23,19,Yuan,Jeff,Yahoo! Inc.
+7831456,System and method for determining semantically related terms,2009-06-16,23,19,Zhou,Yiping,Yahoo! Inc.
+7831588,System and method for determining semantically related terms,2009-06-16,23,19,Sabah,Mohammad,Yahoo! Inc.
+7831595,Discovering associative intent queries from search web logs,2009-06-23,24,13,Rey,Benjamin,Yahoo! Inc.
+7835943,Discovering associative intent queries from search web logs,2009-06-23,24,13,Jhala,Pradhuman Dasharalhasinh,Yahoo! Inc.
+7836407,System and method for enhancing broadcast or recorded programs with information on the world wide web,2009-06-23,16,46,Carro,Fernando Incertis,Yahoo! Inc.
+7840438,Systems and methods for predicting traffic on internet sites,2009-07-07,15,11,Jung,Dz-Mou,Yahoo! Inc.
+7840442,Systems and methods for predicting traffic on internet sites,2009-07-07,15,11,Lin,Long-Ji Ji,Yahoo! Inc.
+7840646,Systems and methods for search query processing using trend analysis,2009-07-14,34,22,Kapur,Shyam,Yahoo! Inc.
+7844567,Persistent photo tray,2009-07-14,21,11,Schiller,Scott,Yahoo! Inc.
+7844608,Dynamic page generator,2009-07-21,19,27,Nazem,Farzad,Yahoo! Inc.
+7844707,Dynamic page generator,2009-07-21,19,27,Patel,Ashvinkumar P.,Yahoo! Inc.
+7849207,Aggregation-specific confidence intervals for fact set queries,2009-07-28,12,0,Ali,Kamal Mahmood,Yahoo! Inc.
+7853721,Social knowledge system content quality,2009-08-04,26,14,Dumoulin,Benoit,Yahoo! Inc.
+7860308,Social knowledge system content quality,2009-08-04,26,14,Kwan,Remi Ken-Sho,Yahoo! Inc.
+7860754,Social knowledge system content quality,2009-08-04,26,14,Boies,Daniel,Yahoo! Inc.
+7860865,Collaborative-filtering contextual model optimized for an objective function for recommending items,2009-08-11,18,4,Lin,Long-Ji Ji,Yahoo! Inc.
+7865451,Collaborative-filtering contextual model optimized for an objective function for recommending items,2009-08-11,18,4,Guan,Wei,Yahoo! Inc.
+7865463,Collaborative-filtering contextual model optimized for an objective function for recommending items,2009-08-11,18,4,Chung,Christina Yip,Yahoo! Inc.
+7870001,Reranking and increasing the relevance of the results of Internet searches,2009-08-11,24,18,Kapur,Shyam,Yahoo! Inc.
+7870026,Reranking and increasing the relevance of the results of Internet searches,2009-08-11,24,18,Parikh,Jignashu G.,Yahoo! Inc.
+7870039,Method and apparatus for organizing and playing data,2009-08-11,13,61,Volk,Andrew R.,Yahoo! Inc.
+7870131,Method and apparatus for organizing and playing data,2009-08-11,13,61,Jacoby,Ronald,Yahoo! Inc.
+7870227,Value system for dynamic composition of pages,2009-08-11,58,14,Rosensweig,Daniel L.,Yahoo! Inc.
+7870288,Value system for dynamic composition of pages,2009-08-11,58,14,Ebrahimi,Armin G.,Yahoo! Inc.
+7870475,Business intelligent architecture system and method,2009-08-25,13,4,Alnahlawi,Mahmoud,Yahoo! Inc.
+7877317,Business intelligent architecture system and method,2009-08-25,13,4,Zhuge,Yue,Yahoo! Inc.
+7877335,System and method for facilitating interactive selection and presentation of datasets,2009-08-25,18,2,Koran,Joshua M.,Yahoo! Inc.
+7877380,System and method for facilitating interactive selection and presentation of datasets,2009-08-25,18,2,Ames,Glen Anthony,Yahoo! Inc.
+7877395,Collaborative-filtering content model for recommending items,2009-09-01,18,12,Chung,Christina Yip,Yahoo! Inc.
+7882039,Collaborative-filtering content model for recommending items,2009-09-01,18,12,Guan,Wei,Yahoo! Inc.
+7882124,Collaborative-filtering content model for recommending items,2009-09-01,18,12,Lin,Long-Ji Ji,Yahoo! Inc.
+7882177,Multimodal interface for mobile messaging,2009-09-08,18,14,Sanjeeva,Naveen Dasa,Yahoo! Inc.
+7885863,Multimodal interface for mobile messaging,2009-09-08,18,14,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7885913,Multimodal interface for mobile messaging,2009-09-08,18,14,Henderson,Irvin,Yahoo! Inc.
+7890488,System and method for removing a storage server in a distributed column chunk data store,2009-09-08,20,5,Uppala,Radha Krishna,Yahoo! Inc.
+7893847,Collaborative-filtering contextual model based on explicit and implicit ratings for recommending items,2009-09-15,18,4,Chung,Christina Yip,Yahoo! Inc.
+7895049,Collaborative-filtering contextual model based on explicit and implicit ratings for recommending items,2009-09-15,18,4,Guan,Wei,Yahoo! Inc.
+7895172,Collaborative-filtering contextual model based on explicit and implicit ratings for recommending items,2009-09-15,18,4,Lin,Long-Ji Ji,Yahoo! Inc.
+7895175,System and method for displaying and acting upon email conversations across folders,2009-09-29,20,8,Karp,Daniel Geoffrey,Yahoo! Inc.
+7895177,Control for enabling a user to preview display of selected content based on another user's authorization level,2009-10-06,19,54,Brody,Paul J.,Yahoo! Inc.
+7895198,Control for enabling a user to preview display of selected content based on another user's authorization level,2009-10-06,19,54,Perelman,Ellen Sue,Yahoo! Inc.
+7895206,Control for enabling a user to preview display of selected content based on another user's authorization level,2009-10-06,19,54,La Rotonda,Michael,Yahoo! Inc.
+7895235,Control for enabling a user to preview display of selected content based on another user's authorization level,2009-10-06,19,54,Sample,Neal J.,Yahoo! Inc.
+7895284,Control for enabling a user to preview display of selected content based on another user's authorization level,2009-10-06,19,54,DeJesus,Ericson,Yahoo! Inc.
+7899804,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Huffman,Douglas T.,Yahoo! Inc.
+7899807,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Singh,Narinder Pal,Yahoo! Inc.
+7899808,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Soulanille,Thomas A.,Yahoo! Inc.
+7900145,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Snell,Scott W.,Yahoo! Inc.
+7904062,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Davis,Darren J.,Yahoo! Inc.
+7904435,Automatic advertiser notification for a system for providing place and price protection in a search result list generated by a computer network search engine,2009-10-13,24,53,Cheung,Dominic Dough-Ming,Yahoo! Inc.
+7908234,System for classifying a search query,2009-10-13,21,23,He,Xiaofei,Yahoo! Inc.
+7908249,System for classifying a search query,2009-10-13,21,23,Jhala,Pradhuman Dasharalhasinh,Yahoo! Inc.
+7908289,User interfaces for search systems using in-line contextual queries,2009-10-13,25,45,Hartmann,Andreas Dominik,Yahoo! Inc.
+7908363,User interfaces for search systems using in-line contextual queries,2009-10-13,25,45,Strijland,Paulien,Yahoo! Inc.
+7908556,User interfaces for search systems using in-line contextual queries,2009-10-13,25,45,Kraft,Reiner,Yahoo! Inc.
+7912831,Active Abstracts,2009-10-20,30,28,Ravinarayanan,Kalpana,Yahoo! Inc.
+7912843,Active Abstracts,2009-10-20,30,28,Carson,Chad,Yahoo! Inc.
+7917448,Active Abstracts,2009-10-20,30,28,Cook,Douglas M.,Yahoo! Inc.
+7917465,Record boundary identification and extraction through pattern mining,2009-10-20,26,8,Kulkarni,Parashuram,Yahoo! Inc.
+7917489,System and method for providing geo-relevant information based on a mobile device,2009-11-10,21,27,Riise,Soren,Yahoo! Inc.
+7917496,System and method for providing geo-relevant information based on a mobile device,2009-11-10,21,27,Patel,Devesh T.,Yahoo! Inc.
+7917520,Clearinghouse for messages between disparate networks,2009-12-01,9,4,Musil,Alexander Q.,Yahoo! Inc.
+7917591,Clearinghouse for messages between disparate networks,2009-12-01,9,4,Dollar,Graeme R.,Yahoo! Inc.
+7921073,Clearinghouse for messages between disparate networks,2009-12-01,9,4,Ramakrishnan,Thyagarajapuram S.,Yahoo! Inc.
+7921107,Wait timer for partially formed query,2009-12-08,29,51,Raju,Swati,Yahoo! Inc.
+7921132,Wait timer for partially formed query,2009-12-08,29,51,Wooldridge,Andrew,Yahoo! Inc.
+7921416,Clustered search processing,2009-12-08,16,12,"Ott, IV",Edward Stanley,Yahoo! Inc.
+7925708,Clustered search processing,2009-12-08,16,12,Saft,Keith David,Yahoo! Inc.
+7925716,Clustered search processing,2009-12-08,16,12,Boerries,Marco,Yahoo! Inc.
+7930645,Clustered search processing,2009-12-08,16,12,Tendjoukian,Meher,Yahoo! Inc.
+7933884,Clustered search processing,2009-12-08,16,12,Yiu,Paul,Yahoo! Inc.
+7933899,Method for identifying related pages in a hyperlinked database,2009-12-08,17,29,Black,Jeffery Dean,Yahoo! Inc.
+7933903,Method for identifying related pages in a hyperlinked database,2009-12-08,17,29,Broder,Andrei,Yahoo! Inc.
+7937403,Method for identifying related pages in a hyperlinked database,2009-12-08,17,29,Henzinger,Monika,Yahoo! Inc.
+7937468,Query rewriting with spell correction suggestions using a generated set of query features,2009-12-08,32,26,Li,Xin Hui,Yahoo! Inc.
+7941420,Query rewriting with spell correction suggestions using a generated set of query features,2009-12-08,32,26,Lu,Yumao,Yahoo! Inc.
+7941429,Query rewriting with spell correction suggestions using a generated set of query features,2009-12-08,32,26,Ahmed,Nawaaz,Yahoo! Inc.
+7941436,Query rewriting with spell correction suggestions using a generated set of query features,2009-12-08,32,26,Peng,Fuchun,Yahoo! Inc.
+7941557,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Kannan,Ashvin,Yahoo! Inc.
+7941740,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Pedersen,Jan Aage,Yahoo! Inc.
+7945565,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Cantu-Paz,Erick,Yahoo! Inc.
+7945862,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Leggetter,Christopher John,Yahoo! Inc.
+7949563,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Subasic,Pero,Yahoo! Inc.
+7949647,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Ku,David Cho-Lun,Yahoo! Inc.
+7949661,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Carson,Chad,Yahoo! Inc.
+7949672,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,Iyer,Rukmini,Yahoo! Inc.
+7949724,System and method for generating functions to predict the clickability of advertisements,2009-12-08,62,2,LuVogt,Christopher C.,Yahoo! Inc.
+7953775,Content router asynchronous exchange,2009-12-08,66,265,Srinivasan,Venkatachary,Yahoo! Inc.
+7953777,Content router asynchronous exchange,2009-12-08,66,265,Boerries,Marco,Yahoo! Inc.
+7954058,Content router asynchronous exchange,2009-12-08,66,265,Meyer,Markus,Yahoo! Inc.
+7957957,"Realtime indexing and search in large, rapidly changing document collections",2009-12-15,12,6,Walters,Chad P.,Yahoo! Inc.
+7958109,"Realtime indexing and search in large, rapidly changing document collections",2009-12-15,12,6,Rose,Daniel E.,Yahoo! Inc.
+7958110,"Realtime indexing and search in large, rapidly changing document collections",2009-12-15,12,6,Mao,Jianchang,Yahoo! Inc.
+7958115,Click-through re-ranking of images and other data,2009-12-15,23,8,Thrall,John J.,Yahoo! Inc.
+7958117,Using activation paths to cluster proximity query results,2009-12-22,18,8,Jadhav,Apurva Rameshchandra,Yahoo! Inc.
+7958156,Remote selection and installation of auxiliary content,2009-12-22,9,8,Abramowitz,Marc S.,Yahoo! Inc.
+7958228,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,Tsang,Audrey Y.,Yahoo! Inc.
+7958234,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,Fukuda,Matthew Kenjiro,Yahoo! Inc.
+7958363,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,Wascovich,Dan James,Yahoo! Inc.
+7962363,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,Hayashi,Nathanael Joe,Yahoo! Inc.
+7962502,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,"Ott, IV",E. Stanley,Yahoo! Inc.
+7973655,Contextual mobile local search based on social network vitality information,2009-12-22,21,40,Quoc,Michael,Yahoo! Inc.
+7974934,Financial information portal,2009-12-29,21,9,Nesbitt,Susan,Yahoo! Inc.
+7974940,Financial information portal,2009-12-29,21,9,Bennett,Michael J.,Yahoo! Inc.
+7974976,Financial information portal,2009-12-29,21,9,Bergquist,John F.,Yahoo! Inc.
+7975065,Method and system for enabling a script on a first computer to exchange data with a script on a second computer over a network,2010-01-19,25,35,Shafron,Thomas Joshua,Yahoo! Inc.
+7979067,Method and system for enabling a script on a first computer to exchange data with a script on a second computer over a network,2010-01-19,25,35,Staib,Christopher,Yahoo! Inc.
+7984062,Suggesting an alternative to the spelling of a search query,2010-03-02,16,33,Borkovsky,Arkady,Yahoo! Inc.
+7984330,Suggesting an alternative to the spelling of a search query,2010-03-02,16,33,Carson,Chad,Yahoo! Inc.
+7984472,Suggesting an alternative to the spelling of a search query,2010-03-02,16,33,Zagha,Marco J.,Yahoo! Inc.
+7987417,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Durfee,Adam,Yahoo! Inc.
+7991769,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Hall,Ashley Woodman,Yahoo! Inc.
+7992197,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Rabbat,Ralph Rizkallah,Yahoo! Inc.
+7996000,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Hood,Stephen L.,Yahoo! Inc.
+7996306,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Kasperski,Richard Allan,Yahoo! Inc.
+8001056,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Anick,Peter G.,Yahoo! Inc.
+8001111,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Shah,Mihir D.,Yahoo! Inc.
+8001117,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Gourlay,Alastair R.,Yahoo! Inc.
+8005774,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Bayley,Oliver T.,Yahoo! Inc.
+8005775,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Thrall,John J.,Yahoo! Inc.
+8005835,Speculative search result based on a not-yet-submitted search query,2010-03-02,24,70,Kapur,Shyam,Yahoo! Inc.
+8005845,Method and apparatus for assisting with playback of remotely stored media files,2010-03-02,14,51,Rogers,Ian C.,Yahoo! Inc.
+8005917,Method and apparatus for assisting with playback of remotely stored media files,2010-03-02,14,51,Lord,Robert D.,Yahoo! Inc.
+8006190,Method of controlling an Internet browser interface and a controllable browser interface,2010-03-09,49,144,Shafron,Thomas Joshua,Yahoo! Inc.
+8006200,Prediction of click through rates using hybrid kalman filter-tree structured markov model classifiers,2010-03-16,13,0,Agarwal,Deepak K.,Yahoo! Inc.
+8010532,System and method for navigating and indexing content,2010-03-16,10,4,King,Ryan D.,Yahoo! Inc.
+8010996,System and method for navigating and indexing content,2010-03-16,10,4,Mann,Laurence Drew,Yahoo! Inc.
+8015184,System and method for navigating and indexing content,2010-03-16,10,4,Upendran,Manish,Yahoo! Inc.
+8015502,System and method for managing listings,2010-03-16,44,44,Ting,Joseph M.,Yahoo! Inc.
+8023929,System and method for managing listings,2010-03-16,44,44,Khanna,Sandeep,Yahoo! Inc.
+8024280,System and method for managing listings,2010-03-16,44,44,Hyder,Adam,Yahoo! Inc.
+8024342,Techniques for clustering structurally similar web pages,2010-03-16,40,27,Poola,Krishna Leela,Yahoo! Inc.
+8024384,Techniques for clustering structurally similar web pages,2010-03-16,40,27,Ramanujapuram,Arun,Yahoo! Inc.
+8027931,Graphical user interface to manipulate syndication data feeds,2010-03-16,36,3,Sadri,Pasha,Yahoo! Inc.
+8028065,Graphical user interface to manipulate syndication data feeds,2010-03-16,36,3,Trevor,Jonathan,Yahoo! Inc.
+8032535,Graphical user interface to manipulate syndication data feeds,2010-03-16,36,3,Cheng,Kevin Y.,Yahoo! Inc.
+8037053,Graphical user interface to manipulate syndication data feeds,2010-03-16,36,3,Ho,Edward J.,Yahoo! Inc.
+8037070,Graphical user interface to manipulate syndication data feeds,2010-03-16,36,3,Raffel,Daniel Joseph,Yahoo! Inc.
+8037097,Spike filter for financial data represented as discrete-valued time series,2010-03-23,19,2,Yao,Hongyu,Yahoo! Inc.
+8037410,Spike filter for financial data represented as discrete-valued time series,2010-03-23,19,2,Bennett,Michael J.,Yahoo! Inc.
+8041303,Spike filter for financial data represented as discrete-valued time series,2010-03-23,19,2,Kekre,Amol J.,Yahoo! Inc.
+8041703,Term expansion using associative matching of labeled term pairs,2010-03-23,28,24,Fain,Daniel C.,Yahoo! Inc.
+8041723,Term expansion using associative matching of labeled term pairs,2010-03-23,28,24,Sisk,Jacob,Yahoo! Inc.
+8041729,Term expansion using associative matching of labeled term pairs,2010-03-23,28,24,Bramlet,Heidi Eldenburg,Yahoo! Inc.
+8041775,Term expansion using associative matching of labeled term pairs,2010-03-23,28,24,Rieck,Charity A.,Yahoo! Inc.
+8045482,Term expansion using associative matching of labeled term pairs,2010-03-23,28,24,Mao,Jianchang,Yahoo! Inc.
+8045695,System and method for enhanced media distribution,2010-03-23,88,236,Rogers,Ian C.,Yahoo! Inc.
+8045995,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Norton,Kenneth S.,Yahoo! Inc.
+8046347,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Mao,Jianchang,Yahoo! Inc.
+8046361,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Xu,Zhichen,Yahoo! Inc.
+8046411,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Tam,Chung-Man,Yahoo! Inc.
+8046675,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Bassett,Adrienne,Yahoo! Inc.
+8046681,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Arnold,Nathan,Yahoo! Inc.
+8050689,Apparatus and method for normalizing user-selected keywords in a folksonomy,2010-03-23,13,11,Hall,Ashley Woodman,Yahoo! Inc.
+8050693,Mapping online service user ID to portal user ID,2010-03-23,15,18,Crawford,Lee,Yahoo! Inc.
+8051032,Mapping online service user ID to portal user ID,2010-03-23,15,18,Cahill,John,Yahoo! Inc.
+8051062,Web services multi-protocol support,2010-03-23,21,9,Kothari,Pankaj,Yahoo! Inc.
+8051068,Web services multi-protocol support,2010-03-23,21,9,Atreya,Avinash,Yahoo! Inc.
+8051087,Attribute extraction using limited training data,2010-03-30,20,7,Pavlov,Dmitry Yurievich,Yahoo! Inc.
+8054756,Attribute extraction using limited training data,2010-03-30,20,7,Balasubramanyan,Ramnath,Yahoo! Inc.
+8055271,Presence indication configuration methodology,2010-03-30,5,34,Sanghavi,Mehul K.,Yahoo! Inc.
+8055444,Presence indication configuration methodology,2010-03-30,5,34,Kobashikawa,Brian Tadao,Yahoo! Inc.
+8055615,Presence indication configuration methodology,2010-03-30,5,34,Szeto,Christopher,Yahoo! Inc.
+8055634,System and method of generating recommendations using an RFID-enabled recommendation system,2010-04-06,25,8,Channell,Brian Paul,Yahoo! Inc.
+8055673,Use of extensible markup language in a system and method for influencing a position on a search result list generated by a computer network search engine,2010-04-13,9,21,"Maritato, Jr.",Frank,Yahoo! Inc.
+8056007,Use of extensible markup language in a system and method for influencing a position on a search result list generated by a computer network search engine,2010-04-13,9,21,Molinaro,Anthony,Yahoo! Inc.
+8057291,Use of extensible markup language in a system and method for influencing a position on a search result list generated by a computer network search engine,2010-04-13,9,21,Cunningham,Stephan,Yahoo! Inc.
+8060075,Use of extensible markup language in a system and method for influencing a position on a search result list generated by a computer network search engine,2010-04-13,9,21,Conrad,Nick,Yahoo! Inc.
+8060455,Use of extensible markup language in a system and method for influencing a position on a search result list generated by a computer network search engine,2010-04-13,9,21,Zhao,Peng P.,Yahoo! Inc.
+8060491,Universal search interface systems and methods,2010-04-13,22,9,Kapur,Shyam,Yahoo! Inc.
+8060579,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,Harvey,James B.,Yahoo! Inc.
+8060720,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,"Carson, Jr.",Charles C.,Yahoo! Inc.
+8060823,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,Chawia,Devika,Yahoo! Inc.
+8065242,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,Sabharwal,Mohit,Yahoo! Inc.
+8065675,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,Zagha,Marco J.,Yahoo! Inc.
+8069128,Matching and ranking of sponsored search listings incorporating web search technology and web content,2010-04-13,26,13,Nemenman,Matvey,Yahoo! Inc.
+8069142,System and method for conducting an auction-based ranking of search results on a computer network,2010-04-20,18,33,Soulanille,Thomas A.,Yahoo! Inc.
+8073953,Discovering and determining characteristics of network proxies,2010-04-20,18,5,Kamath,Pradeep,Yahoo! Inc.
+8078642,Discovering and determining characteristics of network proxies,2010-04-20,18,5,Kurup,Madhu M.,Yahoo! Inc.
+8078645,Tracking and blocking of spam directed to clipping services,2010-04-27,24,3,Temkin,Michael Jeremy,Yahoo! Inc.
+8086543,Tracking and blocking of spam directed to clipping services,2010-04-27,24,3,Woods,Daniel John,Yahoo! Inc.
+8095419,Tracking and blocking of spam directed to clipping services,2010-04-27,24,3,Jiang,Zhaowei Charlie,Yahoo! Inc.
+8095487,Tracking and blocking of spam directed to clipping services,2010-04-27,24,3,Zhou,Min Jun,Yahoo! Inc.
+8095560,Method and apparatus using a classifier to determine semantically relevant terms,2010-04-27,17,9,Jhala,Pradhuman Dasharalhasinh,Yahoo! Inc.
+8098894,Method and apparatus using a classifier to determine semantically relevant terms,2010-04-27,17,9,He,Xiaofei,Yahoo! Inc.
+8105159,Harvesting of media objects from searched sites without a user having to enter the sites,2010-04-27,20,13,Weber,Karon A.,Yahoo! Inc.
+8107495,Harvesting of media objects from searched sites without a user having to enter the sites,2010-04-27,20,13,Tripodi,Samantha M.,Yahoo! Inc.
+8108323,Harvesting of media objects from searched sites without a user having to enter the sites,2010-04-27,20,13,Shamma,David Ayman,Yahoo! Inc.
+8108347,Systems and methods for managing and using multiple concept networks for assisted search processing,2010-04-27,8,6,Joshi,Deepa B.,Yahoo! Inc.
+8108379,Systems and methods for managing and using multiple concept networks for assisted search processing,2010-04-27,8,6,Parikh,Jignashu G.,Yahoo! Inc.
+8108416,Systems and methods for managing and using multiple concept networks for assisted search processing,2010-04-27,8,6,Kapur,Shyam,Yahoo! Inc.
+8108452,User interface for media item portion search tool,2010-04-27,46,23,Martinez,Ronald G.,Yahoo! Inc.
+8108481,Method and apparatus for providing flash-based avatars,2010-04-27,21,37,Ashtekar,Ashish,Yahoo! Inc.
+8108501,Method and apparatus for providing flash-based avatars,2010-04-27,21,37,Lim,Hanjoo,Yahoo! Inc.
+8108515,Method and apparatus for providing flash-based avatars,2010-04-27,21,37,Torgemane,Henri,Yahoo! Inc.
+8108770,Method and apparatus for providing flash-based avatars,2010-04-27,21,37,Patwardhan,Chintamani M.,Yahoo! Inc.
+8108800,Phonetic self-improving search engine,2010-05-11,23,4,Davallou,Arash Michael,Yahoo! Inc.
+8112393,Method and system for providing listener-requested music over a network,2010-05-18,51,24,Volk,Andrew R.,Yahoo! Inc.
+8112501,Method and system for providing listener-requested music over a network,2010-05-18,51,24,Reed,Erik James,Yahoo! Inc.
+8117256,Templates for themed instant messages,2010-05-18,23,11,Bochatey,Rebecca L.,Yahoo! Inc.
+8122353,Templates for themed instant messages,2010-05-18,23,11,Bonforte,Jeffrey,Yahoo! Inc.
+8126766,Templates for themed instant messages,2010-05-18,23,11,Ettenhofer,Jeffrey Robert,Yahoo! Inc.
+8135626,Templates for themed instant messages,2010-05-18,23,11,Jean,Patrick,Yahoo! Inc.
+8135704,Method and system of controlling a context menu,2010-05-18,61,191,Wada,Alan,Yahoo! Inc.
+8135707,Method and system of controlling a context menu,2010-05-18,61,191,Burke,Eric P.,Yahoo! Inc.
+8135805,Method and system of controlling a context menu,2010-05-18,61,191,Fan,Duke Tsao-Ming,Yahoo! Inc.
+8135854,System and method for enhanced messaging including a displayable status indicator relating to another user and an associated playlist or webpage,2010-05-25,3,8,Dhomse,Vinod P.,Yahoo! Inc.
+8140963,System and method for enhanced messaging including a displayable status indicator relating to another user and an associated playlist or webpage,2010-05-25,3,8,Beaupre,Todd M.,Yahoo! Inc.
+8145637,System and method for enhanced messaging including a displayable status indicator relating to another user and an associated playlist or webpage,2010-05-25,3,8,Szeto,Christopher,Yahoo! Inc.
+8145727,System and method for enhanced messaging including a displayable status indicator relating to another user and an associated playlist or webpage,2010-05-25,3,8,Schiro,Pierre,Yahoo! Inc.
+8150849,Low code-footprint security solution,2010-05-25,36,14,Kraus,Thomas Martin,Yahoo! Inc.
+8150967,Low code-footprint security solution,2010-05-25,36,14,Meyer,Markus,Yahoo! Inc.
+8151282,Low code-footprint security solution,2010-05-25,36,14,Yang,Lie,Yahoo! Inc.
+8155986,Low code-footprint security solution,2010-05-25,36,14,Srinivasan,Venkatachary,Yahoo! Inc.
+8155998,Query string matching method and apparatus,2010-06-08,11,16,Carnahan,John M.,Yahoo! Inc.
+8156135,System and method using hierachical clustering for evolutionary clustering of sequential data sets,2010-06-08,19,2,Tomkins,Andrew S.,Yahoo! Inc.
+8156240,System and method using hierachical clustering for evolutionary clustering of sequential data sets,2010-06-08,19,2,Chakrabarti,Deepayan,Yahoo! Inc.
+8166016,System and method using hierachical clustering for evolutionary clustering of sequential data sets,2010-06-08,19,2,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+8166029,Content distribution system for operation over an internetwork including content peering arrangements,2010-06-08,12,38,McCanne,Steven R.,Yahoo! Inc.
+8166058,System and method for providing automobile marketing research information,2010-06-15,20,60,Weyer,Larry,Yahoo! Inc.
+8166168,System and method for providing automobile marketing research information,2010-06-15,20,60,Pham,Kay,Yahoo! Inc.
+8166305,System and method for providing automobile marketing research information,2010-06-15,20,60,Mallon,Ken,Yahoo! Inc.
+8171429,System and method for providing automobile marketing research information,2010-06-15,20,60,Chand,Jagdish,Yahoo! Inc.
+8174974,Indication of exclusive items in a result set,2010-06-29,10,15,Simpson,David Andrew,Yahoo! Inc.
+8175623,Indication of exclusive items in a result set,2010-06-29,10,15,Reinhold,James Michael,Yahoo! Inc.
+8175922,Indication of exclusive items in a result set,2010-06-29,10,15,Karmirantzos,Apostolos,Yahoo! Inc.
+8176066,Indication of exclusive items in a result set,2010-06-29,10,15,Ciemiewicz,David M.,Yahoo! Inc.
+8176509,Indication of exclusive items in a result set,2010-06-29,10,15,Makris,Gregory M.,Yahoo! Inc.
+8180770,Indication of exclusive items in a result set,2010-06-29,10,15,Freeman,Jackie Andrew,Yahoo! Inc.
+8181178,Indication of exclusive items in a result set,2010-06-29,10,15,Lee,Tony Sang-min,Yahoo! Inc.
+8185425,Indication of exclusive items in a result set,2010-06-29,10,15,Thun,Christopher,Yahoo! Inc.
+8185524,Indication of exclusive items in a result set,2010-06-29,10,15,Schectman,Hal R.,Yahoo! Inc.
+8190572,Presentation of differences between multiple searches,2010-06-29,7,10,Karmirantzos,Apostolos,Yahoo! Inc.
+8196095,Presentation of differences between multiple searches,2010-06-29,7,10,Ciemiewicz,David M.,Yahoo! Inc.
+8200933,Presentation of differences between multiple searches,2010-06-29,7,10,Lee,Tony Sang-min,Yahoo! Inc.
+8203952,Presentation of differences between multiple searches,2010-06-29,7,10,Schectman,Hal R.,Yahoo! Inc.
+8204874,Presentation of differences between multiple searches,2010-06-29,7,10,Freeman,Jackie Andrew,Yahoo! Inc.
+8204878,Presentation of differences between multiple searches,2010-06-29,7,10,Reinhold,James Michael,Yahoo! Inc.
+8209277,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Schectman,Hal R.,Yahoo! Inc.
+8209317,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Ciemiewicz,David M.,Yahoo! Inc.
+8210916,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Karmirantzos,Apostolos,Yahoo! Inc.
+8219126,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Reinhold,James Michael,Yahoo! Inc.
+8219492,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Lee,Tony Sang-min,Yahoo! Inc.
+8224308,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Makris,Gregory M.,Yahoo! Inc.
+8224889,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Simpson,David Andrew,Yahoo! Inc.
+8230456,Difference control for generating and displaying a difference result set from the result sets of a plurality of search engines,2010-06-29,5,15,Freeman,Jackie Andrew,Yahoo! Inc.
+8234166,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Loo,Patrick S.,Yahoo! Inc.
+8239387,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Matzanas,Sotiris,Yahoo! Inc.
+8244517,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Naeimi,Mitra,Yahoo! Inc.
+8249566,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Fondren,Jim,Yahoo! Inc.
+8250077,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Eichstaedt,Matthias,Yahoo! Inc.
+8254684,Techniques for selectively performing searches against data and providing search results,2010-06-29,14,16,Zhang,Ming Li,Yahoo! Inc.
+8255390,World modeling using a relationship network with communication channels to entities,2010-06-29,15,12,Perluss,Kenneth G.,Yahoo! Inc.
+8255414,World modeling using a relationship network with communication channels to entities,2010-06-29,15,12,Kraft,Reiner,Yahoo! Inc.
+8255793,World modeling using a relationship network with communication channels to entities,2010-06-29,15,12,Maghoul,Farzin,Yahoo! Inc.
+8260315,Community-based web filtering,2010-06-29,14,3,Tomkins,Andrew S.,Yahoo! Inc.
+8260666,Community-based web filtering,2010-06-29,14,3,McAfee,Randolph Preston,Yahoo! Inc.
+8260680,Community-based web filtering,2010-06-29,14,3,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+8260882,Relative typing waiting time before disambiguation aids,2010-06-29,25,8,Lecomte,Julien F.,Yahoo! Inc.
+8265612,Relative typing waiting time before disambiguation aids,2010-06-29,25,8,Chi,Liang-Yu (Tom),Yahoo! Inc.
+8265654,Shortcut sets for controlled environments,2010-07-06,17,22,Kumar,Amit Y.,Yahoo! Inc.
+8266149,Customization of an online shopping experience,2010-07-13,21,5,Pisupati,Chandra,Yahoo! Inc.
+8271408,Customization of an online shopping experience,2010-07-13,21,5,Sane,Aamod,Yahoo! Inc.
+8271474,Customization of an online shopping experience,2010-07-13,21,5,Shkolnik,Boris,Yahoo! Inc.
+8271486,Customization of an online shopping experience,2010-07-13,21,5,Reeth,Timothy,Yahoo! Inc.
+8271506,Customization of an online shopping experience,2010-07-13,21,5,Mohamed,Ali,Yahoo! Inc.
+8275414,Customization of an online shopping experience,2010-07-13,21,5,Rawlins,Sheridan,Yahoo! Inc.
+8275419,Customization of an online shopping experience,2010-07-13,21,5,Park,Sung Min,Yahoo! Inc.
+8275760,Customization of an online shopping experience,2010-07-13,21,5,Jackson,David R.,Yahoo! Inc.
+8280624,Customization of an online shopping experience,2010-07-13,21,5,Li,Junxu,Yahoo! Inc.
+8280829,Customization of an online shopping experience,2010-07-13,21,5,Lam,Con,Yahoo! Inc.
+8286086,Customization of an online shopping experience,2010-07-13,21,5,Kasi,Ashish,Yahoo! Inc.
+8290927,Customization of an online shopping experience,2010-07-13,21,5,Song,Deyang,Yahoo! Inc.
+8290980,Customization of an online shopping experience,2010-07-13,21,5,Duvall,Jimmy R.,Yahoo! Inc.
+8290986,System and method for learning a weighted index to categorize objects,2010-07-13,20,16,Madani,Omid,Yahoo! Inc.
+8296177,System and method for learning a weighted index to categorize objects,2010-07-13,20,16,Connor,Michael James,Yahoo! Inc.
+8301437,Visual interface to indicate custom binning of items,2010-07-13,17,32,Ford,Lisa Akerman,Yahoo! Inc.
+8301545,Visual interface to indicate custom binning of items,2010-07-13,17,32,Shanbhag,Amit Umesh,Yahoo! Inc.
+8301614,Visual interface to indicate custom binning of items,2010-07-13,17,32,Rajagopalan,Sundara Raman,Yahoo! Inc.
+8301624,Visual interface to indicate custom binning of items,2010-07-13,17,32,Koran,Joshua Miller,Yahoo! Inc.
+8301719,Visual interface to indicate custom binning of items,2010-07-13,17,32,Ames,Glen Anthony,Yahoo! Inc.
+8301728,Visual interface to indicate custom binning of items,2010-07-13,17,32,Burgess,David A.,Yahoo! Inc.
+8306966,User interface for transitioning between chat and email,2010-07-13,21,23,Mehta,Samir Bhupatrai,Yahoo! Inc.
+8307029,User interface for transitioning between chat and email,2010-07-13,21,23,Rosenberg,Greg A.,Yahoo! Inc.
+8312108,User interface for transitioning between chat and email,2010-07-13,21,23,Kenney,James P.,Yahoo! Inc.
+8312380,User interface for transitioning between chat and email,2010-07-13,21,23,Diamond,Ethan H.,Yahoo! Inc.
+8316300,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Norton,Kenneth S.,Yahoo! Inc.
+8316392,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Arnold,Nathan,Yahoo! Inc.
+8321280,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Hall,Ashley Woodman,Yahoo! Inc.
+8332334,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Tam,Chung-Man,Yahoo! Inc.
+8340408,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Xu,Zhichen,Yahoo! Inc.
+8340794,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Mao,Jianchang,Yahoo! Inc.
+8341144,Apparatus and method for controlling content access based on shared annotations for annotated users in a folksonomy scheme,2010-07-20,19,5,Bassett,Adrienne,Yahoo! Inc.
+8341235,Displaying items using a reduced presentation,2010-07-20,36,62,Bayley,Oliver T.,Yahoo! Inc.
+8346686,Displaying items using a reduced presentation,2010-07-20,36,62,Wooldridge,Andrew,Yahoo! Inc.
+8346754,Displaying items using a reduced presentation,2010-07-20,36,62,Raju,Swati,Yahoo! Inc.
+8346798,Displaying items using a reduced presentation,2010-07-20,36,62,Hall,Ashley Woodman,Yahoo! Inc.
+8347225,Visualizing location-based datasets using &#x201c;tag maps&#x201d;,2010-08-03,25,5,Naaman,Mor,Yahoo! Inc.
+8352331,Visualizing location-based datasets using &#x201c;tag maps&#x201d;,2010-08-03,25,5,Davis,Marc,Yahoo! Inc.
+8352466,Visualizing location-based datasets using &#x201c;tag maps&#x201d;,2010-08-03,25,5,Jaffe,Alexander B.,Yahoo! Inc.
+8353018,System and method for the propagation of DRM protected content,2010-08-03,13,7,Upendran,Manish,Yahoo! Inc.
+8356039,Method and system of providing user augmented content,2010-08-10,24,1,Martinez,Ronald G.,Yahoo! Inc.
+8358837,Method and system of providing user augmented content,2010-08-10,24,1,Kalaboukis,Chris T.,Yahoo! Inc.
+8358843,Method and system of providing user augmented content,2010-08-10,24,1,Fisher,Roberto Warren,Yahoo! Inc.
+8364611,Method and system of providing user augmented content,2010-08-10,24,1,Athsani,Athellina,Yahoo! Inc.
+8364627,System for providing geographically relevant content to a search query with local intent,2010-08-10,22,34,Patel,Devesh T.,Yahoo! Inc.
+8364658,System for providing geographically relevant content to a search query with local intent,2010-08-10,22,34,Riise,Soren,Yahoo! Inc.
+8369327,System for providing geographically relevant content to a search query with local intent,2010-08-10,22,34,Delli Santi,Jim W.,Yahoo! Inc.
+8370486,System for providing geographically relevant content to a search query with local intent,2010-08-10,22,34,Demir,Ramazan,Yahoo! Inc.
+8380512,Statistical approach to automatic gain control for managing audio messages over a network,2010-08-17,25,11,Gladyshev,Eugene,Yahoo! Inc.
+8380570,Statistical approach to automatic gain control for managing audio messages over a network,2010-08-17,25,11,Ramani,Ramkumar,Yahoo! Inc.
+8380572,Statistical approach to automatic gain control for managing audio messages over a network,2010-08-17,25,11,Reed,Erik James,Yahoo! Inc.
+8380763,Statistical approach to automatic gain control for managing audio messages over a network,2010-08-17,25,11,Yarlagadda,Madhu,Yahoo! Inc.
+8386232,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Skovran,Steve,Yahoo! Inc.
+8392148,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Lee,Ka Luk,Yahoo! Inc.
+8392536,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Lee,Jonathan C.,Yahoo! Inc.
+8392828,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Kwong,Thomas,Yahoo! Inc.
+8396461,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Kurt,Tod E.,Yahoo! Inc.
+8396493,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Greco,Larry,Yahoo! Inc.
+8396705,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Garcia,Johann,Yahoo! Inc.
+8396822,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Derer,Matthew,Yahoo! Inc.
+8396853,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Davis,Darren J.,Yahoo! Inc.
+8401984,System and method for influencing a position on a search result list generated by a computer network search engine,2010-08-24,15,79,Pfarner,Preston,Yahoo! Inc.
+8402097,System and method for recommending songs,2010-08-24,25,10,Acharya,Soam,Yahoo! Inc.
+8402506,E-commerce system using searchable tags,2010-08-24,24,0,Kalaboukis,Chris T.,Yahoo! Inc.
+8406571,E-commerce system using searchable tags,2010-08-24,24,0,Garg,Priyank S.,Yahoo! Inc.
+8407216,E-commerce system using searchable tags,2010-08-24,24,0,Martinez,Ronald G.,Yahoo! Inc.
+8407230,Dynamic pari-mutuel market,2010-08-31,37,2,Pennock,David M.,Yahoo! Inc.
+8407238,Locating dense and isolated sub-graphs through constructing auxiliary weighted graph,2010-08-31,18,0,Andersen,Reid Marlow,Yahoo! Inc.
+8412698,Locating dense and isolated sub-graphs through constructing auxiliary weighted graph,2010-08-31,18,0,Lang,Kevin J.,Yahoo! Inc.
+8412771,Predictive stemming for web search with statistical machine translation models,2010-08-31,32,30,Zagha,Marco J.,Yahoo! Inc.
+8413052,Predictive stemming for web search with statistical machine translation models,2010-08-31,32,30,Lu,Yumao,Yahoo! Inc.
+8417657,Predictive stemming for web search with statistical machine translation models,2010-08-31,32,30,Ahmed,Nawaaz,Yahoo! Inc.
+8422731,Predictive stemming for web search with statistical machine translation models,2010-08-31,32,30,Peng,Fuchun,Yahoo! Inc.
+8423479,System and method for knowledge based search system,2010-08-31,6,10,Vandelle,Gilles,Yahoo! Inc.
+8423558,System and method for knowledge based search system,2010-08-31,6,10,Gaillard,Matthieu,Yahoo! Inc.
+8429176,System and method for knowledge based search system,2010-08-31,6,10,Brisbart,Franck,Yahoo! Inc.
+8429177,Method and system of facilitating automatic login to a web site using an Internet browser,2010-08-31,16,169,Baldua,Ashish,Yahoo! Inc.
+8442929,Method and system of facilitating automatic login to a web site using an Internet browser,2010-08-31,16,169,Lu,Qi (NMN),Yahoo! Inc.
+8442987,Centralized feed manager,2010-09-07,28,12,Athey,Kevin,Yahoo! Inc.
+8452762,Centralized feed manager,2010-09-07,28,12,Robison,John,Yahoo! Inc.
+8452768,Centralized feed manager,2010-09-07,28,12,Patel,Ashvinkumar P.,Yahoo! Inc.
+8452793,Method and system of providing customizable buttons,2010-09-07,37,147,Fan,Duke Tsao-Ming,Yahoo! Inc.
+8452832,Method and system of providing customizable buttons,2010-09-07,37,147,Burke,Eric P.,Yahoo! Inc.
+8452855,Method and system of providing customizable buttons,2010-09-07,37,147,Wada,Alan,Yahoo! Inc.
+8458160,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Zhuge,Yuan,Yahoo! Inc.
+8458599,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Vee,Erik N.,Yahoo! Inc.
+8463827,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Samantarai,Jagadish Prasad,Yahoo! Inc.
+8467814,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Garofalakis,Minos N.,Yahoo! Inc.
+8468049,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Shanmugasundaram,Jayavel,Yahoo! Inc.
+8472705,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Baskaran,Rajagopal,Yahoo! Inc.
+8475249,Automated document classifier tuning including training set adaptive to user browsing behavior,2010-09-14,25,13,Ting,Chyr-Chong Joseph,Yahoo! Inc.
+8477664,Online advertiser keyword valuation to decide whether to acquire the advertiser,2010-09-28,25,4,Chaudhury,Supratim Roy,Yahoo! Inc.
+8478000,Online advertiser keyword valuation to decide whether to acquire the advertiser,2010-09-28,25,4,Jin,Jiaqi,Yahoo! Inc.
+8478247,Online advertiser keyword valuation to decide whether to acquire the advertiser,2010-09-28,25,4,Tomak,Kerem,Yahoo! Inc.
+8478697,Online advertiser keyword valuation to decide whether to acquire the advertiser,2010-09-28,25,4,Demir,Ramazan,Yahoo! Inc.
+8478701,System for determining the geographic range of local intent in a search query,2010-09-28,23,33,Delli Santi,Jim W.,Yahoo! Inc.
+8478899,System for determining the geographic range of local intent in a search query,2010-09-28,23,33,Demir,Ramazan,Yahoo! Inc.
+8483715,User privacy through one-sided cookies,2010-09-28,20,5,Chow,Richard Tao-Hwa,Yahoo! Inc.
+8484077,System and method for identifying target node graphs from predetermined seed node subsets,2010-09-28,13,12,Tawde,Vivek B.,Yahoo! Inc.
+8484094,System and method for identifying target node graphs from predetermined seed node subsets,2010-09-28,13,12,Lang,Kevin J.,Yahoo! Inc.
+8484180,Automated learning from a question and answering network of humans,2010-10-05,22,7,Heck,Larry Paul,Yahoo! Inc.
+8484184,Abbreviation handling in web search,2010-10-05,27,4,Wei,Xing,Yahoo! Inc.
+8495021,Abbreviation handling in web search,2010-10-05,27,4,Peng,Fuchun,Yahoo! Inc.
+8504545,Abbreviation handling in web search,2010-10-05,27,4,Dumoulin,Benoit,Yahoo! Inc.
+8504575,Classification and cluster analysis spam detection and reduction,2010-10-05,24,4,Wei,Stanley Ke,Yahoo! Inc.
+8509266,Classification and cluster analysis spam detection and reduction,2010-10-05,24,4,Ramarao,Vishwanath Tumkur,Yahoo! Inc.
+8510669,Classification and cluster analysis spam detection and reduction,2010-10-05,24,4,Yankov,Dragomir,Yahoo! Inc.
+8515908,Classification and cluster analysis spam detection and reduction,2010-10-05,24,4,Xi,Xiaopeng,Yahoo! Inc.
+8516067,Query based search engine,2010-10-12,20,5,Roy,H. Scott,Yahoo! Inc.
+8521507,Determination of sampling characteristics based on available memory,2010-10-19,17,9,Selle,Brian T.,Yahoo! Inc.
+8521734,Determination of sampling characteristics based on available memory,2010-10-19,17,9,Shanbhag,Amit Umesh,Yahoo! Inc.
+8521754,Determination of sampling characteristics based on available memory,2010-10-19,17,9,Rajagopalan,Sundara Raman,Yahoo! Inc.
+8527533,Determination of sampling characteristics based on available memory,2010-10-19,17,9,Ames,Glen Anthony,Yahoo! Inc.
+8527564,Determination of sampling characteristics based on available memory,2010-10-19,17,9,Burgess,David A.,Yahoo! Inc.
+8528003,Dynamically selecting CODECS for managing an audio message,2010-10-26,26,11,Yarlagadda,Madhu,Yahoo! Inc.
+8533129,Dynamically selecting CODECS for managing an audio message,2010-10-26,26,11,Ramani,Ramkumar,Yahoo! Inc.
+8533202,Power management for proximity-based ad hoc networks,2010-10-26,22,2,Higgins,Christopher,Yahoo! Inc.
+8543518,Power management for proximity-based ad hoc networks,2010-10-26,22,2,O'Sullivan,Joseph James,Yahoo! Inc.
+8554621,Power management for proximity-based ad hoc networks,2010-10-26,22,2,Paretti,Christopher T.,Yahoo! Inc.
+8554847,Power management for proximity-based ad hoc networks,2010-10-26,22,2,Davis,Marc,Yahoo! Inc.
+8554869,Power management for proximity-based ad hoc networks,2010-10-26,22,2,Zaltzman,Ori,Yahoo! Inc.
+8560293,Automatically generating a content-based quality metric for digital images,2010-11-02,28,11,Sarukkai,Ramesh R.,Yahoo! Inc.
+8560390,Automatically generating a content-based quality metric for digital images,2010-11-02,28,11,Zhang,Ruofei,Yahoo! Inc.
+8566156,Automatically generating a content-based quality metric for digital images,2010-11-02,28,11,Shakya,Subodh,Yahoo! Inc.
+8566160,Handling dynamic URLs in crawl for better coverage of unique content,2010-11-02,24,14,Bhattacharjee,Arnabnil,Yahoo! Inc.
+8566205,Handling dynamic URLs in crawl for better coverage of unique content,2010-11-02,24,14,Garg,Priyank S.,Yahoo! Inc.
+8568236,&#x201c;Query-log match&#x201d; relevance features,2010-11-02,48,10,Zaragoza,Hugo,Yahoo! Inc.
+8572191,Advertisement display depth optimization to maximize click activity page yield,2010-11-09,25,5,Chaudhury,Supratim Roy,Yahoo! Inc.
+8583188,Advertisement display depth optimization to maximize click activity page yield,2010-11-09,25,5,Jin,Jiaqi,Yahoo! Inc.
+8583502,Advertisement display depth optimization to maximize click activity page yield,2010-11-09,25,5,Tomak,Kerem,Yahoo! Inc.
+8583558,Advertisement display depth optimization to maximize click activity page yield,2010-11-09,25,5,Demir,Ramazan,Yahoo! Inc.
+8583615,Context-sensitive query expansion,2010-11-09,29,24,Jones,Rosie,Yahoo! Inc.
+8583668,Context-sensitive query expansion,2010-11-09,29,24,Petkova,Desislava,Yahoo! Inc.
+8584258,Predicting and ranking search query results,2010-11-09,20,11,Suresh,Bipin,Yahoo! Inc.
+8589231,Predicting and ranking search query results,2010-11-09,20,11,Garg,Nikhil,Yahoo! Inc.
+8589371,System and method for providing place and price protection in a search result list generated by a computer network search engine,2010-11-16,8,54,Davis,Darren J.,Yahoo! Inc.
+8589395,System and method for providing place and price protection in a search result list generated by a computer network search engine,2010-11-16,8,54,Cheung,Dominic Dough-Ming,Yahoo! Inc.
+8589486,System and method for providing place and price protection in a search result list generated by a computer network search engine,2010-11-16,8,54,Soulanille,Thomas A.,Yahoo! Inc.
+8589804,System and method for providing place and price protection in a search result list generated by a computer network search engine,2010-11-16,8,54,Singh,Narinder Pal,Yahoo! Inc.
+8594392,Smart fields,2010-11-16,6,2,Pettinati,Lucas Visvikis,Yahoo! Inc.
+8594925,System and method for discounting of historical click through data for multiple versions of an advertisement,2010-11-23,14,4,Ku,David Cho-Lun,Yahoo! Inc.
+8595183,System and method for discounting of historical click through data for multiple versions of an advertisement,2010-11-23,14,4,Pedersen,Jan Aage,Yahoo! Inc.
+8595340,System and method for discounting of historical click through data for multiple versions of an advertisement,2010-11-23,14,4,Carson,Chad,Yahoo! Inc.
+8599801,Method and computer storage medium for search scoring,2010-11-23,26,65,Panchapakesan,Venkat,Yahoo! Inc.
+8600343,Method and computer storage medium for search scoring,2010-11-23,26,65,Acton,Brian L.,Yahoo! Inc.
+8600901,Method and computer storage medium for search scoring,2010-11-23,26,65,Wang,Xuejun S.,Yahoo! Inc.
+8601008,Learned upload time estimate module,2010-11-23,40,92,Davis,Brockton Scott,Yahoo! Inc.
+8601377,Learned upload time estimate module,2010-11-23,40,92,Seitz,Edward F.,Yahoo! Inc.
+8606564,System and method for selecting a training sample from a sample test based on data sample proximity,2010-11-30,18,0,Zhang,Wei Vivian,Yahoo! Inc.
+8612274,System and method for selecting a training sample from a sample test based on data sample proximity,2010-11-30,18,0,He,Xiaofei,Yahoo! Inc.
+8612409,Clustered query support for a database query engine,2010-11-30,20,3,Natkovich,Olga L.,Yahoo! Inc.
+8612417,Clustered query support for a database query engine,2010-11-30,20,3,Gates,Alan,Yahoo! Inc.
+8612424,Clustered query support for a database query engine,2010-11-30,20,3,Cao,Jonathan,Yahoo! Inc.
+8612435,Web service multi-key rate limiting method and system,2010-11-30,15,24,Seethana,Sidharta,Yahoo! Inc.
+8612891,Web service multi-key rate limiting method and system,2010-11-30,15,24,Kothari,Pankaj,Yahoo! Inc.
+8615510,Web service multi-key rate limiting method and system,2010-11-30,15,24,Kumar,Amit Y.,Yahoo! Inc.
+8620626,"Method and system for managing digital content, including streaming media",2010-12-07,25,12,Polavarapu,Vinay,Yahoo! Inc.
+8620930,"Method and system for managing digital content, including streaming media",2010-12-07,25,12,Kazmi,Syed Noman,Yahoo! Inc.
+8620935,"Method and system for managing digital content, including streaming media",2010-12-07,25,12,Turner,William D.,Yahoo! Inc.
+8621372,System and method for transmission of DNS beacons,2010-12-14,14,3,Awadallah,Amr A.,Yahoo! Inc.
+8621376,System and method for transmission of DNS beacons,2010-12-14,14,3,Dean,Richard Drews,Yahoo! Inc.
+8621424,Approach for near duplicate image detection,2010-12-28,36,10,Shah,Shesha,Yahoo! Inc.
+8626670,System and method for optimizing the reserve price and allocation of web page placements in an online keyword auction using generalized trade reduction,2010-12-28,13,5,Gonen,Rica,Yahoo! Inc.
+8631004,System of a hierarchy of servers for query processing of column chunks in a distributed column chunk data store,2010-12-28,20,43,Uppala,Radha Krishna,Yahoo! Inc.
+8635584,Systems and methods for verifying jobseeker data,2011-01-04,22,2,Hyder,Adam,Yahoo! Inc.
+8635701,Systems and methods for verifying jobseeker data,2011-01-04,22,2,Ting,Chyr-Chong Joseph,Yahoo! Inc.
+8645358,Method and system for maintaining synchronization between a local data cache and a data store,2011-01-04,16,66,Sollicito,Vincent L.,Yahoo! Inc.
+8650265,Method and system for maintaining synchronization between a local data cache and a data store,2011-01-04,16,66,Seitz,Edward F.,Yahoo! Inc.
+8655718,Multi-language system for online communications,2011-01-11,31,9,Jokipii,Eron A.,Yahoo! Inc.
+8655872,Selecting and displaying advertisement in a personal media space,2011-01-11,25,28,Krishnan,Gopal,Yahoo! Inc.
+8660975,Selecting and displaying advertisement in a personal media space,2011-01-11,25,28,Vemulpalli,Raj,Yahoo! Inc.
+8666813,Automatic product categorization,2011-01-11,42,38,Goyal,Abhishek,Yahoo! Inc.
+8666932,Automatic product categorization,2011-01-11,42,38,Balasubramanyan,Ramnath,Yahoo! Inc.
+8667133,Automatic product categorization,2011-01-11,42,38,Suresh,Bipin,Yahoo! Inc.
+8670974,Automatic product categorization,2011-01-11,42,38,Pavlov,Dmitry Yurievich,Yahoo! Inc.
+8671093,Automatic product categorization,2011-01-11,42,38,Dom,Byron Edward,Yahoo! Inc.
+8671141,Mitigation of search engine hijacking,2011-01-11,20,4,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+8671354,Mitigation of search engine hijacking,2011-01-11,20,4,Pang,Bo,Yahoo! Inc.
+8676830,System and method for merging internet protocol address to location data from multiple sources,2011-01-11,9,5,Yue,Li,Yahoo! Inc.
+8676887,System and method for merging internet protocol address to location data from multiple sources,2011-01-11,9,5,Pai,Ramesh G.,Yahoo! Inc.
+8678359,System and method for merging internet protocol address to location data from multiple sources,2011-01-11,9,5,Riise,Soren,Yahoo! Inc.
+8682072,System and method for merging internet protocol address to location data from multiple sources,2011-01-11,9,5,Patel,Devesh T.,Yahoo! Inc.
+8683379,Sharing data in scalable software blade architecture,2011-01-11,24,104,Schulz,Torsten,Yahoo! Inc.
+8688670,Sharing data in scalable software blade architecture,2011-01-11,24,104,Meyer,Markus,Yahoo! Inc.
+8694614,Sharing data in scalable software blade architecture,2011-01-11,24,104,Srinivasan,Venkatachary,Yahoo! Inc.
+8700462,Sharing data in scalable software blade architecture,2011-01-11,24,104,Boerries,Marco,Yahoo! Inc.
+8712047,System and method for bookmarking and tagging a content item,2011-01-11,30,11,Schachter,Joshua E.,Yahoo! Inc.
+8712832,Method and system for finding similar charts for financial analysis,2011-01-25,31,12,Chow,Jyh-Herng,Yahoo! Inc.
+8713009,System and method for learning a network of categories using prediction,2011-01-25,21,3,Madani,Omid,Yahoo! Inc.
+8713068,System for query scheduling to maximize work sharing,2011-01-25,13,5,Kifer,Daniel,Yahoo! Inc.
+8713439,System for query scheduling to maximize work sharing,2011-01-25,13,5,Olston,Chris,Yahoo! Inc.
+8719258,System for query scheduling to maximize work sharing,2011-01-25,13,5,Agrawal,Parag Vijay,Yahoo! Inc.
+8725752,Systems and methods for identifying premium content items in a result set,2011-01-25,17,5,Carlin,Ulf Sigurd,Yahoo! Inc.
+8726305,Systems and methods for identifying premium content items in a result set,2011-01-25,17,5,Sarukkai,Ramesh R.,Yahoo! Inc.
+8732160,Systems and methods for identifying premium content items in a result set,2011-01-25,17,5,Dai,Wei William,Yahoo! Inc.
+8732169,Systems and methods for identifying premium content items in a result set,2011-01-25,17,5,Hall,David Duane,Yahoo! Inc.
+8732234,System and method of adaptive personalization of search results for online dating services,2011-02-01,22,75,Smola,Egon,Yahoo! Inc.
+8732585,System and method of adaptive personalization of search results for online dating services,2011-02-01,22,75,Wang,Wei Kung,Yahoo! Inc.
+8732747,System and method of adaptive personalization of search results for online dating services,2011-02-01,22,75,Weiss,Aaron Frederick,Yahoo! Inc.
+8738436,Expanding a query to include terms associated through visual content,2011-02-01,22,4,Sengamedu,Srinivasan H.,Yahoo! Inc.
+8744143,Expanding a query to include terms associated through visual content,2011-02-01,22,4,Slaney,Malcolm G.,Yahoo! Inc.
+8745081,Employing pixel density to detect a spam image,2011-02-01,19,21,Wei,Ke Wei,Yahoo! Inc.
+8745133,Employing pixel density to detect a spam image,2011-02-01,19,21,Zheng,Hao,Yahoo! Inc.
+8745141,Employing pixel density to detect a spam image,2011-02-01,19,21,Pujara,Jay,Yahoo! Inc.
+8745162,Methods and computer readable media for enhancing product reviews,2011-02-08,25,8,Cruz,Jonathan Cordero,Yahoo! Inc.
+8745183,Methods and computer readable media for enhancing product reviews,2011-02-08,25,8,Verhage,Alexander Jan,Yahoo! Inc.
+8751618,Methods and computer readable media for enhancing product reviews,2011-02-08,25,8,Ojakaar,Erik,Yahoo! Inc.
+8751632,Methods and computer readable media for enhancing product reviews,2011-02-08,25,8,Celemin,Gabriel Alejandro,Yahoo! Inc.
+8752185,Methods and computer readable media for enhancing product reviews,2011-02-08,25,8,Trevor,Jonathan,Yahoo! Inc.
+8754848,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Borenstein,Lorna,Yahoo! Inc.
+8756279,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Weber,Karon A.,Yahoo! Inc.
+8756340,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Scott,Bill W.,Yahoo! Inc.
+8756595,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Martinez,Ronald G.,Yahoo! Inc.
+8762364,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Sadri,Pasha,Yahoo! Inc.
+8762403,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Tripodi,Samantha M.,Yahoo! Inc.
+8763074,Distributed collaborative knowledge generation system wherein students perform queries using a dynamic knowledge database and retrieved subsets of data are shared with multiple users on the web,2011-02-08,14,18,Redfern,Jonathan J.,Yahoo! Inc.
+8768693,System and method for caching posting lists,2011-02-15,10,1,Plachouras,Vassilis,Yahoo! Inc.
+8768772,System and method for caching posting lists,2011-02-15,10,1,Junqueira,Flavio Paiva,Yahoo! Inc.
+8768861,System and method for caching posting lists,2011-02-15,10,1,Baeza-Yates,Ricardo Alberto,Yahoo! Inc.
+8768926,System and method for caching posting lists,2011-02-15,10,1,Gionis,Aristides,Yahoo! Inc.
+8769099,Real time detection of parking space availability,2011-02-22,16,12,Ames,Glen Anthony,Yahoo! Inc.
+8775355,Real time detection of parking space availability,2011-02-22,16,12,Shanbhag,Amit Umesh,Yahoo! Inc.
+8775465,Real time detection of parking space availability,2011-02-22,16,12,Aaronson,Philip,Yahoo! Inc.
+8775659,Dynamic representation of group activity through reactive personas,2011-02-22,24,5,Lopez,Rodrigo,Yahoo! Inc.
+8775945,Dynamic representation of group activity through reactive personas,2011-02-22,24,5,Poelker,Cole J.,Yahoo! Inc.
+8788342,Dynamic representation of group activity through reactive personas,2011-02-22,24,5,Davis,Marc,Yahoo! Inc.
+8788346,Dynamic representation of group activity through reactive personas,2011-02-22,24,5,O'Sullivan,Joseph James,Yahoo! Inc.
+8788499,System and method for writing data dependent upon multiple reads in a distributed database,2011-02-22,18,29,Cooper,Brian P.,Yahoo! Inc.
+8788584,System and method for writing data dependent upon multiple reads in a distributed database,2011-02-22,18,29,Yerneni,Ramana V.,Yahoo! Inc.
+8793249,System and method for writing data dependent upon multiple reads in a distributed database,2011-02-22,18,29,Srivastava,Utkarsh Hriday,Yahoo! Inc.
+8793605,Client-side federated search,2011-02-22,27,18,Kumar,Amit Y.,Yahoo! Inc.
+8793730,"Enabling searching of user ratings and reviews using user profile location, and social networks",2011-02-22,19,22,Wu,Su-Lin,Yahoo! Inc.
+8798323,Gradient based optimization of a ranking measure,2011-02-22,25,3,Chapelle,Olivier,Yahoo! Inc.
+8799371,Search query categrization into verticals,2011-02-22,16,4,Pan,Jiangyi,Yahoo! Inc.
+8799758,Search query categrization into verticals,2011-02-22,16,4,Narayanan,Vijay K.,Yahoo! Inc.
+8812511,Extracting semantic relations from query logs,2011-02-22,22,18,Baeza-Yates,Ricardo Alberto,Yahoo! Inc.
+8812514,Extracting semantic relations from query logs,2011-02-22,22,18,Tiberi,Alessandro,Yahoo! Inc.
+8812540,Social news ranking using gossip distance,2011-02-22,19,43,Kim,Eun-Gyu,Yahoo! Inc.
+8812944,Automatic extraction of semantics from text information,2011-03-01,26,3,Naaman,Mor,Yahoo! Inc.
+8813041,Automatic extraction of semantics from text information,2011-03-01,26,3,Good,Nathaniel S.,Yahoo! Inc.
+8818795,Automatic extraction of semantics from text information,2011-03-01,26,3,Rattenbury,Tye,Yahoo! Inc.
+8819064,System and method for crawl ordering by search impact,2011-03-01,24,22,Pandey,Sandeep,Yahoo! Inc.
+8819292,System and method for crawl ordering by search impact,2011-03-01,24,22,Olston,Christopher A.,Yahoo! Inc.
+8825472,Text enhancement mechanism,2011-03-01,18,4,Rogers,Ian C.,Yahoo! Inc.
+8825749,Text enhancement mechanism,2011-03-01,18,4,Kalaboukis,Chris T.,Yahoo! Inc.
+8826450,Text enhancement mechanism,2011-03-01,18,4,Martinez,Ronald G.,Yahoo! Inc.
+8831276,Text enhancement mechanism,2011-03-01,18,4,Fisher,Roberto Warren,Yahoo! Inc.
+8832069,Text enhancement mechanism,2011-03-01,18,4,Gonze,Lucas,Yahoo! Inc.
+8832101,System and method for synchronizing data,2011-03-01,46,9,Blinnikka,Tomi J.,Yahoo! Inc.
+8832105,Scrolling mobile advertisements,2011-03-08,18,8,Lin,Stewart,Yahoo! Inc.
+8832270,Scrolling mobile advertisements,2011-03-08,18,8,Ashkenazi,Zvi,Yahoo! Inc.
+8838527,Scrolling mobile advertisements,2011-03-08,18,8,Lopez,Rodrigo,Yahoo! Inc.
+8838625,System and method for resource lock acquisition and reclamation in a network file system environment,2011-03-08,24,20,Goyal,Prabhakar,Yahoo! Inc.
+8843551,System and method for resource lock acquisition and reclamation in a network file system environment,2011-03-08,24,20,Slain,Ilya N.,Yahoo! Inc.
+8843817,System and method for resource lock acquisition and reclamation in a network file system environment,2011-03-08,24,20,Rao,Prashant,Yahoo! Inc.
+8849775,System and method for resource lock acquisition and reclamation in a network file system environment,2011-03-08,24,20,Patel,Jatin J.,Yahoo! Inc.
+8849776,Systems and methods of predicting resource usefulness using universal resource locators including counting the number of times URL features occur in training data,2011-03-15,34,2,Shao,Zheng,Yahoo! Inc.
+8849909,Systems and methods of predicting resource usefulness using universal resource locators including counting the number of times URL features occur in training data,2011-03-15,34,2,Fu,Wenjie,Yahoo! Inc.
+8851998,Closed-loop feedback control system for online services,2011-03-15,38,11,Gupta,Anurag,Yahoo! Inc.
+8856249,Closed-loop feedback control system for online services,2011-03-15,38,11,Ho,Eric,Yahoo! Inc.
+8868465,Closed-loop feedback control system for online services,2011-03-15,38,11,Lin,Stephen,Yahoo! Inc.
+8868539,System and method for providing an improved graphical user interface for search,2011-03-15,23,16,Lu,Qi (NMN),Yahoo! Inc.
+8868554,System and method for providing an improved graphical user interface for search,2011-03-15,23,16,Wodtke,Christina,Yahoo! Inc.
+8869256,System and method for providing an improved graphical user interface for search,2011-03-15,23,16,Ellis,Kevin Anthony,Yahoo! Inc.
+8880099,System and method for providing an improved graphical user interface for search,2011-03-15,23,16,Crakow,Jennifer,Yahoo! Inc.
+8880390,Call limiter for web services,2011-03-15,22,9,Kumar,Amit Y.,Yahoo! Inc.
+8880449,Call limiter for web services,2011-03-15,22,9,Kothari,Pankaj,Yahoo! Inc.
+8886603,Call limiter for web services,2011-03-15,22,9,Secthana,Sidharta,Yahoo! Inc.
+8886641,Method and system for media landmark identification,2011-03-15,17,13,Shamma,David Ayman,Yahoo! Inc.
+8886650,Method and system for media landmark identification,2011-03-15,17,13,Shafton,Peter,Yahoo! Inc.
+8886817,System and method for characterizing a web page using multiple anchor sets of web pages,2011-03-22,18,27,Reed,Benjamin Clay,Yahoo! Inc.
+8896604,System and method for characterizing a web page using multiple anchor sets of web pages,2011-03-22,18,27,Joshi,Amruta Sadanand,Yahoo! Inc.
+8903736,System and method for characterizing a web page using multiple anchor sets of web pages,2011-03-22,18,27,Tomkins,Andrew S.,Yahoo! Inc.
+8903792,System and method for characterizing a web page using multiple anchor sets of web pages,2011-03-22,18,27,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+8903800,Method for selecting electronic advertisements using machine translation techniques,2011-03-22,12,9,Ciaramita,Massimiliano,Yahoo! Inc.
+8903845,Method for selecting electronic advertisements using machine translation techniques,2011-03-22,12,9,Murdock,Vanessa,Yahoo! Inc.
+8909626,Method for selecting electronic advertisements using machine translation techniques,2011-03-22,12,9,Plachouras,Vassilis,Yahoo! Inc.
+8909633,Apparatus and method for online dating service providing threaded messages with a notes and diary function,2011-03-29,30,72,Wang,Wei Kung,Yahoo! Inc.
+8914342,Apparatus and method for online dating service providing threaded messages with a notes and diary function,2011-03-29,30,72,Truong,Vu Thi,Yahoo! Inc.
+8914382,Apparatus and method for online dating service providing threaded messages with a notes and diary function,2011-03-29,30,72,Rocca,Tracy D.,Yahoo! Inc.
+8914729,Apparatus and method for online dating service providing threaded messages with a notes and diary function,2011-03-29,30,72,"Clancy, Jr.",Maurice L.,Yahoo! Inc.
+8918331,Apparatus and method for online dating service providing threaded messages with a notes and diary function,2011-03-29,30,72,Smola,Egon,Yahoo! Inc.
+8918357,System and method for providing vector terms related to instant messaging conversations,2011-03-29,23,7,Ramamurthi,Shiv,Yahoo! Inc.
+8924956,Implicit name searching,2011-03-29,22,10,Presswala,Irfan,Yahoo! Inc.
+8930338,Implicit name searching,2011-03-29,22,10,Ravinarayanan,Kalpana,Yahoo! Inc.
+8930356,Implicit name searching,2011-03-29,22,10,Mukherjee,Rajat P.,Yahoo! Inc.
+8930360,Method and apparatus for discovering and classifying polysemous word instances in web documents,2011-03-29,18,15,King,Richard Michael,Yahoo! Inc.
+8930390,Pre-cognitive delivery of in-context related information,2011-03-29,24,17,Weber,Karon A.,Yahoo! Inc.
+8938116,Pre-cognitive delivery of in-context related information,2011-03-29,24,17,Chi,Liang-Yu (Tom),Yahoo! Inc.
+8949872,Pre-cognitive delivery of in-context related information,2011-03-29,24,17,Tripodi,Samantha M.,Yahoo! Inc.
+8954500,System and method for streaming videos inline with an e-mail,2011-03-29,12,26,Vakkalanka,Surya,Yahoo! Inc.
+8955044,System and method for determining impression volumes of content items in a taxonomy hierarchy,2011-04-05,9,24,Chakrabarti,Deepayan,Yahoo! Inc.
+8965876,System and method for determining impression volumes of content items in a taxonomy hierarchy,2011-04-05,9,24,Josifovski,Vanja,Yahoo! Inc.
+8972856,System and method for determining impression volumes of content items in a taxonomy hierarchy,2011-04-05,9,24,Broder,Andrei,Yahoo! Inc.
+8977640,System and method for determining impression volumes of content items in a taxonomy hierarchy,2011-04-05,9,24,Agarwal,Deepak K.,Yahoo! Inc.
+8983996,System and method for determining impression volumes of content items in a taxonomy hierarchy,2011-04-05,9,24,Diklic,Dejan,Yahoo! Inc.
+8984406,System for generating query suggestions using a network of users and advertisers,2011-04-05,23,26,Anastasakos,Tasos,Yahoo! Inc.
+8990177,System for generating query suggestions using a network of users and advertisers,2011-04-05,23,26,Chang,Chi-Chao,Yahoo! Inc.
+8990241,System for generating query suggestions using a network of users and advertisers,2011-04-05,23,26,Tayal,Manish,Yahoo! Inc.
+8990702,System for query processing of column chunks in a distributed column chunk data store,2011-04-05,14,46,Uppala,Radha Krishna,Yahoo! Inc.
+8996305,Formal language and translator for parallel processing of data,2011-04-05,20,36,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+8996405,Formal language and translator for parallel processing of data,2011-04-05,20,36,Tomkins,Andrew S.,Yahoo! Inc.
+9002879,Formal language and translator for parallel processing of data,2011-04-05,20,36,Olston,Christopher A.,Yahoo! Inc.
+9009228,Formal language and translator for parallel processing of data,2011-04-05,20,36,Josifovski,Vanja,Yahoo! Inc.
+9009253,Formal language and translator for parallel processing of data,2011-04-05,20,36,Fontoura,Marcus,Yahoo! Inc.
+9015170,Formal language and translator for parallel processing of data,2011-04-05,20,36,Reed,Benjamin Clay,Yahoo! Inc.
+9020244,System and method for delivery of augmented messages,2011-04-12,17,15,Wroblewski,Luke,Yahoo! Inc.
+9020960,System and method for delivery of augmented messages,2011-04-12,17,15,Saft,Keith David,Yahoo! Inc.
+9020970,System and method for delivery of augmented messages,2011-04-12,17,15,Callan,Paul,Yahoo! Inc.
+9021028,System and method for delivery of augmented messages,2011-04-12,17,15,Higgins,Christopher,Yahoo! Inc.
+9027100,System and method for delivery of augmented messages,2011-04-12,17,15,Hayashi,Nathanael Joe,Yahoo! Inc.
+9031943,System and method for delivery of augmented messages,2011-04-12,17,15,Boerries,Marco,Yahoo! Inc.
+9036717,System and method for delivery of augmented messages,2011-04-12,17,15,O'Sullivan,Joseph James,Yahoo! Inc.
+9037576,System and method for delivery of augmented messages,2011-04-12,17,15,Davis,Marc,Yahoo! Inc.
+9037970,Facilitating retrieval of information within a messaging environment,2011-04-12,36,6,Ramakrishnan,T. S.,Yahoo! Inc.
+9037996,Facilitating retrieval of information within a messaging environment,2011-04-12,36,6,Cort,Frank J.,Yahoo! Inc.
+9043320,Facilitating retrieval of information within a messaging environment,2011-04-12,36,6,Torgemane,Henri,Yahoo! Inc.
+9043360,Facilitating retrieval of information within a messaging environment,2011-04-12,36,6,Zhang,Chen,Yahoo! Inc.
+9043413,Systems and methods for providing a persistent navigation bar in a word page,2011-04-19,20,14,Faris,Andrew Boath,Yahoo! Inc.
+9047370,Systems and methods for providing a persistent navigation bar in a word page,2011-04-19,20,14,Amidei,Anthony Dominic,Yahoo! Inc.
+9049250,Systems and methods for providing a persistent navigation bar in a word page,2011-04-19,20,14,Rehling,Joshua Allen,Yahoo! Inc.
+9049575,Systems and methods for providing a persistent navigation bar in a word page,2011-04-19,20,14,Garcia,Stephen Gerald,Yahoo! Inc.
+9053461,"Apparatus and methods for tracking, querying, and visualizing behavior targeting processes",2011-04-26,21,3,Khoshgozaran,Jaffar,Yahoo! Inc.
+9058366,"Apparatus and methods for tracking, querying, and visualizing behavior targeting processes",2011-04-26,21,3,Menezes,Michael J.,Yahoo! Inc.
+9064019,Dynamic bid pricing for sponsored search,2011-04-26,10,38,Valz,Duane R.,Yahoo! Inc.
+9065797,System and method to determine the validity of and interaction on a network,2011-04-26,22,64,Doliov,Stephan,Yahoo! Inc.
+9066116,Time-based analysis of related keyword searching,2011-05-03,24,22,Kehl,Thomas A.,Yahoo! Inc.
+9075917,Detecting spam messages using rapid sender reputation feedback analysis,2011-05-03,20,39,Farmer,F. Randall,Yahoo! Inc.
+9075981,Detecting spam messages using rapid sender reputation feedback analysis,2011-05-03,20,39,Morningstar,Chip,Yahoo! Inc.
+9078026,Detecting spam messages using rapid sender reputation feedback analysis,2011-05-03,20,39,Mohsenzadeh,Mohammad,Yahoo! Inc.
+9083791,Detecting spam messages using rapid sender reputation feedback analysis,2011-05-03,20,39,Sample,Neal J.,Yahoo! Inc.
+9084096,Detecting spam messages using rapid sender reputation feedback analysis,2011-05-03,20,39,"Libbey, IV",Miles A.,Yahoo! Inc.
+9087323,Method for organizing structurally similar web pages from a web site,2011-05-10,28,45,Poola,Krishna Leela,Yahoo! Inc.
+9087455,Method for organizing structurally similar web pages from a web site,2011-05-10,28,45,Chitrapura,Krishna Prasad,Yahoo! Inc.
+9092757,Interface for visually searching and navigating objects,2011-05-10,20,3,Krovitz,David,Yahoo! Inc.
+9100362,Interface for visually searching and navigating objects,2011-05-10,20,3,McCloskey,Shay,Yahoo! Inc.
+9100436,Keyword bidding strategy for novel concepts,2011-05-10,20,35,Popescul,Alexandrin,Yahoo! Inc.
+9104497,Keyword bidding strategy for novel concepts,2011-05-10,20,35,Dom,Byron Edward,Yahoo! Inc.
+9105008,Keyword bidding strategy for novel concepts,2011-05-10,20,35,Brunk,Clifford A.,Yahoo! Inc.
+9105048,Dynamical routing for text messaging,2011-05-10,18,12,Zhu,Tong,Yahoo! Inc.
+9105049,Dynamical routing for text messaging,2011-05-10,18,12,Ho,Kenneth Tsz,Yahoo! Inc.
+9110903,Automatically fetching web content with user assistance,2011-05-10,14,21,Malakar,Arup,Yahoo! Inc.
+9110927,Automatically fetching web content with user assistance,2011-05-10,14,21,Jaiswal,Amit,Yahoo! Inc.
+9110928,Automatically fetching web content with user assistance,2011-05-10,14,21,Raj,Binu,Yahoo! Inc.
+9111260,Method and system for generating a hyperlink-click graph,2011-05-17,21,2,Poblete,Barbara,Yahoo! Inc.
+9111291,Method and system for generating a hyperlink-click graph,2011-05-17,21,2,Gionis,Aristides,Yahoo! Inc.
+9117250,Social network site including contact-based recommendation functionality,2011-05-17,18,12,Chijiiwa,Ryo,Yahoo! Inc.
+9123048,Social network site including contact-based recommendation functionality,2011-05-17,18,12,Speiser,Michael L.,Yahoo! Inc.
+9128602,Social network site including contact-based recommendation functionality,2011-05-17,18,12,Aldrich,William Clement,Yahoo! Inc.
+9129263,Social network site including contact-based recommendation functionality,2011-05-17,18,12,Truong,Vu Thi,Yahoo! Inc.
+9129300,System and method for collection of advertising usage information,2011-05-24,32,9,Collins,Robert J.,Yahoo! Inc.
+9136707,Navigation assistance for search engines,2011-05-24,18,45,Chennavasin,Don,Yahoo! Inc.
+9137574,Navigation assistance for search engines,2011-05-24,18,45,Teran,Carlos,Yahoo! Inc.
+9146123,Navigation assistance for search engines,2011-05-24,18,45,Hall,Ashley Woodman,Yahoo! Inc.
+9146842,Navigation assistance for search engines,2011-05-24,18,45,Chi,Tom,Yahoo! Inc.
+9147000,System and method for identifying web communities from seed sets of web pages,2011-05-24,24,14,Lang,Kevin J.,Yahoo! Inc.
+9151618,System and method for identifying web communities from seed sets of web pages,2011-05-24,24,14,Andersen,Reid Marlow,Yahoo! Inc.
+9152702,Identifying regional sensitive queries in web search,2011-05-24,20,7,Tseng,Belle L.,Yahoo! Inc.
+9152712,Identifying regional sensitive queries in web search,2011-05-24,20,7,Zhang,Ya Nan,Yahoo! Inc.
+9152920,Identifying regional sensitive queries in web search,2011-05-24,20,7,Vadrevu,Srinivas,Yahoo! Inc.
+9152948,Identifying regional sensitive queries in web search,2011-05-24,20,7,Sun,Gordon Guo-Zheng,Yahoo! Inc.
+9152952,Identifying regional sensitive queries in web search,2011-05-24,20,7,Li,Xin Hui,Yahoo! Inc.
+9158520,Determining attention data using DNS information,2011-05-24,16,4,Schachter,Joshua E.,Yahoo! Inc.
+9158747,Sharing tagged data on the internet,2011-05-31,6,4,Dasdan,Ali,Yahoo! Inc.
+9158831,Method and system for retrieving and organizing web media,2011-05-31,20,10,White,William O.,Yahoo! Inc.
+9158851,Method and system for retrieving and organizing web media,2011-05-31,20,10,Horowitz,Steven,Yahoo! Inc.
+9160689,Sharing of content and hop distance over a social network,2011-05-31,20,41,Kim,Eun-Gyu,Yahoo! Inc.
+9160819,Sharing of content and hop distance over a social network,2011-05-31,20,41,Kalaboukis,Chris T.,Yahoo! Inc.
+9172666,Method and apparatus for discovering and classifying polysemous word instances in web documents,2011-06-07,20,15,King,Richard Michael,Yahoo! Inc.
+9183544,Intent driven search result rich abstracts,2011-06-07,22,27,Billawala,Youssef,Yahoo! Inc.
+9183564,Intent driven search result rich abstracts,2011-06-07,22,27,Lin,Yi-An,Yahoo! Inc.
+9191456,Intent driven search result rich abstracts,2011-06-07,22,27,Pfeifer,Jan,Yahoo! Inc.
+9195738,Intent driven search result rich abstracts,2011-06-07,22,27,Haas,Kevin,Yahoo! Inc.
+9195752,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Anick,Peter G.,Yahoo! Inc.
+9197607,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Bayley,Oliver T.,Yahoo! Inc.
+9197720,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Shah,Mihir D.,Yahoo! Inc.
+9210327,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Durfee,Adam,Yahoo! Inc.
+9210557,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Kapur,Shyam,Yahoo! Inc.
+9214135,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Thrall,John J.,Yahoo! Inc.
+9218364,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Hall,Ashley Woodman,Yahoo! Inc.
+9218419,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Gourlay,Alastair R.,Yahoo! Inc.
+9223861,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Hood,Stephen L.,Yahoo! Inc.
+9229980,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Rabbat,Ralph Rizkallah,Yahoo! Inc.
+9235890,Performing an ordered search of different databases in response to receiving a search query and without receiving any additional user input,2011-06-07,20,87,Kasperski,Richard Allan,Yahoo! Inc.
+9251372,Search systems and methods using in-line contextual queries,2011-06-07,66,77,Kraft,Reiner,Yahoo! Inc.
+9262439,Initial impression analysis tool for an online dating service,2011-06-07,20,131,Pettinati,Lucas Visvikis,Yahoo! Inc.
+9262518,Initial impression analysis tool for an online dating service,2011-06-07,20,131,Carey,Hillary A.,Yahoo! Inc.
+9262532,Graphical/rich media ads in search results,2011-06-07,21,10,Shriwas,Rajendra,Yahoo! Inc.
+9262555,Graphical/rich media ads in search results,2011-06-07,21,10,Lodhiya,Kashyap,Yahoo! Inc.
+9262764,Behavioral predictions based on network activity locations,2011-06-07,24,28,Law,Mark Nicholas,Yahoo! Inc.
+9268546,Behavioral predictions based on network activity locations,2011-06-07,24,28,Pai,Ramesh G.,Yahoo! Inc.
+9268716,Behavioral predictions based on network activity locations,2011-06-07,24,28,Riise,Soren,Yahoo! Inc.
+9268856,Behavioral predictions based on network activity locations,2011-06-07,24,28,Patel,Devesh T.,Yahoo! Inc.
+9268873,System and method for monitoring user interaction with web pages,2011-06-07,16,50,Wilson,Steve M.,Yahoo! Inc.
+9269025,System and method for monitoring user interaction with web pages,2011-06-07,16,50,Thomas,Oran M.,Yahoo! Inc.
+9270767,System and method for monitoring user interaction with web pages,2011-06-07,16,50,Beal,Steven K.,Yahoo! Inc.
+9271147,System and method for monitoring user interaction with web pages,2011-06-07,16,50,Gorman,Robert F.,Yahoo! Inc.
+9274691,Toolbar signature,2011-06-07,7,2,Tomkins,Andrew S.,Yahoo! Inc.
+9275118,Toolbar signature,2011-06-07,7,2,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+9275126,Toolbar signature,2011-06-07,7,2,Marlow,Cameron Alexander,Yahoo! Inc.
+9280528,Online media exchange,2011-06-14,17,51,Eliahou,Uzi,Yahoo! Inc.
+9280603,Online media exchange,2011-06-14,17,51,Kalter,Scott D.,Yahoo! Inc.
+9280779,Online media exchange,2011-06-14,17,51,Patel,Dorab,Yahoo! Inc.
+9286569,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,Puranik,Rajiv,Yahoo! Inc.
+9288079,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,Kumar,Sanjeev Shankaran,Yahoo! Inc.
+9292863,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,Ting,Chyr-Chong Joseph,Yahoo! Inc.
+9304665,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,McCune,Timothy R.,Yahoo! Inc.
+9305022,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,Ramamurthi,Jay,Yahoo! Inc.
+9305051,Efficient caching for dynamic webservice queries using cachable fragments,2011-06-14,20,8,Haynie,Scott Austin,Yahoo! Inc.
+9311655,Mobile device tracking and location awareness,2011-07-05,20,18,Davis,Marc,Yahoo! Inc.
+9317602,Mobile device tracking and location awareness,2011-07-05,20,18,Bennett,Jeffery,Yahoo! Inc.
+9323848,Mobile device tracking and location awareness,2011-07-05,20,18,Blinnikka,Tomi J.,Yahoo! Inc.
+9324093,Method for segmenting webpages by parsing webpages into document object modules (DOMs) and creating weighted graphs,2011-07-05,15,1,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+9332432,Method for segmenting webpages by parsing webpages into document object modules (DOMs) and creating weighted graphs,2011-07-05,15,1,Chakrabarti,Deepayan,Yahoo! Inc.
+9342208,Method for segmenting webpages by parsing webpages into document object modules (DOMs) and creating weighted graphs,2011-07-05,15,1,Punera,Kunal,Yahoo! Inc.
+9344523,Real time expert dialog service,2011-07-05,30,4,Ayloo,Kalyan,Yahoo! Inc.
+9348788,Deriving user intent from a user query,2011-07-05,22,39,Shanmugasundaram,Jayavel,Yahoo! Inc.
+9348913,Deriving user intent from a user query,2011-07-05,22,39,Srivastava,Utkarsh Hriday,Yahoo! Inc.
+9349129,Deriving user intent from a user query,2011-07-05,22,39,Vee,Erik N.,Yahoo! Inc.
+9363337,Deriving user intent from a user query,2011-07-05,22,39,Yahia,Sihem Amer,Yahoo! Inc.
+9367355,"File splitting, scalable coding, and asynchronous transmission in streamed data transfer",2011-07-05,24,7,Doron,Amir,Yahoo! Inc.
+9367633,"File splitting, scalable coding, and asynchronous transmission in streamed data transfer",2011-07-05,24,7,Dunning,Ted E.,Yahoo! Inc.
+9367639,Context avatar,2011-07-12,27,6,Nair,Rahul,Yahoo! Inc.
+9377319,Associating and linking compact disc metadata,2011-07-19,3,4,Joshlin,Sean C,Yahoo! Inc.
+9380009,Associating and linking compact disc metadata,2011-07-19,3,4,Kindig,Bradley D.,Yahoo! Inc.
+9384408,Associating and linking compact disc metadata,2011-07-19,3,4,Dunning,Ted E.,Yahoo! Inc.
+9386432,Associating and linking compact disc metadata,2011-07-19,3,4,Archibald,Christopher P,Yahoo! Inc.
+9392093,Smart recovery of asynchronous processing,2011-07-19,20,2,Ho,Randy,Yahoo! Inc.
+9392572,Smart recovery of asynchronous processing,2011-07-19,20,2,Nair,Kishore,Yahoo! Inc.
+9396261,Smart recovery of asynchronous processing,2011-07-19,20,2,Bhootada,Yogesh,Yahoo! Inc.
+9400843,Smart recovery of asynchronous processing,2011-07-19,20,2,Lam,Brian,Yahoo! Inc.
+9401948,Smart recovery of asynchronous processing,2011-07-19,20,2,Kamath,Durgadatt R.,Yahoo! Inc.
+9405846,System and method for enhancing recorded radio or television programs with information on the world wide web,2011-07-19,14,43,Incentis Carro,Fernando,Yahoo! Inc.
+9407963,System and method for detecting a web page template,2011-07-26,14,4,Chakrabarti,Deepayan,Yahoo! Inc.
+9411829,System and method for detecting a web page template,2011-07-26,14,4,Punera,Kunal,Yahoo! Inc.
+9411900,System and method for detecting a web page template,2011-07-26,14,4,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+9413698,System and method for budgeted generalization search in hierarchies,2011-08-02,22,9,Olston,Christopher A.,Yahoo! Inc.
+9418141,System and method for budgeted generalization search in hierarchies,2011-08-02,22,9,Josifovski,Vanja,Yahoo! Inc.
+9430772,System and method for budgeted generalization search in hierarchies,2011-08-02,22,9,Ravikumar,Shanmugasundaram,Yahoo! Inc.
+9436777,System and method for budgeted generalization search in hierarchies,2011-08-02,22,9,Tomkins,Andrew S.,Yahoo! Inc.
+9436950,System and method for budgeted generalization search in hierarchies,2011-08-02,22,9,Fontoura,Marcus,Yahoo! Inc.
+9438540,Mobile authentication framework,2011-08-02,24,2,Naaman,Mor,Yahoo! Inc.
+9448983,Mobile authentication framework,2011-08-02,24,2,King,Simon P.,Yahoo! Inc.
+9460518,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Pollock,Heidi Ann,Yahoo! Inc.
+9465881,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Li,Chen Ming,Yahoo! Inc.
+9465956,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Jiang,Zhaowei Charlie,Yahoo! Inc.
+9466071,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Temkin,Michael Jeremy,Yahoo! Inc.
+9467409,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Shaham,Boaz Aharon,Yahoo! Inc.
+9471696,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Liang,James J.,Yahoo! Inc.
+9477717,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Johanson,Cynthia,Yahoo! Inc.
+9479832,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Dubinko,Micah Joel,Yahoo! Inc.
+9485300,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Chan,Hei,Yahoo! Inc.
+9488487,Managing page sizes for a mobile device using estimation of content customizer techniques,2011-08-09,24,21,Leung,Jeff,Yahoo! Inc.
+9489187,System and method for payment over a series of time periods in an online market with budget and time constraints,2011-08-09,8,4,Gonen,Rica,Yahoo! Inc.
+9491502,System and method for payment over a series of time periods in an online market with budget and time constraints,2011-08-09,8,4,Pavlov,Elan Y.,Yahoo! Inc.
+9495716,Progressive capture of prospect information for user profiles,2011-08-16,18,9,Tesler,Lawrence G.,Yahoo! Inc.
+9497251,Progressive capture of prospect information for user profiles,2011-08-16,18,9,Chu,Denis,Yahoo! Inc.
+9519659,Trail-based exploration of a repository of documents,2011-08-16,30,30,Meredith,Daniel N.,Yahoo! Inc.
+9524509,Trail-based exploration of a repository of documents,2011-08-16,30,30,Bohannon,Philip L.,Yahoo! Inc.
+9529858,Trail-based exploration of a repository of documents,2011-08-16,30,30,Srivastava,Utkarsh Hriday,Yahoo! Inc.
+9535988,Trail-based exploration of a repository of documents,2011-08-16,30,30,Reed,Benjamin Clay,Yahoo! Inc.
+9542384,Efficient online computation of diverse query results,2011-08-16,12,7,Srivastava,Utkarsh Hriday,Yahoo! Inc.
+9542619,Efficient online computation of diverse query results,2011-08-16,12,7,Bhat,Prashanth Balakrishna,Yahoo! Inc.
+9558175,Efficient online computation of diverse query results,2011-08-16,12,7,Shanmugasundaram,Jayavel,Yahoo! Inc.
+9558180,Efficient online computation of diverse query results,2011-08-16,12,7,Yahia,Sihem Amer,Yahoo! Inc.
+9563850,Efficient online computation of diverse query results,2011-08-16,12,7,Vee,Erik N.,Yahoo! Inc.
+9569529,Determining a relevance function based on a query error derived using a structured output learning technique,2011-08-23,16,3,Chapelle,Olivier,Yahoo! Inc.
+9569696,System and method for detecting human judgment drift and variation control,2011-08-23,15,7,Bridgewater,Jesse,Yahoo! Inc.
+9576253,System and method for detecting human judgment drift and variation control,2011-08-23,15,7,Wai,Lawrence,Yahoo! Inc.
+9582815,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Tam,Chung-Man,Yahoo! Inc.
+9588784,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Lee,Kevin C.,Yahoo! Inc.
+9591086,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Lu,Qi (NMN),Yahoo! Inc.
+9594438,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Walther,Eckart,Yahoo! Inc.
+9596205,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Diab,Ali,Yahoo! Inc.
+9600169,Search systems and methods with integration of aggregate user annotations,2011-08-23,19,13,Ku,David Cho-Lun,Yahoo! Inc.
+9600800,System and method for automatically ranking lines of text,2011-08-23,24,1,Metzler,Donald,Yahoo! Inc.
+9602956,System and method for automatically ranking lines of text,2011-08-23,24,1,Kanungo,Tapas,Yahoo! Inc.
+9607077,Consensus-based reliable messaging,2011-08-23,23,9,Cooper,Brian Frank,Yahoo! Inc.
+9607309,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Fukuda,Matthew Kenjiro,Yahoo! Inc.
+9619291,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Trevor,Jonathan,Yahoo! Inc.
+9621648,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Ho,Edward J.,Yahoo! Inc.
+9626686,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Wascovich,Dan James,Yahoo! Inc.
+9633119,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,"Ott, IV",E. Stanley,Yahoo! Inc.
+9633272,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Quoc,Michael,Yahoo! Inc.
+9633354,Social namespace addressing for non-unique identifiers,2011-08-23,20,52,Farmer,F. Randall,Yahoo! Inc.
+9635401,Facilitated search for online collaboration platform,2011-08-23,16,6,Malepati,Naga Viswanathan,Yahoo! Inc.
+9646327,Facilitated search for online collaboration platform,2011-08-23,16,6,Nieters,James,Yahoo! Inc.
+9654839,Facilitated search for online collaboration platform,2011-08-23,16,6,Barlok,Todd Christopher,Yahoo! Inc.
+9659214,Facilitated search for online collaboration platform,2011-08-23,16,6,"Jones, III",Claude,Yahoo! Inc.
+9661066,Facilitated search for online collaboration platform,2011-08-23,16,6,Gossain,Vineet,Yahoo! Inc.
+9661100,Facilitated search for online collaboration platform,2011-08-23,16,6,Griffith,Petra,Yahoo! Inc.
+9665629,Facilitated search for online collaboration platform,2011-08-23,16,6,Crampton,Matthew Catrow,Yahoo! Inc.
+9668375,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Fu,Yun,Yahoo! Inc.
+9672288,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Chi,Liang-Yu (Tom),Yahoo! Inc.
+9680897,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Yurievich Pavlov,Dmitry,Yahoo! Inc.
+9684449,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Manavoglu,Eren,Yahoo! Inc.
+9685158,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Heymann,Paul,Yahoo! Inc.
+9686400,System and method for automatically organizing bookmarks through the use of tag data,2011-08-30,10,15,Xu,Zhichen,Yahoo! Inc.
+9699258,Authentication seal for online applications,2011-08-30,20,12,Gupta,Aanchal,Yahoo! Inc.
+9710433,Authentication seal for online applications,2011-08-30,20,12,Blessing,Christopher Michael,Yahoo! Inc.
+9710759,Authentication seal for online applications,2011-08-30,20,12,Hendricks,Daniel Alexander,Yahoo! Inc.
+9720882,Authentication seal for online applications,2011-08-30,20,12,"Geishecker, III",John Andrew,Yahoo! Inc.
+9721228,Authentication seal for online applications,2011-08-30,20,12,Tesler,Lawrence G.,Yahoo! Inc.
+9721389,Authentication seal for online applications,2011-08-30,20,12,Bejar,Arturo,Yahoo! Inc.
+9727901,Authentication seal for online applications,2011-08-30,20,12,Agarwal,Naveen,Yahoo! Inc.
+D585421,Authentication seal for online applications,2011-08-30,20,12,Cline,Lee Kimball,Yahoo! Inc.
+D587726,Method and apparatus for a search-enabled remote control device,2011-09-06,24,53,Zito,David,Yahoo! Inc.
+D588604,Method and apparatus for a search-enabled remote control device,2011-09-06,24,53,Essas,Joseph,Yahoo! Inc.
+D589970,Dynamic layout for a search engine results page on implicit user feedback,2011-09-06,20,30,LuVogt,Christopher C.,Yahoo! Inc.
+D590412,Dynamic layout for a search engine results page on implicit user feedback,2011-09-06,20,30,Cantu-Paz,Erick,Yahoo! Inc.
+D590413,System and method for wireless communication between previously known and unknown users,2011-09-20,20,76,Lee,Man-ho Lawrence,Yahoo! Inc.
+D594464,System and method for wireless communication between previously known and unknown users,2011-09-20,20,76,Mgrdechian,Richard,Yahoo! Inc.
+D596644,Academic filter,2011-09-20,34,5,Victor,Justin,Yahoo! Inc.
+D596645,Academic filter,2011-09-20,34,5,Jessus,Nicolas,Yahoo! Inc.
+D602029,Systems and methods for determining a tag match ratio,2011-09-20,18,4,Zhao,Eric Xiaoming,Yahoo! Inc.
+D602943,Systems and methods for determining a tag match ratio,2011-09-20,18,4,Guo,Lei,Yahoo! Inc.
+D603419,Systems and methods for determining a tag match ratio,2011-09-20,18,4,Li,Xin Hui,Yahoo! Inc.
+D603420,Techniques for crawling dynamic web content,2011-09-20,28,13,Karvaje,Shreekanth,Yahoo! Inc.
+D604306,Techniques for crawling dynamic web content,2011-09-20,28,13,Prabhakar,Bangalore Subbaramaiah,Yahoo! Inc.
+D605655,Techniques for crawling dynamic web content,2011-09-20,28,13,Ganesan,Shivakumar,Yahoo! Inc.
+D607002,Techniques for crawling dynamic web content,2011-09-20,28,13,Raj,Binu,Yahoo! Inc.
+D609242,Techniques for crawling dynamic web content,2011-09-20,28,13,Kumar,Yarram Sunil,Yahoo! Inc.
+D611947,Automated friend finder,2011-09-27,24,3,Kalaboukis,Chris T.,Yahoo! Inc.
+D611948,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Goldenberg,Georgiy,Yahoo! Inc.
+D612860,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Bae,Joonsuk,Yahoo! Inc.
+D619141,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Rajendran,Ramkumar,Yahoo! Inc.
+D619612,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Nagaraj,Sunil,Yahoo! Inc.
+D624089,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Jayakumar,Nanda Kumar,Yahoo! Inc.
+D638025,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Rao,Anand Biligiri,Yahoo! Inc.
+D638026,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Lim,Kian-Tat,Yahoo! Inc.
+D704732,Accelerated and reproducible domain visitor targeting,2011-09-27,20,6,Izrailevsky,Yury A.,Yahoo! Inc.
+D728589,Personalized web search ranking,2011-10-04,16,4,Kakade,Sham,Yahoo! Inc.
+D736224,Personalized web search ranking,2011-10-04,16,4,Goel,Sharad,Yahoo! Inc.
+D737289,Personalized web search ranking,2011-10-04,16,4,Strehl,Alexander L.,Yahoo! Inc.
+D738391,Personalized web search ranking,2011-10-04,16,4,Langford,John,Yahoo! Inc.
+D754185,System and method for generating an online summary of a collection of documents,2011-10-11,19,8,Zhao,Eric Xiaoming,Yahoo! Inc.
+D761833,System and method for generating an online summary of a collection of documents,2011-10-11,19,8,Li,Xin Hui,Yahoo! Inc.
+D774056,Background contextual conversational search,2011-10-11,25,12,Maghoul,Farzin,Yahoo! Inc.
+D775183,Universal device identifier for globally identifying and binding disparate device identifiers to the same mobile device,2011-10-11,20,12,Rajam,Surendra Sadanand,Yahoo! Inc.
+D776140,Universal device identifier for globally identifying and binding disparate device identifiers to the same mobile device,2011-10-11,20,12,Srinivasan,Venkatachary,Yahoo! Inc.
