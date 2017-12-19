@@ -1,0 +1,110 @@
+Title: Repair Request Form Help 
+Author: For HomeLine
+Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/homeline.jpg');"></div>
+<input type="hidden" name="name" value="Repair Request Form Help"/>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Repair Request Form Help</h3>
+<p>Answer the following questions to fill out a repair request form through HomeLine.</p>
+Q(welcome): Welcome. What is your name?
+X:
+	Q(tenantname): Hello <x>welcome</x>! Before we begin, I will need some basic information. What is the tenant's name? (First and last name)
+	X:
+		Q(tenantaddress):Thanks. Now what is your (the tenant's) full address (the apartment in question)? (example: 123 Example Street Anytown, Everywhere 12345)
+		X:
+			Q(landlordname): Thank you for that information. Now what is your landlord's full name? (First and last name)
+			X:
+				Q(landlordaddress): Got it,thanks.Next,what is your landlord's full street address?(example: 123 Example Street Anytown, Everywhere 12345)
+				X:
+					Q(help): What are seeking help with?
+					A(1): Residential Repairs
+						Q(repair):Finally, what do you need repaired? (List only one) <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/RepairRequestForm.docx"/>
+						X:
+							Q(needs): Do you have any other repair needs?
+							A: Yes
+								Q(issues): Please mention it here
+								X:
+									Q(otherneeds): Do you have any other repair needs?
+									A: Yes
+										Q(moreneeds1): Please mention it here
+										X:
+											Q(otherneeds1): Do you have any other repair needs?
+											A: Yes
+												Q(moreneeds2): Please mention it here
+												X:
+													Q(needsmore): If you have any more needs, please send the landlord a followup
+													A: Continue
+														Q(continue):GOTO:print
+											A: No
+												Q(noneeds2):GOTO:print
+
+									A: No
+										Q(noneeds1):GOTO:print
+							A: No
+								Q(noneeds):GOTO:print						
+					A(2): Utility Bill Request	
+						Q(utility): What utility bill do you need? (Examples: Electricity, Gas, Water)
+						X:
+							Q(thanks): That's all the information I need. GOTO:print					
+					A(3): Security Deposit
+						Q(date): What date did you vacate the apartment? (Month Day,Year, example January 2, 2017)
+						X:
+							Q(deposit): Thank you for that info. How much was your security deposit before interest? (Example: $2500.00)
+							X:
+								Q(interest): How much is that with interest? (Example: $2645.23)
+								X:
+									Q(forwarding): Where would you like that to be forwarded? (Example: 111 New Street, Here, Somewhere 00000)
+									X:
+										Q(thanks2): That is all the info I need. GOTO:print
+					A(4): Retaliation Notice
+						Q(retaliation): What sort of notice were you given by your landlord? (Example: rent increase, reduction of electricity)
+						X:
+							Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
+							X:
+								Q(thanks3): That is all the info I need. GOTO:print
+					A(5): Privacy Violation
+						Q(privacy): I have all the information I need. GOTO:print
+					A(6): Neighbor Violation
+						Q(neighbor1): What is the name of the neighbor who has been causing an incident? (First and last name)
+						X:
+							Q(date1): When did this incident occur? (Month Day, Year)
+							X:
+								Q(incident1): What was this incident?  (example: Loud noise, violence, trespassing)
+								X:
+									Q(more): Do you have another incident to report?
+									A(yes): Yes
+										Q(neighbor2): What is the name of the neighbor who has been causing an incident? (First and last name)
+										X:
+											Q(date2): When did this incident occur? (Month Day, Year)
+											X:
+												Q(incident2): What was this incident?  (example: Loud noise, violence, trespassing)
+												X:
+													Q(more2): Do you have another incident to report?
+													A(yes2): Yes
+														Q(followup): Please send your landlord a followup.
+														A:Continue
+															Q(continue2):GOTO:print
+													A(no2):
+														Q(thanks4): That is all the info I need. GOTO:print
+									A(no): No
+										Q(thanks5): That is all the info I need. GOTO:print
+					A(7): Guest Rights
+						Q(guest):GOTO:sorry
+					A(8): Demand for Property
+						Q(property):GOTO:sorry
+					A(9): Request for Copy of Lease
+						Q(lease):GOTO:sorry
+					A(10): Request for Invoice for Bed Bug Eridication
+						Q(bedbug):GOTO:sorry
+					A(11): Request for Invoice for Repairs
+						Q(invoicerepairs):GOTO:sorry
+
+Q(print): Would you like to save a copy of this form? (will open in another window as a downloadable document)
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+	Q(yesprint): Here you go GOTO:bye
+A: No
+	Q(noprint):GOTO:bye
+
+Q(sorry): Unfortunately for now, this section is currently unavailable. Have a nice day!
+
+Q(bye): have a good day
