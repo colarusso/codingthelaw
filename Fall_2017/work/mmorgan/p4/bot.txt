@@ -1,0 +1,68 @@
+Before: <input type="hidden" name="name" value="Client Profile"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/mmorgan/p4/Information.docx"/>
+
+
+Q(Name):What is the Client's Name?
+X:
+	Q(zip):Where is <x>Name</X> located (Zip Code)?
+	X:number
+		Q(age):How old is <x>Name</X>?
+		X:number
+			Q(dependents):How many dependent's does <x>Name</X> have? (If none, enter 0)
+			X:number
+				Q(married):Is <x>Name</X> married?
+				A:Yes
+					Q(1.1.1.1.1.1):GOTO:owed
+				A:No
+					Q(owed):How much is the debt for?
+					X:number
+						Q(income):How much does <x>Name</X> make annually before taxes?
+						X:number
+							Q(source): Where does <x>Name</X>'s income come from? (If more than one, enter one at a time)
+							X:
+								Q(source2):Next Source
+								X:
+									Q(source3):Next Source
+									X:
+										Q(next):GOTO:expenses
+									A:No Other Sources
+										Q(next2):GOTO:expenses
+								A:No Other Sources
+									Q(expenses):What is <x>Name</X>'s average total expenses per month?
+									X:number
+										Q(agency):What agency is claiming the debt?
+										X:
+											Q(old):How old is the debt (in years)?
+											X:number
+												Q(secured):Is the debt secured or unsecured?
+												A(Secured):Secured
+													Q(go):GOTO:payment
+												A(Unsecured):Unsecured
+													Q(paid):How much, if any, has <x>Name</X> paid on the debt?
+													X:number
+														Q(payment):Is the <x>Name</X> able to pay a lump sum or are they looking to make payments?
+														A:Lump sum
+															Q(goto):GOTO:what
+														A:Payments
+															Q(what):What is the debt for (credit cards, medical expenses, etc...)?
+															X:
+																Q(bankruptcy):Has <x>Name</X> filed for bankruptcy within the past 7 years?
+																A(Yes):Yes
+																	Q(gotosign):GOTO:cosign
+																A(No):No
+																	Q(cosign):Are there any cosigners for the debt?	
+																	A:Yes
+																		Q(relationship):What is their relationship to <x>Name</X>?	
+																		X:
+																			Q(gotosave):GOTO:save
+																	A:No
+																		Q(save):Ready to save your document?
+																		A:[javascript:save2('mailmerge.csv',csv())]No
+																		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Yes
+
+
+
+
+
+
+
