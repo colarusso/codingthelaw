@@ -1,0 +1,116 @@
+Q(hello): Hello! Would you like some assistance with Property Law?
+A: Yes! 
+	Q(1.1):GOTO:name
+A: No.  
+	Q(1.2):GOTO:goodbye
+
+Q(name): Great! First, let's get your name.
+X:text
+	Q(2.1):GOTO:topics
+
+Q(goodbye): I'm sorry, there isn't anything more I can help you with. Goodbye.
+A: Start over?
+	Q(3.1):GOTO:hello
+
+
+Q(topics): Hi, <x>name</x>, what can I help you with?
+A: Rule Against Perpetuities ("RAP")
+	Q(4.1):GOTO:RAP
+A: Landlord/Tenant issues
+	Q(4.2):GOTO:LanTen
+
+Q(RAP): The Rule Against Perpetuities "RAP" can be difficult! Lots of people struggle with this topic. We'll take it step by step. Are you ready to understand RAP?
+A: I'm ready. Let's go!
+	Q(5.1):GOTO:R_one
+
+Q(R_one): The RAP only applies to conveyances where a contingent interest exists. Is there a contingent interest?
+A: There is a contingent interest!
+	Q(6.1):GOTO:R_two
+A: There is not a contingent interest.
+	Q(6.2): Then the RAP doesn't apply and you're done! GOTO:hello
+A: Contingent interest? What's that?
+	Q(6.3): An interest is contingent if there is a condition precedent to the interest vesting. In other words, there is an occurrence or nonoccurrence of an event prior to the interest vesting.
+	A: Great, I got it now.
+		Q(6.3.1):GOTO:R_one
+	A: What does it mean for an interest to vest?
+		Q(6.3.2): An interest vests when there are no conditions precedent. In other words, while the interest may not become immediately possessory, no other events must occur for the interest to be guaranteed to the beneficiary.
+		A: Great, I got it now!
+			Q(6.3.2.1):GOTO:R_one
+		A: What's a "conveyance?"
+			Q(6.3.2.2):GOTO:6.3.3 
+	A: What's a "conveyance?"
+		Q(6.3.3): A conveyance is a granting of land or personal property from one person or entity to another person or entity.
+		A: That makes sense!
+			Q(6.3.3.1):GOTO:R_one
+		A: What does it mean for an interest to vest?
+			Q(6.3.3.2):GOTO:6.3.2  
+
+Q(R_two): Great! The next step is to determine when the interest is deemed to be created. This will help us in the next few steps.
+A: When the grantor dies.
+	Q(7.1):GOTO:R_three
+A: At delivery of the deed.
+	Q(7.2):GOTO:R_three
+A: How do I tell?
+	Q(7.3): If the conveyance is made in a will, the interest is created at the death of the testator. If the conveyance is an inter vivos transfer, the interest is created at delivery of the conveyance.
+	A: Got it!
+		Q(7.3.1):GOTO:R_two
+
+Q(R_three): Now comes the hard part. Figure out who is the worst-case life in being. Sometimes this is called a measuring life.
+A: Ok, I think I know who is the worst-case life in being!
+	Q(8.1):GOTO:R_four
+A: What is a life in being?
+	Q(8.2): A life in being is an ascertainable individual at the time the interest is created. In other words, they are alive and we know who they are at the time the interest is created. In an conveyance that names an "A" we can assume A was born and a named individual at the time the conveyance was written. Compare that with "A's children" where we may not be sure who all of A's children are until A dies.
+	A: Alright, that helps, I think I've got it!
+		Q(8.2.1):GOTO:R_four
+	A: How do I know which is the worst case life in being?
+		Q(8.2.2):GOTO:8.3
+A: How do I know which is the worst-case life in being?
+	Q(8.3): Sometimes it's difficult to tell. Usually it's the last person who dies that was alive at the creation of the interest for the next class to receive the benefit. It also could be the individual that dies that closes a class gift. A class is a group of people, like someone's children. We won't know who are the children of a person until they dies, because we assume a person can have children up to the point of death. Ignore science for now (Think invetro fertilization).
+	A: I think I've got it, but I may need more help.
+		Q(8.3.1): Ok, you can always go here (insert link).
+		A: Thanks!
+			Q(8.3.1.1):GOTO:R_four
+	A: What is a life in being?
+		Q(8.3.2):GOTO:8.2
+
+Q(R_four): When, after the death of the worst case life in being, does the interest vest?
+A: More than twenty-one years.
+	Q(9.1): Then this interest is void because it violates the RAP!
+A: Less than twenty-one years.
+	Q(9.2): Then this interest is good! Yay!
+A: I have no idea if it does.
+	Q(9.3): If the interest vests more than twenty-one years after the death of the worst case life in being at the creation of the interest then it violates the RAP. For example, if an individual needs to reach the age of 30 before the interest vests, and they are born the day the worst case life in being dies, then the interest is void because the interest vests more than twenty-one years after the death of the worst case life in being.
+	A: I think I've got it, thanks!
+		Q(9.3.1):GOTO:R_five
+
+Q(R_five): You've successfully completed evaluating whether an interest violates the RAP. Remember to follow these steps for each interest in the conveyance. 
+A: YAY!
+	Q(10.1):GOTO:hello
+A: I think I got it, but where can I go for more practice?
+	Q(10.2): I can give you some very common hypothetical conveyances if that would help?
+	A: Yes! Let's test this!
+		Q(10.2.1):GOTO:R_hypo
+
+
+
+Q(LanTen): With landlord and tenant issues, this program will cover common landlord breaches. These breaches include Breach of the Covenant of Quiet Enjoyment, Warranty of Habitability, Constructive Eviction, and Partial Actual Eviction. This will help you figure out which of these may be applicable to your issue. Ready to get started?
+A: Yes!
+	Q(11.1):GOTO:LanTen_one
+A: No.
+	Q(11.2):GOTO:goodbye
+
+Q(LanTen_one): Do you see any of the following in your fact pattern hypothetical?
+A: The landlord is interfering with the Tenant's enjoyment of the premise. For example, the landlord is making a nuisance by loud noise. The landlord is coming onto the property without notifying the tenant.
+	Q(12.1):GOTO:LanTen_Quiet  
+A: The landlord has built or allowed to be built a permanent physical structure on the leased premise, no matter how slight an encroachment.
+	Q(12.2):GOTO:LanTen_Actual
+A: The landlord has failed to repair an essential aspect of the premise such that the tenant cannot safely live there anymore. Examples would be that the apartment does not have any heat and is located in a particularly cold environment. Another example would be that the landlord has failed to repair a bathroom and there is only one bathroom for the apartment.
+	Q(12.3):GOTO:LanTen_Habit
+A: The premise is in such disrepair or so unusable and the landlord refuses to repair or fix the issue that the tenant has left the premise.
+	Q(12.4):GOTO:LanTen_Cons
+
+Q(LanTen_Quiet): If the landlord has done any one of those examples, or something like it, then there is probably a breach of the Covenant of Quiet Enjoyment.
+Q(LanTen_Habit): If the landlord has done any one of those examples, or something like it, then there is probably a breach warranty of habitability.
+Q(LanTen_Cons): If the landlord has done any one of those examples, or something like it, then there is probably a Constructive Eviction. Remember, the tenant must leave in order for there to be a constructive eviction.
+Q(LanTen_Actual): If the landlord has done any one of those examples, or something like it, then there is probably a Partial Actual Eviction. Remember there must be a physical encroachment of a permanent nature on the leased premise in order for there to be a partial actual eviction.
+
