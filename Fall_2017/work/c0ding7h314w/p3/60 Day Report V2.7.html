@@ -1,0 +1,1064 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<HEAD>
+	<title>Untitled QnA</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon" href="http://www.qnamarkup.org/images/QnA_300.png"/> 
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"><style>	
+	body {
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	}
+
+	#rawmarkup{
+		display:none;
+	}
+	
+	#QandA img{
+		width:100%;
+	}
+
+	div.main{
+		min-width:300px;
+		max-width:650px;
+		margin: 0 auto;
+	padding:0 5px 0 5px;
+		}
+	div.frame{
+		float:left;
+		width:100%;
+		margin:5px 0 5px 0;
+	}
+	div.full{
+		float:left;
+		width:100%;
+	}
+	.button{
+		padding:8px;
+		margin:8px 0 0px 0;
+		width:100%;
+	}
+	div.question_text{
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#ffffff;
+		min-width:30px;
+		background:#5489eb;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-right:45px;
+	}
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
+
+	div.question_arrow{
+		float:left; 
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent; 
+		border-right: 10px solid transparent; 
+		border-top: 15px solid #5489eb;
+		margin:0 20px;
+	}
+	div.ans_text{
+		float:right;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color:#000000;
+		min-width:30px;
+		background:#eeeeee;
+		border-radius: 15px;
+		padding:10px 15px 14px 15px;
+		margin-left:45px;
+	}
+	div.ans_arrow{
+		float:right; 
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent; 
+		border-right: 5px solid transparent; 
+		border-top: 15px solid #eeeeee;
+		margin:0 20px;
+	}
+	div.choices{
+		float:left;
+		width:100%;
+		margin:15px 0 0 0;
+	}
+	div.standard_buttons{
+		float:left;
+		width:100%;
+		margin-top:5px;
+		border-top: 1px solid #ddd; 
+		padding-top:12px;		
+	}
+	div.credits{
+		float:left;
+		dispaly:none;
+		width:100%;
+		background:#eee;
+		margin:0px 0 15px 0;
+	}
+	div.credit_text{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		padding:4px 15px 10px 15px;
+	}
+	li.error{
+		list-style-type: none;
+		background:#ffdddd;
+		margin: 10px 0 0 0;
+		padding: 5px;
+	}
+
+	.qpad {
+		float:left;
+		padding:0 15px;
+	}
+	
+	a.sbutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.sbutton:hover, a.sbutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:48%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 3px 0;
+		border: solid 1px #888;
+		text-align:center;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	a.qabutton:hover, a.qabutton:active {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		width:100%;
+		background: #ddd;
+		border-radius: 8px;
+		padding:10px 0px 12px 0;
+		margin: 0 0 8px 0;
+		border: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+
+	div.xdiv {
+		float:left;
+		width:100%;
+		margin: 0 0 8px 0;
+		background: #eee;
+		border: solid 1px #888;
+		border-radius: 8px;
+	}	
+
+	input.xinput {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		float:left;
+		width:100%;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #fff;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding:10px 10px 12px 10px;
+		border: solid 0px #888;
+		border-bottom: solid 1px #888;
+		text-align:left;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton {
+		float:left;
+		width:100%;
+		text-align:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		background: #eee;
+		border-radius: 8px;
+		padding:10px 0px 12px 0px;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	a.xbutton:hover, a.xbutton:active {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		background: #ddd;
+	}
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/en/7/71/Suffolk_University.png');"></div>
+<h2 style="text-align:center;">Guardian's Care Plan/Report</h2>
+<p>This guided interview is intended to help Suffolk University Law School's Health Law Clinic student attorneys gather the necessary information from their clients in order to complete the <a href="http://www.mass.gov/courts/docs/forms/probate-and-family/mpc821-guardianship-care-plan-report-incapacitated-person-fill.pdf">Guardian's Care Plan/Report (MPC 821)</a>. At the end of the interview, you can download the answers to an Excel spreadsheet to review and transcribe onto the report (a link to download the report is above). </p>
+<p>Please be aware this is a class project and is still under development.</p>
+<p>Please answer the following questions accurately and honestly.</p>
+
+<div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Before%3A%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2FFall_2017%2Fcss%2Fstyle.css%22%3E%0D%0A%3Cdiv+id%3D%22icon%22+style%3D%22background-size%3A+110px+99px%3Bbackground-image%3A+url%28%27https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F7%2F71%2FSuffolk_University.png%27%29%3B%22%3E%3C%2Fdiv%3E%0D%0A%3Ch2+style%3D%22text-align%3Acenter%3B%22%3EGuardian%27s+Care+Plan%2FReport%3C%2Fh2%3E%0D%0A%3Cp%3EThis+guided+interview+is+intended+to+help+Suffolk+University+Law+School%27s+Health+Law+Clinic+student+attorneys+gather+the+necessary+information+from+their+clients+in+order+to+complete+the+%3Ca+href%3D%22http%3A%2F%2Fwww.mass.gov%2Fcourts%2Fdocs%2Fforms%2Fprobate-and-family%2Fmpc821-guardianship-care-plan-report-incapacitated-person-fill.pdf%22%3EGuardian%27s+Care+Plan%2FReport+%28MPC+821%29%3C%2Fa%3E.+At+the+end+of+the+interview%2C+you+can+download+the+answers+to+an+Excel+spreadsheet+to+review+and+transcribe+onto+the+report+%28a+link+to+download+the+report+is+above%29.+%3C%2Fp%3E%0D%0A%3Cp%3EPlease+be+aware+this+is+a+class+project+and+is+still+under+development.%3C%2Fp%3E%0D%0A%3Cp%3EPlease+answer+the+following+questions+accurately+and+honestly.%3C%2Fp%3E%0D%0A%0D%0AQ%28Docket%29%3A+What+is+the+Docket+Number%3F%0D%0AX%3A%0D%0A%09Q%28Name%29%3A+Who+are+you+the+court-appointed+guardian+of%3F+%28Please+include+First%2C+Middle%2C+and+Last+name.%29%0D%0A%09X%3A%0D%0A%09%09Q%28Age%29%3A+What+is+the+age+of+%3Cx%3EName%3C%2Fx%3E%3F%0D%0A%09%09X%3Anumber%0D%0A%09%09%09Q%28Relationship%29%3A+What+is+your+relationship+to+%3Cx%3EName%3C%2Fx%3E%3F+%28e.g.+mother%2C+father%2C+sibling%2C+etc.%29%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28Annual%29%3A+Which+Care+Plan%2FReport+is+this%3F%0D%0A%09%09%09%09A%3A+Initial+60+Day+Care+Plan%0D%0A%09%09%09%09%09Q%281.1.1.1.1.1%29%3AGOTO%3AStartDate%0D%0A%09%09%09%09A%3A+Annual+Report%0D%0A%09%09%09%09%09Q%281.1.1.1.1.2%29%3AGOTO%3AStartDate%0D%0A%09%09%09%09A%3A+Other%0D%0A%09%09%09%09%09Q%281.1.1.1.1.3%29%3AGOTO%3AReporting%0D%0AQ%28StartDate%29%3A+What+is+the+starting+date+of+this+reporting+period%3F+The+reporting+period+is+the+timeframe+this+report+covers.%0D%0AX%3Adate%0D%0A%09Q%28EndDate%29%3A+What+is+the+ending+date+of+this+reporting+period%3F%0D%0A%09X%3Adate%0D%0A%09%09Q%28MentalCondition%29%3A+Describe+%3Cx%3EName%3C%2Fx%3E%27s+current+mental+condition.+For+example%2C+is+%3Cx%3EName%3C%2Fx%3E+intellectually+disabled%3F%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28PhysicalCondition%29%3A+Describe+%3Cx%3EName%3C%2Fx%3E%27s+current+physical+condition%3F+For+example%2C+does+%3Cx%3EName%3C%2Fx%3E+have+a+physical+disability%3F%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28SocialCondition%29%3A+Describe+%3Cx%3EName%3C%2Fx%3E%27s+current+social+condition.+For+example%2C+does+%3Cx%3EName%3C%2Fx%3E+interact+with+peers%3F%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%282.1.1.1.1.1%29%3AGOTO%3ALiving%0D%0AQ%28Living%29%3A+Where+did+%3Cx%3EName%3C%2Fx%3E+live+during+the+reporting+period%3F%0D%0AX%3A%0D%0A%09Q%28Home2%29%3A+What+is+the+address%3F%0D%0A%09X%3A%0D%0A%09%09Q%28Facility1%29%3A+Is+it+a+facility%3F%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%283.1.1.1%29%3AGOTO%3AFacility2%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%283.1.1.2%29%3AGOTO%3ANoFacility%0D%0AQ%28Facility2%29%3A+What+type+of+facility+is+it%3F%0D%0AX%3A%0D%0A%09Q%28LiveDates%29%3A+How+long+has+%3Cx%3EName%3C%2Fx%3E+lived+there+%28e.g.+01%2F01%2F2017+to+03%2F01%2F2017%29%3F%0D%0A%09X%3A%0D%0A%09%09Q%28Elsewhere%29%3A+Did+%3Cx%3EName%3C%2Fx%3E+live+anywhere+else+during+the+reporting+period%3F%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%284.1.1.1%29%3AGOTO%3AHome2%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%284.1.1.2%29%3AGOTO%3ABestInterestLiving%0D%0AQ%28NoFacility%29%3A+How+long+has+%3Cx%3EName%3C%2Fx%3E+lived+there+%28e.g.+01%2F01%2F2017+to+03%2F01%2F2017%29%3F%0D%0AX%3A%0D%0A%09Q%28Elsewhere2%29%3A+Did+%3Cx%3EName%3C%2Fx%3E+live+anywhere+else+during+the+reporting+period%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%285.1.1%29%3AGOTO%3AHome2%0D%0A%09A%3A+No%0D%0A%09%09Q%285.1.2%29%3AGOTO%3ABestInterestLiving%0D%0AQ%28BestInterestLiving%29%3A+Please+explain+whether+or+not+you+consider+the+current+living+arrangements+to+be+in+%3Cx%3EName%3C%2Fx%3E%27s+best+interest.%0D%0AX%3A%0D%0A%09Q%28BestInterestHealthcare%29%3A+Please+explain+whether+or+not+you+consider+%3Cx%3EName%3C%2Fx%3E%27s+current+healthcare+to+be+in+%3Cx%3EName%3C%2Fx%3E%27s+best+interest.%0D%0A%09X%3A%0D%0A%09%09Q%28BestInterestTreatment%29%3A+Please+explain+where+or+not+you+consider+%3Cx%3EName%3C%2Fx%3E%27s+current+treatment+plan+to+be+in+%3Cx%3EName%3C%2Fx%3E%27s+best+interest.%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28ServicesMedical%29%3A+Describe+the+medical+services+provided+to+%3Cx%3EName%3C%2Fx%3E+during+the+reporting+period.%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28ServicesEducational%29%3A+Describe+the+educational+services+provided+to+%3Cx%3EName%3C%2Fx%3E+during+the+reporting+period.%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%28ServicesVocational%29%3A+Describe+the+vocational+services+provided+to+%3Cx%3EName%3C%2Fx%3E+during+the+reporting+period.%0D%0A%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09Q%28ServicesOther%29%3A+Describe+any+other+services+provided+to+%3Cx%3EName%3C%2Fx%3E+during+the+reporting+period.%0D%0A%09%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09%09Q%28CareEval%29%3A+Do+you+believe+that+the+current+care+and+services+are+adequate+to+meet+%3Cx%3EName%3C%2Fx%3E%27s+needs%3F%0D%0A%09%09%09%09%09%09%09A%3A+Yes%0D%0A%09%09%09%09%09%09%09%09Q%286.1.1.1.1.1.1.1.1%29%3AGOTO%3AAdequacy%0D%0A%09%09%09%09%09%09%09A%3A+No%0D%0A%09%09%09%09%09%09%09%09Q%286.1.1.1.1.1.1.1.2%29%3AGOTO%3AAdequacy%0D%0AQ%28Adequacy%29%3A+Please+explain+your+opinion+about+the+adequacy+of+care+and+services.%0D%0AX%3A%0D%0A%09Q%28Anti%29%3A+Is+%3Cx%3EName%3C%2Fx%3E+taking+and%2For+receiving+antipsychotic+medication%28s%29%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%287.1.1%29%3AGOTO%3ACriminal%0D%0A%09A%3A+No%0D%0A%09%09Q%287.1.2%29%3AGOTO%3ACriminal%0D%0AQ%28Criminal%29%3A+Have+any+criminal+charges+or+reports+of+abuse+or+neglect+involving+%3Cx%3EName%3C%2Fx%3E+been+filed+with+a+court+of+agency+since+the+last+report%3F%0D%0AA%3A+Yes%0D%0A%09Q%288.1%29%3AGOTO%3AExplain%0D%0AA%3A+No%0D%0A%09Q%288.2%29%3AGOTO%3ADescribeVisits%0D%0AQ%28Explain%29%3A+Please+explain.%0D%0AX%3A%0D%0A%09Q%28DescribeVisits%29%3A+Describe+the+nature+and+frequency+of+your+visits+with+%3Cx%3EName%3C%2Fx%3E+during+the+reporting+period.%0D%0A%09X%3A%0D%0A%09%09Q%28DescribeContact%29%3A+Describe+the+nature+and+frequency+of+contact+with+%3Cx%3EName%3C%2Fx%3E%27s+caregivers+and+healthcare+providers+during+the+reporting+period%3F+%28e.g.+doctors%2C+nurses%2C+etc.%29%0D%0A%09%09X%3A%0D%0A%09%09%09Q%28DescribeOther%29%3A+Describe+any+other+activities+you+undertook+on+%3Cx%3EName%3C%2Fx%3E%27s+behalf+during+the+reporting+period.%0D%0A%09%09%09X%3A%0D%0A%09%09%09%09Q%28Decisions%29%3ADescribe+the+extent+to+which+%3Cx%3EName%3C%2Fx%3E+did%2Fdid+not+participate+in+decision-making+about+personal+and+health+care+decisions.%0D%0A%09%09%09%09X%3A%0D%0A%09%09%09%09%09Q%289.1.1.1.1.1%29%3A+%3Cx%3EName%3C%2Fx%3E%27s+care+is%0D%0A%09%09%09%09%09A%3A+very+good%0D%0A%09%09%09%09%09%09Q%289.1.1.1.1.1.1%29%3AGOTO%3AChanges%0D%0A%09%09%09%09%09A%3A+good%0D%0A%09%09%09%09%09%09Q%289.1.1.1.1.1.2%29%3AGOTO%3AChanges%0D%0A%09%09%09%09%09A%3A+adequate%0D%0A%09%09%09%09%09%09Q%289.1.1.1.1.1.3%29%3AGOTO%3AChanges%0D%0A%09%09%09%09%09A%3A+poor%0D%0A%09%09%09%09%09%09Q%289.1.1.1.1.1.4%29%3AGOTO%3AChanges%0D%0AQ%28Changes%29%3A+Describe+the+needs+of+%3Cx%3EName%3C%2Fx%3E+for+a+continued+guardianship+including+any+recommended+changes+to+the+guardianship+or+%3Cx%3EName%3C%2Fx%3E%27s+future+care.%0D%0AX%3A%0D%0A%09Q%2818Months%29%3A+Do+you+intend+to+make+any+changes+to+%3Cx%3EName%3C%2Fx%3E%27s+living+arrangements%2C+healthcare%2C+or+other+services+in+the+next+18+months.%0D%0A%09X%3A%0D%0A%09%09Q%28Payee%29%3A+Are+you+%3Cx%3EName%3C%2Fx%3E%27s+Representative+Payee%3F+A+Representative+Payee+is+someone+who+receives+Social+Security+payments+on+behalf+of+%3Cx%3EName%3C%2Fx%3E.%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%2810.1.1.1%29%3AGOTO%3AFunds%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%2810.1.1.2%29%3AGOTO%3AFunds%0D%0AQ%28Funds%29%3A+Do+you+hold+or+receive+funds+belonging+to+%3Cx%3EName%3C%2Fx%3E+in+your+role+as+Guardian+other+than+as+a+Representative+Payee%3F%0D%0AA%3A+Yes%0D%0A%09Q%2811.1%29%3AGOTO%3ACons%0D%0AA%3A+No%0D%0A%09Q%2811.2%29%3AGOTO%3ACons%0D%0AQ%28Cons%29%3A+Is+there+a+Conservator+appointed%3F+A+Conservator+is+someone+appointed+by+a+judge+to+manage+%3Cx%3EName%3C%2Fx%3E%27s+finances.%0D%0AA%3A+Yes%0D%0A%09Q%2812.1%29%3AGOTO%3ABank%0D%0AA%3A+No%0D%0A%09Q%2812.2%29%3AGOTO%3ABank%0D%0AQ%28Bank%29%3A+What+is+the+balance+of+%3Cx%3EName%3C%2Fx%3E%27s+bank+accounts%3F+%28e.g.+savings%2C+checking%2C+CDs%2C+money+market%2C+etc.%29%0D%0AX%3Anumber%0D%0A%09Q%28SS%29%3A+How+much+money+do+you+receive+from+sources+such+as+Social+Security%2C+SSI%2C+pension%2C+disability%2C+interest%2C+etc.+on+behalf+of+%3Cx%3EName%3C%2Fx%3E%3F%0D%0A%09X%3Anumber%0D%0A%09%09Q%28CareFees%29%3A+How+much+money+is+paid+to+%3Cx%3EName%3C%2Fx%3E%27s+caregivers%3F+%28e.g.+physicians%2C+therapists%2C+etc.%29%0D%0A%09%09X%3Anumber%0D%0A%09%09%09Q%28Personal%29%3A+How+much+is+given+to+%3Cx%3EName%3C%2Fx%3E+for+personal+needs%3F+%28e.g.+hygiene+products%2C+food%2C+etc.%29%0D%0A%09%09%09X%3Anumber%0D%0A%09%09%09%09Q%28GFees%29%3A+How+much+money+is+paid+to+you+as+the+Guardian%3F%0D%0A%09%09%09%09X%3Anumber%0D%0A%09%09%09%09%09Q%28Expenses%29%3A+How+much+money+in+other+expenses+such+as+housing%2C+insurance%2C+etc.+is+paid+on+behalf+of+%3Cx%3EName%3C%2Fx%3E%3F%0D%0A%09%09%09%09%09X%3Anumber%0D%0A%09%09%09%09%09%09Q%28Additional%29%3A+Please+add+any+additional+comments+or+concerns+that+you+have+about+%3Cx%3EName%3C%2Fx%3E+or+about+the+Guardianship.%0D%0A%09%09%09%09%09%09X%3A%0D%0A%09%09%09%09%09%09%09Q%28Download%29%3A+Click+%22Download%22+below+to+save+your+answers.%09%09%09%09%09%09%09%0D%0A%09%09%09%09%09%09%09A%3A%5Bjavascript%3Asave2%28%27mailmerge.csv%27%2Ccsv%28%29%29%5D%3A+Download</div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'> What is the Docket Number?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Who are you the court-appointed guardian of? (Please include First, Middle, and Last name.)
+</div><div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'> What is the age of <x>Name</x>?
+</div><div id='Q-1.1.1.1' name='Q-1.1.1.1' style='display:none;'> What is your relationship to <x>Name</x>? (e.g. mother, father, sibling, etc.)
+</div><div id='Q-1.1.1.1.1' name='Q-1.1.1.1.1' style='display:none;'> Which Care Plan/Report is this?
+</div><div id='Q-1.1.1.1.1.1' name='Q-1.1.1.1.1.1' style='display:none;'>GOTO:2</div><div id='Q-1.1.1.1.1.2' name='Q-1.1.1.1.1.2' style='display:none;'>GOTO:2</div><div id='Q-1.1.1.1.1.3' name='Q-1.1.1.1.1.3' style='display:none;'>GOTO:Reporting
+</div><div id='Q-2' name='Q-2' style='display:none;'> What is the starting date of this reporting period? The reporting period is the timeframe this report covers.
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'> What is the ending date of this reporting period?
+</div><div id='Q-2.1.1' name='Q-2.1.1' style='display:none;'> Describe <x>Name</x>'s current mental condition. For example, is <x>Name</x> intellectually disabled?
+</div><div id='Q-2.1.1.1' name='Q-2.1.1.1' style='display:none;'> Describe <x>Name</x>'s current physical condition? For example, does <x>Name</x> have a physical disability?
+</div><div id='Q-2.1.1.1.1' name='Q-2.1.1.1.1' style='display:none;'> Describe <x>Name</x>'s current social condition. For example, does <x>Name</x> interact with peers?
+</div><div id='Q-2.1.1.1.1.1' name='Q-2.1.1.1.1.1' style='display:none;'>GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Where did <x>Name</x> live during the reporting period?
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'> What is the address?
+</div><div id='Q-3.1.1' name='Q-3.1.1' style='display:none;'> Is it a facility?
+</div><div id='Q-3.1.1.1' name='Q-3.1.1.1' style='display:none;'>GOTO:4</div><div id='Q-3.1.1.2' name='Q-3.1.1.2' style='display:none;'>GOTO:5</div><div id='Q-4' name='Q-4' style='display:none;'> What type of facility is it?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> How long has <x>Name</x> lived there (e.g. 01/01/2017 to 03/01/2017)?
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'> Did <x>Name</x> live anywhere else during the reporting period?
+</div><div id='Q-4.1.1.1' name='Q-4.1.1.1' style='display:none;'>GOTO:3.1</div><div id='Q-4.1.1.2' name='Q-4.1.1.2' style='display:none;'>GOTO:6</div><div id='Q-5' name='Q-5' style='display:none;'> How long has <x>Name</x> lived there (e.g. 01/01/2017 to 03/01/2017)?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Did <x>Name</x> live anywhere else during the reporting period?
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>GOTO:3.1</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> Please explain whether or not you consider the current living arrangements to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'> Please explain whether or not you consider <x>Name</x>'s current healthcare to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'> Please explain where or not you consider <x>Name</x>'s current treatment plan to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1.1.1' name='Q-6.1.1.1' style='display:none;'> Describe the medical services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1' name='Q-6.1.1.1.1' style='display:none;'> Describe the educational services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1' name='Q-6.1.1.1.1.1' style='display:none;'> Describe the vocational services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1' style='display:none;'> Describe any other services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1.1' style='display:none;'> Do you believe that the current care and services are adequate to meet <x>Name</x>'s needs?
+</div><div id='Q-6.1.1.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1.1.1' style='display:none;'>GOTO:7</div><div id='Q-6.1.1.1.1.1.1.1.2' name='Q-6.1.1.1.1.1.1.1.2' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> Please explain your opinion about the adequacy of care and services.
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'> Is <x>Name</x> taking and/or receiving antipsychotic medication(s)?
+</div><div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'>GOTO:8</div><div id='Q-7.1.2' name='Q-7.1.2' style='display:none;'>GOTO:8</div><div id='Q-8' name='Q-8' style='display:none;'> Have any criminal charges or reports of abuse or neglect involving <x>Name</x> been filed with a court of agency since the last report?
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>GOTO:9.1</div><div id='Q-9' name='Q-9' style='display:none;'> Please explain.
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Describe the nature and frequency of your visits with <x>Name</x> during the reporting period.
+</div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'> Describe the nature and frequency of contact with <x>Name</x>'s caregivers and healthcare providers during the reporting period? (e.g. doctors, nurses, etc.)
+</div><div id='Q-9.1.1.1' name='Q-9.1.1.1' style='display:none;'> Describe any other activities you undertook on <x>Name</x>'s behalf during the reporting period.
+</div><div id='Q-9.1.1.1.1' name='Q-9.1.1.1.1' style='display:none;'>Describe the extent to which <x>Name</x> did/did not participate in decision-making about personal and health care decisions.
+</div><div id='Q-9.1.1.1.1.1' name='Q-9.1.1.1.1.1' style='display:none;'> <x>Name</x>'s care is
+</div><div id='Q-9.1.1.1.1.1.1' name='Q-9.1.1.1.1.1.1' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.2' name='Q-9.1.1.1.1.1.2' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.3' name='Q-9.1.1.1.1.1.3' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.4' name='Q-9.1.1.1.1.1.4' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> Describe the needs of <x>Name</x> for a continued guardianship including any recommended changes to the guardianship or <x>Name</x>'s future care.
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Do you intend to make any changes to <x>Name</x>'s living arrangements, healthcare, or other services in the next 18 months.
+</div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'> Are you <x>Name</x>'s Representative Payee? A Representative Payee is someone who receives Social Security payments on behalf of <x>Name</x>.
+</div><div id='Q-10.1.1.1' name='Q-10.1.1.1' style='display:none;'>GOTO:11</div><div id='Q-10.1.1.2' name='Q-10.1.1.2' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> Do you hold or receive funds belonging to <x>Name</x> in your role as Guardian other than as a Representative Payee?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Is there a Conservator appointed? A Conservator is someone appointed by a judge to manage <x>Name</x>'s finances.
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> What is the balance of <x>Name</x>'s bank accounts? (e.g. savings, checking, CDs, money market, etc.)
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'> How much money do you receive from sources such as Social Security, SSI, pension, disability, interest, etc. on behalf of <x>Name</x>?
+</div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'> How much money is paid to <x>Name</x>'s caregivers? (e.g. physicians, therapists, etc.)
+</div><div id='Q-13.1.1.1' name='Q-13.1.1.1' style='display:none;'> How much is given to <x>Name</x> for personal needs? (e.g. hygiene products, food, etc.)
+</div><div id='Q-13.1.1.1.1' name='Q-13.1.1.1.1' style='display:none;'> How much money is paid to you as the Guardian?
+</div><div id='Q-13.1.1.1.1.1' name='Q-13.1.1.1.1.1' style='display:none;'> How much money in other expenses such as housing, insurance, etc. is paid on behalf of <x>Name</x>?
+</div><div id='Q-13.1.1.1.1.1.1' name='Q-13.1.1.1.1.1.1' style='display:none;'> Please add any additional comments or concerns that you have about <x>Name</x> or about the Guardianship.
+</div><div id='Q-13.1.1.1.1.1.1.1' name='Q-13.1.1.1.1.1.1.1' style='display:none;'> Click "Download" below to save your answers.							
+</div><div id='A-1.1' name='A-1.1' style='display:none;'><variable></div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'>text</div><div id='X-1.1' name='X-1.1' style='display:none;'>1.1</div><div id='A-1.1.1' name='A-1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'>text</div><div id='X-1.1.1' name='X-1.1.1' style='display:none;'>1.1.1</div><div id='A-1.1.1.1' name='A-1.1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1.1' name='A-href-1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1' name='A-target-1.1.1.1' style='display:none;'>number</div><div id='X-1.1.1.1' name='X-1.1.1.1' style='display:none;'>1.1.1.1</div><div id='A-1.1.1.1.1' name='A-1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1.1.1' name='A-href-1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1' name='A-target-1.1.1.1.1' style='display:none;'>text</div><div id='X-1.1.1.1.1' name='X-1.1.1.1.1' style='display:none;'>1.1.1.1.1</div><div id='A-1.1.1.1.1.1' name='A-1.1.1.1.1.1' style='display:none;'> Initial 60 Day Care Plan
+</div><div id='A-href-1.1.1.1.1.1' name='A-href-1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.1' name='A-target-1.1.1.1.1.1' style='display:none;'></div><div id='X-1.1.1.1.1.1' name='X-1.1.1.1.1.1' style='display:none;'>Initial 60 Day Care Plan</div><div id='A-1.1.1.1.1.2' name='A-1.1.1.1.1.2' style='display:none;'> Annual Report
+</div><div id='A-href-1.1.1.1.1.2' name='A-href-1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.2' name='A-target-1.1.1.1.1.2' style='display:none;'></div><div id='X-1.1.1.1.1.2' name='X-1.1.1.1.1.2' style='display:none;'>Annual Report</div><div id='A-1.1.1.1.1.3' name='A-1.1.1.1.1.3' style='display:none;'> Other
+</div><div id='A-href-1.1.1.1.1.3' name='A-href-1.1.1.1.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.3' name='A-target-1.1.1.1.1.3' style='display:none;'></div><div id='X-1.1.1.1.1.3' name='X-1.1.1.1.1.3' style='display:none;'>Other</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>date</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'>date</div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'>2.1.1</div><div id='A-2.1.1.1' name='A-2.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1' name='A-href-2.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1' name='A-target-2.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1' name='X-2.1.1.1' style='display:none;'>2.1.1.1</div><div id='A-2.1.1.1.1' name='A-2.1.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1.1' name='A-href-2.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1.1' name='A-target-2.1.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1.1' name='X-2.1.1.1.1' style='display:none;'>2.1.1.1.1</div><div id='A-2.1.1.1.1.1' name='A-2.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1.1.1' name='A-href-2.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1.1.1' name='A-target-2.1.1.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1.1.1' name='X-2.1.1.1.1.1' style='display:none;'>2.1.1.1.1.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'>text</div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-3.1.1' name='A-3.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1' name='A-href-3.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1' name='A-target-3.1.1' style='display:none;'>text</div><div id='X-3.1.1' name='X-3.1.1' style='display:none;'>3.1.1</div><div id='A-3.1.1.1' name='A-3.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-3.1.1.1' name='A-href-3.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1' name='A-target-3.1.1.1' style='display:none;'></div><div id='X-3.1.1.1' name='X-3.1.1.1' style='display:none;'>Yes</div><div id='A-3.1.1.2' name='A-3.1.1.2' style='display:none;'> No
+</div><div id='A-href-3.1.1.2' name='A-href-3.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.2' name='A-target-3.1.1.2' style='display:none;'></div><div id='X-3.1.1.2' name='X-3.1.1.2' style='display:none;'>No</div><div id='A-4.1' name='A-4.1' style='display:none;'><variable></div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'>text</div><div id='X-4.1' name='X-4.1' style='display:none;'>4.1</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'><variable></div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'>text</div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'>4.1.1</div><div id='A-4.1.1.1' name='A-4.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-4.1.1.1' name='A-href-4.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1.1' name='A-target-4.1.1.1' style='display:none;'></div><div id='X-4.1.1.1' name='X-4.1.1.1' style='display:none;'>Yes</div><div id='A-4.1.1.2' name='A-4.1.1.2' style='display:none;'> No
+</div><div id='A-href-4.1.1.2' name='A-href-4.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1.2' name='A-target-4.1.1.2' style='display:none;'></div><div id='X-4.1.1.2' name='X-4.1.1.2' style='display:none;'>No</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'>text</div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'>Yes</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'>text</div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-6.1.1' name='A-6.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'>text</div><div id='X-6.1.1' name='X-6.1.1' style='display:none;'>6.1.1</div><div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'>6.1.1.1</div><div id='A-6.1.1.1.1' name='A-6.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1' name='A-href-6.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1' name='A-target-6.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1' name='X-6.1.1.1.1' style='display:none;'>6.1.1.1.1</div><div id='A-6.1.1.1.1.1' name='A-6.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1' name='A-href-6.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1' name='A-target-6.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1' name='X-6.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-6.1.1.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-6.1.1.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1.1.1' style='display:none;'>Yes</div><div id='A-6.1.1.1.1.1.1.1.2' name='A-6.1.1.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-6.1.1.1.1.1.1.1.2' name='A-href-6.1.1.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1.2' name='A-target-6.1.1.1.1.1.1.1.2' style='display:none;'></div><div id='X-6.1.1.1.1.1.1.1.2' name='X-6.1.1.1.1.1.1.1.2' style='display:none;'>No</div><div id='A-7.1' name='A-7.1' style='display:none;'><variable></div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'>text</div><div id='X-7.1' name='X-7.1' style='display:none;'>7.1</div><div id='A-7.1.1' name='A-7.1.1' style='display:none;'> Yes
+</div><div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'></div><div id='X-7.1.1' name='X-7.1.1' style='display:none;'>Yes</div><div id='A-7.1.2' name='A-7.1.2' style='display:none;'> No
+</div><div id='A-href-7.1.2' name='A-href-7.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.2' name='A-target-7.1.2' style='display:none;'></div><div id='X-7.1.2' name='X-7.1.2' style='display:none;'>No</div><div id='A-8.1' name='A-8.1' style='display:none;'> Yes
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Yes</div><div id='A-8.2' name='A-8.2' style='display:none;'> No
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>No</div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'>text</div><div id='X-9.1' name='X-9.1' style='display:none;'>9.1</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'>text</div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'>9.1.1</div><div id='A-9.1.1.1' name='A-9.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1' name='A-href-9.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1' name='A-target-9.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1' name='X-9.1.1.1' style='display:none;'>9.1.1.1</div><div id='A-9.1.1.1.1' name='A-9.1.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1.1' name='A-href-9.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1' name='A-target-9.1.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1.1' name='X-9.1.1.1.1' style='display:none;'>9.1.1.1.1</div><div id='A-9.1.1.1.1.1' name='A-9.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1.1.1' name='A-href-9.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1' name='A-target-9.1.1.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1.1.1' name='X-9.1.1.1.1.1' style='display:none;'>9.1.1.1.1.1</div><div id='A-9.1.1.1.1.1.1' name='A-9.1.1.1.1.1.1' style='display:none;'> very good
+</div><div id='A-href-9.1.1.1.1.1.1' name='A-href-9.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.1' name='A-target-9.1.1.1.1.1.1' style='display:none;'></div><div id='X-9.1.1.1.1.1.1' name='X-9.1.1.1.1.1.1' style='display:none;'>very good</div><div id='A-9.1.1.1.1.1.2' name='A-9.1.1.1.1.1.2' style='display:none;'> good
+</div><div id='A-href-9.1.1.1.1.1.2' name='A-href-9.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.2' name='A-target-9.1.1.1.1.1.2' style='display:none;'></div><div id='X-9.1.1.1.1.1.2' name='X-9.1.1.1.1.1.2' style='display:none;'>good</div><div id='A-9.1.1.1.1.1.3' name='A-9.1.1.1.1.1.3' style='display:none;'> adequate
+</div><div id='A-href-9.1.1.1.1.1.3' name='A-href-9.1.1.1.1.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.3' name='A-target-9.1.1.1.1.1.3' style='display:none;'></div><div id='X-9.1.1.1.1.1.3' name='X-9.1.1.1.1.1.3' style='display:none;'>adequate</div><div id='A-9.1.1.1.1.1.4' name='A-9.1.1.1.1.1.4' style='display:none;'> poor
+</div><div id='A-href-9.1.1.1.1.1.4' name='A-href-9.1.1.1.1.1.4' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.4' name='A-target-9.1.1.1.1.1.4' style='display:none;'></div><div id='X-9.1.1.1.1.1.4' name='X-9.1.1.1.1.1.4' style='display:none;'>poor</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'>text</div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>text</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'>10.1.1</div><div id='A-10.1.1.1' name='A-10.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1' name='A-href-10.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1' name='A-target-10.1.1.1' style='display:none;'></div><div id='X-10.1.1.1' name='X-10.1.1.1' style='display:none;'>Yes</div><div id='A-10.1.1.2' name='A-10.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.2' name='A-href-10.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.2' name='A-target-10.1.1.2' style='display:none;'></div><div id='X-10.1.1.2' name='X-10.1.1.2' style='display:none;'>No</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes</div><div id='A-11.2' name='A-11.2' style='display:none;'> No
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes</div><div id='A-12.2' name='A-12.2' style='display:none;'> No
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>No</div><div id='A-13.1' name='A-13.1' style='display:none;'><variable></div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'>number</div><div id='X-13.1' name='X-13.1' style='display:none;'>13.1</div><div id='A-13.1.1' name='A-13.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'>number</div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'>13.1.1</div><div id='A-13.1.1.1' name='A-13.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1' name='A-href-13.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1' name='A-target-13.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1' name='X-13.1.1.1' style='display:none;'>13.1.1.1</div><div id='A-13.1.1.1.1' name='A-13.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1' name='A-href-13.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1' name='A-target-13.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1' name='X-13.1.1.1.1' style='display:none;'>13.1.1.1.1</div><div id='A-13.1.1.1.1.1' name='A-13.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1' name='A-href-13.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1' name='A-target-13.1.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1.1' name='X-13.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-13.1.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1.1.1' style='display:none;'>: Download</div><div id='A-href-13.1.1.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1.1.1' style='display:none;'>javascript:save2('mailmerge.csv',csv())</div><div id='A-target-13.1.1.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1.1.1' style='display:none;'>target="_blank"</div><div id='X-13.1.1.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1.1.1' style='display:none;'>: Download</div>
+<script>
+	var QVnames = [['1','Docket'],['1.1','Name'],['1.1.1','Age'],['1.1.1.1','Relationship'],['1.1.1.1.1','Annual'],['1.1.1.1.1.1','1.1.1.1.1.1'],['1.1.1.1.1.2','1.1.1.1.1.2'],['1.1.1.1.1.3','1.1.1.1.1.3'],['2','StartDate'],['2.1','EndDate'],['2.1.1','MentalCondition'],['2.1.1.1','PhysicalCondition'],['2.1.1.1.1','SocialCondition'],['2.1.1.1.1.1','2.1.1.1.1.1'],['3','Living'],['3.1','Home2'],['3.1.1','Facility1'],['3.1.1.1','3.1.1.1'],['3.1.1.2','3.1.1.2'],['4','Facility2'],['4.1','LiveDates'],['4.1.1','Elsewhere'],['4.1.1.1','4.1.1.1'],['4.1.1.2','4.1.1.2'],['5','NoFacility'],['5.1','Elsewhere2'],['5.1.1','5.1.1'],['5.1.2','5.1.2'],['6','BestInterestLiving'],['6.1','BestInterestHealthcare'],['6.1.1','BestInterestTreatment'],['6.1.1.1','ServicesMedical'],['6.1.1.1.1','ServicesEducational'],['6.1.1.1.1.1','ServicesVocational'],['6.1.1.1.1.1.1','ServicesOther'],['6.1.1.1.1.1.1.1','CareEval'],['6.1.1.1.1.1.1.1.1','6.1.1.1.1.1.1.1.1'],['6.1.1.1.1.1.1.1.2','6.1.1.1.1.1.1.1.2'],['7','Adequacy'],['7.1','Anti'],['7.1.1','7.1.1'],['7.1.2','7.1.2'],['8','Criminal'],['8.1','8.1'],['8.2','8.2'],['9','Explain'],['9.1','DescribeVisits'],['9.1.1','DescribeContact'],['9.1.1.1','DescribeOther'],['9.1.1.1.1','Decisions'],['9.1.1.1.1.1','9.1.1.1.1.1'],['9.1.1.1.1.1.1','9.1.1.1.1.1.1'],['9.1.1.1.1.1.2','9.1.1.1.1.1.2'],['9.1.1.1.1.1.3','9.1.1.1.1.1.3'],['9.1.1.1.1.1.4','9.1.1.1.1.1.4'],['10','Changes'],['10.1','18Months'],['10.1.1','Payee'],['10.1.1.1','10.1.1.1'],['10.1.1.2','10.1.1.2'],['11','Funds'],['11.1','11.1'],['11.2','11.2'],['12','Cons'],['12.1','12.1'],['12.2','12.2'],['13','Bank'],['13.1','SS'],['13.1.1','CareFees'],['13.1.1.1','Personal'],['13.1.1.1.1','GFees'],['13.1.1.1.1.1','Expenses'],['13.1.1.1.1.1.1','Additional'],['13.1.1.1.1.1.1.1','Download']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'> What is the Docket Number?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Who are you the court-appointed guardian of? (Please include First, Middle, and Last name.)
+</div><div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'> What is the age of <x>Name</x>?
+</div><div id='Q-1.1.1.1' name='Q-1.1.1.1' style='display:none;'> What is your relationship to <x>Name</x>? (e.g. mother, father, sibling, etc.)
+</div><div id='Q-1.1.1.1.1' name='Q-1.1.1.1.1' style='display:none;'> Which Care Plan/Report is this?
+</div><div id='Q-1.1.1.1.1.1' name='Q-1.1.1.1.1.1' style='display:none;'>GOTO:2</div><div id='Q-1.1.1.1.1.2' name='Q-1.1.1.1.1.2' style='display:none;'>GOTO:2</div><div id='Q-1.1.1.1.1.3' name='Q-1.1.1.1.1.3' style='display:none;'>GOTO:Reporting
+</div><div id='Q-2' name='Q-2' style='display:none;'> What is the starting date of this reporting period? The reporting period is the timeframe this report covers.
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'> What is the ending date of this reporting period?
+</div><div id='Q-2.1.1' name='Q-2.1.1' style='display:none;'> Describe <x>Name</x>'s current mental condition. For example, is <x>Name</x> intellectually disabled?
+</div><div id='Q-2.1.1.1' name='Q-2.1.1.1' style='display:none;'> Describe <x>Name</x>'s current physical condition? For example, does <x>Name</x> have a physical disability?
+</div><div id='Q-2.1.1.1.1' name='Q-2.1.1.1.1' style='display:none;'> Describe <x>Name</x>'s current social condition. For example, does <x>Name</x> interact with peers?
+</div><div id='Q-2.1.1.1.1.1' name='Q-2.1.1.1.1.1' style='display:none;'>GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Where did <x>Name</x> live during the reporting period?
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'> What is the address?
+</div><div id='Q-3.1.1' name='Q-3.1.1' style='display:none;'> Is it a facility?
+</div><div id='Q-3.1.1.1' name='Q-3.1.1.1' style='display:none;'>GOTO:4</div><div id='Q-3.1.1.2' name='Q-3.1.1.2' style='display:none;'>GOTO:5</div><div id='Q-4' name='Q-4' style='display:none;'> What type of facility is it?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> How long has <x>Name</x> lived there (e.g. 01/01/2017 to 03/01/2017)?
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'> Did <x>Name</x> live anywhere else during the reporting period?
+</div><div id='Q-4.1.1.1' name='Q-4.1.1.1' style='display:none;'>GOTO:3.1</div><div id='Q-4.1.1.2' name='Q-4.1.1.2' style='display:none;'>GOTO:6</div><div id='Q-5' name='Q-5' style='display:none;'> How long has <x>Name</x> lived there (e.g. 01/01/2017 to 03/01/2017)?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Did <x>Name</x> live anywhere else during the reporting period?
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>GOTO:3.1</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> Please explain whether or not you consider the current living arrangements to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'> Please explain whether or not you consider <x>Name</x>'s current healthcare to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1.1' name='Q-6.1.1' style='display:none;'> Please explain where or not you consider <x>Name</x>'s current treatment plan to be in <x>Name</x>'s best interest.
+</div><div id='Q-6.1.1.1' name='Q-6.1.1.1' style='display:none;'> Describe the medical services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1' name='Q-6.1.1.1.1' style='display:none;'> Describe the educational services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1' name='Q-6.1.1.1.1.1' style='display:none;'> Describe the vocational services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1' style='display:none;'> Describe any other services provided to <x>Name</x> during the reporting period.
+</div><div id='Q-6.1.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1.1' style='display:none;'> Do you believe that the current care and services are adequate to meet <x>Name</x>'s needs?
+</div><div id='Q-6.1.1.1.1.1.1.1.1' name='Q-6.1.1.1.1.1.1.1.1' style='display:none;'>GOTO:7</div><div id='Q-6.1.1.1.1.1.1.1.2' name='Q-6.1.1.1.1.1.1.1.2' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> Please explain your opinion about the adequacy of care and services.
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'> Is <x>Name</x> taking and/or receiving antipsychotic medication(s)?
+</div><div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'>GOTO:8</div><div id='Q-7.1.2' name='Q-7.1.2' style='display:none;'>GOTO:8</div><div id='Q-8' name='Q-8' style='display:none;'> Have any criminal charges or reports of abuse or neglect involving <x>Name</x> been filed with a court of agency since the last report?
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>GOTO:9.1</div><div id='Q-9' name='Q-9' style='display:none;'> Please explain.
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Describe the nature and frequency of your visits with <x>Name</x> during the reporting period.
+</div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'> Describe the nature and frequency of contact with <x>Name</x>'s caregivers and healthcare providers during the reporting period? (e.g. doctors, nurses, etc.)
+</div><div id='Q-9.1.1.1' name='Q-9.1.1.1' style='display:none;'> Describe any other activities you undertook on <x>Name</x>'s behalf during the reporting period.
+</div><div id='Q-9.1.1.1.1' name='Q-9.1.1.1.1' style='display:none;'>Describe the extent to which <x>Name</x> did/did not participate in decision-making about personal and health care decisions.
+</div><div id='Q-9.1.1.1.1.1' name='Q-9.1.1.1.1.1' style='display:none;'> <x>Name</x>'s care is
+</div><div id='Q-9.1.1.1.1.1.1' name='Q-9.1.1.1.1.1.1' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.2' name='Q-9.1.1.1.1.1.2' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.3' name='Q-9.1.1.1.1.1.3' style='display:none;'>GOTO:10</div><div id='Q-9.1.1.1.1.1.4' name='Q-9.1.1.1.1.1.4' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'> Describe the needs of <x>Name</x> for a continued guardianship including any recommended changes to the guardianship or <x>Name</x>'s future care.
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Do you intend to make any changes to <x>Name</x>'s living arrangements, healthcare, or other services in the next 18 months.
+</div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'> Are you <x>Name</x>'s Representative Payee? A Representative Payee is someone who receives Social Security payments on behalf of <x>Name</x>.
+</div><div id='Q-10.1.1.1' name='Q-10.1.1.1' style='display:none;'>GOTO:11</div><div id='Q-10.1.1.2' name='Q-10.1.1.2' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> Do you hold or receive funds belonging to <x>Name</x> in your role as Guardian other than as a Representative Payee?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Is there a Conservator appointed? A Conservator is someone appointed by a judge to manage <x>Name</x>'s finances.
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:13</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> What is the balance of <x>Name</x>'s bank accounts? (e.g. savings, checking, CDs, money market, etc.)
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'> How much money do you receive from sources such as Social Security, SSI, pension, disability, interest, etc. on behalf of <x>Name</x>?
+</div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'> How much money is paid to <x>Name</x>'s caregivers? (e.g. physicians, therapists, etc.)
+</div><div id='Q-13.1.1.1' name='Q-13.1.1.1' style='display:none;'> How much is given to <x>Name</x> for personal needs? (e.g. hygiene products, food, etc.)
+</div><div id='Q-13.1.1.1.1' name='Q-13.1.1.1.1' style='display:none;'> How much money is paid to you as the Guardian?
+</div><div id='Q-13.1.1.1.1.1' name='Q-13.1.1.1.1.1' style='display:none;'> How much money in other expenses such as housing, insurance, etc. is paid on behalf of <x>Name</x>?
+</div><div id='Q-13.1.1.1.1.1.1' name='Q-13.1.1.1.1.1.1' style='display:none;'> Please add any additional comments or concerns that you have about <x>Name</x> or about the Guardianship.
+</div><div id='Q-13.1.1.1.1.1.1.1' name='Q-13.1.1.1.1.1.1.1' style='display:none;'> Click "Download" below to save your answers.							
+</div><div id='A-1.1' name='A-1.1' style='display:none;'><variable></div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'>text</div><div id='X-1.1' name='X-1.1' style='display:none;'>1.1</div><div id='A-1.1.1' name='A-1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'>text</div><div id='X-1.1.1' name='X-1.1.1' style='display:none;'>1.1.1</div><div id='A-1.1.1.1' name='A-1.1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1.1' name='A-href-1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1' name='A-target-1.1.1.1' style='display:none;'>number</div><div id='X-1.1.1.1' name='X-1.1.1.1' style='display:none;'>1.1.1.1</div><div id='A-1.1.1.1.1' name='A-1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-1.1.1.1.1' name='A-href-1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1' name='A-target-1.1.1.1.1' style='display:none;'>text</div><div id='X-1.1.1.1.1' name='X-1.1.1.1.1' style='display:none;'>1.1.1.1.1</div><div id='A-1.1.1.1.1.1' name='A-1.1.1.1.1.1' style='display:none;'> Initial 60 Day Care Plan
+</div><div id='A-href-1.1.1.1.1.1' name='A-href-1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.1' name='A-target-1.1.1.1.1.1' style='display:none;'></div><div id='X-1.1.1.1.1.1' name='X-1.1.1.1.1.1' style='display:none;'>Initial 60 Day Care Plan</div><div id='A-1.1.1.1.1.2' name='A-1.1.1.1.1.2' style='display:none;'> Annual Report
+</div><div id='A-href-1.1.1.1.1.2' name='A-href-1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.2' name='A-target-1.1.1.1.1.2' style='display:none;'></div><div id='X-1.1.1.1.1.2' name='X-1.1.1.1.1.2' style='display:none;'>Annual Report</div><div id='A-1.1.1.1.1.3' name='A-1.1.1.1.1.3' style='display:none;'> Other
+</div><div id='A-href-1.1.1.1.1.3' name='A-href-1.1.1.1.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1.1.1.3' name='A-target-1.1.1.1.1.3' style='display:none;'></div><div id='X-1.1.1.1.1.3' name='X-1.1.1.1.1.3' style='display:none;'>Other</div><div id='A-2.1' name='A-2.1' style='display:none;'><variable></div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'>date</div><div id='X-2.1' name='X-2.1' style='display:none;'>2.1</div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'>date</div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'>2.1.1</div><div id='A-2.1.1.1' name='A-2.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1' name='A-href-2.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1' name='A-target-2.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1' name='X-2.1.1.1' style='display:none;'>2.1.1.1</div><div id='A-2.1.1.1.1' name='A-2.1.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1.1' name='A-href-2.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1.1' name='A-target-2.1.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1.1' name='X-2.1.1.1.1' style='display:none;'>2.1.1.1.1</div><div id='A-2.1.1.1.1.1' name='A-2.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-2.1.1.1.1.1' name='A-href-2.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1.1.1.1' name='A-target-2.1.1.1.1.1' style='display:none;'>text</div><div id='X-2.1.1.1.1.1' name='X-2.1.1.1.1.1' style='display:none;'>2.1.1.1.1.1</div><div id='A-3.1' name='A-3.1' style='display:none;'><variable></div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'>text</div><div id='X-3.1' name='X-3.1' style='display:none;'>3.1</div><div id='A-3.1.1' name='A-3.1.1' style='display:none;'><variable></div><div id='A-href-3.1.1' name='A-href-3.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1' name='A-target-3.1.1' style='display:none;'>text</div><div id='X-3.1.1' name='X-3.1.1' style='display:none;'>3.1.1</div><div id='A-3.1.1.1' name='A-3.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-3.1.1.1' name='A-href-3.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.1' name='A-target-3.1.1.1' style='display:none;'></div><div id='X-3.1.1.1' name='X-3.1.1.1' style='display:none;'>Yes</div><div id='A-3.1.1.2' name='A-3.1.1.2' style='display:none;'> No
+</div><div id='A-href-3.1.1.2' name='A-href-3.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.1.1.2' name='A-target-3.1.1.2' style='display:none;'></div><div id='X-3.1.1.2' name='X-3.1.1.2' style='display:none;'>No</div><div id='A-4.1' name='A-4.1' style='display:none;'><variable></div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'>text</div><div id='X-4.1' name='X-4.1' style='display:none;'>4.1</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'><variable></div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'>text</div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'>4.1.1</div><div id='A-4.1.1.1' name='A-4.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-4.1.1.1' name='A-href-4.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1.1' name='A-target-4.1.1.1' style='display:none;'></div><div id='X-4.1.1.1' name='X-4.1.1.1' style='display:none;'>Yes</div><div id='A-4.1.1.2' name='A-4.1.1.2' style='display:none;'> No
+</div><div id='A-href-4.1.1.2' name='A-href-4.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1.2' name='A-target-4.1.1.2' style='display:none;'></div><div id='X-4.1.1.2' name='X-4.1.1.2' style='display:none;'>No</div><div id='A-5.1' name='A-5.1' style='display:none;'><variable></div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'>text</div><div id='X-5.1' name='X-5.1' style='display:none;'>5.1</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'>Yes</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-6.1' name='A-6.1' style='display:none;'><variable></div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'>text</div><div id='X-6.1' name='X-6.1' style='display:none;'>6.1</div><div id='A-6.1.1' name='A-6.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1' name='A-href-6.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1' name='A-target-6.1.1' style='display:none;'>text</div><div id='X-6.1.1' name='X-6.1.1' style='display:none;'>6.1.1</div><div id='A-6.1.1.1' name='A-6.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1' name='A-href-6.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1' name='A-target-6.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1' name='X-6.1.1.1' style='display:none;'>6.1.1.1</div><div id='A-6.1.1.1.1' name='A-6.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1' name='A-href-6.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1' name='A-target-6.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1' name='X-6.1.1.1.1' style='display:none;'>6.1.1.1.1</div><div id='A-6.1.1.1.1.1' name='A-6.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1' name='A-href-6.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1' name='A-target-6.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1' name='X-6.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-6.1.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-6.1.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1.1' style='display:none;'>6.1.1.1.1.1.1.1</div><div id='A-6.1.1.1.1.1.1.1.1' name='A-6.1.1.1.1.1.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-6.1.1.1.1.1.1.1.1' name='A-href-6.1.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1.1' name='A-target-6.1.1.1.1.1.1.1.1' style='display:none;'></div><div id='X-6.1.1.1.1.1.1.1.1' name='X-6.1.1.1.1.1.1.1.1' style='display:none;'>Yes</div><div id='A-6.1.1.1.1.1.1.1.2' name='A-6.1.1.1.1.1.1.1.2' style='display:none;'> No
+</div><div id='A-href-6.1.1.1.1.1.1.1.2' name='A-href-6.1.1.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.1.1.1.1.1.1.1.2' name='A-target-6.1.1.1.1.1.1.1.2' style='display:none;'></div><div id='X-6.1.1.1.1.1.1.1.2' name='X-6.1.1.1.1.1.1.1.2' style='display:none;'>No</div><div id='A-7.1' name='A-7.1' style='display:none;'><variable></div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'>text</div><div id='X-7.1' name='X-7.1' style='display:none;'>7.1</div><div id='A-7.1.1' name='A-7.1.1' style='display:none;'> Yes
+</div><div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'></div><div id='X-7.1.1' name='X-7.1.1' style='display:none;'>Yes</div><div id='A-7.1.2' name='A-7.1.2' style='display:none;'> No
+</div><div id='A-href-7.1.2' name='A-href-7.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.2' name='A-target-7.1.2' style='display:none;'></div><div id='X-7.1.2' name='X-7.1.2' style='display:none;'>No</div><div id='A-8.1' name='A-8.1' style='display:none;'> Yes
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Yes</div><div id='A-8.2' name='A-8.2' style='display:none;'> No
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>No</div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'>text</div><div id='X-9.1' name='X-9.1' style='display:none;'>9.1</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'>text</div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'>9.1.1</div><div id='A-9.1.1.1' name='A-9.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1' name='A-href-9.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1' name='A-target-9.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1' name='X-9.1.1.1' style='display:none;'>9.1.1.1</div><div id='A-9.1.1.1.1' name='A-9.1.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1.1' name='A-href-9.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1' name='A-target-9.1.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1.1' name='X-9.1.1.1.1' style='display:none;'>9.1.1.1.1</div><div id='A-9.1.1.1.1.1' name='A-9.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-9.1.1.1.1.1' name='A-href-9.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1' name='A-target-9.1.1.1.1.1' style='display:none;'>text</div><div id='X-9.1.1.1.1.1' name='X-9.1.1.1.1.1' style='display:none;'>9.1.1.1.1.1</div><div id='A-9.1.1.1.1.1.1' name='A-9.1.1.1.1.1.1' style='display:none;'> very good
+</div><div id='A-href-9.1.1.1.1.1.1' name='A-href-9.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.1' name='A-target-9.1.1.1.1.1.1' style='display:none;'></div><div id='X-9.1.1.1.1.1.1' name='X-9.1.1.1.1.1.1' style='display:none;'>very good</div><div id='A-9.1.1.1.1.1.2' name='A-9.1.1.1.1.1.2' style='display:none;'> good
+</div><div id='A-href-9.1.1.1.1.1.2' name='A-href-9.1.1.1.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.2' name='A-target-9.1.1.1.1.1.2' style='display:none;'></div><div id='X-9.1.1.1.1.1.2' name='X-9.1.1.1.1.1.2' style='display:none;'>good</div><div id='A-9.1.1.1.1.1.3' name='A-9.1.1.1.1.1.3' style='display:none;'> adequate
+</div><div id='A-href-9.1.1.1.1.1.3' name='A-href-9.1.1.1.1.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.3' name='A-target-9.1.1.1.1.1.3' style='display:none;'></div><div id='X-9.1.1.1.1.1.3' name='X-9.1.1.1.1.1.3' style='display:none;'>adequate</div><div id='A-9.1.1.1.1.1.4' name='A-9.1.1.1.1.1.4' style='display:none;'> poor
+</div><div id='A-href-9.1.1.1.1.1.4' name='A-href-9.1.1.1.1.1.4' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1.1.1.1.4' name='A-target-9.1.1.1.1.1.4' style='display:none;'></div><div id='X-9.1.1.1.1.1.4' name='X-9.1.1.1.1.1.4' style='display:none;'>poor</div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'>text</div><div id='X-10.1' name='X-10.1' style='display:none;'>10.1</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'><variable></div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>text</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'>10.1.1</div><div id='A-10.1.1.1' name='A-10.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-10.1.1.1' name='A-href-10.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.1' name='A-target-10.1.1.1' style='display:none;'></div><div id='X-10.1.1.1' name='X-10.1.1.1' style='display:none;'>Yes</div><div id='A-10.1.1.2' name='A-10.1.1.2' style='display:none;'> No
+</div><div id='A-href-10.1.1.2' name='A-href-10.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.1.2' name='A-target-10.1.1.2' style='display:none;'></div><div id='X-10.1.1.2' name='X-10.1.1.2' style='display:none;'>No</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes</div><div id='A-11.2' name='A-11.2' style='display:none;'> No
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes</div><div id='A-12.2' name='A-12.2' style='display:none;'> No
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>No</div><div id='A-13.1' name='A-13.1' style='display:none;'><variable></div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'>number</div><div id='X-13.1' name='X-13.1' style='display:none;'>13.1</div><div id='A-13.1.1' name='A-13.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'>number</div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'>13.1.1</div><div id='A-13.1.1.1' name='A-13.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1' name='A-href-13.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1' name='A-target-13.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1' name='X-13.1.1.1' style='display:none;'>13.1.1.1</div><div id='A-13.1.1.1.1' name='A-13.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1' name='A-href-13.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1' name='A-target-13.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1' name='X-13.1.1.1.1' style='display:none;'>13.1.1.1.1</div><div id='A-13.1.1.1.1.1' name='A-13.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1' name='A-href-13.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1' name='A-target-13.1.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1.1' name='X-13.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1' style='display:none;'>number</div><div id='X-13.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1.1' style='display:none;'><variable></div><div id='A-href-13.1.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1.1' style='display:none;'>text</div><div id='X-13.1.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1.1' style='display:none;'>13.1.1.1.1.1.1.1</div><div id='A-13.1.1.1.1.1.1.1.1' name='A-13.1.1.1.1.1.1.1.1' style='display:none;'>: Download</div><div id='A-href-13.1.1.1.1.1.1.1.1' name='A-href-13.1.1.1.1.1.1.1.1' style='display:none;'>javascript:save2('mailmerge.csv',csv())</div><div id='A-target-13.1.1.1.1.1.1.1.1' name='A-target-13.1.1.1.1.1.1.1.1' style='display:none;'>target="_blank"</div><div id='X-13.1.1.1.1.1.1.1.1' name='X-13.1.1.1.1.1.1.1.1' style='display:none;'>: Download</div>
+<script>
+	var QVnames = [['1','Docket'],['1.1','Name'],['1.1.1','Age'],['1.1.1.1','Relationship'],['1.1.1.1.1','Annual'],['1.1.1.1.1.1','1.1.1.1.1.1'],['1.1.1.1.1.2','1.1.1.1.1.2'],['1.1.1.1.1.3','1.1.1.1.1.3'],['2','StartDate'],['2.1','EndDate'],['2.1.1','MentalCondition'],['2.1.1.1','PhysicalCondition'],['2.1.1.1.1','SocialCondition'],['2.1.1.1.1.1','2.1.1.1.1.1'],['3','Living'],['3.1','Home2'],['3.1.1','Facility1'],['3.1.1.1','3.1.1.1'],['3.1.1.2','3.1.1.2'],['4','Facility2'],['4.1','LiveDates'],['4.1.1','Elsewhere'],['4.1.1.1','4.1.1.1'],['4.1.1.2','4.1.1.2'],['5','NoFacility'],['5.1','Elsewhere2'],['5.1.1','5.1.1'],['5.1.2','5.1.2'],['6','BestInterestLiving'],['6.1','BestInterestHealthcare'],['6.1.1','BestInterestTreatment'],['6.1.1.1','ServicesMedical'],['6.1.1.1.1','ServicesEducational'],['6.1.1.1.1.1','ServicesVocational'],['6.1.1.1.1.1.1','ServicesOther'],['6.1.1.1.1.1.1.1','CareEval'],['6.1.1.1.1.1.1.1.1','6.1.1.1.1.1.1.1.1'],['6.1.1.1.1.1.1.1.2','6.1.1.1.1.1.1.1.2'],['7','Adequacy'],['7.1','Anti'],['7.1.1','7.1.1'],['7.1.2','7.1.2'],['8','Criminal'],['8.1','8.1'],['8.2','8.2'],['9','Explain'],['9.1','DescribeVisits'],['9.1.1','DescribeContact'],['9.1.1.1','DescribeOther'],['9.1.1.1.1','Decisions'],['9.1.1.1.1.1','9.1.1.1.1.1'],['9.1.1.1.1.1.1','9.1.1.1.1.1.1'],['9.1.1.1.1.1.2','9.1.1.1.1.1.2'],['9.1.1.1.1.1.3','9.1.1.1.1.1.3'],['9.1.1.1.1.1.4','9.1.1.1.1.1.4'],['10','Changes'],['10.1','18Months'],['10.1.1','Payee'],['10.1.1.1','10.1.1.1'],['10.1.1.2','10.1.1.2'],['11','Funds'],['11.1','11.1'],['11.2','11.2'],['12','Cons'],['12.1','12.1'],['12.2','12.2'],['13','Bank'],['13.1','SS'],['13.1.1','CareFees'],['13.1.1.1','Personal'],['13.1.1.1.1','GFees'],['13.1.1.1.1.1','Expenses'],['13.1.1.1.1.1.1','Additional'],['13.1.1.1.1.1.1.1','Download']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text></div></div><p align=center> <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+		
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			} 
+		}
+			
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();			
+		} else {
+			if (restart == undefined) {
+				document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML				
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") { 
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n"; 
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);			
+			}
+
+		}
+		
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+					
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";		
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question 
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+				
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+						
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			var script_call = "";
+			if (tmp[i].innerHTML.match(regexp)) {
+				if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {
+					script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");
+				} else {
+					if (a_href[i].innerHTML.match('^_blank:')) {
+						script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";			
+					} else {
+						script_call = "location.href = '"+a_href[i].innerHTML+"';";
+					}
+				}
+				document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";							
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";				
+				freetext = 0;
+			}
+		}			
+
+		if (restar == undefined) {
+			
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) { 
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";				
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+				
+		if (QNum != 0) { 
+			if (goingback == 0) {
+				scroll2Q(Jht,800);           	
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);     		
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+					
+	}
+
+	
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";						
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+	
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+		
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+		
+		return items;
+	}	
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+		
+	//show funtion
+	function show(id) { 
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else { 
+        	if (document.layers) {  
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';         
+    	} else { 
+        	if (document.layers) {  
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';         
+        	}   
+    	} else { 
+        	if (document.layers) {  
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+	
+	function swapvar(input) {
+		var output; 
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			} 
+		}
+		output = input
+		return output
+	}
+	
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+	
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+	
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+		
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+		
+		//look4goto(qn,path[path.length-1]);
+		
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it. 
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		look4goto(qn,path[path.length-1]);
+		
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+		
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}		
+	
+	function doc() {
+		var doc_output = ""; 
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}	
+	
+	function json_str() {
+		
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+	
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";		
+		}
+		
+		if (docAs) {
+			var doctext = document.createElement("textarea");
+			doctext.style.display ='none';
+			doctext.name= docAs;
+			doctext.value= doc();
+			document.getElementById('FORM').appendChild(doctext);
+			if (instructions) {
+				var instructtext = document.createElement("textarea");
+				instructtext.type='hidden';
+				instructtext.style.display ='none';
+				instructtext.name= 'i';
+				instructtext.value= instructions;
+				document.getElementById('FORM').appendChild(instructtext);	
+			}
+		}
+		if (transcriptAs) {
+			var ttext = document.createElement("textarea");
+			ttext.type='hidden';
+			ttext.style.display ='none';
+			ttext.name= transcriptAs;
+			ttext.value= transcript();
+			document.getElementById('FORM').appendChild(ttext);
+		}
+		if (jsonAs) {
+			var json = document.createElement("textarea");
+			json.type='hidden';
+			json.style.display ='none';
+			json.name= jsonAs;
+			json.value= json_str();
+			document.getElementById('FORM').appendChild(json);
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+	
+	function csv() {
+		var csv_list = "";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				csv_list = csv_list+'"'+QVnames[i][1]+'"';
+				csv_list = csv_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					csv_list = csv_list+'""';
+				}
+				csv_list = csv_list+",";
+			} 			
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+
+		return csv_list;
+	}
+	
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature. 
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem || 
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension     
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+		
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+		
+	// Optionally allow the user to choose a file name by providing 
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+		
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+			  
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+		
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+		
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+</BODY>
+</HTML>
