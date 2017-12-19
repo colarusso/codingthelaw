@@ -1,2 +1,4 @@
-Timestamp 1,Client ID,When are you meeting with the attorney,What is your full name,What is your date of birth,What is the person's full name you are or might be in a law suit with?,Is this the first time you met with the attorney?,Do you have any children?,"If yes, how many children do you have that live with you? (please include gender)",What is your immigration status?
-11/28/2017 17:14:43,12345,11/29/2017,Chantal Choi,2/12/1990,Choi,Yes,No,0,"Visa (F-1, K-1, H1B)"
+Timestamp,Client ID,When are you meeting with the attorney,What is your full name,What is your date of birth,What is the person's full name you are or might be in a law suit with?,Is this the first time you met with the attorney?,Do you have any children?,"If yes, how many children do you have that live with you? (please include gender (M or F))",What is your immigration status?,Email Address,Immigration of kids and opp. party,What is your opposing party's immigration status?,What is your child's immigration status?,What is your child's immigration status? if it is different from the previous answer.
+,,,,,,,,,,,,,,
+12/19/2017 10:52:16,3344,12/20/2017,Choi,2/12/1988,jane doe,Yes,No,,"Visa (F-1, K-1, H1B)",,,US Citizen,,
+12/19/2017 10:54:03,1234,12/20/2017,Pretend Client ,1/15/1987,Donald Trump ,Yes,Yes,"2, one M and one F ",2 year green card holder,,,US Citizen,US Citizen,
