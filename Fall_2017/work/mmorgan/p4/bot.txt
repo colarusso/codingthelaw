@@ -1,4 +1,8 @@
-Before: <input type="hidden" name="name" value="Client Profile"/>
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/White_Daisy_02.JPG');"></div>
+<h2 style="text-align:center;">Daisy Debt Information Collection</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<input type="hidden" name="name" value="Client Profile"/>
 <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/mmorgan/p4/Information.docx"/>
 
 
@@ -57,7 +61,6 @@ X:
 																			Q(gotosave):GOTO:save
 																	A:No
 																		Q(save):Ready to save your document?
-																		A:[javascript:save2('mailmerge.csv',csv())]No
 																		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Yes
 
 
