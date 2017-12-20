@@ -1,4 +1,82 @@
 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.pickncash.com/wp-content/uploads/2017/02/FI-Document-Automation.png');"></div>
+<h2 style="text-align:center;">Document Generation</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information.</b></p>
+<p>Answer the following questions to have a document pre-filled for your convenience.</p>
+<input type="hidden" id="name" name="name" value="name"/>
+<input type="hidden" id="docx_uri" name="docx_uri" value="docx_uri"/>
+
+
+Q(attorney): Name of Attorney (e.g., John Smith or John A. Smith)
+X:
+	Q(bbo): Attorney BBO Number (e.g., 123456)
+	X:
+	A:
+		Q(plaintiff): Name of Plaintiff (e.g., Jane Doe)
+		X:
+			Q(defendant): Name of Defendant (e.g., John Doe)
+			X:
+				Q(county): County of Proceeding (e.g., Suffolk, Middlesex, Dukes, etc.)
+				X:
+					Q(docket): Docket Number (e.g., 
+					X:
+						Q(fork): Chose which document you would like to pre-fill. 
+						A: Notice of Appearance
+							Q(party): Chose the party which the firm is representing.
+							A[javascript:$('#name').val('Plaintiff NOA');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pnoa.docx')]:Plaintiff
+								Q(1.1.2.1.1.1.1.1.1): Click below to access your document.
+							A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Notice of Appearance
+								Q(1.1.2.1.1.1.1.1.2):GOTO:fork
+						A[javascript:$('#name').val('Defendant NOA');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dnoa.docx')]:Defendant
+							Q(1.1.2.1.1.1.1.2): Click below to access your document.
+							A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Notice of Appearance
+								Q(1.1.2.1.1.1.1.2.1):GOTO:fork
+						A: Interrogatories
+							Q(party2): Chose the party which the firm is representing.
+							A[javascript:$('#name').val('Plaintiff INTS');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pint.docx')]:Plaintiff
+								Q(1.1.2.1.1.1.1.3.1): Click below to access your document.
+								A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Interrogatories
+									Q(1.1.2.1.1.1.1.3.1.1):GOTO:fork
+							A[javascript:$('#name').val('Defendant INTS');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dint.docx')]:Defendant
+								Q(1.1.2.1.1.1.1.3.2): Click below to access your document.
+								A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Interrogatories
+									Q(1.1.2.1.1.1.1.3.2.1):GOTO:fork
+						A:Request for the Production of Documents
+							Q(party3): Chose the party which the firm is representing.
+							A[javascript:$('#name').val('Plaintill RPD');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/prpd.docx')]:Plaintiff
+								Q(1.1.2.1.1.1.1.4.1): Click below to access your document.
+								A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Request for the Production of Documents
+									Q(1.1.2.1.1.1.1.4.1.1):GOTO:fork
+							A[javascript:$('#name').val('Defendant RPD');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/drpd.docx')]:Defendant
+								Q(1.1.2.1.1.1.1.4.2): Click below to access your document.
+							A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Request for the Production of Documents
+								Q(1.1.2.1.1.1.1.4.3):GOTO:fork
+						A: Bundle: Notice of Appearance, Interrogatories, Request for the Production of Documents
+							Q(1.1.2.1.1.1.1.5): Chose the party which the firm is representing.
+							A[javascript:$('#name').val('Plaintiff Bunde');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pbundle.docx')]:Plaintiff Bundle
+								Q(1.1.2.1.1.1.1.5.1): Click below to access your document.
+								A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Plaintiff Bundle
+									Q(1.1.2.1.1.1.1.5.1.1):GOTO:fork
+							A[javascript:$('#name').val('Plaintiff Bundle');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pbundle.docx')]: Defendant Bundle
+								Q(1.1.2.1.1.1.1.5.2): Click below to access your document.
+								A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Defendant Bundle
+									Q(1.1.2.1.1.1.1.5.2.1):GOTO:fork
+						A: Joint Affidavit of Irretrievable Breakdown
+							Q(dom): Date of Marriage (mm/dd/yyyy)
+							X[javascript:$('#name').val('Joint Affidavit of Irretrievable Breakdown');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/ibd.docx')]:
+								Q(dolr): Date of Last Residence (mm/dd/yyyy)
+								X:
+									Q(street): Address of Couple's Last Residence (e.g., 123 Washington Street)
+									X:
+										Q(city): City of Couple's Last Residence
+										X:
+											Q(state):State of Couple's Last Residence
+											X:
+												Q(1.1.2.1.1.1.1.6.1.1.1.1.1): Click below to access your document.
+												A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Joint Affidavit of Irretrievable Breakdown
+													Q(1.1.2.1.1.1.1.6.1.1.1.1.1.1):GOTO:fork
+											
+			Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('https://s3.amazonaws.com/files.qrz.com/q/ab1dq/Connecticut_flag_XL_anim.gif');"></div>
 <h2 style="text-align:center;">Connecticut Indigency Calculator</h2>
 <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
