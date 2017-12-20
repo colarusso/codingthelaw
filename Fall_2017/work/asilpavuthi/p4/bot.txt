@@ -1,0 +1,87 @@
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="border: 0px;border-radius:0%;width:380px;height:90px;background-size: 380px 90px;background-image: url('http://www.suffolk.edu/structural-images/NewMastheads/Website-Headers_LAW.png');"></div>
+<h2 style="text-align:center;">Legal Entity Determiner</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p><b>For the purpose of this project, the legal entities that will be determined will be limited to S Corporation, Limited Liability Corporation, and C Corporation.</b></p>
+<p>Answer the following questions to see which entity you should incorporate as.</p>
+<p>If you don't understand any legal term in the question, please click on the underlined text within the question.</p>
+<p>Before you proceed, please agree to the following terms:</p>
+<input type="hidden" name="name" value="Legal Entity Determinerr"/>
+
+Q(terms): This is not legal advice and the information that you enter here is not protected by attorney-client privilege?
+A: Yes, I agree.
+	Q(1.1):GOTO:chart
+A: No
+	Q(1.2): I'm sorry, we can't help you unless you agree to our terms.
+
+Q(chart): Before we proceed, would you like to see a chart of entity comparison?
+A:[https://www.natptax.com/TaxKnowledgeCenter/FederalTaxInformation/Documents/Chart%20of%20Entity%20Comparison.pdf]Yes
+	Q(2.1):GOTO:investor
+A: No
+	Q(2.2):GOTO:investor
+
+Q(investor): Do you have or are you planning to have any <a href="https://www.investopedia.com/terms/n/nonresidentalien.asp" target="_new">nonresident alien</a> investors (<a href="https://www.investopedia.com/terms/s/shareholder.asp" target="_new">shareholders</a>)?
+A: Yes
+	Q(3.1):GOTO:employeeequity
+A: No
+	Q(100shareholder): Are you planning to have more than 100 <a href="https://www.investopedia.com/terms/s/shareholder.asp" target="_new">shareholders</a>?
+	A: Yes
+		Q(3.2.1):GOTO:employeeequity
+	A: No
+		Q(3.2.2): Are you planning to issue more than one <a href="https://www.investopedia.com/terms/c/class.asp" target="_new">class of stock</a>?
+		A:Yes
+			Q(3.2.2.1):GOTO:employeeequity
+		A: No
+			Q(affiliate): Is this company going to be a part of an <a href="https://www.investopedia.com/terms/a/affiliated-group.asp" target="_new">affiliated group</a>?
+			A: Yes
+				Q(3.2.2.2.1):GOTO:employeeequity
+			A: No
+				Q(bankorinsurance): Is your business a <a href="https://www.investopedia.com/terms/f/financialinstitution.asp" target="_new">financial institution</a> such as bank or insurance company?
+				A: Yes
+					Q(3.2.2.2.2.1):GOTO:employeeequity
+				A: No
+					Q(3.2.2.2.2.2):GOTO:scorp
+
+Q(employeeequity): Are you planning to issue <a href="https://www.investopedia.com/terms/e/equity-compensation.asp">equity compensation</a> to your employees?
+A: Yes
+	Q(4.1):GOTO:ccorp
+A: No
+	Q(public):Are you planning to go <a href="https://www.investopedia.com/terms/p/publiccompany.asp">public</a>?
+	A: Yes
+		Q(4.2.1):GOTO:ccorp
+	A: No
+		Q(investback): Will you invest profits back ın the business?
+		A: Yes
+			Q(4.2.2.1):GOTO:ccorp
+		A: No
+			Q(crowdfund):Will you <a href="https://www.investopedia.com/terms/c/crowdfunding.asp" target="_new">crowdfund</a> or raise money from outside or professional investors right away?
+			A: Yes
+				Q(4.2.2.2.1):GOTO:ccorp
+			A: No
+				Q(4.2.2.2.2):GOTO:llc
+				
+Q(ccorp): You should consider structuring your business as a C Corporation. Would you like to read more about C Corporation.
+A:[https://www.investopedia.com/terms/c/c-corporation.asp]Yes
+	Q(5.1):GOTO:ending
+A: No
+	Q(5.2):GOTO:ending
+
+Q(llc): You should consider structuring your business as an Limited Liability Corporation (LLC). Would you like to read more about LLC?
+A:[https://www.investopedia.com/terms/l/llc.asp?ad=dirN&qo=investopediaSiteSearch&qsrc=0&o=40186] Yes
+	Q(6.1):GOTO:ending
+A: No
+	Q(6.2):GOTO:ending 
+
+Q(scorp): You should consider structuring your business as an S Corporation. Would you like to read more about S Corporation?
+A:[https://www.investopedia.com/articles/investing/091614/understanding-s-corporations.asp?ad=dirN&qo=investopediaSiteSearch&qsrc=0&o=40186] Yes
+	Q(7.1):GOTO:ending
+A: No
+	Q(7.2):GOTO:ending 
+
+Q(ending): Is there anything else that we can help you with?
+A:[http://www.suffolk.edu/law/academics/clinics/61013.php]I would like to seek help from the IPEC Clinic regarding choice of entity and business formation
+	Q(8.1):GOTO:end
+A: I would like to start over
+	Q(8.2):GOTO:terms
+A: No
+	Q(end): Thank you for using our service. I hope you have a nice day.
