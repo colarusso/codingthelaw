@@ -1,0 +1,38 @@
+Q(investor): Are you planning to have any non-U.S.-based investors (shareholders)?
+A: Yes
+	Q(1.1):GOTO:employeeequity
+A: No
+	Q(1.2): Are you planning to have more than 100 shareholders?
+	A: Yes
+		Q(1.2.1):GOTO:employeeequity
+	A: No
+		Q(1.2.2): Are you planning to issue more than one class of stock?
+		A:Yes
+			Q(1.2.2.1):GOTO:employeeequity
+		A: No
+			Q(1.2.2.2): Is this company going to be a part of an affiliated group?
+			A: Yes
+				Q(1.2.2.2.1):employeeequity
+			A: No
+				Q(1.2.2.2.2): You should incorporate as an S-corp.
+
+Q(employeeequity): Are you planning to issue equity awards to employees?
+A: Yes
+	Q(2.1):GOTO:ccorp
+A: No
+	Q(2.2):Will you crowdfund or raise money from outside investor right away?
+	A: Yes
+		Q(2.2.1):GOTO:ccorp
+	A: No
+		Q(2.2.2):Are you planning to go public?
+		A: Yes
+			Q(2.2.2.1):GOTO:ccorp
+		A: No
+			Q(2.2.2.2): Will you invest profits back ın the business?
+			A: Yes
+				Q(2.2.2.2.1):GOTO:ccorp
+			A: No
+				Q(2.2.2.2.2): You should incorporate as an LLC.
+	
+
+Q(ccorp): You should incorporate as a C-corp.

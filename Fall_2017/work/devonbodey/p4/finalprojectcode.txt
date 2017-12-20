@@ -78,6 +78,9 @@ X:
 										A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Joint Affidavit of Irretrievable Breakdown
 											Q(3.1.1.1.1.5.1.1.1.1.1.1):GOTO:fork
 				A: Start New Client
-					Q(3.1.1.1.1.6): To start a new case, click "Start Over" below. 
-												
+					Q(3.1.1.1.1.6): Do you want to keep filling documents for the same attorney?
+					A: Yes. 
+						Q(3.1.1.1.1.6.1):GOTO:plaintiff
+					A: No.
+						Q(3.1.1.1.1.6.2):GOTO:attorney
 
