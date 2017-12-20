@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Final Project</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>notebook-Copy1</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11778,36 +11751,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Making-a-Difference:-Document-Generation">Making a Difference: Document Generation<a class="anchor-link" href="#Making-a-Difference:-Document-Generation">&#182;</a></h1><p>By <a href="https://www.linkedin.com/in/devonbodey/">Devon Bodey</a></p>
-<h2 id="About">About<a class="anchor-link" href="#About">&#182;</a></h2><h4 id="SimpleForm:-Legal-Document-Generation">SimpleForm: Legal Document Generation<a class="anchor-link" href="#SimpleForm:-Legal-Document-Generation">&#182;</a></h4><p>The final version of my project can be found <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/finalprojectcode.html">here</a>. Additionally, the final text version of my code can be accessed through this <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/finalprojectcode.txt">link</a>.</p>
-<h4 id="General-Information">General Information<a class="anchor-link" href="#General-Information">&#182;</a></h4><p>For the final project in Coding the Law, the objective was for each student to partner up with a law firm to help them solve a real-world problem through implementing the skills that have been learned over the course of the semester. Ultimately, the task was to find an attorney or legal professional who needed help solving a problem, and work towards remedying the problem through the use coding skills such as document automation, data scraping or machine learning algorithms.</p>
-<p>Initially, I paired up with a civil litigator at a small law firm in New England, who thought his firm could benefit from a document automation system which generated pre-formatted and pre-filled documents that were frequently used at the firm. The goal of this project was to create a tool which would maximize efficiency and reduce wasted time. Instead of copying and pasting new information into old word documents and dealing with the battle of formatting or making sure you didn't miss something from a past case, this tool will be useful to provide legal staff with a new document which is pre-filled and only requires the input of substantive and case specific information such as interrogatories or document requests. Other documents such as notice of appearances or joint petitions for divorce can be fully generated by using this tool. After the document is downloaded, all that is needed are the signatures of parties and/or attorneys, and then the document is ready for mailing or filing.</p>
-<h2 id="Process">Process<a class="anchor-link" href="#Process">&#182;</a></h2><h4 id="Framing">Framing<a class="anchor-link" href="#Framing">&#182;</a></h4><p>In the legal field today, there is a major justice-gap which many attorneys and law students are trying to minimize by finding practical solutions and innovative ways to provide reasonably priced services while maximizing the time allocation and productivity of attorneys. Thus, by implementing even the most basic of technological tools, attorneys can practice most efficiently and expand access to justice, while running an effective practice from the ground up.</p>
-<p>After working in several small law or boutique sized law firms, it became apparent that a great deal of time was wasted in drafting of documents and document formatting. When discussing the issue with numerous attorneys in the field, it became clear that many law clerks and legal secretaries were spending unnecessary amounts of billable time drafting documents that should be easily drafted. However, due to stylistic techniques and varying formatting styles, many student employees get overwhelmed by the tedious details of the assignment, instead of focusing on the substantive portion of the task at hand.</p>
-<p>Although there are numerous document automation programs in the industry, these softwares often come with large price-tags, which dissuade many small firm attorneys or solo practitioners from the investment. By using a simple QnA markup, many legal documents can be pre-filled and pre-formatted at no cost whatsoever.</p>
-<h4 id="Research">Research<a class="anchor-link" href="#Research">&#182;</a></h4><p>Upon learning of the issue of wasted time regarding drafting, I began to look into practical solutions to resolve this problem. To prepare for how to effectively pre-fill and format common legal documents, I spoke with several practicing attorneys who use TurboLaw, a common legal document automation software. These attorneys were able to help me by telling me what aspects of the software they found helpful, and what aspects of the software they thought could be improved upon. Through discussing the problem with different professionals in the field, it was apparent that many were only looking for the document to be pre-filled. Nobody was looking for the document to be fully produced via an outside source.</p>
-<p>After learning what professionals in the field were looking for, I contacted a few peers to determine which documents would be the most helpful if pre-filled and pre-formatted. Multiple individuals stated that notices of appearances should be generated given how tedious they are in nature. Additionally, many professionals seemed to think that discovery requests would be helpful if pre-filled and formatted due the wasted time that is often spent drafting the document. To determine what format to use for drafting the pre-formatted documents, I looked at documents I had drafted at places of past employment, including private law firms and the office of the public defender. By looking at multiple documents, clear trends in formatting were easy to spot. I followed the common formatting to draft my own documents pursuant to the Massachusetts rules of Civil Procedure.</p>
-<h4 id="Ideation-&amp;-Prototyping">Ideation &amp; Prototyping<a class="anchor-link" href="#Ideation-&amp;-Prototyping">&#182;</a></h4><p>By creating a platform to generate documents within a law firm, money that would spent on document automation systems can be saved or spent elsewhere. Although this project will not save attorneys a drastic amount of money upfront, it will save a large amount of time in billable hours and training. Instead of having to adapt to the formatting techniques of an already established software, this method of pre-filling and document generation will allow law firms to improve their efficiency while maintaining their preferred formatting styles. In the legal world today, technology is rapidly growing. However, there continues to be a great deal of pushback from individuals who prefer things the 'old fashion way'. It was clear through my research that the most useful approach to solving this problem would be through QnA Markup. Unfortunately, creating a TwitterBot or running a data analysis, would have not been a useful method of solving the issue at hand. Adaptable technology, such as the use of <a href="http://www.qnamarkup.org">QnA Markup</a> to aid in the process of generating documents for small law firms is a great way to aid in the transition into the legal world while maintaining the attorneys preferences and remaining cost effective.</p>
-<p>It took several different attempts to find an effective approach in formatting the QnA. Initially, I thought it would be best to start by asking which document the user would like to pre-fill and generate. However, after running that a few times, it became apparent that this was repetitive. By asking similar questions in the beginaing of the QnA, and asking which document the user would like to generate second, the user has the opportunity to download multiple documents without repeating the entire QnA. Prior to updating my approach, the structure of my QnA looked like <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/firstcode.txt">this</a>.</p>
-<h4 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h4><p>Professor Colarusso stepped in as my <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/contact.png">partner</a> for this project after I was unable to re-establish contact with the attorney who initially gave me the idea for this project.</p>
-<p>In order to obtain adequate feedback on my project, I had it tested by three peer-testers who are all working paralegals and clerks in the legal profession. In addition to peer-testing, Professor Colarusso also tested by project acting under the role of a "partner".</p>
-<p>Professor Colarusso Feedback: clarify input examples, add a disclaimer to the top of the project to ensure that users know it is a class project, add a feature to allow a loop to the beginning if the user wants to begin a document for a new client, change the format of inputting dates.</p>
-<p><a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/feedback1.png">Peer-Tester 1 Feedback</a>: no additional feedback.</p>
-<p><a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/feedback2.png">Peer-Tester 2 Feedback</a>: allow for the name of the attorney to be changed along with the BBO Number, link county and docket number to have the docket number partially pre-filled.</p>
-<p><a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/feedback3.png">Peer-Tester 3 Feedback</a>: clarify the way in which it indicates to input plaintiff, defendant, and attorney names.</p>
-<p>Attached are links to text versions of the QnA Markup code <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pretesting.txt">before</a> and <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/AlmostFinal.txt">after</a> user testing.</p>
-<h4 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h4><p>After receiving valuable user feedback from both my partner and three peer-testers, my next step was to implement the changes they suggested. Seeing as this tool will typically be utilized by paralegals, law clerks, and support staff, I was eager to implement the changes suggested by fellow young professionals in the industry.</p>
-<p>To start, I went through the QnA, and attempted to make the prompts more clear. For example, instead of having “First and Last Name of Plaintiff”, I modified the prompt to say “Name of Plaintiff (e.g., Jane Doe)”. Users collectively agreed that this description was clearer than before. I considered changing the prompt to say “Full Name of Plaintiff (e.g., Jane Doe)” but the feedback I received on that idea was that it was too wordy. Ultimately, the testers were looking for the most concise way to convey what information was needed.</p>
-<p>The biggest change that I added in the refinement process was allowing users to change the name and BBO Number of the attorney, so that this tool can be better used at larger firms. I initially thought it would be best to pre-fill several names of attorneys and pair them with the matching BBO Numbers. However, seeing this project is not tailored to a specific firm, I chose instead to leave this as a “fill-in” so that the product can continue to be used by myself and other peers who have expressed interest. In the case that I hear back from a firm about integrating this tool, I would go on to make this aspect more specific. To do so, I would pre-fill one of each document with relevant attorney information. Then, instead of the first question being a fill-in asking “Name of Attorney (e.g., John Smith or John A. Smith)”, it would be a more QnA, asking the user to select from a list of attorneys. Again, this step would be specific to whichever firm intended on implementing the program so that it could be specific to their firm, style, and needs.</p>
-<p>Lastly, I refined the product to allow users to “Start New Client”. This feature allows clients to loop back to the beginning without having to click “Start Over” at the bottom. I also went on to allow users to choose between whether or not they wanted to start at the top by adding a new attorney, or carrying on with the QnA for a new client while using the same attorney as the last document they generated. Initially, I did not think this was able to be done due to an apparent bug in the QnA system, however after seeking outside help, the QnA was able to allow users to overwrite previous code and move forward without having to repeat unnecessary steps. This step was done with the intention of making the program more user friendly and time efficient.</p>
-<h2 id="Product">Product<a class="anchor-link" href="#Product">&#182;</a></h2><h4 id="Intro-Pitch">Intro Pitch<a class="anchor-link" href="#Intro-Pitch">&#182;</a></h4><p>During Week 10 of class, each student provided a brief presentation of their final project. The PowerPoint used to present my five-minute introductory pitch can be found <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/FinalProjectProposal.pptx">here</a>.</p>
-<h4 id="Impact-&amp;-Efficiencies">Impact &amp; Efficiencies<a class="anchor-link" href="#Impact-&amp;-Efficiencies">&#182;</a></h4><p>This tool will eliminate a great deal of wasted time by a offering quick and accessible method of eliminating administrative "time-sinks" that regularly waste time of legal staff. This document generation system will afford more time to attorneys and staff to spend completing substantive work for clients which will then result in more affordable legal services, further breaking down the justice-gap.</p>
-<h4 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h4><p>This QnA is extremely user-friendly. Seeing as this program is meant for the use of legal professionals and staff, it is unlikely that confusion will occur. Regardless, the platform is simple enough to use that a client could fill it out if need-be. However, the purpose of this tool was not to completely eliminate the need to manually produce filings in word, but instead the goal was to reduce the unnecessary time wasted on non-substantive work in drafting documents.</p>
-<h4 id="Real-World-Viability-&amp;-Completeness">Real World Viability &amp; Completeness<a class="anchor-link" href="#Real-World-Viability-&amp;-Completeness">&#182;</a></h4><p>This tool is mostly ready for real world use as is. However, the way the program is currently designed, it is not specifically tailored to any attorney or law firm. Thus, in order for it to become fully real-world viable, I would need to pair with a specific attorney or firm and customize the documents to meet their specific needs and wishes. As mentioned above, I would also pre-fill word documents for each attorney so the user would pick from a list of attorneys within the firm instead of having to enter the name and BBO Number of each attorney they were drafting documents for. I would also need to customize the firm address and contant information to properly reflect where mailings and correspondence should be sent. Ultimately, the tool is prepared to be used, but the documents themselves would need to be tailored accordingly.</p>
-<p>In the case that this tool goes on to be implemented into a firm, I drafted a <a href="http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/completenessplan.pdf">"Completeness Plan"</a> which serves as a user guide for current use and maintenance of the program.</p>
-<h4 id="Sustainability">Sustainability<a class="anchor-link" href="#Sustainability">&#182;</a></h4><p>Now that the base QnA has already been established, this process can be added to with extreme ease as long as QnA Markup will hold the amount of data necessary. Although I remain unsure of whether or not the partner who I originally intended to work with will be implementing this project, I received good feedback from my current employer and past employer about the utility of the product in the workplace. Additionally, I find this tool extremely useful as a current law clerk. If I am able to receive permission from supervisors, I would like to input documents frequently used at the firm I work for, so that I could improve upon my speed, accuracy, and consistency in document drafting.</p>
-<p>In the future, if maintaining the use and implementation of this tool, I would like to go on and find a way to make the county and docket numbers link to save the step of adding the county code within the docket. This is an additional tool that could be extremely useful in Massachusetts, but may vary by jurisdiction.</p>
-<p>On that note, the information and pleadings produced by this tool are also subject to jurisdictional rules and regulations. Some jurisdictions require forms to be filed through pre-drafted court documents, and follow specific drafting rules. If this program was to be implemented elsewhere, I would need to make sure that the product adhered to the relevant jurisdictional standards.</p>
+<h1 id="U.S.-Air-Force-Medical-Discharge-Assistant">U.S. Air Force Medical Discharge Assistant<a class="anchor-link" href="#U.S.-Air-Force-Medical-Discharge-Assistant">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/jpjeffprice">Jeff Price</a></p>
+<p>I wrote a chatbot, which you can find <a href="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p4/botbeta2.html">here</a>, that helps active duty U.S. Air Force members navigate the medical discharge process.</p>
 
 </div>
 </div>
@@ -11828,8 +11773,4 @@ div#notebook {
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
