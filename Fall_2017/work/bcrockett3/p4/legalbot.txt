@@ -10,7 +10,6 @@ Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/
 <p>Please answer the following questions and bring a printed form of your answers to the District Court Commissioner's Office to see if you qualify for appointment of counsel. If the Maryland District Court Commissioner makes the determination that you are eligible to be represented by a Public Defender at trial, you will receive a confirmation in writing. The Public Defender will contact you regarding your status. Once you have received confirmation, all additional questions and concerns should be directed to the Maryland Public Defender's Office.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 
-<center><h2>Maryland Legal Counsel</h2></center>
 
 
 Q(Name): Please enter your full name.
