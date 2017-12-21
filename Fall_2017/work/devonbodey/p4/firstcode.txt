@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.pickncash.com/wp-content/uploads/2017/02/FI-Document-Automation.png');"></div>
+<h2 style="text-align:center;">Document Automation</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</pinput type="hidden" name="name" value="Application for Fee Waiver"/>
+<input type="hidden" name="docx_uri" val
+
+Q(intro): Chose which document you would like to pre-fill.
+A: Notice of Appearance
+	Q(noa): Who are you representing?
+	A: Plaintiff
+		Q(1.1.1): Full name of plaintiff 
+		X:
+			Q(1.1.1.1): Full name of defendant
+			X:
+				Q(1.1.1.1.1): County 
+				A: Suffolk
+				A: Middlesex
+				A: Essex
+				A: Worcester
+				A: Plymouth
+				A: Norfolk 
+				A: Barnstable
+				A: Nantucket
+				A: Bristol
+				A: Franklin
+				A: Hampshire
+				A: Hampden
+				A: Dukes
+					Q(1.1.1.1.1.13): Docket number
+					X:
+	A: Defendant
+A: Interrogatories
+	Q(int): Who are you representing?
+	A: Plaintiff
+	A: Defendant
+A: Request for the Production of Documents
+	Q(rpd): Who are you representing?
+	A: Plaintiff
+	A: Defendant
+A: Short Form Financial Statement
+A: Joint Affidavit of Irretrievable Breakdown

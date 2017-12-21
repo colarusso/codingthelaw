@@ -1,0 +1,113 @@
+Before: <center><h2>Firm Connect: The First Steps to Asserting Your Rights Under Massachusetts Lead Laws</h2></center>
+
+Q(1):Do you have a child under the age of 6?
+A:Yes
+	Q(1.1):Has your child been tested for lead first when they were 9-12 months and then 2-3 years old?
+	A:Yes
+		Q(1.1.1):Do you live in any of the following neighborhoods? 
+		<center><br>Boston</br>
+		<br>Haverhill</br>
+		<br>New Bedford</br>
+		<br>Brockton<br>
+		<br>Holyoke</br>
+		<br>Springfield</br>
+		<br>Chelsea</br>
+		<br>Lawrence</br>
+		<br>Taunton</br>
+		<br>Fall River</br>
+		<br>Lowell</br>
+		<br>Worcester</br>
+		<br>Fitchburg</br>
+		<br>Lynn</br></center>
+		A:Yes
+			Q(1.1.1.1):Was your child tested again at age 4?
+			A:Yes
+				Q(1.1.1.1.1):GOTO:congrats
+			A:No
+				Q(1.1.1.1.2):All children living in a “high risk neighborhood” must be tested a third time once they reach four years of age.  This test may either be administered by a physician or at a local health clinic. Parents can contact the Childhood Lead Poisoning Prevention Program at (800) 532-9571 for questions regarding testing. GOTO:apt
+		A:No
+			Q(1.1.1.2):GOTO:congrats
+	A:No
+		Q(1.1.2):GOTO:all
+
+A:No 
+	Q(1.2):GOTO:apt
+Q(congrats):Congratulations, you have met the early detection requirements  for children in Massachusetts. Should you have any further questions or want additional testing, parents may contact the Childhood Lead Poisoning Prevention Program at (800) 532-9571. GOTO:apt
+
+
+
+Q(all):All children in Massachusetts should be tested for lead. These tests may either be administered by a physician or at a local health clinic. Parents can also contact the Childhood Lead Poisoning Prevention Program at (800) 532-9571. GOTO:apt
+
+Q(apt):Are you currently living in an apartment or rental unit?
+A:Yes
+	Q(4.1):Was your building likely built before 1978?
+	A:Yes
+		Q(4.1.1):Has your landlord supplied you with the following documentation prior to the start of your lease?
+		<center><br>Information about possible lead paint on the property<br>
+		<br>Lead Law Notification and Certification forms</br>
+		<br>A copy of the most recent lead inspection report, if there is one</br>
+		<br>A copy of a letter of compliance, if the property was deleaded</br></center>
+		A:Yes
+			Q(4.1.1.1):Congrats, your landlord has met the documentation requirements in the state of Massachusetts. 
+		A:No
+			Q(4.1.1.2):Have you asked your landlord in writing for a lead inspection?
+			A:Yes, and my landlord agreed to have the apartment inspected
+				Q(4.1.1.2.1): Great! After the lead inspection is complete you have a right to know the results. You may have to move out during deleading. Your landlord must pay reasonable moving expenses, anywhere you go. If you stay with family or friends during deleading, you do not have to pay rent.  If your landlord finds you temporary housing, keep paying your landlord your usual rent. If the temporary housing is more expensive than your regular rent, it is your landlord’s responsibility to take care of it. All of this information is easily accessible online <a href="http://www.masslegalhelp.org/housing/private-housing/ch9-lead-poisoning"target="_blank">here.</a> You may also want to discuss your circumstances with an attorney.
+			A:Yes, but my landlord declined to my apartment inspected for lead.
+				Q(4.1.1.2.2): Make sure your request is in writing. If a child under 6 years old lives in the home and the landlord does not schedule a licensed lead inspector to inspect the tenant may either: 
+				<center><br>1. Ask your local Board of Health or the Childhood Lead Poisoning Prevention Program for a free lead inspection.</br> 
+				<br>2. Do the testing themselves with a home lead test kit. These can be purchased online or at a hardware store.</br> 
+				<br>3. Hire a licensed lead inspector. If the inspector finds lead, the landlord must pay you back for the inspection.</br>  
+ 				<br>The landlord must remove or cover any dangerous levels of lead that are found.  If they refuse to do this, a tenant should contact a local attorney.</br>  
+
+				<br>Do you feel as though your landlord has retaliated against you for reporting a violation of the law?</br>
+				A:Yes
+					Q(4.1.1.2.2.1):See Massachusetts General Law 186 s. 18 <a href="https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section18"target="_blank">Massachusetts General Law 186 s. 18.</a> Reprisals Against Tenants for Reporting violations. MGL 186 s. 18 prohibits threats and acts of reprisal against a tenant who reports a violation of law or commences a judicial or administrative proceeding against the property owner.  The landlord may not terminate tenancy, increase rent, or substantially alter the terms of the lease within a 6 month time frame, otherwise a presumption is created that the property owner must rebut with clear and convincing evidence there was no reprisal.
+				A:No
+					Q(4.1.1.2.2.2):Have a nice day
+			A:No, because I don’t know what to say to my landlord.
+				Q(landlord):
+				<input type="hidden" name="name" value="Dear Landlord"/>
+				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Dear-Landlord.docx"/>
+				What is your landlord's name?
+				X:
+					Q(tenant):What is the name on the lease?
+					X:
+						Q(4.1.1.2.3.1.1):Your letter to your landlord is ready
+						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
+		A:Yes, but I'm still concerned there may be lead.
+			Q(kit):Here's information on <a href="https://www.walmart.com/ip/First-Alert-LT1-Premium-Lead-Test-Kit/10099170?action=product_interest&action_type=title&item_id=10099170&placement_id=irs-106-m2&strategy=ABTV1&visitor_id=Q-Yy7WdzpivsFdVs-X_ndk&category=&client_guid&customer_id_enc=a0ba08d3-d30e-459f-86f7-bb411703265c&config_id=2&parent_item_id=10099170&parent_anchor_item_id=10099170&guid&bucket_id=irsbucketdefault&beacon_version=1.0.1&findingMethod=p13n"target="_blank">affordable home test kits.</a>		
+
+	A:No
+		Q(4.1.2):Are there paint chips or peeling in your apartment?
+		A:Yes
+			Q(4.1.2.1):GOTO:kit
+		A:No
+			Q(4.1.2.2):GOTO:kit
+A:No
+	Q(4.2):Are you looking to rent a unit and feel as though you’ve been discriminated against?
+	A:Yes
+		Q(4.2.1):Do you have young children?
+		A:Yes
+			Q(4.2.1.1): <a href="http://www.mass.gov/ocabr/licensee/dpl-boards/re/re19rc08-fair-housing.html">Housing Discrimination Against Persons with Children M.G.L. c. 151B, § 4 (11)</a> prohibits discrimination in the leasing or renting of accommodations to any person because the person has a child or children who shall occupy the premises with such person. GOTO:evidence
+		
+		A:No
+			Q(4.2.1.2):If you feel there was another reason discrimination occurred, please fill out the questions below.  Multiple Massachusetts laws protect against illegal discrimination, but this question requires the assistance of an attorney. Let's write down the facts about what happened here. GOTO:evidence
+		
+	A:No
+		Q(4.2.2):If you live in a house, you can hire an inspector or check the information below on home kits GOTO:kit
+
+Q(evidence): 
+<input type="hidden" name="name" value="Discrimination Facts"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Evidence-Doc.docx"/>
+
+Please list the date and the time of the incident (January 1, 2017 6:45pm)
+X:
+	Q(name):Please include the names and titles of the people who discriminated against you:
+	X:
+		Q(say):What information did you give to these individuals?
+		X:
+			Q(response):How did the individual(s) respond?
+			X:
+				Q(5.1.1.1.1):Click below to download your form!
+				A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here

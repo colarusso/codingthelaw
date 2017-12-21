@@ -1,0 +1,290 @@
+Before: 
+<input type="hidden" name="name" value="Seller Closing Information"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/ClosingConnect.docx"/>
+
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. This is a prototype and not completely bug free.</b></p>
+<h3>Seller Closing Information</h3>
+<p>This tool is only applicable to properties that are located in Georgia, if your property is located in another state please speak with your representative about finding a similar tool for you to use..</p>
+<p>Answer the following questions to develop an autofilled form that should be submitted to the representative working with your closing.</p>
+
+
+Q(street): What is the street number and name of the property?
+X:
+	Q(apartment): If you have an apartment number, what is it? 
+	X:
+		Q(1.1.1):GOTO:city
+	A: Does not apply. 
+		Q(city):What city is the property located?
+		X:
+			Q(zipcode): What is the property's zip code?
+			X:
+				Q(1.1.2.1.1):GOTO:ownership
+				
+Q(ownership): Which type of ownership of the property is involved in the buy/sell process?
+A: Individual(s)
+	Q(first): What is the first name of owner (As stated on the Deed)?
+	X:
+		Q(middle): What is the middle name of the owner (As stated on the Deed)?
+		X:
+			Q(2.1.1.1):GOTO:last
+		A: Not stated on the Deed.
+			Q(last): What is the last name of the owner (As stated on the Deed)?
+			X:
+				Q(mobilephone): What is your mobile phone number?
+				X:
+					Q(homephone): What is your home phone number?
+					X:
+						Q(2.1.1.2.1.1.1):GOTO:workphone
+					A: Not Applicable.
+						Q(workphone): What is your work phone number?
+						X:
+							Q(2.1.1.2.1.1.2.1):GOTO:workextension
+						A: Not Applicable.
+							Q(workextension): What is the work extension to the work phone number?
+							X:
+								Q(2.1.1.2.1.1.2.2.1):GOTO:social
+							A: Not Applicable.
+	
+								Q(social): What is the owner's social security number?
+								X:
+									Q(additional): Would you like to add another owner?
+									A: Yes
+										Q(2.1.1.2.1.1.2.2.2.1.1):GOTO:ownership
+									A: No
+										Q(living): Are all the owners living?
+										A: Yes
+											Q(2.1.1.2.1.1.2.2.2.1.2.1):GOTO:loans
+										A: No
+											Q(loans): Are there any loans/mortgages against the property? (i.e. 1st and 2nd mortgages, equity lines, and any other loans secured by this property?
+											A: Yes
+												Q(lender): What is the name of the mortgage loan lender?
+												X:
+													Q(loan): What is the Loan Number?
+													X:
+														Q(balance): What is the approximate balance on the loan?
+														X:
+															Q(lnumber): What is the phone number of the lender?
+															X:
+																Q(equity): Is there an equity line?
+																A[javascript:alert('Please do not draw down any advances nor write any drafts or checks against the home equity line of credit (HELOC) between now and the day of closing. Doing so may delay closing.')]: Yes
+																	Q(2.1.1.2.1.1.2.2.2.1.2.2.1.1.1.1.1.1):GOTO:short
+																A: No
+																	Q(short): Is this a short sale?
+																	A[javascript:alert('Banks, lenders and other financial institutions require that you provide them with written authorization to release loan information to us. Once you submit this form, return to this page to generate a Payoff Authorization form. The signed Authorization to Release Information form must be returned to us using Upload Documents on the ClosingConnect terminal.')]: Yes
+																	A[javascript:alert('Banks, lenders and other financial institutions require that you provide them with written authorization to release loan information to us. Once you submit this form, return to this page to generate a Payoff Authorization form. The signed Authorization to Release Information form must be returned to us using Upload Documents on the ClosingConnect terminal.')]: No
+																		Q(addloans): Are there any additional existing loans against the property?
+																		A: Yes
+																			Q(2.1.1.2.1.1.2.2.2.1.2.2.1.1.1.1.1.2.2.1):GOTO:lender
+																		A: No
+																			Q(2.1.1.2.1.1.2.2.2.1.2.2.1.1.1.1.1.2.2.2):GOTO:liens
+											A: No
+												Q(liens): Are there any liens against you or the property other than the loans identified above?
+												A: Yes
+													Q(info): Please provide any information you have regarding the lien(s).
+													X:
+														Q(notice): Documents may be submitted by uploading them to Closing Connect.	
+														A:[https://uat.closingconnect.net/#/upload_documents/40113] I need to upload documents.
+															Q(2.1.1.2.1.1.2.2.2.1.2.2.2.1.1.1):GOTO:assessments
+														A: I do not need to upload documents.	
+															Q(2.1.1.2.1.1.2.2.2.1.2.2.2.1.1.2):GOTO:assessments
+												A: No
+													Q(assessments): Do you pay assessments (dues) to one or more homeowner or condominium associations?
+													A: Yes
+														Q(Association): What is the Community Association Name in which you pay an assessment?
+														X:
+															Q(Management): Is the association managed by a professional property management company?
+															A: Yes
+																Q(MName): What is the Management Company Name?
+																X:
+																	Q(Mnumber): What is the contact phone number?
+																	X:
+																		Q(Memail): What is the contact email?
+																		X:
+																			Q(Fax): What is the fax umber for the company:
+																			X:
+																				Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.1):GOTO:AssessmentAmt
+																			A: This information is not available
+																				Q(AssessmentAmt): What is the assessment amount?
+																				X:
+																					Q(frequency): How often do you make an assessment payment?
+																					A: Monthly
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.1):GOTO:Past
+																					A: Quarterly
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.2):GOTO:Past
+																					A: Semi-Annually
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.3):GOTO:Past
+																					A: Annually
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.4):GOTO:Past
+																					A: Other
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5): How often do you make a payment on an assessment?
+																						X:
+																							Q(Past): Are any assessments past due?
+																							A: Yes
+																								Q(statement): Your recent statement can be attached in Closing Connect.
+																								A:[https://uat.closingconnect.net/#/upload_documents/40113] I need to upload a recent statement.
+																									Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.1.1):GOTO:Pending
+																								A: I do not have to upload a recent statement.
+																									Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.1.2):GOTO:Pending
+																								
+																							A: No
+																								Q(Pending): Are you aware of any pending special assessments against you property?
+																								A: Yes
+																									Q(addpending): Please provide any information regarding the pending special assessment.
+																									X:
+																										Q(upload): You may upload any correspondence you have received regarding the special assessment in Closing Connect.
+																										A:[https://uat.closingconnect.net/#/upload_documents/40113] I am ready to upload this information.
+																											Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.2.1.1.1):GOTO:Additionalhome
+																										A: I do not want to upload this information.
+																											Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.2.1.1.2):GOTO:Additionalhome
+																								A: No
+																									Q(Additionalhome): Are there any additional homeowners associations to which assessments are paid?
+																									A: Yes
+																										Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.2.2.1):GOTO:Association
+																									A: No
+																										Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.1.1.1.1.2.1.5.1.2.2.2):GOTO:water
+																							
+																						
+																					
+															A: No
+																Q(AssociationName): What is the first and last name of the president or treasurer of the association?
+																X:
+																	Q(Title): Is the person listed above the president or the treasurer?
+																	A: President
+																		Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.1.1.2.1.1):GOTO:Prior
+																	A: Treasurer
+																		Q(Prior):GOTO:Mnumber
+																	 
+													A: No
+														Q(water): What is the name of the water service provider?
+														X:
+															Q(electrical): What is the name of the electrical service provider?
+															X:
+																Q(sewer): What is the name of the sewer service provider?
+																X:
+																	Q(divorce): Is any seller currently involved in a divorce?
+																	A: Yes
+																		Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.1):GOTO:bankruptcy
+																	A: No
+																		Q(bankruptcy): Is any seller currently involved in a bankruptcy?
+																		A: Yes
+																			Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.1):GOTO:relocation
+																		A: No
+																			Q(relocation): Are you working with a corporate relocation company?
+																			A:Yes
+																				Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.1):GOTO:mobile
+																			A: No
+																				Q(mobile): Is a mobile home located on the property?
+																				A: Yes
+																					Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.1):GOTO:citizen
+																				A: No
+																					Q(citizen): Are all sellers a U.S. citizen?
+																					A: Yes
+																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.1):GOTO:resident
+																					A: No
+																						Q(resident): Are all sellers a Georgia resident?
+																						A: Yes
+																							Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.1):GOTO:tax
+																						A: No
+																							Q(tax): Do you have any outstanding property tax appeals?
+																							A: Yes
+																								Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.1):GOTO:federal
+																							A: No
+																								Q(federal): Are there any federal tax liens against you?
+																								A: Yes
+																									Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.1):GOTO:statetax
+																								A: No
+																									Q(statetax): Are there any state tax liens filed against you?
+																									A: Yes
+																										Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.1):GOTO:unusual
+																									A: No
+																										Q(unusual): Do you anticipate any unusual circumstances that will prevent you from attending the closing of the sale of the property?
+																										A[javascript:alert('All sellers typically attend the closing of the sale of their property')]: Yes
+																											Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.2.1):GOTO:mailing
+																										A: No
+																											Q(mailing): What is the street number and name of your mailing address?
+																											X:
+																												Q(mailingunit): What is the apartment number of your mailing address?
+																												X:
+																													Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.2.2.1.1):GOTO:mailingcity
+																												A: This does not apply
+																													Q(mailingcity): What is the city of your mailing address?
+																													X:
+																														Q(mailingstate): What is the state of your mailing address?
+																														X:
+																															Q(mailingzip): What is the zip code of your mailing address?
+																															X:
+																																Q(Transaction): How would you like to receive your proceeds?
+																																A: Check
+																																	Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.2.2.1.2.1.1.1.1):GOTO:AutoLetter
+																																A: Wire
+																																	Q(Bank): What is the name of you bank that you would like the proceeds wired to?
+																																	X:
+																																		Q(AcctName): What is the name on the account?
+																																		X:
+																																			Q(Routing): What is the routing number?
+																																			X:
+																																				Q(Account): What is the account number?
+																																				X:
+																																					Q(Instructions): Do you have any comments or instructions related to wiring the proceeds?
+																																					X:
+																																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.2.2.1.2.1.1.1.2.1.1.1.1.1):GOTO:AutoLetter
+																																					A: There are no comments or instructions needed to wire the proceeds.
+																																						Q(2.1.1.2.1.1.2.2.2.1.2.2.2.2.2.1.1.1.2.2.2.2.2.2.2.2.2.2.1.2.1.1.1.2.1.1.1.1.2):GOTO:AutoLetter
+																														
+																	
+												
+A: Other Legal Entity (e.g. Corporation, LLC, Trust, etc).
+	Q(organization): What is the name of the organization?
+	X:
+		Q(state): What state is the organization in?
+		X:
+			Q(Oaddress): What is the number and street name for the organization?
+			X:
+				Q(Osecondary): What is the suite or unit number for the organization?
+				X:
+					Q(2.2.1.1.1.1):GOTO:Ocity
+				A: This does not apply.
+					Q(Ocity):What city is the organization located?
+					X:
+						Q(Ostate): What state does the organization reside in?
+						X:
+							Q(Ozip): What is the zip code of the organization?
+							X:
+								Q(primary): What is the primary contact's first name?
+								X:
+									Q(Plast): What is the primary contact's last name?
+									X:
+										Q(Pphone): What is that primary contact's phone number?
+										X:
+											Q(EIN): What is the tax ID number of the organization (This is the EIN of the organization or SSN if there is no EIN)?
+											X:
+												Q(sign): What is the first name of the person signing that documents at closing?
+												X:
+													Q(lmiddlesign): What is the middle name of the person signing that documents at closing?
+													X:
+														Q(2.2.1.1.1.2.1.1.1.1.1.1.1.1.1):GOTO:lastsign
+													A: This information is not available.
+														Q(lastsign): What is the last name of the person signing that documents at closing?
+														X:
+															Q(titlesign): What is the title of the person signing the documents at closing?
+															X:
+																Q(signor): Will the primary signor attend the closing?
+																A: Yes
+																	Q(2.2.1.1.1.2.1.1.1.1.1.1.1.1.2.1.1.1):GOTO:addclosing
+																A: No
+																	Q(addclosing): Are there additional persons who are required to sign the documents at closing?
+																	A: Yes
+																		Q(goto):GOTO:otherproperty
+																	A: No
+																		Q(otherproperty): Are there any other owners of the property?
+																		A: Yes
+																			Q(2.2.1.1.1.2.1.1.1.1.1.1.1.1.2.1.1.2.2.1):GOTO:ownership
+																		A: No
+																			Q(2.2.1.1.1.2.1.1.1.1.1.1.1.1.2.1.1.2.2.2):GOTO:living
+
+Q(AutoLetter): Would you like to see the pre-filled formed that was developed?
+A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Yes
+
+A: No. I do not believe the information is correct and would like to start over.
+	Q(startover):GOTO:street
+											
