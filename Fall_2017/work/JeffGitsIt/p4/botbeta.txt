@@ -1,0 +1,68 @@
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+
+<h2 style="text-align:center;">U.S. Air Force Medical Discharge Assistance</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>This is a chatbot designed to assist members of the United States Air Force who are being medically discharged. Answer the following questions to find out more about the process, learn about your rights, what options may be available to you, and to see if you qualify for legal assistance. You may want to have your medical paperwork and some basic military career information handy in order to answer these questions.</p>
+
+Q(1): Hello! I am the Medical Discharge Assistance Chatbot (MDAC), and I will be helping you understand the process of and your rights during a possible medical discharge. GOTO:hello
+Q(hello): A quick note before we get started: this service is designed for active duty service members. If you are Air National Guard (ANG) or United States Air Force Reserve (USAFR) not on extended active duty, you may still find this chatbot generally informative, but you should consult additional resources for information pertaining to your specific case.
+A: Let's get started.
+	Q(2.1): Great! GOTO:des
+A: I am not active duty Air Force or am not being medically discharged.
+	Q(2.2): I'm sorry, this chatbot is for Air Force service members who want assistance with medical discharge issues. If you need help with something else, this chatbot is not for you. Please consult other resources. GOTO:bye
+Q(bye): Thank you and goodbye!
+
+Q(numyear): How many full years of service do you have? Please round down to the nearest year, excluding any additional months.
+X[javascript:if (getvar('numyear')>1 && getvar('numyear')<60) {goto('des')} else {goto('sorrynonum')}]:
+A( ): I don't know.
+	Q(4.2): You will need to look up the date you entered service and calculate the years from then until now. GOTO:numyear
+
+Q(sorrynonum): Sorry, but I don't recognize your entry. Please enter the whole number corresponding to the length of your military service. GOTO:numyear
+
+Q(des): Now we will walk through where you are in the Integrated Disability Evaluation System (IDES). Do you know what phase of the process you are in?
+A: I have not started the process, but am currently or will soon seek treatment for an injury that I believe may lead to a medical discharge.
+	Q(6.1):GOTO:start
+A: I have been referred into the DES by a physician, but have not yet completed a Medical Evaluation Board (MEB).
+	Q(6.2):GOTO:premeb
+A: I have completed a MEB.
+	Q(6.3):GOTO:meb
+A: I have completed an Informal Physical Evaluation Board (IPEB).
+	Q(6.4):GOTO:ipeb
+A: I was granted, and have completed, a Formal PEB (FPEB).
+	Q(6.5):GOTO:fpeb
+A: I'm not sure where I'm at in the DES.
+	Q(6.6): Not to worry! I will give you a brief overview of the IDES process so you can tell me the last step you have completed. GOTO:first
+A: What is the DES?
+	Q(6.7): Great question! Let me give you a brief overview of the IDES. GOTO:zero
+
+Q(start): Thank you. The first thing to note is that you cannot refer yourself into the IDES. A physician will refer you into the system based on the nature of your condition(s). Some injuries cause automatic referral into the IDES, but no injury will result in being automatically deemed unfit for duty. Injuries received while Absent Without Leave (AWOL), engaging in misconduct or willful negligence may preclude you from receiving compensation. I have several questions that will help determine whether you are eligible to enter the IDES. GOTO:eligone
+Q(eligone): When did you first start receiving treatment for your latest condition?
+A: More than a year ago.
+	Q(8.1): Unfortunately, you must be referred into the IDES within a year from the start of treatment. Based on this answer you may be ineligible for referral into the DES at this time. Please consult with your physician to confirm your treatment status. GOTO:faq
+A: Less than a year ago.
+	Q(8.2): Good. you must be referred into the IDES within a year from the start of treatment, so a physician is still capable of referring you into the IDES. GOTO:condi
+
+Q(condi): What is the nature of your primary aliment?
+A:
+
+Do you have any other conditions?
+
+Q(9): How does a physician refer me into the IDES?
+
+Q(premeb): premeb
+Q(meb): meb
+Q(ipeb): ipeb
+Q(fpeb): fpeb
+Q(zero): From <a href="http://static.e-publishing.af.mil/production/1/af_a1/publication/afi36-3212/afi36-3212.pdf">AFI 36-3212</a>, the purpose of the IDES is to remove from active duty those service members who can no longer perform their duties, and to ensure fair compensation for those whose careers are cut short by service-incurred or service-aggravated physical disability. GOTO:first
+Q(first): First, to enter the IDES a physician who has treated you for an injury will refer you into the system by sending your medical records and a summary of your condition(s) to the nearest Military Treatment Facility (MTF). The MTF Commander then assigns a Physical Evaluation Board Liaison Officer (PEBLO) to assist you through the IDES. It is important to note that the PEBLO is not your legal advocate. They are a non-medical case manager, and act on behalf of the Air Force to guide you through the IDES process. GOTO:second
+Q(second): Next, your PEBLO will help you gather and submit all necessary paperwork to the MEB, who will determine whether you will be able to return to your CURRENT assignment after you complete any prescribed treatment(s) for your medical condition(s). This can result in: (1) being found able to return to duty, (2) being placed on Temporary Limited Duty (TLD) if you will be fit to return to duty within a reasonable period of time, or (3) a referral to the PEB. GOTO:third
+Q(third): If referred to the PEB, the board will determine whether you are able to return to duty AT ALL after you complete any prescribed treatment(s) for your medical condition(s). This assessment is done in two phases. First the Informal PEB will make a determination, which you can choose to appeal to a Formal PEB. Though, this appeal is not granted in all cases. GOTO:fourth
+Q(fourth): Finally, you can appeal the decision of the FPEB to the Secretary of the Air Force Personnel Council (SAFPC), which is the highest administrative appeal available in the DES. One final appeal of that decision is available to the Court of Federal Claims. GOTO:detail
+Q(detail): For more detail, please see <a href="http://static.e-publishing.af.mil/production/1/af_a1/publication/afi36-3212/afi36-3212.pdf">AFI 36-3212</a>. GOTO:des
+
+Q(faq): Thank you for talking with me today. Before we part, can I help answer any of the following questions for you?
+A: How many times can I go through the IDES?
+	Q(20.1): There is no limit to the number of times you can enter the DES for separate conditions. Though, once you have gone through the DES for a particular condition, you will not be evaluated for discharge again based on that condition unless circumstances change. GOTO:faq
+A: I'm all set for now.
+	Q(20.2):GOTO:end
+Q(end): Thank you again for speaking with me. I hope I was able to help you today. If you have additional questions about the DES, please consult your local Judge Advocate. If you have suggestions or ideas about improving this chatbot, please send them to email@here. GOTO:bye
