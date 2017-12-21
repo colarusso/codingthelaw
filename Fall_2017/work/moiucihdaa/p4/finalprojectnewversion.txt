@@ -47,7 +47,7 @@ X:
 					X:
 						Q(3.1.1.1.1.1.1):Thanks for that info!  GOTO:issue										
 Q(issue):What can we help you with?
-A:You want to request repairs from your landloard.
+A:You want to request repairs from your landlord.
 	Q(4.1):GOTO:repairs
 A:You want your landlord to return a security deposit.
 	Q(4.2):GOTO:deposit
