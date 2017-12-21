@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>notebook</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Final Project Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -13,8 +11,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1109,7 +1107,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2538,7 +2535,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,7 +3025,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8760,6 +8755,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8962,8 +8960,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8986,6 +8990,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9122,6 +9136,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9211,6 +9228,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9255,6 +9275,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9551,6 +9574,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9571,11 +9595,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11246,7 +11265,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11558,6 +11577,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11571,6 +11591,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11631,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11643,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11699,9 +11726,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11722,7 +11747,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11746,63 +11771,36 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="U.S.-Air-Force-Medical-Discharge-Assistant">U.S. Air Force Medical Discharge Assistant<a class="anchor-link" href="#U.S.-Air-Force-Medical-Discharge-Assistant">&#182;</a></h1><p>By <a href="http://www.linkedin.com/in/jpjeffprice">Jeff Price</a></p>
-<p>I wrote a chatbot, which you can find <a href="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p4/bot.html">here</a>, that helps active duty U.S. Air Force members navigate the medical discharge process. To write my bot, I used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, this tool creates an interactive decision tree by nesting questions and answers. The source code for my final bot can be found <a href="bot.txt">here</a>.</p>
-<h2 id="The-Client-&amp;-The-Problem">The Client &amp; The Problem<a class="anchor-link" href="#The-Client-&amp;-The-Problem">&#182;</a></h2><p>My client is Attorney Tara Gaston. As documented in the <a href="Initial Conversation with Attorney Tara Gaston.docx">notes</a> from our first telephone conversation, Attorney Gaston's partner was medically discharged from the Navy, but was confused about their rights and next steps in the process at each stage of the discharge. This is an issue because confusion and missing documentation can result in having to loop back through previous steps to complete unfulfilled requirements or to secure a different result. This draws the process out, delaying receipt of any benefits and even unintentionally waiving certain rights (e.g. to appeal certain findings of fact). One of the biggest issues Attorney Gaston saw first hand as her partner navigated this process was the fear and anxiety created by high uncertainty in what came next.</p>
-<p>Attorney Gaston wanted to create an automated tool that would clarify the medical discharge process, allow service members to advocate for themselves, and delineate when outside legal assistance is permissible. Such a tool would allow service members to understand future steps in the process, and help allay the fears Attorney Gaston's partner experienced.</p>
-<p>While Attorney Gaston's partner is prior Navy, I currently work for the Air Force. A tool covering all the process eccentricities among the various military branches was beyond the scope of this project. So Attorney Gaston and I agreed that this tool would be designed to serve Air Force service members. Focusing on the Air Force still addressed the overall goal of making the military Disability Evaluation System (DES) easier to navigate (for at least one military branch), and my familiarity with Air Force processes, documentation repositories, and ready access to potential test users made this a convenient design choice.</p>
-<h3 id="Introductory-Pitch">Introductory Pitch<a class="anchor-link" href="#Introductory-Pitch">&#182;</a></h3><p>After initial consultation with Attorney Gaston and some preliminary research, the outline of a solution began to take shape. The creation of a chatbot to solve the above problem was pitched in class using <a href="Medical Discharge Chatbot.pptx">this</a> slide deck, which included expected challenges, planned next steps, and initial research source material.</p>
-<h3 id="The-User">The User<a class="anchor-link" href="#The-User">&#182;</a></h3><p>The target users for this product are active duty U.S. Air Force military who have been injured during service and want more information about the DES. This includes both Officer and Enlisted personnel. Due to time constraints, I had to de-scope support of the Air National Guard (ANG) and Air Force Reserve (AFR) components. The process for these groups is very similar to that of the active duty component, but there are enough differences that accommodating ANG and AFR personnel during the timeframe of this project would have been too difficult.</p>
-<p>The target user need not be at any particular point in the medical discharge process. The tool is designed to assist at any point throughout the DES. Further, the chatbot did not presuppose any prior knowledge of the DES. Limitations of the QnA Markup language and my own lack of computer science skills also meant that sight impaired users would not be accommodated during this project. Any potential user does need access to a desktop computer and the internet.</p>
-<h2 id="The-Process">The Process<a class="anchor-link" href="#The-Process">&#182;</a></h2><p>The design process began with extensive research, some prototyping, and then much more research. After a few iterations, user testing of a beta chatbot was leveraged to make the final edits.</p>
-<h3 id="Research">Research<a class="anchor-link" href="#Research">&#182;</a></h3><p>This project required way more research than I had originally anticipated, and definitely an order of magnitude more research than any of the other three projects for this class. In my current job I am familiar with the overlapping regulations of Department of Defense Instructions (DoDI) and Manuals (DoDM); Air Force Instructions (AFI), Memorandum, Policy Directives, and Guides; U.S. Codes; and dependencies on the rules/instructions of other Federal agencies. However, cancelled/rescinded source material, as well as the integration of two previously separate processes (the DoD DES and the Department of Veterans Affairs Disability System) meant that I was tripped up more than once prototyping outdated regulations. In the end, I used the latest versions of DoDI 1332.18, 1332.39; DoDM 1332.18 Volumes 1-3; AFI36-3208; and a Secretary of Defense Memorandum. All told, these documents alone comprise 471 pages, and that does not include the outdated volumes I was mistakenly using for a time. While I didn't read every section of these materials in fine detail, I did scan the entirety of all these documents and relied heavily on specific detailed readings from each (especially DoDI 1332.18 and DoDM 1332.18, Volume 2). Further, my research discovered many online resources, some of which I link to from the chatbot.</p>
-<p>During my search for currently existing solutions, I came across several websites with good overviews of the DES. Some had nice flowcharts, others included more detailed written outlines. As might be expected, each online resource was heavy on certain details and light on others. I believe this chatbot fills a gap by providing both a level of interaction absent from other resources I found, as well as a more comprehensive source of information. This chatbot references other resources to a degree I didn't see elsewhere, including links to some of the better website content as well as actually linking to the relevant DoD regulations.</p>
-<h3 id="Prototyping">Prototyping<a class="anchor-link" href="#Prototyping">&#182;</a></h3><p>As discussed above, early analysis concluded that ANG and AFR support would be too resource-intensive to incorporate. So this was pulled out of one of the early beta bots. Further, I initially wanted to provide a direct answer to users for what their disability rating percentage would be. I was also going to ask about years of service, as you can see from this <a href="botbeta.txt">beta</a>, which combined with disability rating information can predict whether a service member will be offered medical retirement instead of a lump sum separation bonus. However, additional research soon revealed that these details would require very extensive decision trees within the chatbot. Further, even if the chatbot were to provide a user with an estimated outcome, the disability ratings are so fact-dependant (based on the findings of Veterans Affairs physicians) that such guesses would be of little true value and perhaps even misleading. Thus, these features were scrapped, and future prototypes focused more on providing information about the process itself rather than trying to predict individual outcomes.</p>
-<p>That beta was also mistakenly informed by outdated legacy DES policy. The general flow of the current DES is still similar to its predecessor, but you can see the differences in the verbiage from this version and the final chatbot. For example, in that beta there is no mention of VA integration into the DES process, and the Medical Evaluation Board (MEB) was originally focused on findings of fitness for a service member. Whereas now the MEB is more focused on confirming the facts surrounding a service member's medical condition(s). Subsequent research brought these details to light, and resulted in some of the changes seen in the final version of the chatbot.</p>
-<h3 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h3><p>After more revisioning, this later <a href="botbeta2.txt">beta</a> was eventually distributed to some test users. I contacted eight military personnel I know at Hanscom Air Force Base, trying to get input from a healthy mix of junior and more career military to represent the range of possible users. I sent out <a href="User Feedback Form.docx">this</a> generic feedback form to document their input. Four of these users responded in time for me to incorporate their feedback into the final chatbot. See <a href="User Feedback Form 1.docx">feedback 1</a>, <a href="User Feedback Form 2.docx">feedback 2</a>, <a href="User Feedback Form 3.docx">feedback 3</a>, and <a href="User Feedback Form 4.docx">feedback 4</a>. Some of these users tested the chatbot more extensively than others. Their findings are discussed in the refinement section below.</p>
-<p>I also received verbal feedback from my client, Attorney Gaston, regarding her testing of the chatbot. She completed all decision paths to the best of her knowledge, and had minimal critiques. I documented her input in the notes from our final phone conversation, which I link to in the Real-World Viability section below. Her testing was more focused on the accuracy of the content since she knows the medical discharge process well, and her feedback was that the substantive content of the chatbot did not need any revisions.</p>
-<h3 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h3><p>As you can see from the feedback worksheets, several testers keyed in on the same deficiencies. I updated the chatbot to incorporate the following input:</p>
-<p>1) Some of the answer options didn't have a GOTO looping that selection back to the main chat path. This was an easy fix.</p>
-<p>2) Attorney Gaston's one real comment was that the Formal Physical Evaluation Board (FPEB) is discussed in the Informal PEB appeals section, which is before the FPEB is mentioned elsewhere. Thus, a user seeing the FPEB mentioned there for the first time would be unsure what the FPEB is. So I added another option to this section briefly explaining the FPEB and its purpose.</p>
-<p>3) A common complaint was that links to external content were not opening in new windows. Again, this was an easy fix.</p>
-<p>There were some tester inputs that were not incorporated, mostly due to the technical limitations of the QnA Markup language and/or my computer skills. These included:</p>
-<p>1) There was a request for mouse-over tooltip displaying the content of a button selection before it is clicked. I don't know if that can even be done in QnA Markup, but I didn't have to explore the feasibility of this feature.</p>
-<p>2) There were a few requests to delete previous text bubbles when reverting back to earlier parts of the chat conversation. Again, I think this is a limitation of the programming language, but I also personally see this as beneficial since it allows a user to scroll up and review their previous answers and/or previously defined acronyms. Even if this were technically feasible, I would want to conduct some specific A/B testing to gauge the strength of this user preference.</p>
-<p>3) There was also a request for static display of reference material along side the chatbot, as in a side pane. I think this would be a useful feature to incorporate if QnA Markup would allow it, but again this seemed to stretch my technical skills and I didn't have time to pursue it further.</p>
-<p>In addition to the above refinements, I found and fixed a few typos and made some verbiage edits from the tested beta to the final version.</p>
-<h2 id="Real-World-Viability">Real-World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h2><p>Per my final phone call with the client, documented <a href="Final Conversation with Attorney Tara Gaston.docx">here</a>, I am very excited that Attorney Gaston believes this chatbot is ready for real world deployment. Long term, I do not know where this chatbot will reside, but as discussed in the sustainability section below I plan to keep in touch with Attorney Gaston and support the bot for the foreseeable future.</p>
-<h3 id="Impact-and-Effectiveness">Impact and Effectiveness<a class="anchor-link" href="#Impact-and-Effectiveness">&#182;</a></h3><p>As previously discussed, I believe this chatbot fills a current gap in the manner and comprehensiveness of the information it provides. The client was very pleased, and she stated the delivered solution exceeded her expectations. Further, all of the user feedback forms indicated the testers would themselves use this chatbot if they had to navigate the DES, and they would recommend it to other service members with similar needs.</p>
-<p>It is difficult to quantify the impact of this chatbot, since its original goal was to ease fears and facilitate self-advocacy, rather than to increase productivity or bottom-line profit. I do think, as an interactive tool, this bot can more quickly provide an overview of the DES by allowing the uninitiated to drill down directly into the phases they have the most questions about. How much faster this education will be with this tool is hard to say.</p>
-<p>Attorney Gaston did state several times during our final call that she believed this would alleviate a lot of anxiety for service members, especially those who are just beginning or are anticipating entering the DES. In that regard, this represents a vast improvement over the status quo.</p>
-<h3 id="Fit/Completeness">Fit/Completeness<a class="anchor-link" href="#Fit/Completeness">&#182;</a></h3><p>The stated goal from the <a href="Initial Conversation with Attorney Tara Gaston.docx">Initial Conversation with Attorney Gaston</a> was to "allow service members to find info to advocate for themselves or realize when to seek counsel." As outlined above, this chatbot directly addresses that problem, and judging by the feedback almost all users would see this as a great improvement over the status quo.</p>
-<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h3><p>All documentation for the content of tool itself is contained within the chatbot, except where external references are linked to.</p>
-<p>All documentation for this project, including the chatbot .html file and source code, has been uploaded to GitHub.</p>
-<h2 id="The-Future">The Future<a class="anchor-link" href="#The-Future">&#182;</a></h2><p>With more time and research there are several improvements I could make to the current chatbot. First, I would expand the content to support the other Air Force components (ANG and AFR). Next, the bot could be expanded to support the other military branches. This would be the most arduous improvement, as I'm sure it would require extensive additional research to properly capture each service's nuanced implementation of DoD regulations.</p>
-<p>Further improvement could see the content transferred out of QnA Markeup to a language allowing for more user features. Such a refactoring might also facilitate use by mobile applications.</p>
-<h3 id="Sustainability">Sustainability<a class="anchor-link" href="#Sustainability">&#182;</a></h3><p>Attorney Gaston is already planning to forward the link to the chatbot out to other people. She and I agreed that I will continue maintaining this chatbot for time being. I think it turned out really well, and I included my email in the chatbot signoff in order to support additional user feedback. I plan to explore further where the bot will reside, but one option I have in mind is on an Air Force server. That would provide a long term permanent home.</p>
+<h1 id="Final-Project:-Georgia-Sale-of-Property---Seller-Information">Final Project: Georgia Sale of Property - Seller Information<a class="anchor-link" href="#Final-Project:-Georgia-Sale-of-Property---Seller-Information">&#182;</a></h1><h3 id="By:-Charmaine-Wood">By: Charmaine Wood<a class="anchor-link" href="#By:-Charmaine-Wood">&#182;</a></h3><h2 id="General-Information">General Information<a class="anchor-link" href="#General-Information">&#182;</a></h2><p>I wrote a bot, and you can find it <a href="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Seller.html">here</a>. To write my bot, we used a tool called <a href="http://www.qnamarkup.org/">QnA Markup</a>. Basically, you create an interactive dicision tree by nesting questions and answers. Here's <a href="Seller.txt">my code</a>.</p>
+<p>My partner for this project was essentially two companies that work together on a daily basis. The main partner was Nyaas and the "silent" partner who I was developing the bot for was Weissman. I originally reached out to Nyaas to see if there was anything I could do for them and they point me into contact with Weissman. After some consideration Weissman decided that Nyaas was the best entity to contact if I had question regarding the information that was needed for the chatbot. I form that I used for the chatbot is an electric form that is only accessable through Closing Connect and each person needs to obtain authorization to access it, so I am not able accurate show it be attaching it to the notebook. The idea behind the chatbot is to create a tool that clients can use when the begin the process to sell property that would be interactive and make the collection process more efficient. The chatbot will guide them through the normal questions on the electric form and create a pre-filled documents of there information that they can give to the attorney representing their sale.</p>
+<p>I actively spoke with point person, James Adler, an employee at Nyaas to understand the forms and how they saw the chatbot being used. In addition to speaking to James daily, I spoke with the owner of Nyaas through email a few times. I sent him my first version and he sent back comments which you can look at here: <a href="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft">Feedback from Matt</a>.</p>
+<p>In additional to comminicating with my partner, I was responsible for delivering a 5 minute pitch to the class in regards to the project and where I saw it going. I do believe that it came out better then I originally thought. There are definitely a few areas that need improvement and I have already made arrangements with my partners to continue working on the project to make sure it is exactly what they want.</p>
+<h2 id="Process">Process<a class="anchor-link" href="#Process">&#182;</a></h2><h3 id="Framing">Framing<a class="anchor-link" href="#Framing">&#182;</a></h3><p>Weissman's clients tend to have a difficult time providing all of the necessary information to the representative attorneies. The can always contact their attornies when they are unsure if what to provide but that can end up costing a lot of money and some annoyance on the attornies' end. This project aims to make the collection of information more efficient and effective for both the attornies and the clients.</p>
+<h3 id="Research">Research<a class="anchor-link" href="#Research">&#182;</a></h3><p>when I spoke with Matt (owner of Nyaas) I gave him examples of the projects I would be doing this year in my class and he said that he had an idea but had to reach other to Weissman to see if they would be interested in using a chatbot develed through QnA. All parties were excited to begin the project. Once I received the access to Closing Connect I began reviewing the information and organizating it in a way that would work to obtain all the necessary information.</p>
+<h3 id="Prototyping">Prototyping<a class="anchor-link" href="#Prototyping">&#182;</a></h3><p>This was not to difficult after organizing the information. There are a lot of components that need to obtain, specifically that there can be multiple sellers and they may not all be of the same entity (an individual and a corporation can own the property and need to be involved in the selling process. There is still a few area that need improvement, such as reformatting the pre-filled formed in a way that the non-appliable cells can be hidden and that is something I am exploring with James, my point person.</p>
+<h3 id="User-Testing">User Testing<a class="anchor-link" href="#User-Testing">&#182;</a></h3><p>As mentioned before I had two individuals in Nyaas that I relied on to test my prototypes, James and Matt. James and I worked together at least once a week to go through the chatbot and see what we can do to improve the wording or format. After we thought it was acceptable I would send the version to Matt to look at and provide me with feedback: <a href="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft">Feedback from Matt</a>.</p>
+<p>Since this is a busy company there are times that I have to wait a week over so to obtain feedback from Matt. I recently sent him the latest version and I am waiting on his feedback.</p>
+<h3 id="Refinement">Refinement<a class="anchor-link" href="#Refinement">&#182;</a></h3><p>I mostly spot areas to fine tune when I go through the chatbot myself or when I am working with James. Matts comments tend to be focus on the working or the actually QnA (which I let him know I have no control over it). I reformatted what I could based off of Matt's comments and plan to do so after this project is due for the class.</p>
+<h2 id="Product">Product<a class="anchor-link" href="#Product">&#182;</a></h2><h3 id="Intro-Pitch">Intro Pitch<a class="anchor-link" href="#Intro-Pitch">&#182;</a></h3><p>Before beginning this project I had to present my idea to the class through an intro-pitch. This was a five minute presentation as to what I wanted to do after speaking with my partner and where I saw the project going. There are not a lot of words in my pitch but it can be found <a href="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Slide deck of pitch.pptx">here</a>.</p>
+<h3 id="Complexity">Complexity<a class="anchor-link" href="#Complexity">&#182;</a></h3><p>This project focused on the QnA system to develop and interactive chatbot and document automation using mail-merge, which developed the document that will be pre-filled based on how one would respond to the chatbot. The most complex part of this project was deciding how to organize the infromation due to the multiple components and entitites involved.</p>
+<h3 id="Impact">Impact<a class="anchor-link" href="#Impact">&#182;</a></h3><p>This is the potential of having a huge impact from both Nyaas and Weissman. Nyaas is excited to be apart of a prototype that would cause less stress for both their attorney counter-parts and the clients. This will definitely make it clear to the clients that they need to answer all of the respective questions to ensure that the attorney has what they need to proceed with the process. This chatbot also gives the attorney the option to obtain more information if necessary instead of obtaining documentation that is not required for a specific sale.</p>
+<h3 id="Completness">Completness<a class="anchor-link" href="#Completness">&#182;</a></h3><p>This chatbot is only supposed to reach sellers in Georgia and not anyone that is selling property in another state. I only focused on the seller aspect because Matt did not want to overwhelm me with a lot of information and based on his experience that was the area that had the most difficulties. We hope to expand to the buyer after we fixing a few cosemtic areas and any comments Matt may have ater looking at this version.</p>
+<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h3><p>There was a lot of information required to develop this chatbot. It should be clear now what is needed in order to at least begin the selling process on the sellers end. This prototype is definitely a lot more involved than it was in the beginning and there is room for improvement, which I plan to complete in the next month.</p>
+<h3 id="Real-World-Viability">Real World Viability<a class="anchor-link" href="#Real-World-Viability">&#182;</a></h3><p>We have not implemented this chatbot yet but the real world use is very high. Matt and James are very excited about the progress we have made so far and cannot wait to see where we go with this. After speaking with the partners it is clear that this way is a lot more clear as to what is recuired of the client and will hopefully prevent unnecessary sorting of documentations and make the process more streamlined.</p>
+<h3 id="Sustainability">Sustainability<a class="anchor-link" href="#Sustainability">&#182;</a></h3><p>I do not see there being an issue with sustaining this chatbot. The partners have the necessary information to update or change any information on it whenever they see fit. As I mentioned before I am not done with this project. I have already been asked to continue working on it with the partners and hopefully begin working on the buyer component within the next few months.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>
