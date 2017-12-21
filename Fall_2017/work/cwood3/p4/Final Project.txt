@@ -1,11 +1,11 @@
-Before: <input type="hidden" name="name" value="ClosingConnect.csv"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p4/Closing Connect document.docx"/>
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. This is a prototype and not completely bug free.</b></p>
+Before: 
+<input type="hidden" name="name" value="Seller Closing Information"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/ClosingConnect.docx"/>
+
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. This is a prototype and not completely bug free.</b></p>
 <h3>Seller Closing Information</h3>
 <p>This tool is only applicable to properties that are located in Georgia, if your property is located in another state please speak with your representative about finding a similar tool for you to use..</p>
 <p>Answer the following questions to develop an autofilled form that should be submitted to the representative working with your closing.</p>
-
-
 
 
 Q(street): What is the street number and name of the property?
@@ -283,7 +283,8 @@ A: Other Legal Entity (e.g. Corporation, LLC, Trust, etc).
 																			Q(2.2.1.1.1.2.1.1.1.1.1.1.1.1.2.1.1.2.2.2):GOTO:living
 
 Q(AutoLetter): Would you like to see the pre-filled formed that was developed?
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','json_doc','_blank')] Yes
+A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Yes
+
 A: No. I do not believe the information is correct and would like to start over.
 	Q(startover):GOTO:street
 											
