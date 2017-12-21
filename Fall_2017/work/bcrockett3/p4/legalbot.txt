@@ -1,0 +1,106 @@
+Title: Maryland Appointed Counsel Determination
+Author: Bianca Crockett
+Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+<h2 style="text-align:center;">Maryland Attorney Request Bot</h2>
+<input type="hidden" name="name" value="dc099"/>
+<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/bcrockett3/Final%20Project/dc099.docx"/>
+<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<h3>Maryland Counsel Request </h3>
+<p>Please answer the following questions and bring a printed form of your answers to the District Court Commissioner's Office to see if you qualify for appointment of counsel. If the Maryland District Court Commissioner makes the determination that you are eligible to be represented by a Public Defender at trial, you will receive a confirmation in writing. The Public Defender will contact you regarding your status. Once you have received confirmation, all additional questions and concerns should be directed to the Maryland Public Defender's Office.</p>
+After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
+
+
+
+Q(Name): Please enter your full name.
+X:
+	Q(address): Please enter your full address (Street, City, State, Street, Zip code).
+	X:
+		Q(1.1.1):GOTO:Case
+
+Q(Case): Is your case a civil or criminal?
+A: Civil
+	Q(2.1):GOTO:indigency
+A: Criminal
+	Q(2.2):GOTO:Criminal
+
+Q(email): Please enter your full email address (ex: yourname@website.com)
+X:
+	Q(3.1):GOTO:Family
+
+Q(Family): How many people are in your household including yourself?  
+X:number
+	Q(4.1):GOTO:waived
+
+Q(waived): Have you already waived your right to legal counsel?
+A: Yes
+	Q(5.1):GOTO:eligible
+A: No
+	Q(5.2):GOTO:Public
+A: I don't know
+	Q(5.3):GOTO:Public
+
+Q(Public): Do you have other income sources? (social security and veterans' benefits, public
+assistance, professional fees, rents, alimony, interest, dividends, retirement).
+A: Yes.
+	Q(6.1):GOTO:income
+A: No.
+	Q(6.2):GOTO:income
+
+Q(indigency): Are you able to pay the costs, fees, or expenses necessary to prosecute, defend, or appeal this action?
+A: No, I am unable.
+	Q(7.1):GOTO:email
+A: Yes, I am able.  
+	Q(7.2):GOTO:eligible
+
+Q(income): Please enter your total annual income.
+X:number
+	Q(Source): What is the source of that income?
+	X:
+		Q(8.1.1):GOTO:assets
+A: I have no sources of income.
+	Q(8.2):GOTO:assets
+
+Q(assets): Do you own liquid assets (Cash/Savings, Bank credit line, Stocks/Bonds, Credit Card line)? 
+A: Yes 
+	Q(type): What type of asset(s) is it?
+	X:
+		Q(value): What is the value of that asset(s)?
+		X:number
+			Q(9.1.1.1):GOTO:juvenile
+A: No
+	Q(9.2):GOTO:juvenile
+
+
+Q(juvenile):Are you a juvenile (under 18)?
+A: Yes.  
+	Q(guardian): Is your guardian able to pay for the costs of continuing this action?
+	A: Yes 
+		Q(10.1.1):GOTO:eligible
+	A: No 
+		Q(10.1.2):GOTO:appointment
+A: No  
+	Q(10.2):GOTO:appointment
+
+Q(appointment):Have you already applied for appointed legal counsel?
+A:No.
+	Q(11.1):GOTO:Done 
+A:Yes
+	Q(description):Please give a brief description of why you are making this request.
+	X:
+		Q(11.2.1):GOTO:Done 
+
+
+Q(Criminal): What is the name of the facility in which you are currently confined?
+X:
+	Q(facility): What is the address of that facility?
+	X:
+		Q(12.1.1):GOTO:email
+		A: No
+			Q(12.1.1.1):GOTO:email
+
+
+
+Q(Done): You're done!
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Click here to get a summary of the information you've provided! 
+Q(eligible): You are not eligible for free legal counsel.
