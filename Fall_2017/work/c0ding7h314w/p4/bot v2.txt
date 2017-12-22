@@ -1,0 +1,50 @@
+Q(filing):What is the U.S. or Sec. 371 filing date of the patent?  The filing date can be found on the face of the patent or at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Application Data tab.
+X:[javascript:if(new Date(getvar('filing')).getTime()  < (new Date('1995-6-8').getTime())){ goto('pta17') } else { goto('pta20') }]date
+Q(pta17):How many days of patent term adjustment (PTA) have been granted? The PTA can be found at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Patent Term Extension History tab.
+X:number
+	Q(pte1):How many days of patent term extension (PTE) have been granted?  The PTE can be found at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Image File Wrapper tab.  It is also recommended to check the "correction" section of <a href="http://patft.uspto.gov/netahtml/PTO/patimg.htm" target=_new>the patent's images</a>.
+	X:number
+		Q(issue1):What is the issue date of the patent?
+		X:date
+			Q(2.1.1.1):Does the patent have any terminal disclaimers?
+			A:Yes
+				Q(Term1):What is the earliest expiration date of a patent over which a terminal disclaimer was filed?  Terminal disclaimers can be found at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Image File Wrapper tab.				
+				X:[javascript:if(Number(new Date(getvar('Term1')).getTime())  < Number((new Date(getvar('issue1')).getTime() + 365.25 * 17 * 86400000 + getvar('pte1') * 86400000 + getvar('pta17') *86400000)) ){ goto('exp1') } else { goto('exp2') }]date
+			A:No
+				Q(2.1.1.1.2):GOTO:exp2
+		
+Q(exp1):Would you like to see the experation date of the patent?
+A[javascript:var X = new Date(getvar('Term1')).getTime(); alert(new Date(X)); ]: Yes
+A:No
+	Q(3.2):GOTO:nothing
+
+Q(exp2):Would you like to see the experation date of the patent?
+A[javascript:var Y = new Date(getvar('issue1')).getTime() + Number(365.25 * 17 * 86400000 + getvar('pte1') * 86400000 + getvar('pta17') *86400000); alert(new Date(Y)); ]: Yes
+A:No
+	Q(4.2):GOTO:nothing
+
+
+Q(pta20):How many days of patent term adjustment (PTA) have been granted?  The PTA can be found on the face of the patent or at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Patent Term Extension History tab.
+X:number
+	Q(pte2):How many days of patent term extension (PTE) have been granted?  The PTE can be found at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Image File Wrapper tab.  It is also recommended to check the "correction" section of <a href="http://patft.uspto.gov/netahtml/PTO/patimg.htm" target=_new>the patent's images</a>.
+	X:number
+		Q(benefit):What is the earliest domestic benefit date of the patent (this is the filing date if no earlier priority is claimed)?  This can be found on the face of the patent or at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Continuity Data tab.  Note that provisional patent priority dates and foreign priority dates should not be entered.
+		X:date
+			Q(5.1.1.1):Does the patent have any terminal disclaimers?
+			A:Yes
+				Q(Term2):What is the earliest expiration date of a patent over which a terminal disclaimer was filed?  Terminal disclaimers can be found at <a href="https://portal.uspto.gov/pair/PublicPair" target=_new>PAIR</a> under the Image File Wrapper tab.
+				X:[javascript:if(Number(new Date(getvar('Term2')).getTime())  < Number((new Date(getvar('benefit')).getTime() + 365.25 * 20 * 86400000 + getvar('pte2') * 86400000 + getvar('pta20') *86400000)) ){ goto('exp3') } else { goto('exp4') }]date
+			A:No
+				Q(5.1.1.1.2):GOTO:exp4
+		
+Q(exp3):Would you like to see the expiration date of the patent?
+A[javascript:var X = new Date(getvar('Term2')).getTime(); alert(new Date(X)); ]: Yes
+A:No
+	Q(6.2):GOTO:nothing
+
+Q(exp4):Would you like to see the expiration date of the patent?
+A[javascript:var Y = new Date(getvar('benefit')).getTime() + Number(365.25 * 20 * 86400000 + getvar('pte2') * 86400000 + getvar('pta20') *86400000); alert(new Date(Y)); ]: Yes
+A:No
+	Q(7.2):GOTO:nothing
+
+Q(nothing):I'm afraid there is nothing more I can help you with.
