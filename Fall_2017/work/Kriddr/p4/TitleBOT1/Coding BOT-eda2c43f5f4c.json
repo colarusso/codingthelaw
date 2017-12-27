@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "coding-bot",
+  "private_key_id": "eda2c43f5f4c4f89378dc95f72a33d4671d287a4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDi3kOuyqEdV4ah\neJoxeqJjezbKzuaulRBhHYkBuP33UfQMS80t/pr/ONRrN0ZkwniGxxM1qX4XK9i3\nxPm1ZiqEtcPA7rXFDgMJxvhaJTE/iYOCxtpVJooQ/KyJNCemOkzcxOYioRplMcVu\n6e7a7qTLxmkOmq3K0fZ061WbPlgpzRz74B4k4gMgZgrOm0O5HH1EK+RGJL28I9jv\nTKTLUc3rRaxGqwDy5pdxZRap/tJLuydsqsqlS1wdAnrO1lfFAy80UEmQK0gZwqdv\nu9CcO5EOLAH940ck+rz4o4q8w2D/eoj6B6/C3BkIP5++j9qfaUiO3oKFwQW+WEar\nNvST2YUxAgMBAAECggEACWtGZ4x0sPs66lRPkh3+RPwWHnMiFQwN3Ps8GwXQlthg\nmZbCFN25iLCV8nssTBL6rGSAvIDmJY4+pHWyaJmudTu+BSPgeqce/0gzHucBZ2H3\n7hjjjyUla/wguCXMd9gJelqQbJVOgmhG35GbKoAhMRo5ryvRMiUEQv7FMJ0fhn4F\notC/xaOUZ3laqVhJ/pu7a/O22nlOFFoCOb9mug4YGu5RJyvcJpmhJ11XB0jqEzJU\n5iE9nn/ZiMhMhIcpG7YjwkrTlCEDx7aALx+Bpz7OZcl08OaoHgqN6t+HMAoN1EHH\nLTsKDcLwDavOy0R/RyULmXtdFrd/vte+bHP6sHTwiwKBgQDy1v/9D7dey6BndFZ9\ntA0ilfh7Jw3cbYPAt+0ysuCzt5UqBc7KLrP0ZsNbV4csnfSmKw2v8xmq1Pc1iZST\nkr1vuaTRu69t2tXiVIs1gglg6fDXE/BzIi8L2AJJV31yE5TlrqcoCnBQRyxhDm/j\nwN6VQSwgIwOeCmVkNcHcN2spwwKBgQDvKa9FHgecszF/vl6IBFftcOGXN0EagwG4\nriSnym5LzErM3nuRnUsd7XHyVZ04n7aYdlsonR3lGBjn1D57RDQkJA0inTc8jbsx\nDpyRihp9x2y9Ssdn/kIaC1R7SxhFy52kmbFlRHeiqmnr3CfGOs2z2DQtqMByC9dA\nNi8WeD3x+wKBgCotq8LRkwD1D0RI0aj9t/ZU5BbH3sF1iBfWGm3e4eZ1MYReA9/c\nIseFfdMErebS/KZL/hGcgM3KNbHn1pWXPC4GqZkAJ2VGSDYKhy9hCa36lClXPkFR\nI6jD+QmyF4jT293U6xWqUn2vDwdAkbCWVFLKQhbG3h76IUg5ihVszsEvAoGBALL3\nzJK6QBQA/B+Nw4uhRHMIL6hKzssaEeWzWva8wwCxpZ/dNTboL9f7YXNoobhHvAon\nN1wTBtXyzGBfMUpo5WPOHo4ye60ymkvBlWRLpjtNSo/0L3ggijKXG+cPcOB52EPe\nRyNystvlDlJTcugiBOB5/8HTL/+n4LHKWj5ESIaVAoGAAsUiQVUNqG01CBW2Wyzs\nhsfZ8L0gLEgRKH7dhmWBDYZThEu/zSG1+NC+vgwColPL3TPIzD2yXJe7bbZl4nXU\njcCFE1pZHAdOYOrVYi4WG2sOlAqn1+rwyXpBx2f37/T5z5GHoShNBSAOxcLZbURT\nSg5RID0GvcrMuzzEckhdPAA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "final-project-coding-the-law@coding-bot.iam.gserviceaccount.com",
+  "client_id": "113195327461548914666",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/final-project-coding-the-law%40coding-bot.iam.gserviceaccount.com"
+}
