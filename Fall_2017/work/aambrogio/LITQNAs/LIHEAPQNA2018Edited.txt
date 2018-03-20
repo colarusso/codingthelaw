@@ -1,0 +1,224 @@
+After: <script src="http://www.codingthelaw.org/Fall_2017/work/aambrogio/p4/js_bin/scripts.js"></script>
+
+Q(Begin): This QNA is meant to determine if you or your client may qualify for LIHEAP (Massachusett's Fuel Assistance Program). Please proceed through the following questions as if you are the individual attempting to apply for LIHEAP.  Are you ready to proceed?
+A: Yes
+	Q(1.1):GOTO:Residency
+A: No
+	Q(1.2): Here is a link to the LIHEAP Government website. <a href="https://www.mass.gov/service-details/low-income-home-energy-assistance-program-liheap">LIHEAP</a>. If you are ready to proceed, just click residency.
+	A: Residency
+		Q(1.2.1):GOTO:Residency
+
+Q(Residency): Are you a resident of Massachusetts?
+A: No
+	Q(2.1): 	You do not qualify for LIHEAP in Massachusetts but you may qualify for it in your state of Residency. Google search to your state's .gov site along with "LIHEAP" to find out more information about your state's eligibility requirements?
+A: Yes
+	Q(2.2):GOTO:Income
+
+Q(Income): How much do you, and the other taxpayers in your household, make in a year, before taxes?
+X:number
+	Q(Household): How many individuals are in your household, including yourself? (This would include yourself, your spouse, and any dependents, such as children, that you include on your tax returns).
+	X[javascript:if(fedpov(getvar('Household'),getvar('Income'),100)){goto('OneHundred')} else if(fedpov(getvar('Household'),getvar('Income'),125)){goto('OneTwentyFive')} else if(fedpov(getvar('Household'),getvar('Income'),150)){goto('OneFifty')} else if(fedpov(getvar('Household'),getvar('Income'),175)){goto('OneSeventyFive')} else if(fedpov(getvar('Household'),getvar('Income'),200)){goto('TwoHundred')}else{goto('PossibleSixty')}]:number
+Q(OneHundred): Based on your income and household size, your family earns 100% or less of the Federal Poverty Guidelines. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(4.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(4.1.1): You can receive up to $1,100 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(4.1.1.1):GOTO:Zipcode
+		A: No
+			Q(4.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(4.1.2): You can receive up to $850 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(4.1.2.1):GOTO:Zipcode
+		A: No
+			Q(4.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(4.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(4.2.1): You can receive up to $770 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(4.2.1.1):GOTO:Zipcode
+		A: No
+			Q(4.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(4.2.2): You can receive up to $595 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(4.2.2.1):GOTO:Zipcode
+		A: No
+			Q(4.2.2.2):GOTO:HelpNeeded
+
+Q(OneTwentyFive): Based on your income and household size, your family earns 125% or less of the Federal Poverty Guidelines. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(5.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(5.1.1): You can receive up to $968 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(5.1.1.1):GOTO:Zipcode
+		A: No
+			Q(5.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(5.1.2): You can receive up to $748 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(5.1.2.1):GOTO:Zipcode
+		A: No
+			Q(5.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(5.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(5.2.1): You can receive up to $680 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(5.2.1.1):GOTO:Zipcode
+		A: No
+			Q(5.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(5.2.2): You can receive up to $525 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(5.2.2.1):GOTO:Zipcode
+		A: No
+			Q(5.2.2.2):GOTO:HelpNeeded
+
+Q(OneFifty): Based on your income and household size, your family earns 150% or less of the Federal Poverty Guidelines. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(6.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(6.1.1): You can receive up to $852 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(6.1.1.1):GOTO:Zipcode
+		A: No
+			Q(6.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(6.1.2): You can receive up to $658 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(6.1.2.1):GOTO:Zipcode
+		A: No
+			Q(6.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(6.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(6.2.1): You can receive up to $595 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(6.2.1.1):GOTO:Zipcode
+		A: No
+			Q(6.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(6.2.2): You can receive up to $460 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(6.2.2.1):GOTO:Zipcode
+		A: No
+			Q(6.2.2.2):GOTO:HelpNeeded
+
+Q(OneSeventyFive): Based on your income and household size, your family earns 175% or less of the Federal Poverty Guidelines. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(7.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(7.1.1): You can receive up to $750 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(7.1.1.1):GOTO:Zipcode
+		A: No
+			Q(7.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(7.1.2): You can receive up to $579 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(7.1.2.1):GOTO:Zipcode
+		A: No
+			Q(7.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(7.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other)
+		Q(7.2.1): You can receive up to $525 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(7.2.1.1):GOTO:Zipcode
+		A: No
+			Q(7.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(7.2.2): You can receive up to $405 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(7.2.2.1):GOTO:Zipcode
+		A: No
+			Q(7.2.2.2):GOTO:HelpNeeded
+
+Q(TwoHundred): Based on your income and household size, your family earns 200% or less of the Federal Poverty Guidelines. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(8.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(8.1.1): You can receive up to $750 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(8.1.1.1):GOTO:Zipcode
+		A: No
+			Q(8.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(8.1.2): You can receive up to $579 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(8.1.2.1):GOTO:Zipcode
+		A: No
+			Q(8.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(8.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other)
+		Q(8.2.1): You can receive up to $525 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(8.2.1.1):GOTO:Zipcode
+		A: No
+			Q(8.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(8.2.2): You can receive up to $405 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(8.2.2.1):GOTO:Zipcode
+		A: No
+			Q(8.2.2.2):GOTO:HelpNeeded
+
+Q(PossibleSixty): You are not within the federal poverty guidelines for LIHEAP, but you may qualify if your income is 60% or less of the median State Income. 
+A[javascript:if(sixmedinc(getvar('Household'),getvar('Income'))){goto('SixtyPercent')}else{goto('DoesNotQualify')}]: Does my income qualify?
+
+Q(SixtyPercent): Based on your income and household size, your family earns 60% or less of the Estimated State Median Income. You are likely eligible for fuel assistance. Which type of housing do you have?
+A: Homeowner or non-subsidized housing tenant
+	Q(10.1): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other
+		Q(10.1.1): You can receive up to $581 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(10.1.1.1):GOTO:Zipcode
+		A: No
+			Q(10.1.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(10.1.2): You can receive up to $448 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(10.1.2.1):GOTO:Zipcode
+		A: No
+			Q(10.1.2.2):GOTO:HelpNeeded
+A: Subsidized Housing Tenant
+	Q(10.2): What type of heat do you have?
+	A: Deliverable Fuel (Oil, Propane, Kerosene & Other)
+		Q(10.2.1): You can receive up to $405 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(10.2.1.1):GOTO:Zipcode
+		A: No
+			Q(10.2.1.2):GOTO:HelpNeeded
+	A: Utility and Heat Included in the Rent
+		Q(10.2.2): You can receive up to $315 in fuel assistance, possibly more if you qualify for a High Energy Cost Supplement which will be determined by LIHEAP Representatives. Do you wish to continue?
+		A: Yes
+			Q(10.2.2.1):GOTO:Zipcode
+		A: No
+			Q(10.2.2.2):GOTO:HelpNeeded
+
+Q(DoesNotQualify): You do not qualify for Fuel Assistance in Massachusetts because you are over income. Would you like additional assistance?
+A: Yes, please.
+	Q(11.1): For additional assistance for limited income households who are over income for fuel assistance, please contact: The Good Neighbor Energy Fund operated by your local Salvation Army. In area codes 617, 508, 781, or 978, call 1-800-334-3047. In area code 413, call 1-800-262-1320. You can also visit this website: <a href="www.magoodneighbor.org">MA Good Neighbor</a>.
+A: No, I am all set.
+	Q(11.2):GOTO:AllSet
+		
+Q(Zipcode): What is your zipcode?
+X:number
+	Q(12.1): Have you ever applied for fuel assistance for a residence or household in the state of Massachusetts?
+	A: Yes
+		Q(12.1.1): Applications are mailed to households after the first year of using Fuel Assistance (LIHEAP). If you have not received another application in order to apply between November 1st and April 30th of the program year, you can find your local agency using this website, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a> and selecting your town. Use the drop-down window to find your town and then call your local agency with the number provided.
+	A: No
+		Q(12.1.2): First-time applicants must apply in person at the fuel assistance agency in their area. You can find your local agency using this link, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a>, selecting your town, and calling that agency's phone number for Fuel Assistance. They will direct you to your next steps on the phone. 
+
+Q(HelpNeeded): Based on the answers you provided, it seems you may need some further assistance. Would you like to speak with a LIHEAP representative?
+A: Yes
+	Q(13.1): You can find your local agency using this link, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a>. Use the drop-down menu to find your town and then call your local agency with the Fuel Assistance number provided. They will direct you to your next steps on the phone when you give them your information. 
+A: No
+	Q(13.2):GOTO:AllSet
+
+Q(AllSet): Thank you for your participation and have a wonderful day!
