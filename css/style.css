@@ -276,7 +276,7 @@ margin:0 auto; width:400px;
 	padding-bottom:25px;
 }
 
-.embed_vid {
+.embed_vid_placeholder {
 	box-sizing: border-box;
 	background:black;
 	background-image:url(../images/video_coming_soon.png);
@@ -285,6 +285,13 @@ margin:0 auto; width:400px;
 	height:510px;
 }
 
+.embed_vid {
+	box-sizing: border-box;
+	background:black;
+	background-size: 900px 510px;
+	width:900px;
+	height:510px;
+}
 
 .footer {
 	float:left;
@@ -305,7 +312,7 @@ margin:0 auto; width:400px;
 		float:none;
 		width:100%;
 	}
-	.embed_vid {
+	.embed_vid, .embed_vid_placeholder {
 		float:none;
 		width:100%;
 		background-size: 100% 510px;
@@ -339,7 +346,7 @@ margin:0 auto; width:400px;
 		width:100%;
 		height:300px;
 	}
-	.embed_vid {
+	.embed_vid, .embed_vid_placeholder {
 		height:300px;
 		background-size: 100% 300px;
 	}
@@ -351,6 +358,7 @@ margin:0 auto; width:400px;
 	}
 	.site_title {
 		margin-top:20px;
+		max-width:440px;
 	}
 	.main_subtitle{
 		display:none;
