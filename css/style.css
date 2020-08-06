@@ -13,6 +13,51 @@ canvas {
 		background-color:transparent;
 }
 
+.timer_div {
+		box-sizing: border-box;
+		position:fixed;
+		z-index:200;
+		right:0;
+		width:125px;
+		bottom:0;
+		height:40px;
+		background:#fff;
+		text-align:center;
+		color:white;
+		font-size:12px;
+		font-family:arial;
+		line-height:40px;
+		padding:8px 0 0 10px;
+		border-top-left-radius: 15px;
+		border-left: 1px solid #555;
+		border-top: 1px solid #555;
+		-webkit-backface-visibility: hidden;
+	}
+
+.pause {
+	display:none;
+	float:left;
+	margin-top:4px;
+}
+
+.pause_bar {
+	float:left;
+	margin-right:4px;
+	width: 4px;
+	height: 15px;
+	background-color:black;
+}
+
+.play {
+	float:left;
+	margin-top:3px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid black;
+}
+
 .sky {
 	position:absolute;
 	z-index:-100;
@@ -152,6 +197,13 @@ text-align:center;
 	background-color:#ed781f;
 	background-image:url(../images/block.png);
 	background-size: 25px 25px;
+}
+
+code {
+    background: #eee;
+    font-weight: bold;
+    color: black;
+    padding: 2px 5px;
 }
 
 .content_frame {
