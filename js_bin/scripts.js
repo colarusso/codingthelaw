@@ -69,6 +69,7 @@ function find_sec() {
 }
 
 function add() {
+    // inspired by https://jsfiddle.net/Daniel_Hug/pvk6p/
 
     seconds++;
     if (seconds >= 60) {
@@ -95,10 +96,18 @@ function start_time() {
   timer();
   $('#play').hide();
   $('#pause').show();
+  $('#timer_div').css("background-color", "#c2fcd8");
+  $('#timer').css("background-color", "#c2fcd8");
 }
 
 function pause_time() {
   clearTimeout(t);
   $('#play').show();
   $('#pause').hide();
+  $('#timer_div').css("background-color", "white");
+  $('#timer').css("background-color", "white");
+}
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ $('#timer_div').css("display", "none");
 }
