@@ -45,7 +45,7 @@
   <script src="js_bin/scripts.js"></script>
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
-  <div class="timer_div">
+  <div id="timer_div" class="timer_div">
   	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:85px;font-size:17px;line-height:20px;text-align:center;border:0px;background:#fff;" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
     <div id="play" class="play" onClick="start_time()"></div>
     <div id="pause" class="pause" onClick="pause_time()">
@@ -139,7 +139,7 @@
 
     <p><b>If you have cookies enabled, your answers to questions on level pages, like this one, are saved locally for this browser. They are NOT graded or shared with me.</b> They are presented as an aid to help you in the moment. Your <a href="#reflection">weekly reflections</a>, however, are saved and shared with me. Additionally, you'll be asked to log a rough estimate of the time you spent working on each level to help me calibrate the time estimates you find here.<sup><a href="#dagger">&dagger;</a></sup>
     </p>
-    <p>You can ignore it, but I've added a stopwatch to the bottom right of the levels to help you track your time, not visible on mobile. It starts when the page loads and pauses when you close or leave the page, hit pause, or edit the time, which you can do by clicking on the time and typing. Like the answers to questions on this page, this information is stored locally in this browser and not shared with me.</p>
+    <p>You can ignore it, but I've added a stopwatch to the bottom right of the levels to help you track your time, not visible on mobile devices. It starts when you hit play and pauses when you close or reload the page, hit pause, or edit the time, which you can do by clicking on the time and typing. Like the answers to questions on this page, this information is stored locally in this browser and not shared with me.</p>
 
     <p style="background:#fcf092;padding:15px;border:solid 1px #888;">🚨 When working on a project, if you are spinning your wheels for more than 30 min, ask for help! The best place to do this is via Slack (<a href="#slack">described below</a>). You can ask me for help privately or put a call out to the whole-class channel. The latter is strongly encouraged. Chances are if you're having an issue, someone else has already dealt with it or other are likely to face it in the future. Either way, asking your question in the public helps everyone. Your success is dependent on asking for help. Heck, if you knew everything already you wouldn't need the class. <b>When in doubt, ask for help! It's literally my job to help you.</b> 🚨</p>
 
@@ -282,7 +282,7 @@
 
     <h3>How to take a screenshot<a href="#screenshot" name="screenshot" class="anchor"></a></h3>
     <p>
-      Because it's good to know and easy to forget, here are instructions for taking a screen shot: <a href="" target="_blank">Mac Instructions</a>; <a href="" target="_blank">PC Instructions</a>.
+      Because it's good to know and easy to forget, here are instructions for taking a screen shot: <a href="https://support.apple.com/en-us/HT201361" target="_blank">Mac Instructions</a>; <a href="https://www.digitaltrends.com/computing/how-to-take-a-screenshot-on-pc/" target="_blank">PC Instructions</a>.
     </p>
 
   </div>
@@ -337,7 +337,7 @@
     <div class="section">
 
     <h3>GitHub Pages<a href="#hello" name="hello" class="anchor"></a><br/>
-      <span class="subtitle">~ 15 Minutes</span></h3>
+      <span class="subtitle">~ 10 Minutes</span></h3>
 
         <p>
           In this exercise, we're going to publish a website using GitHub Pages. GitHub Pages is a free service offered by GitHub. What does it do? In short, it serves your code from a webserver, placing it on the Web.
@@ -346,36 +346,36 @@
           GitHub Pages places the code from your repo (or some subset of that code) on a webserver for others to access over the Internet. Yes, people can already see your code if they visit your repo's page on GitHub.com, but their browsers don't interpret that code. That is, they see the text of the code, not the "final product." By serving your code on a webserver you can actually place your code live on the Web. GitHub Pages restricts what it will serve to something called static content (things like HTML), but that's all we need for our purposes.
         </p>
         <p>
-          Make sure you're signed into GitHub.com and create a new repo called "ctl" with the following description, "a collection of work for my Coding the Law class," and be sure to select "initialize with a README."
+          Make sure you're signed into GitHub.com and create a new repo called "ctl" with the following description, "A collection of work for my Coding the Law class," and be sure to select "Initialize this repository with a README."
         </p>
-          <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
-            <a href="../images/html-0.png"><img src="../images/html-0.png" alt="screen shot" style="width:100%" border="0"/></a>
+          <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+            <a href="images/gh-01.png"><img src="images/gh-01.png" alt="screen shot" style="width:100%" border="0"/></a>
           </div>
         <p>
           After creating the repo, click on <kbd>Settings</kbd>.
         </p>
-        <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
-          <a href="../images/html-0.png"><img src="../images/html-0.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <div style="text-align:center;margin:0px auto;max-width:800px;padding:10px 0 15px 0px;">
+          <a href="images/gh-02.png"><img src="images/gh-02.png" alt="screen shot" style="width:100%" border="0"/></a>
         </div>
 
         <p>Scroll down to the GitHub Pages section and select <kbd>master branch</kbd> from the <kbd>Source</kbd> pulldown. Then click <kbd>Save</kbd>.</p>
-        <div style="text-align:center;margin:0px auto;max-width:754px;padding:10px 0 15px 0px;">
-          <a href="../images/html-1.png"><img src="../images/html-1.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+          <a href="images/gh-03.gif"><img src="images/gh-03.gif" alt="screen shot" style="width:100%" border="0"/></a>
         </div>
 
         <p>This will update your settings page, showing where on the web your page is being served (e.g., <a href="https://colarusso.github.io/hello-world/">https://colarusso.github.io/ctl/</a>).
-        <div style="text-align:center;margin:0px auto;max-width:741px;padding:10px 0 15px 0px;">
-          <a href="../images/html-2.png"><img src="../images/html-2.png" alt="screen shot" style="width:100%" border="0"/></a>
-        </div>
+          <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+            <a href="images/gh-04.png"><img src="images/gh-04.png" alt="screen shot" style="width:100%" border="0"/></a>
+          </div>
 
         <p>If you visit your page, you'll see the content of your README.md file served as a webpage. That's because the the README is the only file on your site.</p>
-        <div style="text-align:center;margin:0px auto;max-width:553px;padding:10px 0 15px 0px;">
-          <a href="../images/html-3.png"><img src="../images/html-3.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px;">
+          <a href="images/gh-05.png"><img src="images/gh-05.png" alt="screen shot" style="width:100%" border="0"/></a>
         </div>
 
         <p>Customarily, webpages aren't Markdown files (<kbd>.md</kbd>). They're normally HTML files. We'll get in to HTML (<kbd>.html</kbd>) more in another exercise, but like markdown, they're just text files filled where content conforming to a set structure. Use your text editor to create a new "text" file named <kbd>hello-world.html</kbd>. It should have the following content.</p>
-        <div style="text-align:center;margin:0px auto;max-width:653px;padding:10px 0 15px 0px;">
-          <a href="../images/html-4.png"><img src="../images/html-4.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px;">
+          <a href="images/gh-06.png"><img src="images/gh-06.png" alt="screen shot" style="width:100%" border="0"/></a>
         </div>
 
       <p> You can cut and paste the code from here:</p>
@@ -390,14 +390,17 @@
   &lt;/body>
 &lt;/html></pre>
 
-        <p>After you've saved your file, drag and drop it into look at your repo like so.</p>
-        <div style="text-align:center;margin:0px auto;max-width:885px;padding:10px 0 15px 0px;">
-          <a href="../images/.png"><img src="../images/html-5.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <p>After you've saved your file, drag and drop it into your repository, then commit your change like so.</p>
+        <div style="text-align:center;margin:0px auto;max-width:800px;padding:40px 0 45px 0px;">
+          <video width="100%" autoplay loop>
+           <source src="images/gh-07.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
         </div>
 
-        <p>Wait a minute or two (it can take a few minutes for your GitHub Pages site to update) then in your browser visit <code>http://[your username].github.io/ctl/hello-world.html</code>. If everything worked, you should see something like this.</p>
-        <div style="text-align:center;margin:0px auto;max-width:553px;padding:10px 0 15px 0px;">
-          <a href="../images/.png"><img src="../images/html-6.png" alt="screen shot" style="width:100%" border="0"/></a>
+        <p>Wait a minute or two (it can take a few minutes for your GitHub Pages site to update) then in your browser visit <code>https://[your username].github.io/ctl/hello-world.html</code>. If everything worked, you should see something like this.</p>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px 0 0px 0px;">
+          <a href="images/gh-08.png"><img src="images/gh-08.png" alt="screen shot" style="width:100%" border="0"/></a>
         </div>
 
         <p>Congratulations. You've published a webpage!  🎉 </p>
