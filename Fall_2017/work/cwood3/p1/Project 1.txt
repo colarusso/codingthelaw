@@ -1,6 +1,6 @@
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 Before: <input type="hidden" name="name" value="Affadavit2"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p1/document.docx"/> 
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/cwood3/p1/document.docx"/> 
 
 Q(resident): Are you inquiring about a case in North Carolina?
 A: Yes

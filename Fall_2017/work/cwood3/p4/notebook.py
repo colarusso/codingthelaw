@@ -7,11 +7,11 @@
 # 
 # ## General Information
 # 
-# I wrote a bot, and you can find it [here](http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Seller.html). To write my bot, we used a tool called [QnA Markup](http://www.qnamarkup.org/). Basically, you create an interactive dicision tree by nesting questions and answers. Here's [my code](Seller.txt).
+# I wrote a bot, and you can find it [here](https://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Seller.html). To write my bot, we used a tool called [QnA Markup](http://www.qnamarkup.org/). Basically, you create an interactive dicision tree by nesting questions and answers. Here's [my code](Seller.txt).
 # 
 # My partner for this project was essentially two companies that work together on a daily basis. The main partner was Nyaas and the "silent" partner who I was developing the bot for was Weissman. I originally reached out to Nyaas to see if there was anything I could do for them and they point me into contact with Weissman. After some consideration Weissman decided that Nyaas was the best entity to contact if I had question regarding the information that was needed for the chatbot. I form that I used for the chatbot is an electric form that is only accessable through Closing Connect and each person needs to obtain authorization to access it, so I am not able accurate show it be attaching it to the notebook. The idea behind the chatbot is to create a tool that clients can use when the begin the process to sell property that would be interactive and make the collection process more efficient. The chatbot will guide them through the normal questions on the electric form and create a pre-filled documents of there information that they can give to the attorney representing their sale. 
 # 
-# I actively spoke with point person, James Adler, an employee at Nyaas to understand the forms and how they saw the chatbot being used. In addition to speaking to James daily, I spoke with the owner of Nyaas through email a few times. I sent him my first version and he sent back comments which you can look at here: [Feedback from Matt](http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft).
+# I actively spoke with point person, James Adler, an employee at Nyaas to understand the forms and how they saw the chatbot being used. In addition to speaking to James daily, I spoke with the owner of Nyaas through email a few times. I sent him my first version and he sent back comments which you can look at here: [Feedback from Matt](https://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft).
 # 
 # In additional to comminicating with my partner, I was responsible for delivering a 5 minute pitch to the class in regards to the project and where I saw it going. I do believe that it came out better then I originally thought. There are definitely a few areas that need improvement and I have already made arrangements with my partners to continue working on the project to make sure it is exactly what they want.
 # 
@@ -27,7 +27,7 @@
 # This was not to difficult after organizing the information. There are a lot of components that need to obtain, specifically that there can be multiple sellers and they may not all be of the same entity (an individual and a corporation can own the property and need to be involved in the selling process. There is still a few area that need improvement, such as reformatting the pre-filled formed in a way that the non-appliable cells can be hidden and that is something I am exploring with James, my point person.
 # 
 # ### User Testing
-# As mentioned before I had two individuals in Nyaas that I relied on to test my prototypes, James and Matt. James and I worked together at least once a week to go through the chatbot and see what we can do to improve the wording or format. After we thought it was acceptable I would send the version to Matt to look at and provide me with feedback: [Feedback from Matt](http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft).
+# As mentioned before I had two individuals in Nyaas that I relied on to test my prototypes, James and Matt. James and I worked together at least once a week to go through the chatbot and see what we can do to improve the wording or format. After we thought it was acceptable I would send the version to Matt to look at and provide me with feedback: [Feedback from Matt](https://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Revision through email.rft).
 # 
 # Since this is a busy company there are times that I have to wait a week over so to obtain feedback from Matt. I recently sent him the latest version and I am waiting on his feedback.
 # 
@@ -37,7 +37,7 @@
 # ## Product
 # 
 # ### Intro Pitch
-# Before beginning this project I had to present my idea to the class through an intro-pitch. This was a five minute presentation as to what I wanted to do after speaking with my partner and where I saw the project going. There are not a lot of words in my pitch but it can be found [here](http://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Slide deck of pitch.pptx).
+# Before beginning this project I had to present my idea to the class through an intro-pitch. This was a five minute presentation as to what I wanted to do after speaking with my partner and where I saw the project going. There are not a lot of words in my pitch but it can be found [here](https://www.codingthelaw.org/Fall_2017/work/cwood3/p4/Slide deck of pitch.pptx).
 # 
 # ### Complexity
 # This project focused on the QnA system to develop and interactive chatbot and document automation using mail-merge, which developed the document that will be pre-filled based on how one would respond to the chatbot. The most complex part of this project was deciding how to organize the infromation due to the multiple components and entitites involved. 

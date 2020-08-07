@@ -4,13 +4,13 @@
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs24 \cf0 Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">\
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>\
+\f0\fs24 \cf0 Before:<link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">\
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://www.codingthelaw.org/images/max_headroom.gif');"></div>\
 <h2 style="text-align:center;">Ohio Indigency Calculator</h2>\
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>\
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>\
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>\
 <input type="hidden" name="name" value=\'93Poverty Affidavit\'93/>\
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplateMM.docx"/>\
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplateMM.docx"/>\
 \
 \
 Q(1): Hello! My name is CLAIRA, and I will be helping you understand whether you are eligible for a court-appointed lawyer or other fee waivers (also known as your indigent status). Before we start, please note that several pieces of financial information may be required during this process, including your gross weekly income, total living expenses, and total liquid assets. These terms will be defined for you as they are required, but you will want to have all your financial data handy in order to answer questions as they arise. Now let\'92s begin.GOTO:first\
@@ -28,7 +28,7 @@ A: Tell me more about this poverty affidavit.\
 	Q(3.1): A poverty affidavit is your sworn statement that your income is too low to afford paying the fees. In this affidavit you will need to list your income, assets, and some other personal information. There is no strict income cutoff above which your fees will not be waived; rather the court will use the information in the affidavit to decide whether you are able to pay. You will also need to get the affidavit notarized. After completing this form, simply give it to the clerk at the court where your case is being heard.GOTO:pova\
 A: Yes, I'd like help filing out the affidavit.\
 	Q(3.2): Great. I will now ask you a series of questions to fully populate the form. However, if you don't know a particular piece of information right now, we'll just leave that field blank and you can fill it in after printing.GOTO:name\
-A:[http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplate.docx] Yes, but just give me the blank form. I can fill it out myself.\
+A:[https://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplate.docx] Yes, but just give me the blank form. I can fill it out myself.\
 	Q(3.3):GOTO:signoff\
 A: No thanks, not right now.\
 	Q(3.4):GOTO:signoff\
@@ -139,7 +139,7 @@ Q(limaff): Please note that this affidavit will only apply to this specific case
 Q(printoff): Are you ready to print your form?\
 A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Yes!\
 	Q(11.1):GOTO:signoff\
-A:[http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplate.docx] On second thought, please just give me the blank template and I'll fill it out later.\
+A:[https://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/PovertyAffidavitTemplate.docx] On second thought, please just give me the blank template and I'll fill it out later.\
 	Q(11.2):GOTO:signoff\
 \
 \
@@ -208,13 +208,13 @@ A: How are basic living expenses defined?\
 	Q(livdef): Basic living expenses include housing rent and/or mortgage payments, child support actually paid, child care, health insurance premiums, medical and dental expenses, costs of caring for an infirm family member or other dependents you have a duty to support, employment transportation costs, costs of fuel, food, telephone, utilities, taxes withheld, credit card and other loan payments, and other similar basic costs of living. Please also include any court-imposed obligations, such as expected court costs, fines, restitution, and recoupment; application, jail, supervision, electronic monitoring, and other fees; and other similar costs associated with this legal proceeding.GOTO:next2\
 X[javascript:if (getvar('ppl')==1 && getvar('num')*52-getvar('next2')<=15075) \{goto('que2')\} else if (getvar('ppl')==2 && getvar('num')*52-getvar('next2')<=20300) \{goto('que2')\} else if (getvar('ppl')==3 && getvar('num')*52-getvar('next2')<=25525) \{goto('que2')\} else if (getvar('ppl')==4 && getvar('num')*52-getvar('next2')<=30750) \{goto('que2')\} else if (getvar('ppl')==5 && getvar('num')*52-getvar('next2')<=35975) \{goto('que2')\} else if (getvar('ppl')==6 && getvar('num')*52-getvar('next2')<=41200) \{goto('que2')\} else if (getvar('ppl')==7 && getvar('num')*52-getvar('next2')<=46425) \{goto('que2')\} else if (getvar('ppl')==8 && getvar('num')*52-getvar('next2')<=51650) \{goto('que2')\} else if (getvar('next2')>=0) \{goto('notque')\} else \{goto('err2')\}]:\
 Q(que): It looks like you qualify for a court-appointed lawyer under Ohio Administrative Code 120-1-03! To secure your legal assistance, you will first need to fill out the required Financial Disclosure & Affidavit of Indigency Form. You can find this form below. Simply complete all relevant fields, print, and deliver the completed form to the clerk of the court where your case is being heard.\
-A:[http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/AffidavitofIndigency.pdf] Take me to the Financial Disclosure & Affidavit of Indigency Form.\
+A:[https://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/AffidavitofIndigency.pdf] Take me to the Financial Disclosure & Affidavit of Indigency Form.\
 	Q(19.1):GOTO:signoff\
 A: No thanks, I\'92ll fill the form out later.\
 	Q:GOTO:signoff\
 \
 Q(que2): It looks like you qualify for a court-appointed lawyer under Ohio Administrative Code 120-1-03! However, since your net income (annual gross income minus basic living expenses) exceeds 125% of the federal poverty level, you may be required to repay some of the costs for services provided to you. o secure your legal assistance, you will first need to fill out the required Financial Disclosure & Affidavit of Indigency Form. You can find this form below. Simply complete all relevant fields, print, and deliver the completed form to the clerk of the court where your case is being heard.\
-A:[http://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/AffidavitofIndigency.pdf] Take me to the Financial Disclosure & Affidavit of Indigency Form.\
+A:[https://www.codingthelaw.org/Fall_2017/work/JeffGitsIt/p1/AffidavitofIndigency.pdf] Take me to the Financial Disclosure & Affidavit of Indigency Form.\
 	Q(19.1):GOTO:signoff\
 A: No thanks, I\'92ll fill the form out later.\
 	Q:GOTO:signoff\

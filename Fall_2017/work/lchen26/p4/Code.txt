@@ -54,26 +54,26 @@ Q(deposit):Your letter to demand the return of your security deposit is ready.
 
 Q(bugbill):Your response to an invoice for bug extermination is ready.
 	<input type="hidden" name="name" value="Response to Invoice for Bug Extermination"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 
 Q(repairbill):Your response to an invoice for repairs is ready.
 	<input type="hidden" name="name" value="Response to Invoice for Repairs"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/>
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 
 Q(privacy):This begins the privacy notice tree.
 Q(neighbors):This begins the neighbor incident tree.
 Q(guests):This begins the guest tree.  
 	<input type="hidden" name="name" value="Letter to Assert Guest Rights"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 
 Q(retaliation):This begins the retaliation tree.
 
 Q(lease):This begins the lease tree.
 	<input type="hidden" name="name" value="Request for Lease"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 
 
@@ -84,7 +84,7 @@ A:On the premises.
 	X:date
 		Q(14.1.1):Your demand letter for the return of your property is ready.
 			<input type="hidden" name="name" value="Demand Letter for Return of Property"/>
-			<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/>
+			<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/>
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 
 A:Off the premises.
@@ -94,6 +94,6 @@ A:Off the premises.
 		X:date
 			Q(14.2.1.1):Your demand letter for the return of your property is ready.
 				<input type="hidden" name="name" value="Demand Letter for Return of Property"/>
-				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
+				<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
 			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]Click here to download!
 	A:I'm not sure.

@@ -1,10 +1,10 @@
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+Before: <p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>North Carolina Indigence Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>	
 <input type="hidden" name="name" value="Affadavit2"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/cwood3/p1/document.docx"/> 
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/cwood3/p1/document.docx"/> 
 
 Q(resident): Are you inquiring about a case in North Carolina?
 A: Yes

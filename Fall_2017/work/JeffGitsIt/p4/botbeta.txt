@@ -1,7 +1,7 @@
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+Before:<link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
 
 <h2 style="text-align:center;">U.S. Air Force Medical Discharge Assistance</h2>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>This is a chatbot designed to assist members of the United States Air Force who are being medically discharged. Answer the following questions to find out more about the process, learn about your rights, what options may be available to you, and to see if you qualify for legal assistance. You may want to have your medical paperwork and some basic military career information handy in order to answer these questions.</p>
 
 Q(1): Hello! I am the Medical Discharge Assistance Chatbot (MDAC), and I will be helping you understand the process of and your rights during a possible medical discharge. GOTO:hello

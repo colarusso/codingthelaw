@@ -1,11 +1,11 @@
 Title: Maryland Indigency Calculator
 Author: Bianca Crockett
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/images/max_headroom.gif');"></div>
+Before:<link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://www.codingthelaw.org/images/max_headroom.gif');"></div>
 <h2 style="text-align:center;">Maryland Indigency Calculator</h2>
 <input type="hidden" name="name" value="Waiver of Costs"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/bcrockett3/p1/Waiver%20of%20Costs.docx"/>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/bcrockett3/p1/Waiver%20of%20Costs.docx"/>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Maryland Indigency Calculator</h3>
 <p>Please answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>

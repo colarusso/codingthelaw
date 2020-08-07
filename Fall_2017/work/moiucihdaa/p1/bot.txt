@@ -2,8 +2,8 @@ Title: NYC Fee Waivers
 Description: A QnA Markup to assist pro se litigants determine their eligibility for court fee waivers.  
 Before: 
 <input type="hidden" name="name" value="Fee Waiver"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p1/Fee-Waiver.docx"/>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p1/Fee-Waiver.docx"/>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 
 <center><h2>NYC Fee Waivers</h2></center>

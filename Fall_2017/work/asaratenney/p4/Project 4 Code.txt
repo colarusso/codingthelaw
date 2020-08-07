@@ -68,7 +68,7 @@ A:Yes
 			A:No, because I don’t know what to say to my landlord.
 				Q(landlord):
 				<input type="hidden" name="name" value="Dear Landlord"/>
-				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Dear-Landlord.docx"/>
+				<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Dear-Landlord.docx"/>
 				What is your landlord's name?
 				X:
 					Q(tenant):What is the name on the lease?
@@ -99,7 +99,7 @@ A:No
 
 Q(evidence): 
 <input type="hidden" name="name" value="Discrimination Facts"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Evidence-Doc.docx"/>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/asaratenney/p4/Evidence-Doc.docx"/>
 
 Please list the date and the time of the incident (January 1, 2017 6:45pm)
 X:

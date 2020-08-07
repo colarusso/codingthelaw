@@ -1,4 +1,4 @@
-After: <script src="http://www.codingthelaw.org/Fall_2017/work/aambrogio/p4/js_bin/scripts.js"></script>
+After: <script src="https://www.codingthelaw.org/Fall_2017/work/aambrogio/p4/js_bin/scripts.js"></script>
 
 Q(Begin): This QNA is meant to determine if you or your client may qualify for LIHEAP (Massachusett's Fuel Assistance Program). Please proceed through the following questions as if you are the individual attempting to apply for LIHEAP.  Are you ready to proceed?
 A: Yes
