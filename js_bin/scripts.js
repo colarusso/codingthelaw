@@ -107,7 +107,3 @@ function pause_time() {
   $('#timer_div').css("background-color", "white");
   $('#timer').css("background-color", "white");
 }
-
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- $('#timer_div').css("display", "none");
-}
