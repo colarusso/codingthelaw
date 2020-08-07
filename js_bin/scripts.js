@@ -21,7 +21,7 @@ function readCookie(name) {
 
 function check_q(qid) {
   var ans = $("input:radio[name="+qid+"]:checked").val()
-  createCookie(qid,ans,36500)
+  createCookie('l'+level+qid,ans,36500)
   if (ans == "a") {
     if ($("#"+qid+"_a_msg").html()!="") { $("#"+qid+"_a_msg").show(); } else { $("#"+qid+"_a_msg").hide(); }
     $("#"+qid+"_b_msg").hide();
@@ -61,7 +61,7 @@ function find_sec() {
   if ((timer_text[0]*1 >= 0) & (timer_text[1]*1 >= 0) & (timer_text[2]*1 >= 0)) {
     seconds = timer_text[2]*1, minutes = timer_text[1]*1, hours = timer_text[0]*1;
     t = seconds + minutes*60 + hours*60*60;
-    createCookie('timer',$('#timer').val(),36500);
+    createCookie('l'+level+'timer',$('#timer').val(),36500);
   } else {
     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
     alert('There was a problem with you time entry. It must be of the form 00:00:00. \nIt has been reset to the value it held before your edit.');
@@ -88,7 +88,7 @@ function add() {
 function timer() {
     t = setTimeout(add, 1000);
     //if (t % 2 == 0) {
-    createCookie('timer',$('#timer').val(),36500);
+    createCookie('l'+level+'timer',$('#timer').val(),36500);
     //}
 }
 

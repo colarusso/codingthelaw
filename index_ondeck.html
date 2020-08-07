@@ -527,12 +527,13 @@
 <script src="js_bin/game.js"></script>
 <script>
 
+  var level = 1;
   var num_Qs = 5;
 
   var i;
   for (i = 1; i < num_Qs+1; i++) {
     if (readCookie('q'+i)){
-       $('#q'+ i + readCookie('q'+i)).prop('checked',true);
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
     }
     check_q('q'+i);
   }
@@ -546,8 +547,8 @@
 
   kbase();
 
-  if (readCookie('timer')){
-    $('#timer').val(readCookie('timer'));
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
     find_sec();
      if (seconds >= 60) {
          seconds = 0;
