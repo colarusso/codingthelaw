@@ -171,7 +171,9 @@
 
     <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and sections will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
 
-    <p>This week I'm asking you to set up a few accounts and take some tools for a spin. This will allow us to hit the ground running at our <a href="#meetup">weekly meet up</a>. That being said, here are a few questions to see if we can pare things down.</p>
+    <p>This week I'm asking you to set up a few accounts and take some tools for a spin. This will allow us to hit the ground running at our <a href="#meetup">weekly meet up</a>. You will be publishing some of your work to the Web. So some of your username(s) will be publicly associated with your work. Choose them accordingly. Also, let me know if you plan on using a pseudonym for public-facing work so I know who is who.</p>
+
+    <p>All of that being said, here are a few questions to see if we can pare things down.</p>
 
 <!--
     <hr style="border:0px solid #fff;border-top:1px solid #aaa">
@@ -328,6 +330,7 @@
 
     <p>
       Git is a system for managing the many versions of code one writes over the course of a coding project. At one level, it acts like track changes for computer code, allowing multiple people to collaborate on a single project. GitHub is a website on which you can host and manage projects using Git. It's also a community of users where people share their code. If you haven't already, you can <a href="https://github.com/join?source=header-home" target="_blank">create a GitHub account here</a> (choose the free plan).
+
     </p>
     <p>
       Complete GitHub's <a href="https://guides.github.com/activities/hello-world/" target="_blank">Hello World activity</a>. This will introduce you to a bunch of nomenclature and help give you a sense for how GitHub works. Don't worry if it's hard to follow, just focus on creating that Hello World repository (those are all words that will make sense after you fo the activity ;).
@@ -390,7 +393,7 @@
   &lt;/body>
 &lt;/html></pre>
 
-        <p>After you've saved your file, drag and drop it into your repository, then commit your change like so.</p>
+        <p>After you've saved your file, drag and drop it into your repository (or click <kbd>Add file</kbd> and upload it), then commit your change like so.</p>
         <div style="text-align:center;margin:0px auto;max-width:800px;padding:40px 0 45px 0px;">
           <video width="100%" autoplay loop>
            <source src="images/gh-07.mp4" type="video/mp4">
@@ -532,7 +535,7 @@
 
   var i;
   for (i = 1; i < num_Qs+1; i++) {
-    if (readCookie('q'+i)){
+    if (readCookie('l'+level+'q'+i)){
        $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
     }
     check_q('q'+i);
