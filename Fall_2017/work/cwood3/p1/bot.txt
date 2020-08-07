@@ -1,7 +1,7 @@
 After: <script src="http://www.qnamarkup.org/js/poverty_line.js"></script>
 Before: <input type="hidden" name="name" value="northcarolina (1).csv"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/colarusso/p1/Affadavit2.docx"/>
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/colarusso/p1/Affadavit2.docx"/>
+Before: <p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>North Carolina Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 

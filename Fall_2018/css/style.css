@@ -1,5 +1,5 @@
 body {
-	background-image: url("http://www.codingthelaw.org/images/books.jpg");
+	background-image: url("https://www.codingthelaw.org/images/books.jpg");
 	background-color: #fff;
 	background-repeat: repeat-x;
 	background-position: top -5px center;
@@ -357,7 +357,7 @@ color: #888;
 		float:right;
 		width:22px;
 		height:16px;
-		background-image: url("http://www.codingthelaw.org/images/link.png");
+		background-image: url("https://www.codingthelaw.org/images/link.png");
 		background-repeat: no-repeat;
 		background-position: center;
 	}

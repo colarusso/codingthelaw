@@ -1,9 +1,9 @@
 Title: Repair Request Form Help 
 Author: For HomeLine
-Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/homeline.jpg');"></div>
+Before: <link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://www.codingthelaw.org/Fall_2017/work/lchen26/homeline.jpg');"></div>
 <input type="hidden" name="name" value="Repair Request Form Help"/>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Repair Request Form Help</h3>
 <p>Answer the following questions to fill out a repair request form through HomeLine.</p>
 Q(1):Welcome!  Are you the tenant or are you filling this out on behalf of someone else?
@@ -103,7 +103,7 @@ Q(utility):What utility bill do you need? (Examples: Electricity, Gas, Water)
 X:
 	Q(13.1): That's all the information I need. GOTO:print
 Q(property):This begins the demand for property tree.  
-Q(repairs):What do you need repaired? (List only one) <input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/RepairRequestForm.docx"/>
+Q(repairs):What do you need repaired? (List only one) <input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/lchen26/RepairRequestForm.docx"/>
 X:
 	Q(needs): Do you have any other repair needs?
 	A: Yes

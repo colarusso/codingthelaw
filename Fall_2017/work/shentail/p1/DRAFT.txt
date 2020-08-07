@@ -1,6 +1,6 @@
 Title: California Indigency Calculator
 Author: Chantal Choi
-Before: <p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+Before: <p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>California Indigency Calculator</h3>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 

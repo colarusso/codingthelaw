@@ -1,9 +1,9 @@
 Title: Texas Indigency Calculator
 Author: Matthew Morgan
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+Before:<link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/250px-Flag_of_Texas.svg.png');"></div>
 <h2 style="text-align:center;">Texas Indigency Calculator</h2>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for appointment of counsel or a fee waiver.</p>
 
 

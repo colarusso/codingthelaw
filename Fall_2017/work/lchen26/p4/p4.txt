@@ -1,8 +1,8 @@
 Title: Repair Request Form Help 
 Author: For HomeLine
-Before: <link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/homeline.jpg');"></div>
-<p><b>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+Before: <link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://www.codingthelaw.org/Fall_2017/work/lchen26/p4/homeline.jpg');"></div>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/" target=_new>class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <h3>Landlord-Tenant Form Help</h3>
 <p>Welcome!  I'm here to help you fill out a variety of forms for different landlord-tenant issues through HomeLine.  Here are some of the issues I can help you with: 
 <br>Requesting Repairs</br>
@@ -74,7 +74,7 @@ A:See More Issues
 
 Q(repairs):
 <input type="hidden" name="name" value="Repair Request Form"/>
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Repair-Request-Form.docx"/>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Repair-Request-Form.docx"/>
 What do you need repaired? (please list only one for now)
 X:
 	Q(needs): Do you have any other repair needs?
@@ -99,7 +99,7 @@ X:
 		Q(5.1.2):GOTO:print
 Q(deposit):
 <input type="hidden" name="name" value="Deposit Request"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/deposit.docx"/>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/deposit.docx"/>
 How much was your security deposit before interest? (Example: 2500.00)
 X:
 	Q(interest): How much is that with interest? (Example: 2645.23)
@@ -113,17 +113,17 @@ X:
 					Q(thanks2): That is all the info I need. GOTO:print
 
 Q(bugbill):<input type="hidden" name="name" value="Response to Invoice for Bug Extermination"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Bug.docx"/>
 Your response to an invoice for bug extermination is ready. GOTO:print	
 Q(repairbill):	<input type="hidden" name="name" value="Response to Invoice for Repairs"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/> 
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Response-For-Repairs.docx"/> 
 Your response to an invoice for repairs is ready. GOTO:print
 Q(privacy): <input type="hidden" name="name" value="Privacy Rights"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/lchen26/p4/privacy.docx"/>
 I have all the information I need. GOTO:print
 Q(neighbor):
 	<input type="hidden" name="name" value="Neighbor Incident"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/> 
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/lchen26/p4/neighbor.docx"/> 
 What is the name of the neighbor who has been causing an incident? (First and last name)
 X:
 	Q(date): When did this incident occur? (Month Day, Year)
@@ -149,28 +149,28 @@ X:
 			A(no): No
 				Q(thanks5): That is all the info I need. GOTO:print
 Q(guests):<input type="hidden" name="name" value="Letter to Assert Guest Rights"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Guest-Rights.docx"/>
 I have all the info I need. GOTO:print
 Q(retaliation):What sort of notice were you given by your landlord? (Example: rent increase, reduction of electricity)
 <input type="hidden" name="name" value="Retaliation Notice"/> 
-<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/retaliation.docx"/>
+<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/lchen26/p4/retaliation.docx"/>
 X:
 	Q(action): Please describe what actions may have led to this retaliatory notice? (Be descriptive)
 	X:
 		Q(thanks3): That is all the info I need. GOTO:print
 
 Q(lease):<input type="hidden" name="name" value="Request for Lease"/>
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Request-For-Lease.docx"/>
 	Your request for the lease is ready. GOTO:print
 Q(utility): <input type="hidden" name="name" value="Utility Bill Request"/> 
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/lchen26/p4/utility.docx"/>
 What utility bill do you need? (Examples: Electricity, Gas, Water)
 X:
 	Q(thanks): That's all the information I need. GOTO:print
 Q(property):Has the property the landlord taken being held on the premises or off the premises?
 A:On the premises.
 	Q(pickup1):<input type="hidden" name="name" value="Demand Letter for Return of Property"/> 
-	<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/> 
+	<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOn.docx"/> 
 When will you be able to pick up the property?
 	X:date
 		Q(15.1.1):Your demand letter for the return of your property is ready. GOTO:print
@@ -178,7 +178,7 @@ A:Off the premises.
 	Q(15.2):What is the full address where the property is being stored?
 	X:
 		Q(pickup2):<input type="hidden" name="name" value="Demand Letter for Return of Property"/>
-				<input type="hidden" name="docx_uri" value="http://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
+				<input type="hidden" name="docx_uri" value="https://www.codingthelaw.org/Fall_2017/work/moiucihdaa/p4/Property-DemandOff.docx"/>
 When will you be able to pick up the property?
 		X:date
 			Q(15.2.1.1):Your demand letter for the return of your property is ready. GOTO:print

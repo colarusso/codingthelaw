@@ -1,7 +1,7 @@
-Before:<link rel="stylesheet" type="text/css" href="http://www.codingthelaw.org/Fall_2017/css/style.css">
+Before:<link rel="stylesheet" type="text/css" href="https://www.codingthelaw.org/Fall_2017/css/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('http://www.pickncash.com/wp-content/uploads/2017/02/FI-Document-Automation.png');"></div>
 <h2 style="text-align:center;">Document Generation</h2>
-<p>This is a <a href="http://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information.</b></p>
+<p>This is a <a href="https://www.codingthelaw.org/Fall_2017/work/">class project</a>. You should not rely on it as a source of legal information.</b></p>
 <p><b>To begin generating legal documents, answer the following questions to have a document pre-filled and pre-formatted for your convenience.</b></p>
 <input type="hidden" id="name" name="name" value="name"/>
 <input type="hidden" id="docx_uri" name="docx_uri" value="docx_uri"/>
@@ -25,47 +25,47 @@ X:
 				Q(fork): Chose which task you would like to accomplish. 
 				A: Notice of Appearance
 					Q(party): Chose the party which the firm is representing.
-					A[javascript:$('#name').val('Plaintiff NOA');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pnoa.docx')]:Plaintiff
+					A[javascript:$('#name').val('Plaintiff NOA');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pnoa.docx')]:Plaintiff
 						Q(3.1.1.1.1.1.1): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Notice of Appearance
 							Q(3.1.1.1.1.1.1.1):GOTO:fork
-					A[javascript:$('#name').val('Defendant NOA');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dnoa.docx')]:Defendant
+					A[javascript:$('#name').val('Defendant NOA');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dnoa.docx')]:Defendant
 						Q(3.1.1.1.1.1.2): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]:Download: Notice of Appearance
 							Q(3.1.1.1.1.1.2.1):GOTO:fork
 				A: Interrogatories
 					Q(party2): Chose the party which the firm is representing.
-					A[javascript:$('#name').val('Plaintiff INTS');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pint.docx')]:Plaintiff
+					A[javascript:$('#name').val('Plaintiff INTS');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pint.docx')]:Plaintiff
 						Q(3.1.1.1.1.2.1): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Interrogatories
 							Q(3.1.1.1.1.2.1.1):GOTO:fork
-					A[javascript:$('#name').val('Defendant INTS');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dint.docx')]:Defendant
+					A[javascript:$('#name').val('Defendant INTS');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dint.docx')]:Defendant
 						Q(3.1.1.1.1.2.2): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Interrogatories
 							Q(3.1.1.1.1.2.2.1):GOTO:fork
 				A:Request for the Production of Documents
 					Q(party3): Chose the party which the firm is representing.
-					A[javascript:$('#name').val('Plaintill RPD');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/prpd.docx')]:Plaintiff
+					A[javascript:$('#name').val('Plaintill RPD');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/prpd.docx')]:Plaintiff
 						Q(3.1.1.1.1.3.1): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Request for the Production of Documents
 							Q(3.1.1.1.1.3.1.1):GOTO:fork
-					A[javascript:$('#name').val('Defendant RPD');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/drpd.docx')]:Defendant
+					A[javascript:$('#name').val('Defendant RPD');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/drpd.docx')]:Defendant
 						Q(3.1.1.1.1.3.2): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Request for the Production of Documents
 							Q(3.1.1.1.1.3.2.1):GOTO:fork
 				A: Bundle: Notice of Appearance, Interrogatories, Request for the Production of Documents
 					Q(3.1.1.1.1.4): Chose the party which the firm is representing.
-					A[javascript:$('#name').val('Plaintiff Bundle');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pbundle.docx')]:Plaintiff
+					A[javascript:$('#name').val('Plaintiff Bundle');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/pbundle.docx')]:Plaintiff
 						Q(3.1.1.1.1.4.1): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Plaintiff Bundle
 							Q(3.1.1.1.1.4.1.1):GOTO:fork
-					A[javascript:$('#name').val('Defendant Bundle');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dbundle.docx')]:Defendant
+					A[javascript:$('#name').val('Defendant Bundle');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/dbundle.docx')]:Defendant
 						Q(3.1.1.1.1.4.2): Click below to access your document.
 						A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Download: Defendant Bundle
 							Q(3.1.1.1.1.4.2.1):GOTO:fork
 				A: Joint Affidavit of Irretrievable Breakdown
 					Q(dom): Date of Marriage
-					X[javascript:$('#name').val('Joint Affidavit of Irretrievable Breakdown');$('#docx_uri').val('http://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/ibd.docx')]:date
+					X[javascript:$('#name').val('Joint Affidavit of Irretrievable Breakdown');$('#docx_uri').val('https://www.codingthelaw.org/Fall_2017/work/devonbodey/p4/ibd.docx')]:date
 						Q(dolr): Date of Last Residence
 						X:date
 							Q(street): Address of Couple's Last Residence (e.g., 123 Washington Street)
