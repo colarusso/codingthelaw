@@ -18,17 +18,18 @@ canvas {
 		position:fixed;
 		z-index:200;
 		right:0;
-		width:150px;
+		width:138px;
 		bottom:0;
 		height:40px;
 		background:#fff;
 		text-align:center;
 		color:white;
-		font-size:12px;
+		font-size:18px;
+		line-height:18px;
 		font-family:arial;
 		line-height:40px;
-		padding:8px 0 0 10px;
-		border-top-left-radius: 15px;
+		padding:5px 0 0 5px;
+		border-top-left-radius: 5px;
 		border-left: 1px solid #555;
 		border-top: 1px solid #555;
 	}
@@ -36,20 +37,20 @@ canvas {
 .pause {
 	display:none;
 	float:left;
-	margin-top:4px;
+	margin-top:5px;
 }
 
 .pause_bar {
 	float:left;
 	margin-right:4px;
 	width: 4px;
-	height: 15px;
+	height: 16px;
 	background-color:black;
 }
 
 .play {
 	float:left;
-	margin-top:3px;
+	margin-top:5px;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
