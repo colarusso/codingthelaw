@@ -46,7 +46,7 @@
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
   <div id="timer_div" class="timer_div">
-  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:85px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
     <div id="play" class="play" onClick="start_time()"></div>
     <div id="pause" class="pause" onClick="pause_time()">
      <div class="pause_bar"></div>
@@ -108,7 +108,7 @@
 
     <div class="vid_wrapper">
       <div class="profile_vid">
-        <iframe class="embed_vid_placeholder" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <iframe class="embed_vid" src="https://www.youtube.com/embed/e1cJOyEgp5I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -291,15 +291,17 @@
   <div id="q1_div" class="section">
 
     <h3>QnA Markup<a href="#qna" name="qna" class="anchor"></a><br/>
-      <span class="subtitle">10-20 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
+      <span class="subtitle">25-30 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
 
     <div class="vid_wrapper">
       <div class="profile_vid">
-        <iframe class="embed_vid_placeholder" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <iframe class="embed_vid" src="https://www.youtube.com/embed/RVhzQ1JVi3s" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
 
-    <p>Here is a link to the editor for <a href="https://www.qnamarkup.org/" target="_blank">QnA Markup</a>. If you'd like to download the Chrome browser, you can do so <a href="https://www.google.com/chrome/" target="_blank">here</a>.</p>
+    <p>Here is a link to the <a href="https://www.qnamarkup.org/" target="_blank">QnA Markup editor</a>. If you'd like to save/download QnA source or HTML content directly from the editor, I suggest using using the <a href="https://www.google.com/chrome/" target="_blank">Chrome browser</a> as these features aren't supported by all browsers. You can of course save this content by cutting and pasting text into a text editor. Also, keep in mind that a space and a tab are not the same. For QnA to recognize something as indented, you must use tabs.</p>
+
+    <p>Take 20 min to review the <a href="https://www.qnamarkup.org/syntax/" target="_blank">Syntax</a> page and work through a few of the examples found in the <a href="https://www.qnamarkup.org/syntax/QnA_Quick_Start.pdf" target="_blank">Quick Start Guide</a>.</p>
 
   </div>
   <div id="q2_div" class="section">
@@ -484,13 +486,13 @@
 
       <div class="vid_wrapper">
         <div class="profile_vid">
-          <iframe class="embed_vid_placeholder" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/m0n_m3NNSX8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
 
-      <p>Here's <a href="images/DACA_flowchart.png" target="_blank" target="_blank">The Flowchart</a> and <a href="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1134/handouts/250%20Debugging%20Strategies.pdf" target="_blank">Debugging Strategies</a>. You only need to read pages 1 and 2 of <i>Debugging</i>, up until <i>Using an online debugger</i>.</p>
+      <p>Here's the <a href="docs/s1-exercising-prosecutorial-discretion-individuals-who-came-to-us-as-children.pdf" target="_blank" target="_blank">DACA memo</a>, <a href="images/DACA_flowchart.png" target="_blank" target="_blank">our flowchart</a>, and the <a href="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1134/handouts/250%20Debugging%20Strategies.pdf" target="_blank">debugging sheet</a> mentioned above. You only need to read pages 1 and 2 of <i>Debugging</i>, up until <i>Using an online debugger</i>.</p>
 
-      <p>To be clear, we will devote 20 to 30 minutes of our <a href="#meetup">meet up</a> to working on this challenge. You'll work in groups while I circulate between breakout rooms. So you shouldn't start work on this challenge until we meet, aside from reading the above two pages. Obviously, if you're not an enrolled student you'll have to do this work independently.</p>
+      <p>To be clear, we will devote 20 to 30 minutes of our <a href="#meetup">meet up</a> to working on this challenge. You will work in groups while I circulate between breakout rooms. To be clear, you shouldn't start work on this challenge until we meet, aside from watching the video and reading the two pages noted above. Obviously, if you're not an enrolled student, you'll have to do this work independently. See the meet up section for more context.</p>
 
     </div>
     <div class="section">
@@ -503,9 +505,25 @@
       <div class="caption">By the time we're done with our meeting, you will be a coder!</div>
     </div>
 
-    <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday August 24th at 5pm via Zoom. You should have received the password from me earlier. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. <b>Note: this meeting starts an hour after our official start time of 4pm Eastern</b> because we will only need an hour of our two-hour block for synchronous work. So I figured why not give everyone an extra hour to finish working through the above. If you're not an enrolled student, I'm afraid you can't join us, but you can still say "hi" on the <a href="#slack">Slack channel</a>.</p>
+    <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday August 24th at 5pm via Zoom. You should have received the password from me earlier. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. <b>Note: this meeting starts an hour after our official start time of 4pm Eastern</b> because we will only need an hour of our two-hour block for synchronous work. So I figured why not give everyone an extra hour to finish working through the above. If you're not an enrolled student, I'm afraid you can't join us.</p>
 
     <p>We will use this time to: (1) get to know each other a little; (2) troubleshoot any issues folks might have had working through the <a href="#knowledge">knowledge base</a>; (3) complete <a href="#mission">your mission</a>; and (4) discuss <a href="#readings">the readings</a>.</p>
+
+    <p>We will add the following to your mission's QnA. Note the use of the <a href="https://www.qnamarkup.org/syntax/#title" target="_blank">Title</a>, <a href="https://www.qnamarkup.org/syntax/#author" target="_blank">Author</a>, and <a href="https://www.qnamarkup.org/syntax/#before" target="_blank">Before</a> tags.</p>
+
+    <pre style="background:#eee;padding:15px;overflow-x:scroll;">
+Title: DACA "Flowchart"
+Author: [your name]
+Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+&lt;div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');">&lt;/div>
+&lt;h2 style="text-align:center;">DACA "Flowchart"&lt;/h2>
+&lt;p>&lt;b>This is a &lt;a href="https://www.codingthelaw.org/#mission">class project&lt;/a>. You should not rely on it as a source of legal information!&lt;/b>&lt;/p>
+&lt;p>Answer the following questions to see if you qualify for DACA.&lt;/p>
+</pre>
+
+    <p>And when we are done, you will publish your mission QnA's source code and HTML output to:</p>
+    <p><code>https://[your username].github.io/ctl/daca.txt</code> and</p>
+    <p><code>https://[your username].github.io/ctl/daca.html</code> respectively.</p>
 
     <div class="button_row">
        <a href="level/2/"><div class="button" style="float:right;">Next Level</div></a>
