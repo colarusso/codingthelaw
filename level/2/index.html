@@ -289,25 +289,25 @@ Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.or
 
     <p>How would Javascript evaluate the following: <code>"Big" > "Small"</code>?</p>
     <p>
-    <input name="q4" id="q4a" type="radio" value="a" onChange="check_q(this.name);kbase();">
-    <label          for="q4a">true</label><br>
-    <input name="q4" id="q4b" type="radio" value="b" onChange="check_q(this.name);kbase();">
-    <label          for="q4b">false</label><br>
+    <input name="q2" id="q2a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q2a">true</label><br>
+    <input name="q2" id="q2b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q2b">false</label><br>
     </p>
-    <p id="q4_a_msg" style="display:none;color:red">This is not correct as B comes before S in the alphabet.</p>
-    <p id="q4_b_msg" style="display:none;color:green">Correct.</p>
+    <p id="q2_a_msg" style="display:none;color:red">This is not correct as B comes before S in the alphabet.</p>
+    <p id="q2_b_msg" style="display:none;color:green">Correct.</p>
 
     <hr style="border:0px solid #fff;border-top:1px solid #aaa">
 
     <p>In Javascript what is the value of <code>"12" + "2"</code>?</p>
     <p>
-    <input name="q5" id="q5a" type="radio" value="a" onChange="check_q(this.name);kbase();">
-    <label          for="q5a">14</label><br>
-    <input name="q5" id="q5b" type="radio" value="b" onChange="check_q(this.name);kbase();">
-    <label          for="q5b">122</label><br>
+    <input name="q3" id="q3a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q3a">14</label><br>
+    <input name="q3" id="q3b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q3b">122</label><br>
     </p>
-    <p id="q5_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
-    <p id="q5_b_msg" style="display:none;color:green">That's right, by placing the numbers inside quatation marks, you've decalred them as strings.</p>
+    <p id="q3_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
+    <p id="q3_b_msg" style="display:none;color:green">That's right, by placing the numbers inside quatation marks, you've decalred them as strings.</p>
 
     <hr style="border:0px solid #fff;border-top:1px solid #aaa">
 
@@ -413,8 +413,6 @@ Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.or
   function kbase() {
     // what triggers the hide?
     if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
-    if (check_q('q2') == "a") { $('#q2_div').hide(); } else { $('#q2_div').show(); }
-    if (check_q('q3') == "a") { $('#q3_div').hide(); } else { $('#q3_div').show(); }
   }
 
   kbase();
