@@ -64,7 +64,7 @@ function find_sec() {
     createCookie('l'+level+'timer',$('#timer').val(),36500);
   } else {
     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
-    alert('There was a problem with you time entry. It must be of the form 00:00:00. \nIt has been reset to the value it held before your edit.');
+    alert('There was a problem with you time entry. It must be of the form HH:MM:SS. \nIt has been reset to the value it held before your edit.');
   }
 }
 
