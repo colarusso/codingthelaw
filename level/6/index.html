@@ -30,7 +30,7 @@
 	<meta name="twitter:title" content="Coding the Law">
 	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
 	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
-  
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
 	<link rel="apple-touch-icon" href="images/icon.png"/>
@@ -45,20 +45,27 @@
   <script src="../../js_bin/scripts.js"></script>
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
 
 <div class="sky"></div>
 <div class="clouds"></div>
 <div class="header">
   <div class="header_frame">
     <div class="level">Level 6</div>
-    <div class="menu"><a href="/score" class="gamelink">My Score</a> | <a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="https://docs.google.com/document/d/1qFFojSTz5S1jr0KXgvMUIylH7-atlIVjOCyR_TjRV7w/edit?usp=sharing" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu"><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="https://docs.google.com/document/d/1qFFojSTz5S1jr0KXgvMUIylH7-atlIVjOCyR_TjRV7w/edit?usp=sharing" target="_blank" class="gamelink">Syllabus</a> </div>
     <div class="menu_drop">
       <div class="dropdown">
           <div class="nav_menu"></div>
           <div class="nav_menu"></div>
           <div class="nav_menu" style="margin-bottom:17px;"></div>
           <div class="dropdown-content" style="right:-10px;">
-            <p><a href="/score" class="gamelink">My Score</a></p>
             <p><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a></p>
             <p><a href="https://docs.google.com/document/d/1qFFojSTz5S1jr0KXgvMUIylH7-atlIVjOCyR_TjRV7w/edit?usp=sharing" target="_blank" class="gamelink">Syllabus</a></p>
           </div>
@@ -80,22 +87,332 @@
 
 <div class="content_frame">
   <div class="content">
-    <span class="breadcrumb"><a href="../../">Home</a> &raquo; Level 6</span>
+      <span class="breadcrumb">
+        <select onChange="window.location.href=this.value">
+          <option value="../../">Level 1</option>
+          <option value="../2">Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5">Level 5</option>
+          <option value="../6" SELECTED>Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9">Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12">Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+      </span>
 
-    <h2>How this works<a href="#works" name="works" class="anchor"></a>
-    </h2>
+      <div class="section">
 
-    <p>Starting in late August 2020, a new level will appear on this website every week. If you are taking the class for credit, you must complete each level before its <a href="../../#meetup">weekly meet up</a>. If we're lucky, the levels will show up early, and you can get a head start. Enrolled students will also need to complete a final project, <a href="https://docs.google.com/document/d/1t3fru6FtB9hJQfketQE0ooR2rn7uQ1UZYI0b6fKZvBA/edit" target="_blank">described here</a>.</p>
+      <h2 style="margin-top:10px">
+        Midway<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">~2-4 min. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/HjKLAcZqCMQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>FWIW, here is a link to Levels <a href="../8">eight</a>, <a href="../11">eleven</a>, <a href="../12">twelve</a>, and <a href="../13">thirteen</a>.</p>
+      <p><span style="background:yellow;">This level <b>does NOT</b> ask you to turn in the product of any <i>coding work</i>.</span> In addition to answering our standard reading questions, it expects only that you will work along with the materials provided to get a sense of the tools. It does this because I suspect you will have tons of questions and I hope to address them when we meet synchronously. That being said, you should do your best to work through everything and write down questions as you go.
+      </p>
+      <p>Most of our videos, esp. those found under the Knowledge Base header are walkthroughs. They are intended as an opportunity for you to familiarize yourself with tools by following along. No one is expecting you to memorize their content. <span style="background:yellow;"><b>Treat them instead as recipes, i.e., as references you will come back to when needed.</b></span></p>
 
-    <div class="button_row">
-       <a href="../5/"><div class="button">Previous Level</div></a>
-       <a href="../7/"><div class="button" style="float:right;">Next Level</div></a>
+
     </div>
+
+    <div class="section">
+
+    <h2>
+      Data Standards<a href="#standards" name="standards" class="anchor"></a><br/>
+      <span class="subtitle">~4-7 min. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span>
+    </h2>
+    <p>We will spend a lot of time below cleaning and preparing data for analysis. This reality is in stark contrast to the dream of data standards—the hope that it doesn't have to be this way. That being said, let's take a moment to recognize the dream.</p>
+
+    <div class="vid_wrapper">
+      <div class="profile_vid">
+        <iframe class="embed_vid" src="https://www.youtube.com/embed/rX42cbN8zqI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="r_img_embed" style="max-width:450px;">
+      <img src="../../images/standards.png" alt="XKCD Comic on regular expressions" width="100%"/>
+      <div class="caption">Source: <a href="https://xkcd.com/927/" target="_blank">Standards</a> from xkcd.</div>
+    </div>
+
+    <p><b>Optional.</b>
+      If all of this talk about data makes you scream, "show me the data." The following is for you. I have collected several places you might want to look to find curated data sets to give you an idea of what data looks like when they're collected in nice structured forms.</p>
+      <ul>
+        <li><a href="https://measuresforjustice.org/" target="_blank">Measures for Justice</a>. An attempt to collect state-level criminal justice data.</li>
+        <li><a href="https://www.data.gov/" target="_blank">Data.gov</a>. The federal government's open data portal.</li>
+        <li><a href="https://usafacts.org/" target="_blank">USA Facts</a>. A private initiative to address the gaps in access to data needed by governments to make policy decisions across the US.</li>
+        <li><a href="https://datasetsearch.research.google.com/" target="_blank">Google's Data Set Search</a>. A tool for searching across a number of publicly available data sets.</li>
+      </ul>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+        <span class="subtitle">~ 1 Hour 17 Minutes</span>
+      </h2>
+      <ul>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/weapons-of-math-destruction-896945-1" target="_blank">Weapons of Math Destruction</a>:
+           <i>Sweating Bullets</i>  (Chapter 7)
+           (18 pages)</li>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/how-not-to-be-wrong-608454-1" target="_blank">How Not to Be Wrong</a>:
+          <i>Reductio Ad Unlikely</i> (chapter 8) and
+          <i>The International Journal of Haruspicy</i> (chapter 9)
+          (31 pages)</li>
+        <li><a href="https://osf.io/preprints/lawarxiv/awbdx/" target="_blank">Speaking the Same Language: Data Standards and Disruptive Technologies in the Administration of Justice
+</a>. In this paper <a href="https://twitter.com/thisrickard" target="_blank">Erika Rickard</a> and I flesh out the arguments from the above video to make the case that courts should work to adopt open data standards. (~28 pages)</li>
+      </ul>
+
+    </div>
+    <div class="section">
+
+      <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+      </h2>
+
+      <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
+
+      <p>All of that being said, let's see if we can pare things down.</p>
+
+      <!--
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you proficient with QnA Markup?</p>
+      <p>
+      <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="qNa">text</label><br>
+      <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="qNb">text</label><br>
+      <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="qNc">text</label><br>
+      <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
+      <label          for="qNd">text</label><br>
+      <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
+      <label          for="qNe">text</label><br>
+      </p>
+      <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      -->
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you comfortable using Jupyter Notebooks and writing in Python?</p>
+      <p>
+      <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q1a">No / I've never heard of these.</label><br>
+      <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q1b">I've used them before, but I wouldn't mind a refresher.</label><br>
+      <input name="q1" id="q1c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q1c">I've used the before, and I feel comfortable skipping an introduction.</label>
+      </p>
+      <p id="q1_c_msg" style="display:none;color:green">You've gained a little more than an hour by dropping a video introduction to Jupyter Notebooks and Python. If you find yourself with questions, change this answer to unhide the introduction.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+
+
+    <div id="" class="section">
+
+      <h3>PythonAnywhere<a href="#pythonanywhere" name="pythonanywhere" class="anchor"></a><br/>
+        <span class="subtitle">~10 Minutes.</span></h3>
+
+      <p>Below we're going to make use of a tool called Jupyter Notebooks. To avoid having everyone install a bunch of software to get notebooks working on your computers, registered students will be making use of PythonAnywhere. You should have received a user name and password at our last synchronous meeting. If you didn't DM Colarusso on Slack.</p>
+      <p>With these credentials in hand, visit <a href="pythonanywhere.com/" target="_blank">pythonanywhere.com/</a> and login. <i>Please refrain from changing your password.</i></p>
+
+      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_01.png" target="_blank"><img src="../../images/pythonanywhere_01.png" style="width:90%"/></a></p>
+
+      <p>Once you have finished logging in, you will see your dashboard. On that dashboard you'll see a set of options. Under the one labeled <i>Recent Notebooks</i> you should see a list of notebooks that I have placed there. To make sure everything is working click on the one called <i>wrangle.ipynb</i>. This should load the notebook.</p>
+
+      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_02.png" target="_blank"><img src="../../images/pythonanywhere_02.png" style="width:90%"/></a></p>
+      <p>After it has loaded it should look like the image below. If you see this you're good to go. We'll revisit this notebook below (assuming you aren't already experienced with Notebook and Python).</p>
+
+      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_03.png" target="_blank"><img src="../../images/pythonanywhere_03.png" style="width:90%"/></a></p>
+    </div>
+
+    <div id="" class="section">
+
+      <h3>Anaconda (optional)<a href="#anaconda" name="anaconda" class="anchor"></a><br/>
+        <span class="subtitle">~15 Minutes.</span></h3>
+      <p>If you aren't a registered student or you would like to run notebooks locally, you can install <a href="https://www.anaconda.com/products/individual#Downloads" target="_blank">Anaconda</a>. Anaconda is collection of software products that will install a copy of notebooks and python on your computer.</p>
+      <p>
+        To launch notebooks, after installation:
+      </p>
+      <ul>
+         <li>Open a terminal/command prompt and navigate to the directory where you want to be working (e.g., <code>/users/yourname/documents/</code>)</li>
+         <li>At the prompt enter: <code>jupyter notebook</code> That should open up a new tab in your web browser.</li>
+         <div style="text-align:center;margin:0px auto;max-width:329px;padding:10px 0 10px 20px;">
+           <a href="../../images/py0.jpg"><img src="../../images/py0.jpg" alt="screen shot" style="width:100%" border="0"></a>
+      </ul>
+
+      <p>That being said, here are the files you'll need to follow along with the PythonAnywhere folks and the videos below (assuming you aren't already experienced with Notebook and Python).</p>
+      <ul>
+        <li><a href="docs/wrangling.ipynb" target="_blank">wrangling.ipynb</a></li>
+        <li><a href="docs/table_1.csv" target="_blank">table_1.csv</a></li>
+        <li><a href="docs/table_2.csv" target="_blank">table_2.csv</a></li>
+      </ul>
+
+    </div>
+
+
+    <div id="q1_div" class="section">
+
+      <h3>Notebooks &amp; Python<a href="#notebook" name="notebook" class="anchor"></a><br/>
+        <span class="subtitle">~12-24 Minutes.</span></h3>
+
+      <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
+
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/pHfI9Gr6S0Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>Here are some <a href="https://en.wikipedia.org/wiki/Markdown#Example" target="_blank">Markdown examples</a>.</p>
+
+      <h3>Load &amp; Clean Data<a href="#cleaning" name="cleaning" class="anchor"></a><br/>
+        <span class="subtitle">~15-30 Minutes.</span></h3>
+
+        <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
+
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/YwSbJq5giMA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>If you want to look at the <i>csv</i> files we're working with (maybe in Excel or the like), here they are:</p>
+      <ul>
+        <li><a href="docs/table_1.csv" target="_blank">table_1.csv</a></li>
+        <li><a href="docs/table_2.csv" target="_blank">table_2.csv</a></li>
+      </ul>
+      <p>FWIW, Googleing <i>Pandas</i> and a function or module name is often enough to find what you need re: documentation, but here is a link to the <a href="https://pandas.pydata.org/docs/" target="_blank">Pandas Documentation</a>. Also, Chris Albon has put together a great <a href="https://chrisalbon.com/" target="_blank">Notes On Using Data Science & Machine Learning To Fight For Something That Matters</a> with a lot of helpful examples.</p>
+
+      <h3>Feature Engineering<a href="#features" name="features" class="anchor"></a><br/>
+        <span class="subtitle">~6-12 Minutes.</span></h3>
+        <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/8MModVMqOC4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>ICYMI: Googleing <i>Pandas</i> and a function or module name is often enough to find what you need re: documentation, but here is a link to the <a href="https://pandas.pydata.org/docs/" target="_blank">Pandas Documentation</a>. Also, Chris Albon has put together a great <a href="https://chrisalbon.com/" target="_blank">Notes On Using Data Science & Machine Learning To Fight For Something That Matters</a> with a lot of helpful examples.</p>
+
+    </div>
+
+<!--
+    <div class="section">
+
+      <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
+      <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>If you want to save output from QnA Markup without cutting and pasting text, what browser should you use?</p>
+      <p>
+      <input name="q4" id="q4a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q4a">Safari</label><br>
+      <input name="q4" id="q4b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q4b">Firefox</label><br>
+      <input name="q4" id="q4c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q4c">Chrome</label><br>
+      </p>
+      <p id="q4_a_msg" style="display:none;color:red">Safari is not correct.</p>
+      <p id="q4_b_msg" style="display:none;color:red">Firefox is not correct.</p>
+      <p id="q4_c_msg" style="display:none;color:green">That's right!</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Can you use spaces to indent tags in QnA Markup?</p>
+      <p>
+      <input name="q5" id="q5a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q5a">Yes.</label><br>
+      <input name="q5" id="q5b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q5b">No.</label><br>
+      </p>
+      <p id="q5_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
+      <p id="q5_b_msg" style="display:none;color:green">That's right, you must use tabs.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+-->
+
+    <div class="section">
+
+      <h2>Your Mission:<a href="#mission" name="mission" class="anchor"></a><br/>
+        <span class="subtitle">Video: ~2-4 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<br/>
+        Exploration: ~1 Hour 15 Minutes</span></h2>
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/uWyZr_MkPHo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p>To be clear, despite what I said above, <b>I DO</b> want you to start playing with the files from Dewey, Cheetham, and Howe. I've scheduled over an hour for you to "play." Since it's play, I'm not expecting you to produce anything to turn in, but you should wrestle with trying to create a new notebook, loading your data, and cleaning it up a bit.</p>
+        <p>Here are the files. Note: if you're using our PythonAnywhere accounts, they should be preloaded in the same folder as the notebook above.
+        <ul>
+          <li><a href="docs/people.csv" target="_blank">people.csv</a></li>
+          <li><a href="docs/calls.csv" target="_blank">calls.csv</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="section">
+
+      <h2><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
+      <span class="subtitle">~1 Hour</span></h2>
+      <p>
+        Enrolled students will be presenting on their final project in two. Take some time to work on your project even if it's just planning or skills acquisition (e.g., working through the optional <a href="../3/#docassemble">docassemble training from level 3</a>). See <a href="https://forms.gle/GLDH8pqrr5mmxqae9" target="_blank">The Final Project Rubric</a>.
+      </p>
+
+    </div>
+
+
+    <div class="section">
+
+      <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+        <span class="subtitle">~20 min <sup></h2>
+      <p>
+        As we do at the end of every level, before the statement of your closing challenge, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted. That being said, you've almost completed Level 6. Tell me how it's going by completing the form linked below.
+      </p>
+      <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+        <div class="log_button_frame">
+          <a href="https://forms.gle/R5dSYUSeqqTvjZ1Z7" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">1 hour 30 Minutes | October 5, 2020 @ 4pm Eastern</span></h2>
+      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday October 5th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+      <p>We will use this time to: (1) troubleshoot any issues folks might have had working through the <a href="#knowledge">knowledge base</a>; (2) look at and talk about <a href="#mission">your mission</a>; and (3) discuss the <a href="#readings">readings</a>.</p>
+      <div class="button_row">
+         <a href="../5/"><div class="button">Previous Level</div></a>
+         <a href="../7/"><div class="button" style="float:right;">Next Level</div></a>
+      </div>
+
+    </div>
+
+      <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
 
     <div class="footer">
       <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
       <span style="float:right">
-        Last updated 2020-08-03
+        Last updated 2020-08-30
       </span>
     </div>
 
@@ -103,6 +420,47 @@
 </div>
 
 </FORM>
-<script src="../../js_bin/game.js"></script>
+<script src="js_bin/game.js"></script>
+<script>
+
+  var level = 6;
+  var num_Qs = 1;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
 </BODY>
 </HTML>
