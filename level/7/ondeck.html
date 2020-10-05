@@ -107,33 +107,43 @@
 
       <div class="section">
 
-        <h2 style="margin-top:10px">Your Mission (Continued)<a href="#mission_p2" name="mission_p2" class="anchor"></a><br/>
-        <span class="subtitle">X Hours and Y Minutes</h2>
-          <p>Build on our your work from class to formalize <a href="../6/#mission">your play</a> from the last level. Once you've merged the data from Dewey, Cheetham, and Howe, created some potentially useful features, and turned everything into numbers, upload a csv of your data to GitHub with the name <i>call_data.csv</i>. See </p>
+        <p style="margin-top:10px;background:yellow;padding:15px;border: 1px solid #555;"><b>This level is under construction and subject to change.</b> The <a href="#readings">Readings</a> and <a href="#reflection">Reflection</a> sections are, however, good to go. Colarusso will make an announcement on Slack when the videos and time budgets for other sections are live.</p>
 
-       <code>https://[your username].github.io/ctl/call_data.csv</code>
+        <h2>Your Mission (Continued)<a href="#mission_p2" name="mission_p2" class="anchor"></a><br/>
+        <span class="subtitle">X Hours and Y Minutes</h2>
+          <p>Build on our work from class to formalize <a href="../6/#mission">your play</a> from the last level. Once you've merged the data from Dewey, Cheetham, and Howe, created some potentially useful features, and turned everything into numbers, upload a csv of your data to GitHub with the name <i>dewey-cheetham-howe.csv</i>. See </p>
+
+          <code>https://[your username].github.io/ctl/dewey-cheetham-howe.csv</code>
+
 
       </div>
 
       <div class="section">
 
       <h2>
-        What the Heck is Word2Vec: Neural Nets for Lawyers<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        What the Heck is Word2Vec? Neural Nets for Lawyers<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
         <span class="subtitle">X-Y min. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
       </h2>
       <div class="vid_wrapper">
         <div class="profile_vid">
           <div class="embed_vid_placeholder"></div>
+          <!--<iframe class="embed_vid" src="https://www.youtube.com/embed/" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>-->
         </div>
       </div>
-      <p> (1) <a href="https://observablehq.com/@tmcw/bring-your-own-doodles-linear-regression" target="_blank">Bring your own doodles linear regression</a>; (2)  <a href="https://www.desmos.com/calculator/gdhpxfvhba" target="_blank">Sigmoid on Desmos</a>; (3) <a href="http://playground.tensorflow.org" target="_blank">Tensor Flow Playground</a></p>
+      <p>Here are the interactives from the video above: (1) <a href="https://observablehq.com/@tmcw/bring-your-own-doodles-linear-regression" target="_blank">Bring your own doodles linear regression</a>; (2)  <a href="https://www.desmos.com/calculator/gdhpxfvhba" target="_blank">Sigmoid on Desmos</a>; (3) <a href="http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=gauss&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.22586&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false" target="_blank">Tensor Flow Playground</a>.</p>
+
+      <div class="r_img_embed" style="max-width:450px;">
+        <img src="../../images/datasaurus.gif" alt="Same Stats, Different Graphs" width="100%"/>
+        <div class="caption">Source: <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">Autodesk</a>.</div>
+      </div>
+
       <p><b>Optional Media.</b>
         If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
         <ul>
-          <li><a href="https://parallelsearch.compose.law/" target="_blank">Parallel Search</a>. You'll read more about this tool in the reading below, but why not take it for a spin first?</li>
-          <li><a href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=1&t=241s" target="_blank">But what is a Neural Network? | Deep learning, chapter 1</a>. first in four videos from 3Blue1Brown on Neural Networks.</li>
-          <li><a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">wevi: Word Embedding Visual Inspector</a>. copy <a href="https://www.youtube.com/watch?v=D-ekE-Wlcds" target="_blank">Word Embedding Explained and Visualized - word2vec and wevi</a>.</li>
-          <li><a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing</a>. copy.</li>
+          <li><a href="https://parallelsearch.compose.law/" target="_blank">Parallel Search</a>. You'll read more about this tool in the reading, but why not take it for a spin first?</li>
+          <li><a href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=1&t=241s" target="_blank">But what is a Neural Network? | Deep learning, chapter 1</a>. This is the first in four videos from 3Blue1Brown on Neural Networks. If you don't know 3Blue1Brown, you're in for a treat. They make great visual explainers.</li>
+          <li><a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">wevi: Word Embedding Visual Inspector</a>. This is a fun tool that alows you to train your own word2vec model, kind of like the tensorflow playground above. For more on how it works, you can check out its internal documentation or here from it's author here: <a href="https://www.youtube.com/watch?v=D-ekE-Wlcds" target="_blank">Word Embedding Explained and Visualized - word2vec and wevi</a>.</li>
+          <li><a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing</a>. This article explains the work behind the Datasaurus.</li>
         </ul>
 
     </div>
@@ -154,7 +164,8 @@
       </ul>
 
     </div>
-    <div class="section">
+
+    <div class="section" style="display:none;">
 
       <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
       </h2>
@@ -231,19 +242,20 @@
     </div>
     <div id="q1_div" class="section">
 
-      <h3>Training Your Algos<a href="#TITLE" name="TITLE" class="anchor"></a><br/>
-        <span class="subtitle">Video: X Minutes. </br>
-        Tutorial: 27 Minutes.</span></h3>
+      <h3>Training Your Algos<a href="#training" name="training" class="anchor"></a><br/>
+        <span class="subtitle">X-Y Minutes.</span></h3>
       <div class="vid_wrapper">
         <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <div class="embed_vid_placeholder"></div>
+          <!--<iframe class="embed_vid" src="https://www.youtube.com/embed/" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>-->
         </div>
       </div>
-      <p>Work your way through the first three sections of <a href="https://how-to-build-legal-products.wrkflows.io/en/articles/1000" target="_blank">this tutorial</a> (i.e., <a href="https://how-to-build-legal-products.wrkflows.io/en/articles/1000" target="_blank">From Zero to Live App</a>, <a href="https://how-to-build-legal-products.wrkflows.io/en/articles/1004" target="_blank">Advanced Variables</a>, and <a href="https://how-to-build-legal-products.wrkflows.io/en/articles/1008" target="_blank">Automating Documents</a>). FWIW, you will be putting what you learn to use in the mission below. </p>
-      <p><b>Optional:</b> join the <a href="https://join.slack.com/t/community-lawyer/shared_invite/zt-6b0n85g3-ieW_bJ3sOgm4wZ0ph_vFYA" target="_blank">Community.Lawyer Slack team</a>, a great way to see what they're up to and get free help on building apps. Honestly, it's a really great community. Also, you can find additional video tutorials <a href="https://vimeo.com/communitylawyer" target="_blank">here</a>.</p>
+
+      <p>We work with the notebook file <a href="docs/training.ipynb">training.ipynb</a> (pre-loaded for those of you using Pythonanywhere)</p>
+      <p><b>Optional:</b>  If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following: <a href="https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/" target="_blank">How to Use ROC Curves and Precision-Recall Curves for Classification in Python</a>.</p>
 
     </div>
-    <div class="section">
+    <div class="section" style="display:none;">
 
       <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
       <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
@@ -299,7 +311,7 @@
       <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
         <span class="subtitle">~20 min <sup></h2>
       <p>
-        As we do at the end of every level, before the statement of your closing challenge, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted. That being said, you've almost completed Level 3. Tell me how it's going by completing the form linked below.
+        As we do at the end of every level, before the statement of your closing challenge, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted. That being said, you've almost completed Level 7. Tell me how it's going by completing the form linked below.
       </p>
       <div style="float:left;width:100%;margin: 15px 0 30px 0;">
         <div class="log_button_frame">
@@ -311,9 +323,9 @@
     <div class="section">
 
       <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
-        <span class="subtitle">1 hour | October 13, 2020 @ 4pm Eastern</span></h2>
-      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on <b>TUESDAY</b> October 13th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
-      <p>We will use this time to: (1) troubleshoot any issues folks might have had working through the <a href="#knowledge">knowledge base</a>; (2) look at and talk about <a href="#mission">your mission</a>; and (3) discuss the <a href="#readings">readings</a>.</p>
+        <span class="subtitle">1 Hour and 30 Minutes | October 13, 2020 @ 4pm Eastern</span></h2>
+      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on <span style="background:yellow"><b>TUESDAY</b> October 13th</span> at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+      <p>We will use this time to: (1) troubleshoot any issues folks might have had working through the your mission; and (2) discuss the <a href="#readings">readings</a>.</p>
       <div class="button_row">
          <a href="../6/"><div class="button">Previous Level</div></a>
          <a href="../8/"><div class="button" style="float:right;">Next Level</div></a>
@@ -326,7 +338,7 @@
     <div class="footer">
       <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
       <span style="float:right">
-        Last updated 2020-08-30
+        Last updated 2020-10-05
       </span>
     </div>
 
