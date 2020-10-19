@@ -129,7 +129,7 @@
         If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
         <ul>
           <li>Spot builds upon data from the <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a> online game, a partnership between the LIT Lab and Stanford's <a href="https://law.stanford.edu/organizations/pages/legal-design-lab/" target="_blank">Legal Design Lab</a>. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters. Currently, this labeling is limited to publicly available historic questions from the r/legaladvice forum on Reddit. See <a href="https://www.lawsitesblog.com/2018/10/stanford-suffolk-create-game-help-drive-access-justice.html" target="_blank">Stanford and Suffolk Create Game to Help Drive Access to Justice</a>.</li>
-          <li><a href="https://taxonomy.legal/" target="_blank">Legal Issues Taxonomy (LIST)</a>. This taxonomy is    what Learned Hands uses to label training data for Spot. It's worth noting that adoption of LIST, formerly NSMIv2, is one of the primary goals of Spot. As you may have gleaned from our <a href="../6/#standards">discussion of data standards</a>, it can be hard to get folks to adopt a standard. It's a chicken and egg problem. Folks want to use the standard that everyone else is using because a standard's value is a function of its community. Unfortunately, when there is no pre-existing community, it can be hard to get the ball rolling. Spot is an attempt to do this. We're building a shiny new AI tool that folks want to use. It just so happens that you have to label things in LIST for it to be useful. ;)</li>
+          <li><a href="https://taxonomy.legal/" target="_blank">Legal Issues Taxonomy (LIST)</a>. This taxonomy is    what Learned Hands uses to label training data for Spot. It's worth noting that adoption of LIST, formerly NSMIv2, is one of the primary goals of Spot. As you may have gleaned from our <a href="../6/#standards">discussion of data standards</a>, it can be hard to get folks to adopt a standard. It's a chicken and egg problem. Folks want to use the standard that everyone else is using because a standard's value is a function of its community. Unfortunately, when there is no pre-existing community, it can be hard to get the ball rolling. Spot is an attempt to do this. We're building a shiny new AI tool that folks want to use. It just so happens that you have to label things in LIST for it to be useful. It's a Trojan Horse. ;)</li>
         </ul>
 
     </div>
@@ -228,18 +228,6 @@
     </div>
     <div id="q1_div" class="section">
 
-      <h3>Making Predictions<a href="#predictions" name="predictions" class="anchor"></a><br/>
-        <span class="subtitle">~8-16 Minutes</span></h3>
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/h_Oa9X31FjQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <p>We are working with the notebook file <a href="../7/docs/training.ipynb">training.ipynb</a> (pre-loaded for those of you using Pythonanywhere).</p>
-
-    </div>
-    <div id="q1_div" class="section">
-
       <h3>Using the Spot API<a href="#spotapi" name="spotapi" class="anchor"></a><br/>
         <span class="subtitle">~6-12 Minutes</span></h3>
       <div class="vid_wrapper">
@@ -248,6 +236,18 @@
         </div>
       </div>
       <p>For those of you not working in Pythonanywhere, here is the notebook: <a href="docs/spotAPI.ipynb" target="_blank">spotAPI.ipynb</a>. Vist the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot website</a> to <a href="https://spot.suffolklitlab.org/user/new/" target="_blank">create an account</a> and get your API token.</p>
+
+    </div>
+    <div id="q1_div" class="section">
+
+      <h3>Making Predictions<a href="#predictions" name="predictions" class="anchor"></a><br/>
+        <span class="subtitle">~8-16 Minutes</span></h3>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/h_Oa9X31FjQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>We are working with the notebook file <a href="../7/docs/training.ipynb">training.ipynb</a> (pre-loaded for those of you using Pythonanywhere).</p>
 
     </div>
     <div class="section" style="display:none;">
@@ -289,7 +289,8 @@
 
       <h2 style="margin-top:10px">Your Mission<a href="#mission" name="mission" class="anchor"></a><br/>
       <span class="subtitle">~1 Hour 50 Minutes</h2>
-        <p>Clean and feed the following data (i.e., <a href="docs/challenge_calls.csv">challenge_calls.csv</a> and <a href="docs/challenge_people.csv">challenge_people.csv</a> ) into the best-performing classifier you trained on the Dewey, Cheetham, and Howe data. That is use your best model to predict if a call is or isn't a <i>take</i>. Then produce a list of those calls that are takes. You will be asked to share the call IDs for these calls as part of your work log below (e.g., [175, 234, 327]).
+        <p>Clean and feed the following data (i.e., <a href="docs/challenge_calls.csv">challenge_calls.csv</a> and <a href="docs/challenge_people.csv">challenge_people.csv</a> ) into the best-performing classifier you trained on the Dewey, Cheetham, and Howe data. That is, use your best model to predict for this data if a call is or isn't a <i>take</i>. Then produce a list of those calls that are <i>takes</i>. You will be asked to share the call IDs for these calls as part of your work log below (e.g., [175, 234, 327]).</p>
+        <p><i>NOTE: If you are using the class's Pythonanywhere accounts, the two csv files mentioned above should already be in the same directory as your notebooks. Also, I would like to remind you that you can ask for help on our Slack channel if you're not sure what your next step should be. This mission asks you to tie together a lot of prior works and make some connections. So it's understandable if you have questions.</i>
         </p>
 
     </div>
