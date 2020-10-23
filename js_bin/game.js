@@ -3,6 +3,7 @@ var myGamePiece;
 function startGame() {
     myGamePiece = new component(72, 52, "images/cloud.png", ($( document ).width()/2)+290, 60, "image");
     myGameArea.start();
+    $('#title_frame').hide();
 }
 
 var myGameArea = {
