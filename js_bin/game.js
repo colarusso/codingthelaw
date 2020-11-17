@@ -3,7 +3,7 @@ function load_scratch(project) {
   if (screen.width > 640) {
     if ($('#arcade').is(":hidden")) {
       $('#arcade').show();
-      $('#screen').html('<iframe style="margin-top:-56px; margin-left:-11px;" allowtransparency="false" width="658" height="552" bgcolor=#220000 src="https://scratch.mit.edu/projects/embed/'+project+'/" allowfullscreen></iframe> Test test here ');
+      $('#screen').html('<iframe style="margin-top:-52px; margin-left:-11px;" allowtransparency="false" width="658" height="552" bgcolor=#220000 src="https://scratch.mit.edu/projects/embed/'+project+'/" allowfullscreen></iframe> Test test here ');
     } else {
       $('#screen').html('');
       $('#arcade').hide();
