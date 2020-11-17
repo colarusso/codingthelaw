@@ -1,3 +1,20 @@
+
+function load_scratch(project) {
+  if (screen.width > 640) {
+    if ($('#arcade').is(":hidden")) {
+      $('#arcade').show();
+      $('#screen').html('<iframe style="margin-top:-56px; margin-left:-11px;" allowtransparency="false" width="658" height="552" bgcolor=#220000 src="http://scratch.mit.edu/projects/embed/'+project+'/" allowfullscreen></iframe> Test test here ');
+    } else {
+      $('#screen').html('');
+      $('#arcade').hide();
+    }
+  } else {
+    alert('You need to be on a computer with a keyboard to play this game.')
+  }
+  return true;
+}
+
+
 var myGamePiece;
 
 function startGame() {
