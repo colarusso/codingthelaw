@@ -16,8 +16,8 @@ body {
 }
 
 #screen {
-		background-image:url(../images/loading.png);
-		background-size: 100% 100%;
+		background-image:url(../images/waitforit.png);
+		background-size: 100%;
 		width:640px;
 		height: 492px;
 		margin:10px auto;
