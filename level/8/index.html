@@ -37,7 +37,7 @@
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=42">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=43">
 
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -54,11 +54,16 @@
     </div>
   </div>
 
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by wariobro. See <a href="https://scratch.mit.edu/projects/2571216/" class="scratch_cap" target="_blank">original</a>. </div>
+  </div>
+
 <div class="sky"></div>
 <div class="clouds"></div>
 <div class="header">
   <div class="header_frame">
-    <div class="level">Level 8</div>
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('2571216')" class="hidden_href">Level 8</a></div>
     <div class="menu"><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="https://docs.google.com/document/d/1qFFojSTz5S1jr0KXgvMUIylH7-atlIVjOCyR_TjRV7w/edit?usp=sharing" target="_blank" class="gamelink">Syllabus</a> </div>
     <div class="menu_drop">
       <div class="dropdown">
@@ -196,7 +201,7 @@
 </div>
 
 </FORM>
-<script src="js_bin/game.js"></script>
+<script src="../../js_bin/game.js"></script>
 <script>
 
   var level = 8;
