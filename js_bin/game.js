@@ -1,10 +1,9 @@
 
 function load_scratch(project) {
 
-  gtag('event', 'loadgame', {'event_category':'gaming', 'event_label':project});
-
   if (screen.width > 640) {
     if ($('#arcade').is(":hidden")) {
+      gtag('event', 'loadgame', {'event_category':'gaming', 'event_label':project});
       $('#arcade').show();
       if (project=='416659519'){
         $('#screen').html('<iframe style="margin-top:-5px; margin-left:-4px;" allowtransparency="false" width="658" height="552" bgcolor=#220000 src="https://scratch.mit.edu/projects/embed/'+project+'/" allowfullscreen></iframe> Test test here ');
@@ -16,7 +15,7 @@ function load_scratch(project) {
       $('#arcade').hide();
     }
   } else {
-    alert('You need to be on a computer with a keyboard to play this game.')
+    alert('You need to be on a device with a screen width greater than 640 pixles and a keyboard to see/play this game.')
   }
   return true;
 }
