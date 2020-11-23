@@ -1,5 +1,8 @@
 
 function load_scratch(project) {
+
+  gtag('event', 'loadgame', {'event_category':'gaming', 'event_label':project});
+
   if (screen.width > 640) {
     if ($('#arcade').is(":hidden")) {
       $('#arcade').show();
