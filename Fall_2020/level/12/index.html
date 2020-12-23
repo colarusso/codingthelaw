@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174544548-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174544548-1');
+  </script>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="Coding the Law"/>
+	<meta property="og:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
+  <meta property="og:image" content="/images/ctl.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Colarusso">
+	<meta name="twitter:creator" content="@Colarusso">
+	<meta name="twitter:title" content="Coding the Law">
+	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
+	<link rel="apple-touch-icon" href="images/icon.png"/>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../../js_bin/scripts.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+
+  <div class="alert_1" style="display:show;">
+    <b>This is an archival version of Coding the Law's Fall 2020 course site.</b> The current version can be found <a href="/">here</a>.
+  </div>
+
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
+
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by Hiro-Protagonist (Colarusso). See <a href="https://scratch.mit.edu/projects/370291352/" class="scratch_cap" target="_blank">original</a>. This game was made in Scratch, an educational programing language. We introduce coding with Scratch in <a href="../4/#mission_p1" class="scratch_cap">Level 4</a> if you want to try your hand at making something similar. </div>
+  </div>
+
+<div class="sky"></div>
+<div class="clouds"></div>
+<div class="header">
+  <div class="header_frame">
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('370291352')" class="hidden_href">Level 12</a></div>
+    <div class="menu"><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="../syllabus" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu_drop">
+      <div class="dropdown">
+          <div class="nav_menu"></div>
+          <div class="nav_menu"></div>
+          <div class="nav_menu" style="margin-bottom:17px;"></div>
+          <div class="dropdown-content" style="right:-10px;">
+            <p><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a></p>
+            <p><a href="../syllabus" target="_blank" class="gamelink">Syllabus</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="title_frame">
+    <div class="title_inner_frame">
+        <h1 class="site_title">
+          Coding the Law
+          <span class="main_subtitle"><br/>Suffolk Law School: Fall 2020 <br>by <a href="https://twitter.com/colarusso" target="_blank" class="gamelink">@Colarusso</a></span>
+        </h1>
+        <p class="short_desc">A self-guided LegalTech Adventure for folks with or without prior coding experience.</p>
+    </div>
+  </div>
+  <div class="grass"></div>
+  <div class="ground"></div>
+</div>
+
+<div class="content_frame">
+  <div class="content">
+      <span class="breadcrumb">
+        <select onChange="window.location.href=this.value">
+          <option value="../1">Level 1</option>
+          <option value="../2">Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5">Level 5</option>
+          <option value="../6">Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9">Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12" SELECTED>Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+      </span>
+
+
+      <div class="section">
+
+        <h2 style="margin-top:10px"><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
+        <span class="subtitle">4+ Hours</span></h2>
+        <p>
+          Enrolled students should spend the majority of this and subsequent levels working on their final projects. See <a href="https://docs.google.com/document/d/1t3fru6FtB9hJQfketQE0ooR2rn7uQ1UZYI0b6fKZvBA/edit" target="_blank">The Final Project Rubric</a>. This level includes no programing challenges and no new reading.
+        </p>
+
+      </div>
+
+
+
+      <div class="section">
+
+        <h2><a href="#speaker" name="speaker" class="anchor"></a>This Level's Guest Speaker:</h2>
+        <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../../images/walters.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
+        <p class="profile_title"><b>Ed Walters</b>, Fastcase CEO</p>
+        <p>
+          Ed Walters is the CEO and co-founder of Fastcase, an online legal research software company based in Washington, D.C. Under Professor Walters’s leadership, Fastcase has grown to one of the world’s largest legal publishers, serving more than 900,000 subscribers from around the world.
+        </p><p>
+          Before founding Fastcase, Walters worked at Covington & Burling, in Washington D.C. and Brussels, where he advised Microsoft, Merck, SmithKline, the Business Software Alliance, the National Football League, and the National Hockey League. His practice focused on corporate advisory work for software companies and sports leagues, and intellectual property litigation.
+        </p><p>
+          Walters worked in the White House from 1991-1993, first in the Office of Media Affairs and then in the Office of Presidential Speechwriting. After working in the White House, he was the lead account executive in an influential Washington public relations boutique. He has written for The Washington Post, The New York Times, The University of Chicago Law Review, The Green Bag, and Legal Times, and has spoken extensively on legal publishing around the country.
+        </p><p>
+          Walters earned an A.B. in government from Georgetown University and a J.D. from the University of Chicago. He served as the Editor-in-Chief and Chairman of the Board of Directors of The Hoya, Georgetown University’s college newspaper, and during law school, he served as an editor of The University of Chicago Law Review. From 1996-97, he served as a judicial clerk with the Hon. Emilio M. Garza on the U.S. Court of Appeals for the Fifth Circuit. He is a member of the Virginia State Bar and the District of Columbia Bar, and he has been admitted to practice in the U.S. Supreme Court and the U.S. Courts of Appeals for the Fourth Circuit and Fifth Circuits. He serves on the boards of Pro Bono Net, Public.Resource.org, and Friends of Telecom Without Borders. He has served on the Visiting Committee for the University of Chicago Law School, and the Visiting Committee for the University of Chicago Main Campus Library System.
+        </p><p>
+          He is the founder and serves on the editorial board of RAIL: The Journal of Robotics, Artificial Intelligence, and Law, and he is the author of Data-Driven Law (Taylor & Francis 2018).
+        </p>
+        <p style="text-align:right;">
+      		<a href="https://twitter.com/EJWalters" target="_blank">Twitter</a> |
+      		<a href="https://www.linkedin.com/in/walters/" target="_blank">LinkedIn</a>
+      	</p>
+
+      </div>
+
+
+    <div class="section">
+
+      <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+      </h2>
+      <p>FWIW, you've seen Ed Walters' work before, back in <a href="../3/#readings">Level 3's readings</a>.</p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+        <span class="subtitle">~20 min <sup></h2>
+      <p>
+        As we do at the end of every level, we ask that you take a few minutes to reflect on how things are going. That being said, you've almost completed Level 12. Tell me how it's going by completing the form linked below.
+      </p>
+      <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+        <div class="log_button_frame">
+          <a href="https://forms.gle/wjnoMovbHKsrckMD9" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">2 hours | November 16, 2020 @ 4pm Eastern</span></h2>
+      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday September 16 at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+      <p>This synchronous time will be split between our guest speaker and final project rounds. That is, we'll go around the class and check in with everyone about their progress on final projects. We'll also work to help folks strategize about next steps and overcoming any blockers.</p>
+
+      <div class="button_row">
+         <a href="../11/"><div class="button">Previous Level</div></a>
+         <a href="../13/"><div class="button" style="float:right;">Next Level</div></a>
+      </div>
+
+    </div>
+
+      <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
+
+    <div class="footer">
+      <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
+      <span style="float:right">
+        Last updated 2020-11-22
+      </span>
+    </div>
+
+  </div>
+</div>
+
+</FORM>
+<script src="../../js_bin/game.js"></script>
+<script>
+
+  var level = 12;
+  var num_Qs = 0;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
+</BODY>
+</HTML>

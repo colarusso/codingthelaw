@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174544548-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174544548-1');
+  </script>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="Coding the Law"/>
+	<meta property="og:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
+  <meta property="og:image" content="/images/ctl.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Colarusso">
+	<meta name="twitter:creator" content="@Colarusso">
+	<meta name="twitter:title" content="Coding the Law">
+	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
+	<link rel="apple-touch-icon" href="images/icon.png"/>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../../js_bin/scripts.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+
+  <div class="alert_1" style="display:show;">
+    <b>This is an archival version of Coding the Law's Fall 2020 course site.</b> The current version can be found <a href="/">here</a>.
+  </div>
+
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
+
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by Hiro-Protagonist (Colarusso). See <a href="https://scratch.mit.edu/projects/366483283/" class="scratch_cap" target="_blank">original</a>. This game was made in Scratch, an educational programing language. We introduce coding with Scratch in <a href="../4/#mission_p1" class="scratch_cap">Level 4</a> if you want to try your hand at making something similar. </div>
+  </div>
+
+<div class="sky"></div>
+<div class="clouds"></div>
+<div class="header">
+  <div class="header_frame">
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('366483283')" class="hidden_href">Level 9</a></div>
+    <div class="menu"><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="../syllabus" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu_drop">
+      <div class="dropdown">
+          <div class="nav_menu"></div>
+          <div class="nav_menu"></div>
+          <div class="nav_menu" style="margin-bottom:17px;"></div>
+          <div class="dropdown-content" style="right:-10px;">
+            <p><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a></p>
+            <p><a href="../syllabus" target="_blank" class="gamelink">Syllabus</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="title_frame">
+    <div class="title_inner_frame">
+        <h1 class="site_title">
+          Coding the Law
+          <span class="main_subtitle"><br/>Suffolk Law School: Fall 2020 <br>by <a href="https://twitter.com/colarusso" target="_blank" class="gamelink">@Colarusso</a></span>
+        </h1>
+        <p class="short_desc">A self-guided LegalTech Adventure for folks with or without prior coding experience.</p>
+    </div>
+  </div>
+  <div class="grass"></div>
+  <div class="ground"></div>
+</div>
+
+<div class="content_frame">
+  <div class="content">
+      <span class="breadcrumb">
+        <select onChange="window.location.href=this.value">
+          <option value="../1">Level 1</option>
+          <option value="../2">Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5">Level 5</option>
+          <option value="../6">Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9" SELECTED>Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12">Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+      </span>
+
+      <div class="section">
+
+      <h2 style="margin-top:10px">
+        See Spot; See Spot Run: Using ML to Spot Fact Patterns<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">~23-45 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/d4qI0KI4aow" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="r_img_embed" style="max-width:300px;">
+        <img src="../../images/trojan_horse.jpg" alt="Trojan Horse" width="100%"/>
+        <div class="caption">Trojan Horse, Canakkale, Turkey. Photo by <a href="https://flic.kr/p/2jigE5Z" target="_blank">Peter Reed</a>.</div>
+      </div>
+
+
+
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+        <ul>
+          <li>Spot builds upon data from the <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a> online game, a partnership between the LIT Lab and Stanford's <a href="https://law.stanford.edu/organizations/pages/legal-design-lab/" target="_blank">Legal Design Lab</a>. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters. Currently, this labeling is limited to publicly available historic questions from the r/legaladvice forum on Reddit. See <a href="https://www.lawsitesblog.com/2018/10/stanford-suffolk-create-game-help-drive-access-justice.html" target="_blank">Stanford and Suffolk Create Game to Help Drive Access to Justice</a>.</li>
+          <li><a href="https://taxonomy.legal/" target="_blank">Legal Issues Taxonomy (LIST)</a>. This taxonomy is    what Learned Hands uses to label training data for Spot. It's worth noting that adoption of LIST, formerly NSMIv2, is one of the primary goals of Spot. As you may have gleaned from our <a href="../6/#standards">discussion of data standards</a>, it can be hard to get folks to adopt a standard. It's a chicken and egg problem. Folks want to use the standard that everyone else is using because a standard's value is a function of its community. Unfortunately, when there is no pre-existing community, it can be hard to get the ball rolling. Spot is an attempt to do this. We're building a shiny new AI tool that folks want to use. It just so happens that you have to label things in LIST for it to be useful. It's a Trojan Horse. ;)</li>
+        </ul>
+
+    </div>
+    <div class="section">
+
+      <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+        <span class="subtitle">~ 1 Hour 45 Minutes</span>
+      </h2>
+      <ul>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/weapons-of-math-destruction-896945-1" target="_blank">Weapons of Math Destruction</a>:
+           <i>The Targeted Citizen</i>  (Chapter 10)
+           (20 pages)</li>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/how-not-to-be-wrong-608454-1" target="_blank">How Not to Be Wrong</a>:
+          <i>There is No Such Thing as Public Opinion</i> (chapter 17) and
+          <i>"Out of Nothing I Have Created A Strange New Universe"</i> (chapter 18)
+          (55 pages)</li>
+        <li><a href="https://www.sec.state.ma.us/ele/elepdf/IFV_2020.pdf#page=7" target="_blank">Massachusetts Information for Voters - 2020 Ballot Questions: Question 2</a>: Ranked-Choice Voting (5 pages). Following up on Ellenberg's discussion of rank-choice voting, it seemed worth noting that Question 2 on this year's MA ballot. FWIW, Question 1 makes reference to open data standards. So this class is proving super relevant. Yay! </li>
+        <li><a href="https://www.theverge.com/2020/10/6/21504715/google-v-oracle-supreme-court-hearings-android-java" target="_blank">The Supreme Court is taking on Google and Oracle one last time</a> (6 pages)</li>
+      </ul>
+
+    </div>
+    <div class="section" style="display:none;">
+
+      <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+      </h2>
+
+      <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
+
+      <p>All of that being said, let's see if we can pare things down.</p>
+
+      <!--
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you proficient with QnA Markup?</p>
+      <p>
+      <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="qNa">text</label><br>
+      <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="qNb">text</label><br>
+      <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="qNc">text</label><br>
+      <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
+      <label          for="qNd">text</label><br>
+      <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
+      <label          for="qNe">text</label><br>
+      </p>
+      <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      -->
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you proficient with QnA Markup?</p>
+      <p>
+      <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q1a">No / I've never heard of it.</label><br>
+      <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q1b">I've used it before, but I wouldn't mind a refresher.</label><br>
+      <input name="q1" id="q1c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q1c">I've used it before, and I feel comfortable skipping the introduction.</label>
+      </p>
+      <p id="q1_c_msg" style="display:none;color:green">You've gained roughly 30 minutes by dropping a video introduction to QnA Markup. FWIW, you're going to be asked to create an interview in QnA Markup at the end of this Level. If you find yourself with questions, change this answer to unhide the QnA introduction.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Do you have a good text editor? I'm not asking about a word processor, there's a difference.</p>
+      <p>
+      <input name="q2" id="q2a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q2a">Yes.</label><br>
+      <input name="q2" id="q2b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q2b">No.</label><br>
+      <input name="q2" id="q2c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q2c">I don't now.</label>
+      </p>
+      <p id="q2_a_msg" style="display:none;color:green">You've gained roughly 10 minutes by dropping a section on installing a text editor.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Do you have a GitHub account, and do you know how to use it?</p>
+      <p>
+      <input name="q3" id="q3a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q3a">Yes.</label><br>
+      <input name="q3" id="q3b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q3b">No.</label><br>
+      </p>
+      <p id="q3_a_msg" style="display:none;color:green">You've gained roughly 20 minutes by dropping a GitHub exercise that walks you through creating a reop and making a pull request et al.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+    <div id="q1_div" class="section">
+
+      <h3>Using the Spot API<a href="#spotapi" name="spotapi" class="anchor"></a><br/>
+        <span class="subtitle">~6-12 Minutes</span></h3>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/LloVN9lmQ9w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>For those of you not working in Pythonanywhere, here is the notebook: <a href="docs/spotAPI.ipynb" target="_blank">spotAPI.ipynb</a>. Vist the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot website</a> to <a href="https://spot.suffolklitlab.org/user/new/" target="_blank">create an account</a> and get your API token. If you want to jump straight to the documentation, here's <a href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/" target="_blank">the link</a>. </p>
+
+    </div>
+    <div id="q1_div" class="section">
+
+      <h3>Making Predictions<a href="#predictions" name="predictions" class="anchor"></a><br/>
+        <span class="subtitle">~8-16 Minutes</span></h3>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/h_Oa9X31FjQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>We are working with the notebook file <a href="../7/docs/training.ipynb">training.ipynb</a> (pre-loaded for those of you using Pythonanywhere).</p>
+
+    </div>
+    <div class="section" style="display:none;">
+
+      <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
+      <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>If you want to save output from QnA Markup without cutting and pasting text, what browser should you use?</p>
+      <p>
+      <input name="q4" id="q4a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q4a">Safari</label><br>
+      <input name="q4" id="q4b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q4b">Firefox</label><br>
+      <input name="q4" id="q4c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q4c">Chrome</label><br>
+      </p>
+      <p id="q4_a_msg" style="display:none;color:red">Safari is not correct.</p>
+      <p id="q4_b_msg" style="display:none;color:red">Firefox is not correct.</p>
+      <p id="q4_c_msg" style="display:none;color:green">That's right!</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Can you use spaces to indent tags in QnA Markup?</p>
+      <p>
+      <input name="q5" id="q5a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q5a">Yes.</label><br>
+      <input name="q5" id="q5b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q5b">No.</label><br>
+      </p>
+      <p id="q5_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
+      <p id="q5_b_msg" style="display:none;color:green">That's right, you must use tabs.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+    <div class="section">
+
+      <h2 style="margin-top:10px">Your Mission<a href="#mission" name="mission" class="anchor"></a><br/>
+      <span class="subtitle">~1 Hour 50 Minutes</h2>
+        <p>Clean and feed the following data (i.e., <a href="docs/challenge_calls.csv">challenge_calls.csv</a> and <a href="docs/challenge_people.csv">challenge_people.csv</a> ) into the best-performing classifier you trained on the Dewey, Cheetham, and Howe data. That is, use your best model to predict for this data if a call is or isn't a <i>take</i>. Then produce a list of those calls that are <i>takes</i>. You will be asked to share the call IDs for these calls as part of your work log below (e.g., [175, 234, 327]).</p>
+        <p>
+          <i>NOTE: If you are using the class's Pythonanywhere accounts, the two csv files mentioned above should already be in the same directory as your notebooks. Also, I would like to remind you that you can ask for help on our Slack channel if you're not sure what your next step should be. This mission asks you to tie together a lot of prior works and make some connections. So it's understandable if you have questions.</i>
+        </p>
+        <p><span style="background:yellow;"><b>Update:</b> Based on several conversations I’ve had this week, I want to provide you all with <a href="docs/Level 9 Notebook.ipynb">this notebook</a> (<a href="docs/Level 9 Notebook.ipynb">Level 9 Notebook.ipynb</a>) to help you through this mission. If you take this notebook, read through it, run it, and turn in its output, that will meet this level's expectations. Of course, my hope is that you will do more than this, but it’s important for you to know that you don’t have to unless you want to exceed expectations. So I’m attaching a stretch goal to incentivize a little more than <i>meeting expectations</i>. <b>Stretch Goal:</b> create a model that gets an F1 score in excess of 0.7 on the challenge data. Good luck!</span></p>
+
+    </div>
+    <div class="section">
+
+      <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+        <span class="subtitle">~20 min <sup></h2>
+      <p>
+        As we do at the end of every level, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted. That being said, you've almost completed Level 9. Tell me how it's going by completing the form linked below.
+      </p>
+      <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+        <div class="log_button_frame">
+          <a href="https://forms.gle/bBuYhXPb9vB6J3Fk8" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">1 hour | October 26, 2020 @ 4pm Eastern</span></h2>
+      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday October 26th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+      <p>We will use this time to: (1) troubleshoot any issues folks might have had working through the <a href="#mission">your mission</a>; and (2) discuss the <a href="#readings">readings</a>.</p>
+      <div class="button_row">
+         <a href="../8/"><div class="button">Previous Level</div></a>
+         <a href="../10/"><div class="button" style="float:right;">Next Level</div></a>
+      </div>
+
+    </div>
+
+      <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
+
+    <div class="footer">
+      <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
+      <span style="float:right">
+        Last updated 2020-10-23
+      </span>
+    </div>
+
+  </div>
+</div>
+
+</FORM>
+<script src="../../js_bin/game.js"></script>
+<script>
+
+  var level = 9;
+  var num_Qs = 0;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
+</BODY>
+</HTML>
