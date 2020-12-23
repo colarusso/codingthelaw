@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174544548-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174544548-1');
+  </script>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="Coding the Law"/>
+	<meta property="og:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
+  <meta property="og:image" content="/images/ctl.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Colarusso">
+	<meta name="twitter:creator" content="@Colarusso">
+	<meta name="twitter:title" content="Coding the Law">
+	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
+	<link rel="apple-touch-icon" href="images/icon.png"/>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../../js_bin/scripts.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+
+  <div class="alert_1" style="display:show;">
+    <b>This is an archival version of Coding the Law's Fall 2020 course site.</b> The current version can be found <a href="/">here</a>.
+  </div>
+
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
+
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by Leiferde. See <a href="https://scratch.mit.edu/projects/409860363/" class="scratch_cap" target="_blank">original</a>. This game was made in Scratch, an educational programing language. We introduce coding with Scratch in <a href="../4/#mission_p1" class="scratch_cap">Level 4</a> if you want to try your hand at making something similar. </div>
+  </div>
+
+<div class="sky"></div>
+<div class="clouds"></div>
+<div class="header">
+  <div class="header_frame">
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('409860363')" class="hidden_href">Level 5</a></div>
+    <div class="menu"><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a> | <a href="../syllabus" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu_drop">
+      <div class="dropdown">
+          <div class="nav_menu"></div>
+          <div class="nav_menu"></div>
+          <div class="nav_menu" style="margin-bottom:17px;"></div>
+          <div class="dropdown-content" style="right:-10px;">
+            <p><a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank" class="gamelink">Slack</a></p>
+            <p><a href="../syllabus" target="_blank" class="gamelink">Syllabus</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="title_frame">
+    <div class="title_inner_frame">
+        <h1 class="site_title">
+          Coding the Law
+          <span class="main_subtitle"><br/>Suffolk Law School: Fall 2020 <br>by <a href="https://twitter.com/colarusso" target="_blank" class="gamelink">@Colarusso</a></span>
+        </h1>
+        <p class="short_desc">A self-guided LegalTech Adventure for folks with or without prior coding experience.</p>
+    </div>
+  </div>
+  <div class="grass"></div>
+  <div class="ground"></div>
+</div>
+
+<div class="content_frame">
+  <div class="content">
+      <span class="breadcrumb">
+        <select onChange="window.location.href=this.value">
+          <option value="../1">Level 1</option>
+          <option value="../2">Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5" SELECTED>Level 5</option>
+          <option value="../6">Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9">Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12">Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+      </span>
+
+      <div class="section">
+
+      <h2 style="margin-top:10px">
+        Regular Expressions (Regex)<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">13-26 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+
+      <p>FYI, I jump right in to the deep end here, but don't worry, by the time you work through this level you'll have had ample time to play around. Just let this video wash over you. Hopefully, things will start to click about half way through <a href="#mission_p1">your crossword</a>. ;) Remember, you can always ask for help on our Slack channel.</p>
+
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/4GDPY7C4758" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p>As discussed above, you should open up Regular Expressions 101: <a href="https://regex101.com" target="_blank">https://regex101.com</a>. Afterward, cut and paste the following text into the TEST STRING field found at regex101, and follow along with the exercise above.</p>
+      <p style="background:#eee;padding:15px;">01110100 555.867.5309 01101000 1.4142135623 01101001 987-01-6661 01110011 202.555.9355 00100000 01101001 3.1415926535897932384626433832795 01110011 00100000 666-12-4895 01100001 202-555-9355 00100000 01101000 (555) 867-5309 01101001 01100100 2.718281828459 01100100 01100101 01101110 00100000 01101101 555-867-5309 01100101 01110011 01110011 555/867-5309 01100001 01100111 01100101</p>
+      <p>FWIW, here's the <a href="docs/Campbell_v_ACUFF.html" target="_blank">court case</a> I make use of in the video.</p>
+
+      <div class="r_img_embed" style="max-width:450px;">
+        <img src="../../images/regular_expressions.png" alt="XKCD Comic on regular expressions" width="100%"/>
+        <div class="caption">Source: <a href="https://xkcd.com/208/" target="_blank">Regular Expressions</a> from xkcd.</div>
+      </div>
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+        <ul>
+          <li><a href="https://www.lawsitesblog.com/2017/05/law-technology-now-conversation-legal-information-institute-cofounder-tom-bruce-25th-anniversary.html" target="_blank">On Law Technology Now: A Conversation With Legal Information Institute Cofounder Tom Bruce On Its 25th Anniversary</a>. The LII, used above as our source for the US Code, is one of the web's first websites, and the web's first legal website. This podcast is a conversation with one of LII's co-founders as he looks back at 25 years of service.</li>
+          <li><a href="http://codingforlawyers.com/chapters/ch1/" target="_blank">Coding For Lawyers, Chapter 1: Regular Expressions</a>. If you're looking for another take on using regex to parse citations, this resource is a good one, and as you can see it influenced my approach.</li>
+          <li><a href="https://web.archive.org/web/20190904083310/https://lawyerist.com/regular-expressions/#fn6-136050" target="_blank">Pattern Recognition: Regular Expressions and You</a> (Archival Copy). The above video was adapted from this piece I wrote a few years back. It isn't available at it's original location, but you can find it on the WayBack Machine.</li>
+        </ul>
+
+    </div>
+    <div class="section">
+
+      <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+        <span class="subtitle">~ 1 Hour and 34 Minutes</span>
+      </h2>
+      <ul>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/weapons-of-math-destruction-896945-1" target="_blank">Weapons of Math Destruction</a>:
+           <i>Ineligible to Serve</i>  (Chapter 6)
+           (17 pages)</li>
+        <li><a href="https://www.bkstr.com/suffolkubookstore/product/how-not-to-be-wrong-608454-1" target="_blank">How Not to Be Wrong</a>:
+          <i>The Baltimore Stockbroker and the Bible Code</i> (chapter 6) and
+          <i>Dead Fish Don't Read Minds</i> (chapter 7)
+          (41 pages)</li>
+          <li><a href="https://www.lawtechnologytoday.org/2014/12/bestlaw-westlaw/" target="_blank">Bestlaw: How a 3L Enhanced Westlaw</a>. A single quote in this article is responsible for its inclusion, "There is an underlying philosophy that the specialist should control their tools, and not the other way around." That philosophy is what we're going for here. ;) (~4 pages)</li>
+          <li><a href="https://arstechnica.com/tech-policy/2019/09/web-scraping-doesnt-violate-anti-hacking-law-appeals-court-rules/" target="_blank">Web scraping doesn’t violate anti-hacking law, appeals court rules</a>. One of the big uses of regex is web scraping. That is, it can be used to search through webpages for specific bits of data. And for a while, whether this is okay has been a bit of an open question. Here's a look at some relevant recent litigation. (~3 pages)</li>
+          <li><a href="https://web.archive.org/web/20190121114649/https://lawyerist.com/driverless-cars-war-drugs/" target="_blank">Driverless Cars Poised to Undermine War on Drugs</a>. So what is this CFAA referenced in the Ars Technica article above? Well, the answer to that is a bit beyond the scope of this level, but here's a short story I wrote that helps place it in context. Hopefully, this will be a good discussion starter. Note: this is the archived version and may take a while to load. (~10 pages)</li>
+      </ul>
+
+    </div>
+    <div class="section">
+
+      <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+      </h2>
+
+      <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
+
+      <p>All of that being said, let's see if we can pare things down.</p>
+
+      <!--
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you proficient with QnA Markup?</p>
+      <p>
+      <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="qNa">text</label><br>
+      <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="qNb">text</label><br>
+      <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="qNc">text</label><br>
+      <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
+      <label          for="qNd">text</label><br>
+      <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
+      <label          for="qNe">text</label><br>
+      </p>
+      <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      -->
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Can you build a <i>bookmarklet</i> that makes use of <i>regex</i>?</p>
+      <p>
+      <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q1a">Yes</label><br>
+      <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q1b">No</label>
+      </p>
+      <p id="q1_a_msg" style="display:none;color:green">You've gained roughly 10 minutes by dropping a video introduction to bookmarklets. FWIW, you're going to be asked to create one at the end of this level. If you find yourself with questions, change this answer to unhide the introduction.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+    <div id="q1_div" class="section">
+
+      <h3>Build A Bookmarklet<a href="#bookmarklet" name="bookmarklet" class="anchor"></a><br/>
+        <span class="subtitle">Video: ~5-10 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/EQCCcY5MNWA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <p>Here's the bookmarklet creator from the video: <a href="https://caiorss.github.io/bookmarklet-maker/" target="_blank">https://caiorss.github.io/bookmarklet-maker/</a></p>
+
+      <p>Code for you to copy and paste:</p>
+
+<pre style="background:#eee;padding:15px;">
+regex = /(\d+) U\.S\.C\. § (\d+)( \(\d{4}\))?/g
+
+replace_str = '&lt;a href="https://www.law.cornell.edu/uscode/text/$1/$2">$1 U.S.C. § $2$3&lt;/a>'
+
+document.body.innerHTML = document.body.innerHTML.replace(regex, replace_str);
+</pre>
+
+    <p>And here is the <a href="docs/Campbell_v_ACUFF.html" target="_blank">court case</a> I used in the video. Once you have made your own bookmarklet from the code above, you can visit that page and see if it works.</p>
+
+    </div>
+    <div class="section">
+
+      <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
+      <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Which of the following regex expressions will be able to match all of the phone number in this sentence: 555-555-5555?</p>
+      <p>
+      <input name="q2" id="q2a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q2a"><code>\d{3}\.\d{3}\.\d{4}</code></label><br>
+      <input name="q2" id="q2b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q2b"><code>\d-\d-\d</code></label><br>
+      <input name="q2" id="q2c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q2c"><code>\d{3}-\d{3}-\d{4}</code></label><br>
+      <input name="q2" id="q2d" type="radio" value="d" onChange="check_q(this.name);kbase();">
+      <label          for="q2d"><code>\d{3}\/\s?\d{3}-\d{4}</code></label><br>
+      </p>
+      <p id="q2_a_msg" style="display:none;color:red">Sorry, those look like literal dots. So they won't match our dashes.</p>
+      <p id="q2_b_msg" style="display:none;color:red">Sorry, that regex is looking for single digits separated by dashes.</p>
+      <p id="q2_c_msg" style="display:none;color:green">It won't find every phone number, but it will find the one in the sentence above.</p>
+      <p id="q2_d_msg" style="display:none;color:red">Sorry, looks like this one is expecting a / after the area code.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+    <div class="section">
+
+      <h2>Your Mission: Regex Crossword<a href="#mission_p1" name="mission_p1" class="anchor"></a><br/>
+        <span class="subtitle">Video: ~3-5 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
+        Game Play: 55 Minutes</span></h2>
+
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/wO0maJv19K8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="r_img_embed" style="max-width:450px;">
+          <img src="../../images/tech_support_cheat_sheet.png" title="'Hey Megan, it's your father. How do I print out a flowchart?'" alt="XKCD Comic: Tech Support Cheat Sheet" width="100%"/>
+          <div class="caption">Image and Alt Text: <a href="https://xkcd.com/627/" target="_blank">Tech Support Cheat Sheet</a> from xkcd.</div>
+        </div>
+        <p>Here's the game site: <a href="https://regexcrossword.com/" target="_blank">https://regexcrossword.com/</a>. Remember to login with your GitHub account. Once you've worked through the <i>Intermediate</i> level, take a screen shot at upload it to your ctl GitHub repo with the name "regex_crossword", the file extension doesn't matter, but .png, .jpg, or .pdf are preferred. Check to make sure that you can see your screenshot at the appropriate URL. For example:</p>
+
+        <code>https://[your username].github.io/ctl/regex_crossword.png</code>
+
+        <p><span style="background:yellow;">Do not limit yourself to the resources provided when working on your crossword (or anything for that matter). Part of what we're trying to do in this class is to acquaint you with nomenclature so that you can efficiently seek out your own solutions. See the Tech Support Cheatsheet flowchart.</span> You know you're looking to understand <i>regex</i>. You know how to Google, embrace this. I've budgeted the time for this such that it assumes you having to do some research while playing. That being said, start with what's at hand. The crossword's <i>Help</i> feature is really helpful. ;)</p>
+
+
+    </div>
+    <div class="section">
+
+      <h2>Your Mission:<a href="#mission_p2" name="mission_p2" class="anchor"></a><br/>
+        <span class="subtitle">Video: ~3-6 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h2>
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/YZv4ElEIM0A" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p>You can find MassCases here: <a href="http://www.masscases.com" target="_blank">http://www.masscases.com</a>. This is the <a href="http://www.masscases.com/cases/land/1977/1977-15259S-DECISION.html" target="_blank">example opinion</a> I note above, and here is a link to the <a href="https://malegislature.gov/laws/generallaws" target="_blank">Massachusetts General Laws</a>.</p>
+
+        <p><b>Stretch Goal:</b> Combine the US Code bookmaklet with this one, and add at least one other citation type (i.e., make a citation tool that parses and provides links to citations to the US Code, MA General Laws, and one other publication). If you really want to do something before we meet, you could work on that "other publication" part. ;)</p>
+
+        <p>If you are doing the stretch goal, <i><b>but only if you are doing the stretch goal</b></i>, post the javascript for your bookmarklet (the original javascript, not the minified version) to GitHub as:</p>
+
+        <code>https://[your username].github.io/ctl/bookmarklet.js</code>
+
+        <p>Since you'll be working on this in class, I'll look for this as part of Level 6's check-in.</p>
+
+    </div>
+    <div class="section">
+
+      <h2><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
+      <span class="subtitle">~1 Hour and 30 Minutes</span></h2>
+      <p>
+        Enrolled students will be presenting on their final project in three weeks. This is the first explicit weekly time carve out for work on your final project. Make it count. See <a href="https://forms.gle/GLDH8pqrr5mmxqae9" target="_blank">The Final Project Rubric</a>.
+      </p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+        <span class="subtitle">~20 Minutes<sup></h2>
+      <p>
+        As we do at the end of every level, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted. That being said, you've almost completed Level 5. Tell me how it's going by completing the form linked below.
+      </p>
+      <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+        <div class="log_button_frame">
+          <a href="https://forms.gle/NF9GyZXmMfB9Ahgj7" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">1 Hour and 30 Minutes | September 28, 2020 @ 4pm Eastern</span></h2>
+      <p>If you're an enrolled student, we'll be meeting at <a href="https://suffolk.zoom.us/j/99713817785" target="_blank">this link</a> on Monday September 28th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+      <p>We will use this time to: (1) work through part II of your challenge; and (2) discuss the <a href="#readings">readings</a>.</p>
+      <div class="button_row">
+         <a href="../4/"><div class="button">Previous Level</div></a>
+         <a href="../6/"><div class="button" style="float:right;">Next Level</div></a>
+      </div>
+
+    </div>
+
+      <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
+
+    <div class="footer">
+      <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
+      <span style="float:right">
+        Last updated 2020-09-21
+      </span>
+    </div>
+
+  </div>
+</div>
+
+</FORM>
+<script src="../../js_bin/game.js"></script>
+<script>
+
+  var level = 5;
+  var num_Qs = 2;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "a") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
+</BODY>
+</HTML>
