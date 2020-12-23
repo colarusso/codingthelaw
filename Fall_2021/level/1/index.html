@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174544548-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174544548-1');
+  </script>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="Coding the Law"/>
+	<meta property="og:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
+  <meta property="og:image" content="../../images/ctl.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Colarusso">
+	<meta name="twitter:creator" content="@Colarusso">
+	<meta name="twitter:title" content="Coding the Law">
+	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
+	<link rel="apple-touch-icon" href="../../images/icon.png"/>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../../js_bin/scripts.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+
+  <div class="alert_1" style="display:show;"><b>Under Construction.</b> The Fall 2021 version of this class is under construction and will change a lot before it goes live. Do not rely on any content you find here.  The most recent version of this class can be found <a href="../../../">here</a>.</div>
+
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
+
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by Hiro-Protagonist (Colarusso). See <a href="https://scratch.mit.edu/projects/371616266/" class="scratch_cap" target="_blank">original</a>. This game was made in Scratch, an educational programing language. We introduce coding with Scratch in <a href="../4/#mission_p1" class="scratch_cap">Level 4</a> if you want to try your hand at making something similar.</div>
+  </div>
+
+<div class="sky"></div>
+<div class="clouds"></div>
+<div class="header">
+  <div class="header_frame">
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('371616266')" class="hidden_href">Level 1</a></div>
+    <div class="menu"><!--<a href="/score" class="gamelink">My Score</a> |--> <a href="../../teams" target="_blank" class="gamelink">Teams</a> | <a href="../../syllabus" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu_drop">
+      <div class="dropdown">
+          <div class="nav_menu"></div>
+          <div class="nav_menu"></div>
+          <div class="nav_menu" style="margin-bottom:17px;"></div>
+          <div class="dropdown-content" style="right:-10px;">
+            <!--<p><a href="/score" class="gamelink">My Score</a></p>-->
+            <p><a href="../../teams" target="_blank" class="gamelink">Teams</a></p>
+            <p><a href="../../syllabus" target="_blank" class="gamelink">Syllabus</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="title_frame">
+    <div class="title_inner_frame">
+        <h1 class="site_title">
+          Coding the Law
+          <span class="main_subtitle"><br/>Suffolk Law School: Fall 2021 <br>by <a href="https://twitter.com/colarusso" target="_blank" class="gamelink">@Colarusso</a></span>
+        </h1>
+        <p class="short_desc" style="margin-bottom:0">A self-guided LegalTech Adventure for folks with or without prior coding experience. Watch the video below for more.</p>
+    </div>
+  </div>
+  <div class="grass"></div>
+  <div class="ground"></div>
+</div>
+
+<div class="content_frame">
+  <div class="content">
+    <span class="breadcrumb" style="margin-top:8px;">
+        <select onChange="window.location.href=this.value">
+          <option value="../1" SELECTED>Level 1</option>
+          <option value="../2">Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5">Level 5</option>
+          <option value="../6">Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9">Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12">Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+    </span>
+
+    <span class="warning"><a href="../../expectations/" border="0"><img src="../../images/expectation.png" width="250px" height="163px" alt="Expectation Setting: Click for details"/></a></span>
+
+    <center><p class="quote">“What I cannot create, I do not understand.” <font size="-1">Richard Feynman</font></p></center>
+    <p>Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.</p>
+
+    <p>Students' final projects will address real-world needs. <span style="background:yellow;"><b>You won't just learn how to do things, you'll actually do them.</b></span> Design your own project, or join the Lab's COVID-19 response—the <a href="https://suffolklitlab.org/doc-assembly-line/" target="_blank">Document Assembly Line Project</a>—focusing on access to justice during the pandemic. For help calibrating your expectations, read <a href="expectations/">this statement</a>.</p>
+
+    <p>Not a Suffolk Law student? You're welcome to work through the materials here, join our <a href="#slack">Slack channel</a>, and even help out with the Document Assembly Line, but I'm afraid you won't be able to attend our synchronous meet ups/classes. No one will grade your work, and the only credit you'll receive is the knowledge of a job well done. That being said, you're free to work through what's here at your own pace. ;)</p>
+
+  <div class="section">
+
+    <h2>
+      What Lawyers Should Learn to Code<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+      <span class="subtitle">30-60 min. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+    </h2>
+
+    <div class="vid_wrapper">
+      <div class="profile_vid">
+        <iframe class="embed_vid" src="https://www.youtube.com/embed/e1cJOyEgp5I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <p><b>Optional Media.</b>
+      If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+      <ul>
+        <li>In the talk I said I'd be tweeting out some links. You can find them in <a href="https://twitter.com/Colarusso/status/1260748732460666881?s=20" target="_blank">this thread</a>.
+        <li><a href="https://www.netflix.com/title/80233339" target="_blank">How to Fix A Drug Scandal</a>, a Netflix series examining the Dookhan Drug Lab Scandal. I haven't had a chance to watch this, but my impression from those who have seen it are that it does a reasonably good job with a single exception—not focusing as much as they could have on the role of the public defender's in the litigation. CPCS (the MA defenders org) and the ACLU worked together on these cases throughout, but I'm told CPCS attorneys weren't given much screen time. :/</li>
+        <li><a href="https://www.amazon.com/Information-History-Theory-Flood/dp/1400096235" target="_blank">The Information: A History, A Theory, A Flood</a> by James Gleick, includes a good discussion of the work of both Babbage and Lovelace as it relates to the <a href="https://en.wikipedia.org/wiki/Analytical_Engine" target="_blank">Analytical Engine</a>.
+        <li><a href="https://www.google.com/books/edition/Arcadia/MMj4PkaurkgC?hl=en&gbpv=0" target="_blank">Arcadia</a>, a play by Tom Stoppard about time, uncertainty, and chaos bases its protagonist, Thomasina Coverly, on Ada Lovelace. Lovelace's father, Lord Byron, actually helps to drive part of the plot. If you liked <i>Shakespeare in Love</i> or <i>Rosencrantz &amp; Guildenstern Are Dead</i> you should check it out.</li>
+      </ul>
+
+
+  </div>
+  <div class="section">
+
+    <h2>How this Works<a href="#how" name="how" class="anchor"></a>
+    </h2>
+
+    <div class="r_img_embed" style="max-width:450px;">
+      <a href="../../images/one-page.jpg" target="_blank"><img src="../../images/one-page.jpg" alt="A meme of the ring from Lord of the Rings with the words, 'one page to rule them all.'" width="100%"/></a>
+      <div class="caption">You can't have an online class in 2020 without some memes.</div>
+    </div>
+
+
+    <p>Starting in late August 2020, a new level page will appear on this website every week. If you are taking the class for credit, you must complete each level before its <a href="#meetup">weekly meet up</a>. If we're lucky, the levels will show up early, and you can work ahead. Enrolled students also need to complete a final project, <a href="https://docs.google.com/document/d/1t3fru6FtB9hJQfketQE0ooR2rn7uQ1UZYI0b6fKZvBA/edit" target="_blank">described here</a>.</p>
+
+    <p>Everything you need for a single level will be presented on a single page. One page to rule them all. Each level, aside from this one (since it's the first) should take about six hours and forty minutes to complete. Including the video above and our weekly meet up, this level should take about four and a half hours. Levels will generally include a mix of readings, videos, and independent projects.</p>
+
+    <p><b>If you have cookies enabled, your answers to questions on level pages, like this one, are saved locally for this browser. They are NOT graded or shared with me.</b> They are presented as an aid to help you in the moment. Your <a href="#reflection">weekly reflections</a>, however, are saved and shared with me. Additionally, you'll be asked to log a rough estimate of the time you spent working on each level to help me calibrate the time estimates you find here.<sup><a href="#dagger">&dagger;</a></sup>
+    </p>
+    <p>You can ignore it, but I've added a stopwatch to the bottom right of each level page to help you track your time, not visible on mobile devices. It starts when you hit play and pauses when you close or reload the page, hit pause, or edit the time, which you can do by clicking on the time and typing. Like the answers to questions on this page, this information is stored locally in this browser and not shared with me.</p>
+
+    <p style="background:#fcf092;padding:15px;border:solid 1px #888;">🚨 When working on a project, if you are spinning your wheels for more than 30 min, ask for help! The best place to do this is via Slack (<a href="#slack">described below</a>). You can ask me for help privately or put a call out to the whole-class channel. The latter is strongly encouraged. Chances are if you're having an issue, someone else has already dealt with it or others are likely to face it in the future. Either way, asking your question in the public helps everyone. Your success is dependent on asking for help. Heck, if you knew everything already you wouldn't need the class. <b>When in doubt, ask for help! It's literally my job to help you.</b> 🚨</p>
+
+    <p><b>A note on front loading:</b> our project-based exercises will be front loaded so folks can get exposure to things early on. The hope is that this will help build a foundation upon which you can build your final project. These assignments will diminish in number as time goes on such that the last three levels' asynchronous work will be devoted only to readings and work on your final project.</p>
+
+    <h2>Course Texts<a href="#texts" name="texts" class="anchor"></a><br/>
+    </h2>
+    <p>We'll start reading from these texts in Level 2. If you haven't already, you can purchase or rent a copy from the bookstore.</p>
+    <ul>
+      <li><a href="https://www.bkstr.com/suffolkubookstore/product/weapons-of-math-destruction-896945-1" target="_blank">Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</a> by <a href="https://twitter.com/mathbabedotorg" target="_blank">Cathy O'Neil</a></li>
+      <li><a href="https://www.bkstr.com/suffolkubookstore/product/how-not-to-be-wrong-608454-1" target="_blank">How Not to Be Wrong: The Power of Mathematical Thinking</a> by <a href="https://twitter.com/JSEllenberg" target="_blank">Jordan Ellenberg</a></li>
+    </ul>
+
+  </div>
+  <div class="section">
+
+    <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+      <span class="subtitle">~ 20 Minutes</span>
+    </h2>
+    <p>We will discuss the following readings at our <a href="#meetup">weekly meet up</a>.</p>
+    <ul>
+      <li><a href="../../syllabus" target="_blank">Our Syllabus</a> (6 pages)</li>
+      <li><a href="../../rubric" target="_blank">The Final Project Rubric</a> (8 pages)</li>
+    </ul>
+
+  </div>
+  <div class="section">
+
+    <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+    </h2>
+
+    <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
+
+    <p>This week I'm asking you to set up a few accounts and take some tools for a spin. This will allow us to hit the ground running at our <a href="#meetup">weekly meet up</a>. You will be publishing some of your work to the Web. So some of your usernames, like your GitHub username, will be publicly associated with your work. Choose them accordingly. Also, let me know if you plan on using a pseudonym for public-facing work so I know who is who.</p>
+
+    <p>All of that being said, here are a few questions to see if we can pare things down.</p>
+
+<!--
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>Are you proficient with QnA Markup?</p>
+    <p>
+    <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="qNa">text</label><br>
+    <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="qNb">text</label><br>
+    <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
+    <label          for="qNc">text</label><br>
+    <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
+    <label          for="qNd">text</label><br>
+    <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
+    <label          for="qNe">text</label><br>
+    </p>
+    <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+    <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+    <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+    <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+    <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+  -->
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>Are you proficient with QnA Markup?</p>
+    <p>
+    <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q1a">No / I've never heard of it.</label><br>
+    <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q1b">I've used it before, but I wouldn't mind a refresher.</label><br>
+    <input name="q1" id="q1c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+    <label          for="q1c">I've used it before, and I feel comfortable skipping the introduction.</label>
+    </p>
+    <p id="q1_c_msg" style="display:none;color:green">You've gained roughly 30 minutes by dropping a video introduction to QnA Markup. FWIW, you're going to be asked to create an interview in QnA Markup at the end of this Level. If you find yourself with questions, change this answer to unhide the QnA introduction.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>Do you have a good text editor? I'm not asking about a word processor, there's a difference.</p>
+    <p>
+    <input name="q2" id="q2a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q2a">Yes.</label><br>
+    <input name="q2" id="q2b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q2b">No.</label><br>
+    <input name="q2" id="q2c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+    <label          for="q2c">I don't now.</label>
+    </p>
+    <p id="q2_a_msg" style="display:none;color:green">You've gained roughly 10 minutes by dropping a section on installing a text editor.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>Do you have a GitHub account, and do you know how to use it?</p>
+    <p>
+    <input name="q3" id="q3a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q3a">Yes.</label><br>
+    <input name="q3" id="q3b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q3b">No.</label><br>
+    </p>
+    <p id="q3_a_msg" style="display:none;color:green">You've gained roughly 20 minutes by dropping a GitHub exercise that walks you through creating a reop and making a pull request et al.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    </div>
+    <div class="section">
+
+    <h3>Two Windows / Two Screens?<a href="#2windows" name="2windows" class="anchor"></a></h3>
+
+      <div class="r_img_embed" style="max-width:450px;">
+        <a href="../../images/2windows.png" target="_blank"><img src="../../images/2windows.png" alt="A screen shot of this site next to a window where you are being asked to code" width="100%"/></a>
+        <div class="caption">A screen shot of this site next to a window where you are being asked to code.</div>
+      </div>
+
+    <p>This site was designed to be placed in a window off to the side of your screen so you could work while watching videos and referencing texts. This should be especially helpful when working on coding projects. If you're screen is too small for this, I suggest opening this page on your phone and placing it next to your computer screen. This won't help when you're asked to cut and paste text, but at least you can watch and work along with videos. You may also want to open Slack (our chat tool <a href="#slack">described below</a>) in a tab in the window with this page, so it too can sit off to the side while you work. <b>Remember, if you're spinning your wheels, you should use Slack to ask for help.</b></p>
+
+  </div>
+  <div class="section">
+
+    <h3>Secure Your Passwords<a href="#pass" name="pass" class="anchor"></a></h3>
+        <p>
+          You'll find yourself creating a bunch of accounts as you work your way through these lessons. So here's some free advice. You should take security seriously. What's a good password? One that's hard for someone to "guess"/discover. We all know a long pass phrase or random collection of numbers and letters is good form, but it's all for not if you use the same password for multiple accounts and one of them gets hacked. Likewise, if there's a post-it on your laptop with your login, it doesn't really help if someone steals your laptop. Best practices: (1) store your passwords in an encrypted <a href="https://lifehacker.com/5529133/five-best-password-managers" target="_blank">password manager</a>; (2) don't reuse passwords; (3) actually use random passwords; and (4) set up a login/lock for your computer(s) and phone(s).
+        </p>
+        <p>
+          Want a free and simple option? We suggest <a href="https://www.lastpass.com/" target="_blank">LastPass</a>. If you like wordplay, however, there's always <a href="https://www.remembear.com/" target="_blank">RememBear</a>. In general, you may want to choose a manager that allows for local storage of passwords on a single device (like your phone). This usually means that you don't have to pay for a subscription. It also means your passwords stay on a single device, not the cloud. However, this makes phone backups even more important, and sometimes (as with RememBear) you have to sign up for a free subscription and cancel it before the trial runs out to access the free local functionality. Always read the fine print! Anywho, <b>you should be backing up all of your devices!</b> Ask me sometime about my 1L laptop failure in the middle of my Contracts exam.
+        </p>
+        <p>
+          Also suggested: (1) if you can, turn on <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication" target="_blank">two-factor authentication</a>; and (2) conisder <a href="https://www.cloudwards.net/how-to-encrypt-your-hard-drive/" target="_blank">encrypting your hard drive</a>.
+        </p>
+        <p>
+          And of please, esp. if you encrypt your hard drive, make sure you will never forget the password you use to get into your password manager. If you do, it's like losing everything.
+        </p>
+
+  </div>
+  <div class="section">
+
+    <h3>Slack<a href="#slack" name="slack" class="anchor"></a><br/>
+      <span class="subtitle">~ 5 Minutes</span></h3>
+
+    <p>
+      Slack, a business-friendly chat program, is our primary communication hub. Consequently, you should <a href="https://suffolklitlab.org/slack/" target="_blank">join our team</a>. Once you have, <a href="https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs">DM</a> me @Colarusso to say "hi," and I'll add you to our channel (<a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank">#coding_the_law</a>). Alternatively, you can <a href="https://get.slack.help/hc/en-us/articles/205239967-Browse-and-join-channels" target="_blank">join the channel</a> on your own. It's a public channel. So anyone can join.  Enrolled students are expected to regularly check Slack or to set up push notifications. If you wish, you can download <a href="https://get.slack.help/hc/en-us/articles/201746897-Slack-apps-for-computers-phones-tablets" target="_blank">the app</a> for your phone or desktop.
+    </p>
+    <p>
+      I’ll be available intermittently over Slack throughout the week and at odd times of night. Don’t worry about bothering me. If I’m unavailable, I won’t answer. That being said, this is another good reason to ask questions in the <a href="https://app.slack.com/client/T8UJQGP47/C018N4LHFQ9" target="_blank">#coding_the_law</a> channel. There are just more folks there. Note: when communicating over Slack, a screenshot is your friend, esp. when dealing with an error message. See below.
+    </p>
+
+    <h3>How to take a screenshot<a href="#screenshot" name="screenshot" class="anchor"></a></h3>
+    <p>
+      Because it's good to know and easy to forget, here are instructions for taking a screen shot: <a href="https://support.apple.com/en-us/HT201361" target="_blank">Mac Instructions</a>; <a href="https://www.digitaltrends.com/computing/how-to-take-a-screenshot-on-pc/" target="_blank">PC Instructions</a>.
+    </p>
+
+  </div>
+  <div id="q1_div" class="section">
+
+    <h3>QnA Markup<a href="#qna" name="qna" class="anchor"></a><br/>
+      <span class="subtitle">25-30 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
+
+    <div class="vid_wrapper">
+      <div class="profile_vid">
+        <iframe class="embed_vid" src="https://www.youtube.com/embed/RVhzQ1JVi3s" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <p>Here is a link to the <a href="https://www.qnamarkup.org/" target="_blank">QnA Markup editor</a>. If you'd like to save/download QnA source or HTML content directly from the editor, I suggest using the <a href="https://www.google.com/chrome/" target="_blank">Chrome browser</a> as these features aren't supported by all browsers. You can of course save this content by cutting and pasting text into a text editor. Also, keep in mind that a space and a tab are not the same. For QnA to recognize something as indented, you must use tabs.</p>
+
+    <p>Take 20 min to review the <a href="https://www.qnamarkup.org/syntax/" target="_blank">Syntax</a> page and work through a few of the examples found in the <a href="https://www.qnamarkup.org/syntax/QnA_Quick_Start.pdf" target="_blank">Quick Start Guide</a>.</p>
+
+  </div>
+  <div id="q2_div" class="section">
+
+    <h3>A Good Text Editor<a href="#editor" name="editor" class="anchor"></a><br/>
+      <span class="subtitle">~ 10 Minutes</span></h3>
+    <p>
+      You'll need a tool to read and write code, and no, Microsoft Word won't do the trick. You need a text editor. Have you ever tried to cut and paste something from Word only to have the formatting all messed up? That's because there's a bunch of unseen stuff mixed in with your text. Unlike word processors, text editors don't touch anything but text and they often highlight your code, making it easier to read. Some popular (and free) text editors include <a href="https://atom.io/" target="_blank">Atom</a>, <a href="https://notepad-plus-plus.org/" target="_blank">Notepadd++</a> (Windows only), and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. If you don't have a text editor, download and install one from the preceding list. It will come in handy soon. Also, these editors (esp. Atom) are highly customizable. See e.g., <a href="https://flight-manual.atom.io/using-atom/sections/atom-packages/#atom-packages" target="_blank">Atom Packages</a> (you may want to disable "autocomplete-plus" and download and enable "spell-check").
+    </p>
+
+  </div>
+  <div class="section">
+
+    <h3>Google Account<a href="#google" name="google" class="anchor"></a><br/>
+      <span class="subtitle">~ 5 Minutes</span></h3>
+
+    <p>We'll be using Google Forms to collect your <a href="#reflection">reflections</a> and log your work. This will require you to have a Google Account. You can <a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp">create an account here</a>. If you don't want to create a Gmail account, don't worry. You can associate your account with an existing email. See e.g.,
+
+    <div style="max-width:422px;margin:0 auto">
+      <a href="../../images/create_google.gif" target="_blank"><img src="../../images/create_google.gif" alt="Screen shot showing where to select gmail or other email" width="100%"/></a>
+    </div>
+
+    </div>
+    <div id="q3_div" class="section">
+
+    <h3>GitHub<a href="#github" name="github" class="anchor"></a><br/>
+      <span class="subtitle">~ 20 Minutes</span></h3>
+
+    <p>
+      Git is a system for managing the many versions of code one writes over the course of a coding project. At one level, it acts like track changes for computer code, allowing multiple people to collaborate on a single project. GitHub is a website on which you can host and manage projects using Git. It's also a community of users where people share their code. If you haven't already, you can <a href="https://github.com/join?source=header-home" target="_blank">create a GitHub account here</a> (choose the free plan).
+
+    </p>
+    <p>
+      Complete GitHub's <a href="https://guides.github.com/activities/hello-world/" target="_blank">Hello World activity</a>. This will introduce you to a bunch of nomenclature and help give you a sense for how GitHub works.
+    </p>
+
+    </div>
+    <div class="section">
+
+    <h3>GitHub Pages<a href="#hello" name="hello" class="anchor"></a><br/>
+      <span class="subtitle">~ 10 Minutes</span></h3>
+
+        <p>
+          In this exercise, we're going to publish a website using GitHub Pages. GitHub Pages is a free service offered by GitHub. What does it do? In short, it serves your code from a webserver, placing it on the Web.
+        </p>
+        <p>
+          GitHub Pages places the code from your repo (or some subset of that code) on a webserver for others to access over the Internet. Yes, people can already see your code if they visit your repo's page on GitHub.com, but their browsers don't interpret that code. That is, they see the text of the code, not the "final product." By serving your code on a webserver you can actually place your code live on the Web. GitHub Pages restricts what it will serve to something called static content (things like HTML), but that's all we need for our purposes.
+        </p>
+        <p>
+          Make sure you're signed into GitHub.com and create a new repo called "ctl" with the following description, "A collection of work for my Coding the Law class," and be sure to select "Initialize this repository with a README."
+        </p>
+          <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+            <a href="../../images/gh-01.png" target="_blank"><img src="../../images/gh-01.png" alt="screen shot" style="width:100%" border="0"/></a>
+          </div>
+        <p>
+          After creating the repo, click on <kbd>Settings</kbd>.
+        </p>
+        <div style="text-align:center;margin:0px auto;max-width:800px;padding:10px 0 15px 0px;">
+          <a href="../../images/gh-02.png" target="_blank"><img src="../../images/gh-02.png" alt="screen shot" style="width:100%" border="0"/></a>
+        </div>
+
+        <p>Scroll down to the GitHub Pages section and select <kbd>master branch</kbd> from the <kbd>Source</kbd> pulldown. Then click <kbd>Save</kbd>.</p>
+        <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+          <a href="../../images/gh-03.gif" target="_blank"><img src="../../images/gh-03.gif" alt="screen shot" style="width:100%" border="0"/></a>
+        </div>
+
+        <p>This will update your settings page, showing where on the web your page is being served (e.g., <a href="https://colarusso.github.io/hello-world/">https://colarusso.github.io/ctl/</a>).
+          <div style="text-align:center;margin:0px auto;max-width:700px;padding:10px 0 15px 0px;">
+            <a href="../../images/gh-04.png" target="_blank"><img src="../../images/gh-04.png" alt="screen shot" style="width:100%" border="0"/></a>
+          </div>
+
+        <p>If you visit your page, you'll see the content of your README.md file served as a webpage. That's because the the README is the only file on your site.</p>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px;">
+          <a href="../../images/gh-05.png" target="_blank"><img src="../../images/gh-05.png" alt="screen shot" style="width:100%" border="0"/></a>
+        </div>
+
+        <p>Customarily, webpages aren't Markdown files (<kbd>.md</kbd>). They're normally HTML files. We'll get in to HTML (<kbd>.html</kbd>) more in another exercise, but like markdown, they're just text files filled with content conforming to a set structure. Use your text editor to create a new "text" file named <kbd>hello-world.html</kbd>. It should have the following content.</p>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px;">
+          <a href="../../images/gh-06.png" target="_blank"><img src="../../images/gh-06.png" alt="screen shot" style="width:100%" border="0"/></a>
+        </div>
+
+      <p> You can cut and paste the code from here:</p>
+
+<pre style="background:#eee;padding:15px;">
+&lt;html>
+  &lt;head>
+    &lt;title>Hello world!&lt;/title>
+  &lt;/head>
+  &lt;body>
+      Hello world!
+  &lt;/body>
+&lt;/html></pre>
+
+        <p>After you've saved your file, drag and drop it into your repository (or click <kbd>Add file</kbd> and upload it), then commit your change like so.</p>
+        <div style="text-align:center;margin:0px auto;max-width:800px;padding:40px 0 45px 0px;">
+          <video width="100%" autoplay loop>
+           <source src="../../images/gh-07.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>Wait a minute or two (it can take a few minutes for your GitHub Pages site to update) then in your browser visit <code>https://[your username].github.io/ctl/hello-world.html</code>. If everything worked, you should see something like this.</p>
+        <div style="text-align:center;margin:0px auto;max-width:600px;padding:0px 0 0px 0px;">
+          <a href="../../images/gh-08.png" target="_blank"><img src="../../images/gh-08.png" alt="screen shot" style="width:100%" border="0"/></a>
+        </div>
+
+        <p>Congratulations. You've published a webpage!  🎉 </p>
+
+    </div>
+    <div class="section">
+
+    <h3>Twitter<a href="#twitter" name="twitter" class="anchor"></a></h3>
+
+    <p>
+      There is a vibrant and welcoming community of <a href="https://twitter.com/search?q=%23legaltech&src=hashtag_click" target="_blank">#LegalTech</a> folks on Twitter. If you don't have an account, you should consider <a href="https://twitter.com/i/flow/signup" target="_blank">creating one</a> (not required) and following a selection of folks. It may sound funny, but I owe some nontrivial part of my professional success to the connections I've made as part of this community. Here are a few starter lists:
+      <ul>
+        <li><a href="https://twitter.com/i/lists/975011173342105603" target="_blank">Underrepresented People of Legal Tech and Innovation</a></li>
+        <li><a href="https://twitter.com/i/lists/922650680569065472" target="_blank">LTRC Women of Legal Tech</a></li>
+        <li><a href="https://twitter.com/i/lists/1242657981524848645" target="_blank">#MakeLawBetter Innovators</a></li>
+        <li><a href="https://twitter.com/i/lists/935343881369079810" target="_blank">ABA's Web100: Best Law Twitter</a></li>
+      </ul>
+    </p>
+    <p>And of course, you can follow me <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>.</p>
+
+
+    </div>
+    <div class="section">
+
+    <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
+    <p>Before we assign you a mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>If you want to save output from QnA Markup without cutting and pasting text, what browser should you use?</p>
+    <p>
+    <input name="q4" id="q4a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q4a">Safari</label><br>
+    <input name="q4" id="q4b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q4b">Firefox</label><br>
+    <input name="q4" id="q4c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+    <label          for="q4c">Chrome</label><br>
+    </p>
+    <p id="q4_a_msg" style="display:none;color:red">Safari is not correct.</p>
+    <p id="q4_b_msg" style="display:none;color:red">Firefox is not correct.</p>
+    <p id="q4_c_msg" style="display:none;color:green">That's right!</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>Can you use spaces to indent tags in QnA Markup?</p>
+    <p>
+    <input name="q5" id="q5a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q5a">Yes.</label><br>
+    <input name="q5" id="q5b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q5b">No.</label><br>
+    </p>
+    <p id="q5_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
+    <p id="q5_b_msg" style="display:none;color:green">That's right, you must use tabs.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+
+  </div>
+  <div class="section">
+
+    <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+      <span class="subtitle">~20 min <sup></h2>
+    <p>
+      At the end of every level before the statement of your closing challenge (<a href="#mission">Your Mission</a>), we ask that you take a few minutes to reflect on how things are going. For most levels I'll also include a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted to GitHub. That being said, you've almost completed Level 1. Tell me how it's going by completing the form linked below.
+    </p>
+
+    <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+      <div class="log_button_frame">
+        <a href="../../checkins/level_01" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="section">
+
+    <h2>Your Mission: Thinking in Flowcharts<a href="#mission" name="mission" class="anchor"></a><br/>
+      <span class="subtitle">15-30 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h2>
+
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/m0n_m3NNSX8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <p>Here's the <a href="docs/s1-exercising-prosecutorial-discretion-individuals-who-came-to-us-as-children.pdf" target="_blank" target="_blank">DACA memo</a>, <a href="../../images/DACA_flowchart.png" target="_blank" target="_blank">our flowchart</a>, and the <a href="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1134/handouts/250%20Debugging%20Strategies.pdf" target="_blank">debugging sheet</a> mentioned above. You only need to read pages 1 and 2 of <i>Debugging</i>, up until <i>Using an online debugger</i>.</p>
+
+      <p>To be clear, we will devote 20 to 30 minutes of our <a href="#meetup">meet up</a> to working on this challenge. You will work in groups while I circulate between breakout rooms. To be clear, you shouldn't start work on this challenge until we meet, aside from watching the video and reading the two pages noted above. Obviously, if you're not an enrolled student, you'll have to do this work independently. See the meet up section for more context.</p>
+
+    </div>
+    <div class="section">
+
+    <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+      <span class="subtitle">1 hour | August 24, 2020 @ 5pm Eastern</span></h2>
+
+    <div class="r_img_embed" style="max-width:450px;">
+      <a href="../../images/gadsby.gif" target="_blank"><img src="../../images/gadsby.gif" alt="Leonardo Dicaprio from the Great Gatsby toasting" width="100%"/></a>
+      <div class="caption">By the time we're done with our meeting, you will be a coder!</div>
+    </div>
+
+    <p>If you're an enrolled student, we'll be meeting at <a href="../../class" target="_blank">this link</a> on Monday August 24th at 5pm via Zoom. You should have received the password from me earlier. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. <b>Note: this meeting starts an hour after our official start time of 4pm Eastern</b> because we will only need an hour of our two-hour block for synchronous work. So I figured why not give everyone an extra hour to finish working through the above. If you're not an enrolled student, I'm afraid you can't join us.</p>
+
+    <p>FWIW, I love virtual backgrounds. If you do too, here's <a href="https://unsplash.com/s/photos/bookshelf" target="_blank">a nice source</a> for royalty-free images.</p>
+
+    <p>We will use this time to: (1) get to know each other a little; (2) troubleshoot any issues folks might have had working through the <a href="#knowledge">knowledge base</a>; (3) complete <a href="#mission">your mission</a>; and (4) discuss <a href="#readings">the readings</a>.</p>
+
+    <p>We will add the following to your mission's QnA. Note the use of the <a href="https://www.qnamarkup.org/syntax/#title" target="_blank">Title</a>, <a href="https://www.qnamarkup.org/syntax/#author" target="_blank">Author</a>, and <a href="https://www.qnamarkup.org/syntax/#before" target="_blank">Before</a> tags.</p>
+
+    <pre style="background:#eee;padding:15px;overflow-x:scroll;">
+Title: DACA "Flowchart"
+Author: [your name]
+Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+&lt;div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');">&lt;/div>
+&lt;h2 style="text-align:center;">DACA "Flowchart"&lt;/h2>
+&lt;p>&lt;b>This is a &lt;a href="https://www.codingthelaw.org/#mission">class project&lt;/a>. You should not rely on it as a source of legal information!&lt;/b>&lt;/p>
+&lt;p>Answer the following questions to see if someone qualifies for DACA.&lt;/p>
+</pre>
+
+    <p>When we are done, you will publish your mission QnA's source code and HTML output to:</p>
+    <p><code>https://[your username].github.io/ctl/daca.txt</code> and</p>
+    <p><code>https://[your username].github.io/ctl/daca.html</code> respectively.</p>
+
+    <div class="button_row">
+       <a href="../2/"><div class="button" style="float:right;">Next Level</div></a>
+    </div>
+
+  </div>
+
+    <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level, except for this first one, should include about 6 hours and 40 min of work.</i>
+
+    <div class="footer">
+      <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
+      <span style="float:right">
+        Last updated 2020-11-17
+        &nbsp
+        <a href="https://drive.google.com/drive/folders/1GKVJew_YaQbUcS_NB4fjFszjzqbkcTdP" target="_blank" style="text-decoration:none;color:#555;">e</a>
+        <a href="https://analytics.google.com/analytics/web/#/realtime/rt-overview/a174544548w242096600p225704106/" target="_blank" style="text-decoration:none;color:#555;"><sup>πi</sup></a>
+      </span>
+    </div>
+
+  </div>
+</div>
+
+</FORM>
+<script src="../../js_bin/game.js"></script>
+<script>
+
+  var level = "2021_1";
+  var num_Qs = 5;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+    if (check_q('q2') == "a") { $('#q2_div').hide(); } else { $('#q2_div').show(); }
+    if (check_q('q3') == "a") { $('#q3_div').hide(); } else { $('#q3_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
+</BODY>
+</HTML>

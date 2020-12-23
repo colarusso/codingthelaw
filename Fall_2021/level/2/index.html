@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174544548-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174544548-1');
+  </script>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta property="og:type" content="website"/>
+	<meta property="og:title" content="Coding the Law"/>
+	<meta property="og:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs."/>
+  <meta property="og:image" content="/images/ctl.png"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Colarusso">
+	<meta name="twitter:creator" content="@Colarusso">
+	<meta name="twitter:title" content="Coding the Law">
+	<meta name="twitter:description" content="Learn how to think about technologies in the law by building your own. In this project-based course, open to non-programmers and coders alike, we explore the technical, legal, and ethical dimensions behind the use of computer algorithms by legal practitioners and the justice system. Projects range from the creation of simple document review and automation tools to the construction of expert systems and narrow AIs.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/ctl/ctl.png"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/cloud.png">
+	<link rel="apple-touch-icon" href="images/icon.png"/>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../../js_bin/scripts.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+
+  <div class="alert_1" style="display:show;"><b>Under Construction.</b> The Fall 2021 version of this class is under construction and will change a lot before it goes live. Do not rely on any content you find here.  The most recent version of this class can be found <a href="../../../">here</a>.</div>
+
+  <div id="timer_div" class="timer_div">
+  	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
+    <div id="play" class="play" onClick="start_time()"></div>
+    <div id="pause" class="pause" onClick="pause_time()">
+     <div class="pause_bar"></div>
+     <div class="pause_bar"></div>
+    </div>
+  </div>
+
+  <div id="arcade">
+    <div id="screen"></div>
+    <div id="scratch_cap">Click the green flag to start. Game by Hiro-Protagonist (Colarusso). See <a href="https://scratch.mit.edu/projects/451300316/" class="scratch_cap" target="_blank">original</a>. This game was made in Scratch, an educational programing language. We introduce coding with Scratch in <a href="../4/#mission_p1" class="scratch_cap">Level 4</a> if you want to try your hand at making something similar. </div>
+  </div>
+
+<div class="sky"></div>
+<div class="clouds"></div>
+<div class="header">
+  <div class="header_frame">
+    <div class="level"><a href="javascript:void('');" onClick="load_scratch('451300316')" class="hidden_href">Level 2</a></div>
+    <div class="menu"><!--<a href="/score" class="gamelink">My Score</a> |--> <a href="../../teams" target="_blank" class="gamelink">Teams</a> | <a href="../../syllabus" target="_blank" class="gamelink">Syllabus</a> </div>
+    <div class="menu_drop">
+      <div class="dropdown">
+          <div class="nav_menu"></div>
+          <div class="nav_menu"></div>
+          <div class="nav_menu" style="margin-bottom:17px;"></div>
+          <div class="dropdown-content" style="right:-10px;">
+            <!--<p><a href="/score" class="gamelink">My Score</a></p>-->
+            <p><a href="../../teams" target="_blank" class="gamelink">Teams</a></p>
+            <p><a href="../../syllabus" target="_blank" class="gamelink">Syllabus</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="title_frame">
+    <div class="title_inner_frame">
+        <h1 class="site_title">
+          Coding the Law
+          <span class="main_subtitle"><br/>Suffolk Law School: Fall 2021 <br>by <a href="https://twitter.com/colarusso" target="_blank" class="gamelink">@Colarusso</a></span>
+        </h1>
+        <p class="short_desc">A self-guided LegalTech Adventure for folks with or without prior coding experience.</p>
+    </div>
+  </div>
+  <div class="grass"></div>
+  <div class="ground"></div>
+</div>
+
+<div class="content_frame">
+  <div class="content">
+    <span class="breadcrumb">
+        <select onChange="window.location.href=this.value">
+          <option value="../1">Level 1</option>
+          <option value="../2" SELECTED>Level 2</option>
+          <option value="../3">Level 3</option>
+          <option value="../4">Level 4</option>
+          <option value="../5">Level 5</option>
+          <option value="../6">Level 6</option>
+          <option value="../7">Level 7</option>
+          <option value="../8">Level 8</option>
+          <option value="../9">Level 9</option>
+          <option value="../10">Level 10</option>
+          <option value="../11">Level 11</option>
+          <option value="../12">Level 12</option>
+          <option value="../13">Level 13</option>
+        </select>
+    </span>
+
+    <div class="section">
+
+      <h2 style="margin-top:10px">Readings (Part I)<a href="#readings_p1" name="readings_p1" class="anchor"></a><br/>
+        <span class="subtitle">~ 40 Minutes</span>
+      </h2>
+      <p>Before watching <a href="#intro_vid">Your Goals Achieved</a>, read: The <i>Introduction</i> and <i>Chapter 1</i> from <a href="https://www.google.com/books/edition/_/zJIbMQAACAAJ?hl=en&sa=X&ved=2ahUKEwibj6Xf3pPrAhXQhHIEHWPYCgYQre8FMBV6BAgSEAg" target="_blank">Weapons of Math Destruction</a> (31 pages).
+      </ul>
+
+    </div>
+
+    <div class="section">
+
+      <h2>
+        Your Goals Achieved in Three Easy Steps<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">20-40 min. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/Cm4e50v516g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <p>Despite what I said above, <a href="https://static1.squarespace.com/static/571acb59e707ebff3074f461/t/5cfe69e4a851d80001bdf162/1560177127345/Substantive+Legal+Software+Quality+-+A+Gathering+Storm.pdf" target="_bkank">Substantive Legal Software Quality—A Gathering Storm?</a> isn't part of this level's reading. I've decided to move it to Level 3.</p>
+
+      <p>Also, I've tried to refine my description of the <i>As You Like It Method</i>, described in the video above. I decided to take the name from Shakespeare's <i>As You Like It</i> from which we get the quote, "All the world's a stage."</p>
+
+      <h3 style="margin-top:10px">All the World's a Stage: How To Achieve Almost Any Goal in Three Easy Steps<sup>0</sup><a href="#goals" name="goals" class="anchor"></a></h3>
+      <ol>
+        <li>Craft a believable story, set in the present, that ends with The Goal being achieved.<sup>1</sup></li>
+        <li>Break this story into scenes, and have those on Team Goal do their best to act out the first scene.<sup>2</sup></li>
+        <li>After reality deviates from the script, the scene ends, or the passage of some fixed amount of time, repeat these steps until either: The Goal is met; or it becomes impossible to craft a believable story.<sup>3</sup></li>
+      </ol>
+
+      <p><sup>0</sup> These rules began its life as a playbook for students working as part of the LIT Lab’s consultancy practice. Originally, I was shooting for something like the <a href="https://playbook.cio.gov/" target="_blank">Digital Services Playbook</a>. Unfortunately, my early drafts relied too much on nomenclature and industry norms unfamiliar to the average law student. I considered zooming in (providing context and explanation for every reference), but that seemed like a recipe for infinite regress. So I opted to zoom out and focus on general principles. This has freed me to use specific examples for illustrative purposes without the need for them to be all encompassing. It also allows me to highlight similarities between multiple systems for getting things done. To avoid the trap of just telling folks to <a href="https://knowyourmeme.com/memes/how-to-draw-an-owl?full=1" target="_blank">draw the Owl</a>, I’m providing some context for each of the steps through footnotes and appendices. Yes, this is a bit of a gimmick, and the title above is total click bait. There are only three steps, but it takes thousands of words to imbue them with meaning. It’s worth noting, however, that this is the case for many endeavors. Jargon gets a bad rap, and deservedly so when used to obscure meaning, but a good term of art or framing mechanism, once understood, can stand in for paragraphs of exposition. With the creation of such building blocks, discussion and reasoning can move more quickly. This is especially true for collaborations, where a reliable shorthand eases communication. Consider that the job of every prosecutor in a criminal trial can be boiled down to ten words: prove the elements of the crime(s) beyond a reasonable doubt. Those ten words are a good guide to action. Zoom out more, and you can describe a prosecutor’s whole job in two words: do justice. Such drastic distillation comes with benefits and risks. Done well it can provide clarity and direction. Over do it and you’re left with pablum. Worse yet is the space between, where clarity is an illusion, everyone relying on a sui generis interpretation, secure in the belief their understanding is shared by all. That being said, let’s see if we can arrive at a common understanding.
+      </p><p>
+      <sup>1</sup><i>Believable</i> is doing a lot of work in this sentence. Here, it’s roughly synonymous with realistic or probable. In order to tell such a story, you have to truly understand your “characters” and their “motivations.” Sometimes you’re lucky, and your characters aren’t people. This is where the hard sciences shine. If asked to tell a story about how to place a satellite in geosynchronous orbit, the primary players (i.e., the satellite and the Earth) find themselves constrained by a set of well-understood physical laws. To achieve geosynchronous orbit we have to get the satellite to a specific distance above the Earth traveling with some set horizontal velocity. That’s it. This is an engineering problem because the story we’re asked to craft ends with an easily-stated objectively-measurable goal, the achievement of which relies on what you might call well-understood “motivations” (physical laws). Once your story includes considerations like how to pay for things, source materials, motivate employees, and clear political hurdles, its nature becomes much more speculative. No longer can the story be told by equations alone. <b>We are speaking of storytelling as simulation. That is, in order to tell a believable story, we construct a series of probable events that result in the desired outcome based on our understanding of how the world works.</b> The scope of our story and the understanding needed to craft it depend greatly on the goal(s) we seek to achieve. So to do this step well, we have to know what we want and enough about the world to tell a story that moves us from the world as it is to the world we want it to be.
+      </p><p>
+      Our initial story is unlikely to survive engagement with reality. So it’s important that we’re able to recognize success and change course when we fall short. Consequently, our goals must be measurable. For example, it’s not enough to say that we want to build or do a great thing. We have to define what we would see if we were to build or do a great thing. This doesn’t have to be an objective measure per se. Subjectivity is fine. If by “a great thing” we mean “Sally thinks it’s great,” or “demographic X thinks it’s great,” we can work with that. We just need to identify a measurable success metric. So our metric might be, “Does Sally say she thinks it’s great?” Admittedly, some goals are harder to measure than others, and there is a temptation to redefine our goals to correspond with easily measured metrics. Fight that temptation. Your goals are a reflection of your values, and you shouldn’t compromise them because something is hard (unless you value them less than the required effort). Pragmatism is productive, but it’s not an excuse to be lazy.
+      <p>
+      <sup>2</sup> As you can see from step three, the end of a scene is notable for the fact that it can trigger the creation of a new story. <b>So scenes act as built-in checkpoints.</b> Like the story’s ultimate Goal, they should come with measurable conclusions, but <b>their completion should also tell us something about our overall progress</b>, so we know if we’re moving in the right direction. If your goal is product development, this is comparable to focusing on a Minimum Viable Product per scene, what some might call iterative prototyping.
+      </p><p>
+      As for Team Goal, this is just the collection of folks working to achieve The Goal. Your team may be a formal working group or just a collection of folks with common cause. Heck, it may be a team of one. What’s important for our purpose is that the team members are willing to work together and live out their parts in the story. Consequently, it has to be a shared story (one all the members buy into). One of the best ways to make this happen is to have the team contribute to the story’s creation. After all, if they’ll be the ones acting it out, they’re likely to have some suggestions. This of course is just a reflection of what I find to be a believable story. I clearly think that giving folks agency over a story is motivating. Maybe I’m right; maybe I’m wrong. Either way, it’s stories all the way down.
+      <p>
+      <sup>3</sup> The important point here is that there be some regular reassessment. If things go off the rails the need for such will be clear, but you need to build in structures that mandate periodic evaluations. As discussed in footnote 2, scenes provide convenient opportunities for such. Setting a fixed time to check in can act as a fail safe should a chapter take longer than expected to run its course. Whatever the triggering event, step three is the point at which your past work becomes prologue for a new story. If you’re lucky, you can just re-number the scenes from a prior version, advancing one chapter closer to your goal. If you’re really lucky, you’ll find that you’ve reached your goal. More likely, however, you’ll have to make a few adjustments based on what went wrong and what worked well, and occasionally, you’ll discover that there just isn’t a believable story to tell.
+    </p>
+    <div class="r_img_embed" style="max-width:500px;">
+      <img src="../../images/boxquote.png" alt="'All models are wrong, but some are useful.' - George Box" width="100%"/>
+      <div class="caption">Maps are models, and they don't show everything. That's okay.</div>
+    </div>
+    <p><b>So What?</b> These steps probably sound familiar. They come in many incarnations and clearly belong to a family of iterative processes like the <a href="https://en.wikipedia.org/wiki/Scientific_method" target="_blank">scientific method</a>, <a href="https://en.wikipedia.org/wiki/Design_thinking" target="_blank">design thinking</a>, and <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile software development</a>. It’s also easy to see in them reflections of <a href="https://en.wikipedia.org/wiki/Cybernetics" target="_blank">cybernetics</a> and Hosfteter’s <a href="https://en.wikipedia.org/wiki/Strange_loop" target="_blank">strange loops</a>. There is nothing more central to the human experience than telling stories. Over the semester, we’ll discuss methodologies like Agile, <a href="https://en.wikipedia.org/wiki/Kanban_(development)" target="_blank">Kanban</a>, design thinking, <a href="https://en.wikipedia.org/wiki/Getting_Things_Done" target="_blank">GTD</a> and the like because you’ll find their followers and evangelists out in the wild. You may be tempted to ask, “which one is right?” but that’s probably the wrong question. In my experience, any structured method for getting things done is often better than no method. These methods embody mental models that try to describe the world (believable stories), and as George Box observed, “All models are wrong, but some are useful.” So remember that since they’re “wrong” they should start, not end, conversation. Avoid dogma. Second, to know whether or not a model is useful, you have to ask “compared to what?” Models do not exist in isolation. Their adoption will replace something. Again, structure often beats its absence. Maps are models of the world. They don’t show every inch of the territory they describe. So they’re “wrong,” but this doesn’t mean they aren’t useful. Context matters.
+    </p><p>
+      <b>When you boil the sum of productivity hacks and management advice down to their essence, they’re all about capturing your goals, crafting believable stories to guide action, testing these stories against reality, and refining them over time.</b> With this in mind, you can better evaluate all that friendly advice. Just ask yourself what it contributes to crafting better shared stories and helping folks stick to the script. If the process includes the word “innovation” or “design” it’s probably concerned with telling better stories, if it’s talking about “productivity” or “efficiency” it’s often about helping folks stick to the script (usually by telling a story that helps guide action). Either way, this advice holds, “do what works.”
+    </p>
+
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+        <ul>
+          <li><a href="https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp" target="_blank">Making sense of MVP (Minimum Viable Product) – and why I prefer Earliest Testable/Usable/Lovable</a>. From the creator of the skateboard to car graphic included in the video above (Henrik Kniberg), this piece explores the concept of MVP and what it's good for.</li>
+          <li><a href="http://oro.open.ac.uk/39253/8/Designerly%20Ways%20of%20Knowing%20DS.pdf" target="_blank">Designerly ways of knowing</a> by Nigel Cross, one of the foundational papers in the design thinking movement.</li>
+          <li><a href="https://playbook.cio.gov/" target="_blank">Digital Services Playbook</a>. Linked above, this is a really good framework for building digital services, and you can see the influence of what we are talking about all over the document.</li>
+        </ul>
+
+
+    </div>
+
+    <div class="section">
+
+      <h2>Readings (Part II)<a href="#readings_p2" name="readings_p2" class="anchor"></a><br/>
+        <span class="subtitle">~ 50 Minutes</span>
+      </h2>
+      <p>Before watching <a href="#mission_p1">Your Mission (Part I)</a>, read: <a href="https://www.lawbydesign.co/design-process/" target="_blank">Design Process for Lawyers</a> (34 pages); and <a href="https://medium.com/theory-and-principle/yeah-you-still-need-to-worry-about-ui-ux-for-your-chatbot-d475c40ac326" target="_blank">Yeah, you still need to worry about UI/UX for your chatbot</a> (5 pages).</p>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Your Mission (Part I): Do They Qualify?<a href="#mission_p1" name="mission_p1" class="anchor"></a><br/>
+        <span class="subtitle">Video: 4.5-9 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
+        Work: ~1.5 Hours</span></h2>
+
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/tfRcOxtEHaQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <p>I realize I didn't actually tell you how the story ended. Never fear, the court saw the error of their ways and started following the rules. It's worth noting, however, that this was a particularly insidious mistake because it occurred before someone was assigned an attorney while also effecting that choice.</p>
+
+        <p><span style="background:yellow">You should forgo doing any additional research beyond the 50-state survey. Note: this contradicts what I said above. That is, you can take the 50-state survey as the authoritative statement on indigency for your jurisdiction. Also, <b>you should spend no more than an hour working on your flowchart</b>.  Consider this an MVP. We'll have a chance to improve it later. Seriously, do <b>NOT</b> spend more than an hour making your flowchart!!!!!!</b></span></p>
+
+        <p>That being said, here's the <a href="https://www.nacdl.org/getattachment/958a6f1a-512e-4c63-9d3e-15415cd5bbcc/gideon-at-50-redefining-indigence-financial-eligibility-guidelines-for-assigned-counsel-part-2-.pdf" target="_blank">50-state survey</a> for the rules governing appointment of counsel and the <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank">2020 federal poverty guidelines</a>. Registered students: you can claim a jurisdiction by opening <a href="https://docs.google.com/spreadsheets/d/1BgJ4G9klCrbtMsnnYB2yi32lppo6goIwzr2ZDIErHIA/edit#gid=0" target="_blank">this spreadsheet</a> and adding your github username to a row.</p>
+
+        <p>Once you have created a flowchart, take a picture with your phone (if you drew it on paper, a white board, or the like) or a screenshot/download (if you used something like <a href="https://www.zenflowchart.com/" target="_blank">zenflowchart</a>). Upload your flowchart to your ctl GitHub repo and the name "indigency_flowchart_v1", the file extension doesn't matter, but .png, .jpg, or .pdf are preferred. Check to make sure that you can see your flowchart at the appropriate URL. For example:</p>
+
+        <code>https://[your username].github.io/ctl/indigency_flowchart_v1.png</code>
+
+        <p>When building your interview, be sure to include a variation of our disclaimer.</p>
+
+        <pre style="background:#eee;padding:15px;overflow-x:scroll;">
+Title: Indigency "Flowchart"
+Author: [your name]
+Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+&lt;div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');">&lt;/div>
+&lt;h2 style="text-align:center;">Indigency "Flowchart"&lt;/h2>
+&lt;p>&lt;b>This is a &lt;a href="https://www.codingthelaw.org/level/2/#mission_p1">class project&lt;/a>. You should not rely on it as a source of legal information!&lt;/b>&lt;/p>
+&lt;p>Answer the following questions to see if you qualify for appointed counsel in [insert state name].&lt;/p>
+    </pre>
+
+        <p>Once you have finished your QnA interview, upload both the source code and HTML output to:</p>
+        <p><code>https://[your username].github.io/ctl/indigency_v1.txt</code> and</p>
+        <p><code>https://[your username].github.io/ctl/indigency_v1.html</code> respectively.</p>
+
+        <p>For your convenience, here's the persona info for your simulated user testing. As you work through a persona, externalize your inner monolog. As you watch, be sure to capture what is and isn’t working well.</p>
+        <ul>
+<li>38 yo single parent of 3, earning $25,000 a year before taxes, charged with a felony.</li>
+<li>17 yo, living at home with two parents and two siblings who earn $44,000 a year before taxes, charged with a misdemeanor.</li>
+<li>20 yo college student living away from home. Their parents, however, earn $120,000 annually before taxes, and the student is charged with a misdemeanor.</li>
+<li>26 yo living with romantic partner and 2 children. They earn $18,000 annually and their partner earns $20,000. They are charged with a felony.</li>
+<li>Same as above, but the felony is an A&B against the partner.</li>
+        </ul>
+
+    </div>
+
+
+    <div class="section">
+
+      <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+      </h2>
+
+      <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
+
+      <p>All of that being said, let's see if we can pare things down.</p>
+
+  <!--
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Are you proficient with QnA Markup?</p>
+      <p>
+      <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="qNa">text</label><br>
+      <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="qNb">text</label><br>
+      <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="qNc">text</label><br>
+      <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
+      <label          for="qNd">text</label><br>
+      <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
+      <label          for="qNe">text</label><br>
+      </p>
+      <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+      <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    -->
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      <p>Do you feel comfortable writing introductory JavaScript?</p>
+      <p>
+      <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+      <label          for="q1a">No.</label><br>
+      <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+      <label          for="q1b">Yes, but I wouldn't mind a refresher.</label><br>
+      <input name="q1" id="q1c" type="radio" value="c" onChange="check_q(this.name);kbase();">
+      <label          for="q1c">Yes, and I feel comfortable skipping the introduction.</label>
+      </p>
+      <p id="q1_c_msg" style="display:none;color:green">You've gained roughly 30 minutes by dropping a video introduction to JavaScript. FWIW, you're going to be asked to create a QnA interview with JavaScript functions at the end of this Level. If you find yourself with questions, change this answer to unhide the JavaScript introduction.</p>
+
+      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+      </div>
+      <div id="q1_div" class="section">
+
+        <h3>Introductory JavaScript<a href="#javascript" name="javascript" class="anchor"></a><br/>
+          <span class="subtitle">15-30 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
+
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/bEGhfqj8KXg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <p>For your reference, here are are links to articles/lessons on JavaScript: <a href="https://www.w3schools.com/js/js_variables.asp" target="_blank">Variables</a>; <a href="https://www.w3schools.com/js/js_datatypes.asp" target="_blank">Data Types</a>; <a href="https://www.w3schools.com/js/js_booleans.asp" target="_blank">Booleans (evaluations)</a>; <a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">Comparisons</a>; <a href="https://www.w3schools.com/js/js_if_else.asp" target="_blank">If statements</a>; and <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">Functions</a>.</p>
+
+        <p>And here's the xkcd comic: <a href="https://xkcd.com/627/" target="_blank">Tech Support Cheat Sheet</a>.</p>
+
+      </div>
+      <div class="section">
+
+    <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
+    <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>How would Javascript evaluate the following: <code>"Big" > "Small"</code>?</p>
+    <p>
+    <input name="q2" id="q2a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q2a">true</label><br>
+    <input name="q2" id="q2b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q2b">false</label><br>
+    </p>
+    <p id="q2_a_msg" style="display:none;color:red">This is not correct as B comes before S in the alphabet.</p>
+    <p id="q2_b_msg" style="display:none;color:green">Correct.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+    <p>In JavaScript what is the value of <code>"12" + "2"</code>?</p>
+    <p>
+    <input name="q3" id="q3a" type="radio" value="a" onChange="check_q(this.name);kbase();">
+    <label          for="q3a">14</label><br>
+    <input name="q3" id="q3b" type="radio" value="b" onChange="check_q(this.name);kbase();">
+    <label          for="q3b">122</label><br>
+    </p>
+    <p id="q3_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
+    <p id="q3_b_msg" style="display:none;color:green">That's right, by placing the numbers inside quatation marks, you've decalred them as strings.</p>
+
+    <hr style="border:0px solid #fff;border-top:1px solid #aaa">
+
+
+    </div>
+    <div class="section">
+
+      <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
+        <span class="subtitle">~20 min <sup></h2>
+      <p>
+        As we do at the end of every level, we ask that you take a few minutes to reflect on how things are going. I've also included a set of reading questions to queue things up for our synchronous discussion. Your answers will be shared with me and it will let me know that I can look for any project work you may have posted to GitHub. That being said, you've almost completed Level 2. Tell me how it's going by completing the form linked below.
+      </p>
+
+      <div style="float:left;width:100%;margin: 15px 0 30px 0;">
+        <div class="log_button_frame">
+          <a href="../../checkins/level_02" target="_blank"><div class="log_button">Log and reflect on your work</div></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <h2>Your Mission (Part II): Do They Qualify?<a href="#mission_p2" name="mission_p2" class="anchor"></a><br/>
+        <span class="subtitle">Video: 12.5-25 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
+        Work: ~30 Minutes</span></h2>
+
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="https://www.youtube.com/embed/mIy2DZkdjS8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <p>Here's the <a href="https://www.qnamarkup.org/?source=https://suffolklitlab.org/howto/qna/examples/ma_assignmnet.txt" target="_blank">MA Indigency Calculator</a> from the video above, plus the example interviews: <a href="https://www.qnamarkup.org/?markup=Q(temp):+hot+or+cold%3F+%0D%0AA:+hot%0D%0A%09Q(1.1):GOTO:sweet%0D%0AA:+cold%0D%0A%09Q(1.2):GOTO:sweet%0D%0A%0D%0AQ(sweet):+sweet+or+bitter%3F%0D%0AA[javascript:if+(getvar(%27temp%27)%3D%3D%27hot%27)+{goto(%27coco%27)}+else+{goto(%27milk%27)}]:+sweet%0D%0AA[javascript:if+(getvar(%27temp%27)%3D%3D%27cold%27)+{goto(%27iced%27)}+else+{goto(%27coffee%27)}]:+bitter+%0D%0A%0D%0AQ(coffee):+Coffee!!!%0D%0A%0D%0AQ(coco):+Hot+Coco!!!%0D%0A%0D%0AQ(iced):+Iced+Coffee!!!%0D%0A%0D%0AQ(milk):+Chocolate+milk!!!&font_family=Verdana,+Geneva,+sans-serif&font_size=14&line_height=20&col_width=500&frame_pad=15&radius=15&comp_bg=5489eb&comp_txt=ffffff&comp_link=e3fbfc&usr_bg=eeeeee&usr_txt=000000&usr_link=0000ff&sharing=1" target="_blank">What Drink?</a>;
+
+        <a href="https://www.qnamarkup.org/?markup=Q(number):+What%27s+the+answer+to+the+ultimate+question+of+life,+the+universe+and+everything%3F%0D%0AX[javascript:if+(getvar(%27number%27)%3D%3D42)+{goto(%27right%27)}+else+if+(getvar(%27number%27)%3C42){goto(%27low%27)}+else+if+(getvar(%27number%27)%3E42){goto(%27high%27)}+else+{goto(%27nan%27)}]:number%0AQ(right):+That%27s+right!%0D%0A%0D%0AQ(low):+Too+low.+GOTO:number%0D%0A%0D%0AQ(high):+Too+High.+GOTO:number%0D%0A%0D%0AQ(nan):+So+it+turns+out+the+answer+is+a+number,+and+that%27s+not+a+number.+GOTO:number%0D%0A&font_family=Verdana,+Geneva,+sans-serif&font_size=14&line_height=20&col_width=500&frame_pad=15&radius=15&comp_bg=5489eb&comp_txt=ffffff&comp_link=e3fbfc&usr_bg=eeeeee&usr_txt=000000&usr_link=0000ff&sharing=1" target="_blank">The Ultimate Question</a>; and
+
+        <a href="https://www.qnamarkup.org/?markup=Title%3A+Magic+8+Ball%0D%0ABefore%3A+%0D%0A%3Cdiv+style%3D%22background%3Ablack%3Bborder-radius%3A50%25%3Bwidth%3A120px%3Bheight%3A120px%3Bmargin%3A0+auto+30px+auto%3Bpadding%3A25px+0%3Bbox-sizing%3A+border-box%3B%22%3E%0D%0A%3Cdiv+style%3D%22background%3Awhite%3Bborder-radius%3A50%25%3Bwidth%3A50px%3Bheight%3A50px%3Bmargin%3A0px+auto%3Bcolor%3Ablack%3Bfont-size%3A40px%3Bline-height%3A50px%3Btext-align%3Acenter%3B%22%3E8%3C%2Fdiv%3E%0D%0A%3C%2Fdiv%3E%0D%0ATitle%3A+Ask+me+a+question.%0D%0ADescription%3A+With+apologies+to+%3Ca+href%3D%22https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMagic_8-Ball%22+target%3D%22_blank%22%3Ethe+magic+8+ball%3C%2Fa%3E.+%0D%0A%0D%0AQ%281%29%3A+Ask+me+a+yes+or+no+question.%0D%0AX%5Bjavascript%3Agoto%28Math.floor%28Math.random%28%29+%2A+20%29+%2B+2%29%5D%3A%0AQ%282%29%3A+Signs+point+to+yes.+GOTO%3Amore+%0D%0AQ%283%29%3A+Signs+point+to+no.+GOTO%3Amore+%0D%0AQ%284%29%3A+It+is+decidedly+so.+GOTO%3Amore+%0D%0AQ%285%29%3A+Without+a+doubt.+GOTO%3Amore+%0D%0AQ%286%29%3A+Yes+definitely.+GOTO%3Amore+%0D%0AQ%287%29%3A+You+may+rely+on+it.+GOTO%3Amore+%0D%0AQ%288%29%3A+As+I+see+it%2C+yes.+GOTO%3Amore+%0D%0AQ%289%29%3A+Most+likely.+GOTO%3Amore+%0D%0AQ%2810%29%3A+Outlook+good.+GOTO%3Amore+%0D%0AQ%2811%29%3A+Yes.+GOTO%3Amore+%0D%0AQ%2812%29%3A+Signs+point+to+yes.+GOTO%3Amore+%0D%0AQ%2813%29%3A+Reply+hazy+try+again.+GOTO%3Amore+%0D%0AQ%2814%29%3A+Ask+again+later.+GOTO%3Amore+%0D%0AQ%2815%29%3A+Better+not+tell+you+now.+GOTO%3Amore+%0D%0AQ%2816%29%3A+Cannot+predict+now.+GOTO%3Amore+%0D%0AQ%2817%29%3A+Concentrate+and+ask+again.+GOTO%3Amore+%0D%0AQ%2818%29%3A+Don%27t+count+on+it.+GOTO%3Amore+%0D%0AQ%2819%29%3A+My+reply+is+no.+GOTO%3Amore+%0D%0AQ%2820%29%3A+My+sources+say+no.+GOTO%3Amore+%0D%0AQ%2821%29%3A+Outlook+not+so+good.+GOTO%3Amore+%0D%0AQ%2822%29%3A+Very+doubtful.+GOTO%3Amore+%0D%0A%0D%0AQ%28more%29%3A+Another+question%3F+Ask+away.%0D%0AX%5Bjavascript%3Agoto%28Math.floor%28Math.random%28%29+%2A+20%29+%2B+2%29%5D%3A&font_family=Verdana%2C+Geneva%2C+sans-serif&font_size=14&line_height=20&col_width=500&frame_pad=15&radius=15&comp_bg=5489eb&comp_txt=ffffff&comp_link=e3fbfc&usr_bg=eeeeee&usr_txt=000000&usr_link=0000ff&sharing=1" target="_blank">Magic 8 Ball</a> (bonus example).</p>
+
+        <p>Once you have created a new flowchart, take a picture with your phone (if you drew it on paper, a white board, or the like) or a screenshot/download (if you used something like <a href="https://www.zenflowchart.com/" target="_blank">zenflowchart</a>). Upload your flowchart to your ctl GitHub repo and the name "indigency_flowchart_v2", the file extension doesn't matter, but .png, .jpg, or .pdf are preferred. Check to make sure that you can see your flowchart at the appropriate URL. For example:</p>
+
+        <code>https://[your username].github.io/ctl/indigency_flowchart_v2.png</code>
+
+        <p>Note that this file's name should include the suffix <code>_v2</code>.
+
+      </div>
+      <div class="section">
+
+      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">1 hour | August 31, 2020 @ 4pm Eastern</span></h2>
+
+      <p>If you're an enrolled student, we'll be meeting at <a href="../../class" target="_blank">this link</a> on Monday August 31th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+
+      <p>We will use this time to: (1) troubleshoot any issues folks might have had working through the <a href="#knowledge">knowledge base</a>; (2) start work on <a href="#mission_p2">the second part of your mission</a>; and (3) discuss the readings.</p>
+
+      <p><b>Stretch Goal:</b> Split your QnA and any JavaScript function(s) into separate files, with the QnA referencing a .js file (e.g., including the following in your “Before” tag <code>&lt;script src="https://[your username].github.io/ctl/functions.js">&lt;/script></code>). This allows for the sharing of a single set of functions across different QnAs. So if they need to change (like when the guidelines get updated), there’s only one place to make that change. See <a href="https://www.w3schools.com/tags/att_script_src.asp" target="_blank">HTML &lt;script> src Attribute</a>.</p>
+
+              <p>When building your interview, be sure to include a variation of our disclaimer.</p>
+
+        <pre style="background:#eee;padding:15px;overflow-x:scroll;">
+Title: Indigency "Flowchart"
+Author: [your name]
+Before: &lt;link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+&lt;div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');">&lt;/div>
+&lt;h2 style="text-align:center;">Indigency "Flowchart"&lt;/h2>
+&lt;p>&lt;b>This is a &lt;a href="https://www.codingthelaw.org/level/2/#mission_p1">class project&lt;/a>. You should not rely on it as a source of legal information!&lt;/b>&lt;/p>
+&lt;p>Answer the following questions to see if you qualify for appointed counsel in [insert state name].&lt;/p>
+    </pre>
+
+              <p>Once you have finished your QnA interview, upload both the source code and HTML output to:</p>
+              <p><code>https://[your username].github.io/ctl/indigency_v2.txt</code> and</p>
+              <p><code>https://[your username].github.io/ctl/indigency_v2.html</code> respectively.</p>
+
+              <p>Note that these bare the suffix <code>_v2</code>.
+
+      <div class="button_row">
+         <a href="../../"><div class="button">Previous Level</div></a>
+         <a href="../3/"><div class="button" style="float:right;">Next Level</div></a>
+      </div>
+
+    </div>
+
+      <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
+
+    <div class="footer">
+      <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
+      <span style="float:right">
+        Last updated 2020-11-17
+      </span>
+    </div>
+
+  </div>
+</div>
+
+</FORM>
+<script src="../../js_bin/game.js"></script>
+<script>
+
+  var level = "2021_2";
+  var num_Qs = 3;
+
+  var i;
+  for (i = 1; i < num_Qs+1; i++) {
+    if (readCookie('l'+level+'q'+i)){
+       $('#q'+ i + readCookie('l'+level+'q'+i)).prop('checked',true);
+    }
+    check_q('q'+i);
+  }
+
+  function kbase() {
+    // what triggers the hide?
+    if (check_q('q1') == "c") { $('#q1_div').hide(); } else { $('#q1_div').show(); }
+  }
+
+  kbase();
+
+  if (readCookie('l'+level+'timer')){
+    $('#timer').val(readCookie('l'+level+'timer'));
+    find_sec();
+     if (seconds >= 60) {
+         seconds = 0;
+         minutes++;
+         if (minutes >= 60) {
+             minutes = 0;
+             hours++;
+         }
+     }
+     $('#timer').val( (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds) );
+  } else {
+    var seconds = 0, minutes = 0, hours = 0, t;
+  }
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $('#timer_div').css("display", "none");
+  }
+
+</script>
+</BODY>
+</HTML>
