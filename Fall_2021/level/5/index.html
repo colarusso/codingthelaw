@@ -46,7 +46,7 @@
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
 
-  <div class="alert_1" style="display:show;"><b>Under Construction.</b> The Fall 2021 version of this class is under construction and will change a lot before it goes live. Do not rely on any content you find here.  The most recent version of this class can be found <a href="../../../">here</a>.</div>
+  <div class="alert_1" style="display:none;"><b>Under Construction.</b> The Fall 2021 version of this class is under construction and will change a lot before it goes live. Do not rely on any content you find here.  The most recent version of this class can be found <a href="../../../">here</a>.</div>
 
   <div id="timer_div" class="timer_div">
   	<div style="float:left;margin-right:3px;"><input id="timer" type=text style="width:76px;height:24px;font-size:18px;line-height:18px;text-align:center;border:0px;background:#fff;margin:0 5px" value="00:00:00" onfocus="pause_time();" onChange="find_sec();"></div>
@@ -114,11 +114,12 @@
         </select>
       </span>
 
+<div style="display:none;">
       <div class="section">
 
       <h2 style="margin-top:10px">
         Regular Expressions (Regex)<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
-        <span class="subtitle">13-26 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+        <span class="subtitle">13-26 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
       </h2>
 
       <p>FYI, I jump right in to the deep end here, but don't worry, by the time you work through this level you'll have had ample time to play around. Just let this video wash over you. Hopefully, things will start to click about half way through <a href="#mission_p1">your crossword</a>. ;) Remember, you can always ask for help on our Slack channel.</p>
@@ -216,7 +217,7 @@
     <div id="q1_div" class="section">
 
       <h3>Build A Bookmarklet<a href="#bookmarklet" name="bookmarklet" class="anchor"></a><br/>
-        <span class="subtitle">Video: ~5-10 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
+        <span class="subtitle">Video: ~5-10 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h3>
       <div class="vid_wrapper">
         <div class="profile_vid">
           <iframe class="embed_vid" src="https://www.youtube.com/embed/EQCCcY5MNWA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
@@ -267,7 +268,7 @@ document.body.innerHTML = document.body.innerHTML.replace(regex, replace_str);
     <div class="section">
 
       <h2>Your Mission: Regex Crossword<a href="#mission_p1" name="mission_p1" class="anchor"></a><br/>
-        <span class="subtitle">Video: ~3-5 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
+        <span class="subtitle">Video: ~3-5 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
         Game Play: 55 Minutes</span></h2>
 
         <div class="vid_wrapper">
@@ -291,7 +292,7 @@ document.body.innerHTML = document.body.innerHTML.replace(regex, replace_str);
     <div class="section">
 
       <h2>Your Mission:<a href="#mission_p2" name="mission_p2" class="anchor"></a><br/>
-        <span class="subtitle">Video: ~3-6 Minutes. Protip: You can <a href="https://www.businessinsider.com/how-to-speed-up-youtube-videos" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h2>
+        <span class="subtitle">Video: ~3-6 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span></h2>
         <div class="vid_wrapper">
           <div class="profile_vid">
             <iframe class="embed_vid" src="https://www.youtube.com/embed/YZv4ElEIM0A" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
@@ -332,25 +333,32 @@ document.body.innerHTML = document.body.innerHTML.replace(regex, replace_str);
       </div>
 
     </div>
-    <div class="section">
 
-      <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
-        <span class="subtitle">1 Hour and 30 Minutes | September 28, 2020 @ 4pm Eastern</span></h2>
-      <p>If you're an enrolled student, we'll be meeting at <a href="../../class" target="_blank">this link</a> on Monday September 28th at 4pm via Zoom. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+    <div class="section">
+      <h2>
+        Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
+        <span class="subtitle">1 Hour and 30 Minutes | September 27, 2021 @ 4pm Eastern</span>
+      </h2>
+
+      <p>If you're an enrolled student, we'll be meeting in Sargent Hall Room 205 on Monday September 27th at 4pm. Our remote backup is to meet via Zoom at <a href="../../class" target="_blank">this link</a>. You should have received the password from me earlier. If you don't have the password, and you are a registered student, DM me on Slack, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
+
       <p>We will use this time to: (1) work through part II of your challenge; and (2) discuss the <a href="#readings">readings</a>.</p>
+
       <div class="button_row">
          <a href="../4/"><div class="button">Previous Level</div></a>
          <a href="../6/"><div class="button" style="float:right;">Next Level</div></a>
       </div>
-
     </div>
 
       <i><a name="dagger"><sup>&dagger;</sup></a> Time estimates are just that—estimates. The assumptions used to calculate reading time are as follows: 48 pages is assumed to take roughly an hour to read. When working with non paginated texts, it is assumed that a page is roughly equal to 250 words. Videos assume both 2X and 1X viewing. Estimates for coding are based on past experience. Each level should include about 6 hours and 40 min of work.</i>
 
-    <div class="footer">
+</div>
+<center>Coming Soon!</center>
+
+<div class="footer">
       <a href="https://twitter.com/colarusso" target="_blank">@Colarusso</a>
       <span style="float:right">
-        Last updated 2020-09-21
+        Last updated 2021-08-10
       </span>
     </div>
 
