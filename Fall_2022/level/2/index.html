@@ -96,23 +96,41 @@
 
 <div class="content_frame">
   <div class="content">
-    <span class="breadcrumb">
-        <select onChange="window.location.href=this.value">
-          <option value="../1">Level 1: Monday August 29, 2022</option>
-          <option value="../2" SELECTED>Level 2: Monday September 12, 2022</option>
-          <option value="../3">Level 3: Monday September 19, 2022</option>
-          <option value="../4">Level 4: Monday September 26, 2022</option>
-          <option value="../5">Level 5: Monday October 3, 2022</option>
-          <option value="../6">Level 6: TUESDAY October 11, 2022</option>
-          <option value="../7">Level 7: Monday October 17, 2022</option>
-          <option value="../8">Level 8: Monday October 24, 2022</option>
-          <option value="../9">Level 9: Monday October 31, 2022</option>
-          <option value="../10">Level 10: Monday November 7, 2022</option>
-          <option value="../11">Level 11: Monday November 14, 2022</option>
-          <option value="../12">Level 12: Monday November 21, 2022</option>
-          <option value="../13">Level 13: Monday November 28, 2022</option>
-        </select>
-    </span>
+
+    <div class="top_bar">
+      <div class="search">
+        <table cellpadding="0px"><tr><td width="100%">
+          <input id="q" style="width:100%">
+          </td><td width="1%">&nbsp;&nbsp;&nbsp;</td><td width="1%">
+          <input type="button" value="Search" onClick="open_search('Fall_2022');">
+          </td></tr></table>
+          <script>
+              $("#q").on('keyup', function (e) {
+                  if (e.key === 'Enter' || e.keyCode === 13) {
+                      open_search('Fall_2022')
+                  }
+              });
+          </script>
+        </table>
+      </div>
+      <span class="breadcrumb">
+          <select onChange="window.location.href=this.value">
+            <option value="../1">Level 1: Monday August 29, 2022</option>
+            <option value="../2" SELECTED>Level 2: Monday September 12, 2022</option>
+            <option value="../3">Level 3: Monday September 19, 2022</option>
+            <option value="../4">Level 4: Monday September 26, 2022</option>
+            <option value="../5">Level 5: Monday October 3, 2022</option>
+            <option value="../6">Level 6: TUESDAY October 11, 2022</option>
+            <option value="../7">Level 7: Monday October 17, 2022</option>
+            <option value="../8">Level 8: Monday October 24, 2022</option>
+            <option value="../9">Level 9: Monday October 31, 2022</option>
+            <option value="../10">Level 10: Monday November 7, 2022</option>
+            <option value="../11">Level 11: Monday November 14, 2022</option>
+            <option value="../12">Level 12: Monday November 21, 2022</option>
+            <option value="../13">Level 13: Monday November 28, 2022</option>
+          </select>
+      </span>
+    </div>
 
     <div class="section">
 
