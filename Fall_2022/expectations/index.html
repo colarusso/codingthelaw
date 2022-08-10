@@ -82,6 +82,21 @@
 <div class="content_frame">
   <div class="content">
     <div class="top_bar">
+      <div class="search">
+        <table cellpadding="0px"><tr><td width="100%">
+          <input id="q" style="width:100%">
+          </td><td width="1%">&nbsp;&nbsp;&nbsp;</td><td width="1%">
+          <input type="button" value="Search" onClick="open_search('Fall_2022');">
+          </td></tr></table>
+          <script>
+              $("#q").on('keyup', function (e) {
+                  if (e.key === 'Enter' || e.keyCode === 13) {
+                      open_search('Fall_2022')
+                  }
+              });
+          </script>
+        </table>
+      </div>
       <span class="breadcrumb"><a href="../level/1">Home</a> &raquo; Expectations</span>
     </div>
 
