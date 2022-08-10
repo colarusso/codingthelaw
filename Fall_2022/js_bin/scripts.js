@@ -1,3 +1,11 @@
+function open_search(folder){
+		alert('Coming Soon!');
+}
+
+function open_search_(folder){
+		window.open('https://www.google.com/search?q='+$('#q').val()+'+site:codingthelaw.org/'+folder+'/')
+}
+
 function createCookie(name,value,days) {
 		if (days) {
 			var date = new Date();

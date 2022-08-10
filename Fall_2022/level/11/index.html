@@ -96,6 +96,24 @@
 
 <div class="content_frame">
   <div class="content">
+
+
+    <div class="top_bar">
+      <div class="search">
+        <table cellpadding="0px"><tr><td width="100%">
+          <input id="q" style="width:100%">
+          </td><td width="1%">&nbsp;&nbsp;&nbsp;</td><td width="1%">
+          <input type="button" value="Search" onClick="open_search('Fall_2022');">
+          </td></tr></table>
+          <script>
+              $("#q").on('keyup', function (e) {
+                  if (e.key === 'Enter' || e.keyCode === 13) {
+                      open_search('Fall_2022')
+                  }
+              });
+          </script>
+        </table>
+      </div>
       <span class="breadcrumb">
         <select onChange="window.location.href=this.value">
           <option value="../1">Level 1: Monday August 29, 2022</option>
@@ -113,7 +131,8 @@
           <option value="../13">Level 13: Monday November 28, 2022</option>
         </select>
       </span>
-
+    </div>
+    
       <div class="section">
 
         <h2 style="margin-top:10px"><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
@@ -127,7 +146,7 @@
       <div class="section">
 
         <h2><a href="#speaker" name="speaker" class="anchor"></a>This Level's Guest Speaker:</h2>
-        <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../../images/steenhuis.jpg');background-size:260px;background-position: -25px 0px;"></div></div>
+        <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../../images/steenhuis.jpg');background-size:220px;background-position: -5px -30px;"></div></div>
         <p class="profile_title"><b>Quinten Steenhuis</b>, Clinical Fellow</p>
         <p>Quinten Steenhuis is a clinical fellow in the Legal Innovation and Technology Lab. Quinten has practiced housing and eviction defense law since 2008, and has been a professional programmer and web application developer since 2001. He speaks at area law schools and blogs frequently on the topic of legal technology. He works on projects addressing social justice and access to justice with technology focusing on the topic of housing and evictions. Quinten is an active member of his local community, serving as an appointed member of the City of Cambridge's Recycling Advisory Committee, serving on the Access to Justice Commission's working group on housing through the Justice for All initiative, founding a neighborhood political action group, and serving as the long-time president of a <a href="https://www.meetup.com/Scrabble-Enthusiasts-of-Boston/">Scrabble club in Somerville, MA</a>. He received his B.Sc. in Logic and Computation with an additional B.Sc. in Political Science from Carnegie Mellon University and J.D. from Cornell Law School.</p>
       	<p style="text-align:right;">
@@ -139,18 +158,14 @@
       </div>
 
 
-    <!--<div class="section">
+      <div class="section">
 
-      <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
-        <span class="subtitle">~ ? Minutes</span>
-      </h2>
-      <p>TBD</p>
-      <ul>
-        <li><a href="" target="_blank">title</a> by. Read pages 1-n.</li>
-      </ul>
+        <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
+          <!--<span class="subtitle">~ x Minutes</span>-->
+        </h2>
+        <p>FWIW, you've seen Quinten Steenhuis's work before, back in <a href="../3/#readings">Level 2's readings</a>.</p>
 
-    </div>-->
-
+      </div>
     <div class="section">
 
       <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
