@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>Picker</title>
+    <script>
+    teams = [
+              "Achlys",
+              "Αether",
+              "Αion",
+              "Ananke",
+              "Chaos",
+              "Chronos",
+              "Erebus",
+              "Eros",
+              "Gaia",
+              "Hemera",
+              "Hypnos",
+              "Nemesis",
+              "Nesoi",
+              "Nyx",
+              "Ourea",
+              "Pontus",
+              "Tartarus",
+              "Thalassa",
+              "Thanatos",
+              "Uranus",
+              "Cronus",
+              "Rhea",
+              "Oceanus",
+              "Tethys",
+              "Hyperion",
+              "Theia",
+              "Iapetus",
+              "Crius",
+              "Coeus",
+              "Phoebe",
+              "Themis",
+              "Mnemosyne",
+              "Zeus",
+              "Demeter",
+              "Poseidon",
+              "Hades",
+              "Hera",
+              "Apollo",
+              "Artemis",
+              "Aphrodite",
+              "Ares",
+              "Hephaestus",
+              "Hermes",
+              "Athena",
+              "Dionysus",
+              "Hestia",
+              "Hecate",
+              "Aeolus",
+              "Asclepius",
+              "Eris",
+              "Pan"
+            ]
+    function splitArrayIntoChunksOfLen(len) {
+      teams = teams.sort(() => Math.random() - 0.5)
+      var students= document.getElementById('students').value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim().split("\n");
+      students = students.sort(() => Math.random() - 0.5)
+      var chunks = [], i = 0, n = students.length;
+      var group_size = Math.floor(n/(len))
+      var left_over = n - group_size*(len)
+      if (group_size<2){
+        alert("To ensure no groups of one, I'm reseting to "+Math.floor(n/2)+" groups.")
+        len = Math.floor(n/2)
+        document.getElementById('n').value = len
+        group_size = Math.floor(n/(len))
+        left_over = n - group_size*(len)
+      }
+      k = 1
+      while (i < n) {
+        //console.log(n,len,group_size,left_over)
+        if (k<=(Math.floor(Math.abs(left_over)))) {
+          this_group = group_size + 1
+        } else {
+          this_group = group_size
+        }
+        //this_group = group_size
+        chunks.push(students.slice(i, i += this_group));
+        k+=1
+      }
+      j = 0
+      document.getElementById('groups').value = ""
+      for (const x of chunks) {
+       document.getElementById('groups').value += "----------------------\n"
+       document.getElementById('groups').value += j+1 + ". Team "+teams[j]+"\n"
+       document.getElementById('groups').value += x.join("\n")
+       document.getElementById('groups').value += "\n\n"
+       j+=1
+      }
+      return chunks
+    }
+    function one_random(){
+      var students= document.getElementById('students').value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim().split("\n");
+      var exclude= document.getElementById('exclude').value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim().split("\n");
+      students = students.filter(x => !exclude.includes(x));
+      student = students[Math.floor(Math.random()*students.length)];
+
+      if (student) {
+        document.getElementById('groups').value =  student
+        document.getElementById('exclude').value += student+"\n"
+        localStorage.setItem('exclude', document.getElementById('exclude').value);
+        document.getElementById("exclude").style.height = (document.getElementById("exclude").style.height.slice(0,-2)*1+16)+"px"
+      } else {
+        alert("All inputs are in the list of excluded items. Clear the list of excluded items to have something to pick.")
+      }
+      count_input();
+    }
+    function clear_exclude() {
+      document.getElementById('exclude').value = ""
+      localStorage.setItem('exclude', document.getElementById('exclude').value);
+      count_input();
+    }
+    function count_input(){
+      var students= document.getElementById('students').value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim().split("\n");
+      if (students[0]=='' && students.length==1) {
+        length = 0
+      } else {
+        length = students.length
+      }
+      document.getElementById('count').innerHTML =  length;
+      var exclude = document.getElementById('exclude').value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim().split("\n");
+      if (exclude[0]=='' && exclude.length==1) {
+        length2 = 0
+      } else {
+        length2 = exclude.length
+      }
+      document.getElementById('count2').innerHTML =  length2;
+      document.getElementById("exclude").style.height = (length2*16+30)+"px"
+      localStorage.setItem('n', document.getElementById('n').value);
+      localStorage.setItem('students', document.getElementById('students').value);
+      localStorage.setItem('exclude', document.getElementById('exclude').value);
+    }
+    function load_vars(){
+      //localStorage.clear();
+      if (localStorage.getItem('n')){
+        document.getElementById('n').value = localStorage.getItem('n');
+      } 
+      if (localStorage.getItem('students')) {
+        document.getElementById('students').value = localStorage.getItem('students');
+      }
+      if (localStorage.getItem('exclude')){
+        document.getElementById('exclude').value = localStorage.getItem('exclude');
+      }
+    }
+
+    </script>
+    <style>
+    textarea{
+      box-sizing: border-box;
+      width:100%;
+      height:100%;
+      background:#eee;
+    }
+    </style>
+  </head>
+  <body onLoad="load_vars();count_input();">
+
+  <div style="position:absolute;left:0;right:0;top:0;bottom:0;padding:15px">
+  <table border=0 cellpadding=5 width="100%" height="100%"><tr><td colspan="3" height="1%">
+    <input type="button" onClick="one_random()" value="Pick Input at Random" style="width:100%;">
+  </td></tr>
+    <td height="1%" width="1%" style="text-align:right;">
+    Try for <input id="n" type="number" value="4" style="width:75px;" onChange="count_input();"> groups.
+  </td><td height="1%" width="25%">
+    <input type="button" onClick="chunks = splitArrayIntoChunksOfLen(document.getElementById('n').value)" value="Make n Random Groups" style="width:100%;">
+  </td><td height="1%" width="25%">
+    <input type="button" onClick="chunks = splitArrayIntoChunksOfLen(10000000)" value="Minimize Group Size" style="width:100%;">
+  </td></tr>
+  <tr><td width="50%" height="1%">
+    Input (<span id="count">0</span>)</br>
+  </td><td colspan="2" height="1%">
+    <div style="padding-left:15px;height:100%;">
+      Output
+    </div>
+  </td></tr>
+  <tr><td>
+    <textarea id="students" onChange="localStorage.setItem('students', this.value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim());count_input();">
+Socrates
+Plato
+Aristotle
+Thales of Miletus
+Pythagoras
+Democritus
+Empedokles
+Anaxagoras
+Anaximander
+Epicurus
+    </textarea>
+  </td><td rowspan="3" colspan="2" width="45%" height="100%">
+    <div style="padding-left:15px;height:100%;">
+      <textarea id="groups"></textarea>
+    </div>
+  </td></tr><tr><td height="1%">
+    <hr>
+    <input type="button" onClick="clear_exclude()" value="Clear" style="width:100px;float:right;">
+    Exclude from Random Pick (<span id="count2">0</span>)
+  </tr><tr><td height="1%">
+    <textarea id="exclude" style="height:20px;" onChange="localStorage.setItem('exclude', this.value.replace(/ +/g, ' ').replace(/\s{2,}/g, '\n').trim());count_input();"></textarea>
+  </td></tr><tr><td colspan="3" height="1%">
+    <p style="text-align:center;">
+      Made by <a href="https://twitter.com/colarusso" target="_blank">Colarusso</a> for <a href="https://www.codingthelaw.org/" target="_blank">Coding the Law</a>
+    </p>
+  </td></tr>
+  </table>
+  </div>
+  </body>
+</HTML>
