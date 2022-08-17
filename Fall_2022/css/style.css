@@ -275,6 +275,10 @@ float:left;width:100%;
 	text-transform: uppercase;
 }
 
+.level_pulldown {
+	width:315px;
+}
+
 .search{
 	float:right;
 	width:250px;
@@ -560,6 +564,13 @@ margin:0 auto; width:400px;
 		width:100%;
 		margin:7px 0 20px 0;
 	}
+	.breadcrumb {
+		width:100%;
+	}
+	.level_pulldown {
+		width:90%;
+	}
+
 }
 
 @media only screen and (max-width: 492px) {
