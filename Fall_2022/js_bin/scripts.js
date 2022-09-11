@@ -1,8 +1,8 @@
-function open_search(folder){
+function open_search_(folder){
 		alert('Coming Soon!');
 }
 
-function open_search_(folder){
+function open_search(folder){
 		window.open('https://www.google.com/search?q='+$('#q').val()+'+site:codingthelaw.org/'+folder+'/')
 }
 
