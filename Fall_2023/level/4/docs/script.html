@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<title>Coding the Law: An Introduction to Algorithms in the Law</title>
+  <link rel="stylesheet" type="text/css" href="../../css/style.css?build=44">
+
+  <style>
+  body{
+        transform: scale(-1, 1);
+      	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      	font-size: 35px;
+      	line-height: 45px;
+        color:white;
+        background:black;
+      }
+  </style>
+  <script>
+    //var i = 1;
+    function pageScroll() {
+      window.scrollBy(0,1);
+      //scrolldelay = setTimeout(pageScroll,22);
+      //if (i%1500==0) {
+        //document.getElementById("p1").remove();
+        //console.log("at "+i+" removed");
+      //}
+      //i += 1;
+    }
+  </script>
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0"><FORM name="FORM" id="FORM">
+<div style="float:left;width:100%;">
+<div style="margin:100px 0 0 0;width:100%;text-align:center;transform: scale(1, -1);">
+  <a href="javascript:void('')" onCLick="setInterval(pageScroll, 25);" style="color:white;">Start</a>
+</div>
+<div id="text_div" class="content" style="width:300px;margin:0px auto 1500px auto; text-align: justify;  text-justify: inter-word;">
+<p style="text-align:center;">4</p>
+<p style="text-align:center;">3</p>
+<p style="text-align:center;">2</p>
+<p style="text-align:center;">1</p>
+<p id="p1" style="text-align:center;">....</p>
+<p id="p1">
+  Portland's relationships with federal law enforcement and technology have both been in the news lately, be it as the epicenter of unwanted federal involvement or as the location of the  nation's most restrictive facial recognition ban, but today I want to take you back in time to 2017.
+</p><p id="p1">
+  The National Institute of Justice had just announced the winners of one point two million dollars in prizes for its Crime Forecasting Challenge. The challenge asked data scientists to develop algorithms to better predict the occurrence of crimes based on location.
+</p><p id="p1">
+  Thankfully, team Anderton (named for the precrime division head in Philip. K. Dick’s <i>Minority Report</i>) collected none of that prize money. I say “thankfully” because I was Team Anderton.
+</p><p id="p1">
+  Team Anderton was a canary in the data mine. Dashed off over two weekends, its forecasts embodied my greatest fears for predictive policing. If it fared well it meant trouble. Luckily, it did not, but it still has something to teach us. What follows is the story of Team Anderton, a companion to the classic <i>How to Lie with Statistics</i> updated for the digital age. Fed by inexpensive computing, statistics has a new name: data science. And though it can be used for good, there is a dark side. As attorneys, we must be mindful that such misuse threatens the rights we have sworn to protect.
+  <hr>
+</p><p id="p1">
+  The competition asked entrants to make place-based predictions for crimes occurring in Portland Oregon over the three month period beginning March 1, 2017. These predictions were to cover different criminal offense types (e.g., burglary and motor vehicle theft) over a variety of timeframes (i.e., one week, two weeks, one month, two months, and three months).
+</p><p id="p1">
+  You can think of these forecasts as weather maps, except instead of predicting rain they aimed to predict criminal activity. Specifically, they asked participants to divide a map of Portland into a collection of cells and predict whether or not each cell was or was not a hotspot—an area in which one is likely to find calls for police service. These predictions were to be collected and over the ensuing months, NIJ would compare them with the reality on the ground as it unfolded.
+</p><p id="p1">
+  To inform predictions, the Portland Police Bureau provided five years of records containing individual calls for service, their type (e.g., burglary and motor vehicle theft), location, and date of the call.
+</p><p id="p1">
+  I learned of the challenge from this sponsored tweet put out by the MIT Tech Review.
+</p><p id="p1">
+      "Enter the National Institute of Justice's Real-Time Crime Forecasting Challenge"
+</p><p id="p1">
+  As you have, I had read Cathy O’Neil’s chapter on the dangers of predictive policing, and though I really wanted to write something explaining all of the dangers such a well-intentioned competition was likely to face, I wasn’t sure what more I could add to the growing chorus of concern surrounding algorithmic bias. Little did I know I'd only have to wait a few years for the MIT Tech Review to join that chorus.
+</p><p id="p1">
+  The title: "Predictive policing algorithms are racist. They must be dismantled." There's a link to the article in the optional reading below.
+</p><p id="p1">
+  Anyhow, when I saw that first tweet, that's when I hit on the canary idea. It’s one thing to talk about how algorithms go bad, but to show the banal birth of such an algorithm seemed like a story worth telling.
+  <hr>
+</p><p id="p1">
+  The challenge rules spelled out its goals like this:
+</p><p id="p1">
+  "The Real-Time Crime Forecasting Challenge seeks to harness the advances in data science to address the challenges of crime and justice. It encourages data scientists across all scientific disciplines to foster innovation in forecasting methods. The goal is to develop algorithms that advance place-based crime forecasting through the use of data from one police jurisdiction."
+</p><p id="p1">
+  I've framed this tale as one of data science and algorithms gone bad. However, the missteps I describe are not exclusive to data science. In fairness, the term “data science” is still a bit contentious, meaning different things to different people, so some clarification is warranted. Here, we will be looking at data science broadly as it relates to the construction of models aimed at describing, classifying, and predicting events in the world. We will apply the most general meaning of the term “algorithm”—a set of instructions one must follow to transform a set of inputs into a set of statements about the world as seen by our models.
+</p><p id="p1">
+  What makes data science data science is the means by which it constructs models. Customarily this means looking for patterns in some subset of historical data, building a model based on these patterns (training), and then testing (validating) this model against the remaining data. In later videos we'll talk about how this overlaps the field of machine learning, but...
+</p><p id="p1">
+  In practical terms, the final product is an algorithm that answers a question based on a set of inputs and its historic training data. So when a risk assessment tool says it’s providing a statement about someone’s likelihood to re-offend based on a few simple questions, there’s actually a whole set of assumptions baked in. Those assumptions are an outgrowth of whatever data it was trained on. Spoiler alert: this is often where bias slips in.
+<hr>
+</p><p id="p1">
+  Once I read a press report on a legal tech startup that claimed it could predict the outcomes of legal matters with 71% accuracy. Upon reading this I chuckled to myself because accuracy is probably the wrong metric for success.
+</p><p id="p1">
+  <i>~Princess Bride~</i>
+</p><p id="p1">
+  Why the concern? Because the distribution of winners and losers is probably unbalanced. Consider SCOTUS cases. A set of legal scholars polled for their predictions on SCOTUS outcomes came in with an accuracy of 59%, but it is well known that in the modern Court most cases are reversed. About 63% of cases are decided in favor of the petitioner. So a simple algorithm that always predicts "the petitioner wins" would be accurate 63% of the time. This beats our legal scholars. You can be accurate without being insightful.
+</p><p id="p1">
+  Medicine has known this for quite some time. If one in twenty people have a disease and you have a “test” for this disease that always comes back negative, it will be 95% accurate and 100% worthless. So when discussing the efficacy of such tests, medical professionals tend to speak of sensitivity and specificity, measures that focus on the number of true positives and true negatives, the logical siblings of false positives and false negatives.
+</p><p id="p1">
+  Data scientists often use a similar pairing, precision and recall.
+</p><p id="p1">
+  Precision is the ratio of true positives to the sum of true positives and false positives
+</p><p id="p1">
+  And Recall is the ratio of true positives to the sum of true positives and false negatives.
+</p><p id="p1">
+  The takeaway? You can be right for the wrong reasons, and accuracy isn’t always “accurate” enough. In fact, there is a whole constellation of measures used to assess the quality of a prediction/ classification. The trick is choosing the right subset for the case at hand.
+<hr>
+</p><p id="p1">
+  Whatever the success metric, accuracy, some combination of sensitivity and specificity, or something else entirely, it’s necessary to have some measure of what’s true. If we are going to measure if an algorithm is making the right call, we need to know what the right call is. Sometimes that’s easy, but most of the time in the justice system it isn’t. After all, that’s why we have the justice system—to figure out what the right call is, which is something data scientists call “ground truth.” This is why I get anxious when people talk about replacing juries with algorithms. Often we’re just making a guess or assuming that one thing can stand in for another.
+</p><p id="p1">
+  For the policing competition, consider this simple fact. The data available for training and validation, the data against which the winners were judged is NOT actually a measure of crime. It is a measure of calls for service. If there are crimes that don’t result in calls, they might as well not exist. Consequently, the forecasts do not offer some insight into previously unseen criminal activity. They answer the question, “Where will we find crime?” with “Where we always have.” Perhaps you could account for potential sources of bias, like over-policing, by controlling for things like the frequency of police visits and neighborhood demographics, but if such a genuinely thoughtful model resulted in a map that differed from the traditional distribution of “crimes” it wouldn’t score very well. This is because we aren’t judging models based on some omniscient understanding of where crimes actually occur. We have to judge them based on available data. For challenge participants constructing and fine tuning their models, this meant historic call data: Where will we find crime? Where we always have.
+</p><p id="p1">
+  It doesn’t matter if you’re using fancy machine learning or a gut feeling, if you’re evaluating the efficacy of a model, you’re limited by your access to ground truth. If your finder of fact has to make guesses about what the right call is, you will always be saddled with their biases. What counts as true, and how you measure success matter.
+<hr>
+</p><p id="p1">
+  So what did the challenge use as a success metric? Actually, the challenge made use of two metrics: (1) something they called the Prediction Accuracy Index (PAI); and (2) another measure they called the Predictive Efficiency Index (PEI). Prizes were awarded for predictions with both the highest PAI and the highest PEI. You can find the definitions of PAI and PEI on the rules page, linked below.
+</p><p id="p1">
+  It is worth noting that only through the evaluation of PAI and PEI can one tack down the definition of a hotspot. That is, hotspots are those cells that perform well as hotspots under either the PAI or PEI rubrics. Consequently, these success metrics impose a selective pressure on the models one produces. So it’s important to remember that these different metrics embody different priorities.
+</p><p id="p1">
+  PAI is a ratio of ratios. The numerator (top part of the fraction) is the number of crimes that occurred in your hotspots divided by the total number of crimes in the study area (Portland), and the denominator (bottom part of the fraction) is a number of your hotspots’ total area divided by the total study area. The best PAI scores occur when the numerator is big (close to one) and the denominator is small (close to zero). To score well you’re trying to capture as many crimes as possible with your hotspots while using the least area.
+</p><p id="p1">
+  The competition, however, placed a lower limit on how small you can make a cell, requiring that it be at least 62,500 square feet. Consequently, it’s easy to imagine a scenario in which one achieves a high score by focusing exclusively on high-density high-value hotspots to the exclusion of those predicting a lower density of crimes. That is, it’s possible for the boost a hotspot provides to be more than canceled out by the cost imposed by its area, encouraging such a model to ignore some crimes, especially those that aren’t densely clustered. For a cell to be classified a hotspot the model has to be really hot.
+</p><p id="p1">
+  PEI, however, has a different set of priorities. It is defined as the number of crimes that occurred in your hotspots divided by the maximum number of crimes you could have gotten for an area equal in size to that of your hotspots. Consequently, the lowest density hotspots, those containing zero crimes, can come at no cost. If you called every cell in your model a hotspot you could get a perfect PEI score because the number of crimes that “occurred in your hotspots divided by the maximum number of crimes” would logically have to be equal to one (the highest possible score). Unlike PAI, the focus isn’t on finding the hottest spots but rather on making sure that you catch every last call.
+</p><p id="p1">
+  The competition mediated the greatest excesses of PAI and PEI by requiring that the total predicted area of hotspots fall between 0.25 and 0.75 square miles. So there shouldn’t be a PAI winner with a single 62,500 square-foot hotspot. Nor should there be a PEI winner with a single hotspot encompassing all of Portland.
+</p><p id="p1">
+  The tension between PAI and PEI is analogous to something called the precision-recall trade off. As a rule, models that optimize for recall are inherently optimistic about their abilities to correctly make predictions. This implies a higher tolerance for false positives than a model that focuses on precision. This is a defensible choice, but it is also a statement about priorities. The same holds true for PAI and PEI. They measure different things and represent different understandings of what it means to be the best. And this cannot be overstated, there is no single measure we can use to determine The Best algorithm, even if we believe ourselves to have access to ground truth. There are always tradeoffs.
+</p><p id="p1">
+<i>~heatmap~</i>
+</p><p id="p1">
+  I tried to think of a model that would be both intuitive and intuitively deficient, e.g., overly simplistic. I think it’s safe to assume that when most people are presented with a crime prediction algorithm they expect that model to take into account a number of features (e.g., the weather/time of year, the unemployment rate, foreclosure rate, etc.). So I wanted my models to subvert those expectations while being “good” enough to actually have a chance. I wanted the mere thought they could win to make people uncomfortable. I wanted people to understand that in some way they violated a set of unspoken expectations and by so doing draw these expectations into the discussion. I wanted to do this because all too often these expectations are shrouded in a cloud of mathematics and left unexamined. Sometime they’re even locked behind legal black boxes marked proprietary. So I decided to take the following literally. Where will we find crime? Where we have before.
+</p><p id="p1">
+  Picture a map of Portland. Now divide it into cells with the smallest possible area allowed by the rules (62,500 square feet). These cells make up squares, except where they cross the Portland border. Now go through all of the historic data and place a tile of the same size atop each cell for every call for service it received. In this way, you can imagine building up a landscape of “crimes”/calls. This landscape will include numerous hills and mountains with the highest peak atop the cell with the most calls.
+</p><p id="p1">
+  You can make different maps by looking over different time ranges or by including different crime types. Once you have these, the only question becomes how best to decide what to call a hotspot. It seems sensible that a hotspot should have more tiles/calls than non hotspots. So I could call the highest peak a hotspot, leaving everything else alone. I could call every cell with at least one tile/call a hotspot, or I could split the difference. The question is where do I draw the line. What is the cutoff point (how many tiles) must a cell have to be called a hotspot? Here’s where the success metrics come into play. All I had to do was try every conceivable cutoff point from the least to most inclusive and pick the “best.”
+</p><p id="p1">
+  To be clear, all of the entrants are likely to have gone through a similar optimization process in that they will have somehow worked to maximize their performance along the success metrics. My method is just absurdly crude.
+</p><p id="p1">
+  Here are PAI and PEI for five different models (landscapes). Each model excluded a common chunk of dates and draws from a different set of historical data (e.g., the prior two weeks, the prior six months, etc.). To determine what to call a hotspot I simply looked at the X number of cells with the most tiles/calls. So a model with 200 hotspots is comprised of the top 200 cells by tile/call count. The PAI and PEI you see are the scores for these models when used to predict the calls found in the common chunk of dates (those from which we didn’t draw tiles).
+</p><p id="p1">
+  You probably notice that the PAI is highest for a low number of hotspots while the PEI is highest for a large number. These patterns weren’t replicated in all of my models, but they were a general trend in most of them, especially those involving large call volumes. Given our understanding of PAI and PEI this isn’t surprising. Some of the literature cited by the challenge included a model with a PAI score of 6.59 for street crimes. So it seemed unlikely that my model could compete on PAI given its performance. PEI, however, seems to be a novel metric, and I couldn’t find a good benchmark against which I could measure my performance. Interestingly, as discussed above, it’s actually possible to get a perfect PEI score of 1, and I started to find my model maxing out at 1 in a few of my test runs when the total number of calls was very small.
+</p><p id="p1">
+  Remember, PEI wants to be sure that you capture all of the calls, and if you cast a wide enough net you increase your odds of catching more of the calls. This behavior is probably what’s behind the the fact that there were ties for PEI.
+</p><p id="p1">
+  Since the performance of PAI and PEI were at odds with each other in regard to where I drew the hotspot cutoff, it was necessary to choose a metric to maximize. I could have split the difference, but there was no prize for models that balanced the two scores, a fact that I found a bit surprising. Winning meant having the highest PAI or the highest PEI. Consequently, I decided to optimize my model for PEI. After all, I knew it wasn’t a contender under PAI.
+</p><p id="p1">
+  I found that a training period of one year seemed to work pretty well. So basically I built landscapes based on the last year of calls for each category of crime and labeled the top three hundred some odd cells in my grid as hotspots. I entered the same model for each timeframe (i.e., one week, two weeks, one month, two months, and three months). That is, I only made new models for each of the offense types, not the time frames. Like I said, I wanted to keep it simple. If you want to see how simple, you can find the code I used to generate my entry linked below.
+</p><p id="p1">
+<hr/>
+</p><p id="p1">
+  Hopefully, a few things are clear by this point. Chiefly, my models were dead simple. Clearly, the utility of such models must come into question. They are demonstrably a doubling down on the status quo. There is no new insight here. Perhaps as a matter of triage they could be useful, but such a use assumes we’re happy with the underlying success metrics, and I strongly suspect this use case is not the one most often sought by consumers of “crime prediction.” I assume they expect prediction to involve more than a mapping of past crimes. I’m sure there are models capable of providing genuine insight. For example, I wouldn’t be surprised if some of the models noticed that certain property crime types were clustered. Plausibly this could be explained by an offender’s geographic reach, and such an insight might be useful in tracking down a serial car thief. My concerns mostly revolve around how these models are received and applied. To be clear, I commend the NIJ for conducting the challenge. However, I worry about the public’s expectations and what has become of the algorithms it helped birth.
+</p><p id="p1">
+  At the time I worried consumers, meaning communities, wouldn't stop to consider the choice of success metrics, let alone question the defaults and the priorities they express. As we’ve found, accuracy isn’t always the right metric, and there are real costs associated with false positives. What happens to the relationship between law enforcement and a community when officers use “science” to justify over policing? Incentives matter, even when they come in the form of an algorithm’s conception of success.
+</p><p id="p1">
+  Since the competition, I've seen reasons to be optimistic (e.g., Santa Cruz has banned predictive policing, and LA, an early adopter of predictive policing, is stepping away), but I've also found reasons to be pessimistic, just check out the article below from the Tampa Bay Times. Oh man!
+</p><p id="p1">
+  Anderton’s dead simple models are easy to understand. Consequently, they’re easily understandable as utter crap. Yes, they make predictions. They may even be good predictions under some metrics, but are they really the predictions we’re looking for? As any student of mathematics understands, it’s important that you show your work. We need to see more than the output of an algorithm before we can pass judgement on how well it’s doing its job.
+<hr>
+</p><p id="p1">
+  So is there room for hope? Well, a few weeks after the submissions closed I caught wind of a startup hoping to provide predictive policing to law enforcement. What made that startup different? First, it wanted to adjust for or flag the biases in its data. Second, it was making its algorithms public so anyone can critique them. Heck, their code was on GitHub.
+</p><p id="p1">
+  Unfortunately, both their GitHib repo and their website have been shuttered.
+</p><p id="p1">
+  Let's assume, however, that we were inclined to be optimistic. Maybe we can account for over policing and its effect on producing training data. What happens when a bias-adjusted model suggests more invasive policing of the suburbs? An observation from Michelle Alexander’s The New Jim Crow provides some food for thought.
+</p><p id="p1">
+  From the outset, the drug war could have been waged primarily in overwhelmingly white suburbs or on college campuses. SWAT teams could have rappelled from helicopters in gated suburban communities and raided the homes of high school lacrosse players known for hosting coke and ecstasy parties after their games. Suburban homemakers could have been placed under surveillance and subjected to undercover operations designed to catch them violating laws regulating the use and sale of prescription ‘uppers.’ All of this could have happened as a matter of routine in white communities, but it did not. Instead, when police go looking for drugs, they look in the ‘hood.
+</p><p id="p1">
+  I love that paragraph, but too often this is where a talk like this might end, asking you to imagine a world where we treat the privileged in the way society has traditionally treated the marginalized. I understand the impulse behind sharing such a vision. It certainly acts as a wake-up call for those in power, but it frames the discussion around retributive justice. It’s hard to remember sometimes that we are the nation that pioneered the penitentiary, literally a place for penitence. We used to believe in second chances. A more interesting question might be what if we started to treat the marginalized the same way we treat the privileged? What if we recognized everyone’s humanity? We've seem a move to this in mainstream criminal justice reform around nonviolent drug offenders, but as John Pfaff makes clear (link below), mass incarceration is not just a drug problem. We must examine how we respond to violent crime as well, and that’s a difficult conversation.
+</p><p id="p1">
+  Perhaps Portland, however, does offer a lesson in hope. As I record this Portland has seen more than 100 days of protests in support of racial justice and police accountability. And this summer millions of Americans joined in these protests. So maybe there is room for hope.
+</p><p id="p1">
+  The tale of Anderton, however, isn’t just a warning about predictive policing. It’s a warning about what happens when a lack of attention or fear of complexity causes us to measure the wrong thing. In a world of algorithms where measurement is king, we have to insist, as Chief Justice Earl Warren did, on asking a single question over and over, “Is it fair?” To do this we must decide what we mean by “fair,” and we need to see the work that went into a prediction in order to check that work. Metrics matter, and accountability can’t take place in the dark.
+</p><p id="p1">
+  Algorithms can only optimize for values they can measure. If we fail to define fair metrics, we will fail to create fair algorithms. As the role of algorithms grow, it is incumbent on attorneys to echo Warren’s words, insisting on an answer to a simple question, “Is it fair?”
+<hr>
+</p><p id="p1">
+  Now engage with the materials below and we can learn together how to help make that world a reality.
+</p></div>
+</div>
+</BODY>
+</HTML>
