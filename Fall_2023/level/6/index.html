@@ -95,11 +95,7 @@
 </div>
 
 <div class="content_frame">
-  <div class="content" style="padding:20px;text-align: center;"><h1>Coming Soon</h1></div>
-  <div class="content" style="display:none;">
-
-
-
+  <div class="content">
 
     <div class="top_bar">
       <div class="search">
@@ -124,35 +120,16 @@
           <option value="../3">Level 3: Document Assembly (Mon. 9/18/23)</option>
           <option value="../4">Level 4: Portland’s Precrime Experiment and the Limits of Algorithms (Mon. 9/25/23)</option>
           <option value="../5">Level 5: Regular Expressions (Regex) (Mon. 10/2/23)</option>
-          <option value="../6" SELECTED>Level 6: Data Standards and Jupyter Notebooks (TUE. 10/10/23)</option>
-          <option value="../7">Level 7: What the Heck is Word2Vec? Neural Nets for Lawyers and Training Algos (Mon. 10/16/23)</option>
-          <option value="../8">Level 8: How to Prepare A Great Slide Deck (Mon. 10/23/23)</option>
-          <option value="../9">Level 9: See Spot; See Spot Run - Using ML to Spot Fact Patterns (Mon. 10/30/23)</option>
-          <option value="../10">Level 10: Hypothesis Testing and Machine Learning In Production with Google Sheets (Mon. 11/6/23)</option>
+          <option value="../6" SELECTED>Level 6: Data Standards, Word2vec, and Spot (TUE. 10/10/23)</option>
+          <option value="../7">Level 7: Build Your own "AI" (Mon. 10/16/23)</option>
+          <option value="../8">Level 8: Toy Models & My RSS Algo (Mon. 10/23/23)</option>
+          <option value="../9">Level 9: Hypothesis Testing and Machine Learning In Production with Google Sheets (Mon. 10/30/23)</option>
+          <option value="../10">Level 10: How to Prepare A Great Slide Deck (Mon. 11/6/23)</option>
           <option value="../11">Level 11: Guest Speaker Quinten Steenhuis (Mon. 11/13/23)</option>
           <option value="../12">Level 12: Guest Speaker TBD (Mon. 11/20/23)</option>
           <option value="../13">Level 13: Guest Speaker TBD (Mon. 11/27/23)</option>
         </select>
       </span>
-    </div>
-
-      <div class="section">
-
-      <h2 style="margin-top:10px">
-        Midway<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
-        <span class="subtitle">~2-4 min. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
-      </h2>
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/HjKLAcZqCMQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <p>FWIW, here is a link to Levels <a href="../8">eight</a>, <a href="../11">eleven</a>, <a href="../12">twelve</a>, and <a href="../13">thirteen</a>.</p>
-      <p><span style="background:yellow;">This level <b>does NOT</b> ask you to turn in the product of any <i>coding work</i>.</span> In addition to answering our standard reading questions, it expects only that you will work along with the materials provided to get a sense of the tools. It does this because I suspect you will have tons of questions, and I hope to address them when we meet synchronously. That being said, you should do your best to work through everything and write down questions as you go.
-      </p>
-      <p>Most of our videos, esp. those found under the Knowledge Base header are walkthroughs. They are intended as an opportunity for you to familiarize yourself with tools by following along. No one is expecting you to memorize their content. <span style="background:yellow;"><b>Treat them instead as recipes, i.e., as references you will come back to when needed.</b></span></p>
-
-
     </div>
 
     <div class="section">
@@ -161,7 +138,6 @@
       Data Standards<a href="#standards" name="standards" class="anchor"></a><br/>
       <span class="subtitle">~2-7 min. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.</span>
     </h2>
-    <p>We will spend a lot of time below cleaning and preparing data for analysis. This reality is in stark contrast to the dream of data standards—the hope that it doesn't have to be this way. That being said, let's take a moment to recognize the dream.</p>
 
     <div class="vid_wrapper">
       <div class="profile_vid">
@@ -205,227 +181,79 @@
       </ul>
 
     </div>
+
     <div class="section">
 
-      <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
+      <h2>
+        What the Heck is Word2Vec? Neural Nets for Lawyers<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">11-33 min. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
       </h2>
-
-      <p>Everyone comes to this adventure with a different background. So this section is designed to be a menu of sorts. If you already know a topic well, you can skip the relevant material. Just answer the questions below, and section(s) will disappear accordingly. That being said, if a section doesn't disappear, you should do it. Any time you save skipping a topic, however, should be spent working on your final project or reading ahead in either <i>Weapons of Math Destruction</i> or <i>How Not to Be Wrong</i>. FYI, we will be reading all of <i>Weapons of Math Destruction</i> and all but parts III and V of <i>How Not to Be Wrong</i>.</p>
-
-      <p>All of that being said, let's see if we can pare things down.</p>
-
-      <!--
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-      <p>Are you proficient with QnA Markup?</p>
-      <p>
-      <input name="qN" id="qNa" type="radio" value="a" onChange="check_q(this.name);kbase();">
-      <label          for="qNa">text</label><br>
-      <input name="qN" id="qNb" type="radio" value="b" onChange="check_q(this.name);kbase();">
-      <label          for="qNb">text</label><br>
-      <input name="qN" id="qNc" type="radio" value="c" onChange="check_q(this.name);kbase();">
-      <label          for="qNc">text</label><br>
-      <input name="qN" id="qNd" type="radio" value="d" onChange="check_q(this.name);kbase();">
-      <label          for="qNd">text</label><br>
-      <input name="qN" id="qNe" type="radio" value="e" onChange="check_q(this.name);kbase();">
-      <label          for="qNe">text</label><br>
-      </p>
-      <p id="qN_a_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
-      <p id="qN_b_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
-      <p id="qN_c_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
-      <p id="qN_d_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
-      <p id="qN_e_msg" style="display:none;color:green">You've gained roughly X minutes.</p>
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-      -->
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-      <p>Are you comfortable using Jupyter Notebooks and writing in Python?</p>
-      <p>
-      <input name="q1" id="q1a" type="radio" value="a" onChange="check_q(this.name);kbase();">
-      <label          for="q1a">No / I've never heard of these.</label><br>
-      <input name="q1" id="q1b" type="radio" value="b" onChange="check_q(this.name);kbase();">
-      <label          for="q1b">I've used them before, but I wouldn't mind a refresher.</label><br>
-      <input name="q1" id="q1c" type="radio" value="c" onChange="check_q(this.name);kbase();">
-      <label          for="q1c">I've used the before, and I feel comfortable skipping an introduction.</label>
-      </p>
-      <p id="q1_c_msg" style="display:none;color:green">You've gained a little more than an hour by dropping a video introduction to Jupyter Notebooks and Python. If you find yourself with questions, change this answer to unhide the introduction.</p>
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-    </div>
-
-
-    <div id="" class="section">
-
-      <h3>PythonAnywhere<a href="#pythonanywhere" name="pythonanywhere" class="anchor"></a><br/>
-        <span class="subtitle">~10 Minutes.</span></h3>
-
-      <p>Below we're going to make use of a tool called Jupyter Notebooks. To avoid having everyone install a bunch of software to get notebooks working on your computers, registered students will be making use of PythonAnywhere. You should have received a user name and password at our last synchronous meeting. If you didn't DM Colarusso on Teams.</p>
-      <p>With these credentials in hand, visit <a href="https://pythonanywhere.com/" target="_blank">pythonanywhere.com/</a> and login. <i>Please refrain from changing your password.</i></p>
-
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_01.png" target="_blank"><img src="../../images/pythonanywhere_01.png" style="width:90%"/></a></p>
-
-      <p>Once you have finished logging in, you will see your dashboard. On that dashboard you'll see a set of options. Under the one labeled <i>Recent Notebooks</i> you should see a list of notebooks that I have placed there. To make sure everything is working click on the one called <i>wrangle.ipynb</i>. This should load the notebook. If you don't see the notebook in this list, click on the <i>Browse all files</i> button. This should show you a list of all your files, and you can click on the notebook there.</p>
-
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_02.png" target="_blank"><img src="../../images/pythonanywhere_02.png" style="width:90%"/></a></p>
-      <p>After it has loaded it should look like the image below. If you see this you're good to go. We'll revisit this notebook below (assuming you aren't already experienced with Notebook and Python).</p>
-
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_03.png" target="_blank"><img src="../../images/pythonanywhere_03.png" style="width:90%"/></a></p>
-
-      <p><span style="background:yellow;">We are <b>NOT</b> using the free tier of PythonAnywhere.</span> And though they have given us a great educational discount, we couldn't afford unlimited use. ;) Consequently, when you're done with your notebook, you want to make sure that nothing is running in the background. To do that, we'll need to <i>kill</i> any processes running in the background. If you're about to do the work below, you can leave your notebook open and close it after you've finished working through the exercises.</p>
-      <p>A review of where you stand re: usage can be found at the top of the <i>Dashboard</i> (e.g., CPU Usage:0%). If you use more than what we've paid for everything will be slowed way down until our budget is reset.</p>
-      <p>After you've saved your notebook and its window, navigate to the <i>Consoles</i> page. There's a link at the top of the <i>Dashboard</i>.
-      </p>
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_04.png" target="_blank"><img src="../../images/pythonanywhere_04.png" style="width:90%"/></a></p>
-
-      <p>Once you land on the <i>Consoles</i> page, scroll down to <i>Running processes</i> and click <i>Fetch process list</i>.</p>
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_05.png" target="_blank"><img src="../../images/pythonanywhere_05.png" style="width:90%"/></a></p>
-
-      <p>Given our useage of the site you can safely <i>Kill</i> all of your running processes. Just click the red <i>Kill</i> buttons.</p>
-      <p style="text-align:center;margin-bottom:25px;"><a href="../../images/pythonanywhere_06.png" target="_blank"><img src="../../images/pythonanywhere_06.png" style="width:90%"/></a></p>
-
-    </div>
-
-    <div id="" class="section">
-
-      <h3>Anaconda (optional)<a href="#anaconda" name="anaconda" class="anchor"></a><br/>
-        <span class="subtitle">~15 Minutes.</span></h3>
-      <p>If you aren't a registered student <span style="background:yellow;">or you would like to run notebooks locally</span>, you can install <a href="https://www.anaconda.com/products/individual#Downloads" target="_blank">Anaconda</a>. Anaconda is collection of software products that will install a copy of notebooks and python on your computer.</p>
-      <p>
-        To launch notebooks, after installation:
-      </p>
-      <ul>
-         <li>Open a terminal/command prompt and navigate to the directory where you want to be working (e.g., <code>/users/yourname/documents/</code>)</li>
-         <li>At the prompt enter: <code>jupyter notebook</code> That should open up a new tab in your web browser.</li>
-         <div style="text-align:center;margin:0px auto;max-width:329px;padding:10px 0 10px 20px;">
-           <a href="../../images/py0.jpg"><img src="../../images/py0.jpg" alt="screen shot" style="width:100%" border="0"></a>
-      </ul>
-
-      <p>That being said, here are the files you'll need to follow along with the PythonAnywhere folks and the videos below (assuming you aren't already experienced with Notebooks and Python).</p>
-      <ul>
-        <li><a href="docs/wrangling.ipynb" target="_blank">wrangling.ipynb</a></li>
-        <li><a href="docs/table_1.csv" target="_blank">table_1.csv</a></li>
-        <li><a href="docs/table_2.csv" target="_blank">table_2.csv</a></li>
-      </ul>
-
-    </div>
-
-
-    <div id="q1_div" class="section">
-
-      <h3>Notebooks &amp; Python<a href="#notebook" name="notebook" class="anchor"></a><br/>
-        <span class="subtitle">~8-24 Minutes. You'll probably want to take this slow unless you've worked with notebooks before.</span></h3>
-
-      <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
-
       <div class="vid_wrapper">
         <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/pHfI9Gr6S0Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/gbrZJrTN8H4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-      <p>Optional: Here are some <a href="https://en.wikipedia.org/wiki/Markdown#Example" target="_blank">Markdown examples</a>, a <a href="http://www.nature.com/news/interactive-notebooks-sharing-the-code-1.16261">Nature article</a> introducing the idea of notebooks and explaining some of the benefits; and some <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">example notebooks</a>.</p>
 
-      <h3>Load &amp; Clean Data<a href="#cleaning" name="cleaning" class="anchor"></a><br/>
-        <span class="subtitle">~10-30 Minutes. You'll probably want to take this slow.</span></h3>
+      <p>FWIW, preparing instructional material is an exercise in compression, and it's not <a href="https://en.wikipedia.org/wiki/Lossless_compression">lossless</a>.  The hope is that you now have a very high-level sense of how things work. For example, I glossed over how the activation function behaves with regard to the word2vec "hidden"/projection layer. Spoiler: it's not a sigmoid! Actually, there is no activation function. We just pass on the weights. That being said, I didn't explain weights very deeply. So again, as it says in the title—oversimplification. ;)</p>
 
-        <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
-
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/YwSbJq5giMA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
+      <div class="r_img_embed" style="max-width:450px;">
+        <img src="../../images/datasaurus.gif" alt="Same Stats, Different Graphs" width="100%"/>
+        <div class="caption">Source: <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">Autodesk</a>.</div>
       </div>
-      <p>If you want to look at the <i>csv</i> files we're working with (maybe in Excel or the like), here they are:</p>
-      <ul>
-        <li><a href="docs/table_1.csv" target="_blank">table_1.csv</a></li>
-        <li><a href="docs/table_2.csv" target="_blank">table_2.csv</a></li>
-      </ul>
-      <p>FWIW, Googleing <i>Pandas</i> and a function or module name is often enough to find what you need re: documentation, but here is a link to the <a href="https://pandas.pydata.org/docs/" target="_blank">Pandas Documentation</a>. Also, Chris Albon has put together a great <a href="https://chrisalbon.com/" target="_blank">Notes On Using Data Science & Machine Learning To Fight For Something That Matters</a> with a lot of helpful examples.</p>
 
-      <h3>Feature Engineering<a href="#features" name="features" class="anchor"></a><br/>
-        <span class="subtitle">~3-12 Minutes. You'll probably want to take this slow.</span></h3>
-        <p>In this video we'll be working with the <i>wrangling.ipynb</i> file described above in both the <a href="#pythonanywhere">PythonAnywhere</a> and <a href="#anaconda">Anaconda</a> sections.</p>
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/8MModVMqOC4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <p>ICYMI: Googleing <i>Pandas</i> and a function or module name is often enough to find what you need re: documentation, but here is a link to the <a href="https://pandas.pydata.org/docs/" target="_blank">Pandas Documentation</a>. Also, Chris Albon has put together a great <a href="https://chrisalbon.com/" target="_blank">Notes On Using Data Science & Machine Learning To Fight For Something That Matters</a> with a lot of helpful examples.</p>
-
-    </div>
-
-<!--
-    <div class="section">
-
-      <h2>Ready to Go?<a href="#ready" name="ready" class="anchor"></a></h2>
-      <p>Before we add to your mission, let's make sure we're on the same page, and don't worry. Your answers to these questions are only saved to this device. It's just a self-test to make sure you know what you need to succeed on your mission. This is by no means an exhaustive test of what you need to know, but <b>if you find yourself missing something, take it as a suggestion to revisit the materials above</b>. If you pared things down based on an answer to the <a href="#knowledge">Knowledge Base</a> questions, consider changing the answer and reviewing the material.</p>
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-      <p>If you want to save output from QnA Markup without cutting and pasting text, what browser should you use?</p>
-      <p>
-      <input name="q4" id="q4a" type="radio" value="a" onChange="check_q(this.name);kbase();">
-      <label          for="q4a">Safari</label><br>
-      <input name="q4" id="q4b" type="radio" value="b" onChange="check_q(this.name);kbase();">
-      <label          for="q4b">Firefox</label><br>
-      <input name="q4" id="q4c" type="radio" value="c" onChange="check_q(this.name);kbase();">
-      <label          for="q4c">Chrome</label><br>
-      </p>
-      <p id="q4_a_msg" style="display:none;color:red">Safari is not correct.</p>
-      <p id="q4_b_msg" style="display:none;color:red">Firefox is not correct.</p>
-      <p id="q4_c_msg" style="display:none;color:green">That's right!</p>
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-      <p>Can you use spaces to indent tags in QnA Markup?</p>
-      <p>
-      <input name="q5" id="q5a" type="radio" value="a" onChange="check_q(this.name);kbase();">
-      <label          for="q5a">Yes.</label><br>
-      <input name="q5" id="q5b" type="radio" value="b" onChange="check_q(this.name);kbase();">
-      <label          for="q5b">No.</label><br>
-      </p>
-      <p id="q5_a_msg" style="display:none;color:red">I'm afraid that's wrong.</p>
-      <p id="q5_b_msg" style="display:none;color:green">That's right, you must use tabs.</p>
-
-      <hr style="border:0px solid #fff;border-top:1px solid #aaa">
-
-    </div>
--->
-
-    <div class="section">
-
-      <h2>Your Mission:<a href="#mission" name="mission" class="anchor"></a><br/>
-        <span class="subtitle">Video: ~1-4 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<br/>
-        Exploration: ~1 Hour 15 Minutes</span></h2>
-        <div class="vid_wrapper">
-          <div class="profile_vid">
-            <iframe class="embed_vid" src="https://www.youtube.com/embed/uWyZr_MkPHo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-        <p>To be clear, <span style="background:yellow;">despite what I said above, <b>I DO</b> want you to start playing with the files from Dewey, Cheetham, and Howe</span>. I've scheduled over an hour for you to "play." Since it's play, I'm not expecting you to produce anything to turn in, but you should wrestle with trying to create a new notebook, loading your data, and cleaning it up a bit.</p>
-        <p>Here are the files. Note: if you're using our PythonAnywhere accounts, they should be preloaded in the same folder as the notebook above.
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
         <ul>
-          <li><a href="docs/people.csv" target="_blank">people.csv</a></li>
-          <li><a href="docs/calls.csv" target="_blank">calls.csv</a></li>
+          <li><a href="https://parallelsearch.compose.law/" target="_blank">Parallel Search</a>. You'll read more about this tool in the reading. Why not take it for a spin first?</li>
+          <li><a href="https://observablehq.com/@tmcw/bring-your-own-doodles-linear-regression" target="_blank">Bring your own doodles linear regression</a></li>
+          <li><a href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=1&t=241s" target="_blank">But what is a Neural Network? | Deep learning, chapter 1</a>. This is the first in four videos from 3Blue1Brown on Neural Networks. If you don't know 3Blue1Brown, you're in for a treat. They make great visual explainers.</li>
+          <li><a href="http://ronxin.github.io/wevi/" target="_blank">wevi: Word Embedding Visual Inspector</a>. This is a fun tool that alows you to train your own word2vec model, kind of like the tensorflow playground above. For more on how it works, you can check out its internal documentation or here from it's author here: <a href="https://www.youtube.com/watch?v=D-ekE-Wlcds" target="_blank">Word Embedding Explained and Visualized - word2vec and wevi</a>.</li>
+          <li><a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing</a>. This article explains the work behind the Datasaurus.</li>
+          <li><a href="http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=gauss&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.22586&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false" target="_blank">Tensor Flow Playground</a>. This tool lets you create and play with your own neural network.</li>
+          <li>And if you want to learn more about activation functions, check out <a href="https://medium.com/analytics-vidhya/understanding-activation-functions-and-hidden-layers-in-neural-networks-4fca2b980917" target="_blank">Understanding Activation Functions and Hidden Layers in Neural Networks</a>.
         </ul>
 
     </div>
 
-
     <div class="section">
 
-      <h2><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
-      <span class="subtitle">~1 Hour</span></h2>
-      <p>
-        Enrolled students will be presenting on their final project in two weeks. Take some time to work on your project, even if it's just planning or skills acquisition (e.g., working through the optional <a href="../3/#docassemble">docassemble training from level 3</a>). See <a href="../../rubric" target="_blank">The Final Project Rubric</a>.
-      </p>
+      <h2>
+        See Spot; See Spot Run: Using ML to Spot Fact Patterns<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">~15-45 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/d4qI0KI4aow" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="r_img_embed" style="max-width:300px;">
+        <img src="../../images/trojan_horse.jpg" alt="Trojan Horse" width="100%"/>
+        <div class="caption">Trojan Horse, Canakkale, Turkey. Photo by <a href="https://flic.kr/p/2jigE5Z" target="_blank">Peter Reed</a>.</div>
+      </div>
+
+
+
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+        <ul>
+          <li>Spot builds upon data from the <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a> online game, a partnership between the LIT Lab and Stanford's <a href="https://law.stanford.edu/organizations/pages/legal-design-lab/" target="_blank">Legal Design Lab</a>. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters. Currently, this labeling is limited to publicly available historic questions from the r/legaladvice forum on Reddit. See <a href="https://www.lawsitesblog.com/2018/10/stanford-suffolk-create-game-help-drive-access-justice.html" target="_blank">Stanford and Suffolk Create Game to Help Drive Access to Justice</a>.</li>
+          <li><a href="https://taxonomy.legal/" target="_blank">Legal Issues Taxonomy (LIST)</a>. This taxonomy is    what Learned Hands uses to label training data for Spot. It's worth noting that adoption of LIST, formerly NSMIv2, is one of the primary goals of Spot. As you may have gleaned from our <a href="#standards">discussion of data standards</a>, it can be hard to get folks to adopt a standard. It's a chicken and egg problem. Folks want to use the standard that everyone else is using because a standard's value is a function of its community. Unfortunately, when there is no pre-existing community, it can be hard to get the ball rolling. Spot is an attempt to do this. We're building a shiny new AI tool that folks want to use. It just so happens that you have to label things in LIST for it to be useful. It's a Trojan Horse. ;)</li>
+          <!--<li>Remember the citation parser we built back in <a href="../5">level 5</a>? Well here's a cool legal citation extractor API built by the folks at the <a href="" target="_blank">Free Law Project</a> and <a href="" target="_blank">Harvard's Legal Innovation Library</a>.</li>-->
+        </ul>
 
     </div>
 
+    <div class="section">
 
+      <h2>Get Ready to Use the Spot API<a href="#spotapi" name="spotapi" class="anchor"></a><br/>
+      <span class="subtitle">~5 Minutes</span></h2>
+      <p>Vist the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot website</a> and <a href="https://spot.suffolklitlab.org/user/new/" target="_blank">create an account</a> and get your API token. FWIW, if you want to read ahead, you can skimthe documentation at <a href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/" target="_blank">this link</a>. </p>
+
+    </div>
+
+        
     <div class="section">
 
       <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
