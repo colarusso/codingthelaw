@@ -95,9 +95,7 @@
 </div>
 
 <div class="content_frame">
-  <div class="content" style="padding:20px;text-align: center;"><h1>Coming Soon</h1></div>
-  <div class="content" style="display:none;">
-
+  <div class="content">
 
     <div class="top_bar">
       <div class="search">
@@ -129,40 +127,12 @@
           <option value="../10">Level 10: How to Prepare A Great Slide Deck (Mon. 11/6/23)</option>
           <option value="../11">Level 11: Guest Speaker Quinten Steenhuis (Mon. 11/13/23)</option>
           <option value="../12">Level 12: Guest Speaker TBD (Mon. 11/20/23)</option>
-          <option value="../13">Level 13: Guest Speaker TBD (Mon. 11/27/23)</option>
+          <option value="../13">Level 13: Guest Speaker Ed Walters (Mon. 11/27/23)</option>
         </select>
       </span>
     </div>
 
-      <div class="section">
 
-      <h2 style="margin-top:10px">
-        See Spot; See Spot Run: Using ML to Spot Fact Patterns<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
-        <span class="subtitle">~15-45 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
-      </h2>
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/d4qI0KI4aow" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-
-
-      <div class="r_img_embed" style="max-width:300px;">
-        <img src="../../images/trojan_horse.jpg" alt="Trojan Horse" width="100%"/>
-        <div class="caption">Trojan Horse, Canakkale, Turkey. Photo by <a href="https://flic.kr/p/2jigE5Z" target="_blank">Peter Reed</a>.</div>
-      </div>
-
-
-
-      <p><b>Optional Media.</b>
-        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
-        <ul>
-          <li>Spot builds upon data from the <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a> online game, a partnership between the LIT Lab and Stanford's <a href="https://law.stanford.edu/organizations/pages/legal-design-lab/" target="_blank">Legal Design Lab</a>. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters. Currently, this labeling is limited to publicly available historic questions from the r/legaladvice forum on Reddit. See <a href="https://www.lawsitesblog.com/2018/10/stanford-suffolk-create-game-help-drive-access-justice.html" target="_blank">Stanford and Suffolk Create Game to Help Drive Access to Justice</a>.</li>
-          <li><a href="https://taxonomy.legal/" target="_blank">Legal Issues Taxonomy (LIST)</a>. This taxonomy is    what Learned Hands uses to label training data for Spot. It's worth noting that adoption of LIST, formerly NSMIv2, is one of the primary goals of Spot. As you may have gleaned from our <a href="../6/#standards">discussion of data standards</a>, it can be hard to get folks to adopt a standard. It's a chicken and egg problem. Folks want to use the standard that everyone else is using because a standard's value is a function of its community. Unfortunately, when there is no pre-existing community, it can be hard to get the ball rolling. Spot is an attempt to do this. We're building a shiny new AI tool that folks want to use. It just so happens that you have to label things in LIST for it to be useful. It's a Trojan Horse. ;)</li>
-          <!--<li>Remember the citation parser we built back in <a href="../5">level 5</a>? Well here's a cool legal citation extractor API built by the folks at the <a href="" target="_blank">Free Law Project</a> and <a href="" target="_blank">Harvard's Legal Innovation Library</a>.</li>-->
-        </ul>
-
-    </div>
     <div class="section">
 
       <h2>Readings<a href="#readings" name="readings" class="anchor"></a><br/>
@@ -180,6 +150,38 @@
       </ul>
 
     </div>
+
+
+    <div class="section">
+
+      <h2 style="margin-top:10px">
+        Hypothesis Testing: Is It Significant?<a href="#intro_vid" name="intro_vid" class="anchor"></a><br/>
+        <span class="subtitle">10-20 min. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.<sup><a href="#dagger">&dagger;</a></sup></span>
+      </h2>
+      <div class="vid_wrapper">
+        <div class="profile_vid">
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/JCiPeI1T0o4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="r_img_embed" style="max-width:300px;">
+        <img src="../../images/p_values.png" alt="P-Values" width="100%"/>
+        <div class="caption">P-Values by <a href="https://xkcd.com/1478/" target="_blank">XKCD</a>.</div>
+      </div>
+
+
+      <p><b>Optional Media.</b>
+        If you want to learn more about some of the topics discussed in the video above, and you have some free time, you might enjoy the following.</p>
+        <ul>
+          <li><a href="https://livefreeordichotomize.com/2016/12/15/hill-for-the-data-scientist-an-xkcd-story/" target="_blank">Hill for the data scientist: an xkcd story</a>. So if correlation isn't causation and rejecting the null hypothesis isn't enough for us to prove the alternative hypothesis, how can we ever know anything? Well, we can use common sense and some rules of thumb. Hill's Criteria are a set of guidelines for evaluating causation, and this resource explains them using xkcd comics.</li>
+          <li>If you want to learn more about the replication of scientific results and what has come to be known as the <i>replication crisis</i>, you may enjoy these podcast from Hi Phi Nation: <a href="https://hiphination.org/complete-season-one-episodes/episode-6-hackademics-mar-6-2017/" target="_blank">Hackademics I</a> and <a href="https://hiphination.org/complete-season-one-episodes/episode-7-hackademics-ii-the-hackers/" target="_blank">Hackademics II</a>.</li>
+          <li>If you would like to explore the idea of significance tests a little more, this Khan Academy lesson is a nice distillation—<a href="https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/idea-significance-tests/v/idea-behind-hypothesis-testing" target="_blank">The idea of significance tests</a>.</li>
+          <li><a href="http://aanandprasad.com/diversity-calculator/?groupName=women&numSpeakers=5&populationPercentage=50" target="_blank">Conference Diversity Distribution Calculator</a>. "This calculator models the probability distribution for male/female speaker balance assuming random selection, which roughly follows a binomial distribution. It was inspired by the work of Dave Wilkinson and Paul Battley, who made similar models and found that the likelihood of an unbiased selection process yielding a line-up with no women at all is far lower than intuition might suggest, and – depending on the numbers you plug in – can often be far lower than the likelihood of their over-representation. That is to say: in an unbiased selection, you’re significantly more likely to see more than the expected number of women than none at all."</li>
+        </ul>
+
+    </div>
+
     <div class="section" style="display:none;">
 
       <h2>Knowledge Base<a href="#knowledge" name="knowledge" class="anchor"></a>
@@ -257,26 +259,15 @@
     </div>
     <div id="q1_div" class="section">
 
-      <h3>Using the Spot API<a href="#spotapi" name="spotapi" class="anchor"></a><br/>
-        <span class="subtitle">~4-12 Minutes</span></h3>
+      <h3>Your Mission: Machine Learning In Production with Google Sheets<a href="#ML_sheets" name="ML_sheets" class="anchor"></a><br/>
+        <span class="subtitle">~8-15 Minutes</h3>
       <div class="vid_wrapper">
         <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/LloVN9lmQ9w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe class="embed_vid" src="https://www.youtube.com/embed/lHeldyjR-2E" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-      <p>For those of you not working in Pythonanywhere, here is the notebook: <a href="docs/spotAPI.ipynb" target="_blank">spotAPI.ipynb</a>. Vist the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot website</a> to <a href="https://spot.suffolklitlab.org/user/new/" target="_blank">create an account</a> and get your API token. If you want to jump straight to the documentation, here's <a href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/" target="_blank">the link</a>. </p>
 
-    </div>
-    <div id="q1_div" class="section">
-
-      <h3>Making Predictions<a href="#predictions" name="predictions" class="anchor"></a><br/>
-        <span class="subtitle">~5-16 Minutes</span></h3>
-      <div class="vid_wrapper">
-        <div class="profile_vid">
-          <iframe class="embed_vid" src="https://www.youtube.com/embed/h_Oa9X31FjQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <p>We are working with the notebook file <a href="../7/docs/training.ipynb">training.ipynb</a> (pre-loaded for those of you using Pythonanywhere).</p>
+      <p>This discussion build on the school closing example introduced back in level 4 when we talked about <a href="../4/#metrics">success metrics</a>. If you're unfamiliar with Google Sheets, you can learn more on the <a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets website</a>.</p>
 
     </div>
     <div class="section" style="display:none;">
@@ -314,17 +305,30 @@
       <hr style="border:0px solid #fff;border-top:1px solid #aaa">
 
     </div>
-    <div class="section">
+    <div class="section" style="display:none;">
 
-      <h2 style="margin-top:10px">Your Mission<a href="#mission" name="mission" class="anchor"></a><br/>
-      <span class="subtitle">~1 Hour 50 Minutes</h2>
-        <p>Clean and feed the following data (i.e., <a href="docs/challenge_calls.csv">challenge_calls.csv</a> and <a href="docs/challenge_people.csv">challenge_people.csv</a> ) into the best-performing classifier you trained on the Dewey, Cheetham, and Howe data. That is, use your best model to predict for this data if a call is or isn't a <i>take</i>. Then produce a list of those calls that are <i>takes</i>. You will be asked to share the call IDs for these calls as part of your work log below (e.g., [175, 234, 327]). You might want to start by making a copy of your <i>training</i> notebook and adding to that bits and pieces of modified code from the <i>wrangling</i> notebook.</p>
-        <p>
-          <i>NOTE: If you are using the class's Pythonanywhere accounts, the two csv files mentioned above should already be in the same directory as your notebooks. Also, I would like to remind you that you can ask for help on our Teams channel if you're not sure what your next step should be. This mission asks you to tie together a lot of prior works and make some connections. So it's understandable if you have questions.</i>
-        </p>
-        <p><span style="background:yellow;"><b>Break Glass In Case of Emergency:</b> If you're absolutely lost, here's a lifeboat in the form of a <a href="docs/Level 9 Notebook.ipynb">notebook</a> (<a href="docs/Level 9 Notebook.ipynb">Level 9 Notebook.ipynb</a>, also available on phythonanyweher). If you take this notebook, read through it, run it, and turn in its output, that will meet this level's expectations. Of course, my hope is that you will do more than this, but it’s important for you to know that you don’t have to unless you want to exceed expectations. So, here's a stretch goal to incentivize a little more than <i>meeting expectations</i>. <b>Stretch Goal:</b> create a model that gets an F1 score in excess of 0.7 on the challenge data. Good luck!</span></p>
+      <h2>Your Mission:<a href="#mission" name="mission" class="anchor"></a><br/>
+        <span class="subtitle">Video: ~2-4 Minutes. Protip: You can <a href="https://github.com/codebicycle/videospeed#faster-html5-video" target="_blank"> watch YouTube videos at more than 1X speed</a>.</br>
+        Work: 1 Hour and 40 Minutes</span></h2>
+        <div class="vid_wrapper">
+          <div class="profile_vid">
+            <iframe class="embed_vid" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p>Lorum ipsum</p>
 
     </div>
+    <div class="section">
+
+      <h2><a href="#final" name="final" class="anchor"></a>Your Final Project</br>
+      <span class="subtitle">2+ Hours</span></h2>
+      <p>
+        We're entering the home stretch. Remember to ask questions in Teams if you're stuck, and when we next meet, we'll do rounds—checking in with everyone to see where they are at. See <a href="../../rubric" target="_blank">The Final Project Rubric</a>.
+      </p>
+
+    </div>
+
+
     <div class="section">
 
       <h2>Self-Reflection and Logging Your Work<a href="#reflection" name="reflection" class="anchor"></a><br/>
@@ -342,7 +346,7 @@
     <div class="section">
 
       <h2>Synchronous Meet Up, AKA our Class Time<a href="#meetup" name="meetup" class="anchor"></a><br/>
-        <span class="subtitle"> ~1.8 hours | October 31, 2023 @ 4pm Eastern</span></h2>
+        <span class="subtitle">October 30, 2023 @ 4pm Eastern</span></h2>
 
       <p>If you're an enrolled student, we'll be meeting in Sargent Hall Room 305 on Monday October 31st at 4pm. Our remote backup is to meet via Zoom at <a href="../../class" target="_blank">this link</a>. You should have received the password from me earlier. If you don't have the password, and you are a registered student, DM me on Teams, and I can give you the password. If you're not an enrolled student, I'm afraid you can't join us.</p>
 
